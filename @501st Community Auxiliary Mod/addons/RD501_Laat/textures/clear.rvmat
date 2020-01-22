@@ -1,0 +1,12 @@
+
+#define _ARMA_
+
+surfaceInfo = "A3\data_f\Penetration\glass_armored_plate.bisurf";
+ambient[] = {0.75,0.75,0.75,1};
+diffuse[] = {0.75,0.75,0.75,1};
+forcedDiffuse[] = {0,0,0,0};
+emmisive[] = {100,100,100,1};
+specular[] = {0,0,0,1};
+specularPower = 1;
+PixelShaderID = "Normal";
+VertexShaderID = "Basic";

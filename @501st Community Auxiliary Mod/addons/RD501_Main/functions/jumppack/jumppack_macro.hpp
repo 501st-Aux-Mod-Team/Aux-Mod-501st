@@ -1,0 +1,1 @@
+#define macro_jumppack_effect_var "RD501_jumppack_effects"
