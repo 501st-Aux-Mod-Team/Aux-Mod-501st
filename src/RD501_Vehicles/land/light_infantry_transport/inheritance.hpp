@@ -1,0 +1,1 @@
+class O_Truck_03_covered_F;

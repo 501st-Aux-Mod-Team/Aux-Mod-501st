@@ -1,0 +1,12 @@
+name = "501st Community Auxiliary Mod";
+tooltipOwned="501st Aux";
+picture = "RD501_Main\logo.paa";
+logoSmall = "RD501_Main\logo.paa";
+logo = "RD501_Main\logo.paa";
+logoOver = "RD501_Main\logo.paa";
+hideName = 0;
+hidePicture = 0;
+actionName = "Website";
+action = "https://github.com/namenai/Aux-Mod-Changelogs";
+description = "501st Changes to a certain bad mod :)";
+overview = "501st Changes to a certain bad mod :)";

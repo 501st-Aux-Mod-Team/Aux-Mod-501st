@@ -1,0 +1,1 @@
+#define cba_patches  "cba_common","cba_events","cba_hashes","cba_jr_prep","cba_keybinding","cba_modules","cba_music","cba_network","cba_settings","cba_statemachine","cba_strings","cba_vectors","cba_xeh","cba_accessory","cba_ai","cba_arrays","cba_diagnostic","cba_help","cba_jr","cba_jam","cba_ui","cba_versioning","cba_optics","cba_disposable"
