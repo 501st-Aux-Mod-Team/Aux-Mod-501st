@@ -428,7 +428,7 @@ class SWOP_Clonetrooper_501_helmet: itemCore
 {
 	scope = 2;
 	ace_hearing_protection = 0.85; 		
-	ace_hearing_lowerVolume = 0.6; 
+	ace_hearing_lowerVolume = 0; 
 	author = "SWOP";
 	weaponPoolAvailable = 1;       
 	macro_ace_hearing_helmet_setting   
