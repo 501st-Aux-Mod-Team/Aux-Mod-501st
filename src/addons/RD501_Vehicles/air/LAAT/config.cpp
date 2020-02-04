@@ -57,7 +57,13 @@ class CfgPatches
 			macro_new_vehicle(laat,muunilinst),
 			macro_new_vehicle(laat,cargo_Mk2),
 			macro_new_vehicle(laat,blue),
-			macro_new_vehicle(laat,vtol_test)
+			macro_new_vehicle(laat,vtol_test),
+			macro_new_vehicle(laat,mk4_skin),
+			macro_new_vehicle(laat,mk4_501st_cxc),
+			macro_new_vehicle(laat,mk4_501st_cxx),
+			macro_new_vehicle(laat,mk4_501st_cxp),
+			macro_new_vehicle(laat,mk4_501st_cxs),
+			macro_new_vehicle(laat,mk4_501st_cx)
 		};
 		weapons[]=
 		{
@@ -66,7 +72,7 @@ class CfgPatches
 	};
 };
 
-class DefaultEventhandlers;
+class DefaultEventhandlers; 
 class CfgVehicles
 {
 	
@@ -205,7 +211,7 @@ class CfgVehicles
 			};
 		};
 	};
-
+	#include "_mk4_reskin.hpp"
 	class macro_new_vehicle(laat,cargo_Mk2):swop_LAAT_cargo
 	{
 		scope=2;

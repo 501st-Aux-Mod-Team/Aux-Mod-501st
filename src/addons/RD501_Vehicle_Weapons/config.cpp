@@ -89,6 +89,7 @@ class CfgMagazines
 		maxLeadSpeed = 30000;
 		nameSound = "cannon";
 	};
+	#include "_mags/aa_gun.hpp"
 
 	class 4Rnd_AAA_missiles;
 	class 7Rnd_Rocket_04_AP_F;

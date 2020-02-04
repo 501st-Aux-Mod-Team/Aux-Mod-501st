@@ -1,6 +1,6 @@
 class macro_new_uniform_class(blufor,501_cms): V_RebreatherB
 {
-    author = "SWOP";
+    author = "RD501";
     scope = 2;
     side = 3;
     displayName = "Clonetrooper armor+kama (501st CM-S)";
@@ -20,7 +20,7 @@ class macro_new_uniform_class(blufor,501_cms): V_RebreatherB
 
 class macro_new_uniform_class(blufor,501_medic_pauldron_skirt): V_RebreatherB
 {
-    author = "SWOP";
+    author = "RD501";
     scope = 2;
     side = 3;
     displayName = "Clonetrooper armor+pauldrons Medic (501st legion)";
@@ -40,7 +40,7 @@ class macro_new_uniform_class(blufor,501_medic_pauldron_skirt): V_RebreatherB
 
 class macro_new_uniform_class(blufor,501_medic_recon): V_RebreatherB
 {
-    author = "SWOP";
+    author = "RD501";
     scope = 2;
     side = 3;
     displayName = "Clonetrooper recon Medic armor (501st legion)";
@@ -57,5 +57,26 @@ class macro_new_uniform_class(blufor,501_medic_recon): V_RebreatherB
         
         hiddenSelections[] = {"Camo1", "Camo2"};
         macro_clone_armor_hitpoints
+    };
+};
+
+class macro_new_uniform_class(blufor,501_medic_cadet): V_RebreatherB
+{
+    author = "RD501";
+    scope = 2;
+    side = 3;
+    displayName = "Clonetrooper Medic armor (501st legion Cadet)";
+    picture = "\SWOP_clones\data\body\icoARMOR\Ico_armor.paa";
+    model = "\SWOP_clones\armor\cloneArmor.p3d";
+    hiddenSelections[] = {"Camo1"};
+    hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\cadet_medic.paa};
+    class ItemInfo: VestItem
+    {
+        uniformModel = "\SWOP_clones\armor\cloneArmor.p3d";
+        modelsides[] = {6};
+        macro_rebreather_armor_stuff
+        hiddenSelections[] = {"Camo1"};
+        macro_clone_armor_hitpoints
+        
     };
 };

@@ -24,7 +24,7 @@ class CfgPatches
             macro_new_vehicle(laat,first_order),
 
             macro_new_vehicle(laat,gold),
-            macro_new_vehicle(laat,chrome)
+            macro_new_vehicle(laat,chrome),
 
 
         };
@@ -37,6 +37,11 @@ class CfgVehicles
     class swop_LAAT;
     class macro_new_vehicle(laat,Mk3):swop_LAAT
     {
+		hiddenSelectionsMaterials[]=
+		{
+			"RD501_Laat\textures\rvmats\laat_mk3_fuselage.rvmat",
+			"RD501_Laat\textures\rvmats\laat_mk3_wings.rvmat"
+		};
         class ACE_SelfActions;
     };
 
@@ -194,5 +199,4 @@ class CfgVehicles
 			"RD501_Laat\textures\laat\LaatFirstOrder\LaatWingFirstOrder.paa"
 		};
 	};
-
 };

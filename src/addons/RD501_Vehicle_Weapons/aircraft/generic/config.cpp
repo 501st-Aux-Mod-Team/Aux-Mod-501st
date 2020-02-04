@@ -30,7 +30,8 @@ class CfgPatches
 			macro_new_weapon(generic,ion_aircraft_cannon),
 			macro_new_weapon(generic,purple_aircraft_cannon),
 			macro_new_weapon(generic,plasma_aircraft_cannon),
-			macro_new_weapon(generic,preatorian_gun_opfor)
+			macro_new_weapon(generic,preatorian_gun_opfor),
+			macro_new_weapon(aa_gun,aa_gun_base)
 		};
 	};
 };
@@ -157,7 +158,22 @@ class CfgWeapons
 			};
 		};
 	};
-
+	class macro_new_weapon(aa_gun,aa_gun_base) : macro_new_weapon(generic,rebel_aircraft_cannon)
+	{
+		displayName = "PPTG2AC"
+		magazines[] = {macro_new_mag(AA_Gun_Base,1000)};
+		class LowROF: LowROF
+		{
+			dispersion = 0;
+			class StandardSound
+			{
+				begin1[] = {"TIEdef\ioncanon1.ogg",1.1,1.1,3000};
+				begin2[] = {"TIEdef\ioncanon2.ogg",1.1,1.1,3000};
+				begin3[] = {"TIEdef\ioncanon3.ogg",1.1,1.1,3000};
+				soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin3",0.34};
+			};
+		};
+	};
 	//Preatorian gun
 	class macro_new_weapon(generic,preatorian_gun_opfor): macro_new_weapon(generic,purple_aircraft_laser)
 	{

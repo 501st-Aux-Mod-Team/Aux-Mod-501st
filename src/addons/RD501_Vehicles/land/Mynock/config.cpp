@@ -251,8 +251,8 @@ class CfgVehicles
 		{
 			class MainTurret: MainTurret
 			{
-				weapons[] = {macro_new_weapon(generic,preatorian_gun_opfor),"missiles_titan_AA"};
-				magazines[] = {macro_new_mag(generic_aircraft_gun_preatorian,1000),macro_new_mag(generic_aircraft_gun_preatorian,1000),"4Rnd_Titan_long_missiles_O","4Rnd_Titan_long_missiles_O"};
+				weapons[] = {macro_new_weapon(aa_gun,aa_gun_base),"missiles_titan_AA"};
+				magazines[] = {macro_new_mag(AA_Gun_Base,1000),macro_new_mag(AA_Gun_Base,1000),"4Rnd_Titan_long_missiles_O","4Rnd_Titan_long_missiles_O"};
 				class Turrets: Turrets
 				{
 					class CommanderOptics: CommanderOptics

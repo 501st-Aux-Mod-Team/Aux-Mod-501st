@@ -1,6 +1,6 @@
 class macro_new_uniform_class(blufor,501_rto): V_RebreatherB
 {
-    author = "SWOP";
+    author = "RD501";
     scope = 2;
     side = 3;
     displayName = "Clonetrooper armor (501st legion RTO)";
@@ -18,10 +18,16 @@ class macro_new_uniform_class(blufor,501_rto): V_RebreatherB
         
     };
 };
-
+class macro_new_uniform_class(blufor,501_rto_cadet): macro_new_uniform_class(blufor,501_rto)
+{	
+    displayName = "Clonetrooper RTO armor (501st legion Cadet RTO)";
+    hiddenSelections[] = {"Camo1"};
+    hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\Cadet_RTO.paa};
+};
+	
 class macro_new_uniform_class(blufor,501_rto_recon): macro_new_uniform_class(blufor,501_medic_recon)
 {
-    displayName = "Clonetrooper recon RTO armor (501st legion)";
+    displayName = "Clonetrooper Recon RTO armor (501st legion)";
     picture = "\SWOP_clones\data\body\icoARMOR\Ico_armor_recon_501.paa";
     model = "\SWOP_clones\armor\cloneArmorRecon.p3d";
     hiddenSelections[] = {"Camo1", "Camo2"};
@@ -31,7 +37,7 @@ class macro_new_uniform_class(blufor,501_rto_recon): macro_new_uniform_class(blu
 
 class macro_new_uniform_class(blufor,501_rto_pauldron_skirt) : V_RebreatherB
 {
-    author = "SWOP";
+    author = "RD501";
     scope = 2;
     side = 3;
     displayName = "Clonetrooper RTO Recon 2 armor (501st Legion)";
