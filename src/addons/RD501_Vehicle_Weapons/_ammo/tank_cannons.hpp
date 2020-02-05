@@ -66,19 +66,18 @@
 
 		class macro_new_ammo(mynock_mbt_ap): macro_new_ammo(aat_king)//AAT_Laser
 	{
+		displayname = "Compacted Durasteel AP Shell"
 		hit = 1000;
 		indirectHit = 1000;
 		indirectHitRange = 0.5;
 		visibleFire = 42;
 		audibleFire = 42;
-		
 		explosionSoundEffect = "DefaultExplosion";
 		explosive = 0;
 		cost = 22;
 		CraterEffects = "ATMissileCrater";
 		explosionEffects = "IEDMineSmallExplosion";
-		model = "SW_AV7\ion.p3d";
-		
+		model = "SW_AV7\ion.p3d";		
 		effectFly = "SWOP_BlueLaserEffect";
 		tracerStartTime = 0;
 		tracerEndTime = 10;
@@ -93,12 +92,12 @@
 	};
 		class macro_new_ammo(mynock_mbt_he): macro_new_ammo(mynock_mbt_ap)
 	{
+		displayname = "Depleted Coaxium HE Shell"
 		hit = 650;
 		indirectHit = 650;
 		indirectHitRange = 12;
 		visibleFire = 42;
 		audibleFire = 42;
-		
 		explosionSoundEffect = "DefaultExplosion";
 		explosive = 1;
 		cost = 22;

@@ -43,7 +43,7 @@ class cfgWeapons
 		scope = 2;
 		scopecurator = 2;
 		scopearsenal = 2;
-		displayname = "[Broken] Republic T21 Light Repeater";
+		displayname = "[PROTOTYPE] Republic T21 Light Repeater";
 		descriptionShort = "Low rate of fire heavy infantry weapon";
 		magazines[] = {macro_new_mag(T21,25)};
 	};

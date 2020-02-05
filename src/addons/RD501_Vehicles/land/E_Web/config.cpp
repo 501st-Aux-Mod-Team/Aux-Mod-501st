@@ -29,7 +29,8 @@ class CfgPatches
 			macro_new_vehicle(e_web,shield),
 			macro_new_vehicle(e_web,uav),
 			"SW_halfshieldObject",
-			macro_new_vehicle(e_web,cis)
+			macro_new_vehicle(e_web,cis),
+			macro_new_vehicle(e_web,heavy)
 		};
 		weapons[]=
 		{
@@ -38,7 +39,6 @@ class CfgPatches
 	};
 };
 
-
 #include "../../common/sensor_templates.hpp"
 class DefaultEventhandlers;
 
@@ -46,7 +46,17 @@ class CfgVehicles
 {
 
 	class House_F;
-	class EWEBSWBF;
+	class StaticMGWeapon
+	{
+		class turrets;
+	};
+	class EWEBSWBF: StaticMGWeapon
+	{
+		class turrets: turrets
+		{
+			class mainturret;
+		};
+	};
 	class SW_halfshieldObject:House_F
 	{
 		faction = "Default";
@@ -132,6 +142,47 @@ class CfgVehicles
 
 		class EventHandlers :DefaultEventhandlers {};
 	};
+	
+	class macro_new_vehicle(e_web,heavy): EWEBSWBF
+	{
+		author = "RD501";
+		scope = 2;
+		displayname = "[PROTOTYPE] Heavy E-WEB Cannon";
+		scopeCurator = 2;
+		mapSize = 4;
+		crew = "SWOP_L501P1_Fives";
 
-
+		class turrets: turrets
+		{
+			class mainturret: mainturret
+			{
+				weapons[] = 
+				{
+					macro_new_weapon(mynock_cannon,mbt)
+				};
+				magazines[] = 
+				{
+					macro_new_mag(mynock_mbt_ap,12),
+					macro_new_mag(mynock_mbt_he,12),
+					macro_new_mag(mynock_mbt_ap,12),
+					macro_new_mag(mynock_mbt_he,12)
+				};
+			};
+		};
+		faction = macro_republic_faction
+		editorSubcategory = macro_editor_cat(turrets)
+		vehicleClass = macro_editor_vehicle_type(turrets)
+		class EventHandlers :DefaultEventhandlers 
+		{
+			init = "[_this select 0] execVM 'RD501_Vehicles\land\E_Web\setmass.sqf'";
+		};
+		class assembleInfo
+		{
+			primary = 1;
+			base = "";
+			assembleTo = "";
+			displayName = "E-Web Cannon Backpack";
+			dissasembleTo[] = {macro_new_backpack_class(blufor,eweb_bag)};
+		};
+	};
 };

@@ -163,6 +163,26 @@ class CfgVehicles
 			assembleTo = "RD501_E_Web_cis";
 		};
 	};
+	
+	class macro_new_backpack_class(blufor,eweb_bag): macro_new_backpack_class(opfor,eweb_bag)
+	{
+		scope = 2;
+		displayName = "E-WEB Cannon Bag";
+		descriptionShort = "E-WEB Cannon Bag";
+		side = 1;
+		//faction = "RD501FactionOpfor";
+		picture = "\SWOP_empire\ImpBackpack\data\ico\icon_iwhite.paa";
+		model = "\SWOP_empire\ImpBackpack\impB.p3d";
+		hiddenSelectionsTextures[] = {""};
+		maximumLoad = 200;
+		mass = 300;
+		class assembleInfo: assembleInfo
+		{
+			base = "";
+			displayName = "[PROTOTYPE] E-WEB Cannon";
+			assembleTo = macro_new_vehicle(e_web,heavy);
+		};
+	};
 
 	class macro_new_backpack_class(opfor,b1_aqua_bag):  macro_new_backpack_class(opfor,B1_AT_Camo_Bag)
 	{

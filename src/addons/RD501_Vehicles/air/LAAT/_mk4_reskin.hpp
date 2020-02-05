@@ -73,7 +73,7 @@
 		displayName="LAAT/I MK.IV - ('CX')";
 		hiddenSelectionsTextures[]=
 		{
-			"RD501_Laat\textures\base\Laat501st_mk4_wings_cx.paa",
+			"RD501_Laat\textures\base\Laat501st_mk4_wings_cxs.paa",
 			"RD501_Laat\textures\base\Laat501st_mk4_cx.paa"
 		};
 		hiddenSelectionsMaterials[]=
