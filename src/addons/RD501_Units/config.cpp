@@ -122,6 +122,16 @@ class CfgVehicles
 	class SWOP_resistance_BigBackpack_b;
 	class SWOP_resistance_BigBackpack2_b;
 	class b_Parachute;
+	class JLTS_Clone_backpack;
+	class JLTS_Clone_backpack_s;
+	class JLTS_Clone_backpack_medic;
+	class JLTS_Clone_backpack_eod;
+	class JLTS_Clone_backpack_bomb;
+	class JLTS_Clone_backpack_RTO;
+	class JLTS_Clone_backpack_s_RTO;
+	class JLTS_Clone_belt_bag;
+	class JLTS_Clone_RTO_pack;
+	class JLTS_Clone_LR_attachment;
 
 
 	class EWEB_Bag: B_UAV_01_backpack_F
@@ -167,7 +177,7 @@ class CfgVehicles
 	class macro_new_backpack_class(blufor,eweb_bag): macro_new_backpack_class(opfor,eweb_bag)
 	{
 		scope = 2;
-		displayName = "E-WEB Cannon Bag";
+		displayName = "[PROTOTYPE] E-WEB Cannon Bag";
 		descriptionShort = "E-WEB Cannon Bag";
 		side = 1;
 		//faction = "RD501FactionOpfor";

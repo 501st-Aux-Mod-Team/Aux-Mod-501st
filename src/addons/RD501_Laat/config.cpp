@@ -144,7 +144,7 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"RD501_Laat\textures\laat\Laat501stcx\Laat501stBodyCX.paa",
-			"RD501_Laat\textures\laat\Laat501stcx\Laat501stWingCXS.paa"
+			"RD501_Laat\textures\laat\Laat501stcxs\Laat501stWingCXS.paa"
 		};
 	};
     

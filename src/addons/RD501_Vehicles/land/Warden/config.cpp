@@ -57,7 +57,7 @@ class CfgVehicles
 	
 	class macro_new_vehicle(warden_tank,mobile) : B_APC_Tracked_01_CRV_F
 	{
-		displayName = "Warden Utility Tank (Black) Mk.II";
+		displayName = "Republic Overseer ASV";
 
 		ace_refuel_fuelCargo = 999999999999;
 		ace_rearm_defaultSupply = 999999999999;

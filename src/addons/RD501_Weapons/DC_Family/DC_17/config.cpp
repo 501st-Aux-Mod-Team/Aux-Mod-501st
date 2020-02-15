@@ -45,7 +45,21 @@ class cfgWeapons
 
 		author= "RD501";
 		baseWeapon = macro_new_weapon(DC,17);
-
+		model="\MRC\JLTS\weapons\DC17SA\DC17SA.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"illum"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\MRC\JLTS\weapons\DC17SA\data\DC17SA_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"",
+			"\a3\characters_f_bootcamp\common\data\vrarmoremmisive.rvmat"
+		};
 		DC_Family_Flashlight
 
 		magazines[]={macro_new_mag(DC17,20),"DCStun_Mag"};

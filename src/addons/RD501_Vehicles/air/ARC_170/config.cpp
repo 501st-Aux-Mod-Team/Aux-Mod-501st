@@ -76,6 +76,7 @@ class CfgVehicles
 	{
 		scope=2;
 		scopeCurator=2;
+		side=1;
 		displayName = "ARC-180B";
 		forceInGarage = 1;
 
@@ -97,18 +98,19 @@ class CfgVehicles
 		driverIsCommander = true;
 		enableManualFire = 1;
 
-		memoryPointGun[] = {"cannon1","cannon2"};
-		muzzleEnd[] = {"cannon1","cannon2"};
-		muzzlePos[] = {"cannon1","cannon2"};
-		
+		memoryPointGun[] = {"cannon1","cannon2",""};
+		muzzleEnd[] = {"cannon1","cannon2",""};
+		muzzlePos[] = {"cannon1","cannon2",""};
+		draconicTorqueXCoef = 0;//
 		memoryPointLRocket = "";
 		memoryPointRRocket = "";
 		memoryPointLMissile = "";
 		memoryPointRMissile = "";
+		weaponLockSystem = 31;
 		maxSpeed = 2000;
-
-		rudderInfluence = 0.766;
-		rudderCoef[] = {0.2, 0.7, 1.5, 2, 2, 2.1, 2.4, 2.5, 2.6, 2.7, 2.7, 2.7, 2.7};
+		lightOnGear = 0;
+		rudderInfluence = 0.1;//0.766
+		rudderCoef[] = {0.2, 0.7, 1.5, 2, 2, 2.1, 2.4, 2.5, 2.6, 2.7, 2.7, 2.7, 2.7};//0.2, 0.7, 1.5, 2, 2, 2.1, 2.4, 2.5, 2.6, 2.7, 2.7, 2.7, 2.7
 		rudderControlsSensitivityCoef = 4;
 
 		aileronSensitivity = 1*2;
@@ -119,7 +121,7 @@ class CfgVehicles
 		//draconicForceXCoef = 15*2;
 		//draconicForceYCoef = 1*2;
 		//draconicForceZCoef = 1*2;
-
+		
 		VTOLYawInfluence = 3*1.5*2;
 		VTOLPitchInfluence = 2*1.5*1.0;
 		VTOLRollInfluence = 3*2*1;
@@ -153,6 +155,10 @@ class CfgVehicles
 			class MainTurret:MainTurret
 			{
 				stabilizedInAxes = 4;
+				weaponLockSystem = 31;
+				allowTabLock = 1;
+				showCrewAim = 4;
+				canUseScanner = 1;
 				weapons[] = {
 					macro_new_weapon(generic,kannon),
 					macro_basic_air_weapons,
@@ -231,7 +237,7 @@ class CfgVehicles
 				// minTurn = -360;
 				// maxTurn = 360;
 				// initTurn = 0;
-				
+				weaponLockSystem = 31;
 
 				minElev = -90;
 				maxElev = 5;

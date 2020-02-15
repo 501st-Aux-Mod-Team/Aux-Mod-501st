@@ -32,6 +32,7 @@
 	};
 		class macro_new_mag(mynock_mbt_he,12): macro_new_mag(aat_mbt,10)
 	{
+		displayName = "Kyber Plasma Shell";
 		displayNameShort = "12Rnd Kyber Plasma Shell";
 		ammo = macro_new_ammo(mynock_mbt_he)
 		count = 12;
@@ -42,6 +43,7 @@
 	};
 		class macro_new_mag(mynock_mbt_ap,12): macro_new_mag(aat_mbt,10)
 	{
+		displayName = "Compacted Durasteel Shell";
 		displayNameShort = "12Rnd Durasteel Shell";
 		ammo = macro_new_ammo(mynock_mbt_ap)
 		count = 12;

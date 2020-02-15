@@ -147,6 +147,7 @@ class CfgVehicles
 	{
 		author = "RD501";
 		scope = 2;
+		side = 1;
 		displayname = "[PROTOTYPE] Heavy E-WEB Cannon";
 		scopeCurator = 2;
 		mapSize = 4;
@@ -158,14 +159,22 @@ class CfgVehicles
 			{
 				weapons[] = 
 				{
-					macro_new_weapon(mynock_cannon,mbt)
+					"RD501_RAMER"
 				};
 				magazines[] = 
 				{
-					macro_new_mag(mynock_mbt_ap,12),
-					macro_new_mag(mynock_mbt_he,12),
-					macro_new_mag(mynock_mbt_ap,12),
-					macro_new_mag(mynock_mbt_he,12)
+					"RD501_RAMER_x6_mag",
+					"RD501_RAMER_x6_mag",
+					"RD501_RAMER_x6_mag",
+					"RD501_RAMER_x6_mag",
+					"RD501_RAMER_x6_mag",
+					"RD501_RAMER_x6_mag",
+					"RD501_RAMER_x6_mag",
+					"RD501_RAMER_x6_mag",
+					"RD501_RAMER_x6_mag",
+					"RD501_RAMER_x6_mag",
+					"RD501_RAMER_x6_mag",
+					"RD501_RAMER_x6_mag"
 				};
 			};
 		};

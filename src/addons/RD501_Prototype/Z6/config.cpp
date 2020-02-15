@@ -40,6 +40,22 @@ class cfgWeapons
 
 	class macro_new_weapon(proto,z6):SCI_arifle_z6_F
 	{
+		model="\MRC\JLTS\weapons\Z6\Z6.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\MRC\JLTS\weapons\Z6\data\Z6_1_co.paa",
+			"\MRC\JLTS\weapons\Z6\data\Z6_2_co.paa"
+		};
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"\MRC\JLTS\weapons\Z6\anims\Z6_handanim.rtm"
+		};
 		
 		scope=2;
 		scopeArsenal=2;
@@ -48,7 +64,7 @@ class cfgWeapons
 		author= "RD501";
 
 		//changes
-		picture = "\SW_CloneWarsWeapons\SW_Z6\UI\z6.paa";
+		picture="\MRC\JLTS\weapons\Z6\data\ui\Z6_ui_ca.paa";
 		UiPicture = "\SW_CloneWarsWeapons\SW_Z6\UI\z6.paa";
 		magazineWell[]={Republic_Universal_Magazine_Well};
 		magazines[]={macro_new_mag(proto_z6,300)};

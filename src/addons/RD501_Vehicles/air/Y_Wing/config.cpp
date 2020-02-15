@@ -64,6 +64,7 @@ class CfgVehicles
 
 	class macro_new_vehicle(Y_wing,MkII):swop_ywclones
 	{
+		side=1;
 		scope=2;
 		displayName = "Y-Wing Mk.II";
 		forceInGarage = 1;

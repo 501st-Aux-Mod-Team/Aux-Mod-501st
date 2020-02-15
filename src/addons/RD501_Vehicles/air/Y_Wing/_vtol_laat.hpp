@@ -7,7 +7,11 @@ class macro_new_vehicle(LAAT,vtol):O_T_VTOL_02_infantry_dynamicLoadout_F
     gearsUpFrictionCoef = 0;
     forceInGarage=1;
     model = "\LAAT\laatmk2.p3d";	
-
+	hiddenSelectionsTextures[]=
+	{
+		"RD501_Laat\textures\laat\Laat501stcxs\Laat501stBodyCXS.paa",
+		"RD501_Laat\textures\laat\Laat501stcxs\Laat501stWingCXS.paa"
+	};
     vtol=4;
     simulation="airplanex";
     thrustCoef[]=

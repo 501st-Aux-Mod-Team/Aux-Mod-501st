@@ -1,51 +1,56 @@
-#define COMPONENT ramer
-#include "../../RD501_main/config_macros.hpp"
-#include "../_common/common.hpp"
-
-
 class CfgPatches
 {
-	class macro_patch_name(ramer)
+	class RD501_patch_ramer
 	{
-		author=DANKAUTHORS;
-		addonRootClass= macro_patch_name(weapons)
+		author="Namenai, Rexi, Zatama";
+		addonRootClass="RD501_patch_weapons";
 		requiredAddons[]=
 		{
-			macro_patch_name(weapons)
+			"RD501_patch_weapons"
 		};
 		requiredVersion=0.1;
 		units[]={};
-		weapons[]={
-			macro_new_weapon_nofam(RAMER),
-			macro_new_weapon_nofam(T21)
+		weapons[]=
+		{
+			"RD501_RAMER",
+			"RD501_T21"
 		};
 	};
 };
-
-class cfgWeapons 
-{	
+class cfgWeapons
+{
 	class SWOP_T21BlasterRifle;
-	class macro_new_weapon_nofam(RAMER): SWOP_T21BlasterRifle
+	class RD501_RAMER: SWOP_T21BlasterRifle
 	{
-		baseWeapon = macro_new_weapon_nofam(RAMER)
-		author= "RD501";
-		scope = 2;
-		scopecurator = 2;
-		scopearsenal = 2;
-		displayname = "Republic Anti Material Energy Rifle";
-		descriptionShort = "(R.A.M.E.R)";
-		magazines[] = { macro_new_mag(RAMER,6)};
+		baseWeapon="RD501_RAMER";
+		author="RD501";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayname="Republic Anti Material Energy Rifle";
+		descriptionShort="(R.A.M.E.R)";
+		magazines[]=
+		{
+			"RD501_RAMER_x6_mag"
+		};
 	};
-	class macro_new_weapon_nofam(T21): SWOP_T21BlasterRifle
+	class RD501_T21: SWOP_T21BlasterRifle
 	{
-		baseWeapon = macro_new_weapon_nofam(T21)
-		author= "RD501";
-		scope = 2;
-		scopecurator = 2;
-		scopearsenal = 2;
-		displayname = "[PROTOTYPE] Republic T21 Light Repeater";
-		descriptionShort = "Low rate of fire heavy infantry weapon";
-		magazines[] = {macro_new_mag(T21,25)};
+		baseWeapon="RD501_T21";
+		author="RD501";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayname="[PROTOTYPE] Republic T21 Light Repeater";
+		descriptionShort="Low rate of fire heavy infantry weapon";
+		magazines[]=
+		{
+			"RD501_T21_x25_mag"
+		};
 	};
 };
-
+class cfgMods
+{
+	author="Zatama";
+	timepacked="1580895574";
+};

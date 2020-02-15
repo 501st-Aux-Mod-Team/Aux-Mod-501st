@@ -89,7 +89,8 @@ class CfgVehicles
 		smokeLauncherGrenadeCount = 48;
 		smokeLauncherAngle = 360;
 		forceInGarage = 1;
-
+		crewExplosionProtection = 0;
+		crewCrashProtection = 0;
 		slingLoadMemoryPoint = "slingload0";
 
 		//hiddenSelectionsMaterials[] = {"RD501_Laat\textures\laat\g1.rvmat","RD501_Laat\textures\laat\g2.rvmat"};
@@ -148,7 +149,8 @@ class CfgVehicles
 		smokeLauncherGrenadeCount = 48;
 		smokeLauncherAngle = 360;
 		forceInGarage = 1;
-
+		crewExplosionProtection = 0;
+		crewCrashProtection = 0;
 		slingLoadMemoryPoint = "slingLoad0";
 
 		

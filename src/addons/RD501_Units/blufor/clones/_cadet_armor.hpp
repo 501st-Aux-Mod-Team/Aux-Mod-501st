@@ -60,3 +60,24 @@ class macro_new_uniform_class(blufor,cadet_6): macro_new_uniform_class(blufor,ca
     hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\Domino_6_chest.paa};
 
 };
+
+class macro_new_uniform_class(blufor,cadet_MRP): V_RebreatherB
+{
+    author = "RD501";
+    scope = 2;
+    side = 3;
+    displayName = "501st Armor - Cadet";
+    picture = "\SWOP_clones\data\body\icoARMOR\Ico_armor.paa";
+	model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+    hiddenSelections[] = {"Camo1","camo2"};
+    hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\Infantry\Cadet\Armor upper_co.png,TEXTUREPATH\Republic\clones\Infantry\Cadet\Armor lower_co.png };
+    class ItemInfo: VestItem
+    {
+        uniformmodel="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+        modelsides[] = {6};
+        macro_rebreather_armor_stuff
+        hiddenSelections[] = {"Camo1","Camo2"};
+        macro_clone_armor_hitpoints
+        
+    };
+};

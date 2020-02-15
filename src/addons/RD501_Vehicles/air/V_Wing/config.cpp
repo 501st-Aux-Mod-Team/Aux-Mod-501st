@@ -67,6 +67,7 @@ class CfgVehicles
 
 	class macro_new_vehicle(v_wing,MKII):swop_Vwing
 	{
+		side=1;
 		scope=2;
 		scopeCurator=2;
 		displayName = "V-Wing Mk.II";
@@ -88,8 +89,8 @@ class CfgVehicles
 	
 		//flight model
 			maxSpeed = 4000;
-			aileronSensitivity = 1.2;//1.7;
-			elevatorSensitivity = 1.2//1.5;
+			aileronSensitivity = 0.5;//1.7;
+			elevatorSensitivity = 0.65//1.5;
 			airBrakeFrictionCoef = 80.4;
 		
 			draconicForceXCoef = 300;

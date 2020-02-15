@@ -36,18 +36,32 @@ class DefaultEventhandlers ;
 class CfgVehicles
 {
 	class Car_F;
-	class Wheeled_APC_F:Car_F
+	class Wheeled_APC_F : Car_F
 	{
-		class Turrets;
+		class turrets;
 	};
-	class SCI_APC_Wheeled_01_base_F:Wheeled_APC_F
+	class SCI_APC_Wheeled_01_base_F : Wheeled_APC_F
 	{
 		class Turrets: Turrets
 		{
 			class MainTurret;
 		};
 	}
-	class SCI_B_APC_Wheeled_01_base_F:SCI_APC_Wheeled_01_base_F
+	class SCI_B_APC_Wheeled_01_base_F : SCI_APC_Wheeled_01_base_F
+	{
+		class Turrets: Turrets
+		{
+			class MainTurret;
+		};
+	}
+	class SCI_B_APC_Wheeled_01_cannon_F : SCI_B_APC_Wheeled_01_base_F
+	{
+		class Turrets: Turrets
+		{
+			class MainTurret;
+		};
+	};
+	class SCI_B_APC_Wheeled_01_cannon_F_OCimport_01 : SCI_B_APC_Wheeled_01_cannon_F
 	{	
 		class HitPoints;
 		class Turrets: Turrets
@@ -55,12 +69,11 @@ class CfgVehicles
 			class MainTurret:MainTurret
 			{
 				class HitPoints;
-				
+				class turrets;
 			};
 		};
-
 	};
-	class SCI_B_APC_Wheeled_01_cannon_F : SCI_B_APC_Wheeled_01_base_F 
+	class SCI_B_APC_Wheeled_01_cannon_F_OCimport_02 : SCI_B_APC_Wheeled_01_cannon_F_OCimport_01 
 	{	
 		class HitPoints: HitPoints
 		{
@@ -86,7 +99,7 @@ class CfgVehicles
 		};
 	};
 
-	class macro_new_vehicle(bantha,501st_MkI):SCI_B_APC_Wheeled_01_cannon_F
+	class macro_new_vehicle(bantha,501st_MkI):SCI_B_APC_Wheeled_01_cannon_F_OCimport_02
 	{
 		armor = 600;//320;
 		armorStructural = 5;
@@ -94,7 +107,7 @@ class CfgVehicles
 		htMin = 60;
 		minTotalDamageThreshold = 0.001;
 		explosionShielding = 1;
-		crewVulnerable = 0;
+		crewVulnerable = false;
 		crewCrashProtection = 0;
 		ace_repair_canRepair =1;
 		memoryPointLMissile[] = {"Rocket_1","Rocket_2"};

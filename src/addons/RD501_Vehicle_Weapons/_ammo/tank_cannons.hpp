@@ -67,6 +67,7 @@
 		class macro_new_ammo(mynock_mbt_ap): macro_new_ammo(aat_king)//AAT_Laser
 	{
 		displayname = "Compacted Durasteel AP Shell"
+		warheadName = "Compacted Durasteel AP Shell"
 		hit = 1000;
 		indirectHit = 1000;
 		indirectHitRange = 0.5;
@@ -93,6 +94,7 @@
 		class macro_new_ammo(mynock_mbt_he): macro_new_ammo(mynock_mbt_ap)
 	{
 		displayname = "Depleted Coaxium HE Shell"
+		warheadName = "Depleted Coaxium HE Shell"
 		hit = 650;
 		indirectHit = 650;
 		indirectHitRange = 12;

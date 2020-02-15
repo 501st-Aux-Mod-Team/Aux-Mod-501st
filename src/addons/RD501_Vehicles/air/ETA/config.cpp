@@ -70,6 +70,7 @@ class CfgVehicles
 
 	class macro_new_vehicle(eta,lime_Mk2):swop_eta2
 	{
+		side=1;
 		scope=2;
 		scopeCurator=2;
 		displayName = "ETA-3 (Lime) Mk.II";
@@ -82,7 +83,7 @@ class CfgVehicles
 		scope = 2;
 	    altFullForce = 6000;
 	    altNoForce = 9000;
-		
+		draconicTorqueXCoef = 0;//
 
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat_air(Republic_vtol)
@@ -175,7 +176,115 @@ class CfgVehicles
 		hiddenSelections[] = {"camo1","camo2"};
 		hiddenSelectionsMaterials[] = {"eta2\eta2main.rvmat","Delta7\Delta7astro.rvmat"};
 		hiddenSelectionsTextures[] = {"eta2\t_yodasstarfighter_co.paa","eta2\t_yodasstarfighter_r2d2_co.paa"};
-
+		class pilotCamera
+		{
+			class OpticsIn
+			{
+				class Wide
+				{
+					opticsDisplayName = "WFOV";
+					initAngleX = 0;
+					minAngleX = 0;
+					maxAngleX = 0;
+					initAngleY = 0;
+					minAngleY = 0;
+					maxAngleY = 0;
+					initFov=0.42;//"(30 / 120)";
+					minFov=0.42;//"(30 / 120)";
+					maxFov=0.42;//"(30 / 120)";
+					directionStabilized = 1;
+					visionMode[] = {"Normal","NVG", "Ti"};
+					thermalMode[] = {0, 1,7};
+					gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_wide_F.p3d";
+					opticsPPEffects[] = {"OpticsCHAbera2", "OpticsBlur2"};
+				};
+				class Medium: Wide
+				{
+					opticsDisplayName = "MFOV";
+					initFov="0.42/4";//"(30 / 120)";
+					minFov="0.42/4";//"(30 / 120)";
+					maxFov="0.42/4";//"(30 / 120)";
+					gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_medium_F.p3d";
+				};
+				class Narrow: Wide
+				{
+					opticsDisplayName = "NFOV";
+					initFov="0.42/8";//"(30 / 120)";
+					minFov="0.42/8";//"(30 / 120)";
+					maxFov="0.42/8";//"(30 / 120)";
+					gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
+				};
+				class NarrowX16: Wide
+				{
+					opticsDisplayName = "NFOV";
+					initFov="0.42/16";//"(30 / 120)";
+					minFov="0.42/16";//"(30 / 120)";
+					maxFov="0.42/16";//"(30 / 120)";
+					gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
+				};
+				class NarrowX24: Wide
+				{
+					opticsDisplayName = "NFOV";
+					initFov="0.42/24";//"(30 / 120)";
+					minFov="0.42/24";//"(30 / 120)";
+					maxFov="0.42/24";//"(30 / 120)";
+					gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
+				};
+				class NarrowX36: Wide
+				{
+					opticsDisplayName = "NFOV";
+					initFov="0.42/36";//"(30 / 120)";
+					minFov="0.42/36";//"(30 / 120)";
+					maxFov="0.42/36";//"(30 / 120)";
+					gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
+				};
+				class NarrowX48: Wide
+				{
+					opticsDisplayName = "NFOV";
+					initFov="0.42/48";//"(30 / 120)";
+					minFov="0.42/48";//"(30 / 120)";
+					maxFov="0.42/48";//"(30 / 120)";
+					gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
+				};
+				class NarrowX60: Wide
+				{
+					opticsDisplayName = "NFOV";
+					initFov="0.42/60";//"(30 / 120)";
+					minFov="0.42/60";//"(30 / 120)";
+					maxFov="0.42/60";//"(30 / 120)";
+					gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
+				};
+				class NarrowX80: Wide
+				{
+					opticsDisplayName = "NFOV";
+					initFov="0.42/80";//"(30 / 120)";
+					minFov="0.42/80";//"(30 / 120)";
+					maxFov="0.42/80";//"(30 / 120)";
+					gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
+				};
+				class NarrowX100: Wide
+				{
+					opticsDisplayName = "NFOV";
+					initFov="0.42/100";//"(30 / 120)";
+					minFov="0.42/100";//"(30 / 120)";
+					maxFov="0.42/100";//"(30 / 120)";
+					gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
+				};
+				showMiniMapInOptics = 1;
+				showUAVViewInOptics = 0;
+				showSlingLoadManagerInOptics = 0;
+			};
+			minTurn = -190;
+			maxTurn = 180;
+			initTurn = 0;
+			minElev = -10;
+			maxElev = 90;
+			initElev = 0;
+			maxXRotSpeed = 0.3;
+			maxYRotSpeed = 0.3;
+			pilotOpticsShowCursor = 1;
+			controllable = 1;
+		};
 	};
 
 	class macro_new_vehicle(eta,green_Mk2) : macro_new_vehicle(eta,lime_Mk2)

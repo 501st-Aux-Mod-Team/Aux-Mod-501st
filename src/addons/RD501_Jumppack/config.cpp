@@ -43,7 +43,9 @@ class CfgVehicles
 	class SWOP_mochila_jangofett;
 	class SWOP_mochila_bobafett;
 	class SWOP_mochila_red;
-
+	class JLTS_Clone_jumppack_mc;
+	class JLTS_Clone_jumppack;
+	
 	class macro_jumppackClass(neutral,base):B_AssaultPack_blk//RD501_jumppack_base
 	{
 		scope=0;
@@ -846,6 +848,114 @@ class CfgVehicles
 		};
 	};
 	class RD501_SWOP_resistance_back_jump_b: SWOP_resistance_back_jump_b
+	{
+		scope=2;
+		tf_encryptionCode="tf_west_radio_code";
+		tf_dialog="anarc210_radio_dialog";
+		tf_subtype="digital_lr";
+		tf_range=35000;
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_hasLRradio=1;
+		maximumLoad=700;
+		RD501_jumppack_is_jumppack=1;
+		RD501_jumppack_spam_delay=1;
+		RD501_jumppack_energy_capacity=100;
+		RD501_jumppack_recharge=4;
+		RD501_jumppack_jump_effect_script="RD501_jumppack_fnc_effect_jt_21";
+		RD501_jumppack_effect_points[]=
+		{
+			
+			{
+				"spine3",
+				{0,-0.30000001,-0.1}
+			}
+		};
+		RD501_jumppack_sound_ignite[]=
+		{
+			"RD501_Jumppack\sounds\cdv21Start.ogg"
+		};
+		RD501_jumppack_sound_land[]=
+		{
+			"RD501_Jumppack\sounds\cdv21End.ogg"
+		};
+		RD501_jumppack_sound_idle[]=
+		{
+			"RD501_Jumppack\sounds\cdv21Idle.ogg"
+		};
+		RD501_jumppack_skin_group[]=
+		{
+			"default_texture_group"
+		};
+		RD501_jumppack_jump_types[]=
+		{
+			
+			{
+				"Forward Jump",
+				{12,20,50,0,0,0}
+			},
+			
+			{
+				"Short Jump",
+				{12,5,30,0,1,0}
+			}
+		};
+	};
+	
+	class RD501_JLTS_Clone_jumppack_mc: JLTS_Clone_jumppack_mc
+	{
+		scope=2;
+		tf_encryptionCode="tf_west_radio_code";
+		tf_dialog="anarc210_radio_dialog";
+		tf_subtype="digital_lr";
+		tf_range=35000;
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_hasLRradio=1;
+		maximumLoad=700;
+		RD501_jumppack_is_jumppack=1;
+		RD501_jumppack_spam_delay=1;
+		RD501_jumppack_energy_capacity=100;
+		RD501_jumppack_recharge=4;
+		RD501_jumppack_jump_effect_script="RD501_jumppack_fnc_effect_jt_21";
+		RD501_jumppack_effect_points[]=
+		{
+			
+			{
+				"spine3",
+				{0,-0.30000001,-0.1}
+			}
+		};
+		RD501_jumppack_sound_ignite[]=
+		{
+			"RD501_Jumppack\sounds\cdv21Start.ogg"
+		};
+		RD501_jumppack_sound_land[]=
+		{
+			"RD501_Jumppack\sounds\cdv21End.ogg"
+		};
+		RD501_jumppack_sound_idle[]=
+		{
+			"RD501_Jumppack\sounds\cdv21Idle.ogg"
+		};
+		RD501_jumppack_skin_group[]=
+		{
+			"default_texture_group"
+		};
+		RD501_jumppack_jump_types[]=
+		{
+			
+			{
+				"Forward Jump",
+				{12,20,50,0,0,0}
+			},
+			
+			{
+				"Short Jump",
+				{12,5,30,0,1,0}
+			}
+		};
+	};
+	
+	class RD501_JLTS_Clone_jumppack: JLTS_Clone_jumppack
 	{
 		scope=2;
 		tf_encryptionCode="tf_west_radio_code";

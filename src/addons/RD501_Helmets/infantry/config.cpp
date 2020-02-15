@@ -79,7 +79,6 @@ class CfgWeapons
 		//NEW_501_Inf_Helm(drifter,Drifter,Drifter.paa)
 		NEW_501_Inf_Helm(dusty,Dusty,Dusty.paa)
 		NEW_501_Inf_Helm(eli,Eli,Eli.paa)
-		NEW_501_Inf_Helm(fallout,Fallout,Fallout.paa)
 		NEW_501_Inf_Helm(fancy,Fancy,Fancy.paa)
 		NEW_501_Inf_Helm(garviel,Garviel,Garviel.paa)
 		NEW_501_Inf_Helm(goldarp,Goldarp,Goldarp.paa)
@@ -146,7 +145,6 @@ class CfgWeapons
 		NEW_501_Inf_Helm(tupiks,Tupiks,Tupiks.paa)
 		NEW_501_Inf_Helm(turkey,Turkey,Turkey.paa)
 		NEW_501_Inf_Helm(tyler,Tyler,Tyler.paa)
-		NEW_501_Inf_Helm(vampire,Vampire,Vampire.paa)
 		NEW_501_Inf_Helm(vengeance,Vengeance,Vengeance.paa)
 		NEW_501_Inf_Helm(walsh,Walsh,Walsh.paa)
 		NEW_501_Inf_Helm(weaver,Weaver,Weaver.paa)
@@ -157,13 +155,16 @@ class CfgWeapons
 		NEW_501_Inf_Helm(archon,Archon,Archon.paa)
 		NEW_501_Inf_Helm(blade,Blade,Blade.paa)
 		NEW_501_Inf_Helm(brennan,Brennan,Brennan.paa)
-		NEW_501_Inf_Helm(delany,Delany,Delany.paa)
-		NEW_501_Inf_Helm(fallout,Fallout,Fallout.paa)
 		NEW_501_Inf_Helm(jupiter,Jupiter,Jupiter.paa)
 		NEW_501_Inf_Helm(purdy,Purdy,Purdy.paa)
 		NEW_501_Inf_Helm(shadow,Shadow,Shadow.paa)
+		NEW_501_Inf_Helm(delaney,Delaney,Delaney.paa)
+		NEW_501_Inf_Helm(hosed,Hosed,Hosed.paa)
+		NEW_501_Inf_Helm(fallout,Fallout,Fallout.paa)
 		NEW_501_Inf_Helm(snippy,Snippy,Snippy.paa)
-
+		NEW_501_Inf_Helm(scanlon,Scanlon,Scanlon.paa)
+		NEW_501_Inf_Helm(vampire,Vampire,Vampire.paa)
+	
 	
 	//Lumanated Visor, Alphabetically, Ascending order
 		NEW_501_Lumanated_Visor_Helm(andromeda,Andromeda,Andromeda.paa)//3rd

@@ -281,6 +281,273 @@ class CfgWeapons
 		
 	};
 
+	class macro_new_helmet(infantry,jlts_recruit) : itemCore
+	{
+		scope = 2;
+		author = "RD501";
+		weaponPoolAvailable = 1;       
 
+		ace_hearing_protection = 0.85; 		
+		ace_hearing_lowerVolume = 0;   
+
+		displayName = "501st Infantry Helmet (Recruit)";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetP2_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetP2.p3d";
+		hiddenSelections[] = {"Camo1"};
+		hiddenSelectionsTextures[] = {"\RD501_Helmets\_textures\jlts\inf\recruit_helmet.paa"};
+		class ItemInfo: HeadgearItem
+		{
+			mass = 30;
+			uniformmodel = "\MRC\JLTS\characters\CloneArmor\CloneHelmetP2.p3d";
+			modelSides[] = {6};
+			hiddenSelections[] = {"Camo1"};
+			material = -1;
+			explosionShielding = 2.2;
+			minimalHit = 0.01;
+			passThrough = 0.01;
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 50;
+					passThrough = 0.6;
+				};
+			};
+		};
+	};
+	class macro_new_helmet(infantry,jlts_cadet) : itemCore
+	{
+		scope = 2;
+		author = "RD501";
+		weaponPoolAvailable = 1;       
+
+		ace_hearing_protection = 0.85; 		
+		ace_hearing_lowerVolume = 0;   
+
+		displayName = "501st Infantry Helmet (Cadet)";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetP2_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetP2.p3d";
+		hiddenSelections[] = {"Camo1"};
+		hiddenSelectionsTextures[] = {"\RD501_Helmets\_textures\jlts\inf\cadet_helmet.paa"};
+		class ItemInfo: HeadgearItem
+		{
+			mass = 30;
+			uniformmodel = "\MRC\JLTS\characters\CloneArmor\CloneHelmetP2.p3d";
+			modelSides[] = {6};
+			hiddenSelections[] = {"Camo1"};
+			material = -1;
+			explosionShielding = 2.2;
+			minimalHit = 0.01;
+			passThrough = 0.01;
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 50;
+					passThrough = 0.6;
+				};
+			};
+		};
+	};
+	class macro_new_helmet(infantry,jlts_trooper) : itemCore
+	{
+		scope = 2;
+		author = "RD501";
+		weaponPoolAvailable = 1;       
+
+		ace_hearing_protection = 0.85; 		
+		ace_hearing_lowerVolume = 0;   
+
+		displayName = "501st Infantry Helmet (Trooper)";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetP2_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetP2.p3d";
+		hiddenSelections[] = {"Camo1"};
+		hiddenSelectionsTextures[] = {"\RD501_Helmets\_textures\jlts\inf\trooper_helmet.paa"};
+		class ItemInfo: HeadgearItem
+		{
+			mass = 30;
+			uniformmodel = "\MRC\JLTS\characters\CloneArmor\CloneHelmetP2.p3d";
+			modelSides[] = {6};
+			hiddenSelections[] = {"Camo1"};
+			material = -1;
+			explosionShielding = 2.2;
+			minimalHit = 0.01;
+			passThrough = 0.01;
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 50;
+					passThrough = 0.6;
+				};
+			};
+		};
+	};
+	class macro_new_helmet(infantry,jlts_strooper) : itemCore
+	{
+		scope = 2;
+		author = "RD501";
+		weaponPoolAvailable = 1;       
+
+		ace_hearing_protection = 0.85; 		
+		ace_hearing_lowerVolume = 0;   
+
+		displayName = "501st Infantry Helmet (Sr. Trooper)";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetP2_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetP2.p3d";
+		hiddenSelections[] = {"Camo1"};
+		hiddenSelectionsTextures[] = {"\RD501_Helmets\_textures\jlts\inf\strooper_helmet.paa"};
+		class ItemInfo: HeadgearItem
+		{
+			mass = 30;
+			uniformmodel = "\MRC\JLTS\characters\CloneArmor\CloneHelmetP2.p3d";
+			modelSides[] = {6};
+			hiddenSelections[] = {"Camo1"};
+			material = -1;
+			explosionShielding = 2.2;
+			minimalHit = 0.01;
+			passThrough = 0.01;
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 50;
+					passThrough = 0.6;
+				};
+			};
+		};
+	};
+	class macro_new_helmet(infantry,jlts_vtrooper) : itemCore
+	{
+		scope = 2;
+		author = "RD501";
+		weaponPoolAvailable = 1;       
+
+		ace_hearing_protection = 0.85; 		
+		ace_hearing_lowerVolume = 0;   
+
+		displayName = "501st Infantry Helmet (Vet. Trooper)";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetP2_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetP2.p3d";
+		hiddenSelections[] = {"Camo1"};
+		hiddenSelectionsTextures[] = {"\RD501_Helmets\_textures\jlts\inf\vtrooper_helmet.paa"};
+		class ItemInfo: HeadgearItem
+		{
+			mass = 30;
+			uniformmodel = "\MRC\JLTS\characters\CloneArmor\CloneHelmetP2.p3d";
+			modelSides[] = {6};
+			hiddenSelections[] = {"Camo1"};
+			material = -1;
+			explosionShielding = 2.2;
+			minimalHit = 0.01;
+			passThrough = 0.01;
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 50;
+					passThrough = 0.6;
+				};
+			};
+		};
+	};
+	class macro_new_helmet(infantry,jlts_nco) : itemCore
+	{
+		scope = 2;
+		author = "RD501";
+		weaponPoolAvailable = 1;       
+
+		ace_hearing_protection = 0.85; 		
+		ace_hearing_lowerVolume = 0;   
+
+		displayName = "501st Infantry Helmet (NCO)";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetP2_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetP2.p3d";
+		hiddenSelections[] = {"Camo1"};
+		hiddenSelectionsTextures[] = {"\RD501_Helmets\_textures\jlts\inf\nco_helmet.paa"};
+		class ItemInfo: HeadgearItem
+		{
+			mass = 30;
+			uniformmodel = "\MRC\JLTS\characters\CloneArmor\CloneHelmetP2.p3d";
+			modelSides[] = {6};
+			hiddenSelections[] = {"Camo1"};
+			material = -1;
+			explosionShielding = 2.2;
+			minimalHit = 0.01;
+			passThrough = 0.01;
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 50;
+					passThrough = 0.6;
+				};
+			};
+		};
+	};			
+	class macro_new_helmet(airborne,jlts_trooper): H_HelmetSpecB
+	{
+		author = "RD501";
+		scope = 2;
+		displayName = "501st Airborne Helmet (Trooper)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
+		ace_hearing_protection = 0.85; 		
+		ace_hearing_lowerVolume = 0;    
+		hiddenSelections[] = {"camo1"};
+		hiddenSelectionsTextures[] = {"\RD501_Helmets\_textures\jlts\ab\ab_helmet_trooper.paa"};
+		class ItemInfo: HeadgearItem
+		{
+			mass = 10;
+			uniformmodel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+			allowedSlots[] = {801,901,701,605};
+			modelSides[] = {6};
+			hiddenSelections[] = {"camo1"};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 60;
+					passThrough = 0.5;
+				};
+			};
+		};
+	};
+	class macro_new_helmet(airborne,jlts_vtrooper): H_HelmetSpecB
+	{
+		author = "RD501";
+		scope = 2;
+		displayName = "501st Airborne Helmet (Vet. Trooper)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
+		ace_hearing_protection = 0.85; 		
+		ace_hearing_lowerVolume = 0;    
+		hiddenSelections[] = {"camo1"};
+		hiddenSelectionsTextures[] = {"\RD501_Helmets\_textures\jlts\ab\ab_helmet_vtrooper.paa"};
+		class ItemInfo: HeadgearItem
+		{
+			mass = 10;
+			uniformmodel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+			allowedSlots[] = {801,901,701,605};
+			modelSides[] = {6};
+			hiddenSelections[] = {"camo1"};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 60;
+					passThrough = 0.5;
+				};
+			};
+		};
+	};
 	#include "_includes/_base_swop_helmets.hpp"
 };
