@@ -905,10 +905,8 @@ class CfgVehicles
 	{
 		scope=2;
 		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
 		tf_range=35000;
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_hasLRradio=1;
 		maximumLoad=700;
 		RD501_jumppack_is_jumppack=1;
@@ -959,10 +957,8 @@ class CfgVehicles
 	{
 		scope=2;
 		tf_encryptionCode="tf_west_radio_code";
-		tf_dialog="anarc210_radio_dialog";
 		tf_subtype="digital_lr";
 		tf_range=35000;
-		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_hasLRradio=1;
 		maximumLoad=700;
 		RD501_jumppack_is_jumppack=1;

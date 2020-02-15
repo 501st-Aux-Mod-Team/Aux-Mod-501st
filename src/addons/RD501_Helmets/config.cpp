@@ -549,5 +549,34 @@ class CfgWeapons
 			};
 		};
 	};
+	class macro_new_helmet(airborne,jlts_base): H_HelmetSpecB
+	{
+		author = "RD501";
+		scope = 2;
+		displayName = "501st Airborne Helmet (Base)";
+		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
+		ace_hearing_protection = 0.85; 		
+		ace_hearing_lowerVolume = 0;    
+		hiddenSelections[] = {"camo1"};
+		hiddenSelectionsTextures[] = {"MRC\JLTS\characters\CloneArmor\data\Clone_Helmet_AB_co.paa"};
+		class ItemInfo: HeadgearItem
+		{
+			mass = 10;
+			uniformmodel="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
+			allowedSlots[] = {801,901,701,605};
+			modelSides[] = {6};
+			hiddenSelections[] = {"camo1"};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 60;
+					passThrough = 0.5;
+				};
+			};
+		};
+	};
 	#include "_includes/_base_swop_helmets.hpp"
 };
