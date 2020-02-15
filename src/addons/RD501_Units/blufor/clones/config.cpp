@@ -582,12 +582,12 @@ class cfgWeapons
 	{
 		displayName = "[501st] AB RTO ACC 01 (Corporal)";
 		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestAirborneNCO.p3d";
 		hiddenSelections[] = {"Camo1","Camo2"};
-		hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\ab\acc\ab_rto_acc1.paa, TEXTUREPATH\Republic\clones\ab\acc\ab_cpl_acc.paa};
+		hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\ab\acc\ab_sgt_acc.paa, TEXTUREPATH\Republic\clones\ab\acc\ab_rto_acc1.paa};
 		class ItemInfo: ItemInfo
 		{
-			uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestOfficer.p3d";
+			uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestAirborneNCO.p3d";
 			containerClass="Supply100";
 			hiddenSelections[]=
 			{
@@ -600,12 +600,12 @@ class cfgWeapons
 	{
 		displayName = "[501st] AB MED ACC 01 (Corporal)";
 		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestAirborneNCO.p3d";
 		hiddenSelections[] = {"Camo1","Camo2"};
-		hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\ab\acc\ab_medic_acc1.paa, TEXTUREPATH\Republic\clones\ab\acc\ab_cpl_acc.paa};
+		hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\ab\acc\ab_sgt_acc.paa, TEXTUREPATH\Republic\clones\ab\acc\ab_medic_acc1.paa};
 		class ItemInfo: ItemInfo
 		{
-			uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestOfficer.p3d";
+			uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestAirborneNCO.p3d";
 			containerClass="Supply100";
 			hiddenSelections[]=
 			{
@@ -618,12 +618,12 @@ class cfgWeapons
 	{
 		displayName = "[501st] AB RTO ACC 02 (Sergeant)";
 		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestAirborneNCO.p3d";
 		hiddenSelections[] = {"Camo1","Camo2"};
-		hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\ab\acc\ab_rto_acc.paa, TEXTUREPATH\Republic\clones\ab\acc\ab_cpl_acc.paa};
+		hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\ab\acc\ab_sgt_acc.paa, TEXTUREPATH\Republic\clones\ab\acc\ab_rto_acc.paa};
 		class ItemInfo: ItemInfo
 		{
-			uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestOfficer.p3d";
+			uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestAirborneNCO.p3d";
 			containerClass="Supply100";
 			hiddenSelections[]=
 			{
@@ -636,12 +636,12 @@ class cfgWeapons
 	{
 		displayName = "[501st] AB MED ACC 02 (Sergeant)";
 		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
-		model="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer.p3d";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestAirborneNCO.p3d";
 		hiddenSelections[] = {"Camo1","Camo2"};
-		hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\ab\acc\ab_medic_acc.paa, TEXTUREPATH\Republic\clones\ab\acc\ab_cpl_acc.paa};
+		hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\ab\acc\ab_sgt_acc.paa, TEXTUREPATH\Republic\clones\ab\acc\ab_medic_acc.paa};
 		class ItemInfo: ItemInfo
 		{
-			uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestOfficer.p3d";
+			uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestAirborneNCO.p3d";
 			containerClass="Supply100";
 			hiddenSelections[]=
 			{
@@ -721,7 +721,7 @@ class cfgWeapons
 			};
 		};
 	};
-	class macro_new_vest_class(501_avi,acc_4): macro_new_vest_class(501_inf,acc_1)
+	class macro_new_vest_class(501_avi,acc_5): macro_new_vest_class(501_inf,acc_1)
 	{
 		displayName = "[501st] AVI ACC 05 (Captain)";
 		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";

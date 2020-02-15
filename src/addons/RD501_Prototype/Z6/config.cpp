@@ -41,6 +41,7 @@ class cfgWeapons
 	class macro_new_weapon(proto,z6):SCI_arifle_z6_F
 	{
 		model="\MRC\JLTS\weapons\Z6\Z6.p3d";
+		selectionFireAnim="zasleh";
 		hiddenSelections[]=
 		{
 			"camo1",

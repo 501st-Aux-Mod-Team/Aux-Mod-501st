@@ -40,7 +40,7 @@ class cfgWeapons
 		scope=2;
 		scopeArsenal=2;
 		weaponPoolAvailable = 1;
-	
+		selectionFireAnim="zasleh";
 		dlc = "RD501";
 
 		author= "RD501";

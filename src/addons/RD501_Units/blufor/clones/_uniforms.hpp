@@ -128,7 +128,7 @@ class macro_new_uniform_class(blufor,krayt_uniform):SWOP_Clonetrooper_F_CombatUn
 
 class macro_new_uniform_class(501_inf,recruit): SWOP_Clonetrooper_F_CombatUniform
 {
-displayName = "[501st] INF ARMR 1 (Recruit)";
+displayName = "[501st] INF ARMR 01 (Recruit)";
 	picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
 	model="\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
 	class ItemInfo: ItemInfo
@@ -146,7 +146,7 @@ displayName = "[501st] INF ARMR 1 (Recruit)";
 };
 class macro_new_uniform_class(501_inf,cadet): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "[501st] INF ARMR 2 (Cadet)";
+	displayName = "[501st] INF ARMR 02 (Cadet)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_inf,cadet);
@@ -155,7 +155,7 @@ class macro_new_uniform_class(501_inf,cadet): macro_new_uniform_class(501_inf,re
 };
 class macro_new_uniform_class(501_inf_medic,cadet): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "[501st] INF MED ARMR 1 (Cadet)";
+	displayName = "[501st] INF MED ARMR 01 (Cadet)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_inf_medic,cadet);
@@ -164,7 +164,7 @@ class macro_new_uniform_class(501_inf_medic,cadet): macro_new_uniform_class(501_
 };
 class macro_new_uniform_class(501_inf_rto,cadet): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "[501st] INF RTO ARMR 1 (Cadet)";
+	displayName = "[501st] INF RTO ARMR 01 (Cadet)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_inf_rto,cadet);
@@ -173,7 +173,7 @@ class macro_new_uniform_class(501_inf_rto,cadet): macro_new_uniform_class(501_in
 };
 class macro_new_uniform_class(501_inf,trooper): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "[501st] INF ARMR 3 (Trooper)";
+	displayName = "[501st] INF ARMR 03 (Trooper)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_inf,trooper);
@@ -182,7 +182,7 @@ class macro_new_uniform_class(501_inf,trooper): macro_new_uniform_class(501_inf,
 };
 class macro_new_uniform_class(501_inf_medic,trooper): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "[501st] INF MED ARMR 2 (Trooper)";
+	displayName = "[501st] INF MED ARMR 02 (Trooper)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_inf_medic,trooper);
@@ -191,7 +191,7 @@ class macro_new_uniform_class(501_inf_medic,trooper): macro_new_uniform_class(50
 };
 class macro_new_uniform_class(501_inf_rto,trooper): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "[501st] INF RTO ARMR 2 (Trooper)";
+	displayName = "[501st] INF RTO ARMR 02 (Trooper)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_inf_rto,trooper);
@@ -200,7 +200,7 @@ class macro_new_uniform_class(501_inf_rto,trooper): macro_new_uniform_class(501_
 };
 class macro_new_uniform_class(501_inf,strooper): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "[501st] INF ARMR 4 (Senior Trooper)";
+	displayName = "[501st] INF ARMR 04 (Senior Trooper)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_inf,strooper);
@@ -209,7 +209,7 @@ class macro_new_uniform_class(501_inf,strooper): macro_new_uniform_class(501_inf
 };
 class macro_new_uniform_class(501_inf_medic,strooper): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "[501st] INF MED ARMR 3 (Senior Trooper)";
+	displayName = "[501st] INF MED ARMR 03 (Senior Trooper)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_inf_medic,strooper);
@@ -218,7 +218,7 @@ class macro_new_uniform_class(501_inf_medic,strooper): macro_new_uniform_class(5
 };
 class macro_new_uniform_class(501_inf_rto,strooper): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "[501st] INF RTO ARMR 3 (Senior Trooper)";
+	displayName = "[501st] INF RTO ARMR 03 (Senior Trooper)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_inf_rto,strooper);
@@ -227,7 +227,7 @@ class macro_new_uniform_class(501_inf_rto,strooper): macro_new_uniform_class(501
 };
 class macro_new_uniform_class(501_inf,vtrooper): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "[501st] INF ARMR 5 (Veteran Trooper)";
+	displayName = "[501st] INF ARMR 05 (Veteran Trooper)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_inf,vtrooper);
@@ -236,7 +236,7 @@ class macro_new_uniform_class(501_inf,vtrooper): macro_new_uniform_class(501_inf
 };
 class macro_new_uniform_class(501_inf_medic,vtrooper): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "[501st] INF MED ARMR 4 (Veteran Trooper)";
+	displayName = "[501st] INF MED ARMR 04 (Veteran Trooper)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_inf_medic,vtrooper);
@@ -245,7 +245,7 @@ class macro_new_uniform_class(501_inf_medic,vtrooper): macro_new_uniform_class(5
 };
 class macro_new_uniform_class(501_inf_rto,vtrooper): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "[501st] INF RTO ARMR 4 (Veteran Trooper)";
+	displayName = "[501st] INF RTO ARMR 04 (Veteran Trooper)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_inf_rto,vtrooper);
@@ -254,7 +254,7 @@ class macro_new_uniform_class(501_inf_rto,vtrooper): macro_new_uniform_class(501
 };
 class macro_new_uniform_class(501_inf,nco): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "[501st] INF ARMR 6 (NCO)";
+	displayName = "[501st] INF ARMR 06 (NCO)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_inf,nco);
@@ -263,7 +263,7 @@ class macro_new_uniform_class(501_inf,nco): macro_new_uniform_class(501_inf,recr
 };
 class macro_new_uniform_class(501_inf_medic,nco): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "[501st] INF MED ARMR 5 (NCO)";
+	displayName = "[501st] INF MED ARMR 05 (NCO)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_inf_medic,nco);
@@ -272,7 +272,7 @@ class macro_new_uniform_class(501_inf_medic,nco): macro_new_uniform_class(501_in
 };
 class macro_new_uniform_class(501_inf_rto,nco): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "[501st] INF RTO ARMR 5 (NCO)";
+	displayName = "[501st] INF RTO ARMR 05 (NCO)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_inf_rto,nco);
@@ -282,7 +282,7 @@ class macro_new_uniform_class(501_inf_rto,nco): macro_new_uniform_class(501_inf,
 ///
 class macro_new_uniform_class(501_ab,cadet): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Airborne Armor (Cadet)";
+	displayName = "[501st] AB ARMR 01 (Cadet)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_ab,cadet);
@@ -291,7 +291,7 @@ class macro_new_uniform_class(501_ab,cadet): macro_new_uniform_class(501_inf,rec
 };
 class macro_new_uniform_class(501_ab_medic,cadet): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Airborne Medic Armor (Cadet)";
+	displayName = "[501st] AB MED ARMR 01 (Cadet)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_ab_medic,cadet);
@@ -300,7 +300,7 @@ class macro_new_uniform_class(501_ab_medic,cadet): macro_new_uniform_class(501_i
 };
 class macro_new_uniform_class(501_ab_rto,cadet): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Airborne RTO Armor (Cadet)";
+	displayName = "[501st] AB RTO ARMR 01 (Cadet)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_ab_rto,cadet);
@@ -309,7 +309,7 @@ class macro_new_uniform_class(501_ab_rto,cadet): macro_new_uniform_class(501_inf
 };
 class macro_new_uniform_class(501_ab,trooper): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Airborne Armor (Trooper)";
+	displayName = "[501st] AB ARMR 02 (Trooper)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_ab,trooper);
@@ -318,7 +318,7 @@ class macro_new_uniform_class(501_ab,trooper): macro_new_uniform_class(501_inf,r
 };
 class macro_new_uniform_class(501_ab_medic,trooper): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Airborne Medic Armor (Trooper)";
+	displayName = "[501st] AB MED ARMR 02 (Trooper)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_ab_medic,trooper);
@@ -327,7 +327,7 @@ class macro_new_uniform_class(501_ab_medic,trooper): macro_new_uniform_class(501
 };
 class macro_new_uniform_class(501_ab_rto,trooper): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Airborne RTO Armor (Trooper)";
+	displayName = "[501st] AB RTO ARMR 02 (Trooper)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_ab_rto,trooper);
@@ -336,7 +336,7 @@ class macro_new_uniform_class(501_ab_rto,trooper): macro_new_uniform_class(501_i
 };
 class macro_new_uniform_class(501_ab,strooper): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Airborne Armor (Senior Trooper)";
+	displayName = "[501st] AB ARMR 03 (Senior Trooper)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_ab,strooper);
@@ -345,7 +345,7 @@ class macro_new_uniform_class(501_ab,strooper): macro_new_uniform_class(501_inf,
 };
 class macro_new_uniform_class(501_ab_medic,strooper): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Airborne Medic Armor (Senior Trooper)";
+	displayName = "[501st] AB MED ARMR 03 (Senior Trooper)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_ab_medic,strooper);
@@ -354,7 +354,7 @@ class macro_new_uniform_class(501_ab_medic,strooper): macro_new_uniform_class(50
 };
 class macro_new_uniform_class(501_ab_rto,strooper): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Airborne RTO Armor (Senior Trooper)";
+	displayName = "[501st] AB RTO ARMR 03 (Senior Trooper)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_ab_rto,strooper);
@@ -363,7 +363,7 @@ class macro_new_uniform_class(501_ab_rto,strooper): macro_new_uniform_class(501_
 };
 class macro_new_uniform_class(501_ab,vtrooper): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Airborne Armor (Veteran Trooper)";
+	displayName = "[501st] AB ARMR 04 (Veteran Trooper)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_ab,vtrooper);
@@ -372,7 +372,7 @@ class macro_new_uniform_class(501_ab,vtrooper): macro_new_uniform_class(501_inf,
 };
 class macro_new_uniform_class(501_ab_medic,vtrooper): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Airborne Medic Armor (Veteran Trooper)";
+	displayName = "[501st] AB MED ARMR 04 (Veteran Trooper)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_ab_medic,vtrooper);
@@ -381,7 +381,7 @@ class macro_new_uniform_class(501_ab_medic,vtrooper): macro_new_uniform_class(50
 };
 class macro_new_uniform_class(501_ab_rto,vtrooper): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Airborne RTO Armor (Veteran Trooper)";
+	displayName = "[501st] AB RTO ARMR 04 (Veteran Trooper)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_ab_rto,vtrooper);
@@ -390,7 +390,7 @@ class macro_new_uniform_class(501_ab_rto,vtrooper): macro_new_uniform_class(501_
 };
 class macro_new_uniform_class(501_ab,cpl): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Airborne Armor (Cpl)";
+	displayName = "[501st] AB ARMR 05 (Cpl)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_ab,cpl);
@@ -399,7 +399,7 @@ class macro_new_uniform_class(501_ab,cpl): macro_new_uniform_class(501_inf,recru
 };
 class macro_new_uniform_class(501_ab_medic,cpl): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Airborne Medic Armor (Cpl)";
+	displayName = "[501st] AB MED ARMR 05 (Cpl)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_ab_medic,cpl);
@@ -408,7 +408,7 @@ class macro_new_uniform_class(501_ab_medic,cpl): macro_new_uniform_class(501_inf
 };
 class macro_new_uniform_class(501_ab_rto,cpl): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Airborne RTO Armor (Cpl)";
+	displayName = "[501st] AB RTO ARMR 05 (Cpl)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_ab_rto,cpl);
@@ -417,7 +417,7 @@ class macro_new_uniform_class(501_ab_rto,cpl): macro_new_uniform_class(501_inf,r
 };
 class macro_new_uniform_class(501_ab,scpl): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Airborne Armor (Sr. Cpl)";
+	displayName = "[501st] AB ARMR 06 (Sr. Cpl)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_ab,scpl);
@@ -426,7 +426,7 @@ class macro_new_uniform_class(501_ab,scpl): macro_new_uniform_class(501_inf,recr
 };
 class macro_new_uniform_class(501_ab_medic,scpl): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Airborne Medic Armor (Sr. Cpl)";
+	displayName = "[501st] AB MED ARMR 06 (Sr. Cpl)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_ab_medic,scpl);
@@ -435,7 +435,7 @@ class macro_new_uniform_class(501_ab_medic,scpl): macro_new_uniform_class(501_in
 };
 class macro_new_uniform_class(501_ab_rto,scpl): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Airborne RTO Armor (Sr. Cpl)";
+	displayName = "[501st] AB RTO ARMR 06 (Sr. Cpl)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_ab_rto,scpl);
@@ -444,7 +444,7 @@ class macro_new_uniform_class(501_ab_rto,scpl): macro_new_uniform_class(501_inf,
 };
 class macro_new_uniform_class(501_ab,cs): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Airborne Armor (CS)";
+	displayName = "[501st] AB ARMR 07 (CS)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_ab,cs);
@@ -453,7 +453,7 @@ class macro_new_uniform_class(501_ab,cs): macro_new_uniform_class(501_inf,recrui
 };
 class macro_new_uniform_class(501_ab_medic,cs): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Airborne Medic Armor (CS)";
+	displayName = "[501st] AB MED ARMR 07 (CS)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_ab_medic,cs);
@@ -462,7 +462,7 @@ class macro_new_uniform_class(501_ab_medic,cs): macro_new_uniform_class(501_inf,
 };
 class macro_new_uniform_class(501_ab_rto,cs): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Airborne RTO Armor (CS)";
+	displayName = "[501st] AB RTO ARMR 07 (CS)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_ab_rto,cs);
@@ -471,7 +471,7 @@ class macro_new_uniform_class(501_ab_rto,cs): macro_new_uniform_class(501_inf,re
 };
 class macro_new_uniform_class(501_ab,scs): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Airborne Armor (Sr. CS)";
+	displayName = "[501st] AB ARMR 08 (Sr. CS)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_ab,scs);
@@ -480,7 +480,7 @@ class macro_new_uniform_class(501_ab,scs): macro_new_uniform_class(501_inf,recru
 };
 class macro_new_uniform_class(501_ab_medic,scs): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Airborne Medic Armor (Sr. CS)";
+	displayName = "[501st] AB MED ARMR 08 (Sr. CS)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_ab_medic,scs);
@@ -489,7 +489,7 @@ class macro_new_uniform_class(501_ab_medic,scs): macro_new_uniform_class(501_inf
 };
 class macro_new_uniform_class(501_ab_rto,scs): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Airborne RTO Armor (Sr. CS)";
+	displayName = "[501st] AB RTO ARMR 08 (Sr. CS)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_ab_rto,scs);
@@ -498,7 +498,7 @@ class macro_new_uniform_class(501_ab_rto,scs): macro_new_uniform_class(501_inf,r
 };
 class macro_new_uniform_class(501_ab,csm): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Airborne Armor (CS-M)";
+	displayName = "[501st] AB ARMR 09 (CS-M)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_ab,csm);
@@ -507,7 +507,7 @@ class macro_new_uniform_class(501_ab,csm): macro_new_uniform_class(501_inf,recru
 };
 class macro_new_uniform_class(501_avi,cxc): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Aviation Armor (Cadet)";
+	displayName = "[501st] AVI ARMR 01 (Cadet)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_avi,cxc);
@@ -516,7 +516,7 @@ class macro_new_uniform_class(501_avi,cxc): macro_new_uniform_class(501_inf,recr
 };
 class macro_new_uniform_class(501_avi,scxc): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Aviation Armor (Sr. Cadet)";
+	displayName = "[501st] AVI ARMR 02 (Sr. Cadet)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_avi,scxc);
@@ -525,7 +525,7 @@ class macro_new_uniform_class(501_avi,scxc): macro_new_uniform_class(501_inf,rec
 };
 class macro_new_uniform_class(501_avi,cxx): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Aviation Armor (Ensign)";
+	displayName = "[501st] AVI ARMR 03 (Ensign)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_avi,cxx);
@@ -534,7 +534,7 @@ class macro_new_uniform_class(501_avi,cxx): macro_new_uniform_class(501_inf,recr
 };
 class macro_new_uniform_class(501_avi,scxx): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Aviation Armor (Sr. Ensign)";
+	displayName = "[501st] AVI ARMR 04 (Sr. Ensign)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_avi,scxx);
@@ -543,7 +543,7 @@ class macro_new_uniform_class(501_avi,scxx): macro_new_uniform_class(501_inf,rec
 };
 class macro_new_uniform_class(501_avi,cxp): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Aviation Armor (Flight Officer)";
+	displayName = "[501st] AVI ARMR 05 (Flight Officer)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_avi,cxp);
@@ -552,7 +552,7 @@ class macro_new_uniform_class(501_avi,cxp): macro_new_uniform_class(501_inf,recr
 };
 class macro_new_uniform_class(501_avi,cxs): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Aviation Armor (Jr. Lt.)";
+	displayName = "[501st] AVI ARMR 06 (Jr. Lt.)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_avi,cxs);
@@ -561,7 +561,7 @@ class macro_new_uniform_class(501_avi,cxs): macro_new_uniform_class(501_inf,recr
 };
 class macro_new_uniform_class(501_avi,cx1): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Aviation Armor (Second Lt.)";
+	displayName = "[501st] AVI ARMR 08 (First Lt.)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_avi,cx1);
@@ -570,7 +570,7 @@ class macro_new_uniform_class(501_avi,cx1): macro_new_uniform_class(501_inf,recr
 };
 class macro_new_uniform_class(501_avi,cx2): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Aviation Armor (First Lt.)";
+	displayName = "[501st] AVI ARMR 07 (Second Lt.)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_avi,cx2);
@@ -579,7 +579,7 @@ class macro_new_uniform_class(501_avi,cx2): macro_new_uniform_class(501_inf,recr
 };
 class macro_new_uniform_class(501_avi,cx3): macro_new_uniform_class(501_inf,recruit)
 {
-	displayName = "501st Aviation Armor (Captain)";
+	displayName = "[501st] AVI ARMR 09 (Captain)";
 	class ItemInfo: ItemInfo
 	{
 		uniformClass = macro_new_uniform_skin_class(501_avi,cx3);
