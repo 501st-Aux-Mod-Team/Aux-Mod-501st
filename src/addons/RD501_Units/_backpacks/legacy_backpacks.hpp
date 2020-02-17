@@ -392,44 +392,54 @@ class RD501_b_east_Parachute: b_Parachute
 class RD501_JLTS_Clone_backpack: JLTS_Clone_backpack
 {
 	maximumload=700;
+	Displayname="[501st] Combat Pack (Base)"
 };
 class RD501_JLTS_Clone_backpack_s: JLTS_Clone_backpack_s
 {
 	maximumload=700;
+	Displayname="[501st] Combat Pack (Straps)"
 };
 class RD501_JLTS_Clone_backpack_medic: JLTS_Clone_backpack_medic
 {
 	maximumload=700;
+	Displayname="[501st] Combat Pack (Medical)"
 };
 class RD501_JLTS_Clone_backpack_eod: JLTS_Clone_backpack_eod
 {
 	maximumload=700;
+	Displayname="[501st] Combat Pack (EOD)"
 };
 class RD501_JLTS_Clone_backpack_bomb: JLTS_Clone_backpack_bomb
 {
 	maximumload=700;
+	Displayname="[501st] Combat Pack (Explosives)"
 };
 class RD501_JLTS_Clone_backpack_RTO: JLTS_Clone_backpack_RTO
 {
 	maximumload=700;
 	tf_range=35000;
+	Displayname="[501st] Radio Pack (Large)"
 };
 class RD501_JLTS_Clone_backpack_s_RTO: JLTS_Clone_backpack_s_RTO
 {
 	maximumload=700;
 	tf_range=35000;
+	Displayname="[501st] Radio Pack (Straps)"
 };
 class RD501_JLTS_Clone_belt_bag: JLTS_Clone_belt_bag
 {
 	maximumload=700;
+	Displayname="[501st] Belt Bag"
 };
 class RD501_JLTS_Clone_RTO_pack: JLTS_Clone_RTO_pack
 {
 	maximumload=700;
 	tf_range=35000;
+	Displayname="[501st] Radio Pack (Small)"
 };
 class RD501_JLTS_Clone_LR_attachment: JLTS_Clone_LR_attachment
 {
 	maximumload=700;
 	tf_range=35000;
+	Displayname="[501st] Radio Pack (Attachment)"
 };

@@ -252,6 +252,23 @@ class cfgWeapons
 			};
 		};
 	};
+	class macro_new_vest_class(501_inf,acc_12): macro_new_vest_class(501_inf,acc_9)
+	{
+		displayName = "[501st] INF ACC 06 (Sgt. Major)"
+		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestPauldron_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer.p3d";
+		hiddenSelections[] = {"Camo1"};
+		hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\Infantry\acc\sgtmajor_pauldron.paa};
+		class ItemInfo: ItemInfo
+		{
+			uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestOfficer.p3d";
+			containerClass="Supply100";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+		};
+	};
 	class macro_new_vest_class(501_inf,acc_6): macro_new_vest_class(501_inf,acc_9)
 	{
 		displayName = "[501st] INF ACC 06 (Sgt. Major (C))";

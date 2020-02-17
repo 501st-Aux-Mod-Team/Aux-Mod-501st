@@ -904,6 +904,7 @@ class CfgVehicles
 	class RD501_JLTS_Clone_jumppack_mc: JLTS_Clone_jumppack_mc
 	{
 		scope=2;
+		displayname = "[501st] AB Jumppack (MC)";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_subtype="digital_lr";
 		tf_range=35000;
@@ -956,6 +957,7 @@ class CfgVehicles
 	class RD501_JLTS_Clone_jumppack: JLTS_Clone_jumppack
 	{
 		scope=2;
+		displayname = "[501st] AB Jumppack (JLTS)";
 		tf_encryptionCode="tf_west_radio_code";
 		tf_subtype="digital_lr";
 		tf_range=35000;

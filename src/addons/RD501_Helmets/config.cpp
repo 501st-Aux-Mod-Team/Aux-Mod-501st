@@ -290,7 +290,7 @@ class CfgWeapons
 		ace_hearing_protection = 0.85; 		
 		ace_hearing_lowerVolume = 0;   
 
-		displayName = "501st Infantry Helmet (Recruit)";
+		displayName = "[501st] INF HELM 01 (Base)";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetP2_ui_ca.paa";
 		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetP2.p3d";
 		hiddenSelections[] = {"Camo1"};
@@ -325,7 +325,7 @@ class CfgWeapons
 		ace_hearing_protection = 0.85; 		
 		ace_hearing_lowerVolume = 0;   
 
-		displayName = "501st Infantry Helmet (Cadet)";
+		displayName = "[501st] INF HELM 02 (Cadet)";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetP2_ui_ca.paa";
 		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetP2.p3d";
 		hiddenSelections[] = {"Camo1"};
@@ -360,7 +360,7 @@ class CfgWeapons
 		ace_hearing_protection = 0.85; 		
 		ace_hearing_lowerVolume = 0;   
 
-		displayName = "501st Infantry Helmet (Trooper)";
+		displayName = "[501st] INF HELM 03 (Trooper)";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetP2_ui_ca.paa";
 		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetP2.p3d";
 		hiddenSelections[] = {"Camo1"};
@@ -395,7 +395,7 @@ class CfgWeapons
 		ace_hearing_protection = 0.85; 		
 		ace_hearing_lowerVolume = 0;   
 
-		displayName = "501st Infantry Helmet (Sr. Trooper)";
+		displayName = "[501st] INF HELM 04 (Sr. Trooper)";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetP2_ui_ca.paa";
 		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetP2.p3d";
 		hiddenSelections[] = {"Camo1"};
@@ -430,7 +430,7 @@ class CfgWeapons
 		ace_hearing_protection = 0.85; 		
 		ace_hearing_lowerVolume = 0;   
 
-		displayName = "501st Infantry Helmet (Vet. Trooper)";
+		displayName = "[501st] INF HELM 05 (Vet. Trooper)";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetP2_ui_ca.paa";
 		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetP2.p3d";
 		hiddenSelections[] = {"Camo1"};
@@ -465,7 +465,7 @@ class CfgWeapons
 		ace_hearing_protection = 0.85; 		
 		ace_hearing_lowerVolume = 0;   
 
-		displayName = "501st Infantry Helmet (NCO)";
+		displayName = "[501st] INF HELM 06 (NCO)";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetP2_ui_ca.paa";
 		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetP2.p3d";
 		hiddenSelections[] = {"Camo1"};
@@ -495,7 +495,7 @@ class CfgWeapons
 	{
 		author = "RD501";
 		scope = 2;
-		displayName = "501st Airborne Helmet (Trooper)";
+		displayName = "[501st] AB HELM 02 (Trooper)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
 		ace_hearing_protection = 0.85; 		
@@ -524,7 +524,7 @@ class CfgWeapons
 	{
 		author = "RD501";
 		scope = 2;
-		displayName = "501st Airborne Helmet (Vet. Trooper)";
+		displayName = "[501st] AB HELM 03 (Vet. Trooper)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
 		ace_hearing_protection = 0.85; 		
@@ -553,7 +553,7 @@ class CfgWeapons
 	{
 		author = "RD501";
 		scope = 2;
-		displayName = "501st Airborne Helmet (Base)";
+		displayName = "[501st] AB HELM 01 (Base)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetAB_ui_ca.paa";
 		ace_hearing_protection = 0.85; 		
