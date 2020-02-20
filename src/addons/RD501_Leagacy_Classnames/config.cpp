@@ -80,36 +80,9 @@ class cfgWeapons
 	class arifle_MX_F;
 	class RocketRPS6_F;
 	class hgun_ACPC2_F;
-	class LEGACY_RD501_GUN:arifle_MX_F
-	{
-		hiddenSelectionsTextures[] = {macro_custom_helmet_textures\other\legacy_texture.paa};
-		magazines[] = {};
-		displayName = "LEGACY RD501 WEAPON,REMOVE FROM KIT";
-		scope=0;
-	};
-
-	class LEGACY_RD501_PISTOL:hgun_ACPC2_F
-	{
-		hiddenSelectionsTextures[] = {macro_custom_helmet_textures\other\legacy_texture.paa};
-		magazines[] = {};
-		displayName = "LEGACY RD501 WEAPON,REMOVE FROM KIT";
-		scope=0;
-	};
-
-	class LEGACY_RD501_ROCKET:RocketRPS6_F
-	{
-		hiddenSelectionsTextures[] = {macro_custom_helmet_textures\other\legacy_texture.paa};
-		magazines[] = {};
-		displayName = "LEGACY RD501 WEAPON,REMOVE FROM KIT";
-		scope=0;
-	}
 	
 	#include "_legacy_classnames/primary_weapons.hpp"
 
-	class SWOP_DC17Pistol_RD501:LEGACY_RD501_PISTOL
-	{
-
-	};
 
 	class optic_Aco;
 	class NVGoggles;
@@ -247,36 +220,6 @@ class CfgGlasses
 {
 
 	class SWOP_Clones_HUD;
-	class LEGACY_GLASSES: SWOP_Clones_HUD
-	{
-		
-		scope = 0;
-		scopeArsenal=2;
-		weaponPoolAvailable=0;
-		scopeCurator = 0;
-		displayName="REMOVE THIS GOGGLE";
-		
-	};
-	class SWOP_Clones_HUD_RD501:LEGACY_GLASSES{
-		
-		displayName="CLONE - REMOVE THIS GOGGLE";
-	};
 
-	class SWOP_Clones_HUD_RD501snow:LEGACY_GLASSES{
-		
-		displayName="CLONE SNOW - REMOVE THIS GOGGLE";
-	};
-	class SWOP_Clones_HUD_RD501_p1:LEGACY_GLASSES{
-		
-		displayName="PHASE 1 HUD - REMOVE THIS GOGGLE";
-	};
-	class SWOP_Clones_HUD_RD501_AB:LEGACY_GLASSES{
-	
-		displayName="AB HUD - REMOVE THIS GOGGLE";
-	};
-	// class G_B_Diving_RD501:LEGACY_GLASSES{
-	// 	scope=0;
-	// 	displayName="Diving Gogs - REMOVE THIS GOGGLE";
-	// };
 
 };

@@ -49,11 +49,6 @@ class CfgGlasses
 		mass = 0.1;
 	};
 
-	class G_B_Diving_RD501:macro_new_glass(Diving_Goggles)
-	{
-		displayname = "REMOVE FROM KIT";
-	};
-
 	class SWOP_Clones_HUD;
 	class macro_new_glass(phase2_hud): SWOP_Clones_HUD
 	{

@@ -443,3 +443,9 @@ class RD501_JLTS_Clone_LR_attachment: JLTS_Clone_LR_attachment
 	tf_range=35000;
 	Displayname="[501st] Radio Pack (Attachment)"
 };
+class RD501_JLTS_Clone_ARC_backpack: JLTS_Clone_ARC_backpack
+{
+	maximumload=700;
+	tf_range=35000;
+	Displayname="[501st] Specialist Pack (ARC)"
+};

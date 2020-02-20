@@ -132,6 +132,7 @@ class CfgVehicles
 	class JLTS_Clone_belt_bag;
 	class JLTS_Clone_RTO_pack;
 	class JLTS_Clone_LR_attachment;
+	class JLTS_Clone_ARC_backpack;
 
 
 	class EWEB_Bag: B_UAV_01_backpack_F

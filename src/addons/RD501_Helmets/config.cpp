@@ -217,6 +217,42 @@ class CfgWeapons
 		};
 	};
 	
+	class macro_new_helmet(empire_rg,boi) : itemCore
+	{
+		scope = 2;
+		author = "RD501";
+		weaponPoolAvailable = 1;       
+
+		ace_hearing_protection = 0.85; 		
+		ace_hearing_lowerVolume = 0;    
+
+		displayName = "[Empire] Royal Guard Helm 01";
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetP2_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetSC.p3d";
+		hiddenSelections[] = {"Camo1"};
+		hiddenSelectionsTextures[] = {"RD501_Units\textures\gcw\empire\RG\rg_helmet.paa"};
+		class ItemInfo: HeadgearItem
+		{
+			mass = 30;
+			uniformmodel="\MRC\JLTS\characters\CloneArmor\CloneHelmetSC.p3d";
+			modelSides[] = {6};
+			hiddenSelections[] = {"Camo1"};
+			material = -1;
+			explosionShielding = 2.2;
+			minimalHit = 0.01;
+			passThrough = 0.01;
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 50;
+					passThrough = 0.6;
+				};
+			};
+		};
+	};
+
 	//AB
 	class macro_new_helmet(airborne,base): H_HelmetSpecB
 	{

@@ -586,3 +586,13 @@ class macro_new_uniform_class(501_avi,cx3): macro_new_uniform_class(501_inf,recr
 		containerClass = "Supply100";
 	};
 };
+//
+class macro_new_uniform_class(empire_rg,boi): macro_new_uniform_class(501_inf,recruit)
+{
+	displayName = "[Empire] Royal Guard Armour";
+	class ItemInfo: ItemInfo
+	{
+		uniformClass = macro_new_uniform_skin_class(empire_rg,boi);
+		containerClass = "Supply100";
+	};
+};

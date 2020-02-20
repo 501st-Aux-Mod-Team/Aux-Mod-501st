@@ -44,7 +44,7 @@ class cfgWeapons
 	#include "_medic_armor.hpp"
 	#include "_rto_armor.hpp"
 	#include "_other_armor.hpp"
-	
+	#include "_headwear.hpp"
 
 	//chest
 	class macro_new_vest_class(blufor,purge_vest): V_RebreatherB
@@ -438,7 +438,7 @@ class cfgWeapons
 		};
 	};
 	//
-	class macro_new_vest_class(501_ab,acc_1): macro_new_vest_class(501_inf,acc_1)
+	class macro_new_vest_class(501_ab,acc_1): macro_new_vest_class(501_inf,acc_9)
 	{
 		displayName = "[501st] AB ACC 01 (Cadet)";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
@@ -456,7 +456,7 @@ class cfgWeapons
 			};
 		};
 	};
-	class macro_new_vest_class(501_ab,acc_2): macro_new_vest_class(501_inf,acc_1)
+	class macro_new_vest_class(501_ab,acc_2): macro_new_vest_class(501_inf,acc_9)
 	{
 		displayName = "[501st] AB ACC 02 (Trooper)";
 		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
@@ -474,7 +474,7 @@ class cfgWeapons
 			};
 		};
 	};
-	class macro_new_vest_class(501_ab,acc_3): macro_new_vest_class(501_inf,acc_1)
+	class macro_new_vest_class(501_ab,acc_3): macro_new_vest_class(501_inf,acc_9)
 	{
 		displayName = "[501st] AB ACC 03 (Corporal)";
 		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
@@ -492,7 +492,7 @@ class cfgWeapons
 			};
 		};
 	};
-	class macro_new_vest_class(501_ab,acc_4): macro_new_vest_class(501_inf,acc_1)
+	class macro_new_vest_class(501_ab,acc_4): macro_new_vest_class(501_inf,acc_9)
 	{
 		displayName = "[501st] AB ACC 04 (Sergeant)";
 		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
@@ -510,7 +510,7 @@ class cfgWeapons
 			};
 		};
 	};
-	class macro_new_vest_class(501_ab,acc_5): macro_new_vest_class(501_inf,acc_1)
+	class macro_new_vest_class(501_ab,acc_5): macro_new_vest_class(501_inf,acc_9)
 	{
 		displayName = "[501st] AB ACC 05 (Sgt. Major)";
 		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
@@ -527,7 +527,7 @@ class cfgWeapons
 			};
 		};
 	};
-	class macro_new_vest_class(501_ab,acc_13): macro_new_vest_class(501_inf,acc_1)
+	class macro_new_vest_class(501_ab,acc_13): macro_new_vest_class(501_inf,acc_9)
 	{
 		displayName = "[501st] AB ACC 06 (NCOIC)";
 		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
@@ -544,7 +544,7 @@ class cfgWeapons
 			};
 		};
 	};
-	class macro_new_vest_class(501_ab,acc_6): macro_new_vest_class(501_inf,acc_1)
+	class macro_new_vest_class(501_ab,acc_6): macro_new_vest_class(501_inf,acc_9)
 	{
 		displayName = "[501st] AB ACC 07 (Second Lt.)";
 		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
@@ -561,7 +561,7 @@ class cfgWeapons
 			};
 		};
 	};
-	class macro_new_vest_class(501_ab,acc_7): macro_new_vest_class(501_inf,acc_1)
+	class macro_new_vest_class(501_ab,acc_7): macro_new_vest_class(501_inf,acc_9)
 	{
 		displayName = "[501st] AB ACC 08 (First Lt.)";
 		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
@@ -578,7 +578,7 @@ class cfgWeapons
 			};
 		};
 	};
-	class macro_new_vest_class(501_ab,acc_8): macro_new_vest_class(501_inf,acc_1)
+	class macro_new_vest_class(501_ab,acc_8): macro_new_vest_class(501_inf,acc_9)
 	{
 		displayName = "[501st] AB ACC 09 (Captain)";
 		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
@@ -595,7 +595,7 @@ class cfgWeapons
 			};
 		};
 	};
-	class macro_new_vest_class(501_ab,acc_9): macro_new_vest_class(501_inf,acc_1)
+	class macro_new_vest_class(501_ab,acc_9): macro_new_vest_class(501_inf,acc_9)
 	{
 		displayName = "[501st] AB RTO ACC 01 (Corporal)";
 		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
@@ -613,7 +613,7 @@ class cfgWeapons
 			};
 		};
 	};
-	class macro_new_vest_class(501_ab,acc_10): macro_new_vest_class(501_inf,acc_1)
+	class macro_new_vest_class(501_ab,acc_10): macro_new_vest_class(501_inf,acc_9)
 	{
 		displayName = "[501st] AB MED ACC 01 (Corporal)";
 		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
@@ -631,7 +631,7 @@ class cfgWeapons
 			};
 		};
 	};
-	class macro_new_vest_class(501_ab,acc_11): macro_new_vest_class(501_inf,acc_1)
+	class macro_new_vest_class(501_ab,acc_11): macro_new_vest_class(501_inf,acc_9)
 	{
 		displayName = "[501st] AB RTO ACC 02 (Sergeant)";
 		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
@@ -649,7 +649,7 @@ class cfgWeapons
 			};
 		};
 	};
-	class macro_new_vest_class(501_ab,acc_12): macro_new_vest_class(501_inf,acc_1)
+	class macro_new_vest_class(501_ab,acc_12): macro_new_vest_class(501_inf,acc_9)
 	{
 		displayName = "[501st] AB MED ACC 02 (Sergeant)";
 		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
@@ -669,7 +669,7 @@ class cfgWeapons
 	};
 
 	//
-	class macro_new_vest_class(501_avi,acc_1): macro_new_vest_class(501_inf,acc_1)
+	class macro_new_vest_class(501_avi,acc_1): macro_new_vest_class(501_inf,acc_9)
 	{
 		displayName = "[501st] AVI ACC 01 (Flight Officer)";
 		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
@@ -686,7 +686,7 @@ class cfgWeapons
 			};
 		};
 	};
-	class macro_new_vest_class(501_avi,acc_2): macro_new_vest_class(501_inf,acc_1)
+	class macro_new_vest_class(501_avi,acc_2): macro_new_vest_class(501_inf,acc_9)
 	{
 		displayName = "[501st] AVI ACC 02 (Jr. Lieutenant)";
 		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
@@ -704,7 +704,7 @@ class cfgWeapons
 			};
 		};
 	};
-	class macro_new_vest_class(501_avi,acc_3): macro_new_vest_class(501_inf,acc_1)
+	class macro_new_vest_class(501_avi,acc_3): macro_new_vest_class(501_inf,acc_9)
 	{
 		displayName = "[501st] AVI ACC 03 (Second Lieutenant)";
 		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
@@ -721,7 +721,7 @@ class cfgWeapons
 			};
 		};
 	};
-	class macro_new_vest_class(501_avi,acc_4): macro_new_vest_class(501_inf,acc_1)
+	class macro_new_vest_class(501_avi,acc_4): macro_new_vest_class(501_inf,acc_9)
 	{
 		displayName = "[501st] AVI ACC 04 (First Lieutenant)";
 		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
@@ -738,7 +738,7 @@ class cfgWeapons
 			};
 		};
 	};
-	class macro_new_vest_class(501_avi,acc_5): macro_new_vest_class(501_inf,acc_1)
+	class macro_new_vest_class(501_avi,acc_5): macro_new_vest_class(501_inf,acc_9)
 	{
 		displayName = "[501st] AVI ACC 05 (Captain)";
 		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
@@ -748,6 +748,59 @@ class cfgWeapons
 		class ItemInfo: ItemInfo
 		{
 			uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestOfficer.p3d";
+			containerClass="Supply100";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+		};
+	};
+	//
+	class macro_new_vest_class(501_arc,acc_1): macro_new_vest_class(501_inf,acc_9)
+	{
+		displayname = "[501st] ARC ACC 01"
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestARC_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestARCCadet.p3d";
+		hiddenSelections[] = {"Camo1"};
+		hiddenSelectionsTextures[] = {MRC\JLTS\characters\CloneArmor\data\Clone_vest_arc_co.paa};
+		class ItemInfo: ItemInfo
+		{
+			uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestARCCadet.p3d";
+			containerClass="Supply100";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+		};
+	};
+	class macro_new_vest_class(501_arc,acc_2): macro_new_vest_class(501_inf,acc_9)
+	{
+		displayname = "[501st] ARC ACC 02"
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestARC_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
+		hiddenSelections[] = {"Camo1"};
+		hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\arc\acc\arc_acc_01.paa};
+		class ItemInfo: ItemInfo
+		{
+			uniformmodel="\MRC\JLTS\characters\CloneArmor\CloneVestARC.p3d";
+			containerClass="Supply100";
+			hiddenSelections[]=
+			{
+				"camo1"
+			};
+		};
+	};
+	//
+	class macro_new_vest_class(501_rg,acc_1): macro_new_vest_class(501_inf,acc_9)
+	{
+		displayname = "[Empire] Royal Guard ACC"
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestKama_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestKama.p3d";
+		hiddenSelections[] = {"Camo1"};
+		hiddenSelectionsTextures[] = {TEXTUREPATH\gcw\empire\rg\acc\rg_acc.paa};
+		class ItemInfo: ItemInfo
+		{
+			uniformmodel="\MRC\JLTS\characters\CloneArmor\CloneVestKama.p3d";
 			containerClass="Supply100";
 			hiddenSelections[]=
 			{
@@ -4710,6 +4763,26 @@ class CfgVehicles
 		nakedUniform = "U_BasicBody";
 		hiddenSelections[] = {"Camo1","Camo2"};
 		hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\avi\pilot_cx_armor_upper.paa,TEXTUREPATH\Republic\clones\avi\pilot_cx_armor_lower.paa};
+	};
+	//
+	class macro_new_uniform_skin_class(501_arc,01): macro_new_uniform_skin_class(501_inf,recruit)
+	{
+		author = "RD501";
+		scope = 2;
+		model = "\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		nakedUniform = "U_BasicBody";
+		hiddenSelections[] = {"Camo1","Camo2"};
+		hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\arc\arc_armour_upper.paa,TEXTUREPATH\Republic\clones\arc\arc_armour_lower.paa};
+	};
+	//
+	class macro_new_uniform_skin_class(empire_rg,boi): macro_new_uniform_skin_class(501_inf,recruit)
+	{
+		author = "RD501";
+		scope = 2;
+		model = "\MRC\JLTS\characters\CloneArmor\CloneArmor.p3d";
+		nakedUniform = "U_BasicBody";
+		hiddenSelections[] = {"Camo1","Camo2"};
+		hiddenSelectionsTextures[] = {TEXTUREPATH\gcw\empire\rg\rg_armour_upper.paa,TEXTUREPATH\gcw\empire\rg\rg_armour_lower.paa};
 	};
 };
 	
