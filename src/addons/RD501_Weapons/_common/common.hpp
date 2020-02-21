@@ -68,4 +68,4 @@
 	macro_new_mag(40mm_Yellow,1),\
 	macro_new_mag(40mm_Blue,1),\
 	macro_new_mag(40mm_Cyan,1),\
-	macro_new_mag(40mm_Purple,31)
+	macro_new_mag(40mm_Purple,1)
