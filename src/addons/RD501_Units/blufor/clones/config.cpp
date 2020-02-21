@@ -46,6 +46,13 @@ class cfgWeapons
 	#include "_other_armor.hpp"
 	#include "_headwear.hpp"
 
+	class JLTS_clone_comlink;
+	class rd501_JLTS_clone_comlink: JLTS_clone_comlink
+	{
+		tf_range=5000;
+		displayName="[501st] Clone Comlink";
+	};
+
 	//chest
 	class macro_new_vest_class(blufor,purge_vest): V_RebreatherB
 	{
