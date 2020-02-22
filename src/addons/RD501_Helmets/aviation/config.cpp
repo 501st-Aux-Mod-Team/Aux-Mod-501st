@@ -47,7 +47,7 @@ class CfgWeapons
 		author = "RD501";
 		displayName = Clone pilot helmet (501st 'Erlien');
 		//hiddenSelectionsTextures[] = {macro_custom_helmet_textures##\aviation\##texture};
-		subItems[] = {macro_new_weapon(nvg_integrated,pilot_erlien),"G_B_Diving"};
+		subItems[] = {"G_B_Diving"};
 	};
 
 	NEW_501_Pilot_HELM(exose,Exose,pilots\Exose.paa)
@@ -76,7 +76,7 @@ class CfgWeapons
 		scope = 2;
 		displayName = "Clone pilot helmet (501st legion) Casskun";
 		hiddenSelectionsTextures[] = {macro_custom_helmet_textures\aviation\pilots\casskun.paa};
-		subItems[] = {macro_new_weapon(nvg_integrated,pilot_test),"G_B_Diving"};
+		subItems[] = {"G_B_Diving"};
 
 		hiddenSelectionsMaterials[]=
 		{
@@ -89,7 +89,7 @@ class CfgWeapons
 		scope = 2;
 		displayName = "Clone pilot helmet (501st legion) Zatama";
 		hiddenSelectionsTextures[] = {macro_custom_helmet_textures\aviation\pilots\DragonGemHelm.paa};
-		subItems[] = {macro_new_weapon(nvg_integrated,pilot_test),"G_B_Diving"};
+		subItems[] = {"G_B_Diving"};
 
 		hiddenSelectionsMaterials[]=
 		{
@@ -102,7 +102,7 @@ class CfgWeapons
 		scope = 2;
 		displayName = "Clone pilot helmet (501st legion) Lord Krayt";
 		hiddenSelectionsTextures[] = {macro_custom_helmet_textures\aviation\pilots\LordKrayt.paa};
-		subItems[] = {macro_new_weapon(nvg_integrated,pilot_test),"G_B_Diving"};
+		subItems[] = {"G_B_Diving"};
 
 		#include "memenai.hpp"
 
@@ -113,7 +113,7 @@ class CfgWeapons
 		scope = 2;
 		displayName = "Clone pilot helmet (501st legion) King Krayt";
 		hiddenSelectionsTextures[] = {macro_custom_helmet_textures\aviation\pilots\KingKrayt.paa};
-		subItems[] = {macro_new_weapon(nvg_integrated,pilot_test),"G_B_Diving"};
+		subItems[] = {"G_B_Diving"};
 		#include "memenai.hpp"
 
 		hiddenSelectionsMaterials[]=
@@ -147,7 +147,7 @@ class CfgWeapons
 	// 	scope = 2;
 	// 	displayName = "Clone pilot helmet (501st legion) Midas Krayt";
 	// 	hiddenSelectionsTextures[] = {macro_custom_helmet_textures\aviation\pilots\KingKrayt.paa};
-	// 	subItems[] = {macro_new_weapon(nvg_integrated,pilot_test),"G_B_Diving"};
+	// 	subItems[] = {"G_B_Diving"};
 	// 	#include "memenai.hpp"
 
 	// 	hiddenSelectionsMaterials[]=
@@ -177,7 +177,7 @@ class CfgWeapons
         {
             "RD501_Helmets\_materials\aviation\wardenMaterial.rvmat"
         };
-		subItems[] = {macro_new_weapon(nvg_integrated,pilot_test),"G_B_Diving"};
+		subItems[] = {"G_B_Diving"};
 	};
 
 	NEW_WARDEN_HELM(flog,Flog,warden\Flog.paa)

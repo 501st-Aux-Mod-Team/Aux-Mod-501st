@@ -6,7 +6,7 @@
 		author = "RD501";\
 		displayName = Clone pilot helmet (501st '##displayname##');\
 		hiddenSelectionsTextures[] = {macro_custom_helmet_textures##\aviation\##texture};\
-		subItems[] = {macro_new_weapon(nvg_integrated,pilot_test),"G_B_Diving"};\
+		subItems[] = {"G_B_Diving"};\
 	};
 
 #define NEW_WARDEN_HELM(classname,displayname,texture)\
@@ -16,6 +16,7 @@
 		author = "RD501";\
 		displayName = Clone warden helmet (501st '##displayname##');\
 		hiddenSelectionsTextures[] = {macro_custom_helmet_textures##\aviation\##texture};\
+		subItems[] = {"G_B_Diving"};\
 	};
 
 
