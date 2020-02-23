@@ -22,7 +22,7 @@ class ACE_SelfActions: ACE_SelfActions
                 "isNotSwimming",
                 "isNotSitting"
             };
-            condition="!(isNull objectParent player)";
+            condition=;
             statement="_target setObjectMaterialGlobal [0, 'RD501_Laat\textures\rvmats\laat_mk3_fuselage.rvmat']";    
 			showDisabled=0;
             runOnHover=0;
