@@ -188,6 +188,11 @@ class cfgWeapons
 		model="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer.p3d";
 		hiddenSelections[] = {"Camo1"};
 		hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\Infantry\acc\1st_lt_pauldron.paa};
+		hiddenSelectionsMaterials[]=
+        {
+            "MRC\JLTS\characters\CloneArmor\data\clone_armor1_clean.rvmat",
+            "MRC\JLTS\characters\CloneArmor\data\clone_armor2_clean.rvmat"
+        };
 		class ItemInfo: VestItem
 		{
 			uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestOfficer.p3d";
@@ -195,6 +200,11 @@ class cfgWeapons
 			hiddenSelections[] = {"Camo1"};
 			macro_rebreather_armor_stuff
 			containerClass="Supply100";
+			hiddenSelectionsMaterials[]=
+			{
+				"MRC\JLTS\characters\CloneArmor\data\clone_armor1_clean.rvmat",
+				"MRC\JLTS\characters\CloneArmor\data\clone_armor2_clean.rvmat"
+			};
 			class HitpointsProtectionInfo
 			{
 				class Diaphragm
@@ -4153,6 +4163,11 @@ class CfgVehicles
 		nakedUniform = "U_BasicBody";
 		hiddenSelections[] = {"Camo1","Camo2"};
 		hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\Infantry\recruit_armor_upper.paa,TEXTUREPATH\Republic\clones\Infantry\recruit_armor_lower.paa};
+		hiddenSelectionsMaterials[]=
+        {
+            "MRC\JLTS\characters\CloneArmor\data\clone_armor1_clean.rvmat",
+            "MRC\JLTS\characters\CloneArmor\data\clone_armor2_clean.rvmat"
+        };
 		uniformClass= macro_new_uniform_class(501_inf,recruit);
 		class HitPoints: HitPoints
 		{

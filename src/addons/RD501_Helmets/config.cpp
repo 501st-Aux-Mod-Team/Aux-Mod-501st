@@ -39,15 +39,16 @@ class CfgWeapons
 			"camo1",
 			"mat"
 		};
-	
-		hiddenSelectionsTextures[] = {
-			"SWOP_clones\data\helmetsOther\clonePilotHelmet501.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"",
-			"swop_clones\data\helmpilot.rvmat"//  \501st_Helmets\AB\data\white_glow.rvmat
-		};
+
+		hiddenSelectionsTextures[]=
+        {
+            "RD501_Helmets_textures\aviation\clonePilotHelmet_co.paa"
+        };
+        hiddenSelectionsMaterials[]=
+        {
+            "RD501_Helmets_materials\aviation\clonePilotHelmet.rvmat",
+            "RD501_Helmets_materials\aviation\clonePilotHelmet.rvmat"
+        };
 
 
 		class ItemInfo: HeadgearItem
