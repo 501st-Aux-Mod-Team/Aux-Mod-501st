@@ -1,2 +1,0 @@
-#define SUBCOMPONENT other
-#define SUBADDON ADDON##_##SUBCOMPONENT
