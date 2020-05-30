@@ -330,6 +330,7 @@ class CfgVehicles
 	};
 	class macro_new_vehicle(drone,razor_stealth_fixedwing): macro_new_vehicle(drone,rep_stealth_fixedwing)
 	{
+		displayname = "GAR Phantom (Razor)";
 		hiddenSelectionsTextures[] = {"\RD501_Vehicles\textures\sentinel\phantom_fuselage_01_razor_co.paa",""};
 	};
 	class macro_new_vehicle(drone,cis_stealth_fixedwing):B_UAV_05_F

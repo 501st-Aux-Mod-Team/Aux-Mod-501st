@@ -25,6 +25,7 @@ class CfgPatches
 		requiredVersion=0.1;
 		units[]=
 		{
+			macro_new_vehicle(heavy_ordinance_tank,Mynock),
 			macro_new_vehicle(heavy_ordinance_tank,republic),
 			macro_new_vehicle(heavy_ordinance_tank,CIS)
 		};
@@ -43,9 +44,9 @@ class CfgVehicles
 {
 
 	#include "inheritance.hpp"
-	class macro_new_vehicle(heavy_ordinance_tank,republic) : B_MBT_01_arty_F
+	class macro_new_vehicle(heavy_ordinance_tank,Mynock) : B_MBT_01_arty_F
 	{
-		displayName = "Republic Trebuchet";
+		displayName = "Republic Trebuchet (Mynock)";
 		crew = "SWOP_Clonetrooper_P1";	
 		scope = 2;
 		side=1;
@@ -120,15 +121,27 @@ class CfgVehicles
 		textureList[] = {};
 		hiddenSelectionsTextures[] = 
 		{
-			"RD501_Vehicles\FE_Vehicles\textures\mbt01\mbt01_ext1_mynock_co.paa",
-			"RD501_Vehicles\FE_Vehicles\textures\mbt01\trebuchet\trebuchet_ext2_mynock_co.paa",
-			"RD501_Vehicles\FE_Vehicles\textures\mbt01\trebuchet\trebuchet_turret_mynock_co.paa",
+			"RD501_Vehicles\textures\mbt01\mbt01_ext1_mynock_co.paa",
+			"RD501_Vehicles\textures\mbt01\trebuchet\trebuchet_ext2_mynock_co.paa",
+			"RD501_Vehicles\textures\mbt01\trebuchet\trebuchet_turret_mynock_co.paa",
 			"A3\Armor_F\Data\camonet_NATO_Desert_CO.paa"
 		};
 
 
 	};
-	class macro_new_vehicle(heavy_ordinance_tank,CIS) : macro_new_vehicle(heavy_ordinance_tank,republic)
+	class macro_new_vehicle(heavy_ordinance_tank,Republic) : macro_new_vehicle(heavy_ordinance_tank,Mynock)
+	{
+		displayName = "Republic Trebuchet";
+
+		hiddenSelectionsTextures[] =
+		{
+			"RD501_Vehicles\textures\mbt01\mbt01_ext1_republic_co.paa",
+			"RD501_Vehicles\textures\mbt01\trebuchet\trebuchet_ext2_republic_co.paa",
+			"RD501_Vehicles\textures\mbt01\trebuchet\trebuchet_turret_republic_co.paa",
+			"A3\Armor_F\Data\camonet_NATO_Desert_CO.paa"
+		};
+	}
+	class macro_new_vehicle(heavy_ordinance_tank,CIS) : macro_new_vehicle(heavy_ordinance_tank,Mynock)
 	{
 		displayName = "CIS Trebuchet";
 		crew = "SWOP_CIS_droid_crew";
@@ -171,9 +184,10 @@ class CfgVehicles
 		textureList[] = {};
 		hiddenSelectionsTextures[] = 
 		{
-			"awing\t_awing_03_cw.paa",
-			"awing\t_awing_03_cw.paa",
-			"awing\t_awing_03_cw.paa"
+			"RD501_Vehicles\textures\mbt01\mbt01_ext1_cis_co.paa",
+			"RD501_Vehicles\textures\mbt01\trebuchet\trebuchet_ext2_cis_co.paa",
+			"RD501_Vehicles\textures\mbt01\trebuchet\trebuchet_turret_cis_co.paa",
+			"A3\Armor_F\Data\camonet_NATO_Desert_CO.paa"
 		};
 
 	};

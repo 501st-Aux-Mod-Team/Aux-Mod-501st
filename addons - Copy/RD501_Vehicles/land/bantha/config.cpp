@@ -116,13 +116,13 @@ class CfgVehicles
 		scope=2;
 		scopeCurator=2;
 
-		displayName="Bantha (501st) Mk.I";
+		displayName="Bantha (501st) Mk.I (Mynock)";
 		hiddenSelectionsTextures[]=
 		{
-			"RD501_Vehicles\FE_Vehicles\textures\bantha\bantha_ext01_mynock_co.paa",
-			"RD501_Vehicles\FE_Vehicles\textures\bantha\bantha_tire_mynock_co.paa",
-			"RD501_Vehicles\FE_Vehicles\textures\bantha\bantha_turret_mynock_co.paa",
-			"RD501_Vehicles\FE_Vehicles\textures\bantha\bantha_int01_mynock_co.paa",
+			"RD501_Vehicles\textures\bantha\bantha_ext01_mynock_co.paa",
+			"RD501_Vehicles\textures\bantha\bantha_tire_mynock_co.paa",
+			"RD501_Vehicles\textures\bantha\bantha_turret_mynock_co.paa",
+			"RD501_Vehicles\textures\bantha\bantha_int01_mynock_co.paa",
 		};
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat(APC)
