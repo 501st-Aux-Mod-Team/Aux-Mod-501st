@@ -330,14 +330,14 @@ class CfgGroups
 						position[]={1.5,-1.5,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_RPS6);
+						vehicle=macro_new_unit_class(opfor,B1_AT);
 					};
 					class Unit6
 					{
 						position[]={-1.5,-1.5,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_RPS6);
+						vehicle=macro_new_unit_class(opfor,B1_AT);
 					};
 					class Unit7
 					{

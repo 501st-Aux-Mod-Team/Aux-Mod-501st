@@ -580,18 +580,18 @@ class CfgVehicles
 			"SWOP_E5C_Mag"
 		};
 	};
-	class macro_new_unit_class(opfor,B1_RPS6): macro_new_unit_class(opfor,B1_blue)
+	class macro_new_unit_class(opfor,B1_AT): macro_new_unit_class(opfor,B1_blue)
 	{
-		displayName="B1 Battledroid (RPS6)";
+		displayName="B1 Battledroid AT";
 		weapons[]=
 		{
 			"SWOP_E5",
-			"JLTS_RPS6"
+			"JLTS_E60R_AT"
 		};
 		respawnWeapons[]=
 		{
 			"SWOP_E5C",
-			"JLTS_RPS6"
+			"JLTS_E60R_AT"
 		};
 		magazines[]=
 		{
@@ -603,10 +603,10 @@ class CfgVehicles
 			"JLTS_E5_mag",
 			"JLTS_E5_mag",
 			"JLTS_E5_mag",
-			"JLTS_RPS6_mag",
-			"JLTS_RPS6_mag",
-			"JLTS_RPS6_mag",
-			"JLTS_RPS6_mag"
+			"JLTS_E60R_AT_mag",
+			"JLTS_E60R_AT_mag",
+			"JLTS_E60R_AT_mag",
+			"JLTS_E60R_AT_mag"
 		};
 		respawnMagazines[]=
 		{
@@ -618,10 +618,10 @@ class CfgVehicles
 			"JLTS_E5_mag",
 			"JLTS_E5_mag",
 			"JLTS_E5_mag",
-			"JLTS_RPS6_mag",
-			"JLTS_RPS6_mag",
-			"JLTS_RPS6_mag",
-			"JLTS_RPS6_mag"
+			"JLTS_E60R_AT_mag",
+			"JLTS_E60R_AT_mag",
+			"JLTS_E60R_AT_mag",
+			"JLTS_E60R_AT_mag"
 		};
 		backpack="\MRC\JLTS\characters\DroidArmor\DroidBackpackB1.p3d"
 	};
