@@ -603,10 +603,10 @@ class CfgVehicles
 			"JLTS_E5_mag",
 			"JLTS_E5_mag",
 			"JLTS_E5_mag",
-			"JLTS_RPS6_HE",
-			"JLTS_RPS6_HE",
-			"JLTS_RPS6_HE",
-			"JLTS_RPS6_HE"
+			"JLTS_RPS6_mag",
+			"JLTS_RPS6_mag",
+			"JLTS_RPS6_mag",
+			"JLTS_RPS6_mag"
 		};
 		respawnMagazines[]=
 		{
@@ -618,10 +618,10 @@ class CfgVehicles
 			"JLTS_E5_mag",
 			"JLTS_E5_mag",
 			"JLTS_E5_mag",
-			"JLTS_RPS6_HE",
-			"JLTS_RPS6_HE",
-			"JLTS_RPS6_HE",
-			"JLTS_RPS6_HE"
+			"JLTS_RPS6_mag",
+			"JLTS_RPS6_mag",
+			"JLTS_RPS6_mag",
+			"JLTS_RPS6_mag"
 		};
 		backpack="\MRC\JLTS\characters\DroidArmor\DroidBackpackB1.p3d"
 	};
