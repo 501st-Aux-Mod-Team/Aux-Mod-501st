@@ -700,31 +700,31 @@ class CfgVehicles
 		displayName="B1 Battledroid Squad Lead";
 		weapons[]=
 		{
-			"SWOP_CR2BlasterRifle"
+			"JLTS_RG4D"
 		};
 		respawnWeapons[]=
 		{
-			"SWOP_CR2BlasterRifle"
+			"JLTS_RG4D"
 		};
 		magazines[]=
 		{
-			"SWOP_CR2_Blaster_Mag",
-			"SWOP_CR2_Blaster_Mag",
-			"SWOP_CR2_Blaster_Mag",
-			"SWOP_CR2_Blaster_Mag",
-			"SWOP_CR2_Blaster_Mag",
-			"SWOP_CR2_Blaster_Mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
 			"SWOP_BCCKtermimploder_G",
 			"SWOP_BCCKtermimploder_G"
 		};
 		respawnMagazines[]=
 		{
-			"SWOP_CR2_Blaster_Mag",
-			"SWOP_CR2_Blaster_Mag",
-			"SWOP_CR2_Blaster_Mag",
-			"SWOP_CR2_Blaster_Mag",
-			"SWOP_CR2_Blaster_Mag",
-			"SWOP_CR2_Blaster_Mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
 			"SWOP_BCCKtermimploder_G",
 			"SWOP_BCCKtermimploder_G"
 		};
