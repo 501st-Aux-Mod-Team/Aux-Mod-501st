@@ -1,9 +1,21 @@
+class CfgPatches
+{
+	class 501stMarkers
+	{
+		author = "Purdy";
+		name = "501st Markers";
+		requiredaddons[] = {};
+		requiredversion = 0.1;
+		units[] = {};
+		weapons[] = {};
+	};
+};
 class CfgMarkers
 {
 	class 501st_Marker
 	{
 		name = "501st";
-		icon = "\Aux-Mod-501st\Addons\RD501_Markers\markers\501.paa";
+		icon = "RD501_Markers\markers\501st.paa";
 		color[] = {1,1,1,1};
 		size = 32;
 		shadow = 0;
@@ -13,8 +25,8 @@ class CfgMarkers
 	class AvalancheHQ_Marker
 	{
 		name = "Avalanche Company";
-		icon = "\Aux-Mod-501st\Addons\RD501_Markers\markers\AvalancheHQ.paa";
-		color[] = {1,1,1,1};
+		icon = "RD501_Markers\markers\AvalancheHQ.paa";
+		color[] = { 1,1,1,1 };
 		size = 32;
 		shadow = 0;
 		scope = 2;
@@ -23,8 +35,8 @@ class CfgMarkers
 	class Avalanche1_Marker
 	{
 		name = "Avalanche 1st Platoon";
-		icon = "\Aux-Mod-501st\Addons\RD501_Markers\markers\Avalancch1.paa";
-		color[] = {1,1,1,1};
+		icon = "RD501_Markers\markers\Avalanche1.paa";
+		color[] = { 1,1,1,1 };
 		size = 32;
 		shadow = 0;
 		scope = 2;
@@ -33,8 +45,8 @@ class CfgMarkers
 	class Avalanche2_Marker
 	{
 		name = "Avalanche 2nd Platoon";
-		icon = "\Aux-Mod-501st\Addons\RD501_Markers\markers\Avalanche2.paa";
-		color[] = {1,1,1,1};
+		icon = "RD501_Markers\markers\Avalanche2.paa";
+		color[] = { 1,1,1,1 };
 		size = 32;
 		shadow = 0;
 		scope = 2;
@@ -43,8 +55,8 @@ class CfgMarkers
 	class Kryat_Marker
 	{
 		name = "Kryat";
-		icon = "\Aux-Mod-501st\Addons\RD501_Markers\markers\Kryat.paa";
-		color[] = {1,1,1,1};
+		icon = "RD501_Markers\markers\Kryat.paa";
+		color[] = { 1,1,1,1 };
 		size = 32;
 		shadow = 0;
 		scope = 2;
@@ -53,8 +65,8 @@ class CfgMarkers
 	class Cyclone_Marker
 	{
 		name = "Cyclone Company";
-		icon = "\Aux-Mod-501st\Addons\RD501_Markers\markers\Cyclone.paa";
-		color[] = {1,1,1,1};
+		icon = "RD501_Markers\markers\Cyclone.paa";
+		color[] = { 1,1,1,1 };
 		size = 32;
 		shadow = 0;
 		scope = 2;
@@ -63,8 +75,8 @@ class CfgMarkers
 	class Cyclone1_Marker
 	{
 		name = "Cyclone 1st Platoon";
-		icon = "\Aux-Mod-501st\Addons\RD501_Markers\markers\Cyclone1.paa";
-		color[] = {1,1,1,1};
+		icon = "RD501_Markers\markers\Cyclone1.paa";
+		color[] = { 1,1,1,1 };
 		size = 32;
 		shadow = 0;
 		scope = 2;
@@ -73,8 +85,8 @@ class CfgMarkers
 	class Cyclone3_Marker
 	{
 		name = "Cyclone 3rd Platoon";
-		icon = "\Aux-Mod-501st\Addons\RD501_Markers\markers\Cyclone3.paa";
-		color[] = {1,1,1,1};
+		icon = "RD501_Markers\markers\Cyclone3.paa";
+		color[] = { 1,1,1,1 };
 		size = 32;
 		shadow = 0;
 		scope = 2;
@@ -83,8 +95,8 @@ class CfgMarkers
 	class Acklay_Marker
 	{
 		name = "Acklay";
-		icon = "\Aux-Mod-501st\Addons\RD501_Markers\markers\Acklay.paa";
-		color[] = {1,1,1,1};
+		icon = "RD501_Markers\markers\Acklay.paa";
+		color[] = { 1,1,1,1 };
 		size = 32;
 		shadow = 0;
 		scope = 2;
@@ -93,8 +105,8 @@ class CfgMarkers
 	class Mynock_Marker
 	{
 		name = "Mynock";
-		icon = "\Aux-Mod-501st\Addons\RD501_Markers\markers\Mynock.paa";
-		color[] = {1,1,1,1};
+		icon = "RD501_Markers\markers\Mynock.paa";
+		color[] = { 1,1,1,1 };
 		size = 32;
 		shadow = 0;
 		scope = 2;
@@ -103,8 +115,8 @@ class CfgMarkers
 	class Razor_Marker
 	{
 		name = "Razor";
-		icon = "\Aux-Mod-501st\Addons\RD501_Markers\markers\Razor.paa";
-		color[] = {1,1,1,1};
+		icon = "RD501_Markers\markers\Razor.paa";
+		color[] = { 1,1,1,1 };
 		size = 32;
 		shadow = 0;
 		scope = 2;
@@ -113,8 +125,8 @@ class CfgMarkers
 	class Zeta_Marker
 	{
 		name = "Zeta";
-		icon = "\Aux-Mod-501st\Addons\RD501_Markers\markers\Zeta.paa";
-		color[] = {1,1,1,1};
+		icon = "RD501_Markers\markers\Zeta.paa";
+		color[] = { 1,1,1,1 };
 		size = 32;
 		shadow = 0;
 		scope = 2;
@@ -123,7 +135,7 @@ class CfgMarkers
 	class RTO_Marker
 	{
 		name = "RTO";
-		icon = "\Aux-Mod-501st\Addons\RD501_Markers\markers\RTO.paa";
+		icon = "RD501_Markers\markers\Radio2.paa";
 		color[] = { 1,1,1,1 };
 		size = 32;
 		shadow = 0;
@@ -133,7 +145,7 @@ class CfgMarkers
 	class Medic_Marker
 	{
 		name = "Medic";
-		icon = "\Aux-Mod-501st\Addons\RD501_Markers\markers\Medic.paa";
+		icon = "RD501_Markers\markers\Medic.paa";
 		color[] = { 1,1,1,1 };
 		size = 32;
 		shadow = 0;
@@ -143,7 +155,7 @@ class CfgMarkers
 	class LAAT_Marker
 	{
 		name = "LAAT";
-		icon = "\Aux-Mod-501st\Addons\RD501_Markers\markers\LAAT.paa";
+		icon = "RD501_Markers\markers\LAAT.paa";
 		color[] = { 1,1,1,1 };
 		size = 32;
 		shadow = 0;
@@ -153,7 +165,7 @@ class CfgMarkers
 	class ARC170_Marker
 	{
 		name = "Arc-170";
-		icon = "\Aux-Mod-501st\Addons\RD501_Markers\markers\Arc170.paa";
+		icon = "RD501_Markers\markers\Arc170.paa";
 		color[] = { 1,1,1,1 };
 		size = 32;
 		shadow = 0;
@@ -163,7 +175,7 @@ class CfgMarkers
 	class Saber_Marker
 	{
 		name = "Saber";
-		icon = "\Aux-Mod-501st\Addons\RD501_Markers\markers\Saber.paa";
+		icon = "RD501_Markers\markers\Saber.paa";
 		color[] = { 1,1,1,1 };
 		size = 32;
 		shadow = 0;
@@ -173,7 +185,7 @@ class CfgMarkers
 	class CIS_Marker
 	{
 		name = "CIS";
-		icon = "\Aux-Mod-501st\Addons\RD501_Markers\markers\CIS.paa";
+		icon = "RD501_Markers\markers\CIS.paa";
 		color[] = { 1,1,1,1 };
 		size = 32;
 		shadow = 0;
@@ -183,7 +195,7 @@ class CfgMarkers
 	class B1_Marker
 	{
 		name = "B1";
-		icon = "\Aux-Mod-501st\Addons\RD501_Markers\markers\B1.paa";
+		icon = "RD501_Markers\markers\B1.paa";
 		color[] = { 1,1,1,1 };
 		size = 32;
 		shadow = 0;
@@ -193,7 +205,7 @@ class CfgMarkers
 	class B1Heavy_Marker
 	{
 		name = "B1 Heavy";
-		icon = "\Aux-Mod-501st\Addons\RD501_Markers\markers\B1Heavy.paa";
+		icon = "RD501_Markers\markers\B1Heavy.paa";
 		color[] = { 1,1,1,1 };
 		size = 32;
 		shadow = 0;
@@ -203,7 +215,7 @@ class CfgMarkers
 	class Indepent_Marker
 	{
 		name = "B1 Independent";
-		icon = "\Aux-Mod-501st\Addons\RD501_Markers\markers\IndepentB1.paa";
+		icon = "RD501_Markers\markers\IndepentB1.paa";
 		color[] = { 1,1,1,1 };
 		size = 32;
 		shadow = 0;
@@ -213,7 +225,7 @@ class CfgMarkers
 	class B2_Marker
 	{
 		name = "B2";
-		icon = "\Aux-Mod-501st\Addons\RD501_Markers\markers\B2.paa";
+		icon = "RD501_Markers\markers\B2.paa";
 		color[] = { 1,1,1,1 };
 		size = 32;
 		shadow = 0;
@@ -223,7 +235,7 @@ class CfgMarkers
 	class BX_Marker
 	{
 		name = "BX";
-		icon = "\Aux-Mod-501st\Addons\RD501_Markers\markers\BX.paa";
+		icon = "RD501_Markers\markers\BX.paa";
 		color[] = { 1,1,1,1 };
 		size = 32;
 		shadow = 0;
@@ -233,7 +245,7 @@ class CfgMarkers
 	class Magna_Marker
 	{
 		name = "Magna";
-		icon = "\Aux-Mod-501st\Addons\RD501_Markers\markers\Magna.paa";
+		icon = "RD501_Markers\markers\Magna.paa";
 		color[] = { 1,1,1,1 };
 		size = 32;
 		shadow = 0;
@@ -243,7 +255,7 @@ class CfgMarkers
 	class DSD_Marker
 	{
 		name = "DSD";
-		icon = "\Aux-Mod-501st\Addons\RD501_Markers\markers\DSD.paa";
+		icon = "RD501_Markers\markers\DSD.paa";
 		color[] = { 1,1,1,1 };
 		size = 32;
 		shadow = 0;
@@ -253,7 +265,7 @@ class CfgMarkers
 	class Deka_Marker
 	{
 		name = "Deka";
-		icon = "\Aux-Mod-501st\Addons\RD501_Markers\markers\Deka.paa";
+		icon = "RD501_Markers\markers\Deka.paa";
 		color[] = { 1,1,1,1 };
 		size = 32;
 		shadow = 0;
@@ -263,7 +275,7 @@ class CfgMarkers
 	class HMP_Marker
 	{
 		name = "HMP";
-		icon = "\Aux-Mod-501st\Addons\RD501_Markers\markers\HMP.paa";
+		icon = "RD501_Markers\markers\HMP.paa";
 		color[] = { 1,1,1,1 };
 		size = 32;
 		shadow = 0;
@@ -273,7 +285,7 @@ class CfgMarkers
 	class Vulture_Marker
 	{
 		name = "Vulture";
-		icon = "\Aux-Mod-501st\Addons\RD501_Markers\markers\Vulture.paa";
+		icon = "RD501_Markers\markers\Vulture.paa";
 		color[] = { 1,1,1,1 };
 		size = 32;
 		shadow = 0;
@@ -283,7 +295,7 @@ class CfgMarkers
 	class AAT_Marker
 	{
 		name = "AAT";
-		icon = "\Aux-Mod-501st\Addons\RD501_Markers\markers\AAT.paa";
+		icon = "RD501_Markers\markers\AAT.paa";
 		color[] = { 1,1,1,1 };
 		size = 32;
 		shadow = 0;
@@ -293,7 +305,7 @@ class CfgMarkers
 	class KingAAT_Marker
 	{
 		name = "King AAT";
-		icon = "\Aux-Mod-501st\Addons\RD501_Markers\markers\KingAAT.paa";
+		icon = "RD501_Markers\markers\KingAAT.paa";
 		color[] = { 1,1,1,1 };
 		size = 32;
 		shadow = 0;
@@ -303,7 +315,7 @@ class CfgMarkers
 	class MTT_Marker
 	{
 		name = "MTT";
-		icon = "\Aux-Mod-501st\Addons\RD501_Markers\markers\MTT.paa";
+		icon = "RD501_Markers\markers\MTT.paa";
 		color[] = { 1,1,1,1 };
 		size = 32;
 		shadow = 0;
@@ -313,10 +325,11 @@ class CfgMarkers
 	class TomasTheMTT_Marker
 	{
 		name = "Tomas The MTT";
-		icon = "\Aux-Mod-501st\Addons\RD501_Markers\markers\TomasTheMTT.paa";
+		icon = "RD501_Markers\markers\TomasTheMTT.paa";
 		color[] = { 1,1,1,1 };
 		size = 32;
 		shadow = 0;
 		scope = 2;
 		markerClass = "501st Markers";
 	};
+};
