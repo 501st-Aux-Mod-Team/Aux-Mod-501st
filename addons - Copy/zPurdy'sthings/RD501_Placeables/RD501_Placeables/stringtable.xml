@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project name="ACE3_PLACEABLES">
+	<Package name="ACE3_PLACEABLES">
+		<Container name="ACE3_PLACEABLES">
+			<Key ID="STR_PLACE_RoadBarrier">
+				<Original>Place Road Barrier</Original>
+				<English>Place Road Barrier</English>
+				<German>Platziere Strassensperre</German>
+			</Key>
+			
+			<Key ID="STR_PLACE_RoadBarrierSmall">
+				<Original>Place Road Barrier Small</Original>
+				<English>Place Road Barrier Small</English>
+				<German>Platziere Strassensperre (klein)</German>
+			</Key>
+			
+			<Key ID="STR_PLACE_RoadCone">
+				<Original>Place Road Cone</Original>
+				<English>Place Road Cone</English>
+				<German>Platziere Verkehrskegel</German>
+			</Key>
+			
+			<Key ID="STR_PLACE_Pallet">
+				<Original>Place Vertical Pallet</Original>
+				<English>Place Vertical Pallet</English>
+				<German>Platziere Palette</German>
+			</Key>
+			
+			<Key ID="STR_PLACE_BagFence">
+				<Original>Place Bag Fence Long</Original>
+				<English>Place Bag Fence Long</English>
+				<German>Platziere Sandsackmauer</German>
+			</Key>
+			
+			<Key ID="STR_PLACE_BagFenceRound">
+				<Original>Place Bag Fence Round</Original>
+				<English>Place Bag Fence Round</English>
+				<German>Platziere Sandsackmauer (rund)</German>
+			</Key>
+			
+			<Key ID="STR_PLACE_PortableLight">
+				<Original>Place Portable Light</Original>
+				<English>Place Portable Light</English>
+				<German>Platziere Mobiles Licht</German>
+			</Key>
+			
+			<Key ID="STR_PLACE_RoadConeLight">
+				<Original>Place Road Cone Light</Original>
+				<English>Place Road Cone Light</English>
+				<German>Platziere Lichtverkehrskegel</German>
+			</Key>
+			
+			<Key ID="STR_PLACE_TapeSign">
+				<Original>Place Tape Sign</Original>
+				<English>Place Tape Sign</English>
+				<German>Platziere Flatterbandsperre</German>
+			</Key>
+			
+			<Key ID="STR_PLACE_Target">
+				<Original>Place Target</Original>
+				<English>Place Target</English>
+				<German>Platziere Ziel</German>
+			</Key>
+			
+			<Key ID="STR_PLACE_CampingChair">
+				<Original>Place Camping Chair</Original>
+				<English>Place Camping Chair</English>
+				<German>Platziere Campingstuhl</German>
+			</Key>
+			
+			<Key ID="STR_PLACE_Campfire">
+				<Original>Place Campfire</Original>
+				<English>Place Campfire</English>
+				<German>Platziere Lagerfeuer</German>
+			</Key>
+			
+			<Key ID="STR_PLACE_CampLight">
+				<Original>Place Camping Light</Original>
+				<English>Place Camping Light</English>
+				<German>Platziere Campinglicht</German>
+			</Key>
+			
+			<Key ID="STR_PLACE_CampingTable">
+				<Original>Place Camping Table</Original>
+				<English>Place Camping Table</English>
+				<German>Platziere Campingtisch</German>
+			</Key>
+			
+			<Key ID="STR_PLACE_PickUpAction">
+				<Original>Pick up</Original>
+				<English>Pick up</English>
+				<German>Aufheben</German>
+			</Key>
+			
+			<Key ID="STR_PLACE_NeedToolBuild">
+				<Original>You need a %1 for building this</Original>
+				<English>You need a %1 for building this</English>
+				<German>Du brauchst ein %1 um das zu bauen</German>
+			</Key>
+			
+			<Key ID="STR_PLACE_NeedToolPickUp">
+				<Original>You need a %1 for pick up this</Original>
+				<English>You need a %1 for pick up this</English>
+				<German>Du brauchst ein %1 um das abzubauen</German>
+			</Key>
+		</Container>
+	</Package>
+</Project>

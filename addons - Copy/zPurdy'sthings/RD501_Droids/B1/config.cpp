@@ -590,7 +590,7 @@ class CfgVehicles
 		};
 		respawnWeapons[]=
 		{
-			"SWOP_E5C",
+			"SWOP_E5",
 			"JLTS_E60R_AT"
 		};
 		magazines[]=
@@ -695,7 +695,7 @@ class CfgVehicles
 			"swop_termDetDT_G"
 		};
 	};
-	class macro_new_unit_class(opfor,B1_leader): macro_new_unit_class(opfor,B1_green)
+	class macro_new_unit_class(opfor,B1_leader): macro_new_unit_class(opfor,B1_yellow)
 	{
 		displayName="B1 Battledroid Squad Lead";
 		weapons[]=
@@ -728,7 +728,44 @@ class CfgVehicles
 			"SWOP_BCCKtermimploder_G",
 			"SWOP_BCCKtermimploder_G"
 		};
-		uniformClass=macro_new_uniform_class(opfor,B1_green);
+		uniformClass=macro_new_uniform_class(opfor,B1_yellow);
 	};
-	
+	class macro_new_unit_class(opfor, B1_Medic) : macro_new_unit_class(opfor, B1_green)
+	{
+		displayName = "B1 Battledroid Squad Lead";
+		weapons[] =
+		{
+			"JLTS_RG4D"
+		};
+		respawnWeapons[] =
+		{
+			"JLTS_RG4D"
+		};
+		magazines[] =
+		{
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"FirstAidKit",
+			"FirstAidKit",
+			"FirstAidKit"
+		};
+		respawnMagazines[] =
+		{
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"FirstAidKit",
+			"FirstAidKit",
+			"FirstAidKit"
+		};
+		uniformClass = macro_new_uniform_class(opfor, B1_green);
+	};
+
 };

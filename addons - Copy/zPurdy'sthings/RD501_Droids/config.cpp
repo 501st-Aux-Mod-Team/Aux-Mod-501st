@@ -27,7 +27,7 @@ class CfgGroups
 			name="RD501 C.I.S Faction";
 			class Infantry
 			{
-				name="Infantry";
+				name="Base Infantry Groups";
 				class RD501_Group_INF_LPB1_12
 				{
 					name="HMP Filler";
@@ -295,7 +295,7 @@ class CfgGroups
 						position[]={0,0,0};
 						rank="CAPTAIN";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_squad_leader);
+						vehicle=macro_new_unit_class(opfor,B1_team_leader);
 					};
 					class Unit1
 					{
@@ -309,7 +309,7 @@ class CfgGroups
 						position[]={-.5,-.5,0};
 						rank="SERGEANT";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_leader);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit3
 					{
@@ -387,7 +387,7 @@ class CfgGroups
 						position[]={.5,-.5,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_RPS6);
+						vehicle=macro_new_unit_class(opfor,B1_AT);
 					};
 					class Unit2
 					{
@@ -409,6 +409,22 @@ class CfgGroups
 						rank="PRIVATE";
 						side=0;
 						vehicle=macro_new_unit_class(opfor,B1);
+					};
+				};
+				name = "Droid Teams (3-4 droids)";
+				class RD501_Group_INF_HAT
+				{
+					name = "Heavy Asault Team";
+					side = 0;
+					faction = macro_cis_faction
+						icon = "\a3\ui_f\data\map\markers\nato\o_inf.paa";
+					rarityGroup = 1;
+					class Unit0
+					{
+						position[] = { 0,0,0 };
+						rank = "SERGEANT";
+						side = 0;
+						vehicle = macro_new_unit_class(opfor, B1);
 					};
 				};
 			};
