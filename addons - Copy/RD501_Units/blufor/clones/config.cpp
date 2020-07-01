@@ -1291,16 +1291,33 @@ class cfgWeapons
     };
 	class macro_new_vest_class(501_holster,vest): macro_new_vest_class(501_inf,acc_9)
 	{
-		displayname = "[501st] Sidearm Holster"
-		picture = "\MRC\JLTS\characters\CloneArmor2\data\ui\CloneVestHolster_ui_ca.paa";
-		model = "\MRC\JLTS\characters\CloneArmor2\CloneVestHolster.p3d";
-		hiddenSelections[] = {"camo1"};
-		hiddenSelectionsTextures[] = {"\MRC\JLTS\characters\CloneArmor\data\Clone_vest_officer_co.paa"};
+        displayname = "[501st] Sidearm Holster";
+        picture = "\MRC\JLTS\characters\CloneArmor2\data\ui\CloneVestHolster_ui_ca.paa";
+        model = "\MRC\JLTS\characters\CloneArmor2\CloneVestHolster.p3d";
+        hiddenSelections[] = {"camo1"};
+        hiddenSelectionsTextures[] = {"\MRC\JLTS\characters\CloneArmor\data\Clone_vest_officer_co.paa"};
         class ItemInfo: ItemInfo
         {
             uniformmodel = "\MRC\JLTS\characters\CloneArmor2\CloneVestHolster.p3d";
-			containerClass="Supply100";
-			hiddenSelections[] = {"camo1"};
+            containerClass="Supply100";
+            hiddenSelections[] = {"camo1"};
+        };
+    };
+    class macro_new_vest_class(501_razorblade_holster,vest): macro_new_vest_class(501_inf,acc_9)
+    {
+        displayname = "[501st] Razorblade Holster"
+        picture="\RD501_Units\textures\republic\clones\avi\acc\razorblade_holster_pic.paa";
+        model="\RD501_Units\models\razorblade_holster.p3d";
+        hiddenSelections[] = {"camo1"};
+        hiddenSelectionsTextures[] = {"\RD501_Units\textures\republic\clones\avi\acc\razorblade_holster_co.paa"};
+        hiddenSelectionsMaterials[]= {"\RD501_Units\materials\razorblade_holster.rvmat"};
+        class ItemInfo: ItemInfo
+        {
+            uniformModel="\RD501_Units\models\razorblade_holster.p3d";
+            containerClass="Supply100";
+            hiddenSelections[] = {"camo1"};
+            hiddenSelectionsTextures[] = {"\RD501_Units\textures\republic\clones\avi\acc\razorblade_holster_co.paa"};
+            hiddenSelectionsMaterials[]= {"\RD501_Units\materials\razorblade_holster.rvmat"};
         };
     };
 };
