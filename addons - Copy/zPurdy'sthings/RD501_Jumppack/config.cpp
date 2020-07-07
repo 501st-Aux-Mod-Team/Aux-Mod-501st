@@ -1,5 +1,5 @@
 
-#include "../RD501_Main/config_macros.hpp"
+#include "...\RD501_main\config_macros.hpp"
 
 #include "script_macros.hpp"
 

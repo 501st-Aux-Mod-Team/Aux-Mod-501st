@@ -29,8 +29,8 @@ class CfgWeapons
 		displayName = "Shield Cover Small";
 		scope = 2;
 		author = "Purdy";
-		picture = "\RD501_placeables_items\ui\cover1.paa";
-		model = "\RD501_placeables_items\models\cover1.p3d";
+		picture = "\RD501_Shields\ui\cover1.paa";
+		model = "\RD501_Shields\data\cover1.p3d";
 		icon = "iconObject_circle";
 		class ItemInfo: InventoryItem_Base_F
 		{
@@ -117,7 +117,7 @@ class CfgVehicles
 			};
 			class RD501_clonebattlebelt_F
 			{
-				name = "RD501_clonesupplykit_F";
+				name = "RD501_clonebattlebeltF";
 				count = 10;
 			};
 		};
