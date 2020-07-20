@@ -110,7 +110,7 @@ class CfgVehicles
 		displayName="LAAT/I MK.III - ('CX-X')";
 		hiddenSelectionsTextures[]=
 		{
-			"RD501_Laat\textures\laat\Laat501stcxx\Laat501stBodyCXX_mrsmae.paa",
+			"RD501_Laat\textures\laat\Laat501stcxx\Laat501stBodyCXX.paa",
 			"RD501_Laat\textures\laat\Laat501stcxx\Laat501stWingCXX.paa"
 		};
 	};
@@ -132,7 +132,7 @@ class CfgVehicles
 		displayName="LAAT/I MK.III - ('CX-S')";
 		hiddenSelectionsTextures[]=
 		{
-			"RD501_Laat\textures\laat\Laat501stcxs\Laat501stBodyCXS_erlien.paa",
+			"RD501_Laat\textures\laat\Laat501stcxs\Laat501stBodyCXS.paa",
 			"RD501_Laat\textures\laat\Laat501stcxs\Laat501stWingCXS.paa"
 		};
 	};
@@ -143,7 +143,7 @@ class CfgVehicles
 		displayName="LAAT/I MK.III - ('CX')";
 		hiddenSelectionsTextures[]=
 		{
-			"RD501_Laat\textures\laat\Laat501stcx\Laat501stBodyCX_scuba.paa",
+			"RD501_Laat\textures\laat\Laat501stcx\Laat501stBodyCX.paa",
 			"RD501_Laat\textures\laat\Laat501stcxs\Laat501stWingCXS.paa"
 		};
 	};
