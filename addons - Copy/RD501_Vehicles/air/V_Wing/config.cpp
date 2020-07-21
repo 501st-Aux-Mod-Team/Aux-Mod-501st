@@ -73,7 +73,8 @@ class CfgVehicles
 		displayName = "V-Wing Mk.II";
 		forceInGarage = 1;
 		//dmg stuff
-		armor=200;
+		armor=1925;
+		armorStructural = 1;
 		vtol = 4;
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat_air(Republic_vtol)
@@ -99,30 +100,38 @@ class CfgVehicles
 			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
 		//flight model
-			maxSpeed = 4000;
-			aileronSensitivity = 0.5;//1.7;
-			elevatorSensitivity = 0.65//1.5;
-			airBrakeFrictionCoef = 80.4;
-		
-			draconicForceXCoef = 300;
-			draconicForceYCoef = 1;
-			draconicForceZCoef = 1;
+		maxSpeed=1800;
+		aileronSensitivity=0.41;
+		elevatorSensitivity=0.41;
+		airBrakeFrictionCoef=120;
 
-			altFullForce = 6000;
-			altNoForce = 9000;
+		brakeDistance = 80;
+		noseDownCoef = 0;
+		acceleration = 225;
 
-			draconicTorqueXCoef[] = {4, 5.1, 6.1, 7, 7.7, 8.3, 9, 9.1, 9.2, 9.2, 9.2};
-			draconicTorqueYCoef[] = {0.5, 1, 2, 2.3, 3, 2.6, 2.4, 2.2, 2, 1.9, 1.8};
+		draconicForceXCoef=15;
+		draconicForceYCoef=6;
+		draconicForceZCoef=12;
 
-			VTOLYawInfluence = 6/3;
-			VTOLPitchInfluence = 6/4;
-			VTOLRollInfluence = 6/4;
+		altFullForce=18000;
+		altNoForce=19000;
 
-			rudderInfluence = 0.766;
-			rudderCoef[] = {0.2, 0.7, 1.5, 2, 2, 2.1, 2.4, 2.5, 2.6, 2.7, 2.7, 2.7, 2.7};
-			rudderControlsSensitivityCoef = 4;
+		draconicTorqueXCoef[]={2.0,1.5,1.0,0.9,1.0,0.9,0.75,0.8,0.9,0.95,1.0};
+		draconicTorqueYCoef[]={1.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 
-		gearsUpFrictionCoef = 25;
+		VTOLYawInfluence="3.5";
+		VTOLPitchInfluence="10";
+		VTOLRollInfluence="9";
+
+		rudderInfluence=0.9;
+		envelope[] = {0.5,2.11,2.43,1.97,1.72,2.69,3.87,5.27,6.89,8.72,9.7,9.6,9.2,8.5,8.2,8};
+		thrustCoef[] = {1.5,3.69,3.62,3.68,3.74,3.81,3.89,3.95,3.96,3.96,3.92,3.4,0.4,0,0,0};
+		elevatorCoef[] = {0.3,0.5,0.66,0.52,0.49,0.46,0.43,0.4,0.35,0.3,0.25,0.18,0.17,0.16,0.15,0.15};
+		aileronCoef[] = {0.4,0.5,0.8,0.95,1.02,1.04,1.03,1.01,1,0.7,0.6,0.55,0.5,0.45,0.4,0.35};
+		rudderCoef[]={0,0.6,0.9,1.0,1.1,1.0,0.9,0.8,0.6,0.35,0.3,0.25,0.2};
+		rudderControlsSensitivityCoef=4.5;
+		gearsUpFrictionCoef=0;
+
 		class UserActions
 		{
 			class AfterburnerOn
@@ -169,7 +178,7 @@ class CfgVehicles
 			macro_new_weapon(wynd,agm),
 			macro_new_weapon(wynd,ugm),
 			macro_basic_air_weapons,
-			macro_new_weapon(generic,republic_aircraft_cannon)
+			macro_new_weapon(laser,v_wing)
 		};
 		magazines[] = {
 		
@@ -324,7 +333,7 @@ class CfgVehicles
 							//maxRange = 2000;
 
 							minRange = 5;
-							maxRange = 8000;
+							maxRange = 12000;
 							objectDistanceLimitCoef = -1;
 							viewDistanceLimitCoef = 1;
 						};
@@ -354,7 +363,7 @@ class CfgVehicles
 							//minRange = 5000;
 							//maxRange = 5000;
 							minRange = 5;
-							maxRange = 7000;
+							maxRange = 12000;
 							objectDistanceLimitCoef = -1;
 							viewDistanceLimitCoef = -1;
 						};
@@ -363,7 +372,7 @@ class CfgVehicles
 							//minRange = 4000;
 							//maxRange = 4000;
 							minRange = 4;
-							maxRange = 4000;
+							maxRange = 8000;
 							objectDistanceLimitCoef = -1;
 							viewDistanceLimitCoef = -1;
 						};
