@@ -281,21 +281,26 @@ class CfgVehicles
 		};
 		forceInGarage=1;
 		availableForSupportTypes[] = {};
+		memoryPointGun[] = {"cannon1"};
+		gunBeg[] = {"cannon1"};
+		gunEnd[] = {"konec hlavne1"};
+		memoryPointLRocket = "RocketL";
+		memoryPointRRocket = "RocketR";
+		memoryPointLMissile = "RocketL";
+		memoryPointRMissile = "RocketR";
 		weapons[] = {
 			macro_basic_air_weapons,
 			macro_new_weapon(generic,republic_aircraft_cannon),
-			macro_new_weapon(generic,kannon),
 			macro_new_weapon(wynd,a2a),
 			macro_new_weapon(wynd,agm),
-			macro_new_weapon(wynd,ugm),
+			macro_new_weapon(wynd,ugm)
 		};
 		magazines[] = {
 			macro_new_mag(generic_aircraft_cannon_green,1000),
 			macro_new_mag(a2a,4),
 			macro_new_mag(agm,6),
 			macro_new_mag(ugm,10),
-			macro_basic_air_mags,
-			macro_new_mag(Kannon,100)
+			macro_basic_air_mags
 		};
 		armor=550;
 		class Sounds: Sounds
