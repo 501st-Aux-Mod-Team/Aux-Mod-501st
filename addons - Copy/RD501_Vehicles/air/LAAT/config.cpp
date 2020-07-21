@@ -105,6 +105,9 @@ class CfgVehicles
 		{
 			#include "user_action.hpp"
 		};
+		class EventHandlers : DefaultEventhandlers {
+			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
+		};
 		class ACE_SelfActions:ACE_SelfActions
 		{		
 			
@@ -189,6 +192,9 @@ class CfgVehicles
 				statement = "this animateDoor ['Doors', 0];this animate ['DoorsHandler',0];";
 				animPeriod = 5;
 			};
+		};
+		class EventHandlers : DefaultEventhandlers {
+			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
 		};
 
 		class ACE_SelfActions:ACE_SelfActions
