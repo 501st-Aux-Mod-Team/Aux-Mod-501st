@@ -106,8 +106,9 @@ class CfgVehicles
 			#include "user_action.hpp"
 		};
 		class EventHandlers : DefaultEventhandlers {
+			init="[_this select 0] execVM 'RD501_Main\functions\autocrate\autocrate.sqf';[_this select 0] execVM 'RD501_Main\functions\vehicle_lift\laat_lift_3.sqf';";
 			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-		};
+		}
 		class ACE_SelfActions:ACE_SelfActions
 		{		
 			
@@ -195,7 +196,8 @@ class CfgVehicles
 		};
 		class EventHandlers : DefaultEventhandlers {
 			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-		};
+			init="[_this select 0] execVM 'RD501_Main\functions\autocrate\autocrate.sqf';[_this select 0] execVM 'RD501_Main\functions\vehicle_lift\laat_lift_3.sqf';";
+		}
 
 		class ACE_SelfActions:ACE_SelfActions
 		{		
@@ -263,8 +265,6 @@ class CfgVehicles
 		{
 			#include "user_action.hpp"
 		};
-
-	
 		class EventHandlers : DefaultEventhandlers {
 			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
 			init = "[_this select 0] call RD501_Main_fnc_laatc_lift";

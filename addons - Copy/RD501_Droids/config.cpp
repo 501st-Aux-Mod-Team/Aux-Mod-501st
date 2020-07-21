@@ -4,7 +4,7 @@
 
 class CfgPatches
 {
-	class macro_patch_name(droids_config)
+	class macro_patch_name(low_poly_droids_config)
 	{
 		requiredAddons[] = {
 			macro_lvl3_req

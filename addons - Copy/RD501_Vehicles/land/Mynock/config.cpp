@@ -42,7 +42,7 @@ class CfgPatches
 
 
 #include "../../common/sensor_templates.hpp"
-class DefaultEventhandlers ;
+class DefaultEventhandlers;
 
 class CfgVehicles
 {
@@ -54,6 +54,7 @@ class CfgVehicles
 		scopeCurator=2;
 		forceInGarage = 1;
 		side=1;
+		class EventHandlers;
 		displayName="Republic T1000 MBT (Mynock)"
 		crew = "SWOP_Clonetrooper_P1";
 		
@@ -74,7 +75,7 @@ class CfgVehicles
 		class TransportItems;
 		class TransportWeapons;
 		class TransportMagazines;
-		class EventHandlers :DefaultEventhandlers 
+		class EventHandlers: DefaultEventhandlers 
 		{
 			fired = "_this call (uinamespace getviariable 'BIS_fnc_effectFired');";
 		};
@@ -102,6 +103,7 @@ class CfgVehicles
 		side=1;
 		scopeCurator=2;
 		forceInGarage = 1;
+		class EventHandlers;
 		displayName="Republic Claymore MBT (Mynock)"
 		crew = "SWOP_Clonetrooper_P1";
 		
@@ -122,7 +124,7 @@ class CfgVehicles
 		class TransportItems;
 		class TransportWeapons;
 		class TransportMagazines;
-		class EventHandlers :DefaultEventhandlers 
+		class EventHandlers: DefaultEventhandlers 
 		{
 			fired = "_this call (uinamespace getviariable 'BIS_fnc_effectFired');";
 		};
@@ -149,6 +151,7 @@ class CfgVehicles
 		side=1;
 		scopeCurator=2;
 		forceInGarage = 1;
+		class EventHandlers;
 		displayName="Republic Warhammer MBT (Mynock)"
 		crew = "SWOP_Clonetrooper_P1";
 		
@@ -169,7 +172,7 @@ class CfgVehicles
 		class TransportItems;
 		class TransportWeapons;
 		class TransportMagazines;
-		class EventHandlers :DefaultEventhandlers 
+		class EventHandlers: DefaultEventhandlers 
 		{
 			fired = "_this call (uinamespace getviariable 'BIS_fnc_effectFired');";
 		};
@@ -197,6 +200,7 @@ class CfgVehicles
 		side=1;
 		scopeCurator=2;
 		forceInGarage = 1;
+		class EventHandlers;
 		displayName="Republic Glaive TD (Mynock)"
 		crew = "SWOP_Clonetrooper_P1";
 		
@@ -220,7 +224,7 @@ class CfgVehicles
 		class TransportItems;
 		class TransportWeapons;
 		class TransportMagazines;
-		class EventHandlers :DefaultEventhandlers 
+		class EventHandlers: DefaultEventhandlers 
 		{
 			fired = "_this call (uinamespace getviariable 'BIS_fnc_effectFired');";
 			init = "[_this select 0] execVM 'RD501_Vehicles\_init_functions\wheel_dmg.sqf';";
@@ -261,6 +265,7 @@ class CfgVehicles
 		side=1;
 		scopeCurator=2;
 		forceInGarage = 1;
+		class EventHandlers;
 		displayName="Republic Longbow AA (Mynock)"
 		crew = "SWOP_Clonetrooper_P1";
 		
@@ -282,7 +287,7 @@ class CfgVehicles
 		class TransportItems;
 		class TransportWeapons;
 		class TransportMagazines;
-		class EventHandlers :DefaultEventhandlers 
+		class EventHandlers: DefaultEventhandlers 
 		{
 			fired = "_this call (uinamespace getviariable 'BIS_fnc_effectFired');";
 		};

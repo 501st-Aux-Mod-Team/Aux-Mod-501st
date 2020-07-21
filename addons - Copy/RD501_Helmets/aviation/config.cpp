@@ -73,12 +73,12 @@ class CfgWeapons
 	NEW_501_Pilot_HELM(aspect,Aspect,pilots\Aspect.paa)
 	NEW_501_Pilot_HELM(gothic,Gothic,pilots\Gothic.paa)
 	NEW_501_Pilot_HELM(Floff,Floff,pilots\Floff.paa)
-	NEW_501_Pilot_HELM(Frisk, Frisk, pilots\Frisk.paa)
-	NEW_501_Pilot_HELM(Gothic, Gothic, pilots\Gothic.paa)
-	NEW_501_Pilot_HELM(Shnuffles, Shnuffles, pilots\Shnuffles.paa)
-	NEW_501_Pilot_HELM(Legal, Legal, pilots\Legal.paa)
-	NEW_501_Pilot_HELM(Ethan, Ethan, pilots\Ethan.paa)
-	NEW_501_Pilot_HELM(Blast, Blast, pilots\Blast.paa)
+	NEW_501_Pilot_HELM(Frisk,Frisk,pilots\Frisk.paa)
+	NEW_501_Pilot_HELM(Gothic,Gothic,pilots\Gothic.paa)
+	NEW_501_Pilot_HELM(Shnuffles,Shnuffles,pilots\Shnuffles.paa)
+	NEW_501_Pilot_HELM(Legal,Legal,pilots\Legal.paa)
+	NEW_501_Pilot_HELM(Ethan,Ethan,pilots\Ethan.paa)
+	NEW_501_Pilot_HELM(Blast,Blast,pilots\Blast.paa)
 
 	class macro_new_helmet(pilot,scuba): macro_new_helmet(pilot,base)
 	{
