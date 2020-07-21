@@ -61,7 +61,23 @@ class CfgWeapons
 	NEW_501_AB_HELM_JLTS(501st_Brandon_helmet,Brandon,Brandon.paa)
 	NEW_501_AB_HELM_JLTS(501st_Poseidon_helmet,Poseidon,Poseidon.paa)
 	NEW_501_AB_HELM_JLTS(501st_Power_helmet,Power,Power.paa)
+	NEW_501_AB_HELM_JLTS(501st_Grinch_helmet, Grinch, Grinch.paa)
+	NEW_501_AB_HELM_JLTS(501st_Sunday_helmet, Sunday, Sunday.paa)
+	NEW_501_AB_HELM_JLTS(501st_Daku_helmet, Daku, Daku.paa)
+	NEW_501_AB_HELM_JLTS(501st_Lich_helmet, Lich, Lich.paa)
+	NEW_501_AB_HELM_JLTS(501st_Shinpho_helmet, Shinpho, Shinpho.paa)
+	NEW_501_AB_HELM_JLTS(501st_Snarley_helmet, Snarley, Snarley.paa)
+	NEW_501_AB_HELM_JLTS(501st_Viking_helmet, Viking, Viking.paa)
+	NEW_501_AB_HELM_JLTS(501st_Saprez_helmet, Saprez, Saprez.paa)
+	NEW_501_AB_HELM_JLTS(501st_Scarab_helmet, Scarab, Scarab.paa) 
+	NEW_501_AB_HELM_JLTS(501st_Mimir_helmet, Mimir, Mimir.paa)
+	NEW_501_AB_HELM_JLTS(501st_Scard_helmet, Scard, Scard.paa)
+	NEW_501_AB_HELM_JLTS(501st_Brandon_helmet, Brandon, Brandon.paa)
+	NEW_501_AB_HELM_JLTS(501st_Poseidon_helmet, Poseidon, Poseidon.paa)
+	NEW_501_AB_HELM_JLTS(501st_Power_helmet, Power, Power.paa)
+
 	
+
 	class macro_new_helmet(airborne,purge): macro_new_helmet(airborne,lum_base)
 	{
 		scope=2;

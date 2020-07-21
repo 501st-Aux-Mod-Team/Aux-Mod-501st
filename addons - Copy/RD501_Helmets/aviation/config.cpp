@@ -72,8 +72,13 @@ class CfgWeapons
 	NEW_501_Pilot_HELM(nocturnal,Warbird,pilots\Nocturnal.paa)
 	NEW_501_Pilot_HELM(aspect,Aspect,pilots\Aspect.paa)
 	NEW_501_Pilot_HELM(gothic,Gothic,pilots\Gothic.paa)
-	NEW_501_Pilot_HELM(shnuffles,Shnuffles,pilots\Shnuffles.paa)
 	NEW_501_Pilot_HELM(Floff,Floff,pilots\Floff.paa)
+	NEW_501_Pilot_HELM(Frisk, Frisk, pilots\Frisk.paa)
+	NEW_501_Pilot_HELM(Gothic, Gothic, pilots\Gothic.paa)
+	NEW_501_Pilot_HELM(Shnuffles, Shnuffles, pilots\Shnuffles.paa)
+	NEW_501_Pilot_HELM(Legal, Legal, pilots\Legal.paa)
+	NEW_501_Pilot_HELM(Ethan, Ethan, pilots\Ethan.paa)
+	NEW_501_Pilot_HELM(Blast, Blast, pilots\Blast.paa)
 
 	class macro_new_helmet(pilot,scuba): macro_new_helmet(pilot,base)
 	{
@@ -201,6 +206,10 @@ class CfgWeapons
 	NEW_WARDEN_HELM(WardenSENIOR,Warden_Senior,warden\WardenSENIOR.paa)
 	NEW_WARDEN_HELM(WardenCHIEF,Warden_Chief,warden\WardenCHIEF.paa)
 	NEW_WARDEN_HELM(WardenMASTERCHIEF,Warden_MC,warden\WardenMASTERCHIEF.paa)
+	NEW_WARDEN_HELM(Flog, Flog, warden\Flog.paa)
+	NEW_WARDEN_HELM(Rive, Rive, warden\Rive.paa)
+	NEW_WARDEN_HELM(Thunder, Thunder, warden\Thunder.paa)
+	NEW_WARDEN_HELM(Wirtimus, Wirtimus, warden\Wirtimus.paa)
 
 
 
