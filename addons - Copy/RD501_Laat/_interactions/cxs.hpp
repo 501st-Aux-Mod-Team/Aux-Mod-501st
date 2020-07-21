@@ -30,13 +30,13 @@ class ACE_SelfActions: ACE_SelfActions
         };
 		class RD501_Style_Erlien: RD501_NoseArt_None
 		{
-			condition="!(isNull objectParent player) && (driver (vehicle player)==player) && (name player) == 'CX-S Erlien' || (name player) == 'CX-X Floff'";
+			condition="!(isNull objectParent player) && (driver (vehicle player)==player) && ['erlien', (name player)] call BIS_fnc_inString || ['floff', (name player)] call BIS_fnc_inString";
 			displayName="CX-S Erlien";
 			statement="_target setObjectTextureGlobal [0, 'RD501_Laat\textures\laat\Laat501stcxs\Laat501stBodyCXS_erlien.paa']";
 		};
 		class RD501_Style_Kushiban: RD501_NoseArt_None
 		{
-			condition="!(isNull objectParent player) && (driver (vehicle player)==player) && (name player) == 'CX-S Kushiban' || (name player) == 'CX-X Floff'";
+			condition="!(isNull objectParent player) && (driver (vehicle player)==player) && ['kushiban', (name player)] call BIS_fnc_inString || ['floff', (name player)] call BIS_fnc_inString";
 			displayName="CX-S Kushiban";
 			statement="_target setObjectTextureGlobal [0, 'RD501_Laat\textures\laat\Laat501stcxs\Laat501stBodyCXS_kushiban.paa']";
 		};

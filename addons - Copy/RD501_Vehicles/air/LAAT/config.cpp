@@ -94,7 +94,7 @@ class CfgVehicles
 		slingLoadMemoryPoint = "slingload0";
 
 		//hiddenSelectionsMaterials[] = {"RD501_Laat\textures\laat\g1.rvmat","RD501_Laat\textures\laat\g2.rvmat"};
-		
+
 
 		//typing hard
 		#include "ace_stuff.hpp"
@@ -260,7 +260,7 @@ class CfgVehicles
 
 	
 		class EventHandlers : DefaultEventhandlers {
-			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');"; 
+			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
 			init = "[_this select 0] call RD501_Main_fnc_laatc_lift";
 		}
  

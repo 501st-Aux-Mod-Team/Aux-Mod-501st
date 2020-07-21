@@ -53,11 +53,6 @@ class ACE_SelfActions: ACE_SelfActions
 			displayName="Cyclone Express";
 			statement="_target setObjectTextureGlobal [0, 'RD501_Laat\textures\laat\Laat501stcxx\Laat501stBodyCXX_cyclone_express.paa']";
 		};
-		class RD501_NoseArt_Lightning: RD501_NoseArt_None
-		{
-			displayName="Lightning";
-			statement="_target setObjectTextureGlobal [0, 'RD501_Laat\textures\laat\Laat501stcxx\Laat501stBodyCXX_lightning.paa']";
-		};
 		class RD501_NoseArt_MrsMae: RD501_NoseArt_None
 		{
 			displayName="Mrs. Mae";
