@@ -74,7 +74,10 @@ class CfgVehicles
 		class TransportItems;
 		class TransportWeapons;
 		class TransportMagazines;
-		class EventHandlers :DefaultEventhandlers {};
+		class EventHandlers :DefaultEventhandlers 
+		{
+			fired = "_this call (uinamespace getviariable 'BIS_fnc_effectFired');";
+		};
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
@@ -119,7 +122,10 @@ class CfgVehicles
 		class TransportItems;
 		class TransportWeapons;
 		class TransportMagazines;
-		class EventHandlers :DefaultEventhandlers {};
+		class EventHandlers :DefaultEventhandlers 
+		{
+			fired = "_this call (uinamespace getviariable 'BIS_fnc_effectFired');";
+		};
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
@@ -163,7 +169,10 @@ class CfgVehicles
 		class TransportItems;
 		class TransportWeapons;
 		class TransportMagazines;
-		class EventHandlers :DefaultEventhandlers {};
+		class EventHandlers :DefaultEventhandlers 
+		{
+			fired = "_this call (uinamespace getviariable 'BIS_fnc_effectFired');";
+		};
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
@@ -213,6 +222,7 @@ class CfgVehicles
 		class TransportMagazines;
 		class EventHandlers :DefaultEventhandlers 
 		{
+			fired = "_this call (uinamespace getviariable 'BIS_fnc_effectFired');";
 			init = "[_this select 0] execVM 'RD501_Vehicles\_init_functions\wheel_dmg.sqf';";
 		};
 		class Turrets: Turrets
@@ -272,7 +282,10 @@ class CfgVehicles
 		class TransportItems;
 		class TransportWeapons;
 		class TransportMagazines;
-		class EventHandlers :DefaultEventhandlers {};
+		class EventHandlers :DefaultEventhandlers 
+		{
+			fired = "_this call (uinamespace getviariable 'BIS_fnc_effectFired');";
+		};
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
