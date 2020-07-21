@@ -60,7 +60,7 @@ class CfgVehicles
     class macro_new_vehicle(laat,chrome):macro_new_vehicle(laat,Mk3)
     {
         displayName="LAAT/I MK.III - Chrome";
-         hiddenSelectionsMaterials[]=
+        hiddenSelectionsMaterials[]=
 		{
 			"RD501_Laat\textures\chrome.rvmat",
 			"RD501_Laat\textures\chrome.rvmat"
@@ -71,7 +71,7 @@ class CfgVehicles
 	class macro_new_vehicle(laat,shoeshine):macro_new_vehicle(laat,Mk3)
     {
         displayName="LAAT/I MK.III - Shoeshine";
-         hiddenSelectionsMaterials[]=
+        hiddenSelectionsMaterials[]=
 		{
 			"RD501_Laat\textures\Shoeshine.rvmat",
 			"RD501_Laat\textures\Shoeshine.rvmat"
@@ -82,7 +82,7 @@ class CfgVehicles
 	class macro_new_vehicle(laat,clear):macro_new_vehicle(laat,Mk3)
     {
         displayName="LAAT/I MK.III - Clear";
-         hiddenSelectionsMaterials[]=
+        hiddenSelectionsMaterials[]=
 		{
 			"RD501_Laat\textures\clear.rvmat",
 			"RD501_Laat\textures\clear.rvmat"
@@ -187,11 +187,8 @@ class CfgVehicles
 		};
 	};
 	class macro_new_vehicle(laat,first_order): RD501_LAAT_Mk3
-	{	
-		class ACE_SelfActions: ACE_SelfActions
-		{
-			#include "_interactions/first_order.hpp"
-		}	
+	{
+		#include "_interactions/first_order.hpp"
 		displayName="LAAT/I MK.III - ('First Order')";
 		hiddenSelectionsTextures[]=
 		{

@@ -273,36 +273,34 @@ class CfgVehicles
 		displayName="VTOL LAAT Mk.II";
 		gearsUpFrictionCoef=0;
 		model="\LAAT\LAAT.p3d";
+		hiddenSelections[] = {"camo1","camo2"};
+		hiddenSelectionsTextures[]=
+		{
+			"RD501_Laat\textures\laat\Laat501stcxx\Laat501stBodyCXX_lightning.paa",
+			"RD501_Laat\textures\laat\Laat501stcxx\Laat501stWingCXX.paa"
+		};
 		forceInGarage=1;
 		availableForSupportTypes[] = {};
-		weapons[]=
-		{
-			macro_new_weapon(cannon,laat),
+		memoryPointGun[] = {"cannon1"};
+		gunBeg[] = {"cannon1"};
+		gunEnd[] = {"konec hlavne1"};
+		memoryPointLRocket = "RocketL";
+		memoryPointRRocket = "RocketR";
+		memoryPointLMissile = "RocketL";
+		memoryPointRMissile = "RocketR";
+		weapons[] = {
+			macro_basic_air_weapons,
+			macro_new_weapon(generic,republic_aircraft_cannon),
 			macro_new_weapon(wynd,a2a),
-			"CMFlareLauncher",
-			"SmokeLauncher",
-			"Laserdesignator_pilotCamera"
+			macro_new_weapon(wynd,agm),
+			macro_new_weapon(wynd,ugm)
 		};
-		magazines[]=
-		{
-			"300Rnd_CMFlare_Chaff_Magazine",
-			"300Rnd_CMFlare_Chaff_Magazine",
-			"300Rnd_CMFlare_Chaff_Magazine",
+		magazines[] = {
+			macro_new_mag(generic_aircraft_cannon_green,1000),
 			macro_new_mag(a2a,4),
-			macro_new_mag(a2a,4),
-			macro_new_mag(a2a,4),
-			"SmokeLauncherMag",
-			macro_new_mag(laat_cannon,100),
-			macro_new_mag(laat_cannon,100),
-			macro_new_mag(laat_cannon,100),
-			macro_new_mag(laat_cannon,100),
-			"SmokeLauncherMag",
-			"SmokeLauncherMag",
-			"SmokeLauncherMag",
-			"SmokeLauncherMag",
-			"SmokeLauncherMag",
-			"SmokeLauncherMag",
-			"Laserbatteries"
+			macro_new_mag(agm,6),
+			macro_new_mag(ugm,10),
+			macro_basic_air_mags
 		};
 		armor=550;
 		class Sounds: Sounds
