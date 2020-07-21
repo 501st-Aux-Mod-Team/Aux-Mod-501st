@@ -25,6 +25,7 @@ class CfgPatches
 		requiredVersion=0.1;
 		units[]=
 		{
+			macro_new_vehicle(rocket_ordinance_tank,Mynock),
 			macro_new_vehicle(rocket_ordinance_tank,republic),
 			macro_new_vehicle(rocket_ordinance_tank,CIS)
 		};
@@ -42,9 +43,9 @@ class CfgVehicles
 {
 
 	#include "inheritance.hpp"
-	class macro_new_vehicle(rocket_ordinance_tank,republic) : B_MBT_01_mlrs_F
+	class macro_new_vehicle(rocket_ordinance_tank,Mynock) : B_MBT_01_mlrs_F
 	{
-		displayName = "Republic Catapult";
+		displayName = "Republic Catapult (Mynock)";
 		crew = "SWOP_Clonetrooper_P1";
 		scope = 2;
 		side=1;
@@ -74,32 +75,42 @@ class CfgVehicles
 		textureList[] = {};
 		hiddenSelectionsTextures[] = 
 		{
-			"RD501_Vehicles\FE_vehicles\textures\mbt01\mbt01_ext1_mynock_co.paa",
-			"RD501_Vehicles\FE_vehicles\textures\mbt01\catapult\catapult_ext2_mynock_co.paa",
+			"RD501_Vehicles\textures\mbt01\mbt01_ext1_mynock_co.paa",
+			"RD501_Vehicles\textures\mbt01\catapult\catapult_ext2_mynock_co.paa",
 			"A3\Armor_F\Data\camonet_NATO_Green_CO.paa"
 		};
 	};
-	class macro_new_vehicle(rocket_ordinance_tank,CIS) : macro_new_vehicle(rocket_ordinance_tank,republic)
+	class macro_new_vehicle(rocket_ordinance_tank,republic) : macro_new_vehicle(rocket_ordinance_tank,Mynock) {
+		displayName = "Republic Catapult";
+
+		hiddenSelectionsTextures[] =
+		{
+			"RD501_Vehicles\textures\mbt01\mbt01_ext1_republic_co.paa",
+			"RD501_Vehicles\textures\mbt01\catapult\catapult_ext2_republic_co.paa",
+			"A3\Armor_F\Data\camonet_NATO_Green_CO.paa"
+		};
+	}
+	class macro_new_vehicle(rocket_ordinance_tank,CIS) : macro_new_vehicle(rocket_ordinance_tank,Mynock)
 	{
 		displayName = "CIS Catapult";
 		crew = "SWOP_CIS_droid_crew";
 		//scope = 2;
 		side = 0;
-		
+
 		faction = macro_cis_faction
 		editorSubcategory = macro_editor_cat(arty)
 		vehicleClass = macro_editor_vehicle_type(arty)
 		author = "RD501";
-		class EventHandlers : DefaultEventhandlers 
+		class EventHandlers : DefaultEventhandlers
 		{
-			
-			
+
+
 		};
-		hiddenSelectionsTextures[] = 
+		hiddenSelectionsTextures[] =
 		{
-			"awing\t_awing_03_cw.paa",
-			"awing\t_awing_03_cw.paa",
-			"awing\t_awing_03_cw.paa"
+			"RD501_Vehicles\textures\mbt01\mbt01_ext1_cis_co.paa",
+			"RD501_Vehicles\textures\mbt01\catapult\catapult_ext2_cis_co.paa",
+			"A3\Armor_F\Data\camonet_NATO_Green_CO.paa"
 		};
 
 	};

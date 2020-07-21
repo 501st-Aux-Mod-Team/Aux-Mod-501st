@@ -47,24 +47,24 @@ class DefaultEventhandlers ;
 class CfgVehicles
 {
 	#include "inheritance.hpp"
-	class macro_new_vehicle(T1000,Republic):O_MBT_02_Cannon_F
+	class macro_new_vehicle(T1000,Mynock):O_MBT_02_Cannon_F
 	{
 		
 		scope=2;
 		scopeCurator=2;
 		forceInGarage = 1;
 		side=1;
-		displayName="Republic T1000 MBT"
+		displayName="Republic T1000 MBT (Mynock)"
 		crew = "SWOP_Clonetrooper_P1";
 		
 		hiddenSelections[] = {"Camo1", "Camo2", "Camo3", "Camo4", "Camo5", "CamoSlat"};
 		textureList[] = {};
 		hiddenSelectionsTextures[] = 
 		{
-			"RD501_Vehicles\FE_Vehicles\textures\t1000\t1000_ext1_mynock_co.paa",
-			"RD501_Vehicles\FE_Vehicles\textures\t1000\t1000_turret_mynock_co.paa",
-			"RD501_Vehicles\FE_Vehicles\textures\t1000\t1000_ext2_mynock_co.paa",
-			"RD501_Vehicles\FE_Vehicles\textures\grey.paa"
+			"RD501_Vehicles\textures\t1000\t1000_ext1_mynock_co.paa",
+			"RD501_Vehicles\textures\t1000\t1000_turret_mynock_co.paa",
+			"RD501_Vehicles\textures\t1000\t1000_ext2_mynock_co.paa",
+			"RD501_Vehicles\textures\grey.paa"
 		};
 
 		faction = macro_republic_faction
@@ -93,22 +93,22 @@ class CfgVehicles
 		};
 	};
 
-	class macro_new_vehicle(Claymore,Republic):B_MBT_01_TUSK_F
+	class macro_new_vehicle(Claymore,Mynock):B_MBT_01_TUSK_F
 	{	
 		scope=2;
 		side=1;
 		scopeCurator=2;
 		forceInGarage = 1;
-		displayName="Republic Claymore MBT"
+		displayName="Republic Claymore MBT (Mynock)"
 		crew = "SWOP_Clonetrooper_P1";
 		
 		hiddenSelections[] = {"Camo1", "Camo2", "Camo3", "Camo4", "Camo5", "CamoSlat"};
 		textureList[] = {};
 		hiddenSelectionsTextures[] = 
 		{
-			"RD501_Vehicles\FE_Vehicles\textures\mbt01\mbt01_ext1_mynock_co.paa",
-			"RD501_Vehicles\FE_Vehicles\textures\mbt01\claymore\claymore_tower_mynock_co.paa",
-			"RD501_Vehicles\FE_Vehicles\textures\mbt01\claymore\claymore_addons_mynock_co.paa",
+			"RD501_Vehicles\textures\mbt01\mbt01_ext1_mynock_co.paa",
+			"RD501_Vehicles\textures\mbt01\claymore\claymore_tower_mynock_co.paa",
+			"RD501_Vehicles\textures\mbt01\claymore\claymore_addons_mynock_co.paa",
 			"a3\Armor_F\Data\camonet_NATO_Desert_CO.paa"
 		};
 
@@ -137,22 +137,22 @@ class CfgVehicles
 			};
 		};
 	};
-	class macro_new_vehicle(Warhammer,Republic):I_MBT_03_cannon_F
+	class macro_new_vehicle(Warhammer,Mynock):I_MBT_03_cannon_F
 	{	
 		scope=2;
 		side=1;
 		scopeCurator=2;
 		forceInGarage = 1;
-		displayName="Republic Warhammer MBT"
+		displayName="Republic Warhammer MBT (Mynock)"
 		crew = "SWOP_Clonetrooper_P1";
 		
 		hiddenSelections[] = {"Camo1", "Camo2", "Camo3", "Camo4", "Camo5", "CamoSlat"};
 		textureList[] = {};
 		hiddenSelectionsTextures[] = 
 		{
-			"RD501_Vehicles\FE_Vehicles\textures\warhammer\warhammer_ext01_mynock_co.paa",
-			"RD501_Vehicles\FE_Vehicles\textures\warhammer\warhammer_ext02_mynock_co.paa",
-			"RD501_Vehicles\FE_Vehicles\textures\warhammer\warhammer_ext03_mynock_co.paa",
+			"RD501_Vehicles\textures\warhammer\warhammer_ext01_mynock_co.paa",
+			"RD501_Vehicles\textures\warhammer\warhammer_ext02_mynock_co.paa",
+			"RD501_Vehicles\textures\warhammer\warhammer_ext03_mynock_co.paa",
 			"A3\Armor_F\Data\camonet_AAF_Digi_Green_CO.paa"
 		};
 
@@ -195,13 +195,13 @@ class CfgVehicles
 		textureList[] = {};
 		hiddenSelectionsTextures[] = 
 		{
-			"RD501_Vehicles\FE_Vehicles\textures\glaive\glaive_ext1_mynock_co.paa",
-			"RD501_Vehicles\FE_Vehicles\textures\glaive\glaive_ext2_mynock_co.paa",
-			"RD501_Vehicles\FE_Vehicles\textures\glaive\glaive_wheel_mynock_co.paa",
-			"RD501_Vehicles\FE_Vehicles\textures\glaive\glaive_ext3_mynock_co.paa",
-			"RD501_Vehicles\FE_Vehicles\textures\glaive\glaive_turret_mynock_co.paa",
-			"RD501_Vehicles\FE_Vehicles\textures\grey.paa",
-			"RD501_Vehicles\FE_Vehicles\textures\glaive\glaive_ext3_mynock_co.paa"
+			"RD501_Vehicles\textures\glaive\glaive_ext1_mynock_co.paa",
+			"RD501_Vehicles\textures\glaive\glaive_ext2_mynock_co.paa",
+			"RD501_Vehicles\textures\glaive\glaive_wheel_mynock_co.paa",
+			"RD501_Vehicles\textures\glaive\glaive_ext3_mynock_co.paa",
+			"RD501_Vehicles\textures\glaive\glaive_turret_mynock_co.paa",
+			"RD501_Vehicles\textures\grey.paa",
+			"RD501_Vehicles\textures\glaive\glaive_ext3_mynock_co.paa"
 		};
 
 		faction = macro_republic_faction
@@ -236,31 +236,31 @@ class CfgVehicles
 		displayName="Republic Glaive TD"
 		hiddenSelectionsTextures[]=
 		{
-			"RD501_Vehicles\FE_Vehicles\textures\glaive\glaive_ext1_republic_co.paa",
-			"RD501_Vehicles\FE_Vehicles\textures\glaive\glaive_ext2_republic_co.paa",
-			"RD501_Vehicles\FE_Vehicles\textures\glaive\glaive_wheel_republic_co.paa",
-			"RD501_Vehicles\FE_Vehicles\textures\glaive\glaive_ext3_republic_co.paa",
-			"RD501_Vehicles\FE_Vehicles\textures\glaive\glaive_turret_republic_co.paa",
-			"RD501_Vehicles\FE_Vehicles\textures\cream.paa",
-			"RD501_Vehicles\FE_Vehicles\textures\glaive\glaive_ext3_republic_co.paa"
+			"RD501_Vehicles\textures\glaive\glaive_ext1_republic_co.paa",
+			"RD501_Vehicles\textures\glaive\glaive_ext2_republic_co.paa",
+			"RD501_Vehicles\textures\glaive\glaive_wheel_republic_co.paa",
+			"RD501_Vehicles\textures\glaive\glaive_ext3_republic_co.paa",
+			"RD501_Vehicles\textures\glaive\glaive_turret_republic_co.paa",
+			"RD501_Vehicles\textures\cream.paa",
+			"RD501_Vehicles\textures\glaive\glaive_ext3_republic_co.paa"
 		};
 	};
-	class macro_new_vehicle(Longbow,Republic):O_APC_Tracked_02_AA_F
+	class macro_new_vehicle(Longbow,Mynock):O_APC_Tracked_02_AA_F
 	{
 		scope=2;
 		side=1;
 		scopeCurator=2;
 		forceInGarage = 1;
-		displayName="Republic Longbow AA"
+		displayName="Republic Longbow AA (Mynock)"
 		crew = "SWOP_Clonetrooper_P1";
 		
 		hiddenSelections[] = {"Camo1", "Camo2", "Camo3", "Camo4", "Camo5", "CamoSlat"};
 		textureList[] = {};
 		hiddenSelectionsTextures[] = 
 		{
-			"RD501_Vehicles\FE_Vehicles\textures\longbow\longbow_ext1_mynock_co.paa",
-			"RD501_Vehicles\FE_Vehicles\textures\longbow\longbow_ext2_mynock_co.paa",
-			"RD501_Vehicles\FE_Vehicles\textures\longbow\longbow_tower_mynock_co.paa",
+			"RD501_Vehicles\textures\longbow\longbow_ext1_mynock_co.paa",
+			"RD501_Vehicles\textures\longbow\longbow_ext2_mynock_co.paa",
+			"RD501_Vehicles\textures\longbow\longbow_tower_mynock_co.paa",
 			"A3\Armor_F\Data\camonet_CSAT_HEX_Desert_CO.paa",
 			"RD501_Vehicles\FE_Vehicles\textures\grey.paa",
 		};
