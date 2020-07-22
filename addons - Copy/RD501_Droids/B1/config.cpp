@@ -96,6 +96,20 @@ class cfgWeapons
 			mass=60;
 		};
 	};
+	class macro_new_uniform_class(opfor,B1_blue): Uniform_Base
+	{
+		scope=2;
+		author="Mr.Clock";
+		displayName="B1 Battledroid Blue";
+		model="\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass=macro_new_unit_class(opfor,B1_blue);
+			containerClass="Supply500";
+			mass=60;
+		};
+	};
 };
 class CfgVehicles
 {
@@ -140,10 +154,15 @@ class CfgVehicles
 
 		faction = macro_cis_faction
 		editorSubcategory = macro_editor_cat(B1)
-		
+
+		hiddenSelections[] = {"camo1"};
+		hiddenSelectionsTextures[] = {
+			macro_b1_textures\Droid.paa
+		};
 		uniformClass=macro_new_uniform_class(opfor,B1);
 
 		backpack = "\MRC\JLTS\characters\DroidArmor\DroidBackpackB1.p3d";
+
 
 		//linkeditems[] = {"ItemGPS", "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio"};
 		linkeditems[]=
@@ -543,6 +562,14 @@ class CfgVehicles
 			macro_b1_textures\Yellow.paa
 		};
 		uniformClass=macro_new_uniform_class(opfor,B1_yellow);
+	};
+	class macro_new_unit_class(opfor,B1_blue): macro_new_unit_class(opfor,B1)
+	{
+		displayName="B1 Battledroid Blue";
+		hiddenSelectionsTextures[] = {
+			macro_b1_textures\Blue.paa
+		};
+		uniformClass=macro_new_uniform_class(opfor,B1_blue);
 	};
 
 	//fancy units
