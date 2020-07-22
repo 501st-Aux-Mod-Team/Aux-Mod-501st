@@ -49,14 +49,13 @@ class CfgVehicles
 	#include "inheritance.hpp"
 	class macro_new_vehicle(T1000,Mynock):O_MBT_02_Cannon_F
 	{
-		
 		scope=2;
 		scopeCurator=2;
 		forceInGarage = 1;
 		side=1;
-		class EventHandlers;
 		displayName="Republic T1000 MBT (Mynock)"
 		crew = "SWOP_Clonetrooper_P1";
+		author="RD501"
 		
 		hiddenSelections[] = {"Camo1", "Camo2", "Camo3", "Camo4", "Camo5", "CamoSlat"};
 		textureList[] = {};
@@ -75,10 +74,9 @@ class CfgVehicles
 		class TransportItems;
 		class TransportWeapons;
 		class TransportMagazines;
-		class EventHandlers: DefaultEventhandlers 
-		{
-			fired = "_this call (uinamespace getviariable 'BIS_fnc_effectFired');";
-		};
+
+		#include "common_stuff_mynock.hpp"
+
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
@@ -103,9 +101,9 @@ class CfgVehicles
 		side=1;
 		scopeCurator=2;
 		forceInGarage = 1;
-		class EventHandlers;
 		displayName="Republic Claymore MBT (Mynock)"
 		crew = "SWOP_Clonetrooper_P1";
+		author="RD501"
 		
 		hiddenSelections[] = {"Camo1", "Camo2", "Camo3", "Camo4", "Camo5", "CamoSlat"};
 		textureList[] = {};
@@ -124,10 +122,9 @@ class CfgVehicles
 		class TransportItems;
 		class TransportWeapons;
 		class TransportMagazines;
-		class EventHandlers: DefaultEventhandlers 
-		{
-			fired = "_this call (uinamespace getviariable 'BIS_fnc_effectFired');";
-		};
+
+		#include "common_stuff_mynock.hpp"
+
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
@@ -151,9 +148,9 @@ class CfgVehicles
 		side=1;
 		scopeCurator=2;
 		forceInGarage = 1;
-		class EventHandlers;
 		displayName="Republic Warhammer MBT (Mynock)"
 		crew = "SWOP_Clonetrooper_P1";
+		author="RD501"
 		
 		hiddenSelections[] = {"Camo1", "Camo2", "Camo3", "Camo4", "Camo5", "CamoSlat"};
 		textureList[] = {};
@@ -172,10 +169,9 @@ class CfgVehicles
 		class TransportItems;
 		class TransportWeapons;
 		class TransportMagazines;
-		class EventHandlers: DefaultEventhandlers 
-		{
-			fired = "_this call (uinamespace getviariable 'BIS_fnc_effectFired');";
-		};
+
+		#include "common_stuff_mynock.hpp"
+
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
@@ -200,9 +196,9 @@ class CfgVehicles
 		side=1;
 		scopeCurator=2;
 		forceInGarage = 1;
-		class EventHandlers;
 		displayName="Republic Glaive TD (Mynock)"
 		crew = "SWOP_Clonetrooper_P1";
+		author="RD501"
 		
 		hiddenSelections[] = {"Camo1", "Camo2", "Camo3", "Camo4", "Camo5", "CamoSlat"};
 		textureList[] = {};
@@ -224,11 +220,13 @@ class CfgVehicles
 		class TransportItems;
 		class TransportWeapons;
 		class TransportMagazines;
-		class EventHandlers: DefaultEventhandlers 
+
+		#include "common_stuff_mynock.hpp"
+		class EventHandlers: DefaultEventhandlers
 		{
-			fired = "_this call (uinamespace getviariable 'BIS_fnc_effectFired');";
 			init = "[_this select 0] execVM 'RD501_Vehicles\_init_functions\wheel_dmg.sqf';";
 		};
+
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
@@ -248,6 +246,7 @@ class CfgVehicles
 	class macro_new_vehicle(Glaive,Republic): macro_new_vehicle(Glaive,Mynock)
 	{
 		displayName="Republic Glaive TD"
+		author="RD501"
 		hiddenSelectionsTextures[]=
 		{
 			"RD501_Vehicles\textures\glaive\glaive_ext1_republic_co.paa",
@@ -265,9 +264,9 @@ class CfgVehicles
 		side=1;
 		scopeCurator=2;
 		forceInGarage = 1;
-		class EventHandlers;
 		displayName="Republic Longbow AA (Mynock)"
 		crew = "SWOP_Clonetrooper_P1";
+		author="RD501"
 		
 		hiddenSelections[] = {"Camo1", "Camo2", "Camo3", "Camo4", "Camo5", "CamoSlat"};
 		textureList[] = {};
@@ -287,10 +286,9 @@ class CfgVehicles
 		class TransportItems;
 		class TransportWeapons;
 		class TransportMagazines;
-		class EventHandlers: DefaultEventhandlers 
-		{
-			fired = "_this call (uinamespace getviariable 'BIS_fnc_effectFired');";
-		};
+
+		#include "common_stuff_mynock.hpp"
+
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
@@ -317,6 +315,7 @@ class CfgVehicles
 		forceInGarage = 1;
 		displayName="Republic Courser"
 		crew = "SWOP_Clonetrooper_P1";
+		author="RD501"
 		//hiddenSelections[] = {"Camo1","Camo2","Camo3"};
 		//hiddenSelectionsTextures[] = 
 		//{

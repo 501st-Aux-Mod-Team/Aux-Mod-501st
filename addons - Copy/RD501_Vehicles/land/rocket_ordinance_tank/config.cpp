@@ -47,6 +47,7 @@ class CfgVehicles
 	{
 		displayName = "Republic Catapult (Mynock)";
 		crew = "SWOP_Clonetrooper_P1";
+		author="RD501"
 		scope = 2;
 		side=1;
 		scopeCurator=2;
@@ -57,6 +58,9 @@ class CfgVehicles
 
 		author = "RD501";
 		forceInGarage=1;
+
+		#include "../Mynock/common_stuff_mynock.hpp"
+
 		class TransportItems
 		{
 		};
@@ -65,11 +69,6 @@ class CfgVehicles
 		};
 		class TransportWeapons 
 		{
-		};
-		class EventHandlers : DefaultEventhandlers 
-		{
-			
-			
 		};
 		
 		textureList[] = {};
@@ -101,11 +100,6 @@ class CfgVehicles
 		editorSubcategory = macro_editor_cat(arty)
 		vehicleClass = macro_editor_vehicle_type(arty)
 		author = "RD501";
-		class EventHandlers : DefaultEventhandlers
-		{
-
-
-		};
 		hiddenSelectionsTextures[] =
 		{
 			"RD501_Vehicles\textures\mbt01\mbt01_ext1_cis_co.paa",

@@ -47,7 +47,8 @@ class CfgVehicles
 	class macro_new_vehicle(heavy_ordinance_tank,Mynock) : B_MBT_01_arty_F
 	{
 		displayName = "Republic Trebuchet (Mynock)";
-		crew = "SWOP_Clonetrooper_P1";	
+		crew = "SWOP_Clonetrooper_P1";
+		author="RD501"
 		scope = 2;
 		side=1;
 		scopeCurator=2;
@@ -56,6 +57,8 @@ class CfgVehicles
 		editorSubcategory = macro_editor_cat(arty)
 		vehicleClass = macro_editor_vehicle_type(arty)
 
+		smokeLauncherGrenadeCount = 12;
+		smokeLauncherAngle = 90;
 
 		forceInGarage=1;
 		author = "RD501";
@@ -68,12 +71,11 @@ class CfgVehicles
 		class TransportWeapons 
 		{
 		};
-		class EventHandlers :DefaultEventhandlers 
+
+		#include "../Mynock/common_stuff_mynock.hpp"
+		class EventHandlers: DefaultEventhandlers
 		{
-			scope = 2;
-			scopeCurator = 2;
-			init = "if (local (_this select 0)) then {[(_this select 0), """", [], false] call bis_fnc_initVehicle;};";
-			
+			init = "if (local (_this select 0)) then {[(_this select 0), '', [], false] call bis_fnc_initVehicle;};";
 		};
 		
 		class turrets : turrets
@@ -95,7 +97,7 @@ class CfgVehicles
 						
 							macro_basic_air_mags,
 							"SmokeLauncherMag",
-					
+
 							macro_new_mag(generic_aircraft_cannon_plasma_red,1000),
 							macro_new_mag(generic_aircraft_cannon_plasma_red,1000)
 						};

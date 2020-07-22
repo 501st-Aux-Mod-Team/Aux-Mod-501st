@@ -43,7 +43,6 @@
 			//macro_new_weapon(cannon,laat)
 		};
 		magazines[] = {
-		
 			macro_basic_air_mags,
 			// macro_new_mag(laat_cannon,100),
 			// macro_new_mag(laat_cannon,100),
@@ -60,7 +59,8 @@
 			"SmokeLauncherMag",
 			"SmokeLauncherMag",
 		};
-	
+		smokeLauncherGrenadeCount = 48;
+		smokeLauncherAngle = 360;
 
 	//The sun
 	class Reflectors
@@ -210,8 +210,6 @@
 	};
 
 	#include "sounds.hpp"
-
-	
 
 	//for texture reskins
 		hiddenSelections[]=

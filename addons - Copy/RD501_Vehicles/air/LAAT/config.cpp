@@ -44,26 +44,17 @@ class CfgPatches
 		units[]=
 		{
 			macro_new_vehicle(laat,Mk3),
-			
-			macro_new_vehicle(laat,red_krayt),
-			macro_new_vehicle(laat,medic_krayt),
-			macro_new_vehicle(laat,stealth_blue_krayt),
-			macro_new_vehicle(laat,stealth_red_krayt),
-			macro_new_vehicle(laat,stealth_white_krayt),
-			macro_new_vehicle(laat,blue_krayt),
-			macro_new_vehicle(laat,ranger_enforcer),
 			macro_new_vehicle(laat,Mk4),
-			macro_new_vehicle(laat,spec_ops),
-			macro_new_vehicle(laat,muunilinst),
-			macro_new_vehicle(laat,cargo_Mk2),
-			macro_new_vehicle(laat,blue),
-			macro_new_vehicle(laat,vtol_test),
 			macro_new_vehicle(laat,mk4_skin),
 			macro_new_vehicle(laat,mk4_501st_cxc),
 			macro_new_vehicle(laat,mk4_501st_cxx),
 			macro_new_vehicle(laat,mk4_501st_cxp),
 			macro_new_vehicle(laat,mk4_501st_cxs),
-			macro_new_vehicle(laat,mk4_501st_cx)
+			macro_new_vehicle(laat,mk4_501st_cx),
+			macro_new_vehicle(laat,cargo_Mk2),
+			macro_new_vehicle(laat,spec_ops),
+			macro_new_vehicle(laat,muunilinst),
+			macro_new_vehicle(laat,blue)
 		};
 		weapons[]=
 		{
@@ -86,29 +77,23 @@ class CfgVehicles
 		side=1;
 		crew="SWOP_Clonetrooper_P1";
 		transportSoldier=24;
-		smokeLauncherGrenadeCount = 48;
-		smokeLauncherAngle = 360;
 		forceInGarage = 1;
 		crewExplosionProtection = 0;
 		crewCrashProtection = 0;
 		slingLoadMemoryPoint = "slingload0";
 
-		//hiddenSelectionsMaterials[] = {"RD501_Laat\textures\laat\g1.rvmat","RD501_Laat\textures\laat\g2.rvmat"};
-
-
 		//typing hard
 		#include "ace_stuff.hpp"
 		#include "flight_model.hpp"
-		#include "common_stuff_mk3.hpp"
+		#include "common_stuff.hpp"
+
+		//difference to common
+		armor=500;
 	
 		class UserActions
 		{
 			#include "user_action.hpp"
 		};
-		class EventHandlers : DefaultEventhandlers {
-			init="[_this select 0] execVM 'RD501_Main\functions\autocrate\autocrate.sqf';[_this select 0] execVM 'RD501_Main\functions\vehicle_lift\laat_lift_3.sqf';";
-			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-		}
 		class ACE_SelfActions:ACE_SelfActions
 		{		
 			
@@ -150,21 +135,17 @@ class CfgVehicles
 		side=1;
 		crew="SWOP_Clonetrooper_P1";
 		transportSoldier=24;
-		smokeLauncherGrenadeCount = 48;
-		smokeLauncherAngle = 360;
 		forceInGarage = 1;
 		crewExplosionProtection = 0;
 		crewCrashProtection = 0;
 		slingLoadMemoryPoint = "slingLoad0";
 		angleRangeHorizontal = 360;
 		angleRangeVertical = 360;
-		
 
 		//typing hard
 		#include "ace_stuff.hpp"
 		#include "flight_model.hpp"
 		#include "common_stuff.hpp"
-
 
 		class UserActions
 		{
@@ -194,10 +175,6 @@ class CfgVehicles
 				animPeriod = 5;
 			};
 		};
-		class EventHandlers : DefaultEventhandlers {
-			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-			init="[_this select 0] execVM 'RD501_Main\functions\autocrate\autocrate.sqf';[_this select 0] execVM 'RD501_Main\functions\vehicle_lift\laat_lift_3.sqf';";
-		}
 
 		class ACE_SelfActions:ACE_SelfActions
 		{		
@@ -223,7 +200,9 @@ class CfgVehicles
 			};
 		};
 	};
+
 	#include "_mk4_reskin.hpp"
+
 	class macro_new_vehicle(laat,cargo_Mk2):swop_LAAT_cargo
 	{
 		scope=2;
@@ -312,20 +291,4 @@ class CfgVehicles
 	reskined_laat_mk4_full_path(muunilinst,Muunilinst,LAAT\textures\gunship_2_arc_d.paa,LAAT\textures\gunship_1_arc_d.paa)
 
 	reskined_laat_mk4_full_path(blue,Blue,LAAT\textures\gunship_2_blue.paa,LAAT\textures\gunship_1_blue.paa)
-
-
-	//mk3 reskins
-	// reskined_laat_mk3(red_krayt,Red Krayt,krayt_red\LaatKraytBodyRed.paa,krayt_red\LaatKraytWingRed.paa)
-
-	// reskined_laat_mk3(blue_krayt,Blue Krayt,krayt_blue\LaatKraytBodyBlue.paa,krayt_blue\LaatKraytWingBlue.paa)
-
-	// reskined_laat_mk3(medic_krayt,Medic Krayt,medic_red\redMedicLaatBody.paa,medic_red\redMedicLaatWing.paa)
-
-	// reskined_laat_mk3(stealth_blue_krayt,Stealth Blue Krayt,krayt_black_blue\LaatKraytBodyBlackBlue.paa,krayt_black_blue\LaatKraytWingBlackBlue.paa)
-
-	// reskined_laat_mk3(stealth_red_krayt,Stealth Red Krayt,krayt_black_red\LaatKraytBodyBlackRed.paa,krayt_black_red\LaatKraytWingBlackRed.paa)
-
-	// reskined_laat_mk3(stealth_white_krayt,Stealth White Krayt,krayt_black_white\LaatKraytBodyBlackWhite.paa,krayt_black_white\LaatKraytWingBlackWhite.paa)
-
-	// reskined_laat_mk3(ranger_enforcer,Ranger Enforcer,ranger_enforcer_Laat\reBody.paa,ranger_enforcer_Laat\reWing.paa)
 };
