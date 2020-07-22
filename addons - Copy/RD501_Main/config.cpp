@@ -296,7 +296,10 @@ class CfgEditorCategories
 	{
 		displayName = "Speeders";
 	};
-
+	class kobra
+	{
+		displayname = "[K] Kobra";
+	};
 	
 };
 
@@ -470,7 +473,14 @@ class CfgEditorSubcategories
 	{
 		displayName = "Starfighter";
 	};
-
+	class 442_ships
+	{
+		displayname = "Static Ship";
+	};
+	class 442_ships_parts
+	{
+		displayname = "Static Ship Parts";
+	};
 
 };
 

@@ -1,4 +1,0 @@
-﻿//<'442_ships.pbo' properties via Mikero's dos tools, dll version 7.46>
-prefix=442_ships;
-PboType=Arma Unknown pbo type (no config).;
-//</properties>

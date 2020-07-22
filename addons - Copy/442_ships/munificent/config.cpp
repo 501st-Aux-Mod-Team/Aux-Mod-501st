@@ -1,20 +1,14 @@
-////////////////////////////////////////////////////////////////////
-//DeRap: 442_ships\munificent\config.bin
-//Produced from mikero's Dos Tools Dll version 7.46
-//https://bytex.market/products/item/weodpphdknnzm70o0h8q/Mikero%27s%20Dos%20Tools
-//'now' is Thu Jun 25 16:36:16 2020 : 'file' last modified on Sun Jun 07 11:07:52 2020
-////////////////////////////////////////////////////////////////////
-
-#define _ARMA_
-
 class CfgPatches
 {
 	class 442_munificent
 	{
-		requiredAddons[] = {};
-		weapons[] = {};
-		units[] = {"442_munificent"};
-		author = "kripto202";
+		requiredAddons[]={};
+		weapons[]={};
+		units[]=
+		{
+			"442_munificent"
+		};
+		author="kripto202";
 	};
 };
 class Eventhandlers;
@@ -33,20 +27,29 @@ class CfgVehicles
 	class Items_base_F;
 	class 442_munificent: House_F
 	{
-		scope = 2;
-		scopecurator = 2;
-		author = "kripto202";
-		displayName = "Munificent";
-		model = "\442_ships\munificent\munificent.p3d";
-		editorcategory = "kobra";
-		editorsubcategory = "442_ships";
-		vehicleClass = "Structures";
-		hiddenselections[] = {"body1","body2","body3","body4","engine"};
-		hiddenselectionstextures[] = {"442_ships\munificent\data\body1_co.paa","442_ships\munificent\data\body2_co.paa","442_ships\munificent\data\body3_co.paa","442_ships\munificent\data\body4_co.paa","442_ships\munificent\data\engine_co.paa"};
+		scope=2;
+		scopecurator=2;
+		author="kripto202";
+		displayName="Munificent";
+		model="\442_ships\munificent\munificent.p3d";
+		editorcategory="kobra";
+		editorsubcategory="442_ships";
+		vehicleClass="Structures";
+		hiddenselections[]=
+		{
+			"body1",
+			"body2",
+			"body3",
+			"body4",
+			"engine"
+		};
+		hiddenselectionstextures[]=
+		{
+			"442_ships\munificent\data\body1_co.paa",
+			"442_ships\munificent\data\body2_co.paa",
+			"442_ships\munificent\data\body3_co.paa",
+			"442_ships\munificent\data\body4_co.paa",
+			"442_ships\munificent\data\engine_co.paa"
+		};
 	};
-};
-class cfgMods
-{
-	author = "kripto202";
-	timepacked = "1591528071";
 };
