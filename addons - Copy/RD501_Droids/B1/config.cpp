@@ -17,15 +17,20 @@ class CfgPatches
 			macro_new_unit_class(opfor,B1_green),
 			macro_new_unit_class(opfor,B1_red),
 			macro_new_unit_class(opfor,B1_yellow),
+			macro_new_unit_class(opfor,B1_blue),
 			macro_new_unit_class(opfor,B1_heavy),
-			macro_new_unit_class(opfor,B1_maaws),
+			macro_new_unit_class(opfor,B1_AT),
 			macro_new_unit_class(opfor,B1_marksmen),
+			macro_new_unit_class(opfor,B1_shotgun),
+			macro_new_unit_class(opfor,B1_leader),
+			macro_new_unit_class(opfor,B1_Medic),
+			macro_new_unit_class(opfor,B1_Pilot),
 		};
 		weapons[] = {
 			macro_new_uniform_class(opfor,B1),
 			macro_new_uniform_class(opfor,B1_red),
 			macro_new_uniform_class(opfor,B1_yellow),
-			macro_new_uniform_class(opfor,B1_green)
+			macro_new_uniform_class(opfor,B1_green),
 		};
 	};
 };
@@ -157,7 +162,7 @@ class CfgVehicles
 
 		hiddenSelections[] = {"camo1"};
 		hiddenSelectionsTextures[] = {
-			macro_b1_textures\Droid.paa
+			macro_b1_textures\b1_co.paa
 		};
 		uniformClass=macro_new_uniform_class(opfor,B1);
 
@@ -543,7 +548,7 @@ class CfgVehicles
 	{
 		displayName="B1 Battledroid Green";
 		hiddenSelectionsTextures[] = {
-			macro_b1_textures\Green.paa
+			macro_b1_textures\b1_crew_co.paa
 		};
 		uniformClass=macro_new_uniform_class(opfor,B1_green);
 	};
@@ -551,7 +556,7 @@ class CfgVehicles
 	{
 		displayName="B1 Battledroid Red";
 		hiddenSelectionsTextures[] = {
-			macro_b1_textures\Red.paa
+			macro_b1_textures\b1_security_co.paa
 		};
 		uniformClass=macro_new_uniform_class(opfor,B1_red);
 	};
@@ -559,7 +564,7 @@ class CfgVehicles
 	{
 		displayName="B1 Battledroid Yellow";
 		hiddenSelectionsTextures[] = {
-			macro_b1_textures\Yellow.paa
+			macro_b1_textures\b1_commander_co.paa
 		};
 		uniformClass=macro_new_uniform_class(opfor,B1_yellow);
 	};
@@ -567,7 +572,7 @@ class CfgVehicles
 	{
 		displayName="B1 Battledroid Blue";
 		hiddenSelectionsTextures[] = {
-			macro_b1_textures\Blue.paa
+			macro_b1_textures\b1_pilot_co.paa
 		};
 		uniformClass=macro_new_uniform_class(opfor,B1_blue);
 	};
@@ -609,15 +614,15 @@ class CfgVehicles
 	};
 	class macro_new_unit_class(opfor,B1_AT): macro_new_unit_class(opfor,B1_red)
 	{
-		displayName="B1 Battledroid AT";
+		displayName="B1 Battledroid (AT)";
 		weapons[]=
 		{
-			"SWOP_E5",
+			"JLTS_E5",
 			"JLTS_E60R_AT"
 		};
 		respawnWeapons[]=
 		{
-			"SWOP_E5",
+			"JLTS_E5",
 			"JLTS_E60R_AT"
 		};
 		magazines[]=
@@ -652,7 +657,7 @@ class CfgVehicles
 		};
 		backpack="\MRC\JLTS\characters\DroidArmor\DroidBackpackB1.p3d"
 	};
-	class macro_new_unit_class(opfor,B1_marksmen): macro_new_unit_class(opfor,B1_red)
+	class macro_new_unit_class(opfor,B1_marksmen): macro_new_unit_class(opfor,B1_green)
 	{
 		displayName="B1 Battledroid (Marksman)";
 		weapons[]=
@@ -690,9 +695,9 @@ class CfgVehicles
 			"JLTS_E5S_mag"
 		};
 	};
-	class macro_new_unit_class(opfor,B1_team_leader): macro_new_unit_class(opfor,B1)
+	class macro_new_unit_class(opfor,B1_shotgun): macro_new_unit_class(opfor,B1_red)
 	{
-		displayName="B1 Battledroid Team Lead";
+		displayName="B1 Battledroid (Shotgun)";
 		weapons[]=
 		{
 			"swop_CISShotgun"
@@ -759,7 +764,7 @@ class CfgVehicles
 	};
 	class macro_new_unit_class(opfor,B1_Medic): macro_new_unit_class(opfor,B1_green)
 	{
-		displayName="B1 Battledroid Squad Lead";
+		displayName="B1 Battledroid Medic";
 		weapons[]=
 		{
 			"JLTS_RG4D"
@@ -793,6 +798,43 @@ class CfgVehicles
 			"FirstAidKit"
 		};
 		uniformClass=macro_new_uniform_class(opfor, B1_green);
+	};
+	class macro_new_unit_class(opfor,B1_Pilot): macro_new_unit_class(opfor,B1_blue)
+	{
+		displayName="B1 Battledroid (Pilot)";
+		weapons[]=
+		{
+			"JLTS_RG4D"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_RG4D"
+		};
+		magazines[]=
+		{
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"FirstAidKit",
+			"FirstAidKit",
+			"FirstAidKit"
+		};
+		respawnMagazines[]=
+		{
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"FirstAidKit",
+			"FirstAidKit",
+			"FirstAidKit"
+		};
+		uniformClass=macro_new_uniform_class(opfor, B1_blue);
 	};
 
 };
