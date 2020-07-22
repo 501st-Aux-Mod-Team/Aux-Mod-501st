@@ -151,8 +151,7 @@ class CfgWeapons
 	NEW_501_Inf_Helm_JLTS(Drammon,Drammon,Drammon.paa)
 	NEW_501_Inf_Helm_JLTS(Spectre,Spectre,Spectre.paa)
 	NEW_501_Inf_Helm_JLTS(Andromeda,Andromeda,Andromeda.paa)
-	NEW_501_Inf_Helm_JLTS(Oktapius,Oktapius,Oktapius.paa)
-
+    NEW_501_Inf_Helm_JLTS(Phoenix,Phoenix,Phoenix.paa)
 	NEW_501_ARC_Helm_JLTS(Duke,Duke,Duke.paa)
 	NEW_501_ARC_Helm_JLTS(Bronson,Bronson,Bronson.paa)
 	NEW_501_ARC_Helm_JLTS(Rayne,Rayne,Rayne.paa)
