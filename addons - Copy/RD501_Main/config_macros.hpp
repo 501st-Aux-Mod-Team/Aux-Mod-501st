@@ -235,7 +235,7 @@
 //---textures
 	#define macro_unit_skin_textures RD501_Units\textures
 	#define macro_vehicle_textures RD501_Vehicles\textures
-	#define macro_b1_textures JPB_Player\Model\data
+	#define macro_b1_textures MRC\JLTS\characters\DroidArmor\data
 
 
 //---XEH prep---

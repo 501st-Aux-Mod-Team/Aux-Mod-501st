@@ -28,7 +28,7 @@ class CfgGroups
 			class Infantry
 			{
 				name="Base Infantry Groups";
-				class RD501_Group_INF_LPB1_12
+				class RD501_Group_INF_B1_12
 				{
 					name="HMP Filler";
 					side=0;
@@ -38,30 +38,30 @@ class CfgGroups
 					class Unit0
 					{
 						position[]={0,0,0};
-						rank="SERGEANT";
+						rank="CAPTAIN";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_red);
+						vehicle=macro_new_unit_class(opfor,B1_leader);
 					};
 					class Unit1
 					{
 						position[]={.5,-.5,0};
 						rank="SERGEANT";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_red);
+						vehicle=macro_new_unit_class(opfor,B1_shotgun);
 					};
 					class Unit2
 					{
 						position[]={-.5,-.5,0};
-						rank="PRIVATE";
+						rank="SERGEANT";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1);
+						vehicle=macro_new_unit_class(opfor,B1_heavy);
 					};
 					class Unit3
 					{
 						position[]={1,-1,0};
-						rank="PRIVATE";
+						rank="SERGEANT";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1);
+						vehicle=macro_new_unit_class(opfor,B1_AT);
 					};
 					class Unit4
 					{
@@ -120,9 +120,9 @@ class CfgGroups
 						vehicle=macro_new_unit_class(opfor,B1);
 					};
 				};
-				class RD501_Group_INF_LPB1_13
+				class RD501_Group_INF_B1_13
 				{
-					name="Low Poly L.I.T Filler";
+					name="L.I.T Filler";
 					side=0;
 					faction = macro_cis_faction
 					icon="\A3\ui_f\data\map\markers\nato\o_inf.paa";
@@ -130,37 +130,37 @@ class CfgGroups
 					class Unit0
 					{
 						position[]={0,0,0};
-						rank="SERGEANT";
+						rank="CAPTAIN";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_red);
+						vehicle=macro_new_unit_class(opfor,B1_Pilot);
 					};
 					class Unit1
 					{
 						position[]={.5,-.5,0};
-						rank="SERGEANT";
+						rank="CAPTAIN";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_red);
+						vehicle=macro_new_unit_class(opfor,B1_leader);
 					};
 					class Unit2
 					{
 						position[]={-.5,-.5,0};
-						rank="PRIVATE";
+						rank="SERGEANT";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1);
+						vehicle=macro_new_unit_class(opfor,B1_shotgun);
 					};
 					class Unit3
 					{
 						position[]={1,-1,0};
-						rank="PRIVATE";
+						rank="SERGEANT";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1);
+						vehicle=macro_new_unit_class(opfor,B1_heavy);
 					};
 					class Unit4
 					{
 						position[]={-1,-1,0};
-						rank="PRIVATE";
+						rank="SERGEANT";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1);
+						vehicle=macro_new_unit_class(opfor,B1_AT);
 					};
 					class Unit5
 					{
@@ -219,9 +219,9 @@ class CfgGroups
 						vehicle=macro_new_unit_class(opfor,B1);
 					};
 				};
-				class RD501_Group_INF_LPB1_8
+				class RD501_Group_INF_B1_8
 				{
-					name="Low Poly Marid Filler";
+					name="Trojan Filler";
 					side=0;
 					faction = macro_cis_faction
 					icon="\A3\ui_f\data\map\markers\nato\o_inf.paa";
@@ -229,23 +229,23 @@ class CfgGroups
 					class Unit0
 					{
 						position[]={0,0,0};
-						rank="SERGEANT";
+						rank="CAPTAIN";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1);
+						vehicle=macro_new_unit_class(opfor,B1_Pilot);
 					};
 					class Unit1
 					{
 						position[]={.5,-.5,0};
-						rank="SERGEANT";
+						rank="CAPTAIN";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_red);
+						vehicle=macro_new_unit_class(opfor,B1_leader);
 					};
 					class Unit2
 					{
 						position[]={-.5,-.5,0};
-						rank="PRIVATE";
+						rank="SERGEANT";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1);
+						vehicle=macro_new_unit_class(opfor,B1_heavy);
 					};
 					class Unit3
 					{
@@ -283,9 +283,9 @@ class CfgGroups
 						vehicle=macro_new_unit_class(opfor,B1);
 					};
 				};
-				class RD501_Group_INF_LPB1_Squad
+				class RD501_Group_INF_B1_Squad
 				{
-					name="Low Poly Squad";
+					name="B1 Squad";
 					side=0;
 					faction = macro_cis_faction
 					icon="\A3\ui_f\data\map\markers\nato\o_inf.paa";
@@ -295,40 +295,40 @@ class CfgGroups
 						position[]={0,0,0};
 						rank="CAPTAIN";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_team_leader);
+						vehicle=macro_new_unit_class(opfor,B1_leader);
 					};
 					class Unit1
 					{
 						position[]={.5,-.5,0};
 						rank="SERGEANT";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_team_leader);
+						vehicle=macro_new_unit_class(opfor,B1_shotgun);
 					};
 					class Unit2
 					{
 						position[]={-.5,-.5,0};
 						rank="SERGEANT";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1);
+						vehicle=macro_new_unit_class(opfor,B1_AT);
 					};
 					class Unit3
 					{
 						position[]={1,-1,0};
-						rank="PRIVATE";
+						rank="SERGEANT";
 						side=0;
 						vehicle=macro_new_unit_class(opfor,B1_heavy);
 					};
 					class Unit4
 					{
 						position[]={-1,-1,0};
-						rank="PRIVATE";
+						rank="SERGEANT";
 						side=0;
 						vehicle=macro_new_unit_class(opfor,B1_heavy);
 					};
 					class Unit5
 					{
 						position[]={1.5,-1.5,0};
-						rank="PRIVATE";
+						rank="SERGEANT";
 						side=0;
 						vehicle=macro_new_unit_class(opfor,B1_AT);
 					};
@@ -337,7 +337,7 @@ class CfgGroups
 						position[]={-1.5,-1.5,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_AT);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit7
 					{
@@ -368,9 +368,9 @@ class CfgGroups
 						vehicle=macro_new_unit_class(opfor,B1);
 					};
 				};
-				class RD501_Group_INF_LPB1_Team
+				class RD501_Group_INF_B1_Team
 				{
-					name="Low Poly Fireteam";
+					name="B1 Fireteam";
 					side=0;
 					faction = macro_cis_faction
 					icon="\A3\ui_f\data\map\markers\nato\o_inf.paa";
@@ -380,7 +380,7 @@ class CfgGroups
 						position[]={0,0,0};
 						rank="SERGEANT";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_team_leader);
+						vehicle=macro_new_unit_class(opfor,B1_shotgun);
 					};
 					class Unit1
 					{
@@ -411,20 +411,19 @@ class CfgGroups
 						vehicle=macro_new_unit_class(opfor,B1);
 					};
 				};
-				name = "Droid Teams (3-4 droids)";
-				class RD501_Group_INF_HAT
+				class RD501_Group_INF_B1_HAT
 				{
 					name = "Heavy Asault Team";
 					side = 0;
 					faction = macro_cis_faction
-						icon = "\a3\ui_f\data\map\markers\nato\o_inf.paa";
+					icon = "\a3\ui_f\data\map\markers\nato\o_inf.paa";
 					rarityGroup = 1;
 					class Unit0
 					{
 						position[] = { 0,0,0 };
-						rank = "SERGEANT";
+						rank = "CAPTAIN";
 						side = 0;
-						vehicle = macro_new_unit_class(opfor, B1);
+						vehicle = macro_new_unit_class(opfor, B1_heavy);
 					};
 				};
 			};
