@@ -84,6 +84,8 @@ class CfgVehicles
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat(APC)
 		vehicleClass = macro_editor_vehicle_type(APC)
+
+		#include "../Mynock/common_stuff_mynock.hpp"
 		
 		class TransportItems
 		{

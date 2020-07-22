@@ -1,10 +1,10 @@
-#include "../RD501_main/config_macros.hpp"
+#include "..\RD501_main\config_macros.hpp"
 
 
 
 class CfgPatches
 {
-	class macro_patch_name(low_poly_droids_config)
+	class macro_patch_name(droids_config)
 	{
 		requiredAddons[] = {
 			macro_lvl3_req
@@ -27,10 +27,10 @@ class CfgGroups
 			name="RD501 C.I.S Faction";
 			class Infantry
 			{
-				name="Infantry";
+				name="Base Infantry Groups";
 				class RD501_Group_INF_LPB1_12
 				{
-					name="Low Poly HMP Filler";
+					name="HMP Filler";
 					side=0;
 					faction = macro_cis_faction
 					icon="\A3\ui_f\data\map\markers\nato\o_inf.paa";
@@ -40,84 +40,84 @@ class CfgGroups
 						position[]={0,0,0};
 						rank="SERGEANT";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly_red);
+						vehicle=macro_new_unit_class(opfor,B1_red);
 					};
 					class Unit1
 					{
-						position[]={5,-5,0};
+						position[]={.5,-.5,0};
 						rank="SERGEANT";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly_red);
+						vehicle=macro_new_unit_class(opfor,B1_red);
 					};
 					class Unit2
 					{
-						position[]={-5,-5,0};
+						position[]={-.5,-.5,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit3
 					{
-						position[]={10,-10,0};
+						position[]={1,-1,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit4
 					{
-						position[]={-10,-10,0};
+						position[]={-1,-1,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit5
 					{
-						position[]={15,-15,0};
+						position[]={1.5,-1.5,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit6
 					{
-						position[]={-15,-15,0};
+						position[]={-1.5,-1.5,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit7
 					{
-						position[]={20,-20,0};
+						position[]={2,-2,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit8
 					{
-						position[]={-20,-20,0};
+						position[]={-2,-2,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit9
 					{
-						position[]={25,-25,0};
+						position[]={2.5,-2.5,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit10
 					{
-						position[]={-25,-25,0};
+						position[]={-2.5,-2.5,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit11
 					{
-						position[]={30,-30,0};
+						position[]={3,-3,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 				};
 				class RD501_Group_INF_LPB1_13
@@ -132,91 +132,91 @@ class CfgGroups
 						position[]={0,0,0};
 						rank="SERGEANT";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly_red);
+						vehicle=macro_new_unit_class(opfor,B1_red);
 					};
 					class Unit1
 					{
-						position[]={5,-5,0};
+						position[]={.5,-.5,0};
 						rank="SERGEANT";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly_red);
+						vehicle=macro_new_unit_class(opfor,B1_red);
 					};
 					class Unit2
 					{
-						position[]={-5,-5,0};
+						position[]={-.5,-.5,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit3
 					{
-						position[]={10,-10,0};
+						position[]={1,-1,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit4
 					{
-						position[]={-10,-10,0};
+						position[]={-1,-1,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit5
 					{
-						position[]={15,-15,0};
+						position[]={1.5,-1.5,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit6
 					{
-						position[]={-15,-15,0};
+						position[]={-1.5,-1.5,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit7
 					{
-						position[]={20,-20,0};
+						position[]={2,-2,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit8
 					{
-						position[]={-20,-20,0};
+						position[]={-2,-2,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit9
 					{
-						position[]={25,-25,0};
+						position[]={2.5,-2.5,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit10
 					{
-						position[]={-25,-25,0};
+						position[]={-2.5,-2.5,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit11
 					{
-						position[]={30,-30,0};
+						position[]={3,-3,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit12
 					{
-						position[]={-30,-30,0};
+						position[]={-3,-3,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 				};
 				class RD501_Group_INF_LPB1_8
@@ -231,56 +231,56 @@ class CfgGroups
 						position[]={0,0,0};
 						rank="SERGEANT";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly_red);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit1
 					{
-						position[]={5,-5,0};
+						position[]={.5,-.5,0};
 						rank="SERGEANT";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly_red);
+						vehicle=macro_new_unit_class(opfor,B1_red);
 					};
 					class Unit2
 					{
-						position[]={-5,-5,0};
+						position[]={-.5,-.5,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit3
 					{
-						position[]={10,-10,0};
+						position[]={1,-1,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit4
 					{
-						position[]={-10,-10,0};
+						position[]={-1,-1,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit5
 					{
-						position[]={15,-15,0};
+						position[]={1.5,-1.5,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit6
 					{
-						position[]={-15,-15,0};
+						position[]={-1.5,-1.5,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit7
 					{
-						position[]={20,-20,0};
+						position[]={2,-2,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 				};
 				class RD501_Group_INF_LPB1_Squad
@@ -295,77 +295,77 @@ class CfgGroups
 						position[]={0,0,0};
 						rank="CAPTAIN";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly_squad_leader);
+						vehicle=macro_new_unit_class(opfor,B1_team_leader);
 					};
 					class Unit1
 					{
-						position[]={5,-5,0};
+						position[]={.5,-.5,0};
 						rank="SERGEANT";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly_team_leader);
+						vehicle=macro_new_unit_class(opfor,B1_team_leader);
 					};
 					class Unit2
 					{
-						position[]={-5,-5,0};
+						position[]={-.5,-.5,0};
 						rank="SERGEANT";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly_team_leader);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit3
 					{
-						position[]={10,-10,0};
+						position[]={1,-1,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly_heavy);
+						vehicle=macro_new_unit_class(opfor,B1_heavy);
 					};
 					class Unit4
 					{
-						position[]={-10,-10,0};
+						position[]={-1,-1,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly_heavy);
+						vehicle=macro_new_unit_class(opfor,B1_heavy);
 					};
 					class Unit5
 					{
-						position[]={15,-15,0};
+						position[]={1.5,-1.5,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly_maaws);
+						vehicle=macro_new_unit_class(opfor,B1_AT);
 					};
 					class Unit6
 					{
-						position[]={-15,-15,0};
+						position[]={-1.5,-1.5,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly_maaws);
+						vehicle=macro_new_unit_class(opfor,B1_AT);
 					};
 					class Unit7
 					{
-						position[]={20,-20,0};
+						position[]={2,-2,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit8
 					{
-						position[]={-20,-20,0};
+						position[]={-2,-2,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit9
 					{
-						position[]={25,-25,0};
+						position[]={2.5,-2.5,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit10
 					{
-						position[]={-25,-25,0};
+						position[]={-2.5,-2.5,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 				};
 				class RD501_Group_INF_LPB1_Team
@@ -380,35 +380,51 @@ class CfgGroups
 						position[]={0,0,0};
 						rank="SERGEANT";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly_team_leader);
+						vehicle=macro_new_unit_class(opfor,B1_team_leader);
 					};
 					class Unit1
 					{
-						position[]={5,-5,0};
+						position[]={.5,-.5,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly_maaws);
+						vehicle=macro_new_unit_class(opfor,B1_AT);
 					};
 					class Unit2
 					{
-						position[]={-5,-5,0};
+						position[]={-.5,-.5,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly_heavy);
+						vehicle=macro_new_unit_class(opfor,B1_heavy);
 					};
 					class Unit3
 					{
-						position[]={10,-10,0};
+						position[]={1,-1,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit4
 					{
-						position[]={-10,-10,0};
+						position[]={-1,-1,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_low_poly);
+						vehicle=macro_new_unit_class(opfor,B1);
+					};
+				};
+				name = "Droid Teams (3-4 droids)";
+				class RD501_Group_INF_HAT
+				{
+					name = "Heavy Asault Team";
+					side = 0;
+					faction = macro_cis_faction
+						icon = "\a3\ui_f\data\map\markers\nato\o_inf.paa";
+					rarityGroup = 1;
+					class Unit0
+					{
+						position[] = { 0,0,0 };
+						rank = "SERGEANT";
+						side = 0;
+						vehicle = macro_new_unit_class(opfor, B1);
 					};
 				};
 			};

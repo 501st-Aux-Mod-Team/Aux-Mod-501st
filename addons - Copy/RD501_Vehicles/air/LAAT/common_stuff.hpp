@@ -2,6 +2,7 @@
 	class EventHandlers : DefaultEventhandlers 
 	{
 		//init = "_this execVM "RD501_Main\functions\autocrate\autocrate.sqf"; _this execVM "RD501_Main\functions\vehicle_lift\laat_lift_3.sqf";";
+		fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
 		init = "[_this select 0] execVM 'RD501_Main\functions\autocrate\autocrate.sqf';[_this select 0] execVM 'RD501_Main\functions\vehicle_lift\laat_lift_3.sqf';";
 	};
 	
@@ -42,7 +43,6 @@
 			//macro_new_weapon(cannon,laat)
 		};
 		magazines[] = {
-		
 			macro_basic_air_mags,
 			// macro_new_mag(laat_cannon,100),
 			// macro_new_mag(laat_cannon,100),
@@ -59,7 +59,8 @@
 			"SmokeLauncherMag",
 			"SmokeLauncherMag",
 		};
-	
+		smokeLauncherGrenadeCount = 48;
+		smokeLauncherAngle = 360;
 
 	//The sun
 	class Reflectors
@@ -209,8 +210,6 @@
 	};
 
 	#include "sounds.hpp"
-
-	
 
 	//for texture reskins
 		hiddenSelections[]=

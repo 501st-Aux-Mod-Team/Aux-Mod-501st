@@ -4,36 +4,28 @@
 
 class CfgPatches
 {
-	class macro_patch_name(low_poly_B1)
+	class macro_patch_name(B1)
 	{
-		addonRootClass=macro_patch_name(low_poly_droids_config);
+		addonRootClass=macro_patch_name(droids_config);
 		requiredAddons[] = {
-			macro_patch_name(low_poly_droids_config)
+			macro_patch_name(droids_config)
 		};
 
 		requiredVersion = 0.1;
 		units[] = {
-			macro_new_unit_class(opfor,B1_low_poly),
-			macro_new_unit_class(opfor,B1_low_poly_blue),
-			macro_new_unit_class(opfor,B1_low_poly_green),
-			macro_new_unit_class(opfor,B1_low_poly_red),
-			macro_new_unit_class(opfor,B1_low_poly_yellow),
-			macro_new_unit_class(opfor,B1_low_poly_heavy),
-			macro_new_unit_class(opfor,B1_low_poly_maaws),
-			macro_new_unit_class(opfor,B1_low_poly_marksmen),
-			macro_new_unit_class(opfor,B1_low_poly_team_leader),
-			macro_new_unit_class(opfor,B1_low_poly_squad_leader),
-			macro_new_unit_class(opfor,B1_low_poly_headless),
-			macro_new_unit_class(opfor,B1_low_poly_blue_headless)
+			macro_new_unit_class(opfor,B1),
+			macro_new_unit_class(opfor,B1_green),
+			macro_new_unit_class(opfor,B1_red),
+			macro_new_unit_class(opfor,B1_yellow),
+			macro_new_unit_class(opfor,B1_heavy),
+			macro_new_unit_class(opfor,B1_maaws),
+			macro_new_unit_class(opfor,B1_marksmen),
 		};
 		weapons[] = {
-			macro_new_uniform_class(opfor,B1_low_poly_headless),
-			macro_new_uniform_class(opfor,B1_low_poly),
-			macro_new_uniform_class(opfor,B1_low_poly_blue),
-			macro_new_uniform_class(opfor,B1_low_poly_headless_blue),
-			macro_new_uniform_class(opfor,B1_low_poly_red),
-			macro_new_uniform_class(opfor,B1_low_poly_yellow),
-			macro_new_uniform_class(opfor,B1_low_poly_green)
+			macro_new_uniform_class(opfor,B1),
+			macro_new_uniform_class(opfor,B1_red),
+			macro_new_uniform_class(opfor,B1_yellow),
+			macro_new_uniform_class(opfor,B1_green)
 		};
 	};
 };
@@ -48,105 +40,72 @@ class cfgWeapons
 	class UniformItem;
 	class Uniform_Base;
 
-	class macro_new_uniform_class(opfor,B1_low_poly_headless): Uniform_Base
+	class macro_new_uniform_class(opfor,B1): Uniform_Base
 	{
 		scope=2;
-		author="Ruppertle";
-		displayName="B1 Battledroid Headless (low poly)";
+		author="Mr.Clock";
+		displayName="B1 Battledroid";
 		model="\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		class ItemInfo: UniformItem
 		{
 			uniformModel="-";
-			uniformClass=macro_new_unit_class(opfor,B1_low_poly_headless);
+			uniformClass=macro_new_unit_class(opfor,B1);
 			containerClass="Supply500";
 			mass=60;
 		};
 	};
-	class macro_new_uniform_class(opfor,B1_low_poly): Uniform_Base
+	class macro_new_uniform_class(opfor,B1_red): Uniform_Base
 	{
 		scope=2;
-		author="Ruppertle";
-		displayName="B1 Battledroid (low poly)";
+		author="Mr.Clock";
+		displayName="B1 Battledroid Red";
 		model="\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		class ItemInfo: UniformItem
 		{
 			uniformModel="-";
-			uniformClass=macro_new_unit_class(opfor,B1_low_poly);
-			containerClass="Supply500";
-			mass=60;
-		};
-
-		hiddenSelections[] = {"camo1"};
-		hiddenSelectionsTextures[] = {
-			"JPB_Player\Model\data\Green.paa"
-		};
-	};
-	class macro_new_uniform_class(opfor,B1_low_poly_blue): Uniform_Base
-	{
-		scope=2;
-		author="Ruppertle";
-		displayName="B1 Battledroid Blue (low poly)";
-		model="\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
-		class ItemInfo: UniformItem
-		{
-			uniformModel="-";
-			uniformClass=macro_new_unit_class(opfor,B1_low_poly_blue);
+			uniformClass=macro_new_unit_class(opfor,B1_red)
 			containerClass="Supply500";
 			mass=60;
 		};
 	};
-	class macro_new_uniform_class(opfor,B1_low_poly_headless_blue): Uniform_Base
+	class macro_new_uniform_class(opfor,B1_yellow): Uniform_Base
 	{
 		scope=2;
-		author="Ruppertle";
-		displayName="B1 Headless Battledroid Blue (low poly)";
+		author="Mr.Clock";
+		displayName="B1 Battledroid Yellow";
 		model="\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		class ItemInfo: UniformItem
 		{
 			uniformModel="-";
-			uniformClass=macro_new_unit_class(opfor,B1_low_poly_blue_headless)
+			uniformClass=macro_new_unit_class(opfor,B1_yellow);
 			containerClass="Supply500";
 			mass=60;
 		};
 	};
-	class macro_new_uniform_class(opfor,B1_low_poly_red): Uniform_Base
+	class macro_new_uniform_class(opfor,B1_green): Uniform_Base
 	{
 		scope=2;
-		author="Ruppertle";
-		displayName="B1 Battledroid Red (low poly)";
+		author="Mr.Clock";
+		displayName="B1 Battledroid Green";
 		model="\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		class ItemInfo: UniformItem
 		{
 			uniformModel="-";
-			uniformClass=macro_new_unit_class(opfor,B1_low_poly_red)
+			uniformClass=macro_new_unit_class(opfor,B1_green);
 			containerClass="Supply500";
 			mass=60;
 		};
 	};
-	class macro_new_uniform_class(opfor,B1_low_poly_yellow): Uniform_Base
+	class macro_new_uniform_class(opfor,B1_blue): Uniform_Base
 	{
 		scope=2;
-		author="Ruppertle";
-		displayName="B1 Battledroid Yellow (low poly)";
+		author="Mr.Clock";
+		displayName="B1 Battledroid Blue";
 		model="\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		class ItemInfo: UniformItem
 		{
 			uniformModel="-";
-			uniformClass=macro_new_unit_class(opfor,B1_low_poly_yellow);
-			containerClass="Supply500";
-			mass=60;
-		};
-	};
-	class macro_new_uniform_class(opfor,B1_low_poly_green): Uniform_Base
-	{
-		scope=2;
-		author="Ruppertle";
-		displayName="B1 Battledroid Green (low poly)";
-		model="\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
-		class ItemInfo: UniformItem
-		{
-			uniformModel="-";
-			uniformClass=macro_new_unit_class(opfor,B1_low_poly_green);
+			uniformClass=macro_new_unit_class(opfor,B1_blue);
 			containerClass="Supply500";
 			mass=60;
 		};
@@ -182,83 +141,75 @@ class CfgVehicles
 		//threat[]={1,0.1,0.1};
 	};
 	//basic unit
-	class macro_new_unit_class(opfor,B1_low_poly): SoldierEB
+	class macro_new_unit_class(opfor,B1): SoldierEB
 	{
-		scope=2;
-		author="Ruppertle";
-		vehicleClass="MenRecon";
-		model="\JPB_Player\Model\Droid";
-		displayName="B1 Battledroid (low poly)";
-		
+		JLTS_isDroid = 1;
+		JLTS_hasEMPProtection = 0;
+		JLTS_deathSounds = "DeathDroid";
+		author = "MrClock";
+		scope = 2;
+		displayName = "B1 Battle droid";
+		picture = "\MRC\JLTS\characters\DroidArmor\data\ui\b1_uniform_ui_ca.paa";
+		model = "\MRC\JLTS\characters\DroidArmor\DroidUniformB1.p3d";
 
 		faction = macro_cis_faction
-		editorSubcategory = macro_editor_cat(B1_lowpoly)
-		
-		uniformClass=macro_new_uniform_class(opfor,B1_low_poly);
+		editorSubcategory = macro_editor_cat(B1)
 
 		hiddenSelections[] = {"camo1"};
 		hiddenSelectionsTextures[] = {
-			macro_low_poly_b1_textures\Droid.paa	
+			macro_b1_textures\Droid.paa
 		};
+		uniformClass=macro_new_uniform_class(opfor,B1);
 
-		backpack ="3AS_LPB1_PCK_BSC" //"SWOP_B_Droid_backpack";
+		backpack = "\MRC\JLTS\characters\DroidArmor\DroidBackpackB1.p3d";
 
-		Items[]=
-		{
-			"FirstAidKit"
-		};
-		RespawnItems[]=
-		{
-			"FirstAidKit"
-		};
-		//linkeditems[] = {"SWOP_STbron", "ItemGPS", "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio"};
+
+		//linkeditems[] = {"ItemGPS", "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio"};
 		linkeditems[]=
 		{
-			"SWOP_STbron",
 			"ItemGPS",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
-			"ItemRadio"
+			"JLTS_droid_comlink"
 		};
 		respawnlinkeditems[]=
 		{
-			"SWOP_STbron",
 			"ItemGPS",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
-			"ItemRadio"
+			"JLTS_droid_comlink"
 		};
 		weapons[]=
 		{
-			"SWOP_E5"
+			"JLTS_E5"
 		};
 		respawnWeapons[]=
 		{
-			"SWOP_E5"
+			"JLTS_E5"
 		};
 		magazines[]=
 		{
-			"SWOP_E5_Mag",
-			"SWOP_E5_Mag",
-			"SWOP_E5_Mag",
-			"SWOP_E5_Mag",
-			"SWOP_E5_Mag",
-			"SWOP_E5_Mag",
-			"SWOP_termDet_G",
-			"SWOP_termDet_G"
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag"
 		};
 		respawnMagazines[]=
 		{
-			"SWOP_E5_Mag",
-			"SWOP_E5_Mag",
-			"SWOP_E5_Mag",
-			"SWOP_E5_Mag",
-			"SWOP_E5_Mag",
-			"SWOP_E5_Mag",
-			"SWOP_termDet_G",
-			"SWOP_termDet_G"
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag"
 		};
 		cost=600000;
 		genericNames="NATOMen";
@@ -588,58 +539,41 @@ class CfgVehicles
 		{
 		};
 	};
-	class macro_new_unit_class(opfor,B1_low_poly_blue): macro_new_unit_class(opfor,B1_low_poly)
+	class macro_new_unit_class(opfor,B1_green): macro_new_unit_class(opfor,B1)
 	{
-		displayName="B1 Battledroid Blue (low poly)";
+		displayName="B1 Battledroid Green";
 		hiddenSelectionsTextures[] = {
-			macro_low_poly_b1_textures\Blue.paa
+			macro_b1_textures\Green.paa
 		};
-		uniformClass=macro_new_uniform_class(opfor,B1_low_poly_blue);
+		uniformClass=macro_new_uniform_class(opfor,B1_green);
 	};
-	class macro_new_unit_class(opfor,B1_low_poly_green): macro_new_unit_class(opfor,B1_low_poly)
+	class macro_new_unit_class(opfor,B1_red): macro_new_unit_class(opfor,B1)
 	{
-		displayName="B1 Battledroid Green (low poly)";
+		displayName="B1 Battledroid Red";
 		hiddenSelectionsTextures[] = {
-			macro_low_poly_b1_textures\Green.paa
+			macro_b1_textures\Red.paa
 		};
-		uniformClass=macro_new_uniform_class(opfor,B1_low_poly_green);
+		uniformClass=macro_new_uniform_class(opfor,B1_red);
 	};
-	class macro_new_unit_class(opfor,B1_low_poly_red): macro_new_unit_class(opfor,B1_low_poly)
+	class macro_new_unit_class(opfor,B1_yellow): macro_new_unit_class(opfor,B1)
 	{
-		displayName="B1 Battledroid Red (low poly)";
+		displayName="B1 Battledroid Yellow";
 		hiddenSelectionsTextures[] = {
-			macro_low_poly_b1_textures\Red.paa
+			macro_b1_textures\Yellow.paa
 		};
-		uniformClass=macro_new_uniform_class(opfor,B1_low_poly_red);
+		uniformClass=macro_new_uniform_class(opfor,B1_yellow);
 	};
-	class macro_new_unit_class(opfor,B1_low_poly_yellow): macro_new_unit_class(opfor,B1_low_poly)
+	class macro_new_unit_class(opfor,B1_blue): macro_new_unit_class(opfor,B1)
 	{
-		displayName="B1 Battledroid Yellow (low poly)";
+		displayName="B1 Battledroid Blue";
 		hiddenSelectionsTextures[] = {
-			macro_low_poly_b1_textures\Yellow.paa
+			macro_b1_textures\Blue.paa
 		};
-		uniformClass=macro_new_uniform_class(opfor,B1_low_poly_yellow);
-	};
-	class macro_new_unit_class(opfor,B1_low_poly_headless): macro_new_unit_class(opfor,B1_low_poly)
-	{
-		model="\JPB_Player\Model\Droid_Headless";
-		displayName="B1 Battledroid Headless (low poly)";
-		hiddenSelectionsTextures[] = {
-			macro_low_poly_b1_textures\Droid.paa
-		};
-		uniformClass=macro_new_uniform_class(opfor,B1_low_poly_blue);
-	};
-	class macro_new_unit_class(opfor,B1_low_poly_blue_headless): macro_new_unit_class(opfor,B1_low_poly_headless)
-	{
-		displayName="B1 Battledroid Blue Headless (low poly)";
-		hiddenSelectionsTextures[] = {
-			macro_low_poly_b1_textures\Blue.paa
-		};
-		uniformClass=macro_new_uniform_class(opfor,B1_low_poly_headless_blue);
+		uniformClass=macro_new_uniform_class(opfor,B1_blue);
 	};
 
 	//fancy units
-	class macro_new_unit_class(opfor,B1_low_poly_heavy): macro_new_unit_class(opfor,B1_low_poly_blue)
+	class macro_new_unit_class(opfor,B1_heavy): macro_new_unit_class(opfor,B1_red)
 	{
 		displayName="B1 Battledroid (Heavy)";
 		weapons[]=
@@ -673,98 +607,92 @@ class CfgVehicles
 			"SWOP_E5C_Mag"
 		};
 	};
-	class macro_new_unit_class(opfor,B1_low_poly_maaws): macro_new_unit_class(opfor,B1_low_poly_blue)
+	class macro_new_unit_class(opfor,B1_AT): macro_new_unit_class(opfor,B1_red)
 	{
-		displayName="B1 Battledroid (MAWS)";
+		displayName="B1 Battledroid AT";
 		weapons[]=
 		{
 			"SWOP_E5",
-			"launch_MRAWS_sand_F"
+			"JLTS_E60R_AT"
 		};
 		respawnWeapons[]=
 		{
 			"SWOP_E5",
-			"launch_MRAWS_sand_F"
+			"JLTS_E60R_AT"
 		};
 		magazines[]=
 		{
-			"SWOP_E5_Mag",
-			"SWOP_E5_Mag",
-			"SWOP_E5_Mag",
-			"SWOP_E5_Mag",
-			"SWOP_E5_Mag",
-			"SWOP_E5_Mag",
-			"SWOP_E5_Mag",
-			"MRAWS_HE_F",
-			"MRAWS_HE_F",
-			"MRAWS_HEAT_F",
-			"MRAWS_HEAT_F"
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E60R_AT_mag",
+			"JLTS_E60R_AT_mag",
+			"JLTS_E60R_AT_mag",
+			"JLTS_E60R_AT_mag"
 		};
 		respawnMagazines[]=
 		{
-			"SWOP_E5_Mag",
-			"SWOP_E5_Mag",
-			"SWOP_E5_Mag",
-			"SWOP_E5_Mag",
-			"SWOP_E5_Mag",
-			"SWOP_E5_Mag",
-			"SWOP_E5_Mag",
-			"MRAWS_HE_F",
-			"MRAWS_HE_F",
-			"MRAWS_HEAT_F",
-			"MRAWS_HEAT_F"
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E60R_AT_mag",
+			"JLTS_E60R_AT_mag",
+			"JLTS_E60R_AT_mag",
+			"JLTS_E60R_AT_mag"
 		};
-		backpack="3AS_LPB1_PCK_BSC";//"RD501_InvisBag";//macro_new_backpack_class(factionless,invsible)
+		backpack="\MRC\JLTS\characters\DroidArmor\DroidBackpackB1.p3d"
 	};
-	class macro_new_unit_class(opfor,B1_low_poly_marksmen): macro_new_unit_class(opfor,B1_low_poly_blue)
+	class macro_new_unit_class(opfor,B1_marksmen): macro_new_unit_class(opfor,B1_red)
 	{
 		displayName="B1 Battledroid (Marksman)";
 		weapons[]=
 		{
-			"SWOP_X6BlasterRifle"
+			"JLTS_E5S"
 		};
 		respawnWeapons[]=
 		{
-			"SWOP_X6BlasterRifle"
+			"JLTS_E5S"
 		};
 		magazines[]=
 		{
-			"SWOP_X6BlasterRifle_Mag",
-			"SWOP_X6BlasterRifle_Mag",
-			"SWOP_X6BlasterRifle_Mag",
-			"SWOP_X6BlasterRifle_Mag",
-			"SWOP_X6BlasterRifle_Mag",
-			"SWOP_X6BlasterRifle_Mag",
-			"SWOP_X6BlasterRifle_Mag",
-			"SWOP_X6BlasterRifle_Mag",
-			"SWOP_X6BlasterRifle_Mag",
-			"SWOP_X6BlasterRifle_Mag"
+			"JLTS_E5S_mag",
+			"JLTS_E5S_mag",
+			"JLTS_E5S_mag",
+			"JLTS_E5S_mag",
+			"JLTS_E5S_mag",
+			"JLTS_E5S_mag",
+			"JLTS_E5S_mag",
+			"JLTS_E5S_mag",
+			"JLTS_E5S_mag",
+			"JLTS_E5S_mag"
 		};
 		respawnMagazines[]=
 		{
-			"SWOP_X6BlasterRifle_Mag",
-			"SWOP_X6BlasterRifle_Mag",
-			"SWOP_X6BlasterRifle_Mag",
-			"SWOP_X6BlasterRifle_Mag",
-			"SWOP_X6BlasterRifle_Mag",
-			"SWOP_X6BlasterRifle_Mag",
-			"SWOP_X6BlasterRifle_Mag",
-			"SWOP_X6BlasterRifle_Mag",
-			"SWOP_X6BlasterRifle_Mag",
-			"SWOP_X6BlasterRifle_Mag"
+			"JLTS_E5S_mag",
+			"JLTS_E5S_mag",
+			"JLTS_E5S_mag",
+			"JLTS_E5S_mag",
+			"JLTS_E5S_mag",
+			"JLTS_E5S_mag",
+			"JLTS_E5S_mag",
+			"JLTS_E5S_mag",
+			"JLTS_E5S_mag",
+			"JLTS_E5S_mag"
 		};
 	};
-	class macro_new_unit_class(opfor,B1_low_poly_team_leader): macro_new_unit_class(opfor,B1_low_poly)
+	class macro_new_unit_class(opfor,B1_team_leader): macro_new_unit_class(opfor,B1)
 	{
 		displayName="B1 Battledroid Team Lead";
-		Items[]=
-		{
-			"FirstAidKit"
-		};
-		RespawnItems[]=
-		{
-			"FirstAidKit"
-		};
 		weapons[]=
 		{
 			"swop_CISShotgun"
@@ -794,48 +722,77 @@ class CfgVehicles
 			"swop_termDetDT_G"
 		};
 	};
-	class macro_new_unit_class(opfor,B1_low_poly_squad_leader): macro_new_unit_class(opfor,B1_low_poly_green)
+	class macro_new_unit_class(opfor,B1_leader): macro_new_unit_class(opfor,B1_yellow)
 	{
 		displayName="B1 Battledroid Squad Lead";
-		Items[]=
-		{
-			"FirstAidKit"
-		};
-		RespawnItems[]=
-		{
-			"FirstAidKit"
-		};
 		weapons[]=
 		{
-			"SWOP_CR2BlasterRifle"
+			"JLTS_RG4D"
 		};
 		respawnWeapons[]=
 		{
-			"SWOP_CR2BlasterRifle"
+			"JLTS_RG4D"
 		};
 		magazines[]=
 		{
-			"SWOP_CR2_Blaster_Mag",
-			"SWOP_CR2_Blaster_Mag",
-			"SWOP_CR2_Blaster_Mag",
-			"SWOP_CR2_Blaster_Mag",
-			"SWOP_CR2_Blaster_Mag",
-			"SWOP_CR2_Blaster_Mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
 			"SWOP_BCCKtermimploder_G",
 			"SWOP_BCCKtermimploder_G"
 		};
 		respawnMagazines[]=
 		{
-			"SWOP_CR2_Blaster_Mag",
-			"SWOP_CR2_Blaster_Mag",
-			"SWOP_CR2_Blaster_Mag",
-			"SWOP_CR2_Blaster_Mag",
-			"SWOP_CR2_Blaster_Mag",
-			"SWOP_CR2_Blaster_Mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
 			"SWOP_BCCKtermimploder_G",
 			"SWOP_BCCKtermimploder_G"
 		};
-		uniformClass=macro_new_uniform_class(opfor,B1_low_poly_green);
+		uniformClass=macro_new_uniform_class(opfor, B1_yellow);
 	};
-	
+	class macro_new_unit_class(opfor,B1_Medic): macro_new_unit_class(opfor,B1_green)
+	{
+		displayName="B1 Battledroid Squad Lead";
+		weapons[]=
+		{
+			"JLTS_RG4D"
+		};
+		respawnWeapons[]=
+		{
+			"JLTS_RG4D"
+		};
+		magazines[]=
+		{
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"FirstAidKit",
+			"FirstAidKit",
+			"FirstAidKit"
+		};
+		respawnMagazines[]=
+		{
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"JLTS_E5_mag",
+			"FirstAidKit",
+			"FirstAidKit",
+			"FirstAidKit"
+		};
+		uniformClass=macro_new_uniform_class(opfor, B1_green);
+	};
+
 };
