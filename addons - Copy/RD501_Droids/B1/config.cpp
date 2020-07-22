@@ -4,11 +4,11 @@
 
 class CfgPatches
 {
-	class macro_patch_name(low_poly_B1)
+	class macro_patch_name(B1)
 	{
-		addonRootClass=macro_patch_name(low_poly_droids_config);
+		addonRootClass=macro_patch_name(droids_config);
 		requiredAddons[] = {
-			macro_patch_name(low_poly_droids_config)
+			macro_patch_name(droids_config)
 		};
 
 		requiredVersion = 0.1;
