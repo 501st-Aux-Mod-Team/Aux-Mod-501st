@@ -957,7 +957,108 @@ class CfgVehicles
 			}
 		};
 	};
-	
+		class RD501_JLTS_Clone_jumppack_mc_noLR : JLTS_Clone_jumppack_mc {
+		scope = 2;
+		displayname = "[501st] AB Jumppack 01";
+		maximumLoad = 700;
+		RD501_jumppack_is_jumppack = 1;
+		RD501_jumppack_spam_delay = 1;
+		RD501_jumppack_energy_capacity = 100;
+		RD501_jumppack_recharge = 4;
+		RD501_jumppack_jump_effect_script = "RD501_jumppack_fnc_effect_jt_21";
+		RD501_jumppack_effect_points[] =
+		{
+
+			{
+				"spine3",
+					{0, -0.30000001, -0.1}
+			}
+		};
+		RD501_jumppack_sound_ignite[] =
+		{
+			"RD501_Jumppack\sounds\cdv21Start.ogg"
+		};
+		RD501_jumppack_sound_land[] =
+		{
+			"RD501_Jumppack\sounds\cdv21End.ogg"
+		};
+		RD501_jumppack_sound_idle[] =
+		{
+			"RD501_Jumppack\sounds\cdv21Idle.ogg"
+		};
+		RD501_jumppack_skin_group[] =
+		{
+			"default_texture_group"
+		};
+		RD501_jumppack_jump_types[] =
+		{
+
+			{
+				"Forward Jump",
+					{12, 20, 50, 0, 0, 0}
+			},
+
+			{
+				"Short Jump",
+					{12, 5, 30, 0, 1, 0}
+			}
+		};
+	};
+	class RD501_JLTS_Clone_jumppack_mc_2_noLR: RD501_JLTS_Clone_jumppack_mc_noLR
+	{
+		displayname = "[501st] AB Jumppack 02 no LR";
+		hiddenSelectionsTextures[] = {"RD501_Jumppack\textures\acklay_skin_set\mc_blue.paa"};
+	};
+	class RD501_JLTS_Clone_jumppack_hq_1_noLR: RD501_JLTS_Clone_jumppack_mc_noLR
+	{
+		displayname = "[501st] AB Jumppack (HQ 1) no LR";
+		hiddenSelectionsTextures[] = {"RD501_Jumppack\textures\acklay_skin_set\hq_1.paa"};
+	};
+	class RD501_JLTS_Clone_jumppack_mc_hq_2_noLR: RD501_JLTS_Clone_jumppack_mc_noLR
+	{
+		displayname = "[501st] AB Jumppack (HQ 2) no LR";
+		hiddenSelectionsTextures[] = {"RD501_Jumppack\textures\acklay_skin_set\hq_2.paa"};
+	};
+	class RD501_JLTS_Clone_jumppack_mc_6_noLR : RD501_JLTS_Clone_jumppack_mc_noLR
+	{
+		displayname = "[501st] AB Jumppack (HQ 6) no LR";
+		hiddenSelectionsTextures[] = {"RD501_Jumppack\textures\acklay_skin_set\hq_6.paa"};
+	};
+	class RD501_JLTS_Clone_jumppack_mc_1_1_noLR : RD501_JLTS_Clone_jumppack_mc_noLR
+	{
+		displayname = "[501st] AB Jumppack (1-1) no LR";
+		hiddenSelectionsTextures[] = {"RD501_Jumppack\textures\acklay_skin_set\1_1.paa"};
+	};
+	class RD501_JLTS_Clone_jumppack_mc_1_2_noLR : RD501_JLTS_Clone_jumppack_mc_noLR
+	{
+		displayname = "[501st] AB Jumppack (1-2) no LR";
+		hiddenSelectionsTextures[] = {"RD501_Jumppack\textures\acklay_skin_set\1_2.paa"};
+	};
+	class RD501_JLTS_Clone_jumppack_mc_1_3_noLR : RD501_JLTS_Clone_jumppack_mc_noLR
+	{
+		displayname = "[501st] AB Jumppack (1-3) no LR";
+		hiddenSelectionsTextures[] = {"RD501_Jumppack\textures\acklay_skin_set\1_3.paa"};
+	};
+	class RD501_JLTS_Clone_jumppack_mc_2_1_noLR : RD501_JLTS_Clone_jumppack_mc_noLR
+	{
+		displayname = "[501st] AB Jumppack (2-1) no LR";
+		hiddenSelectionsTextures[] = {"RD501_Jumppack\textures\acklay_skin_set\2_1.paa"};
+	};
+	class RD501_JLTS_Clone_jumppack_mc_2_2_noLR : RD501_JLTS_Clone_jumppack_mc_noLR
+	{
+		displayname = "[501st] AB Jumppack (2-2) no LR";
+		hiddenSelectionsTextures[] = {"RD501_Jumppack\textures\acklay_skin_set\2_2.paa"};
+	};
+	class RD501_JLTS_Clone_jumppack_mc_2_3_noLR : RD501_JLTS_Clone_jumppack_mc_noLR
+	{
+		displayname = "[501st] AB Jumppack (2-3) no LR";
+		hiddenSelectionsTextures[] = {"RD501_Jumppack\textures\acklay_skin_set\2_3.paa"};
+	};		
+	class RD501_JLTS_Clone_jumppack_mc_avi_noLR : RD501_JLTS_Clone_jumppack_mc_noLR
+	{
+		displayname = "[501st] AVI Jumppack no LR";
+		hiddenSelectionsTextures[] = {"RD501_Jumppack\textures\razor.paa"};
+	};
 	class RD501_JLTS_Clone_jumppack: JLTS_Clone_jumppack
 	{
 		scope=2;
@@ -1010,161 +1111,57 @@ class CfgVehicles
 			}
 		};
 	};
-	class RD501_JLTS_Clone_jumppack_mc_2_noLR: RD501_JLTS_Clone_jumppack_mc
-	{
-		displayname = "[501st] AB Jumppack 02 no LR";
-		hiddenSelectionsTextures[] = {"RD501_Jumppack\textures\acklay_skin_set\mc_blue.paa"};
-	};
-	class RD501_JLTS_Clone_jumppack_hq_1_noLR: RD501_JLTS_Clone_jumppack_mc
-	{
-		displayname = "[501st] AB Jumppack (HQ 1) no LR";
-		hiddenSelectionsTextures[] = {"RD501_Jumppack\textures\acklay_skin_set\hq_1.paa"};
-	};
-	class RD501_JLTS_Clone_jumppack_mc_hq_2: RD501_JLTS_Clone_jumppack_mc
-	{
-		displayname = "[501st] AB Jumppack (HQ 2) no LR";
-		hiddenSelectionsTextures[] = {"RD501_Jumppack\textures\acklay_skin_set\hq_2.paa"};
-	};
-	class RD501_JLTS_Clone_jumppack_mc_6_noLR : RD501_JLTS_Clone_jumppack_mc
-	{
-		displayname = "[501st] AB Jumppack (HQ 6) no LR";
-		hiddenSelectionsTextures[] = {"RD501_Jumppack\textures\acklay_skin_set\hq_6.paa"};
-	};
-	class RD501_JLTS_Clone_jumppack_mc_1_1_noLR : RD501_JLTS_Clone_jumppack_mc
-	{
-		displayname = "[501st] AB Jumppack (1-1) no LR";
-		hiddenSelectionsTextures[] = {"RD501_Jumppack\textures\acklay_skin_set\1_1.paa"};
-	};
-	class RD501_JLTS_Clone_jumppack_mc_1_2_noLR : RD501_JLTS_Clone_jumppack_mc
-	{
-		displayname = "[501st] AB Jumppack (1-2) no LR";
-		hiddenSelectionsTextures[] = {"RD501_Jumppack\textures\acklay_skin_set\1_2.paa"};
-	};
-	class RD501_JLTS_Clone_jumppack_mc_1_3_noLR : RD501_JLTS_Clone_jumppack_mc
-	{
-		displayname = "[501st] AB Jumppack (1-3) no LR";
-		hiddenSelectionsTextures[] = {"RD501_Jumppack\textures\acklay_skin_set\1_3.paa"};
-	};
-	class RD501_JLTS_Clone_jumppack_mc_2_1_noLR : RD501_JLTS_Clone_jumppack_mc
-	{
-		displayname = "[501st] AB Jumppack (2-1) no LR";
-		hiddenSelectionsTextures[] = {"RD501_Jumppack\textures\acklay_skin_set\2_1.paa"};
-	};
-	class RD501_JLTS_Clone_jumppack_mc_2_2_noLR : RD501_JLTS_Clone_jumppack_mc
-	{
-		displayname = "[501st] AB Jumppack (2-2) no LR";
-		hiddenSelectionsTextures[] = {"RD501_Jumppack\textures\acklay_skin_set\2_2.paa"};
-	};
-	class RD501_JLTS_Clone_jumppack_mc_2_3_noLR : RD501_JLTS_Clone_jumppack_mc
-	{
-		displayname = "[501st] AB Jumppack (2-3) no LR";
-		hiddenSelectionsTextures[] = {"RD501_Jumppack\textures\acklay_skin_set\2_3.paa"};
-	};		
-	class RD501_JLTS_Clone_jumppack_mc_avi_noLR : RD501_JLTS_Clone_jumppack_mc
-	{
-		displayname = "[501st] AVI Jumppack no LR";
-		hiddenSelectionsTextures[] = {"RD501_Jumppack\textures\razor.paa"};
-	};
-
-	class RD501_JLTS_Clone_jumppack_mc_noLR : JLTS_Clone_jumppack {
-		scope = 2;
-		displayname = "[501st] AB Jumppack 01";
-		maximumLoad = 700;
-		RD501_jumppack_is_jumppack = 1;
-		RD501_jumppack_spam_delay = 1;
-		RD501_jumppack_energy_capacity = 100;
-		RD501_jumppack_recharge = 4;
-		RD501_jumppack_jump_effect_script = "RD501_jumppack_fnc_effect_jt_21";
-		RD501_jumppack_effect_points[] =
-		{
-
-			{
-				"spine3",
-					{0, -0.30000001, -0.1}
-			}
-		};
-		RD501_jumppack_sound_ignite[] =
-		{
-			"RD501_Jumppack\sounds\cdv21Start.ogg"
-		};
-		RD501_jumppack_sound_land[] =
-		{
-			"RD501_Jumppack\sounds\cdv21End.ogg"
-		};
-		RD501_jumppack_sound_idle[] =
-		{
-			"RD501_Jumppack\sounds\cdv21Idle.ogg"
-		};
-		RD501_jumppack_skin_group[] =
-		{
-			"default_texture_group"
-		};
-		RD501_jumppack_jump_types[] =
-		{
-
-			{
-				"Forward Jump",
-					{12, 20, 50, 0, 0, 0}
-			},
-
-			{
-				"Short Jump",
-					{12, 5, 30, 0, 1, 0}
-			}
-		};
-	};
-
-	class RD501_JLTS_Clone_jumppack_mc_2_noLR : RD501_JLTS_Clone_jumppack_mc_noLR {
+	class RD501_JLTS_Clone_jumppack_mc_2 : RD501_JLTS_Clone_jumppack_mc {
 		displayname = "[501st] AB Jumppack 02";
 		hiddenSelectionsTextures[] = { "RD501_Jumppack\textures\acklay_skin_set\mc_blue.paa" };
 	};
 
-	class RD501_JLTS_Clone_jumppack_hq_1 : RD501_JLTS_Clone_jumppack_mc_noLR {
+	class RD501_JLTS_Clone_jumppack_mc_hq_1 : RD501_JLTS_Clone_jumppack_mc {
 		displayname = "[501st] AB Jumppack (HQ 1)";
 		hiddenSelectionsTextures[] = { "RD501_Jumppack\textures\acklay_skin_set\hq_1.paa" };
 	};
 
-	class RD501_JLTS_Clone_jumppack_mc_hq_2 : RD501_JLTS_Clone_jumppack_mc_noLR {
+	class RD501_JLTS_Clone_jumppack_mc_hq_2 : RD501_JLTS_Clone_jumppack_mc {
 		displayname = "[501st] AB Jumppack (HQ 2)";
 		hiddenSelectionsTextures[] = { "RD501_Jumppack\textures\acklay_skin_set\hq_2.paa" };
 	};
 
-	class RD501_JLTS_Clone_jumppack_mc_6 : RD501_JLTS_Clone_jumppack_mc_noLR {
+	class RD501_JLTS_Clone_jumppack_mc_6 : RD501_JLTS_Clone_jumppack_mc {
 		displayname = "[501st] AB Jumppack (HQ 6)";
 		hiddenSelectionsTextures[] = { "RD501_Jumppack\textures\acklay_skin_set\hq_6.paa" };
 	};
 
-	class RD501_JLTS_Clone_jumppack_mc_1_1 : RD501_JLTS_Clone_jumppack_mc_noLR {
+	class RD501_JLTS_Clone_jumppack_mc_1_1 : RD501_JLTS_Clone_jumppack_mc {
 		displayname = "[501st] AB Jumppack (1-1)";
 		hiddenSelectionsTextures[] = { "RD501_Jumppack\textures\acklay_skin_set\1_1.paa" };
 	};
 
-	class RD501_JLTS_Clone_jumppack_mc_1_2 : RD501_JLTS_Clone_jumppack_mc_noLR {
+	class RD501_JLTS_Clone_jumppack_mc_1_2 : RD501_JLTS_Clone_jumppack_mc {
 		displayname = "[501st] AB Jumppack (1-2)";
 		hiddenSelectionsTextures[] = { "RD501_Jumppack\textures\acklay_skin_set\1_2.paa" };
 	};
 
-	class RD501_JLTS_Clone_jumppack_mc_1_3 : RD501_JLTS_Clone_jumppack_mc_noLR {
+	class RD501_JLTS_Clone_jumppack_mc_1_3 : RD501_JLTS_Clone_jumppack_mc {
 		displayname = "[501st] AB Jumppack (1-3)";
 		hiddenSelectionsTextures[] = { "RD501_Jumppack\textures\acklay_skin_set\1_3.paa" };
 	};
 
-	class RD501_JLTS_Clone_jumppack_mc_2_1 : RD501_JLTS_Clone_jumppack_mc_noLR {
+	class RD501_JLTS_Clone_jumppack_mc_2_1 : RD501_JLTS_Clone_jumppack_mc {
 		displayname = "[501st] AB Jumppack (2-1)";
 		hiddenSelectionsTextures[] = { "RD501_Jumppack\textures\acklay_skin_set\2_1.paa" };
 	};
 
-	class RD501_JLTS_Clone_jumppack_mc_2_2 : RD501_JLTS_Clone_jumppack_mc_noLR {
+	class RD501_JLTS_Clone_jumppack_mc_2_2 : RD501_JLTS_Clone_jumppack_mc {
 		displayname = "[501st] AB Jumppack (2-2)";
 		hiddenSelectionsTextures[] = { "RD501_Jumppack\textures\acklay_skin_set\2_2.paa" };
 	};
 
-	class RD501_JLTS_Clone_jumppack_mc_2_3 : RD501_JLTS_Clone_jumppack_mc_noLR {
+	class RD501_JLTS_Clone_jumppack_mc_2_3 : RD501_JLTS_Clone_jumppack_mc {
 		displayname = "[501st] AB Jumppack (2-3)";
 		hiddenSelectionsTextures[] = { "RD501_Jumppack\textures\acklay_skin_set\2_3.paa" };
 	};
 
-	class RD501_JLTS_Clone_jumppack_mc_avi : RD501_JLTS_Clone_jumppack_mc_noLR {
+	class RD501_JLTS_Clone_jumppack_mc_avi : RD501_JLTS_Clone_jumppack_mc {
 		displayname = "[501st] AVI Jumppack";
 		hiddenSelectionsTextures[] = { "RD501_Jumppack\textures\razor.paa" };
 	};
