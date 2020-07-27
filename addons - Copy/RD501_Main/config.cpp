@@ -397,7 +397,7 @@ class CfgEditorSubcategories
 	};
 	class macro_editor_cat(CIS_SpecOps)
 	{
-		displayName = "Speciaw fOwOces";
+		displayName = "Special Forces";
 	};
 	class macro_editor_cat(posters)
 	{
