@@ -100,3 +100,32 @@ class Components: Components
 		};
 	};
 };
+class Turrets: Turrets
+{
+	class LaserPilot: LaserPilot
+	{
+		weapons[]=
+		{
+			//macro_basic_air_weapons,
+			//macro_new_weapon(generic,republic_aircraft_cannon)
+		};
+		magazines[]=
+		{
+			//macro_basic_air_mags,
+			//macro_new_mag(generic_aircraft_cannon_green,1000)
+		};
+	};
+	class Reargun: Reargun
+	{
+		weapons[]=
+		{
+			macro_basic_air_weapons,
+			macro_new_weapon(generic,republic_aircraft_cannon)
+		};
+		magazines[]=
+		{
+			macro_basic_air_mags,
+			macro_new_mag(generic_aircraft_cannon_green,1000)
+		};
+	};
+};
