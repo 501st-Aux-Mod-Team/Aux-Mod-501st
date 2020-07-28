@@ -47,10 +47,10 @@ class DefaultEventhandlers;
 class CfgVehicles
 {
 	#include "inheritance.hpp"
-	class macro_new_vehicle(T1000,Mynock):O_MBT_02_Cannon_F
+	class macro_new_vehicle(T1000,Republic):O_MBT_02_Cannon_F
 	{
 		scope=2;
-		scopeCurator=2;
+		scopeCurator = 2;
 		forceInGarage = 1;
 		side=1;
 		displayName="Republic T1000 MBT (Mynock)"
@@ -95,7 +95,7 @@ class CfgVehicles
 		};
 	};
 
-	class macro_new_vehicle(Claymore,Mynock):B_MBT_01_TUSK_F
+	class macro_new_vehicle(Claymore,Republic):B_MBT_01_TUSK_F
 	{	
 		scope=2;
 		side=1;
@@ -142,7 +142,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class macro_new_vehicle(Warhammer,Mynock):I_MBT_03_cannon_F
+	class macro_new_vehicle(Warhammer,Republic):I_MBT_03_cannon_F
 	{	
 		scope=2;
 		side=1;
@@ -220,10 +220,9 @@ class CfgVehicles
 		class TransportItems;
 		class TransportWeapons;
 		class TransportMagazines;
-
-		#include "common_stuff_mynock.hpp"
 		class EventHandlers: DefaultEventhandlers
 		{
+			fired = "_this call (uinamespace getviariable 'BIS_fnc_effectFired');";
 			init = "[_this select 0] execVM 'RD501_Vehicles\_init_functions\wheel_dmg.sqf';";
 		};
 
@@ -258,7 +257,7 @@ class CfgVehicles
 			"RD501_Vehicles\textures\glaive\glaive_ext3_republic_co.paa"
 		};
 	};
-	class macro_new_vehicle(Longbow,Mynock):O_APC_Tracked_02_AA_F
+	class macro_new_vehicle(Longbow,Republic):O_APC_Tracked_02_AA_F
 	{
 		scope=2;
 		side=1;
