@@ -71,7 +71,8 @@ class CfgWeapons
 	NEW_501_Pilot_HELM(orange,Orange,pilots\orange.paa)
 	NEW_501_Pilot_HELM(nocturnal,Warbird,pilots\Nocturnal.paa)
 	NEW_501_Pilot_HELM(aspect,Aspect,pilots\Aspect.paa)
-	NEW_501_Pilot_HELM(gothic,Gothic,pilots\Gothic.paa)
+	NEW_501_Pilot_HELM(Galaxy,Galaxy,pilots\Galaxy.paa)
+	NEW_501_Pilot_HELM(Halligan,Halligan,pilots\Halligan.paa)
 	NEW_501_Pilot_HELM(Floff,Floff,pilots\Floff.paa)
 	NEW_501_Pilot_HELM(Gothic,Gothic,pilots\Gothic.paa)
 	NEW_501_Pilot_HELM(Shnuffles,Shnuffles,pilots\Shnuffles.paa)
@@ -205,10 +206,10 @@ class CfgWeapons
 	NEW_WARDEN_HELM(WardenSENIOR,Warden_Senior,warden\WardenSENIOR.paa)
 	NEW_WARDEN_HELM(WardenCHIEF,Warden_Chief,warden\WardenCHIEF.paa)
 	NEW_WARDEN_HELM(WardenMASTERCHIEF,Warden_MC,warden\WardenMASTERCHIEF.paa)
-	NEW_WARDEN_HELM(Flog, Flog, warden\Flog.paa)
-	NEW_WARDEN_HELM(Rive, Rive, warden\Rive.paa)
-	NEW_WARDEN_HELM(Thunder, Thunder, warden\Thunder.paa)
-	NEW_WARDEN_HELM(Wirtimus, Wirtimus, warden\Wirtimus.paa)
+	NEW_WARDEN_HELM(Flog,Flog,warden\Flog.paa)
+	NEW_WARDEN_HELM(Rive,Rive,warden\Rive.paa)
+	NEW_WARDEN_HELM(Thunder,Thunder,warden\Thunder.paa)
+	NEW_WARDEN_HELM(Wirtimus,Wirtimus,warden\Wirtimus.paa)
 
 
 
