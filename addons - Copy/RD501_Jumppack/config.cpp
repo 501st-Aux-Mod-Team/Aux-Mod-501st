@@ -222,7 +222,8 @@ class CfgVehicles
 		displayName = "[JP] CDV-21 '101st'";
 		hiddenSelectionsTextures[] = {"RD501_Jumppack\textures\101st.paa"};
 
-	};	
+	};
+	
 		class RD501_SWOP_ImpSkyBackpack: SWOP_ImpSkyBackpack
 	{
 		scope=2;
@@ -1014,7 +1015,7 @@ class CfgVehicles
 		displayname = "[501st] AVI Jumppack no LR";
 		hiddenSelectionsTextures[] = {"RD501_Jumppack\textures\razor.paa"};
 	};
-	class RD501_JLTS_Clone_jumppack: JLTS_Clone_jumppack
+	class RD501_JLTS_Clone_jumppack_mc: JLTS_Clone_jumppack
 	{
 		scope=2;
 		displayname = "[501st] Jumppack (JLTS)";
