@@ -223,50 +223,6 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"RD501_Jumppack\textures\101st.paa"};
 
 	};
-
-	class macro_jumppackClass(neutral,ack_1_1):macro_jumppackClass(neutral,cdv_21)
-	{
-		displayName = "[JP] CDV-21 Acklay 1-1";
-		hiddenSelectionsTextures[] = {"RD501_Jumppack\textures\acklay_skin_set\ack_1_1.paa"};
-
-	};
-
-	class macro_jumppackClass(neutral,ack_1_2):macro_jumppackClass(neutral,cdv_21)
-	{
-		displayName = "[JP] CDV-21 Acklay 1-2";
-		hiddenSelectionsTextures[] = {"RD501_Jumppack\textures\acklay_skin_set\ack_1_2.paa"};
-
-	};
-
-	class macro_jumppackClass(neutral,ack_1_3):macro_jumppackClass(neutral,cdv_21)
-	{
-		displayName = "[JP] CDV-21 Acklay 1-3";
-		hiddenSelectionsTextures[] = {"RD501_Jumppack\textures\acklay_skin_set\ack_1_3.paa"};
-
-	};
-
-	class macro_jumppackClass(neutral,ack_1_4):macro_jumppackClass(neutral,cdv_21)
-	{
-		displayName = "[JP] CDV-21 Acklay 1-4";
-		hiddenSelectionsTextures[] = {"RD501_Jumppack\textures\acklay_skin_set\ack_1_4.paa"};
-
-	};
-
-	class macro_jumppackClass(neutral,ack_hq):macro_jumppackClass(neutral,cdv_21)
-	{
-		displayName = "[JP] CDV-21 Acklay HQ";
-		hiddenSelectionsTextures[] = {"RD501_Jumppack\textures\acklay_skin_set\ack_hq.paa"};
-
-	};
-
-
-	class macro_jumppackClass(neutral,geon):macro_jumppackClass(neutral,cdv_21)
-	{
-		displayName = "[JP] Geonosis";
-		macro_effectScript = macro_grp_fnc_name(jumppack,no_effect);
-		hiddenSelectionsTextures[] = {""};
-
-	};
 	
 		class RD501_SWOP_ImpSkyBackpack: SWOP_ImpSkyBackpack
 	{
@@ -1059,7 +1015,7 @@ class CfgVehicles
 		displayname = "[501st] AVI Jumppack no LR";
 		hiddenSelectionsTextures[] = {"RD501_Jumppack\textures\razor.paa"};
 	};
-	class RD501_JLTS_Clone_jumppack: JLTS_Clone_jumppack
+	class RD501_JLTS_Clone_jumppack_mc: JLTS_Clone_jumppack
 	{
 		scope=2;
 		displayname = "[501st] Jumppack (JLTS)";
