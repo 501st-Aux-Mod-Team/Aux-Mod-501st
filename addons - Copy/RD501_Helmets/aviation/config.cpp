@@ -186,6 +186,7 @@ class CfgWeapons
 	{
 		author="RD501"
 		DisplayName="[501st] WRDN HELM (Base)";
+		picture="RD501_Helmets\_textures\aviation\warden_ico.paa"
 		hiddenSelections[]=
 		{
 			"Camo"
