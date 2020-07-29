@@ -220,9 +220,10 @@ class CfgVehicles
 		class TransportItems;
 		class TransportWeapons;
 		class TransportMagazines;
-		class EventHandlers: DefaultEventhandlers
+
+		#include "common_stuff_mynock.hpp"
+		class EventHandlers: EventHandlers
 		{
-			fired = "_this call (uinamespace getviariable 'BIS_fnc_effectFired');";
 			init = "[_this select 0] execVM 'RD501_Vehicles\_init_functions\wheel_dmg.sqf';";
 		};
 
