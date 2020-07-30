@@ -52,7 +52,7 @@
 		muzzleImpulseFactor = 0;
 		maxLeadSpeed = 600;
 	};
-		class macro_new_mag(mynock_mbt_TD,12): macro_new_mag(aat_mbt,10)
+		class macro_new_mag(mynock_mbt_td,12): macro_new_mag(aat_mbt,10)
 	{
 		displayName = "Tankbuster Shell";
 		displayNameShort = "Tankbuster Shell";
