@@ -17,7 +17,7 @@ class macro_new_unit_class(opfor,B1_forest_v1_droid_AA) : SWOP_CIS_camo_droid_AA
    
 
     backpack = macro_new_backpack_class(opfor,B1_AA_Forest_Bag)
-    displayName = "B1 battledroid (Forest v1)(AA)";
+    displayName = "[deprecated] B1 battledroid (Forest v1)(AA)";
     identityTypes[] = {"B1Droids"};
 
     uniformClass = macro_new_uniform_class(opfor,B1_AA_Forest_v1);
@@ -42,7 +42,7 @@ class macro_new_unit_class(opfor,B1_geonosis_droid_AA): macro_new_unit_class(opf
 {
     scope = 2;
     backpack = macro_new_backpack_class(opfor,B1_AA_Geon_Bag)
-	displayName = "B1 battledroid Geo (AA)";
+	displayName = "[deprecated] B1 battledroid Geo (AA)";
     uniformClass = macro_new_uniform_class(opfor,B1_AA_Geon);
 
 
@@ -53,7 +53,7 @@ class macro_new_unit_class(opfor,B1_droid_AA): macro_new_unit_class(opfor,B1_for
 {
     scope = 2;
     backpack = macro_new_backpack_class(opfor,B1_AA_Bag)
-	displayName = "B1 battledroid (AA)";
+	displayName = "[deprecated] B1 battledroid (AA)";
     uniformClass = macro_new_uniform_class(opfor,B1_AA);
 
 

@@ -208,7 +208,7 @@ class CfgVehicles
 		author = "RD501";
 		
 		backpack = macro_new_backpack_class(opfor,Spec_Op_Droid_Bag);
-		displayName = "B1 battledroid (Spec Ops)";
+		displayName = "[deprecated] B1 battledroid (Spec Ops)";
 		identityTypes[] = {"B1Droids"};
 		model = "\A3\characters_F\BLUFOR\b_soldier_01.p3d";
 		uniformClass = macro_new_uniform_class(opfor,B1_Spec_Op)//"RD501_B1_Specops_F_standart";
@@ -227,7 +227,7 @@ class CfgVehicles
 		author = "RD501";
 		vehicleClass = "Men";
 		
-		displayName = "B1-S Heavy battledroid";
+		displayName = "[deprecated] B1-S Heavy battledroid";
 
 		faction = macro_cis_faction
 		editorSubcategory = macro_editor_cat(B1)

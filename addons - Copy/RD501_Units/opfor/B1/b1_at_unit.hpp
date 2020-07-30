@@ -10,7 +10,7 @@ class macro_new_unit_class(opfor,B1_camo_droid_AT): SWOP_CIS_camo_droid_AT
 {
     scope = 2;
     backpack = macro_new_backpack_class(opfor,B1_AT_Camo_Bag)
-    displayName = "B1 battledroid Camo (AT)";
+    displayName = "[deprecated] B1 battledroid Camo (AT)";
     uniformClass = macro_new_uniform_class(opfor,B1_AT_camo);	
     author = "RD501";
     vehicleClass = "Men";
@@ -33,7 +33,7 @@ class macro_new_unit_class(opfor,B1_camo_geonosis_droid_AT): macro_new_unit_clas
 {
     scope = 2;
     backpack = macro_new_backpack_class(opfor,B1_AT_Geon_Bag)
-    displayName = "B1 battledroid Geo (AT)";
+    displayName = "[deprecated] B1 battledroid Geo (AT)";
     uniformClass = macro_new_uniform_class(opfor,B1_AT_Geon);
 
     
@@ -46,7 +46,7 @@ class macro_new_unit_class(opfor,B1_droid_AT): macro_new_unit_class(opfor,B1_cam
     scope = 2;
     
     backpack = macro_new_backpack_class(opfor,B1_AT_Bag)
-    displayName = "B1 battledroid (AT)";
+    displayName = "[deprecated] B1 battledroid (AT)";
     
     uniformClass = macro_new_uniform_class(opfor,B1_AT);
 
