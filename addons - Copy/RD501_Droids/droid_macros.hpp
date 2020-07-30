@@ -45,6 +45,8 @@
 #define macro_smoke "swop_SmokeShell"
 #define macro_flashbang "swop_mag_flashbang"
 
+#define macro_backpack_jammer "SWOP_B_CARGOBACKPACK"
+
 #define macro_e5_loadout \
 weapons[]={macro_e5,"Throw","Put"};\
 respawnWeapons[]={macro_e5,"Throw","Put"};\

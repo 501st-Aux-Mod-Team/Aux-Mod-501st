@@ -18,6 +18,9 @@ class CfgPatches
 		};
 	};
 };
+
+#include "droid_inits.hpp"
+
 class CfgGroups
 {
 	class EAST

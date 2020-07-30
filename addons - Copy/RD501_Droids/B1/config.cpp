@@ -9,9 +9,12 @@ class CfgPatches
 		addonRootClass=macro_patch_name(droids_config);
 		requiredAddons[] = {
 			macro_patch_name(droids_config),
-			"JLTS_characters_DroidArmor"
+			"JLTS_characters_DroidArmor",
+   			"JLTS_weapons_RPS6",
+			"JLTS_weapons_E5",
+			"JLTS_weapons_E5S",
+			"JLTS_weapons_E60R",
 		};
-
 		requiredVersion = 0.1;
 		units[] = {
 			macro_new_unit_class(opfor,B1),
@@ -27,7 +30,8 @@ class CfgPatches
 			macro_new_unit_class(opfor,B1_AT_light),
 			macro_new_unit_class(opfor,B1_AA),
 			macro_new_unit_class(opfor,B1_shotgun),
-			macro_new_unit_class(opfor,B1_marksmen)
+			macro_new_unit_class(opfor,B1_marksmen),
+			macro_new_unit_class(opfor,B1_jammer)
 		};
 	};
 };
@@ -47,49 +51,49 @@ class CfgVehicles
 	// base droids
 	class macro_new_unit_class(opfor,B1): JLTS_Droid_B1_E5
 	{
-		displayName = "B1 Battle Droid";
+		displayName = "B1 Battledroid";
 		#include "b1_common.hpp"
 		macro_e5_loadout
 		backpack=macro_new_backpack_class(opfor,B1);
 	};
 	class macro_new_unit_class(opfor,B1_marine): JLTS_Droid_B1_Marine
 	{
-		displayName="B1 Battledroid Marine";
+		displayName="B1 Battledroid (Marine)";
 		#include "b1_common.hpp"
 		macro_e5_loadout
 		backpack=macro_new_backpack_class(opfor,B1);
 	};
 	class macro_new_unit_class(opfor,B1_security): JLTS_Droid_B1_Security
 	{
-		displayName="B1 Battledroid Security";
+		displayName="B1 Battledroid (Security)";
 		#include "b1_common.hpp"
 		macro_e5_loadout
 		backpack=macro_new_backpack_class(opfor,B1);
 	};
 	class macro_new_unit_class(opfor,B1_commander): JLTS_Droid_B1_Commander
 	{
-		displayName="B1 Battledroid Commander";
+		displayName="B1 Battledroid (Commander)";
 		#include "b1_common.hpp"
 		macro_e5_loadout
 		backpack=macro_new_backpack_class(opfor,B1_antenna);
 	};
 	class macro_new_unit_class(opfor,B1_pilot): JLTS_Droid_B1_Pilot
 	{
-		displayName="B1 Battledroid Pilot";
+		displayName="B1 Battledroid (Pilot)";
 		#include "b1_common.hpp"
 		macro_e5_loadout
 		backpack=macro_new_backpack_class(opfor,B1);
 	};
 	class macro_new_unit_class(opfor,B1_crew): JLTS_Droid_B1_Crew
 	{
-		displayName="B1 Battledroid Crew";
+		displayName="B1 Battledroid (Crew)";
 		#include "b1_common.hpp"
 		macro_e5_loadout
 		backpack=macro_new_backpack_class(opfor,B1);
 	};
 	class macro_new_unit_class(opfor,B1_prototype): JLTS_Droid_B1_Prototype
 	{
-		displayName="B1 Battledroid Spec-Ops";
+		displayName="B1 Battledroid (SpecOps)";
 		#include "b1_common.hpp"
 		weapons[]=
 		{
@@ -314,4 +318,9 @@ class CfgVehicles
 			macro_smoke
 		};
 	};
+	class macro_new_unit_class(opfor,B1_jammer): macro_new_unit_class(opfor,B1)
+	{
+		displayName="B1 Battledroid (Jammer)";
+		backpack=macro_backpack_jammer;
+	}
 };

@@ -35,7 +35,7 @@ class CfgPatches
 			macro_new_unit_class(opfor,B1_droid_AA),
 			macro_new_unit_class(opfor,B1_geonosis_droid_AA),
 
-			macro_new_unit_class(opfor,B1_Jammer),
+			macro_new_unit_class(opfor,B1_Jammer_depr),
 			macro_new_unit_class(opfor,B1_E_Web),
 			macro_new_unit_class(opfor,B1_Aqua),
 			macro_new_unit_class(opfor,B1_Heavy_Aqua)
@@ -152,7 +152,7 @@ class CfgVehicles
 		editorSubcategory = macro_editor_cat(B1)
 	};
 
-	class macro_new_unit_class(opfor,B1_Jammer): SWOP_CIS_B1_Base
+	class macro_new_unit_class(opfor,B1_Jammer_depr): SWOP_CIS_B1_Base
 	{
 		scope = 2;
 		
@@ -163,7 +163,7 @@ class CfgVehicles
 		vehicleClass = "Men";
 		
 		backpack = "SWOP_B_CARGOBACKPACK";
-		displayName = "B1 Gunner (Radio Jammer)";
+		displayName = "[deprecated] B1 Gunner (Radio Jammer)";
 		identityTypes[] = {"B1Droids"};
 		model = "\A3\characters_F\BLUFOR\b_soldier_01.p3d";
 		uniformClass = "SWOP_B1_droid_heavy_F_standart";

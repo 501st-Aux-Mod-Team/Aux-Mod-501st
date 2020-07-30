@@ -68,7 +68,7 @@ class Extended_Init_EventHandlers
         };
     };
 
-    class macro_new_unit_class(opfor,B1_Jammer)//
+    class macro_new_unit_class(opfor,B1_Jammer_depr)//
     {	
         class jammer 
         {
