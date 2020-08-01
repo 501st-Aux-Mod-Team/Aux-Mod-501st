@@ -36,7 +36,7 @@ class CfgPatches
 			macro_new_unit_class(opfor,B1_geonosis_droid_AA),
 
 			macro_new_unit_class(opfor,B1_Jammer_depr),
-			macro_new_unit_class(opfor,B1_E_Web),
+			macro_new_unit_class(opfor,B1_E_Web_depr),
 			macro_new_unit_class(opfor,B1_Aqua),
 			macro_new_unit_class(opfor,B1_Heavy_Aqua)
 		};
@@ -127,15 +127,15 @@ class CfgVehicles
 	#include "b1_at_unit.hpp"
 	#include "b1_aa_unit.hpp"
 
-	class macro_new_unit_class(opfor,B1_E_Web): SWOP_CIS_B1_Base
+	class macro_new_unit_class(opfor,B1_E_Web_depr): SWOP_CIS_B1_Base
 	{
 		scope = 2;
 		
 		author = "SWOP";
 		vehicleClass = "Men";
 	
-		backpack = macro_new_backpack_class(opfor,eweb_bag)
-		displayName = "B1 Gunner (E-Web)";
+		backpack = macro_new_backpack_class(opfor,eweb_bag_depr)
+		displayName = "[deprecated] B1 Gunner (E-Web)";
 		identityTypes[] = {"B1Droids"};
 		model = "\A3\characters_F\BLUFOR\b_soldier_01.p3d";
 		uniformClass = "SWOP_B1_droid_heavy_F_standart";

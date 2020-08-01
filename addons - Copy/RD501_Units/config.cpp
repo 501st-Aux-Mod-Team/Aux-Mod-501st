@@ -155,11 +155,11 @@ class CfgVehicles
 		displayName = "Droid control backpack (Spec ops)";
 	};
 
-	class macro_new_backpack_class(opfor,eweb_bag): EWEB_Bag
+	class macro_new_backpack_class(opfor,eweb_bag_depr): EWEB_Bag
 	{
 		scope = 2;
-		displayName = "E-WEB Bag";
-		descriptionShort = "E-WEB Bag";
+		displayName = "[deprecated] E-WEB Bag";
+		descriptionShort = "[deprecated] E-WEB Bag";
 		side = 0;
 		//faction = "RD501FactionOpfor";
 		picture = "\A3\Supplies_F_Orange\Bags\Data\UI\icon_C_IDAP_UAV_06_antimine_ca";
@@ -175,7 +175,7 @@ class CfgVehicles
 		};
 	};
 	
-	class macro_new_backpack_class(blufor,eweb_bag): macro_new_backpack_class(opfor,eweb_bag)
+	class macro_new_backpack_class(blufor,eweb_bag): EWEB_Bag
 	{
 		scope = 2;
 		displayName = "[PROTOTYPE] E-WEB Cannon Bag";
@@ -223,51 +223,3 @@ class CfgVehicles
 
 	#include "_backpacks/legacy_backpacks.hpp"
 };
-
-class CfgGroups 
-{
-    class EAST 
-	{
-        class macro_cis_faction 
-		{
-            name = "RD501 C.I.S Faction";
-            class Infantry 
-			{
-                name = "Infantry";
-                class infantry_spec_ops_droid 
-				{
-                    name = "Spec Ops Fireteam";
-                    side = 0;
-                    faction = macro_cis_faction;
-                    icon = "\A3\ui_f\data\map\markers\nato\o_inf.paa";
-                    rarityGroup = 0.5;
-                    class Unit0 {
-                        position[] = {0,0,0};
-                        rank = "SERGEANT";
-                        side = 0;
-                        vehicle = macro_new_unit_class(opfor,B1_spec_op);
-                    };
-                    class Unit1 {
-                        position[] = {5,-5,0};
-                        rank = "PRIVATE";
-                        side = 0;
-                        vehicle = macro_new_unit_class(opfor,B1_spec_op);
-                    };
-                    class Unit2 {
-                        position[] = {-5,-5,0};
-                        rank = "PRIVATE";
-                        side = 0;
-                        vehicle = macro_new_unit_class(opfor,B1_spec_op);
-                    };
-                    class Unit3 {
-                        position[] = {10,-10,0};
-                        rank = "PRIVATE";
-                        side = 0;
-                        vehicle = macro_new_unit_class(opfor,B1_spec_op);
-                    };
-                };
-              
-			};
-		};
-	};
- };

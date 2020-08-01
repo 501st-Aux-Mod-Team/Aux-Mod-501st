@@ -9,11 +9,13 @@ class CfgPatches
 		addonRootClass=macro_patch_name(droids_config);
 		requiredAddons[] = {
 			macro_patch_name(droids_config),
+			macro_patch_name(E_Web),
 			"JLTS_characters_DroidArmor",
    			"JLTS_weapons_RPS6",
 			"JLTS_weapons_E5",
 			"JLTS_weapons_E5S",
 			"JLTS_weapons_E60R",
+			"212th_swop_weapons",
 		};
 		requiredVersion = 0.1;
 		units[] = {
@@ -30,8 +32,10 @@ class CfgPatches
 			macro_new_unit_class(opfor,B1_AT_light),
 			macro_new_unit_class(opfor,B1_AA),
 			macro_new_unit_class(opfor,B1_shotgun),
-			macro_new_unit_class(opfor,B1_marksmen),
-			macro_new_unit_class(opfor,B1_jammer)
+			macro_new_unit_class(opfor,B1_marksman),
+			macro_new_unit_class(opfor,B1_jammer),
+			macro_new_unit_class(opfor,B1_E_Web),
+			macro_new_unit_class(opfor,B1_grenadier)
 		};
 	};
 };
@@ -290,7 +294,7 @@ class CfgVehicles
 			macro_smoke
 		};
 	};
-	class macro_new_unit_class(opfor,B1_marksmen): macro_new_unit_class(opfor,B1_marine)
+	class macro_new_unit_class(opfor,B1_marksman): macro_new_unit_class(opfor,B1_marine)
 	{
 		displayName="B1 Battledroid (Marksman)";
 		weapons[]=
@@ -322,5 +326,32 @@ class CfgVehicles
 	{
 		displayName="B1 Battledroid (Jammer)";
 		backpack=macro_backpack_jammer;
+	}
+	class macro_new_unit_class(opfor,B1_E_Web): macro_new_unit_class(opfor,B1)
+	{
+		displayName="B1 Battledroid (E-Web Carrier)";
+		backpack = macro_backpack_eweb;
+	}
+	class macro_new_unit_class(opfor,B1_grenadier): macro_new_unit_class(opfor,B1_security)
+	{
+		displayName="B1 Battledroid (Grenadier)";
+		weapons[]=
+		{
+			macro_grenade_launcher
+		};
+		respawnWeapons[]=
+		{
+			macro_grenade_launcher
+		};
+		magazines[]=
+		{
+			macro_grenade_launcher_mags,
+			macro_grenade_launcher_grenades
+		};
+		respawnMagazines[]=
+		{
+			macro_grenade_launcher_mags,
+			macro_grenade_launcher_grenades
+		};
 	}
 };

@@ -40,12 +40,19 @@
 #define macro_spec_ops_gun_mag "SWOP_EE4BlasterRifle_Mag"
 #define macro_spec_ops_gun_mags _6(macro_spec_ops_gun_mag)
 
+#define macro_grenade_launcher "212th_relbyv10"
+#define macro_grenade_launcher_mag "212th_E5P_Mag"
+#define macro_grenade_launcher_mags _8(macro_grenade_launcher_mag)
+#define macro_grenade_launcher_grenade "1Rnd_HE_Grenade_shell"
+#define macro_grenade_launcher_grenades _7(macro_grenade_launcher_grenade)
+
 #define macro_thermal_det "swop_termDetDT_G"
 #define macro_thermal_imp "SWOP_BCCKtermimploder_G"
 #define macro_smoke "swop_SmokeShell"
 #define macro_flashbang "swop_mag_flashbang"
 
 #define macro_backpack_jammer "SWOP_B_CARGOBACKPACK"
+#define macro_backpack_eweb macro_new_backpack_class(opfor,eweb_bag_depr)
 
 #define macro_e5_loadout \
 weapons[]={macro_e5,"Throw","Put"};\
