@@ -11,10 +11,21 @@ class CfgPatches
 	{
 		author = "m3ales";
 		name = "501st Legion Map Markers";
-		requiredversion = 1.60;
+		requiredversion =0.1;
 		units[] = {};
 		weapons[] = {};
-		requiredaddons[] = {};
+		requiredaddons[] = 
+		{
+			"A3_Characters_F",
+			"A3_soft_f"
+		};
+	};
+};
+class CfgMarkerClasses
+{
+	// Used to group markers and provide ordering in the marker dropdown -- is alphabetical
+	class RD501_unitMarkers{
+		displayname="RD501 Markers";
 	};
 };
 class CfgMarkers
@@ -44,10 +55,3 @@ class CfgMarkers
 	RD501_MARKER_SOURCECOLOUR_NOSHADOW_GROUPED_PUBLIC(RD501_MARKER_CLASSNAME(cyclone_3,logo),"Cyclone 3 Logo",RD501_MARKER_LOGO_PATH(cyclone_3),RD501_MARKERS_EMBLEM_SIZE);
 };
 
-class CfgMarkerClasses
-{
-	// Used to group markers and provide ordering in the marker dropdown -- is alphabetical
-	class RD501_Markers{
-		displayname="RD501 Markers";
-	};
-};

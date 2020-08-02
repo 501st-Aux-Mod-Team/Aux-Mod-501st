@@ -22,7 +22,7 @@
 		scope = markerScope;\
 	}
 // Group used for ordering in the marker menu
-#define RD501_MARKER_GROUP RD501 Map Markers
+#define RD501_MARKER_GROUP RD501_unitMarkers
 #define RD501_MARKER_GROUP_QUOTED RD501_MARKER_QUOTE(RD501_MARKER_GROUP)
 // SOURCECOLOUR -> Logos, things that need to keep their colour, generally only are white.
 // RD501_Marker_name_type
