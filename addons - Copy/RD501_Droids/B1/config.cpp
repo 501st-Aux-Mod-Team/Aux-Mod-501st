@@ -234,6 +234,7 @@ class CfgVehicles
 	class macro_new_unit_class(opfor,B1_AA): macro_new_unit_class(opfor,B1_security)
 	{
 		displayName="B1 Battledroid (AA)";
+		threat[] = {0.2, 0.1,1};
 		weapons[]=
 		{
 			macro_e5,
