@@ -1,4 +1,4 @@
-#include "../../RD501_main/config_macros.hpp"
+#include "../../../RD501_main/config_macros.hpp"
 
 class CfgPatches
 {
@@ -24,5 +24,9 @@ class CfgVehicles
     class macro_new_unit_class(opfor,BX): 3AS_BX_DROID_F
     {
         displayName = "Commando Droid";
+		author = "RD501";
+		scope = 2;
+		faction = macro_cis_faction
+		editorSubcategory = macro_editor_cat(CIS_SpecOps)
     };
 }

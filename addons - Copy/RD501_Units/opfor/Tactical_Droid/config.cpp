@@ -26,6 +26,6 @@ class CfgVehicles
 		author = "RD501";
 		scope = 2;
 		faction = macro_cis_faction
-		editorSubcategory = macro_editor_cat(B1)
+		editorSubcategory = macro_editor_cat(CIS_SpecOps)
 	};
 }

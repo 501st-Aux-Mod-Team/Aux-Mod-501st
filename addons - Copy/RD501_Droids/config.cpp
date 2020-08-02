@@ -1623,21 +1623,19 @@ class CfgGroups
 					faction = macro_cis_faction
 					icon="\A3\ui_f\data\map\markers\nato\o_inf.paa";
 					rarityGroup=1;
-					// should be BX Commando
 					class Unit0
 					{
 						position[]={0,0,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
+						vehicle=macro_new_unit_class(opfor,Tactical_Droid);
 					};
-					// should be BX Commando
 					class Unit1
 					{
 						position[]={.5,-.5,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
+						vehicle=macro_new_unit_class(opfor,Tactical_Droid);
 					};
 					class Unit2
 					{
@@ -1661,29 +1659,26 @@ class CfgGroups
 					faction = macro_cis_faction
 					icon="\A3\ui_f\data\map\markers\nato\o_inf.paa";
 					rarityGroup=1;
-					// should be BX Commando
 					class Unit0
 					{
 						position[]={0,0,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
+						vehicle=macro_new_unit_class(opfor,BX);
 					};
-					// should be BX Commando
 					class Unit1
 					{
 						position[]={.5,-.5,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
+						vehicle=macro_new_unit_class(opfor,BX);
 					};
-					// should be BX Commando
 					class Unit2
 					{
 						position[]={-.5,-.5,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
+						vehicle=macro_new_unit_class(opfor,BX);
 					};
 				};
 				class macro_new_composition(opfor,company_command_team)
@@ -1729,13 +1724,12 @@ class CfgGroups
 					faction = macro_cis_faction
 					icon="\A3\ui_f\data\map\markers\nato\o_inf.paa";
 					rarityGroup=1;
-					// should be T-Series
 					class Unit0
 					{
 						position[]={0,0,0};
 						rank="LIEUTENANT";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
+						vehicle=macro_new_unit_class(opfor,Tactical_Droid);
 					};
 					class Unit1
 					{
