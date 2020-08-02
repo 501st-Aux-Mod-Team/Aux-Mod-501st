@@ -4,6 +4,8 @@ scope = 2;
 faction = macro_cis_faction
 editorSubcategory = macro_editor_cat(B1)
 
+cost = 700000;
+
 linkeditems[]=
 {
 	"ItemGPS",
