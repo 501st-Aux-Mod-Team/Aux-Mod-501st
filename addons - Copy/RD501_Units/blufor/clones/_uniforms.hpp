@@ -687,3 +687,12 @@ class macro_new_uniform_class(501_utc,08): macro_new_uniform_class(501_inf,recru
 		containerClass = "Supply100";
 	};
 };
+
+//Squad Specific Armors
+#include "_squad_specific_armor.hpp"
+SQD_SPECIFIC_UNIFORM_COMPANY_CLASSDEF(501_inf,strooper,INF ARMR 04,Senior Trooper);
+SQD_SPECIFIC_UNIFORM_COMPANY_CLASSDEF(501_inf_medic,strooper,INF MED ARMR 03,Senior Trooper);
+SQD_SPECIFIC_UNIFORM_COMPANY_CLASSDEF(501_inf_rto,strooper,INF RTO ARMR 03,Senior Trooper);
+SQD_SPECIFIC_UNIFORM_COMPANY_CLASSDEF(501_inf,vtrooper,INF ARMR 05,Veteran Trooper);
+SQD_SPECIFIC_UNIFORM_COMPANY_CLASSDEF(501_inf_medic,vtrooper,INF MED ARMR 04,Veteran Trooper);
+SQD_SPECIFIC_UNIFORM_COMPANY_CLASSDEF(501_inf_rto,vtrooper,INF RTO ARMR 04,Veteran Trooper);

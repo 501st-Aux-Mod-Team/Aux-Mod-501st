@@ -5390,8 +5390,14 @@ class CfgVehicles
 		hiddenSelections[] = {"Camo1","Camo2"};
 		hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\utc\utc_yellow_6_armor_upper.paa,TEXTUREPATH\Republic\clones\utc\utc_armor_lower.paa};
 	};
-};
-	
+	#include "_squad_specific_armor.hpp"
+	SQD_SPECIFIC_SKIN_COMPANY_CLASSDEF(501_inf,strooper,strooper,TEXTUREPATH);
+	SQD_SPECIFIC_SKIN_COMPANY_CLASSDEF(501_inf_medic,strooper,strooper_medic,TEXTUREPATH);
+	SQD_SPECIFIC_SKIN_COMPANY_CLASSDEF(501_inf_rto,strooper,strooper_rto,TEXTUREPATH);
+	SQD_SPECIFIC_SKIN_COMPANY_CLASSDEF(501_inf,vtrooper,vtrooper,TEXTUREPATH);
+	SQD_SPECIFIC_SKIN_COMPANY_CLASSDEF(501_inf_medic,vtrooper,vtrooper_medic,TEXTUREPATH);
+	SQD_SPECIFIC_SKIN_COMPANY_CLASSDEF(501_inf_rto,vtrooper,vtrooper_rto,TEXTUREPATH);
+
 	// class SCI_B_Clone_F :B_Soldier_base_F
 	// {
 	// 	class HitPoints : HitPoints
