@@ -25,7 +25,8 @@ class CfgVehicles
 		author = "RD501";
 		scope = 2;
 		faction = macro_cis_faction
-		editorSubcategory = macro_editor_cat(CIS_SpecOps)cost = 4
+		editorSubcategory = macro_editor_cat(CIS_SpecOps)
+		cost = 4
 
 		weapons[]=
 		{

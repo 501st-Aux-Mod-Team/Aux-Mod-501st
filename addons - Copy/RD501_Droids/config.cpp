@@ -1203,7 +1203,7 @@ class CfgGroups
 						position[]={0,0,0};
 						rank="LIEUTENANT";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,Tactical_Droid);
+						vehicle=macro_new_unit_class(opfor,Tactical_Droid_black);
 					};
 					class Unit1
 					{
@@ -1726,7 +1726,7 @@ class CfgGroups
 						position[]={0,0,0};
 						rank="LIEUTENANT";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,Tactical_Droid);
+						vehicle=macro_new_unit_class(opfor,Tactical_Droid_blue);
 					};
 					class Unit1
 					{
