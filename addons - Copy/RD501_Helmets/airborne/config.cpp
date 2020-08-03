@@ -48,7 +48,6 @@ class CfgWeapons
 	NEW_501_AB_HELM_JLTS(501st_Iroh_helmet,Iroh,Iroh.paa)
 	NEW_501_AB_HELM_JLTS(501st_Navo_helmet,Navo,Navo.paa)
 	NEW_501_AB_HELM_JLTS(501st_Jaeger_helmet,Jaeger,Jaeger.paa)
-	//NEW_501_AB_HELM_JLTS(501st_Grady_helmet,Grady,Grady.paa)
 	NEW_501_AB_HELM_JLTS(501st_Exod_helmet,Exod,Exod.paa)
 	NEW_501_AB_HELM_JLTS(501st_Beat_helmet,Beat,Beat.paa)
 	NEW_501_AB_HELM_JLTS(501st_Dragneel_helmet,Dragneel,Dragneel.paa)
@@ -70,6 +69,9 @@ class CfgWeapons
 	NEW_501_AB_HELM_JLTS(501st_Saprez_helmet,Saprez,Saprez.paa)
 	NEW_501_AB_HELM_JLTS(501st_Scarab_helmet,Scarab,Scarab.paa) 
 	NEW_501_AB_HELM_JLTS(501st_Mimir_helmet,Mimir,Mimir.paa)
+	NEW_501_AB_HELM_JLTS(501st_Momentum_helmet,Momentum,Momentum.paa)
+	NEW_501_AB_HELM_JLTS(501st_Arcanist_helmet,Arcanist,Arcanist.paa)
+	NEW_501_AB_HELM_JLTS(501st_Soviet_helmet,Soviet,Soviet.paa)
 
 	
 
