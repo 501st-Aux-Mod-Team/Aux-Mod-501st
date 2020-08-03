@@ -152,6 +152,7 @@ class CfgWeapons
 	NEW_501_Inf_Helm_JLTS(Spectre,Spectre,Spectre.paa)
 	NEW_501_Inf_Helm_JLTS(Andromeda,Andromeda,Andromeda.paa)
     NEW_501_Inf_Helm_JLTS(Phoenix,Phoenix,Phoenix.paa)
+	NEW_501_Inf_Helm_JLTS(Walsh,Walsh,Walsh.paa)
 	NEW_501_ARC_Helm_JLTS(Duke,Duke,Duke.paa)
 	NEW_501_ARC_Helm_JLTS(Bronson,Bronson,Bronson.paa)
 	NEW_501_ARC_Helm_JLTS(Rayne,Rayne,Rayne.paa)
@@ -161,5 +162,6 @@ class CfgWeapons
 	NEW_501_ARC_Helm_JLTS(Brennan,Brennan,Brennan.paa)
 	NEW_501_ARC_Helm_JLTS(Korvus,Korvus,Korvus.paa)
 	NEW_501_ARC_Helm_JLTS(Darkstar,Darkstar,Darkstar.paa)
+	
 
 };
