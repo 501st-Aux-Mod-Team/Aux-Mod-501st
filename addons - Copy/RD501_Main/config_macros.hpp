@@ -128,6 +128,8 @@
 	#define macro_new_unit_class(side,name) MODNAME##_##side##_unit_##name
 	//backpak
 	#define macro_new_backpack_class(side,name)MODNAME##_##side##_##name##_backpack
+	//compositions
+	#define macro_new_composition(side,name) MODNAME##_##side##_composition_##name
 
 	//backpack presets
 	#define macro_b1_at_backpack_inv \

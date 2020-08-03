@@ -14,7 +14,7 @@
 	slingLoadMaxCargoMass = 5000000000;
 
 	//dmg properties
-		armor=600;
+		armor=500;
 		crewCrashProtection=0;
 		epeImpulseDamageCoef=0;
 

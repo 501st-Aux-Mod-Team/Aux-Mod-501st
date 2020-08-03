@@ -79,7 +79,7 @@ class CfgVehicles
 		editorSubcategory = macro_editor_cat(turrets)
 		vehicleClass = macro_editor_vehicle_type(turrets)
 
-		crew = "SWOP_CIS_droid_crew";
+		crew=macro_new_unit_class(opfor,B1_crew)
 		typicalCargo[] = {"SWOP_CIS_droid_crew"};
 
 		
@@ -125,7 +125,8 @@ class CfgVehicles
 		displayname =" E-WEB (CIS)";
 		scopeCurator = 2;
 		mapSize = 4;
-		crew = "SWOP_CIS_droid_crew";
+
+		crew=macro_new_unit_class(opfor,B1_crew)
 		
 		faction = macro_cis_faction
 		editorSubcategory = macro_editor_cat(turrets)

@@ -62,7 +62,7 @@ class CfgVehicles
 	class macro_new_vehicle(mortar,cis):macro_new_vehicle(mortar,republic)
 	{
 		displayname = "C.I.S Plasma Mortar";
-		crew = "swop_cis_droid_crew";
+		crew=macro_new_unit_class(opfor,B1_crew)
 		forceInGarage = 1;
 		side=0;
 		faction = macro_cis_faction

@@ -87,8 +87,6 @@ class CfgVehicles
 		#include "flight_model.hpp"
 		#include "common_stuff.hpp"
 
-		//difference to common
-		armor=500;
 	
 		class UserActions
 		{

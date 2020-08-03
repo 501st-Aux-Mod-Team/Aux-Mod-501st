@@ -53,6 +53,8 @@ class CfgVehicles
 	    altNoForce = 9000;
 		armor = 500;
 		forceInGarage=1;
+
+		crew=macro_new_unit_class(opfor,B1_pilot)
 		
 		airBrakeFrictionCoef = 80.4;
 		faction = macro_cis_faction

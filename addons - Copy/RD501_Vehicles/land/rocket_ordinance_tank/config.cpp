@@ -92,7 +92,7 @@ class CfgVehicles
 	class macro_new_vehicle(rocket_ordinance_tank,CIS) : macro_new_vehicle(rocket_ordinance_tank,Mynock)
 	{
 		displayName = "CIS Catapult";
-		crew = "SWOP_CIS_droid_crew";
+		crew=macro_new_unit_class(opfor,B1_crew)
 		//scope = 2;
 		side = 0;
 

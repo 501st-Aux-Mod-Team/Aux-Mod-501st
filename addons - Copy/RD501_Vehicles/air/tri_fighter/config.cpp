@@ -68,6 +68,8 @@ class CfgVehicles
 			macro_new_mag(a2a,4)
 		};
 
+		crew=macro_new_unit_class(opfor,B1_pilot)
+
 		class UserActions
 		{
 			class AfterburnerOn

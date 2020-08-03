@@ -1,5 +1,5 @@
 #include "../../RD501_main/config_macros.hpp"
-
+#include "../droid_macros.hpp"
 
 
 class CfgPatches
@@ -9,9 +9,14 @@ class CfgPatches
 		addonRootClass=macro_patch_name(droids_config);
 		requiredAddons[] = {
 			macro_patch_name(droids_config),
-			"JLTS_characters_DroidArmor"
+			macro_patch_name(E_Web),
+			"JLTS_characters_DroidArmor",
+   			"JLTS_weapons_RPS6",
+			"JLTS_weapons_E5",
+			"JLTS_weapons_E5S",
+			"JLTS_weapons_E60R",
+			"212th_swop_weapons",
 		};
-
 		requiredVersion = 0.1;
 		units[] = {
 			macro_new_unit_class(opfor,B1),
@@ -23,534 +28,359 @@ class CfgPatches
 			macro_new_unit_class(opfor,B1_prototype),
 
 			macro_new_unit_class(opfor,B1_heavy),
-			macro_new_unit_class(opfor,B1_AT),
-			macro_new_unit_class(opfor,B1_marksmen),
-			macro_new_unit_class(opfor,B1_shotgun)
+			macro_new_unit_class(opfor,B1_AT_heavy),
+			macro_new_unit_class(opfor,B1_AT_light),
+			macro_new_unit_class(opfor,B1_AA),
+			macro_new_unit_class(opfor,B1_shotgun),
+			macro_new_unit_class(opfor,B1_marksman),
+			macro_new_unit_class(opfor,B1_jammer),
+			macro_new_unit_class(opfor,B1_E_Web),
+			macro_new_unit_class(opfor,B1_grenadier)
 		};
 	};
 };
 
 class CfgVehicles
 {
-	class JLTS_Droid_B1_E5;
+	#include "backpacks.hpp"
 
-	//basic unit
+	class JLTS_Droid_B1_E5;
+	class JLTS_Droid_B1_Marine;
+	class JLTS_Droid_B1_Security;
+	class JLTS_Droid_B1_Commander;
+	class JLTS_Droid_B1_Pilot;
+	class JLTS_Droid_B1_Crew;
+	class JLTS_Droid_B1_Prototype;
+
+	// base droids
 	class macro_new_unit_class(opfor,B1): JLTS_Droid_B1_E5
 	{
-		JLTS_isDroid = 1;
-		JLTS_hasEMPProtection = 0;
-		JLTS_deathSounds = "DeathDroid";
-		author = "RD501";
-		scope = 2;
-		displayName = "B1 Battle Droid";
-
-		faction = macro_cis_faction
-		editorSubcategory = macro_editor_cat(B1)
-
-		uniformClass=JLTS_DroidB1;
-
-		linkeditems[]=
-		{
-			"ItemGPS",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_droid_comlink"
-		};
-		respawnlinkeditems[]=
-		{
-			"ItemGPS",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"JLTS_droid_comlink"
-		};
+		displayName = "B1 Battledroid";
+		#include "b1_common.hpp"
+		macro_e5_loadout
+		backpack=macro_new_backpack_class(opfor,B1);
+		cost=1;
+	};
+	class macro_new_unit_class(opfor,B1_marine): JLTS_Droid_B1_Marine
+	{
+		displayName="B1 Battledroid (Marine)";
+		#include "b1_common.hpp"
+		macro_e5_loadout
+		backpack=macro_new_backpack_class(opfor,B1);
+		cost=1;
+	};
+	class macro_new_unit_class(opfor,B1_security): JLTS_Droid_B1_Security
+	{
+		displayName="B1 Battledroid (Security)";
+		#include "b1_common.hpp"
+		macro_e5_loadout
+		backpack=macro_new_backpack_class(opfor,B1);
+		cost=1;
+	};
+	class macro_new_unit_class(opfor,B1_commander): JLTS_Droid_B1_Commander
+	{
+		displayName="B1 Battledroid (Commander)";
+		#include "b1_common.hpp"
+		macro_e5_loadout
+		backpack=macro_new_backpack_class(opfor,B1_antenna);
+		cost=5;
+	};
+	class macro_new_unit_class(opfor,B1_pilot): JLTS_Droid_B1_Pilot
+	{
+		displayName="B1 Battledroid (Pilot)";
+		#include "b1_common.hpp"
+		macro_e5_loadout
+		backpack=macro_new_backpack_class(opfor,B1);
+		cost=2;
+	};
+	class macro_new_unit_class(opfor,B1_crew): JLTS_Droid_B1_Crew
+	{
+		displayName="B1 Battledroid (Crew)";
+		#include "b1_common.hpp"
+		macro_e5_loadout
+		backpack=macro_new_backpack_class(opfor,B1);
+		cost=1;
+	};
+	class macro_new_unit_class(opfor,B1_prototype): JLTS_Droid_B1_Prototype
+	{
+		displayName="B1 Battledroid (SpecOps)";
+		editorSubcategory = macro_editor_cat(CIS_SpecOps)
+		#include "b1_common.hpp"
 		weapons[]=
 		{
-			"JLTS_E5"
+			macro_spec_ops_gun,
+			"Throw",
+			"Put"
 		};
 		respawnWeapons[]=
 		{
-			"JLTS_E5"
+			macro_spec_ops_gun,
+			"Throw",
+			"Put"
 		};
 		magazines[]=
 		{
-			"JLTS_E5_mag",
-			"JLTS_E5_mag",
-			"JLTS_E5_mag",
-			"JLTS_E5_mag",
-			"JLTS_E5_mag",
-			"JLTS_E5_mag",
-			"JLTS_E5_mag",
-			"JLTS_E5_mag"
+			macro_spec_ops_gun_mags,
+			macro_thermal_imp,
+			macro_thermal_imp,
+			macro_smoke,
+			macro_smoke,
+			macro_flashbang,
+			macro_flashbang,
+			macro_dioxis_grenade
 		};
 		respawnMagazines[]=
 		{
-			"JLTS_E5_mag",
-			"JLTS_E5_mag",
-			"JLTS_E5_mag",
-			"JLTS_E5_mag",
-			"JLTS_E5_mag",
-			"JLTS_E5_mag",
-			"JLTS_E5_mag",
-			"JLTS_E5_mag"
+			macro_spec_ops_gun_mags,
+			macro_thermal_imp,
+			macro_thermal_imp,
+			macro_smoke,
+			macro_smoke,
+			macro_flashbang,
+			macro_flashbang,
+			macro_dioxis_grenade
 		};
-		cost=600000;
-		genericNames="NATOMen";
-		ISmaxTurn=20;
-		class HitPoints
-		{
-			class HitAbdomen
-			{
-				armor=15;
-				explosionShielding=0.25;
-				material=-1;
-				minimalHit=0.0099999998;
-				name="spine1";
-				passThrough=0.5;
-				radius=0.15000001;
-				visual="injury_body";
-			};
-			class HitArms
-			{
-				armor=15;
-				explosionShielding=0.25;
-				material=-1;
-				minimalHit=0.0099999998;
-				name="arms";
-				passThrough=1;
-				radius=0.1;
-				visual="injury_hands";
-			};
-			class HitBody
-			{
-				armor=1000;
-				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-				explosionShielding=2;
-				material=-1;
-				minimalHit=0.0099999998;
-				name="body";
-				passThrough=0.5;
-				radius=0.16;
-				visual="injury_body";
-			};
-			class HitChest
-			{
-				armor=15;
-				explosionShielding=2;
-				material=-1;
-				minimalHit=0.0099999998;
-				name="spine3";
-				passThrough=0.5;
-				radius=0.15000001;
-				visual="injury_body";
-			};
-			class HitDiaphragm
-			{
-				armor=15;
-				explosionShielding=2;
-				material=-1;
-				minimalHit=0.0099999998;
-				name="spine2";
-				passThrough=0.5;
-				radius=0.15000001;
-				visual="injury_body";
-			};
-			class HitFace
-			{
-				armor=2;
-				explosionShielding=0.1;
-				material=-1;
-				minimalHit=0.0099999998;
-				name="face_hub";
-				passThrough=0.5;
-				radius=0.079999998;
-			};
-			class HitHands
-			{
-				armor=15;
-				depends="HitArms";
-				explosionShielding=0.25;
-				material=-1;
-				minimalHit=0.0099999998;
-				name="hands";
-				passThrough=1;
-				radius=0.1;
-				visual="injury_hands";
-			};
-			class HitHead
-			{
-				armor=2;
-				depends="HitFace max HitNeck";
-				explosionShielding=0.1;
-				material=-1;
-				minimalHit=0.0099999998;
-				name="head";
-				passThrough=0.5;
-				radius=0.2;
-			};
-			class HitLeftArm
-			{
-				armor=1;
-				explosionShielding=0.25;
-				material=-1;
-				minimalHit=0.0099999998;
-				name="hand_l";
-				passThrough=0.1;
-				radius=0.1;
-				visual="injury_hands";
-			};
-			class HitLeftLeg
-			{
-				armor=1;
-				explosionShielding=0.25;
-				material=-1;
-				minimalHit=0.0099999998;
-				name="leg_l";
-				passThrough=0.1;
-				radius=0.1;
-				visual="injury_hands";
-			};
-			class HitLegs
-			{
-				armor=15;
-				explosionShielding=0.25;
-				material=-1;
-				minimalHit=0.0099999998;
-				name="legs";
-				passThrough=1;
-				radius=0.12;
-				visual="injury_legs";
-			};
-			class HitNeck
-			{
-				armor=5;
-				explosionShielding=0.1;
-				material=-1;
-				minimalHit=0.0099999998;
-				name="neck";
-				passThrough=0.5;
-				radius=0.1;
-			};
-			class HitPelvis
-			{
-				armor=15;
-				explosionShielding=0.25;
-				material=-1;
-				minimalHit=0.0099999998;
-				name="pelvis";
-				passThrough=0.25;
-				radius=0.2;
-				visual="injury_body";
-			};
-			class HitRightArm
-			{
-				armor=1;
-				explosionShielding=0.25;
-				material=-1;
-				minimalHit=0.0099999998;
-				name="hand_r";
-				passThrough=0.1;
-				radius=0.1;
-				visual="injury_hands";
-			};
-			class HitRightLeg
-			{
-				armor=1;
-				explosionShielding=0.25;
-				material=-1;
-				minimalHit=0.0099999998;
-				name="leg_r";
-				passThrough=0.1;
-				radius=0.1;
-				visual="injury_hands";
-			};
-			class Incapacitated
-			{
-				armor=1000;
-				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
-				explosionShielding=1;
-				material=-1;
-				minimalHit=0;
-				name="body";
-				passThrough=1;
-				radius=0;
-				visual="";
-			};
+		items[]={
+			_3(macro_zip_tie)
 		};
-	};
-	class macro_new_unit_class(opfor,B1_marine): macro_new_unit_class(opfor,B1)
-	{
-		displayName="B1 Battledroid Marine";
-		hiddenSelectionsTextures[] = {
-			macro_b1_textures\b1_marine_co.paa
+		respawnItems[]={
+			_3(macro_zip_tie)
 		};
-		uniformClass=JLTS_DroidB1_Marine;
-	};
-	class macro_new_unit_class(opfor,B1_security): macro_new_unit_class(opfor,B1)
-	{
-		displayName="B1 Battledroid Security";
-		hiddenSelectionsTextures[] = {
-			macro_b1_textures\b1_security_co.paa
-		};
-		uniformClass=JLTS_DroidB1_Security;
-		backpack="";
-	};
-	class macro_new_unit_class(opfor,B1_commander): macro_new_unit_class(opfor,B1)
-	{
-		displayName="B1 Battledroid Commander";
-		hiddenSelectionsTextures[] = {
-			macro_b1_textures\b1_commander_co.paa
-		};
-		uniformClass=JLTS_DroidB1_Commander;
-		backpack="JLTS_B1_antenna";
-
-		weapons[]=
-		{
-			"JLTS_RG4D"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_RG4D"
-		};
-		magazines[]=
-		{
-			"JLTS_RG4D_mag",
-			"JLTS_RG4D_mag",
-			"JLTS_RG4D_mag",
-			"JLTS_RG4D_mag",
-			"JLTS_RG4D_mag",
-			"JLTS_RG4D_mag",
-			"JLTS_RG4D_mag",
-			"SWOP_BCCKtermimploder_G",
-			"SWOP_BCCKtermimploder_G"
-		};
-		respawnMagazines[]=
-		{
-			"JLTS_RG4D_mag",
-			"JLTS_RG4D_mag",
-			"JLTS_RG4D_mag",
-			"JLTS_RG4D_mag",
-			"JLTS_RG4D_mag",
-			"JLTS_RG4D_mag",
-			"SWOP_BCCKtermimploder_G",
-			"SWOP_BCCKtermimploder_G"
-		};
-	};
-	class macro_new_unit_class(opfor,B1_pilot): macro_new_unit_class(opfor,B1)
-	{
-		displayName="B1 Battledroid Pilot";
-		hiddenSelectionsTextures[] = {
-			macro_b1_textures\b1_pilot_co.paa
-		};
-		uniformClass=JLTS_DroidB1_Pilot;
-		backpack="";
-
-		weapons[]=
-		{
-			"JLTS_RG4D"
-		};
-		respawnWeapons[]=
-		{
-			"JLTS_RG4D"
-		};
-		magazines[]=
-		{
-			"JLTS_RG4D_mag",
-			"JLTS_RG4D_mag",
-			"JLTS_RG4D_mag",
-			"JLTS_RG4D_mag",
-			"JLTS_RG4D_mag",
-			"JLTS_RG4D_mag",
-			"JLTS_RG4D_mag",
-			"FirstAidKit",
-			"FirstAidKit",
-			"FirstAidKit"
-		};
-		respawnMagazines[]=
-		{
-			"JLTS_RG4D_mag",
-			"JLTS_RG4D_mag",
-			"JLTS_RG4D_mag",
-			"JLTS_RG4D_mag",
-			"JLTS_RG4D_mag",
-			"JLTS_RG4D_mag",
-			"JLTS_RG4D_mag",
-			"FirstAidKit",
-			"FirstAidKit",
-			"FirstAidKit"
-		};
-	};
-	class macro_new_unit_class(opfor,B1_crew): macro_new_unit_class(opfor,B1)
-	{
-		displayName="B1 Battledroid Crew";
-		hiddenSelectionsTextures[] = {
-			macro_b1_textures\b1_crew_co.paa
-		};
-		uniformClass=JLTS_DroidB1_Crew;
-	};
-	class macro_new_unit_class(opfor,B1_prototype): macro_new_unit_class(opfor,B1)
-	{
-		displayName="B1 Battledroid Prototype";
-		hiddenSelectionsTextures[] = {
-			macro_b1_textures\b1_prototype_co.paa
-		};
-		uniformClass=JLTS_DroidB1_Prototype;
-		backpack="JLTS_B1_backpack_prototype";
+		backpack=macro_new_backpack_class(opfor,B1_prototype);
+		cost=3;
 	};
 
-	//fancy units
+	// fancy droids
 	class macro_new_unit_class(opfor,B1_heavy): macro_new_unit_class(opfor,B1_security)
 	{
 		displayName="B1 Battledroid (Heavy)";
-		backpack="JLTS_B1_backpack";
 		weapons[]=
 		{
-			"SWOP_E5C"
+			macro_lmg,
+			"Throw",
+			"Put"
 		};
 		respawnWeapons[]=
 		{
-			"SWOP_E5C"
+			macro_lmg,
+			"Throw",
+			"Put"
 		};
 		magazines[]=
 		{
-			"SWOP_E5C_Mag",
-			"SWOP_E5C_Mag",
-			"SWOP_E5C_Mag",
-			"SWOP_E5C_Mag",
-			"SWOP_E5C_Mag",
-			"SWOP_E5C_Mag",
-			"SWOP_E5C_Mag",
-			"SWOP_E5C_Mag"
+			macro_lmg_mags,
+			macro_thermal_det,
+			macro_thermal_det,
+			macro_smoke
 		};
 		respawnMagazines[]=
 		{
-			"SWOP_E5C_Mag",
-			"SWOP_E5C_Mag",
-			"SWOP_E5C_Mag",
-			"SWOP_E5C_Mag",
-			"SWOP_E5C_Mag",
-			"SWOP_E5C_Mag",
-			"SWOP_E5C_Mag",
-			"SWOP_E5C_Mag"
+			macro_lmg_mags,
+			macro_thermal_det,
+			macro_thermal_det,
+			macro_smoke
 		};
+		cost=2;
 	};
-	class macro_new_unit_class(opfor,B1_AT): macro_new_unit_class(opfor,B1_security)
+	class macro_new_unit_class(opfor,B1_AT_heavy): macro_new_unit_class(opfor,B1_pilot)
 	{
-		displayName="B1 Battledroid (AT)";
-		backpack="JLTS_B1_backpack";
+		displayName="B1 Battledroid (AT heavy)";
+		threat[]={0.2,1,0.3};
 		weapons[]=
 		{
-			"JLTS_E5",
-			"JLTS_E60R_AT"
+			macro_e5,
+			macro_at_heavy,
+			"Throw",
+			"Put"
 		};
 		respawnWeapons[]=
 		{
-			"JLTS_E5",
-			"JLTS_E60R_AT"
+			macro_e5,
+			macro_at_heavy,
+			"Throw",
+			"Put"
 		};
 		magazines[]=
 		{
-			"JLTS_E5_mag",
-			"JLTS_E5_mag",
-			"JLTS_E5_mag",
-			"JLTS_E5_mag",
-			"JLTS_E5_mag",
-			"JLTS_E5_mag",
-			"JLTS_E5_mag",
-			"JLTS_E5_mag",
-			"JLTS_E60R_AT_mag",
-			"JLTS_E60R_AT_mag",
-			"JLTS_E60R_AT_mag",
-			"JLTS_E60R_AT_mag"
+			macro_e5_mags,
+			macro_at_heavy_mag,
+			macro_thermal_det,
+			macro_smoke
 		};
 		respawnMagazines[]=
 		{
-			"JLTS_E5_mag",
-			"JLTS_E5_mag",
-			"JLTS_E5_mag",
-			"JLTS_E5_mag",
-			"JLTS_E5_mag",
-			"JLTS_E5_mag",
-			"JLTS_E5_mag",
-			"JLTS_E5_mag",
-			"JLTS_E60R_AT_mag",
-			"JLTS_E60R_AT_mag",
-			"JLTS_E60R_AT_mag",
-			"JLTS_E60R_AT_mag"
+			macro_e5_mags,
+			macro_at_heavy_mag,
+			macro_thermal_det,
+			macro_smoke
 		};
-		backpack=""
+		backpack=macro_new_backpack_class(opfor,B1_AT_heavy);
+		cost=2;
 	};
-	class macro_new_unit_class(opfor,B1_marksmen): macro_new_unit_class(opfor,B1)
+	class macro_new_unit_class(opfor,B1_AT_light): macro_new_unit_class(opfor,B1_pilot)
 	{
-		displayName="B1 Battledroid (Marksman)";
+		displayName="B1 Battledroid (AT light)";
+		threat[]={0.6,1,0.3};
 		weapons[]=
 		{
-			"JLTS_E5S"
+			macro_e5,
+			macro_at_light,
+			"Throw",
+			"Put"
 		};
 		respawnWeapons[]=
 		{
-			"JLTS_E5S"
+			macro_e5,
+			macro_at_light,
+			"Throw",
+			"Put"
 		};
 		magazines[]=
 		{
-			"JLTS_E5S_mag",
-			"JLTS_E5S_mag",
-			"JLTS_E5S_mag",
-			"JLTS_E5S_mag",
-			"JLTS_E5S_mag",
-			"JLTS_E5S_mag",
-			"JLTS_E5S_mag",
-			"JLTS_E5S_mag",
-			"JLTS_E5S_mag",
-			"JLTS_E5S_mag"
+			macro_e5_mags,
+			macro_at_light_mag,
+			macro_thermal_det,
+			macro_smoke
 		};
 		respawnMagazines[]=
 		{
-			"JLTS_E5S_mag",
-			"JLTS_E5S_mag",
-			"JLTS_E5S_mag",
-			"JLTS_E5S_mag",
-			"JLTS_E5S_mag",
-			"JLTS_E5S_mag",
-			"JLTS_E5S_mag",
-			"JLTS_E5S_mag",
-			"JLTS_E5S_mag",
-			"JLTS_E5S_mag"
+			macro_e5_mags,
+			macro_at_light_mag,
+			macro_thermal_det,
+			macro_smoke
 		};
+		backpack=macro_new_backpack_class(opfor,B1_AT_light);
+		cost=2;
+	};
+	class macro_new_unit_class(opfor,B1_AA): macro_new_unit_class(opfor,B1_pilot)
+	{
+		displayName="B1 Battledroid (AA)";
+		cost=2;
+		threat[]={0.2,0.1,1};
+		weapons[]=
+		{
+			macro_e5,
+			macro_aa,
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			macro_e5,
+			macro_aa,
+			"Throw",
+			"Put"
+		};
+		magazines[]=
+		{
+			macro_e5_mags,
+			macro_aa_mag,
+			macro_thermal_det,
+			macro_smoke
+		};
+		respawnMagazines[]=
+		{
+			macro_e5_mags,
+			macro_aa_mag,
+			macro_thermal_det,
+			macro_smoke
+		};
+		backpack=macro_new_backpack_class(opfor,B1_AA);
+		cost=2;
 	};
 	class macro_new_unit_class(opfor,B1_shotgun): macro_new_unit_class(opfor,B1_security)
 	{
 		displayName="B1 Battledroid (Shotgun)";
-		backpack="JLTS_B1_backpack";
 		weapons[]=
 		{
-			"swop_CISShotgun"
+			macro_scattergun,
+			"Throw",
+			"Put"
 		};
 		respawnWeapons[]=
 		{
-			"swop_CISShotgun"
+			macro_scattergun,
+			"Throw",
+			"Put"
 		};
 		magazines[]=
 		{
-			"swop_CISShotgun_Mag",
-			"swop_CISShotgun_Mag",
-			"swop_CISShotgun_Mag",
-			"swop_CISShotgun_Mag",
-			"swop_CISShotgun_Mag",
-			"swop_termDetDT_G",
-			"swop_termDetDT_G"
+			macro_scattergun_mags,
+			macro_thermal_det,
+			macro_thermal_det,
+			macro_smoke
 		};
 		respawnMagazines[]=
 		{
-			"swop_CISShotgun_Mag",
-			"swop_CISShotgun_Mag",
-			"swop_CISShotgun_Mag",
-			"swop_CISShotgun_Mag",
-			"swop_CISShotgun_Mag",
-			"swop_termDetDT_G",
-			"swop_termDetDT_G"
+			macro_scattergun_mags,
+			macro_thermal_det,
+			macro_thermal_det,
+			macro_smoke
 		};
+		cost=2;
 	};
-
+	class macro_new_unit_class(opfor,B1_marksman): macro_new_unit_class(opfor,B1_marine)
+	{
+		displayName="B1 Battledroid (Marksman)";
+		weapons[]=
+		{
+			macro_marksman_rifle,
+			"Throw",
+			"Put"
+		};
+		respawnWeapons[]=
+		{
+			macro_marksman_rifle,
+			"Throw",
+			"Put"
+		};
+		magazines[]=
+		{
+			macro_marksman_rifle_mags,
+			macro_thermal_det,
+			macro_smoke
+		};
+		respawnMagazines[]=
+		{
+			macro_marksman_rifle_mags,
+			macro_thermal_det,
+			macro_smoke
+		};
+		cost=2;
+	};
+	class macro_new_unit_class(opfor,B1_jammer): macro_new_unit_class(opfor,B1)
+	{
+		displayName="B1 Battledroid (Jammer)";
+		backpack=macro_backpack_jammer;
+		cost=3;
+	}
+	class macro_new_unit_class(opfor,B1_E_Web): macro_new_unit_class(opfor,B1)
+	{
+		displayName="B1 Battledroid (E-Web Carrier)";
+		backpack = macro_backpack_eweb;
+		cost=3;
+	}
+	class macro_new_unit_class(opfor,B1_grenadier): macro_new_unit_class(opfor,B1_security)
+	{
+		displayName="B1 Battledroid (Grenadier)";
+		weapons[]=
+		{
+			macro_grenade_launcher
+		};
+		respawnWeapons[]=
+		{
+			macro_grenade_launcher
+		};
+		magazines[]=
+		{
+			macro_grenade_launcher_mags,
+			macro_grenade_launcher_grenades
+		};
+		respawnMagazines[]=
+		{
+			macro_grenade_launcher_mags,
+			macro_grenade_launcher_grenades
+		};
+		cost=2;
+	}
 };

@@ -59,9 +59,11 @@ class CfgVehicles
 		faction = macro_cis_faction
 		editorSubcategory = macro_editor_cat_air(CIS)
 		vehicleClass = macro_editor_vehicle_type_air(CIS)
+
+		crew=macro_new_unit_class(opfor,B1_pilot)
+
 		class ACE_SelfActions:ACE_SelfActions
-		{		
-			
+		{
 			#include "../../common/universal_hud_color_changer.hpp"
 		};
 		class UserActions
