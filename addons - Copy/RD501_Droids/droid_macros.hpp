@@ -36,9 +36,13 @@
 #define macro_marksman_rifle_mag "JLTS_E5S_mag"
 #define macro_marksman_rifle_mags _10(macro_marksman_rifle_mag)
 
-#define macro_spec_ops_gun "SWOP_EE4BlasterRifle"
-#define macro_spec_ops_gun_mag "SWOP_EE4BlasterRifle_Mag"
+#define macro_spec_ops_gun "SWOP_E22"
+#define macro_spec_ops_gun_mag "SWOP_E22BlasterRifle_Mag"
 #define macro_spec_ops_gun_mags _6(macro_spec_ops_gun_mag)
+
+#define macro_bx_gun "SWOP_EE4BlasterRifle"
+#define macro_bx_gun_mag "SWOP_EE4BlasterRifle_Mag"
+#define macro_bx_gun_mags _6(macro_bx_gun_mag)
 
 #define macro_grenade_launcher "212th_relbyv10"
 #define macro_grenade_launcher_mag "212th_E5P_Mag"
@@ -50,6 +54,9 @@
 #define macro_thermal_imp "SWOP_BCCKtermimploder_G"
 #define macro_smoke "swop_SmokeShell"
 #define macro_flashbang "swop_mag_flashbang"
+#define macro_dioxis_grenade "SWOP_SCAR_DioxisGM"
+
+#define macro_zip_tie "ACE_CableTie"
 
 #define macro_backpack_jammer "SWOP_B_CARGOBACKPACK"
 #define macro_backpack_eweb macro_new_backpack_class(opfor,eweb_bag_depr)

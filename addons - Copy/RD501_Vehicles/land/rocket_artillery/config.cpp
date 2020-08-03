@@ -54,6 +54,8 @@ class CfgVehicles
 		editorSubcategory = macro_editor_cat(arty)
 		vehicleClass = macro_editor_vehicle_type(arty)
 
+		crew=macro_new_unit_class(opfor,B1_crew)
+
 		class EventHandlers :DefaultEventhandlers {};
 		class Turrets: Turrets
 		{

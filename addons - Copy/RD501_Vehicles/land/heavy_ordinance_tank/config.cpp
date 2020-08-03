@@ -146,7 +146,7 @@ class CfgVehicles
 	class macro_new_vehicle(heavy_ordinance_tank,CIS) : macro_new_vehicle(heavy_ordinance_tank,Mynock)
 	{
 		displayName = "CIS Trebuchet";
-		crew = "SWOP_CIS_droid_crew";
+		crew=macro_new_unit_class(opfor,B1_crew)
 		scope = 2;
 		side=0;
 		scopeCurator=2;

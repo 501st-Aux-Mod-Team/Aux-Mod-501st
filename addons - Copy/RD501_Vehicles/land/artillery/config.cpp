@@ -55,8 +55,9 @@ class CfgVehicles
 		faction = macro_cis_faction
 		editorSubcategory = macro_editor_cat(arty)
 		vehicleClass = macro_editor_cat(arty)
-		
-	    crew = "SWOP_CIS_droid_crew";
+
+		crew=macro_new_unit_class(opfor,B1_crew)
+
 	    typicalCargo[] = {"SWOP_CIS_droid_crew"};
 	    side=0;
 	   	attenuationEffectType = "TankAttenuation";

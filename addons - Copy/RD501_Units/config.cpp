@@ -44,14 +44,6 @@ class Extended_Init_EventHandlers
 		}
     };
 
-    class macro_new_unit_class(opfor,B1_spec_op)
-    {	
-        class apply_skills 
-        {
-            init = [_this select 0] spawn macro_fnc_name(b1_specop_apply_skill);
-        };
-    };
-
     class macro_new_unit_class(opfor,IG_88)
     {	
         class apply_skills 
@@ -65,14 +57,6 @@ class Extended_Init_EventHandlers
         class apply_skills 
         {
             init = [_this select 0] spawn macro_fnc_name(magna_apply_skill);
-        };
-    };
-
-    class macro_new_unit_class(opfor,B1_Jammer_depr)//
-    {	
-        class jammer 
-        {
-            init = [_this select 0] spawn macro_fnc_name(apply_jammer);
         };
     };
 };
@@ -147,34 +131,6 @@ class CfgVehicles
 
 	#include "_backpacks/b1_aa.hpp"
 
-	
-	class macro_new_backpack_class(opfor,Spec_Op_Droid_Bag): macro_new_backpack_class(opfor,B1_AT_Droid_Bag_Base) //RD501_cis_backpacks_Spec_Op_Droid_Bag
-	{
-		scope = 2;
-		hiddenSelectionsTextures[] = {macro_unit_skin_textures\CIS\B1\special_forces\S_Droids_Back_Pack_co.paa};
-		displayName = "Droid control backpack (Spec ops)";
-	};
-
-	class macro_new_backpack_class(opfor,eweb_bag_depr): EWEB_Bag
-	{
-		scope = 2;
-		displayName = "[deprecated] E-WEB Bag";
-		descriptionShort = "[deprecated] E-WEB Bag";
-		side = 0;
-		//faction = "RD501FactionOpfor";
-		picture = "\A3\Supplies_F_Orange\Bags\Data\UI\icon_C_IDAP_UAV_06_antimine_ca";
-		model = "\A3\Supplies_F_Orange\Bags\B_UAV_06_antimine_F.p3d";
-		hiddenSelectionsTextures[] = {"\A3\Supplies_F_Orange\Bags\Data\UAV_backpack_IDAP_co.paa", "a3\air_f_orange\uav_06\data\C_IDAP_UAV_06_antimine_CO.paa"};
-		maximumLoad = 0;
-		mass = 300;
-		class assembleInfo: assembleInfo
-		{
-			base = "";
-			displayName = "E-WEB";
-			assembleTo = "RD501_E_Web_cis";
-		};
-	};
-	
 	class macro_new_backpack_class(blufor,eweb_bag): EWEB_Bag
 	{
 		scope = 2;
@@ -207,19 +163,6 @@ class CfgVehicles
 		maximumload = 600;
 		mass = 30;
 	};
-
-	// class macro_new_backpack_class(factionless,invsible): Bag_Base
-	// {
-	// 	scope = 2;
-	// 	author = "RD501";
-	// 	picture = "SWOP_clones\data\backpack\ico\Ico_backpack.paa";
-	// 	model = "CAA_InvisBag\CAA_InvisBag.p3d";
-	// 	hiddenSelections[] = {"Camo1"};
-	// 	hiddenSelectionsTextures[] = {""};
-	// 	displayName = "Clonetrooper backpack Invisible #1";
-	// 	maximumload = 600;
-	// 	mass = 30;
-	// };
 
 	#include "_backpacks/legacy_backpacks.hpp"
 };

@@ -59,6 +59,7 @@ class CfgVehicles
 		#include "b1_common.hpp"
 		macro_e5_loadout
 		backpack=macro_new_backpack_class(opfor,B1);
+		cost=1;
 	};
 	class macro_new_unit_class(opfor,B1_marine): JLTS_Droid_B1_Marine
 	{
@@ -66,6 +67,7 @@ class CfgVehicles
 		#include "b1_common.hpp"
 		macro_e5_loadout
 		backpack=macro_new_backpack_class(opfor,B1);
+		cost=1;
 	};
 	class macro_new_unit_class(opfor,B1_security): JLTS_Droid_B1_Security
 	{
@@ -73,6 +75,7 @@ class CfgVehicles
 		#include "b1_common.hpp"
 		macro_e5_loadout
 		backpack=macro_new_backpack_class(opfor,B1);
+		cost=1;
 	};
 	class macro_new_unit_class(opfor,B1_commander): JLTS_Droid_B1_Commander
 	{
@@ -80,6 +83,7 @@ class CfgVehicles
 		#include "b1_common.hpp"
 		macro_e5_loadout
 		backpack=macro_new_backpack_class(opfor,B1_antenna);
+		cost=5;
 	};
 	class macro_new_unit_class(opfor,B1_pilot): JLTS_Droid_B1_Pilot
 	{
@@ -87,6 +91,7 @@ class CfgVehicles
 		#include "b1_common.hpp"
 		macro_e5_loadout
 		backpack=macro_new_backpack_class(opfor,B1);
+		cost=2;
 	};
 	class macro_new_unit_class(opfor,B1_crew): JLTS_Droid_B1_Crew
 	{
@@ -94,10 +99,12 @@ class CfgVehicles
 		#include "b1_common.hpp"
 		macro_e5_loadout
 		backpack=macro_new_backpack_class(opfor,B1);
+		cost=1;
 	};
 	class macro_new_unit_class(opfor,B1_prototype): JLTS_Droid_B1_Prototype
 	{
 		displayName="B1 Battledroid (SpecOps)";
+		editorSubcategory = macro_editor_cat(CIS_SpecOps)
 		#include "b1_common.hpp"
 		weapons[]=
 		{
@@ -119,7 +126,8 @@ class CfgVehicles
 			macro_smoke,
 			macro_smoke,
 			macro_flashbang,
-			macro_flashbang
+			macro_flashbang,
+			macro_dioxis_grenade
 		};
 		respawnMagazines[]=
 		{
@@ -129,9 +137,17 @@ class CfgVehicles
 			macro_smoke,
 			macro_smoke,
 			macro_flashbang,
-			macro_flashbang
+			macro_flashbang,
+			macro_dioxis_grenade
+		};
+		items[]={
+			_3(macro_zip_tie)
+		};
+		respawnItems[]={
+			_3(macro_zip_tie)
 		};
 		backpack=macro_new_backpack_class(opfor,B1_prototype);
+		cost=3;
 	};
 
 	// fancy droids
@@ -164,10 +180,12 @@ class CfgVehicles
 			macro_thermal_det,
 			macro_smoke
 		};
+		cost=2;
 	};
-	class macro_new_unit_class(opfor,B1_AT_heavy): macro_new_unit_class(opfor,B1_security)
+	class macro_new_unit_class(opfor,B1_AT_heavy): macro_new_unit_class(opfor,B1_pilot)
 	{
 		displayName="B1 Battledroid (AT heavy)";
+		threat[]={0.2,1,0.3};
 		weapons[]=
 		{
 			macro_e5,
@@ -197,10 +215,12 @@ class CfgVehicles
 			macro_smoke
 		};
 		backpack=macro_new_backpack_class(opfor,B1_AT_heavy);
+		cost=2;
 	};
-	class macro_new_unit_class(opfor,B1_AT_light): macro_new_unit_class(opfor,B1_security)
+	class macro_new_unit_class(opfor,B1_AT_light): macro_new_unit_class(opfor,B1_pilot)
 	{
 		displayName="B1 Battledroid (AT light)";
+		threat[]={0.6,1,0.3};
 		weapons[]=
 		{
 			macro_e5,
@@ -230,11 +250,13 @@ class CfgVehicles
 			macro_smoke
 		};
 		backpack=macro_new_backpack_class(opfor,B1_AT_light);
+		cost=2;
 	};
-	class macro_new_unit_class(opfor,B1_AA): macro_new_unit_class(opfor,B1_security)
+	class macro_new_unit_class(opfor,B1_AA): macro_new_unit_class(opfor,B1_pilot)
 	{
 		displayName="B1 Battledroid (AA)";
-		threat[] = {0.2, 0.1,1};
+		cost=2;
+		threat[]={0.2,0.1,1};
 		weapons[]=
 		{
 			macro_e5,
@@ -264,6 +286,7 @@ class CfgVehicles
 			macro_smoke
 		};
 		backpack=macro_new_backpack_class(opfor,B1_AA);
+		cost=2;
 	};
 	class macro_new_unit_class(opfor,B1_shotgun): macro_new_unit_class(opfor,B1_security)
 	{
@@ -294,6 +317,7 @@ class CfgVehicles
 			macro_thermal_det,
 			macro_smoke
 		};
+		cost=2;
 	};
 	class macro_new_unit_class(opfor,B1_marksman): macro_new_unit_class(opfor,B1_marine)
 	{
@@ -322,16 +346,19 @@ class CfgVehicles
 			macro_thermal_det,
 			macro_smoke
 		};
+		cost=2;
 	};
 	class macro_new_unit_class(opfor,B1_jammer): macro_new_unit_class(opfor,B1)
 	{
 		displayName="B1 Battledroid (Jammer)";
 		backpack=macro_backpack_jammer;
+		cost=3;
 	}
 	class macro_new_unit_class(opfor,B1_E_Web): macro_new_unit_class(opfor,B1)
 	{
 		displayName="B1 Battledroid (E-Web Carrier)";
 		backpack = macro_backpack_eweb;
+		cost=3;
 	}
 	class macro_new_unit_class(opfor,B1_grenadier): macro_new_unit_class(opfor,B1_security)
 	{
@@ -354,5 +381,6 @@ class CfgVehicles
 			macro_grenade_launcher_mags,
 			macro_grenade_launcher_grenades
 		};
+		cost=2;
 	}
 };

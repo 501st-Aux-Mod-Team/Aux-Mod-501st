@@ -6,10 +6,6 @@
 #define patch_name MODNAME##unit_addon##_Patches
 #define unit_classname MODNAME##_##unit_addon
 
-// #define macro_new_opfor_class(name) MODNAME##_##name
-// #define macro_new_opfor_uniform_class(name) MODNAME##_uniform_##name
-// #define macro_new_opfor_item_skin_class(name) MODNAME##_item_skin_##name
-
 #define macro_b1_armor_standard\
 		armor = 60;\
         armorStructural = 10;\
@@ -27,29 +23,12 @@ class CfgPatches
 		};
 		requiredVersion=0.1;
 		units[]={
-			
-			macro_new_unit_class(opfor,B1_camo_droid_AT),
-			macro_new_unit_class(opfor,B1_camo_geonosis_droid_AT),
-			macro_new_unit_class(opfor,B1_droid_AT),
-			macro_new_unit_class(opfor,B1_forest_v1_droid_AA),
-			macro_new_unit_class(opfor,B1_droid_AA),
-			macro_new_unit_class(opfor,B1_geonosis_droid_AA),
-
-			macro_new_unit_class(opfor,B1_Jammer_depr),
-			macro_new_unit_class(opfor,B1_E_Web_depr),
 			macro_new_unit_class(opfor,B1_Aqua),
 			macro_new_unit_class(opfor,B1_Heavy_Aqua)
 		};
 		weapons[]=
 		{
-			macro_new_uniform_class(opfor,B1_AT_camo),
-			macro_new_uniform_class(opfor,B1_AT_Geon),
-			macro_new_uniform_class(opfor,B1_AT),
-			macro_new_uniform_class(opfor,B1_AA),
-			macro_new_uniform_class(opfor,B1_AA_Geon),
-			macro_new_uniform_class(opfor,B1_AA_Forest_v1),
 			macro_new_uniform_class(opfor,B1_Aqua)
-			
 		};
 	};
 };
@@ -62,20 +41,12 @@ class cfgWeapons
 		class ItemInfo;
 	};
 	class VestItem;
-	//class UniformItem;
-	
-
-	
-	#include "b1_at_uniform.hpp"
-	#include "b1_aa_uniform.hpp"
 
 	class SWOP_B1_droid_pilot_F_standart:Uniform_Base
 	{
-		class ItemInfo:ItemInfo
-		{
-
-		};
+		class ItemInfo:ItemInfo{};
 	};
+
 	class macro_new_uniform_class(opfor,B1_Aqua): SWOP_B1_droid_pilot_F_standart
 	{
 		scope=2;
@@ -89,21 +60,13 @@ class cfgWeapons
 				mass = 20;
 		};
 	};
-	
-
-
 };
 
 class DefaultEventhandlers;
 class CfgVehicles
 {
-	class SWOP_CIS_B1_Base;
 	class SWOP_CIS_Base;
 	class SWOP_501;
-
-	#include "at_reskin.hpp"
-	#include "aa_reskin.hpp"
-
 
 	class macro_new_uniform_skin_class(opfor,B1_Aqua): SWOP_CIS_Base
 	{
@@ -118,64 +81,6 @@ class CfgVehicles
 			TEXTUREPATH\CIS\B1\aqua\ReskinB1_waist_camo.paa,
 			TEXTUREPATH\CIS\B1\aqua\ReskinB1_legs_camo.paa
     	};
-	};
-
-
-	
-	//-------------------------------------------------------------------
-	//hide vinilla ones
-	#include "b1_at_unit.hpp"
-	#include "b1_aa_unit.hpp"
-
-	class macro_new_unit_class(opfor,B1_E_Web_depr): SWOP_CIS_B1_Base
-	{
-		scope = 2;
-		
-		author = "SWOP";
-		vehicleClass = "Men";
-	
-		backpack = macro_new_backpack_class(opfor,eweb_bag_depr)
-		displayName = "[deprecated] B1 Gunner (E-Web)";
-		identityTypes[] = {"B1Droids"};
-		model = "\A3\characters_F\BLUFOR\b_soldier_01.p3d";
-		uniformClass = "SWOP_B1_droid_heavy_F_standart";
-		icon = "iconManMG";
-		linkeditems[] = {"SWOP_STbron", "ItemGPS", "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio"};
-		respawnlinkeditems[] = {"SWOP_STbron", "ItemGPS", "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio"};
-		weapons[] = {"SWOP_E5C", "Throw", "Put"};
-		respawnWeapons[] = {"SWOP_E5C", "Throw", "Put"};
-		magazines[] = {"SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_termDet_G", "SWOP_termDet_G"};
-		respawnMagazines[] = {"SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_termDet_G", "SWOP_termDet_G"};
-		cost = 700000;
-
-		faction = macro_cis_faction
-		editorSubcategory = macro_editor_cat(B1)
-	};
-
-	class macro_new_unit_class(opfor,B1_Jammer_depr): SWOP_CIS_B1_Base
-	{
-		scope = 2;
-		
-		faction = macro_cis_faction
-		editorSubcategory = macro_editor_cat(B1)
-
-		author = "SWOP";
-		vehicleClass = "Men";
-		
-		backpack = "SWOP_B_CARGOBACKPACK";
-		displayName = "[deprecated] B1 Gunner (Radio Jammer)";
-		identityTypes[] = {"B1Droids"};
-		model = "\A3\characters_F\BLUFOR\b_soldier_01.p3d";
-		uniformClass = "SWOP_B1_droid_heavy_F_standart";
-		icon = "iconManMG";
-		linkeditems[] = {"SWOP_STbron", "ItemGPS", "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio"};
-		respawnlinkeditems[] = {"SWOP_STbron", "ItemGPS", "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio"};
-		weapons[] = {"SWOP_E5C", "Throw", "Put"};
-		respawnWeapons[] = {"SWOP_E5C", "Throw", "Put"};
-		magazines[] = {"SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_termDet_G", "SWOP_termDet_G"};
-		respawnMagazines[] = {"SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_E5C_Mag", "SWOP_termDet_G", "SWOP_termDet_G"};
-		cost = 700000;
-		
 	};
 
 	class macro_new_unit_class(opfor,B1_Aqua): SWOP_501
@@ -199,7 +104,6 @@ class CfgVehicles
 		weapons[] = {macro_new_weapon(e5,aqua),"Throw","Put"};
 		linkedItems[] = {"g_diving","ItemMap","ItemCompass","ItemWatch","ItemRadio",macro_new_weapon(equipment,Water_Filtration),"NVGoggles"};
 		backpack = macro_new_backpack_class(opfor,b1_aqua_bag)
-	
 	};
 
 	class macro_new_unit_class(opfor,B1_Heavy_Aqua): macro_new_unit_class(opfor,B1_Aqua)
@@ -220,6 +124,5 @@ class CfgVehicles
 		weapons[] = {macro_new_weapon(e5,C_aqua),"Throw","Put"};
 		
 		linkedItems[] = {"g_diving","ItemMap","ItemCompass","ItemWatch","ItemRadio",macro_new_weapon(equipment,Water_Filtration),"NVGoggles"};
-
 	};
 };

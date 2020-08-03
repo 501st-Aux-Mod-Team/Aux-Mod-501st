@@ -45,7 +45,7 @@ class CfgVehicles
 		faction = macro_cis_faction
 		editorSubcategory = macro_editor_cat(APC)
 		vehicleClass = macro_editor_vehicle_type(APC)
-		crew = "SWOP_CIS_droid_crew";
+		crew=macro_new_unit_class(opfor,B1_crew)
         displayname = "Hailfire Droid";
 		init = "[_this select 0] execVM 'RD501_Vehicles\land\Hailfire\hailfire_mass.sqf';";
     };

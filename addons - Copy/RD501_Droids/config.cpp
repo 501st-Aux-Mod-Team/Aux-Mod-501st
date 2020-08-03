@@ -1069,29 +1069,26 @@ class CfgGroups
 					faction = macro_cis_faction
 					icon="\A3\ui_f\data\map\markers\nato\o_inf.paa";
 					rarityGroup=1;
-					// should be BX Commando
 					class Unit0
 					{
 						position[]={0,0,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
+						vehicle=macro_new_unit_class(opfor,BX);
 					};
-					// should be BX Commando
 					class Unit1
 					{
 						position[]={.5,-.5,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
+						vehicle=macro_new_unit_class(opfor,BX);
 					};
-					// should be BX Commando
 					class Unit2
 					{
 						position[]={-.5,-.5,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
+						vehicle=macro_new_unit_class(opfor,BX);
 					};
 					class Unit3
 					{
@@ -1206,7 +1203,7 @@ class CfgGroups
 						position[]={0,0,0};
 						rank="LIEUTENANT";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
+						vehicle=macro_new_unit_class(opfor,Tactical_Droid);
 					};
 					class Unit1
 					{
@@ -1628,14 +1625,14 @@ class CfgGroups
 						position[]={0,0,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,Tactical_Droid);
+						vehicle=macro_new_unit_class(opfor,BX);
 					};
 					class Unit1
 					{
 						position[]={.5,-.5,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,Tactical_Droid);
+						vehicle=macro_new_unit_class(opfor,BX);
 					};
 					class Unit2
 					{
@@ -1719,7 +1716,7 @@ class CfgGroups
 				};
 				class macro_new_composition(opfor,regiment_command_team)
 				{
-					name="Heavy Assault Section";
+					name="Regiment/Division Command Team";
 					side=0;
 					faction = macro_cis_faction
 					icon="\A3\ui_f\data\map\markers\nato\o_inf.paa";

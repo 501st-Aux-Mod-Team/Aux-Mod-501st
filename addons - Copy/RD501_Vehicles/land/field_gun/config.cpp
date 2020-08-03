@@ -90,7 +90,7 @@ class CfgVehicles
 	{
 		side = 0;
 		displayname = "Portable CIS Field Gun";
-		crew = "SWOP_CIS_droid_crew";
+		crew=macro_new_unit_class(opfor,B1_crew)
 		faction = macro_cis_faction
 	};
 };

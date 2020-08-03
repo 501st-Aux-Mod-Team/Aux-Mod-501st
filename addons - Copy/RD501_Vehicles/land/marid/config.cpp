@@ -51,7 +51,7 @@ class CfgVehicles
 		hiddenSelections[] = {"camo1", "camo2", "camo3", "CamoNet", "CamoSlat"};
 		forceInGarage = 1;
 
-		crew = "SWOP_CIS_droid_crew";
+		crew=macro_new_unit_class(opfor,B1_crew)
 		faction = macro_cis_faction
 		editorSubcategory = macro_editor_cat(APC)
 		vehicleClass = macro_editor_vehicle_type(APC)

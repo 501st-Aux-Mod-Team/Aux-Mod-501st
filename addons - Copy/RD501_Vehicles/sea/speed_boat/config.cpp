@@ -64,7 +64,7 @@ class CfgVehicles
 		// editorSubcategory = macro_editor_cat(tank)
 		// vehicleClass = macro_editor_vehicle_type(tank)
 		side=0;
-		crew = "SWOP_CIS_droid_crew";
+		crew=macro_new_unit_class(opfor,B1_crew)
 		class Turrets: Turrets
 		{
 			class FrontTurret: FrontTurret

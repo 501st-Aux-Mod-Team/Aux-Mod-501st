@@ -51,7 +51,9 @@ class CfgVehicles
 	    altFullForce = 6000;
 	    altNoForce = 9000;
 		armor = 400;
-		
+
+		crew=macro_new_unit_class(opfor,B1_pilot)
+
 		airBrakeFrictionCoef = 80.4;
 
 		faction = macro_cis_faction

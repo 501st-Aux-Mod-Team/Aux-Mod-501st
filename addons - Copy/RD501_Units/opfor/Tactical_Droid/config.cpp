@@ -27,5 +27,6 @@ class CfgVehicles
 		scope = 2;
 		faction = macro_cis_faction
 		editorSubcategory = macro_editor_cat(CIS_SpecOps)
+		cost = 10;
 	};
 }

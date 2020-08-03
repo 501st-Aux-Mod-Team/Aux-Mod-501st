@@ -58,7 +58,8 @@ class CfgVehicles
 		altFullForce = 6000;
 	    altNoForce = 9000;
 		armor = 650;
-		
+
+		crew=macro_new_unit_class(opfor,B1_pilot)
 
 		#include "common.hpp"
 
@@ -88,6 +89,8 @@ class CfgVehicles
 		bodyFrictionCoef = 0.6777;
 		scope=2;
 		scopeCurator=2;
+
+		crew=macro_new_unit_class(opfor,B1_pilot)
 
 		#include "common.hpp"
 		

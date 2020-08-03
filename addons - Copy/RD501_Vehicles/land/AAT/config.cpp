@@ -94,6 +94,8 @@ class CfgVehicles
 		editorSubcategory = macro_editor_cat(tank)
 		vehicleClass = macro_editor_vehicle_type(tank)
 
+		crew=macro_new_unit_class(opfor,B1_crew)
+
 		class Turrets:Turrets
 		{
 			class MainTurret:MainTurret
@@ -132,6 +134,8 @@ class CfgVehicles
 		displayName="Medium AAT Mk.II";
 		armor = 500;
 		maxSpeed = 75;
+
+		crew=macro_new_unit_class(opfor,B1_crew)
 
 		faction = macro_cis_faction
 		editorSubcategory = macro_editor_cat(tank)
@@ -181,6 +185,8 @@ class CfgVehicles
 		armor = 1000;
 		//enginePower = 4;//405
 		maxSpeed = 30;//75
+
+		crew=macro_new_unit_class(opfor,B1_crew)
 
 		faction = macro_cis_faction
 		editorSubcategory = macro_editor_cat(tank)

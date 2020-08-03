@@ -64,7 +64,7 @@ class CfgVehicles
 		model = "\SW_SpeederBike\SW_SpeederBike";
 		displayName = "CIS Combat speeder MK2";
 		author = "Rexi";
-		crew = "SWOP_CIS_droid_mg";
+		crew=macro_new_unit_class(opfor,B1_crew)
 		typicalCargo[] = {"SWOP_CIS_droid_mg","SWOP_CIS_droid_mg"};
 		side = 0;
 		//faction = "RD501FactionOpfor";

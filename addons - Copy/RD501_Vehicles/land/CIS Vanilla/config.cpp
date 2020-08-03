@@ -51,7 +51,7 @@ class CfgVehicles
 		scopeCurator=2;
 		forceInGarage = 1;
 		displayName="CIS Archer AA"
-		crew = "SWOP_CIS_droid_crew";
+		crew=macro_new_unit_class(opfor,B1_crew)
 		visualTarget = 0; 
 		visualTargetSize = 0;
 		reportOwnPosition = true;
@@ -280,7 +280,8 @@ class CfgVehicles
 		scopeCurator=2;
 		forceInGarage = 1;
 		displayName="CIS Scorpion IFV"
-		crew = "SWOP_CIS_droid_crew";
+
+		crew=macro_new_unit_class(opfor,B1_crew)
 		
 		hiddenSelections[] = {"Camo1", "Camo2", "Camo3", "Camo4", "Camo5", "CamoSlat"};
 		textureList[] = {};
@@ -524,7 +525,8 @@ class CfgVehicles
 		scopeCurator=2;
 		forceInGarage = 1;
 		displayName="CIS Tarantula AA"
-		crew = "SWOP_CIS_droid_crew";
+
+		crew=macro_new_unit_class(opfor,B1_crew)
 		
 		hiddenSelections[] = {"Camo1", "Camo2", "Camo3", "Camo4", "Camo5", "CamoSlat"};
 		textureList[] = {};
