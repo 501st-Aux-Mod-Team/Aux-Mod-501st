@@ -23,47 +23,10 @@ class CfgCloudlets
 	{
 		damageType = "Fire";
 	};
-	class Shadow_Smoke: Default
+	class Dioxis_Smoke;
+	class Shadow_Smoke: Dioxis_Smoke
 	{
-		animationSpeedCoef = 1;
-		colorCoef[] = {"colorR","colorG","colorB","colorA"};
-		sizeCoef = 1;
-		position[] = {0,0,0};
-		interval = 0.03;
-		circleRadius = 0;
-		circleVelocity[] = {0,0,0};
-		particleShape = "\A3\data_f\ParticleEffects\Universal\Universal";
-		particleFSNtieth = 16;
-		particleFSIndex = 7;
-		particleFSFrameCount = 48;
-		particleFSLoop = 1;
-		angleVar = 0.1;
-		animationName = "";
-		particleType = "Billboard";
-		timerPeriod = 1;
-		lifeTime = 20;
-		moveVelocity[] = {0.2,0.1,0.1};
-		rotationVelocity = 1;
-		weight = 1.2777;
-		volume = 1;
-		rubbing = 0.015;
-		size[] = {0.12,2.1,7};
 		color[] = {{0.2125,0.3,0.8,0.2},{0.2125,0.3,0.8,0.4},{0.2125,0.3,0.8,0.6}};
-		animationSpeed[] = {1.5,0.5};
-		randomDirectionPeriod = 1;
-		randomDirectionIntensity = 0.04;
-		onTimerScript = "";
-		beforeDestroyScript = "";
-		destroyOnWaterSurface = 1;
-		destroyOnWaterSurfaceOffset = -0.6;
-		lifeTimeVar = 2;
-		positionVar[] = {0,0,0};
-		MoveVelocityVar[] = {0.25,0.25,0.25};
-		rotationVelocityVar = 1;
-		sizeVar = 0.7;
-		colorVar[] = {0,0,0,0.35};
-		randomDirectionPeriodVar = 0;
-		randomDirectionIntensityVar = 0;
 	};
 };
 class Shadow_Smoke
