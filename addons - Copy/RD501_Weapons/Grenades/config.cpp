@@ -12,7 +12,7 @@ class CfgPatches
 		};
 		author = "SWOP";
 		magazines[] = {"RD501_BlueShadow_Grenade"};
-		ammo[] = {"SWOP_SCAR_Shadow"};
+		ammo[] = {"RD501_ShadowMag"};
 	};
 };
 class CfgCloudlets
@@ -127,55 +127,16 @@ class Shadow_Smoke
 class CfgAmmo
 {
 	class SmokeShell;
-	class SWOP_SCAR_Shadow: SmokeShell
+	class SWOP_SCAR_Dioxis;
+	class RD501_ShadowMag: SWOP_SCAR_Dioxis
 	{
 		model = "\thermalD\Dioxis.p3d";
 		hit = 4;
 		class NVGMarkers
 		{
-			class Blinking1
-			{
-				name = "blinkpos1";
-				color[] = {0.01,0.01,0.01,1};
-				ambient[] = {0.005,0.005,0.005,1};
-				blinking = 1;
-				brightness = 0.002;
-				onlyInNvg = 1;
-			};
-			class Blinking2
-			{
-				color[] = {0.9,0.1,0.1};
-				ambient[] = {0.1,0.1,0.1};
-				name = "blinkpos2";
-				blinking = 1;
-				blinkingStartsOn = 1;
-				blinkingPattern[] = {0.1,0.9};
-				blinkingPatternGuarantee = 1;
-				drawLightSize = 0.35;
-				drawLightCenterSize = 0.05;
-				brightness = 0.002;
-				dayLight = 1;
-				onlyInNvg = 0;
-				intensity = 75;
-				drawLight = 1;
-				activeLight = 0;
-				useFlare = 0;
-			};
+			class Blinking1;
+			class Blinking2;
 		};
-		indirectHit = 2;
-		indirectHitRange = 1.1;
-		explosionTime = 5;
-		aiAmmoUsageFlags = "64 + 1";
-		timeToLive = 35;
-		deflecting = 20;
-		whistleOnFire = 0;
-		ace_frag_enabled = 0;
-		ace_frag_skip = 1;
-		ace_frag_force = 0;
-		suppressionRadiusHit = 18;
-		dangerRadiusHit = 50;
-		allowAgainstInfantry = 1;
-		soundFly[] = {"\thermalD\diox1.ogg",1,1,60};
 		smokeColor[] = {0.2125,0.6258,0.48909998,1};
 		effectsSmoke = "Shadow_Smoke";
 	};
@@ -190,7 +151,7 @@ class CfgMagazines
 		picture = "\thermalD\dioxisgp_x_ca.paa";
 		displayNameShort = "Blue Shadow Grenade";
 		descriptionShort = "Blue Shadow Grenade";
-		ammo = "SWOP_SCAR_Shadow";
+		ammo = "RD501_ShadowMag";
 		mass = 3;
 		class Library
 		{
