@@ -16,7 +16,8 @@ class CfgPatches
 			macro_new_ordnance(AV7_Cluster),
 			macro_new_ordnance(ModuleSquadShield),
 			macro_new_ordnance(ModuleDioxis),
-			macro_new_ordnance(Dioxis_Cluster)
+			macro_new_ordnance(Dioxis_Cluster),
+			macro_new_ordnance(ModuleShadow)
 		};
 		weapons[] = {};
 	};
@@ -34,7 +35,7 @@ class CfgVehicles
 		scopeCurator = 2;
 		category = "Ordnance";
 		displayName = "Squad Shield";
-		portrait = "\a3\Modules_F_Curator\Data\portraitChemlightBlue_ca.paa";
+		portrait = "RD501_Zeus\icons\wide_kite_64.paa";
 		ammo = "SW_SquadShield_ammoCARGA";
 		delete Arguments;
 	};
@@ -46,8 +47,20 @@ class CfgVehicles
 		scopeCurator = 2;
 		category = "Ordnance";
 		displayName = "Dioxis Cloud";
-		portrait = "\a3\Modules_F_Curator\Data\portraitChemlightBlue_ca.paa";
+		portrait = "RD501_Zeus\icons\biohazard_64.paa";
 		ammo = macro_new_ordnance_ammo(Dioxis_long)
+		delete Arguments;
+	};
+	class macro_new_ordnance(ModuleShadow): ModuleChemlight_F
+	{
+		author = "RD501";
+		_generalMacro = macro_new_ordnance(ModuleShadow)
+		scope = 1;
+		scopeCurator = 2;
+		category = "Ordnance";
+		displayName = "Shadow Virus";
+		portrait = "RD501_Zeus\icons\biohazard_64.paa";
+		ammo = macro_new_ordnance_ammo(Shadow_long)
 		delete Arguments;
 	};
 	class macro_new_ordnance(ProtonBomb): ModuleOrdnance_F
@@ -123,8 +136,13 @@ class CfgAmmo
 	class ModuleOrdnanceMortar_F_ammo;
 	class ModuleOrdnanceRocket_F_ammo;
 	class SWOP_SCAR_Dioxis;
+	class RD501_ShadowMag;
 	
 	class macro_new_ordnance_ammo(Dioxis_long): SWOP_SCAR_Dioxis
+	{
+		timeToLive = 300;
+	};
+	class macro_new_ordnance_ammo(Shadow_long): RD501_ShadowMag
 	{
 		timeToLive = 300;
 	};
