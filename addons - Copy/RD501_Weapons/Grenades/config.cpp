@@ -18,45 +18,9 @@ class CfgPatches
 class CfgCloudlets
 {
 	class Default;
-	class Shadow_Fire: Default
+	class DIOXIS_Fire;
+	class Shadow_Fire: DIOXIS_Fire
 	{
-		interval = 0.1;
-		circleRadius = 0;
-		circleVelocity[] = {0,0,0};
-		particleFSNtieth = 16;
-		particleFSIndex = 10;
-		particleFSFrameCount = 32;
-		particleFSLoop = 1;
-		angleVar = 0.1;
-		particleShape = "\A3\data_f\ParticleEffects\Universal\Universal";
-		animationName = "";
-		particleType = "Billboard";
-		timerPeriod = 1;
-		lifeTime = 0.2;
-		moveVelocity[] = {0,1.5,0};
-		rotationVelocity = 0;
-		weight = 0.045;
-		volume = 0.04;
-		rubbing = 0.1;
-		size[] = {0.2,0.02};
-		color[] = {{0.2125,0.8258,0.3891,-1}};
-		animationSpeed[] = {0.5,1};
-		randomDirectionPeriod = 0;
-		randomDirectionIntensity = 0;
-		onTimerScript = "";
-		beforeDestroyScript = "";
-		lifeTimeVar = 0.3;
-		positionVar[] = {0.1,0.3,0.1};
-		moveVelocityVar[] = {0.3,0.5,0.3};
-		rotationVelocityVar = 10;
-		sizeVar = 0.5;
-		colorVar[] = {0.1,0.1,0.1,0};
-		randomDirectionPeriodVar = 0;
-		randomDirectionIntensityVar = 0;
-		coreIntensity = 1;
-		coreDistance = 5;
-		damageTime = 0.25;
-		constantDistance = 1.5;
 		damageType = "Fire";
 	};
 	class Shadow_Smoke: Default
