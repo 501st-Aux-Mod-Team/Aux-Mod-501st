@@ -13,10 +13,10 @@
 #define SQD_SPECIFIC_NAME(rank,platoon,squad) SQD_SPECIFIC_MACRO_CONCAT_4(rank,_,platoon,squad)
 #define SQD_SPECIFIC_SQUAD_DISPLAY(platoon,squad) SQD_SPECIFIC_MACRO_CONCAT_3(platoon,-,squad)
 
-#define SQD_SPECIFIC_UNIFORM_SINGLE_CLASSDEF(role,rank,displayName,displayRank,platoon,squad) \
+#define SQD_SPECIFIC_UNIFORM_SINGLE_CLASSDEF(role,rank,inDisplayName,displayRank,platoon,squad) \
 class macro_new_uniform_class(role,SQD_SPECIFIC_NAME(rank,platoon,squad)): macro_new_uniform_class(role,rank) \
 { \
-	displayName = macro_quote([501st] displayName (displayRank) [SQD_SPECIFIC_SQUAD_DISPLAY(platoon,squad)]); \
+	displayName = macro_quote([501st] inDisplayName (displayRank) [SQD_SPECIFIC_SQUAD_DISPLAY(platoon,squad)]); \
 	class ItemInfo: ItemInfo \
 	{ \
 		uniformClass = macro_new_uniform_skin_class(role,SQD_SPECIFIC_NAME(rank,platoon,squad)); \
@@ -33,18 +33,17 @@ SQD_SPECIFIC_UNIFORM_PLT_CLASSDEF(role,rank,displayName,displayRank,2); \
 SQD_SPECIFIC_UNIFORM_PLT_CLASSDEF(role,rank,displayName,displayRank,3)
 
 #define SQD_SPECIFIC_SKIN_TEXTURE_BASE_PATH(texPath) SQD_SPECIFIC_MACRO_CONCAT(texPath,\Republic\clones\Infantry)
-#define SQD_SPECIFIC_SKIN_TEXTURE_UPPER_NAME(prefix,squad,platoon) SQD_SPECIFIC_MACRO_CONCAT_8(prefix,_,platoon,_squad,_armor_,upper,.,paa)
+#define SQD_SPECIFIC_SKIN_TEXTURE_UPPER_NAME(prefix,squad,platoon) SQD_SPECIFIC_MACRO_CONCAT_8(prefix,_,platoon,_,squad,_armor_,upper,.paa)
 #define SQD_SPECIFIC_SKIN_TEXTURE_LOWER_NAME(prefix) SQD_SPECIFIC_MACRO_CONCAT(prefix,_armor_lower.paa)
 #define SQD_SPECIFIC_SKIN_TEXTURE_UPPER(texPath,prefix,suffix,squad,platoon) SQD_SPECIFIC_MACRO_CONCAT_3(SQD_SPECIFIC_SKIN_TEXTURE_BASE_PATH(texPath),\,SQD_SPECIFIC_SKIN_TEXTURE_UPPER_NAME(prefix,squad,platoon))
 #define SQD_SPECIFIC_SKIN_TEXTURE_LOWER(texPath,prefix) SQD_SPECIFIC_MACRO_CONCAT_3(SQD_SPECIFIC_SKIN_TEXTURE_BASE_PATH(texPath),\,SQD_SPECIFIC_SKIN_TEXTURE_LOWER_NAME(prefix))
-#define SQD_SPECIFIC_TEXTURES(texPath,rank,rankRole,squad,platoon) { SQD_SPECIFIC_MACRO_ARR_2(SQD_SPECIFIC_MACRO_QUOTE(SQD_SPECIFIC_SKIN_TEXTURE_UPPER(texPath,rankRole,upper,squad,platoon)),SQD_SPECIFIC_MACRO_QUOTE(SQD_SPECIFIC_SKIN_TEXTURE_LOWER(texPath,rank))) }
+#define SQD_SPECIFIC_TEXTURES(texPath,rank,rankRole,squad,platoon) { SQD_SPECIFIC_MACRO_ARR_2(SQD_SPECIFIC_SKIN_TEXTURE_UPPER(texPath,rankRole,upper,squad,platoon),SQD_SPECIFIC_SKIN_TEXTURE_LOWER(texPath,rank)) }
 
 //RankRole refers to the mos, its used to determine the upper chestpiece, for GI rank and rankRole should be the same
 #define SQD_SPECIFIC_SKIN_SINGLE_CLASSDEF(role,rank,rankRole,platoon,squad,textureBasePath) \
-class macro_new_uniform_skin_class(role,SQD_SPECIFIC_NAME(rank,platoon,squad)): macro_new_uniform_skin_class(role,rank) \
+class macro_new_uniform_skin_class(role,SQD_SPECIFIC_NAME(rank,platoon,squad)): macro_new_uniform_skin_class(501_inf,recruit) \
 { \
-	hiddenSelectionsTextures[] = SQD_SPECIFIC_TEXTURES(textureBasePath,rank,rankRole,squad,platoon); \
-}
+	hiddenSelectionsTextures[] = SQD_SPECIFIC_TEXTURES(textureBasePath,rank,rankRole,squad,platoon); } 
 #define SQD_SPECIFIC_SKIN_PLT_CLASSDEF(role,rank,rankRole,platoon,textureBasePath) \
 SQD_SPECIFIC_SKIN_SINGLE_CLASSDEF(role,rank,rankRole,platoon,1,textureBasePath); \
 SQD_SPECIFIC_SKIN_SINGLE_CLASSDEF(role,rank,rankRole,platoon,2,textureBasePath); \
