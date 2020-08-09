@@ -72,6 +72,8 @@ class CfgWeapons
 	NEW_501_AB_HELM_JLTS(501st_Momentum_helmet,Momentum,Momentum.paa)
 	NEW_501_AB_HELM_JLTS(501st_Arcanist_helmet,Arcanist,Arcanist.paa)
 	NEW_501_AB_HELM_JLTS(501st_Soviet_helmet,Soviet,Soviet.paa)
+	NEW_501_AB_HELM_JLTS(501st_Ritter_helmet,Ritter,Ritter.paa)
+	NEW_501_AB_HELM_JLTS(501st_Aedan_helmet,Aedan,Aedan.paa)
 
 	
 
