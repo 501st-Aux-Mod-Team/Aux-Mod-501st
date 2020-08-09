@@ -71,6 +71,7 @@ class CfgAmmo
 class CfgMagazines
 {
 	class SmokeShell;
+	class EGLM;
 	class RD501_BlueShadow_Grenade: SmokeShell
 	{
 		model = "\thermalD\Dioxis.p3d";
@@ -85,6 +86,40 @@ class CfgMagazines
 			libTextDesc = "";
 		};
 	};
+	class RD501_emp_GL_x1_mag : EGLM
+{
+	ammo = "JLTS_grenade_emp_ammo";
+	author = "Dutch";
+	count = 1;
+	descriptionShort = "1Rnd EMP DC-15A Grenade";
+	displayName = "1 Rnd EMP DC-15A Grenades";
+	displayNameShort = "1Rnd EMP DC-15A";
+	initSpeed = 120;
+	mass = 50;
+	maxLeadSpeed = 25;
+	maxThrowHoldTime = 2;
+	maxThrowIntensityCoef = 1.4;
+	minThrowIntensityCoef = 0.3;
+	model = "\thermalD\EMP_Grenade_ammo.p3d";
+	modelSpecial = "";
+	nameSound = "";
+	picture = "\thermalD\flash_x_ca.paa";
+	quickReload = 0 ;
+	reloadAction = "";
+	scope = 2;
+	selectionFireAnim = "zasleh";
+	simulation = "ProxyMagazines";
+	type = 16;
+	useAction = 0;
+	useActionTitle = "";
+	value = 1;
+	weaponpoolavailable = 1;
+	weight = 0;
+	class InventoryPlacements;
+	class Library {
+		libTextDesc = "";
+	}
+};
 };
 class CfgWeapons
 {
