@@ -6,7 +6,9 @@ class macro_new_uniform_skin_class(opfor,B2_Armor): SWOP_B2_superdroid
         macro_unit_skin_textures\CIS\B2\rocket\ReskinB2_waist.paa,
         macro_unit_skin_textures\CIS\B2\rocket\ReskinB2_legs.paa
     };
-
+	JLTS_isDroid = 1; 
+    JLTS_hasEMPProtection = 0; 
+    JLTS_deathSounds = "DeathDroid"; 
     // armor = 18;
 	// armorStructural = 32;
 };
@@ -19,6 +21,9 @@ class macro_new_uniform_skin_class(opfor,B2_Aqua): SWOP_B2_superdroid
         macro_unit_skin_textures\CIS\B2\aqua\ReskinB2_waist_camo.paa,
         macro_unit_skin_textures\CIS\B2\aqua\ReskinB2_legs_camo.paa
     };
+	JLTS_isDroid = 1; 
+    JLTS_hasEMPProtection = 0; 
+    JLTS_deathSounds = "DeathDroid"; 
 };
 
 

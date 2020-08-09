@@ -79,9 +79,9 @@ class CfgMagazineWells
 			"3Rnd_SmokePurple_Grenade_shell",
 			"3Rnd_SmokeBlue_Grenade_shell",
 			"3Rnd_SmokeOrange_Grenade_shell",
-			"ACE_HuntIR_M203"
+			"ACE_HuntIR_M203",
+			"RD501_emp_GL_x1_mag"
 		};
-
 	
 	};
 

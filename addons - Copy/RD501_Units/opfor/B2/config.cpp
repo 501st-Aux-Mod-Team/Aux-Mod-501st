@@ -62,6 +62,9 @@ class cfgWeapons
 		picture = "\SWOP_droids\data\ico\B2ico.paa";
 		nakedUniform = "U_BasicBody";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		JLTS_isDroid = 1; 
+        JLTS_hasEMPProtection = 0; 
+        JLTS_deathSounds = "DeathDroid";
 		class ItemInfo: UniformItem
 		{
 			uniformModel = "-";
@@ -85,6 +88,9 @@ class cfgWeapons
 		picture = "\SWOP_droids\data\ico\B2ico.paa";
 		nakedUniform = "U_BasicBody";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		JLTS_isDroid = 1; 
+        JLTS_hasEMPProtection = 0; 
+        JLTS_deathSounds = "DeathDroid";
 		class ItemInfo: UniformItem
 		{
 			uniformModel = "-";
@@ -111,6 +117,9 @@ class cfgWeapons
 		hiddenSelectionsMaterials[] = {};
 		hiddenUnderwaterSelections[] = {};
 		hiddenUnderwaterSelectionsTextures[] = {};
+		JLTS_isDroid = 1; 
+        JLTS_hasEMPProtection = 0; 
+        JLTS_deathSounds = "DeathDroid";
 		class ItemInfo: UniformItem
 		{
 				uniformModel = "-";
