@@ -481,6 +481,10 @@ class CfgEditorSubcategories
 	{
 		displayname = "Static Ship Parts";
 	};
+	class 442_hallway
+	{
+		displayname = "Hallways";
+	};
 
 };
 
