@@ -67,5 +67,12 @@ class CfgWeapons
 		soundfly[] = {"\rd501_vehicle_weapons\_sounds\proton_torp.ogg",3,1,800};
 		magazines[] = {macro_new_mag(lgm,4)};
 	};
+	class macro_new_weapon(wynd,lgm1) : missiles_Jian
+	{
+		displayName = "Flashfire (LGM)";
+		displayNameShort = "Flashfire";
+		soundfly[] = {"\rd501_vehicle_weapons\_sounds\proton_torp.ogg",3,1,800};
+		magazines[] = {macro_new_mag(lgm,1)};
+	};
 }; 
 

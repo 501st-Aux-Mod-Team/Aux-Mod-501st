@@ -42,7 +42,7 @@ class CfgWeapons
 		weaponLockSystem=0;
 		magazines[]=
 		{
-			"RD501_generic_aircraft_cannon_green_x1000_mag"
+			macro_new_mag(generic_aircraft_gun_asg,3000)
 		};
 		magazineWell[]=
 		{

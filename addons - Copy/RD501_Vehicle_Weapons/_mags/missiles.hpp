@@ -31,3 +31,10 @@
 		displayName = "Flashfire WGM";	
 		displayNameShort = "Flashfire WGM";
 	};
+	class macro_new_mag(lgm,1) : 4Rnd_LG_Jian
+	{
+		ammo = macro_new_ammo(lgm)
+		displayName = "Flashfire WGM";	
+		displayNameShort = "Flashfire WGM";
+		count = 1;
+	};

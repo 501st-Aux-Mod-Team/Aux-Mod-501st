@@ -100,7 +100,7 @@ class CfgVehicles
 			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
 		//flight model
-		maxSpeed=1800;
+		maxSpeed=1100;
 		aileronSensitivity=0.41;
 		elevatorSensitivity=0.41;
 		airBrakeFrictionCoef=120;
@@ -174,21 +174,20 @@ class CfgVehicles
 	
 
 		weapons[] = {
+			macro_new_weapon(laser,v_wing),
 			macro_new_weapon(wynd,a2a),
-			macro_new_weapon(wynd,agm),
-			macro_new_weapon(wynd,ugm),
-			macro_basic_air_weapons,
-			macro_new_weapon(laser,v_wing)
+			macro_new_weapon(wynd,lgm1),
+			macro_basic_air_weapons
 		};
 		magazines[] = {
 		
 			macro_basic_air_mags,
-			macro_new_mag(generic_aircraft_cannon_green,1000),
-			macro_new_mag(generic_aircraft_cannon_green,1000),
+			macro_new_mag(generic_aircraft_gun_asg,3000),
 			macro_new_mag(a2a,4),
 			macro_new_mag(a2a,4),
-			macro_new_mag(agm,6),
-			macro_new_mag(ugm,10)
+			macro_new_mag(a2a,4),
+			macro_new_mag(lgm,1)
+
 		};
 
 		class pilotCamera
