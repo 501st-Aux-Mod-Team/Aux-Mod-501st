@@ -25,7 +25,7 @@
 	class macro_new_mag(generic_aircraft_gun_asg,3000) : macro_new_mag(generic_aircraft_gun,1000)
 	{
 		displayNameShort = "AS Gun";
-		displayName = "Air Superiority Gun)";
+		displayName = "Air Superiority Gun";
 		ammo = macro_new_ammo(generic_aircraft_laser_gun_green);
 		count = 3000;
 	};
