@@ -31,3 +31,7 @@
 		displayName = "Flashfire WGM";	
 		displayNameShort = "Flashfire WGM";
 	};
+	class macro_new_mag(lgm,1) : macro_new_mag(lgm,4)
+	{
+		count = 1;
+	};
