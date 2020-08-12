@@ -143,7 +143,7 @@ class CfgVehicles
 	
 	class macro_new_vehicle(drone,Clone_Recon_bag):JLTS_UAV_prowler_gar_backpack
 	{
-		displayName="Hummingbird Recon Drone";
+		displayName="R-2 Drone Bag";
 		hiddenSelectionsTextures[]=
 		{
 			"\RD501_Vehicles\air\drones\Clone_backpack_uav.paa"
