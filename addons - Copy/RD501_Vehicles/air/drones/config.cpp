@@ -169,6 +169,22 @@ class CfgVehicles
             
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
         };
+		class ACE_Actions : ACE_Actions
+		{
+			class ACE_MainActions : ACE_MainActions
+			{
+				condition = macro_quote(true);
+				class RD501_Drone_Refuel
+				{
+					distance = 4;
+					displayName = "Refuel Drone";
+					condition = macro_quote(true);
+					statement = macro_quote(_this call macro_fnc_name(refuelUAVDrone));
+					position = macro_quote(call ace_interaction_fnc_getVehiclePos);
+
+				};
+			};
+		};
 		class assembleInfo
 		{
 			dissasembleTo[]=
@@ -434,7 +450,18 @@ class CfgVehicles
 	};
 	class macro_new_vehicle(drone,razor_recon):JLTS_UAV_prowler_gar
 	{
-		
+		class ACE_Actions : ACE_Actions
+		{
+			class ACE_MainActions : ACE_MainActions
+			{
+				class RD501_Drone_Refuel
+				{
+					displayName = "Refuel Drone";
+					condition = macro_quote(true);
+					statement = macro_quote(_this call macro_fnc_name(refuelUAVDrone));
+				};
+			};
+		};
 		displayName = "Hummingbird Recon Drone"
 		faction = macro_republic_faction
 		scope=2;

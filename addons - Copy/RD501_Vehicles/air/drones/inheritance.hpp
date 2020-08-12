@@ -9,7 +9,9 @@ class Weapon_Bag_Base: Bag_Base
 };
 class JLTS_UAV_prowler_gar : JLTS_UAV_prowler_base
 {
-	
+	class ACE_Actions{
+		class ACE_MainActions;
+	};
 };
 class O_UAV_01_F:UAV_01_base_F
 {
@@ -38,7 +40,10 @@ class SWOP_Rebel_Dio_Droid:B_UAV_01_F
 };
 class swclonerecondroid:B_UAV_01_F
 {
-	
+	class ACE_Actions
+	{
+		class ACE_MainActions;
+	};
 };
 
 class UAV;
