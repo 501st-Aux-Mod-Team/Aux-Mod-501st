@@ -120,7 +120,6 @@ class CfgGlasses
 		displayName = "Color Suppression Chip (Blue)";
 		author = DANKAUTHORS;
 		picture = "RD501_Units\textures\icons\no_blue.paa"
-		icon = "RD501_Units\textures\icons\no_blue.paa"
 		scope = 2;
 		scopeCurator = 2;
 		scopeArsenal = 2;
@@ -139,14 +138,12 @@ class CfgGlasses
 	{
 		displayName = "Color Suppression Chip (Red)";
 		picture = "RD501_Units\textures\icons\no_red.paa"
-		icon = "RD501_Units\textures\icons\no_red.paa"
 		ace_color[] = {-150.0,0.0,0.0};
 	}
 	class macro_new_glass(remove_green): macro_new_glass(remove_blue)
 	{
 		displayName = "Color Suppression Chip (Green)";
 		picture = "RD501_Units\textures\icons\no_green.paa"
-		icon = "RD501_Units\textures\icons\no_green.paa"
 		ace_color[] = {0.0,-100.0,0.0};
 	}
 };

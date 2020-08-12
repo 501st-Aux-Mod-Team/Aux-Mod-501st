@@ -15,7 +15,7 @@
 	#define UNDERSCORE_CONCAT(var1,var2) ##var1##_##var2
 	// #define CONCAT(var1,var2) ##var1##var2
 	#define ADDON_NICE Research & Development 501
-	#define DANKAUTHORS Namenai, Rexi, Zatama
+	#define DANKAUTHORS RD501
 
 	//Adds the mod prefix to watever, used for classnames and such
 	#define ADD_PREFIX(NAME)UNDERSCORE_CONCAT(MODNAME,NAME)
