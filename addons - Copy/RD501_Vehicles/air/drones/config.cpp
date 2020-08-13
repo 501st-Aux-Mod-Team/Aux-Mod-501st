@@ -165,16 +165,19 @@ class CfgVehicles
         fuelCapacity = 90;
         fuelConsumptionRate = 1;
 		faction = macro_republic_faction
-		class EventHandlers {
-            
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
+/*		model = "\SW_CloneWarsWeapons\Recon\swclonerecon.p3d";
+		hiddenSelections[]=
+        {
+            "camo"
         };
-		class ACE_Actions : ACE_Actions
-		{
-			class ACE_MainActions : ACE_MainActions
-			{
+        hiddenSelectionsTextures[]=
+        {
+            "\SW_CloneWarsWeapons\Recon\com_weap_probedroid.paa"
+        };*/
+		 class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
 				condition = macro_quote(true);
-				class RD501_Drone_Refuel
+                class RD501_Drone_Refuel
 				{
 					distance = 4;
 					displayName = "Refuel Drone";
@@ -183,8 +186,8 @@ class CfgVehicles
 					position = macro_quote(call ace_interaction_fnc_getVehiclePos);
 
 				};
-			};
-		};
+            };
+        };
 		class assembleInfo
 		{
 			dissasembleTo[]=
@@ -448,20 +451,8 @@ class CfgVehicles
 			assembleTo = macro_new_vehicle(drone,razor_recon)
 		};
 	};
-	class macro_new_vehicle(drone,razor_recon):JLTS_UAV_prowler_gar
+	class macro_new_vehicle(drone,razor_recon): JLTS_UAV_prowler_gar
 	{
-		class ACE_Actions : ACE_Actions
-		{
-			class ACE_MainActions : ACE_MainActions
-			{
-				class RD501_Drone_Refuel
-				{
-					displayName = "Refuel Drone";
-					condition = macro_quote(true);
-					statement = macro_quote(_this call macro_fnc_name(refuelUAVDrone));
-				};
-			};
-		};
 		displayName = "Hummingbird Recon Drone"
 		faction = macro_republic_faction
 		scope=2;
@@ -470,7 +461,7 @@ class CfgVehicles
 		altNoForce = 1100;
 		hiddenSelectionsTextures[]=
 		{
-			"\MRC\JLTS\drones\prowler1000\data\prowler_co.paa"
+			"\RD501_Vehicles\air\drones\prowler_co.paa"
 		};
 		class assembleInfo
 		{
