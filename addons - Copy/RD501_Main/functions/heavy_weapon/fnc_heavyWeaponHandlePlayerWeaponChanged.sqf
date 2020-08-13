@@ -1,10 +1,10 @@
 params ["_unit", "_weapon"];
-systemChat "Handling Weapon Swap";
-if(_weapon == "" && !isForcedWalk _unit) exitWith { systemChat "No Weapon"; };
+diag_log "Handling Weapon Swap";
+if(_weapon == "" && !isForcedWalk _unit) exitWith { diag_log "No Weapon"; };
 
 private _fn_unForceWalk = {
 	params["_target"];
-	systemChat "Unforce Walk";
+	diag_log "Unforce Walk";
 	_target setVariable ["RD501_FORCE_WALK", false];
 	_target forceWalk false;
 };
@@ -17,7 +17,7 @@ if(_weapon == "" && _forceWalk) exitWith {
 
 private _fn_forceWalk = {
 	params["_target"];
-	systemChat "Force Walk";
+	diag_log "Force Walk";
 	_target setVariable ["RD501_FORCE_WALK", true];
 	_target forceWalk true;
 };
