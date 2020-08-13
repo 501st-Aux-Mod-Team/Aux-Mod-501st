@@ -1,15 +1,23 @@
-class ACE_Actions;
-class ACE_MainActions;
 class Air;
 class Helicopter: Air {
-    
+    class ACE_Actions
+	{
+		class ACE_MainActions { }
+	}
 };
 class Helicopter_Base_F:Helicopter {
-    
+	class ACE_Actions : ACE_Actions
+	{
+		class ACE_MainActions : ACE_MainActions { }
+	}
 };
 class UAV_01_base_F:Helicopter_Base_F 
 {
 	
+	class ACE_Actions : ACE_Actions
+	{
+		class ACE_MainActions : ACE_MainActions { }
+	}
 };
 class JLTS_UAV_prowler_gar_backpack;
 class Bag_Base;
@@ -46,7 +54,10 @@ class SWOP_Rebel_Dio_Droid:B_UAV_01_F
 };
 class swclonerecondroid: UAV_01_base_F
 {
-	
+	class ACE_Actions : ACE_Actions
+	{
+		class ACE_MainActions : ACE_MainActions { }
+	}
 };
 
 class UAV;

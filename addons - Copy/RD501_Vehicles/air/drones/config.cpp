@@ -154,6 +154,7 @@ class CfgVehicles
 			assembleTo = macro_new_vehicle(drone,Clone_Recon_Droid)
 		};
 	};
+	#define ARR_2(a,b) a,b
 	class macro_new_vehicle(drone,Clone_Recon_Droid): swclonerecondroid
 	{
 		author = "RD501";
@@ -164,7 +165,7 @@ class CfgVehicles
         altNoForce = 1000;
         fuelCapacity = 90;
         fuelConsumptionRate = 1;
-		faction = macro_republic_faction
+		faction = macro_republic_faction;
 /*		model = "\SW_CloneWarsWeapons\Recon\swclonerecon.p3d";
 		hiddenSelections[]=
         {
@@ -179,12 +180,11 @@ class CfgVehicles
 				condition = macro_quote(true);
                 class RD501_Drone_Refuel
 				{
-					distance = 4;
 					displayName = "Refuel Drone";
-					condition = macro_quote(true);
-					statement = macro_quote(_this call macro_fnc_name(refuelUAVDrone));
+					distance = 4;
+					condition = macro_quote([ARR_2(_player,_target)] call macro_fnc_name(canRefuel));
+					statement = macro_quote([ARR_2(_player,_target)] call macro_fnc_name(refuelUAVDrone));
 					position = macro_quote(call ace_interaction_fnc_getVehiclePos);
-
 				};
             };
         };

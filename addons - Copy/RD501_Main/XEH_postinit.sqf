@@ -6,3 +6,4 @@
 	sleep 0.5;
 	call compile preprocessFileLineNumbers 'macro_mod_script_path\jumppack\jumppack_effects.sqf';
 };
+RD501_DRONE_BATTERY = "lightsaberG_swing";

@@ -87,3 +87,4 @@ macro_prep_xeh(medical_notification\add_med_notification.sqf,add_med_notificatio
 //R-2 Recon Drone
 macro_prep_xeh(infantry_uav\fnc_getRefuelMagazine.sqf,getRefuelMagazine)
 macro_prep_xeh(infantry_uav\fnc_refuelUAVDrone.sqf,refuelUAVDrone)
+macro_prep_xeh(infantry_uav\fnc_canRefuel.sqf,canRefuel)
