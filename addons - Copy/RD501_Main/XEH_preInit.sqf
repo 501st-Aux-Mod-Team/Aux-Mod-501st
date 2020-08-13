@@ -83,3 +83,5 @@ call compile preprocessFileLineNumbers 'macro_mod_script_path\add_radio_freq_sho
  ] call cba_settings_fnc_init;
  diag_log format["RD501_MedNotif[DEBUG]: %1", "Settings Added"];
 macro_prep_xeh(medical_notification\add_med_notification.sqf,add_med_notification)
+
+macro_prep_xeh(heavy_weapon\fnc_heavyWeaponHandlePlayerWeaponChanged.sqf,heavyWeaponHandlePlayerWeaponChanged)
