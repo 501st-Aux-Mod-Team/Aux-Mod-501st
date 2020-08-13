@@ -11,14 +11,16 @@ class CfgPatches
 		addonRootClass= macro_patch_name(weapons)
 		requiredAddons[]=
 		{
-			macro_patch_name(weapons)
+			macro_patch_name(weapons),
+			"3AS_Weapons"
 		};
 		requiredVersion=0.1;
 		units[]={};
 		weapons[]={
 			macro_new_weapon_nofam(Z6),
 			"SWOP_Valken38XAuto_XD",
-			macro_new_weapon(chaingun,z6x)
+			macro_new_weapon(chaingun,z6x),
+			macro_new_weapon(Z1000)
 		};
 	};
 };
@@ -101,7 +103,23 @@ class cfgWeapons
 		};
 
 	};
-
+	class Launcher;
+	class Launcher_Base_F: Launcher
+	{
+		
+	};
+	class 3AS_Chaingun: Launcher_Base_F
+	{
+		class WeaponSlotsInfo;
+	};
+	class macro_new_weapon(z1000): 3AS_Chaingun
+	{
+		scope=2;
+		scopeArsenal=2;
+		displayName="Z1000 Chaingun";
+		_generalMacro="launch_RPG32_F";
+		
+	};
 	class SWOP_BlasterRifle_Base;
 	class SWOP_Valken38XAuto:SWOP_BlasterRifle_Base
 	{
