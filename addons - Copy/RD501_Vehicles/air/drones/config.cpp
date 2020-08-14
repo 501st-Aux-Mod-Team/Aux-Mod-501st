@@ -19,7 +19,11 @@ class CfgPatches
 		addonRootClass=macro_patch_name(vehicles)
 
 		requiredAddons[]=
-		{
+		{			
+			"A3_data_F",
+			"A3_anims_F",
+			"A3_weapons_F",
+			"A3_characters_F",
 			macro_patch_name(vehicles)
 		};
 		requiredVersion=0.1;
@@ -33,7 +37,10 @@ class CfgPatches
 			macro_new_vehicle(drone,Clone_Recon_Droid_ATTE),
 			macro_new_vehicle(drone,rep_stealth_fixedwing),
 			macro_new_vehicle(drone,cis_stealth_fixedwing),
-			macro_new_vehicle(drone,razor_stealth_fixedwing)
+			macro_new_vehicle(drone,razor_stealth_fixedwing),
+			macro_new_vehicle(drone,razor_recon),
+			macro_new_vehicle(drone,razor_recon_bag),
+			macro_new_vehicle(drone,Clone_Recon_bag)
 		};
 		weapons[]=
 		{
@@ -134,20 +141,60 @@ class CfgVehicles
         };
 	};
 	
-
+	class macro_new_vehicle(drone,Clone_Recon_bag):JLTS_UAV_prowler_gar_backpack
+	{
+		displayName="R-2 Drone Bag";
+		hiddenSelectionsTextures[]=
+		{
+			"\RD501_Vehicles\air\drones\Clone_backpack_uav.paa"
+		};
+		class assembleInfo: assembleInfo
+		{
+			displayName="R2 Drone Bag";
+			assembleTo = macro_new_vehicle(drone,Clone_Recon_Droid)
+		};
+	};
+	#define ARR_2(a,b) a,b
 	class macro_new_vehicle(drone,Clone_Recon_Droid): swclonerecondroid
 	{
 		author = "RD501";
 		scope=2
 		forceInGarage = 1;
-		displayName = "R-1 Recon Droid MK.II";
-		altFullForce = 1000;
-		altNoForce = 1100;
-		faction = macro_republic_faction
-		class EventHandlers {
-            
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
+		displayName = "R-2 Recon Droid";
+        altFullForce = 100;
+        altNoForce = 1000;
+        fuelCapacity = 90;
+        fuelConsumptionRate = 1;
+		faction = macro_republic_faction;
+/*		model = "\SW_CloneWarsWeapons\Recon\swclonerecon.p3d";
+		hiddenSelections[]=
+        {
+            "camo"
         };
+        hiddenSelectionsTextures[]=
+        {
+            "\SW_CloneWarsWeapons\Recon\com_weap_probedroid.paa"
+        };*/
+		 class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+				condition = macro_quote(true);
+                class RD501_Drone_Refuel
+				{
+					displayName = "Refuel Drone";
+					distance = 4;
+					condition = macro_quote([ARR_2(_player,_target)] call macro_fnc_name(canRefuel));
+					statement = macro_quote([ARR_2(_player,_target)] call macro_fnc_name(refuelUAVDrone));
+					position = macro_quote(call ace_interaction_fnc_getVehiclePos);
+				};
+            };
+        };
+		class assembleInfo
+		{
+			dissasembleTo[]=
+			{
+				macro_new_vehicle(drone,Clone_Recon_bag)
+			};
+		};
 	};
 	
 	class macro_new_vehicle(drone,Clone_Recon_Droid_ATTE):swclonerecondroid
@@ -390,5 +437,38 @@ class CfgVehicles
 		{};
 		class ViewOptics:ViewOptics
 		{};
+	};
+	class macro_new_vehicle(drone,razor_recon_bag):JLTS_UAV_prowler_gar_backpack
+	{
+		displayName="Hummingbird Recon Drone";
+		hiddenSelectionsTextures[]=
+		{
+			"\RD501_Vehicles\air\drones\Clone_backpack_uav.paa"
+		};
+		class assembleInfo: assembleInfo
+		{
+			displayName="Hummingbird Drone Bag";
+			assembleTo = macro_new_vehicle(drone,razor_recon)
+		};
+	};
+	class macro_new_vehicle(drone,razor_recon): JLTS_UAV_prowler_gar
+	{
+		displayName = "Hummingbird Recon Drone"
+		faction = macro_republic_faction
+		scope=2;
+		forceInGarage = 1;
+		altFullForce = 1000;
+		altNoForce = 1100;
+		hiddenSelectionsTextures[]=
+		{
+			"\RD501_Vehicles\air\drones\prowler_co.paa"
+		};
+		class assembleInfo
+		{
+			dissasembleTo[]=
+			{
+				macro_new_vehicle(drone,razor_recon_bag)
+			};
+		};
 	};
 };
