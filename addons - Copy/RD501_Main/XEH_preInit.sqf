@@ -83,3 +83,8 @@ call compile preprocessFileLineNumbers 'macro_mod_script_path\add_radio_freq_sho
  ] call cba_settings_fnc_init;
  diag_log format["RD501_MedNotif[DEBUG]: %1", "Settings Added"];
 macro_prep_xeh(medical_notification\add_med_notification.sqf,add_med_notification)
+
+//R-2 Recon Drone
+macro_prep_xeh(infantry_uav\fnc_getRefuelMagazine.sqf,getRefuelMagazine)
+macro_prep_xeh(infantry_uav\fnc_refuelUAVDrone.sqf,refuelUAVDrone)
+macro_prep_xeh(infantry_uav\fnc_canRefuel.sqf,canRefuel)
