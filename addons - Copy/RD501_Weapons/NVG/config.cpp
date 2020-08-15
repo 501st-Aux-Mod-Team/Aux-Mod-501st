@@ -188,5 +188,20 @@ class cfgWeapons
 		hiddenSelectionsTextures[] = {"SWOP_clones\data\spec\Spec2_co.paa"};
 		macro_thermal_nvg_default
  	};		
+	class macro_new_weapon(nvg,shock_trooper) : SWOP_NVChip2
+	{
+		visionMode[] = {"Normal"};
+		dlc = "rd501";
+		author= "RD501";
+		displayName = "Shock Trooper Chip";
+	};
+		class macro_new_weapon(nvg,shock_trooper_enhanced) : SWOP_NVChip2
+	{
+		visionMode[] = {"Normal","TI"};
+		thermalMode[] = {0,2};
+		dlc = "rd501";
+		author= "RD501";
+		displayName = "Shock Trooper Chip";
+	};
 };
 
