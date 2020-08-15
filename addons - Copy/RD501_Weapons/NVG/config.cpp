@@ -201,7 +201,7 @@ class cfgWeapons
 		thermalMode[] = {0,2};
 		dlc = "rd501";
 		author= "RD501";
-		displayName = "Shock Trooper Chip";
+		displayName = "Shock Trooper Enhanced Chip";
 	};
 };
 
