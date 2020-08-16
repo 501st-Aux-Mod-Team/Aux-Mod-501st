@@ -62,6 +62,9 @@ macro_prep_xeh(init\magna.sqf,magna_apply_skill)
 macro_prep_xeh(init\jam_sandwich.sqf,apply_jammer)
 macro_prep_xeh(init\aat.sqf,aatInit)
 
+//nightvision
+macro_prep_xeh(nightvision.sqf,nightvision)
+
 //HUD color
 macro_prep_xeh(hud_color_change.sqf,change_hud_color)
 

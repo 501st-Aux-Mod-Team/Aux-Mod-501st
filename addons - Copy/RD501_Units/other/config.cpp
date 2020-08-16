@@ -114,4 +114,36 @@ class CfgGlasses
 		Displayname="Stealth Balaclava (Dark)"
 		hiddenSelectionsTextures[] = {"rd501_units\textures\glasses\dark_mask_2.paa"};
 	}
+
+	class macro_new_glass(remove_blue): macro_new_glass(phase2_hud)
+	{
+		displayName = "Color Suppression Chip (Blue)";
+		author = DANKAUTHORS;
+		picture = "RD501_Units\textures\icons\no_blue.paa"
+		scope = 2;
+		scopeCurator = 2;
+		scopeArsenal = 2;
+		modelOptics="";
+
+		ace_color[] = {0.0,0.0,-200.0};
+		ace_tintAmount = 1;
+		ace_resistance = 1;
+		ace_protection = 0;
+		ACE_Overlay = "";
+		ace_overlayDirt = "";
+		ace_dustPath = "";
+		ACE_OverlayCracked = "";
+	}
+	class macro_new_glass(remove_red): macro_new_glass(remove_blue)
+	{
+		displayName = "Color Suppression Chip (Red)";
+		picture = "RD501_Units\textures\icons\no_red.paa"
+		ace_color[] = {-150.0,0.0,0.0};
+	}
+	class macro_new_glass(remove_green): macro_new_glass(remove_blue)
+	{
+		displayName = "Color Suppression Chip (Green)";
+		picture = "RD501_Units\textures\icons\no_green.paa"
+		ace_color[] = {0.0,-100.0,0.0};
+	}
 };
