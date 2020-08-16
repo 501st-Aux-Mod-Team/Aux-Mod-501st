@@ -6,3 +6,6 @@
 	sleep 0.5;
 	call compile preprocessFileLineNumbers 'macro_mod_script_path\jumppack\jumppack_effects.sqf';
 };
+
+// Add nightvision event handler
+call macro_fnc_name(nightvision);
