@@ -28,8 +28,8 @@ macro_grp_fnc_name(nightvision,switch_off) = {
 
 //handle button press
 macro_grp_fnc_name(nightvision,handle_switch) = {
-    _RD501_isNV = player getVariable["RD501_isNV","false"];
-    _RD501_NV_on = player getVariable["RD501_NV_on","false"];
+    _RD501_isNV = player getVariable["RD501_isNV",false];
+    _RD501_NV_on = player getVariable["RD501_NV_on",false];
     if (_RD501_isNV && !_RD501_NV_on) then {
         call macro_grp_fnc_name(nightvision,switch_on);
     } else {
