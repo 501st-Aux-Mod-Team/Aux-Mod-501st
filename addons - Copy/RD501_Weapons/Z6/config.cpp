@@ -108,11 +108,23 @@ class cfgWeapons
     {
         scope=2;
         scopeArsenal=2;
+		reloadAction="broken";
         displayName="Z1000 Chaingun";
         _generalMacro="launch_RPG32_F";
 		magazines[]=
 		{
 			macro_new_mag(z1000,3000)
+		};
+    };
+	class macro_new_weapon_nofam(z1000u): 3AS_Chaingun
+    {
+        scope=1;
+        scopeArsenal=1;
+        displayName="Z1000 Chaingun(Used)";
+        _generalMacro="launch_RPG32_F";
+		magazines[]=
+		{
+			"none"
 		};
     };
 	class SWOP_BlasterRifle_Base;

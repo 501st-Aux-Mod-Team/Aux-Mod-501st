@@ -513,9 +513,12 @@ class CfgMagazines
 	class macro_new_mag(z1000,3000) : 3AS_Chaingun_Drum_Mag
 	{
 		count = 3000;
+		tracersEvery=1;
 		ammo = macro_new_ammo(z1000)
 		displayName="3000Rnd Z1000 Chaingun Drum";
-		initSpeed=400;
+		initSpeed=860;
+		weight=400;
+		scope=1;
 	};
 	
 };
@@ -1018,7 +1021,9 @@ class CfgAmmo
 	class macro_new_ammo(z1000) : 3AS_Chaingun_Ammo
 	{
 		hit=57.45;
-		caliber=8;
+		caliber=3.5999999;
+		typicalSpeed=860;
+		model="\A3\Weapons_f\Data\bullettracer\tracer_green";
 	};
 	
 
