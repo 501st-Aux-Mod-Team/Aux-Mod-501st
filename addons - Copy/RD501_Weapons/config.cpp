@@ -509,6 +509,14 @@ class CfgMagazines
 		tracersEvery = 100;
 		ACE_isBelt = 1;
 	};
+	class 3AS_Chaingun_Drum_Mag;
+	class macro_new_mag(z1000,3000) : 3AS_Chaingun_Drum_Mag
+	{
+		count = 3000;
+		ammo = macro_new_ammo(z1000)
+		displayName="3000Rnd Z1000 Chaingun Drum";
+		initSpeed=400;
+	};
 	
 };
 
@@ -534,6 +542,7 @@ class CfgAmmo
 	class A_RocketHH15Clone_HEAT_FireForget;
 	class M_Titan_AA;
 	class DH17_Blaster_Ammo;
+	class 3AS_Chaingun_Ammo;
 
 	class macro_new_ammo(westar_35):SWOP_DC17_Ammo
 	{
@@ -1005,6 +1014,11 @@ class CfgAmmo
 			frequency = 20;
 			distance = 1;
 		};
+	};
+	class macro_new_ammo(z1000) : 3AS_Chaingun_Ammo
+	{
+		hit=57.45;
+		caliber=8;
 	};
 	
 
