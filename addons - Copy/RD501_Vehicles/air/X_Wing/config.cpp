@@ -49,19 +49,9 @@ class CfgVehicles
 	
 	class swop_xw:Plane_Base_F
 	{
-	
-		class EventHandlers
-		{
-			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-			init = "[_this select 0] execVM '\XT\init.sqf';[_this select 0] execVM '\XT\initturbine.sqf';";
-			killed = "_this call (uinamespace getvariable 'BIS_fnc_effectKilled');";
-			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
-		};
 		class ACE_SelfActions;
 	};
-	
-	
-	
+
 	class swop_xwt70:Plane_Base_F
 	{
 		scope=0;
@@ -74,6 +64,7 @@ class CfgVehicles
 		};
 		class ACE_SelfActions;
 	};
+
 	class swop_xwt70bo:swop_xwt70
 	{
 		scope=0;
@@ -81,8 +72,6 @@ class CfgVehicles
 
 		};
 	};
-
-
 
 	class macro_new_vehicle(X_wing,T_65_MkII) : swop_xw
 	{
@@ -98,8 +87,7 @@ class CfgVehicles
 		displayname = "X-Wing T-65 Mk.II";
 
 		class ACE_SelfActions:ACE_SelfActions
-		{		
-			
+		{
 			#include "../../common/universal_hud_color_changer.hpp"
 		};
 
@@ -158,16 +146,7 @@ class CfgVehicles
 				shortcut = "";
 				statement = "this animate [""wing_1_up_A"",1];this animate [""wing_2_up_A"",1];this animate [""wing_1_down_A"",1];this animate [""wing_2_down_A"",1]; this say3d ""xwing_foldwing_sound""";
 			};
-		};	
-		class EventHandlers
-		{
-			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-			init = "[_this select 0] execVM '\XT\init.sqf';[_this select 0] execVM '\XT\initturbine.sqf';";
-			killed = "_this call (uinamespace getvariable 'BIS_fnc_effectKilled');";
-			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
-
-
 
 		weapons[] = {
 			macro_new_weapon(wynd,a2a),
@@ -184,7 +163,6 @@ class CfgVehicles
 			macro_new_mag(agm,6),
 			macro_new_mag(ugm,10)
 		};
-		
 	};
 	
 	class macro_new_vehicle(X_wing,T_65_red5_MkII) : macro_new_vehicle(X_wing,T_65_MkII)
@@ -220,9 +198,9 @@ class CfgVehicles
 	class macro_new_vehicle(X_wing,T_70_MkII) : swop_xwt70
 	{
 		forceInGarage=1;
-		faction = macro_resistance_faction
-		editorSubcategory = macro_editor_cat_air(Resistance)
-		vehicleClass = macro_editor_vehicle_type_air(Resistance)
+		faction = macro_resistance_faction;
+		editorSubcategory = macro_editor_cat_air(Resistance);
+		vehicleClass = macro_editor_vehicle_type_air(Resistance);
 		scope = 2;
 		altFullForce = 6000;
 		airBrakeFrictionCoef = 80.4;
@@ -230,8 +208,7 @@ class CfgVehicles
 		armor = 300;
 		displayname = "X-Wing T-70 Mk.II";
 		class ACE_SelfActions:ACE_SelfActions
-		{		
-			
+		{
 			#include "../../common/universal_hud_color_changer.hpp"
 		};
 
@@ -290,16 +267,8 @@ class CfgVehicles
 				shortcut = "";
 				statement = "this animate [""wing_1_up_A"",1];this animate [""wing_2_up_A"",1];this animate [""wing_1_down_A"",1];this animate [""wing_2_down_A"",1]; this say3d ""xwing_foldwing_sound""";
 			};		
-		};	
-		class EventHandlers
-		{
-			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-			init = "[_this select 0] execVM '\XT\init.sqf';[_this select 0] execVM '\XT\initturbine.sqf';";
-			killed = "_this call (uinamespace getvariable 'BIS_fnc_effectKilled');";
-			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
 
-	
 		weapons[] = {
 			macro_new_weapon(wynd,a2a),
 			macro_new_weapon(wynd,agm),

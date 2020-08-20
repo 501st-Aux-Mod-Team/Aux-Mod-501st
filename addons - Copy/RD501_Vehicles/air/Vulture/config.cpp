@@ -38,12 +38,11 @@ class CfgPatches
 
 #include "../../common/sensor_templates.hpp"
 
-class CBA_Extended_EventHandlers_base;
 class CfgVehicles
 {
 	class Plane_Base_F;
 	class swop_vulture;
-	
+
 	class macro_new_vehicle(vulture,MKII) : swop_vulture
 	{
 		scope = 2;
@@ -62,7 +61,6 @@ class CfgVehicles
 		vehicleClass = macro_editor_vehicle_type_air(CIS)
 		class UserActions
 		{
-			
 			class AfterburnerOn
 			{
 				displayName = "<t color='#4C9900'>[Afterburner On]</t>";
@@ -87,11 +85,6 @@ class CfgVehicles
 				radius = 10;
 				onlyforplayer = 1;
 			};
-		};	
-		class EventHandlers
-		{
-			init = "[_this select 0] execVM '\vulture\init.sqf';[_this select 0] execVM '\vulture\initturbine.sqf';";
-			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
 		
 		weapons[] = {
@@ -105,5 +98,4 @@ class CfgVehicles
 		};
 		
 	};
-	
 };

@@ -61,14 +61,12 @@ class CfgVehicles
 		model = "\shut\sh_flyable.p3d";
 		picture = "\lamda\symb.paa";
 		class ACE_SelfActions:ACE_SelfActions
-		{		
-			
+		{
 			#include "../../common/universal_hud_color_changer.hpp"
 		};
 
 		#include "../../common/universal_mfd.hpp"
 		class EventHandlers {
-            
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
         };
 	};
@@ -78,8 +76,7 @@ class CfgVehicles
 		
 		transportSoldier = 30;
 		class ACE_SelfActions:ACE_SelfActions
-		{		
-			
+		{
 			#include "../../common/universal_hud_color_changer.hpp"
 		};
 
@@ -128,15 +125,8 @@ class CfgVehicles
 				radius = 50;
 				onlyforplayer = 1;
 			};
-		};	
-		class EventHandlers
-		{
-			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-			init = "[_this select 0] execVM '\MIlleniumFalcon\init.sqf';[_this select 0] execVM '\MIlleniumFalcon\initturbine.sqf';";
-			killed = "_this call (uinamespace getvariable 'BIS_fnc_effectKilled');";
-			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
-		
+
 		weapons[] = {
 			macro_new_weapon(wynd,a2a),
 			macro_new_weapon(wynd,agm),

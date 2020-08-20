@@ -15,28 +15,28 @@
 
     _disable_sim_time=60;
     _time_of_select=time;
-   
+
     //First w8 until simulation is enabled,check every X seconds. If Y seconds has passed,dont apply script
     waitUntil {
-      sleep 0.25; 
+      sleep 0.25;
       ((simulationEnabled _vic) || ((time-_time_of_select)>_disable_sim_time))
     };
 
     //If its been in disabled simulation for 60 seconds, dont put turrets
     if((time-_time_of_select)>_disable_sim_time) exitWith {};
-      
+
     //if no crew,exit
     if(count(crew _vic) ==0) exitWith {};
-   
+
     //if not the server,exit
     if (!isServer) exitWith {};
-      
+
     //we put in a delay to allow vehicle to be placed
     sleep 2;
     
     //We check if the vehicle still exists after that X second sleep, incase zeus delets it.
     if(!(alive _vic)) exitWith{};
-  
+
     //First we make the vehicle invincible to prevent damage
     _vic allowDamage false;
 

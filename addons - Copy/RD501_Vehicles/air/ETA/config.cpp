@@ -12,7 +12,6 @@
 
 #define new_eta_class(name) vehicle_classname##_##name
 
-
 class CfgPatches
 {
 	class macro_patch_name(ETA)
@@ -32,8 +31,9 @@ class CfgPatches
 			macro_new_vehicle(eta,yellow_Mk2),
 			macro_new_vehicle(eta,blue_Mk2),
 			macro_new_vehicle(eta,grey_Mk2),
-			macro_new_vehicle(eta,black_Mk2),
-			macro_new_vehicle(eta,white_Mk2)
+			macro_new_vehicle(eta,white_Mk2),
+			macro_new_vehicle(eta,orange_Mk2),
+			macro_new_vehicle(eta,venom_Mk2)
 		};
 		weapons[]=
 		{
@@ -44,32 +44,15 @@ class CfgPatches
 
 
 #include "../../common/sensor_templates.hpp"
-class CBA_Extended_EventHandlers_base;
-
 class CfgVehicles
 {
-	class Plane;
-	class Plane_Base_F:Plane
-	{
-		class EventHandlers;
-	};
-
-	
-
+	class Plane_Base_F;
 	class swop_eta2:Plane_Base_F
 	{
-	
-		class EventHandlers
-		{
-			
-			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
-		};
 		class ACE_SelfActions;
-		
 	};
 
-
-	class macro_new_vehicle(eta,lime_Mk2):swop_eta2
+	class macro_new_vehicle(eta,lime_Mk2): swop_eta2
 	{
 		side=1;
 		scope=2;
@@ -89,7 +72,6 @@ class CfgVehicles
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat_air(Republic_vtol)
 		vehicleClass = macro_editor_vehicle_type_air(Republic)
-		
 
 		gearsUpFrictionCoef = 25;
 		class UserActions
@@ -147,11 +129,9 @@ class CfgVehicles
 			
 			#include "../../common/universal_dmg_report.hpp"
 		};
-		
 
 		class ACE_SelfActions:ACE_SelfActions
-		{		
-			
+		{
 			#include "../../common/universal_hud_color_changer.hpp"
 		};
 
@@ -165,14 +145,12 @@ class CfgVehicles
 			macro_new_weapon(generic,republic_aircraft_cannon)
 		};
 		magazines[] = {
-		
 			macro_basic_air_mags,
 			macro_new_mag(generic_aircraft_cannon_green,1000),
 			macro_new_mag(generic_aircraft_cannon_green,1000),
 			macro_new_mag(a2a,4),
 			macro_new_mag(agm,6),
 			macro_new_mag(ugm,10)
-
 		};
 		hiddenSelections[] = {"camo1","camo2"};
 		hiddenSelectionsMaterials[] = {"eta2\eta2main.rvmat","Delta7\Delta7astro.rvmat"};
@@ -325,14 +303,19 @@ class CfgVehicles
 		displayname = "ETA-3 (Grey) Mk.II";
 		hiddenSelectionsTextures[] = {"eta2\eta2_base_custom2_co.paa","eta2\t_yodasstarfighter_r2d2_co.paa"};
 	};
-	class macro_new_vehicle(eta,black_Mk2) : macro_new_vehicle(eta,lime_Mk2)
-	{
-		displayname = "ETA-3 (Black) Mk.II";
-		hiddenSelectionsTextures[] = {"\RD501_Vehicles\textures\LAAT\krayt_black_red\laatkraytbodyblackred.paa","\RD501_Vehicles\textures\LAAT\krayt_black_red\laatkraytbodyblackred.paa"};
-	};
 	class macro_new_vehicle(eta,white_Mk2) : macro_new_vehicle(eta,lime_Mk2)
 	{
 		displayname = "ETA-3 (N-7) Mk.II";
 		hiddenSelectionsTextures[] = {"\RD501_Vehicles\textures\eta\eta2_main_normandy_co.paa","eta2\t_yodasstarfighter_r2d2_co.paa"};
+	};
+	class macro_new_vehicle(eta,orange_Mk2) : macro_new_vehicle(eta,lime_Mk2)
+	{
+		displayname = "ETA-3 (Orange) Mk.II";
+		hiddenSelectionsTextures[] = {"\RD501_Vehicles\textures\eta\eta2_main_orange_co.paa","eta2\t_yodasstarfighter_r2d2_co.paa"};
+	};
+	class macro_new_vehicle(eta,poison_Mk2) : macro_new_vehicle(eta,lime_Mk2)
+	{
+		displayname = "ETA-3 (Venom) Mk.II";
+		hiddenSelectionsTextures[] = {"\RD501_Vehicles\textures\eta\eta2_main_venom_co.paa","eta2\t_yodasstarfighter_r2d2_co.paa"};
 	};
 };
