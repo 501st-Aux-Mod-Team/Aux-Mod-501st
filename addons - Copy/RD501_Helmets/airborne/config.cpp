@@ -74,6 +74,10 @@ class CfgWeapons
 	NEW_501_AB_HELM_JLTS(501st_Soviet_helmet,Soviet,Soviet.paa)
 	NEW_501_AB_HELM_JLTS(501st_Ritter_helmet,Ritter,Ritter.paa)
 	NEW_501_AB_HELM_JLTS(501st_Aedan_helmet,Aedan,Aedan.paa)
+	NEW_501_AB_HELM_JLTS(501st_Arthur_helmet,Arthur,Arthur.paa)
+	NEW_501_AB_HELM_JLTS(501st_Thade_helmet,Thade,Thade.paa)
+	NEW_501_AB_HELM_JLTS(501st_Oneill_helmet,Oneill,Oneill.paa)
+	NEW_501_AB_HELM_JLTS(501st_Monty_helmet,Monty,Monty.paa)
 
 	
 

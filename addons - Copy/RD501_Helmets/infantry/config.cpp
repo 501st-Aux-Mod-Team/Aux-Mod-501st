@@ -43,7 +43,6 @@ class CfgWeapons
 	NEW_501_Inf_Helm_JLTS(Snippy,Snippy,Snippy.paa)
 	NEW_501_Inf_Helm_JLTS(Spark,Spark,Spark.paa)
 	NEW_501_Inf_Helm_JLTS(Target,Target,Target.paa)
-	NEW_501_Inf_Helm_JLTS(Train,Train,Train.paa)
 	NEW_501_Inf_Helm_JLTS(Tupiks,Tupiks,Tupiks.paa)
 	NEW_501_Inf_Helm_JLTS(Vengeance,Vengeance,Vengeance.paa)
 	NEW_501_Inf_Helm_JLTS(Dobby,Dobby,Dobby.paa)
@@ -155,6 +154,9 @@ class CfgWeapons
 	NEW_501_Inf_Helm_JLTS(Walsh,Walsh,Walsh.paa)
 	NEW_501_Inf_Helm_JLTS(Stoanes,Stoanes,Stoanes.paa)
 	NEW_501_Inf_Helm_JLTS(Cruisie,Cruisie,Cruisie.paa)
+	NEW_501_Inf_Helm_JLTS(Trip,Trip,Trip.paa)
+	NEW_501_Inf_Helm_JLTS(Crebar,Crebar,Crebar.paa)
+	NEW_501_Inf_Helm_JLTS(Broad,Broad,Broad.paa)
 	NEW_501_ARC_Helm_JLTS(Duke,Duke,Duke.paa)
 	NEW_501_ARC_Helm_JLTS(Bronson,Bronson,Bronson.paa)
 	NEW_501_ARC_Helm_JLTS(Rayne,Rayne,Rayne.paa)
@@ -164,6 +166,5 @@ class CfgWeapons
 	NEW_501_ARC_Helm_JLTS(Brennan,Brennan,Brennan.paa)
 	NEW_501_ARC_Helm_JLTS(Korvus,Korvus,Korvus.paa)
 	NEW_501_ARC_Helm_JLTS(Darkstar,Darkstar,Darkstar.paa)
-	
-
+	NEW_501_ARC_Helm_JLTS(Train,Train,Train.paa)
 };
