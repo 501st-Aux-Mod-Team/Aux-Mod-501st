@@ -16,38 +16,46 @@ class CfgPatches
 		requiredVersion=0.1;
 		units[]={};
 		weapons[]={
-			macro_new_weapon(DC,15c),
+			macro_new_weapon(DC,15gl),
 		};
 	};
 };
 
 class CfgWeapons
 {
-	class 3AS_DC15C_Base_F;
-	class 3AS_DC15C_F:3AS_DC15C_Base_F
+	class JLTS_DC15A_ugl;
+	class JLTS_DC15A_ugl_plastic:JLTS_DC15A_ugl
 	{
-		class FullAuto;
 		class Single;
+		class EGLM;
 		class WeaponSlotsInfo
 		{
 		class CowsSlot;	
 		};
 	};
-	class macro_new_weapon(DC,15c):3AS_DC15C_F
+	class macro_new_weapon(DC,15gl):JLTS_DC15A_ugl_plastic
 	{
-		displayName="Republic DC-15C";
+		displayName="Republic DC-15A UGL";
 		magazines[]=
 		{
 			macro_new_mag(10mw,30)
 		};
-		class FullAuto:FullAuto
+		modes[] = {"Single", "Burst"};
+		class Single:Single
 		{
-			reloadTime=0.08;
+			reloadTime=0.1;
 		};
-		class Single : Single
+		class Burst : Single
 		{
-			reloadTime=0.08;
+			reloadTime=0.1;
+			burst=3;
+			textureType="burst";
 		};
+		class EGLM:EGLM
+	{
+		magazines[] = {};
+		magazineWell[] += {macro_new_magwell(GL_Mags)};
+	};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass = 30;

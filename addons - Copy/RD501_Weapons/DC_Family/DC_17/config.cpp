@@ -26,7 +26,7 @@ class CfgPatches
 
 class cfgWeapons 
 {
-	
+	class Mode_FullAuto;
 	class Pistol_Base_F;
 	class SWOP_DC17Pistol: Pistol_Base_F
 	{
@@ -101,7 +101,47 @@ class cfgWeapons
 		class Single;
 	};
 
-
+	class hgun_P07_F;
+	class JLTS_DC17SA:hgun_P07_F
+	{
+		class Single;
+	};
+	class macro_new_weapon(DC,r17):JLTS_DC17SA
+	{
+		displayName="Republic DC-17";
+		baseWeapon=macro_new_weapon(DC,r17)
+		magazines[]=
+		{
+			macro_new_mag(5mw,10)
+		};
+		class Single : Single
+		{
+			reloadTime=0.1;
+		};
+	};
+	class macro_new_weapon(DC,r17a):JLTS_DC17SA
+	{
+		displayName="Republic DC-17A";
+		baseWeapon=macro_new_weapon(DC,r17a)
+		magazines[]=
+		{
+			macro_new_mag(2mw,30)
+		};
+		modes[] = {"FullAuto"};
+		class FullAuto : Single
+		{
+			autoFire=1;
+			reloadTime=0.055;
+			displayName="$STR_DN_MODE_FULLAUTO";
+			textureType="fullAuto";
+			recoil="recoil_auto_primary_3outof10";
+			recoilProne="recoil_auto_primary_prone_3outof10";
+			aiDispersionCoefY=3;
+			aiDispersionCoefX=2;
+			soundBurst=0;
+			burst=3;
+		};
+	};
 
 	class RD501_DC_15_RB:SWOP_DC15SAPistol
 	{

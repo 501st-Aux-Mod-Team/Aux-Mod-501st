@@ -18,6 +18,7 @@ class CfgPatches
 		units[]={};
 		weapons[]={
 			macro_new_weapon_nofam(Z6),
+			macro_new_weapon_nofam(rZ6),
 			"SWOP_Valken38XAuto_XD",
 			macro_new_weapon_nofam(Z1000)
 		};
@@ -103,14 +104,47 @@ class cfgWeapons
 		};
 
 	};
+	class LMG_Mk200_F;
+	class JLTS_Z6:LMG_Mk200_F
+	{
+		class manual;
+	};
+	class macro_new_weapon_nofam(rZ6):JLTS_Z6
+	{
+		scope=2;
+        scopeArsenal=2;
+		baseWeapon=macro_new_weapon_nofam(rZ6)
+        displayName="Republic Z6 Chaingun";
+		magazines[]=
+		{
+			macro_new_mag(10mw,400)
+		};
+		modes[] = {"manual", "Overcharge"};
+		class manual:manual
+		{
+		reloadTime=0.059;
+		};
+		class Overcharge:manual
+		{
+			dispersion = Z6_accuracy_burst
+			displayName = "Over Charge Auto";
+			recoil = "recoil_single_smg_02";
+			recoilProne = "recoil_single_prone_smg_02";
+			//reloadTime = 0.1;
+			reloadTime = Z6_burst_reload
+			//soundContinuous = 1;
+			burst = 25;
+			textureType = "fastAuto";
+		};
+
+	};
 	class 3AS_Chaingun;
     class macro_new_weapon_nofam(z1000): 3AS_Chaingun
     {
         scope=2;
         scopeArsenal=2;
 		reloadAction="broken";
-        displayName="Z1000 Chaingun";
-        _generalMacro="launch_RPG32_F";
+        displayName="Republic Z1000 Chaingun";
 		magazines[]=
 		{
 			macro_new_mag(z1000,3000)

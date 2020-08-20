@@ -5,7 +5,7 @@
 
 class CfgPatches
 {
-	class macro_patch_name(dc_15c)
+	class macro_patch_name(dc_15l)
 	{
 		author="RD501";
 		addonRootClass= macro_patch_name(weapons)
@@ -16,15 +16,15 @@ class CfgPatches
 		requiredVersion=0.1;
 		units[]={};
 		weapons[]={
-			macro_new_weapon(DC,15c),
+			macro_new_weapon(DC,15l),
 		};
 	};
 };
 
 class CfgWeapons
 {
-	class 3AS_DC15C_Base_F;
-	class 3AS_DC15C_F:3AS_DC15C_Base_F
+	class 3AS_DC15L_Base_F;
+	class 3AS_DC15L_F:3AS_DC15L_Base_F
 	{
 		class FullAuto;
 		class Single;
@@ -33,12 +33,12 @@ class CfgWeapons
 		class CowsSlot;	
 		};
 	};
-	class macro_new_weapon(DC,15c):3AS_DC15C_F
+	class macro_new_weapon(DC,15l):3AS_DC15L_F
 	{
-		displayName="Republic DC-15C";
+		displayName="Republic DC-15L";
 		magazines[]=
 		{
-			macro_new_mag(10mw,30)
+			macro_new_mag(20mw,240)
 		};
 		class FullAuto:FullAuto
 		{

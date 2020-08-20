@@ -1,11 +1,11 @@
 #define COMPONENT DC_15s
-#include "../../../RD501_main/config_macros.hpp"
-#include "../../_common/common.hpp"
+#include "../../RD501_main/config_macros.hpp"
+#include "../_common/common.hpp"
 
 
 class CfgPatches
 {
-	class macro_patch_name(dc_15c)
+	class macro_patch_name(valken38x)
 	{
 		author="RD501";
 		addonRootClass= macro_patch_name(weapons)
@@ -16,37 +16,33 @@ class CfgPatches
 		requiredVersion=0.1;
 		units[]={};
 		weapons[]={
-			macro_new_weapon(DC,15c),
+			macro_new_weapon_nofam(valken38x),
 		};
 	};
 };
 
 class CfgWeapons
 {
-	class 3AS_DC15C_Base_F;
-	class 3AS_DC15C_F:3AS_DC15C_Base_F
+	class 3AS_Valken38X_Base_F;
+	class 3AS_Valken38X_F:3AS_Valken38X_Base_F
 	{
-		class FullAuto;
 		class Single;
 		class WeaponSlotsInfo
 		{
 		class CowsSlot;	
 		};
 	};
-	class macro_new_weapon(DC,15c):3AS_DC15C_F
+	class macro_new_weapon_nofam(valken38x):3AS_Valken38X_F
 	{
-		displayName="Republic DC-15C";
+		displayName="Republic Valken 38X";
 		magazines[]=
 		{
-			macro_new_mag(10mw,30)
-		};
-		class FullAuto:FullAuto
-		{
-			reloadTime=0.08;
+			macro_new_mag(20mw,20),
+			macro_new_mag(30mw,10)
 		};
 		class Single : Single
 		{
-			reloadTime=0.08;
+			reloadTime=0.5;
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
@@ -56,7 +52,8 @@ class CfgWeapons
 				access = 1;
 				compatibleItems[] = 
 				{
-					macro_new_weapon(scope,dc_15a_acogtcw)
+					macro_new_weapon(scope,dc_15a_acogtcw),
+					macro_new_weapon(scope,valken_6_12x)
 				};
 
 			};

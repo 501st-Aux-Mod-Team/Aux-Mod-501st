@@ -33,6 +33,8 @@ class CfgWeapons
 	#include "_scopes/DC_15A_x4_acog.hpp"
 
 	#include "_scopes/DC_15A_LE_x4_x8.hpp"
+	
+	#include "_scopes/DC_15A_2-6x_acog.hpp"
 	class GrenadeLauncher;
 	// class Throw: GrenadeLauncher
 	// {
@@ -62,12 +64,15 @@ class CfgMagazineWells
 	
 		macro_new_magwell(GL_AP)[]=
 		{
-			macro_new_mag(AT_GL,2)
+			macro_new_mag(AT_GL,2),
+			macro_new_mag(UGL_AP,2)
 		};
 
 		macro_new_magwell(GL_HE)[]=
 		{
-			macro_new_mag(HE_GL,3)
+			macro_new_mag(HE_GL,3),
+			macro_new_mag(UGL_EMP,1),
+			macro_new_mag(UGL_HE,3)
 		};
 		
 		macro_new_magwell(smoke)[]=
@@ -79,8 +84,10 @@ class CfgMagazineWells
 			"3Rnd_SmokePurple_Grenade_shell",
 			"3Rnd_SmokeBlue_Grenade_shell",
 			"3Rnd_SmokeOrange_Grenade_shell",
-			"ACE_HuntIR_M203",
-			"RD501_emp_GL_x1_mag"
+			"ACE_HuntIR_M203"
+			
+			
+			
 		};
 	
 	};
@@ -166,7 +173,7 @@ class CfgMagazines
 
 	
 	#include "_mag/flare_mag.hpp"
-
+	class 1Rnd_HE_Grenade_shell;
 	class macro_new_mag(AT_GL,2): CA_Magazine
 	{
 		author = "RD501";
@@ -175,7 +182,7 @@ class CfgMagazines
 		displayName = "2 Rnd AP DC-15A Grenades";
 		displayNameShort = "2 Rnd AP DC-15A";
 		picture = "\A3\Weapons_f\Data\ui\gear_UGL_slug_CA.paa";
-		ammo = macro_new_ammo(GL_AT);
+		ammo = macro_new_ammo(GL_AT)
 		initSpeed = 220;//120;
 		count = 2;
 		nameSound = "";
@@ -189,7 +196,7 @@ class CfgMagazines
 		displayName = "3 Rnd HE DC-15A Grenades";
 		displayNameShort = "3 Rnd HE DC-15A";
 		count=3;
-		ammo = macro_new_ammo(GL_HE);
+		ammo = macro_new_ammo(GL_HE)
 		descriptionShort = "3Rnd HE DC-15A Grenade";
 		initSpeed = 120;
 	};
