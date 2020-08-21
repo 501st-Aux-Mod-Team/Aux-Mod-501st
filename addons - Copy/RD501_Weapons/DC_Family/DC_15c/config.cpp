@@ -22,7 +22,8 @@ class CfgPatches
 };
 
 class CfgWeapons
-{
+{	
+	class RD501_stun_muzzle;
 	class 3AS_DC15C_Base_F;
 	class 3AS_DC15C_F:3AS_DC15C_Base_F
 	{
@@ -39,6 +40,15 @@ class CfgWeapons
 		magazines[]=
 		{
 			macro_new_mag(10mw,30)
+		};
+		muzzles[]=
+		{
+			"this",
+			"Stun"
+		};
+		class Stun: RD501_stun_muzzle
+		{
+			displayName="High Energy StunMode";
 		};
 		class FullAuto:FullAuto
 		{

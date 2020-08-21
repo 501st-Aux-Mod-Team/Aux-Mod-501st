@@ -54,26 +54,43 @@ class CfgAmmo
 		typicalSpeed=500;
 		caliber=1.6;
 	};
+	class macro_new_ammo(20mwup) : 3AS_EC50_BluePlasma
+	{
+		hit=10;
+		airLock=1;
+		typicalSpeed=500;
+		indirectHit = 3;
+		indirectHitRange = 0.5;
+		explosive = 0.2;
+		caliber=0.6;
+	};
+	class macro_new_ammo(20mwdp) : 3AS_EC50_BluePlasma
+	{
+		hit=17;
+		airLock=1;
+		typicalSpeed=700;
+		caliber=2.8;
+	};
 	class macro_new_ammo(30mw) : 3AS_EC60_BluePlasma
 	{
-	hit=19;
-	airLock=1;
-	typicalSpeed=800;
-	caliber=2.2;
+		hit=19;
+		airLock=1;
+		typicalSpeed=800;
+		caliber=2.2;
 	};
 	class macro_new_ammo(40mw) : 3AS_EC70_BluePlasma
 	{
-	hit=35;
-	airLock=1;
-	typicalSpeed=1100;
-	caliber=2.8;
+		hit=35;
+		airLock=1;
+		typicalSpeed=1100;
+		caliber=2.8;
 	};
 	class macro_new_ammo(50mw) : 3AS_EC80_BluePlasma
 	{
-	hit=60;
-	airLock=1;
-	typicalSpeed=1100;
-	caliber=2.8;
+		hit=300;
+		airLock=1;
+		typicalSpeed=1100;
+		caliber=5;
 	};
 	class macro_new_ammo(UGL_HE): G_40mm_HE
 	{

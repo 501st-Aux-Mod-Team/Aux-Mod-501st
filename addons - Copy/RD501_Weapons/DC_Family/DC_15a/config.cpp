@@ -102,6 +102,7 @@ class cfgWeapons
 		};
 	}
 	class 3AS_DC15A_Base_F;
+	class RD501_stun_muzzle;
 	class 3AS_DC15A_F:3AS_DC15A_Base_F
 	{
 		class Single;
@@ -117,12 +118,22 @@ class cfgWeapons
 		reloadTime=0.1;
 		magazines[]=
 		{
-			macro_new_mag(20mw,20)
+			macro_new_mag(20mwup,20),
+			macro_new_mag(20mwdp,20)
+		};
+		muzzles[]=
+		{
+			"this",
+			"Stun"
+		};
+		class Stun: RD501_stun_muzzle
+		{
+			displayName="High Energy StunMode";
 		};
 		class Single:Single
 		{
 			reloadTime=0.1;						
-		}
+		};
 		class Burst:Burst
 		{
 			reloadTime=0.1;

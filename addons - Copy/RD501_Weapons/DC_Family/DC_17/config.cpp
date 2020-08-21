@@ -18,7 +18,9 @@ class CfgPatches
 		units[]={};
 		weapons[]={
 			macro_new_weapon(DC,17),
-			macro_new_weapon(DC,17a)
+			macro_new_weapon(DC,17a),
+			macro_new_weapon(DC,r17),
+			macro_new_weapon(DC,r17a)
 			
 		};
 	};
@@ -100,7 +102,7 @@ class cfgWeapons
 	{
 		class Single;
 	};
-
+	class RD501_stun_muzzle;
 	class hgun_P07_F;
 	class JLTS_DC17SA:hgun_P07_F
 	{
@@ -113,6 +115,15 @@ class cfgWeapons
 		magazines[]=
 		{
 			macro_new_mag(5mw,10)
+		};
+		muzzles[]=
+		{
+			"this",
+			"Stun"
+		};
+		class Stun: RD501_stun_muzzle
+		{
+			displayName="High Energy StunMode";
 		};
 		class Single : Single
 		{
@@ -128,6 +139,15 @@ class cfgWeapons
 			macro_new_mag(2mw,30)
 		};
 		modes[] = {"FullAuto"};
+		muzzles[]=
+		{
+			"this",
+			"Stun"
+		};
+		class Stun: RD501_stun_muzzle
+		{
+			displayName="High Energy StunMode";
+		};
 		class FullAuto : Single
 		{
 			autoFire=1;

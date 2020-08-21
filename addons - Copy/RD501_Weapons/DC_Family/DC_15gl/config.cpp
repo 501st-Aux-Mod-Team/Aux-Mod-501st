@@ -23,6 +23,7 @@ class CfgPatches
 
 class CfgWeapons
 {
+	class RD501_stun_muzzle;
 	class JLTS_DC15A_ugl;
 	class JLTS_DC15A_ugl_plastic:JLTS_DC15A_ugl
 	{
@@ -41,6 +42,15 @@ class CfgWeapons
 			macro_new_mag(10mw,30)
 		};
 		modes[] = {"Single", "Burst"};
+		muzzles[]=
+		{
+			"this",
+			"Stun"
+		};
+		class Stun: RD501_stun_muzzle
+		{
+			displayName="High Energy StunMode";
+		};
 		class Single:Single
 		{
 			reloadTime=0.1;

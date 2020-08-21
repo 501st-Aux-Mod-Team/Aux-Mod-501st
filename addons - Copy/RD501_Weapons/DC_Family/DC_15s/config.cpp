@@ -176,6 +176,7 @@ class cfgWeapons
 		hiddenSelectionsTextures[] = {"\SW_CloneWarsWeapons\DCrifles\textures\shCG.paa"};
 		baseWeapon = macro_new_weapon(DC,15s_shield_cg);
 	};
+	class RD501_stun_muzzle;
 	class 3AS_DC15S_Base_F;
 	class 3AS_DC15S_F:3AS_DC15S_Base_F
 	{
@@ -189,6 +190,15 @@ class cfgWeapons
 		magazines[]=
 		{
 			macro_new_mag(5mw,60)
+		};
+		muzzles[]=
+		{
+			"this",
+			"Stun"
+		};
+		class Stun: RD501_stun_muzzle
+		{
+			displayName="High Energy StunMode";
 		};
 		class Single:Single
 		{

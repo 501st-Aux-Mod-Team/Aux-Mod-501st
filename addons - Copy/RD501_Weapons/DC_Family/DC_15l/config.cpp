@@ -36,6 +36,7 @@ class CfgWeapons
 	class macro_new_weapon(DC,15l):3AS_DC15L_F
 	{
 		displayName="Republic DC-15L";
+		recoil="recoil_mk200";
 		magazines[]=
 		{
 			macro_new_mag(20mw,240)
