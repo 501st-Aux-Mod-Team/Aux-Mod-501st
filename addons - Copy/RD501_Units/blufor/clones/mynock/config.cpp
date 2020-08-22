@@ -297,8 +297,8 @@ class CfgVehicles
     // ------------------------------------------------------------------------------------
     // MYNOCK_MEDIC_UNIFORM_SKIN_CLASS(rank) macro_new_uniform_skin_class(501_myn_medic,rank)
 
-    #define MYNOCK_RTO_TEXTURE_UPPER(rank) MYNOCK_TEXTURE_UPPER(CONCAT_3(medic,_,rank))
-    #define MYNOCK_RTO_TEXTURE_LOWER(rank) MYNOCK_TEXTURE_LOWER(CONCAT_3(medic,_,rank))
+    #define MYNOCK_MEDIC_TEXTURE_UPPER(rank) MYNOCK_TEXTURE_UPPER(CONCAT_3(medic,_,rank))
+    #define MYNOCK_MEDIC_TEXTURE_LOWER(rank) MYNOCK_TEXTURE_LOWER(CONCAT_3(medic,_,rank))
     class MYNOCK_MEDIC_UNIFORM_SKIN_CLASS(cadet) : RD501_BASE_UNIFORM_SKIN
     {
         hiddenSelectionsTextures[] = {MYNOCK_MEDIC_TEXTURE_UPPER(cadet), MYNOCK_MEDIC_TEXTURE_LOWER(cadet)};
