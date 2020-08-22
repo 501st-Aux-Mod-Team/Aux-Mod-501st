@@ -292,6 +292,31 @@ class CfgVehicles
     {
         hiddenSelectionsTextures[] = {MYNOCK_TEXTURE_UPPER(vtrooper), MYNOCK_TEXTURE_LOWER(vtrooper)};
     };
+
+    // ------------------------------------------------------------------------------------
+    // TROOPER NCO SKINS
+    // ------------------------------------------------------------------------------------
+    
+    class MYNOCK_UNIFORM_SKIN_CLASS(corporal) : RD501_BASE_UNIFORM_SKIN
+    {
+        hiddenSelectionsTextures[] = {MYNOCK_TEXTURE_UPPER(corporal), MYNOCK_TEXTURE_LOWER(corporal)};
+    };
+    
+    class MYNOCK_UNIFORM_SKIN_CLASS(scorporal) : RD501_BASE_UNIFORM_SKIN
+    {
+        hiddenSelectionsTextures[] = {MYNOCK_TEXTURE_UPPER(scorporal), MYNOCK_TEXTURE_LOWER(scorporal)};
+    };
+
+    class MYNOCK_UNIFORM_SKIN_CLASS(sergeant) : RD501_BASE_UNIFORM_SKIN
+    {
+        hiddenSelectionsTextures[] = {MYNOCK_TEXTURE_UPPER(sergeant), MYNOCK_TEXTURE_LOWER(sergeant)};
+    };
+    
+    class MYNOCK_UNIFORM_SKIN_CLASS(ssergeant) : RD501_BASE_UNIFORM_SKIN
+    {
+        hiddenSelectionsTextures[] = {MYNOCK_TEXTURE_UPPER(ssergeant), MYNOCK_TEXTURE_LOWER(ssergeant)};
+    };
+
     // ------------------------------------------------------------------------------------
     // MEDIC SKINS
     // ------------------------------------------------------------------------------------
@@ -318,6 +343,21 @@ class CfgVehicles
     {
         hiddenSelectionsTextures[] = {MYNOCK_MEDIC_TEXTURE_UPPER(vtrooper), MYNOCK_MEDIC_TEXTURE_LOWER(vtrooper)};
     };
+
+    // ------------------------------------------------------------------------------------
+    // MEDIC NCO SKINS
+    // ------------------------------------------------------------------------------------
+    
+    class MYNOCK_UNIFORM_SKIN_CLASS(corporal) : RD501_BASE_UNIFORM_SKIN
+    {
+        hiddenSelectionsTextures[] = {MYNOCK_MEDIC_TEXTURE_UPPER(corporal), MYNOCK_MEDIC_TEXTURE_LOWER(corporal)};
+    };
+    
+    class MYNOCK_UNIFORM_SKIN_CLASS(scorporal) : RD501_BASE_UNIFORM_SKIN
+    {
+        hiddenSelectionsTextures[] = {MYNOCK_MEDIC_TEXTURE_UPPER(scorporal), MYNOCK_MEDIC_TEXTURE_LOWER(scorporal)};
+    };
+
     // ------------------------------------------------------------------------------------
     // RTO SKINS
     // ------------------------------------------------------------------------------------
@@ -344,6 +384,21 @@ class CfgVehicles
     {
         hiddenSelectionsTextures[] = {MYNOCK_RTO_TEXTURE_UPPER(vtrooper), MYNOCK_RTO_TEXTURE_LOWER(vtrooper)};
     };
+
+    // ------------------------------------------------------------------------------------
+    // RTO NCO SKINS
+    // ------------------------------------------------------------------------------------
+    
+    class MYNOCK_UNIFORM_SKIN_CLASS(corporal) : RD501_BASE_UNIFORM_SKIN
+    {
+        hiddenSelectionsTextures[] = {MYNOCK_RTO_TEXTURE_UPPER(corporal), MYNOCK_RTO_TEXTURE_LOWER(corporal)};
+    };
+    
+    class MYNOCK_UNIFORM_SKIN_CLASS(scorporal) : RD501_BASE_UNIFORM_SKIN
+    {
+        hiddenSelectionsTextures[] = {MYNOCK_RTO_TEXTURE_UPPER(scorporal), MYNOCK_RTO_TEXTURE_LOWER(scorporal)};
+    };
+
 };
 
 class CfgWeapons{
