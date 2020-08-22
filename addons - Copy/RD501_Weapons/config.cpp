@@ -24,6 +24,7 @@ class CfgPatches
 //scopes
 class CfgWeapons
 {
+	class Mode_SemiAuto;
 	class ItemCore;
 	class InventoryItem_Base_F;
 	class InventoryOpticsItem_Base_F;
@@ -33,20 +34,19 @@ class CfgWeapons
 	#include "_scopes/DC_15A_x4_acog.hpp"
 
 	#include "_scopes/DC_15A_LE_x4_x8.hpp"
-	class GrenadeLauncher;
-	// class Throw: GrenadeLauncher
-	// {
-	// 	muzzles[] += {"NICEMEME_MUZZLE"};
-	// 	class ThrowMuzzle;
-		
 	
-	// 	class NICEMEME_MUZZLE: ThrowMuzzle
-	// 	{
-	// 		displayName = "AYAYAYAYYA";
-	// 		magazines[] = {"smoke_meme_mag"};
-	// 	};
-		
-	// };
+	#include "_scopes/DC_15A_2-6x_acog.hpp"
+	
+	#include "_scopes/DC_15X_12_20x_scope.hpp"
+	class GrenadeLauncher;
+	class JLTS_stun_muzzle;
+	class RD501_stun_muzzle: JLTS_stun_muzzle
+	{
+		magazines[]=
+		{
+			macro_new_mag(stun,5)
+		};
+	};
 };
 
 class CfgMagazineWells
@@ -62,12 +62,15 @@ class CfgMagazineWells
 	
 		macro_new_magwell(GL_AP)[]=
 		{
-			macro_new_mag(AT_GL,2)
+			macro_new_mag(AT_GL,2),
+			macro_new_mag(UGL_AP,2)
 		};
 
 		macro_new_magwell(GL_HE)[]=
 		{
-			macro_new_mag(HE_GL,3)
+			macro_new_mag(HE_GL,3),
+			macro_new_mag(UGL_EMP,1),
+			macro_new_mag(UGL_HE,3)
 		};
 		
 		macro_new_magwell(smoke)[]=
@@ -79,8 +82,10 @@ class CfgMagazineWells
 			"3Rnd_SmokePurple_Grenade_shell",
 			"3Rnd_SmokeBlue_Grenade_shell",
 			"3Rnd_SmokeOrange_Grenade_shell",
-			"ACE_HuntIR_M203",
-			"RD501_emp_GL_x1_mag"
+			"ACE_HuntIR_M203"
+			
+			
+			
 		};
 	
 	};
@@ -166,7 +171,7 @@ class CfgMagazines
 
 	
 	#include "_mag/flare_mag.hpp"
-
+	class 1Rnd_HE_Grenade_shell;
 	class macro_new_mag(AT_GL,2): CA_Magazine
 	{
 		author = "RD501";
@@ -175,7 +180,7 @@ class CfgMagazines
 		displayName = "2 Rnd AP DC-15A Grenades";
 		displayNameShort = "2 Rnd AP DC-15A";
 		picture = "\A3\Weapons_f\Data\ui\gear_UGL_slug_CA.paa";
-		ammo = macro_new_ammo(GL_AT);
+		ammo = macro_new_ammo(GL_AT)
 		initSpeed = 220;//120;
 		count = 2;
 		nameSound = "";
@@ -189,7 +194,7 @@ class CfgMagazines
 		displayName = "3 Rnd HE DC-15A Grenades";
 		displayNameShort = "3 Rnd HE DC-15A";
 		count=3;
-		ammo = macro_new_ammo(GL_HE);
+		ammo = macro_new_ammo(GL_HE)
 		descriptionShort = "3Rnd HE DC-15A Grenade";
 		initSpeed = 120;
 	};
@@ -399,19 +404,6 @@ class CfgMagazines
 		initSpeed = 310;
 		author = "RD501";
 	};
-	class macro_new_mag(T21,25): CA_Magazine
-	{
-		author = "RD501";
-		scope = 2;
-		model = "\SW_ExtraWeapons\PICKUPS\energy_cell.p3d";
-		Displayname = "25Rnd R-T21 Mag";
-		ammo = macro_new_ammo(T21);
-		tracersevery = 1;
-		count = 25;
-		descriptionshort = "25Rnd R-T21 Mag";
-		mass = 20;
-		initspeed = 250;
-	};
 	class macro_new_mag(DC15a_LE,15): CA_Magazine
 	{
 		author = "RD501";
@@ -445,20 +437,6 @@ class CfgMagazines
 		initSpeed = 310;
 	};
 
-	class SWOP_Valken38Xauto_MagXXD: CA_Magazine
-	{
-		author = "RD501";
-		scope = 2;
-		model = "\SW_ExtraWeapons\PICKUPS\energy_cell.p3d";
-		picture = "\SW_ExtraWeapons\PICKUPS\UI\icons\energycell_X_ca.paa";
-		displayName = "400Rnd Valken38X Magazine";
-		tracersEvery = 1;
-		count = 400;
-		weight = 90;
-		initSpeed = 1700;
-		ammo = "valken_38xxd_ammo";
-		descriptionShort = "400Rnd Valken38X Blaster Magazine";
-	};
 
 	class SmokeShell;
 	class smoke_meme_mag: SmokeShell
@@ -491,23 +469,16 @@ class CfgMagazines
 		initSpeed = 310;
 	};
 
-	class RPG32_HE_F;
-	class macro_new_mag(chaingun_z6x,1000): RPG32_HE_F
-	{	
-		dlc = "RD501";
-		displayname = "Z6x 1000rnd Mag";
-		displaynameshort = "1000rnd Mag";
-		descriptionshort = "Z6x 1000rnd mag";
-		ammo = macro_new_ammo(chaingun_z6x);
-		// picture = "\OPTRE_weapons\rockets\icons\rocket.paa";
-		// model = "\OPTRE_Weapons\Rockets\M41_tube.p3d";
-		// modelSpecial = "\OPTRE_Weapons\Rockets\M41_launcher_loaded.p3d";
-		count = 1000;
-		mass = 100;
-		initSpeed = 550;
-		allowedSlots[] = {901, 701};
-		tracersEvery = 100;
-		ACE_isBelt = 1;
+	class 3AS_Chaingun_Drum_Mag;
+	class macro_new_mag(z1000,3000) : 3AS_Chaingun_Drum_Mag
+	{
+		count = 3000;
+		tracersEvery=1;
+		ammo = macro_new_ammo(z1000)
+		displayName="3000Rnd Z1000 Chaingun Drum";
+		initSpeed=860;
+		weight=400;
+		scope=1;
 	};
 	
 };
@@ -534,6 +505,7 @@ class CfgAmmo
 	class A_RocketHH15Clone_HEAT_FireForget;
 	class M_Titan_AA;
 	class DH17_Blaster_Ammo;
+	class 3AS_Chaingun_Ammo;
 
 	class macro_new_ammo(westar_35):SWOP_DC17_Ammo
 	{
@@ -831,16 +803,6 @@ class CfgAmmo
 	
 	};
 	
-	class macro_new_ammo(T21):SWOP_DC15SA_Ammo
-	{
-		hit = 55;
-		indirecthit = 25
-		indirecthitrange = 1
-		explosive = 1;
-		caliber = 10;
-		CraterEffects = "ExploAmmoLaserCrater";
-		timeToLive = 2;
-	};
 
 	class B_127x108_APDS;
 	class SW_iondisruptor_BlasterRifle_Ammo: B_127x108_APDS
@@ -848,15 +810,6 @@ class CfgAmmo
 		timeToLive = 2;
 	};
 
-	class valken_38xxd_ammo: SWOP_dc15xBlasterRifle_Ammo
-	{
-		hit = 55;
-		indirectHit = 0;
-		indirectHitRange = 0.00;
-		explosive = 0.0;
-		caliber = 10;
-		timeToLive = 4;
-	};
 	
 	class SmokeShell;
 	class smoke_meme: SmokeShell
@@ -867,144 +820,13 @@ class CfgAmmo
 	};
 
 	//LOOK HERE $$$
-	class M_NLAW_AT_F;
-	class ammo_Penetrator_Base;
-	class macro_new_ammo(chaingun_z6x_penetrator): ammo_Penetrator_Base
+
+	class macro_new_ammo(z1000) : 3AS_Chaingun_Ammo
 	{
-		hit = 30;
-		indirectHit = 0.0;
-		indirectHitRange = 0.0;
-		explosive = 0.0;
-		caliber = 2;
-		ACE_caliber = 0;
-		timeToLive = 6;
-		class HitEffects
-		{
-			Hit_Foliage_green="SWOP_LaserExploSmallblue2";
-			Hit_Foliage_Dead="SWOP_LaserExploSmallblue2";
-			Hit_Foliage_Green_big="SWOP_LaserExploSmallblue2";
-			Hit_Foliage_Palm="SWOP_LaserExploSmallblue2";
-			Hit_Foliage_Pine="SWOP_LaserExploSmallblue2";
-			hitFoliage="SWOP_LaserExploSmallblue2";
-			hitGlass="SWOP_LaserExploSmallblue2";
-			hitGlassArmored="SWOP_LaserExploSmallblue2";
-			hitWood="SWOP_LaserExploSmallblue2";
-			hitMetal="SWOP_LaserExploSmallblue2";
-			hitMetalPlate="SWOP_LaserExploSmallblue2";
-			hitBuilding="SWOP_LaserExploSmallblue2";
-			hitPlastic="SWOP_LaserExploSmallblue2";
-			hitRubber="SWOP_LaserExploSmallblue2";
-			hitTyre="SWOP_LaserExploSmallblue2";
-			hitConcrete="SWOP_LaserExploSmallblue2";
-			hitMan="SWOP_LaserExploSmallblue2";
-			hitGroundSoft="SWOP_LaserExploSmallblue2";
-			hitGroundRed="SWOP_LaserExploSmallblue2";
-			hitGroundHard="SWOP_LaserExploSmallblue2";
-			hitWater="SWOP_LaserExploSmallblue2";
-			hitVirtual="SWOP_LaserExploSmallblue2";
-			default_mat="SWOP_LaserExploSmallblue2";
-		};
-		coefGravity = 0.6;
-	};
-	class macro_new_ammo(chaingun_z6x): M_NLAW_AT_F
-	{	
-		hit = 32;
-		indirectHit = 20;
-		indirectHitRange = 0.1;
-		explosive = 0;
-		caliber = 2;
-		ACE_caliber = 0;
-		model = "\SWOP_Main\Effects\Tracer\laserblue";
-		effectFly = "SWOP_BlueLaserEffect";
-		cost = 500;
-		airFriction = 0;
-		sideairFriction = 0;
-		coefGravity = 0;
-		maxSpeed = 1050;
-		typicalSpeed = 1050;
-		initTime = 0.0;
-		thrustTime = 3.4;
-		thrust = 500;
-		fuseDistance = 0;
-		simulationStep = 0.02;
-		timeToLive = 4;
-		effectsMissile = "SWOP_BlueLaserEffect";
-		whistleDist = 20;
-		aiAmmoUsageFlags = "64 + 128 + 256 + 512";
-		submunitionAmmo = macro_new_ammo(chaingun_z6x_penetrator);
-		submunitionDirectionType = "SubmunitionModelDirection";
-		submunitionInitSpeed = 1000;
-		submunitionParentSpeedCoef = 0;
-		submunitionInitialOffset[] = {0,0,-0.2};
-		triggerOnImpact = 1;
-		deleteParentWhenTriggered = 0;
-		flightProfiles[] = {"Direct"};
-		CraterEffects = "ExploAmmoLaserCrater";
-		explosionEffects = "SWOP_LaserExploSmallblue2";
-		soundHit[] = {"A3\Sounds_F\arsenal\sfx\bullet_hits\concrete_01",1,1,150};
-		soundHit1[] = {"A3\Sounds_F\arsenal\sfx\bullet_hits\concrete_01",1,1,200};
-		soundHit2[] = {"A3\Sounds_F\arsenal\sfx\bullet_hits\concrete_01",1,1,200};
-		soundHit3[] = {"A3\Sounds_F\arsenal\sfx\bullet_hits\concrete_01",1,1,2000};
-		effectsSmoke = "SWOP_BlueLaserEffect";
-		explosionSoundEffect = "";
-		soundFly[] = {"",1,1,50};
-		muzzleEffect = "";
-		SoundSetExplosion[] = {""};
-		class HitEffects
-		{
-			Hit_Foliage_green = "SWOP_LaserExploSmallblue2";
-			Hit_Foliage_Dead = "SWOP_LaserExploSmallblue2";
-			Hit_Foliage_Green_big = "SWOP_LaserExploSmallblue2";
-			Hit_Foliage_Palm = "SWOP_LaserExploSmallblue2";
-			Hit_Foliage_Pine = "SWOP_LaserExploSmallblue2";
-			hitFoliage = "SWOP_LaserExploSmallblue2";
-			hitGlass = "SWOP_LaserExploSmallblue2";
-			hitGlassArmored = "SWOP_LaserExploSmallblue2";
-			hitWood = "SWOP_LaserExploSmallblue2";
-			hitMetal = "SWOP_LaserExploSmallblue2";
-			hitMetalPlate = "SWOP_LaserExploSmallblue2";
-			hitBuilding = "SWOP_LaserExploSmallblue2";
-			hitPlastic = "SWOP_LaserExploSmallblue2";
-			hitRubber = "SWOP_LaserExploSmallblue2";
-			hitTyre = "SWOP_LaserExploSmallblue2";
-			hitConcrete = "SWOP_LaserExploSmallblue2";
-			hitMan = "SWOP_LaserExploSmallblue2";
-			hitGroundSoft = "SWOP_LaserExploSmallblue2";
-			hitGroundRed = "SWOP_LaserExploSmallblue2";
-			hitGroundHard = "SWOP_LaserExploSmallblue2";
-			hitWater = "SWOP_LaserExploSmallblue2";
-			hitVirtual = "SWOP_LaserExploSmallblue2";
-			default_mat = "SWOP_LaserExploSmallblue2";
-		};
-		class Direct{};
-		class CamShakeExplode
-		{
-			power = 1;
-			duration = 1.4;
-			frequency = 20;
-			distance = 1;
-		};
-		class CamShakeHit
-		{
-			power = 1;
-			duration = 0.6;
-			frequency = 20;
-			distance = 1;
-		};
-		class CamShakeFire
-		{
-			power = 1;
-			duration = 1.2;
-			frequency = 20;
-			distance = 1;
-		};
-		class CamShakePlayerFire
-		{
-			power = 1;
-			duration = 0.1;
-			frequency = 20;
-			distance = 1;
-		};
+		hit=57.45;
+		caliber=3.5999999;
+		typicalSpeed=860;
+		model="\A3\Weapons_f\Data\bullettracer\tracer_green";
 	};
 	
 

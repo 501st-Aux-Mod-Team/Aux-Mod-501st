@@ -17,7 +17,8 @@ class CfgPatches
 		requiredVersion=0.1;
 		units[]={};
 		weapons[]={
-			macro_new_weapon(DC,15x)
+			macro_new_weapon(DC,15x),
+			macro_new_weapon(DC,r15x)
 			
 		};
 	};
@@ -62,7 +63,6 @@ class cfgWeapons
 
 	};
 
-
 	class macro_new_weapon(DC,15x):macro_new_weapon(DC,15x_base)
 	{	
 		displayName="DC-15 Xtreme Engagement";
@@ -97,10 +97,38 @@ class cfgWeapons
 		};
 
 	};
-
-
-
-
-	
+	class arifle_MX_Base_F;
+	class JLTS_DC15X: arifle_MX_Base_F
+	{
+		class Single;
+		class WeaponSlotsInfo
+		{
+			class CowsSlot;
+		};
+	};
+	class macro_new_weapon(DC,r15x):JLTS_DC15X
+	{
+		displayName="Republic DC-15X";
+		baseWeapon=macro_new_weapon(DC,r15x)
+		magazines[]=
+		{
+			macro_new_mag(40mw,5)
+		};
+		class Single:Single
+		{
+			reloadTime=1.5;
+			dispersion=0.0003;
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			class CowsSlot: CowsSlot
+			{
+				compatibleItems[]=
+				{
+					macro_new_weapon(scope,dc15x_12_20x_scope)
+				};
+			};
+		};
+	};
 };
 

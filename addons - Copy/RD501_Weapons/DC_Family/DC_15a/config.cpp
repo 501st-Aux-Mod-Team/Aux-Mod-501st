@@ -21,7 +21,8 @@ class CfgPatches
 			macro_new_weapon(DC,15a),
 			macro_new_weapon(DC,15a_gl_rifle),
 			macro_new_weapon(DC,15a_LE),
-			macro_new_weapon(DC,15a_mod_0_rifle)
+			macro_new_weapon(DC,15a_mod_0_rifle),
+			macro_new_weapon(DC,r15a)
 		};
 	};
 };
@@ -100,7 +101,57 @@ class cfgWeapons
 			class CowsSlot;
 		};
 	}
+	class 3AS_DC15A_Base_F;
+	class RD501_stun_muzzle;
+	class 3AS_DC15A_F:3AS_DC15A_Base_F
+	{
+		class Single;
+		class Burst;
+		class WeaponSlotsInfo
+		{
+			class CowsSlot;
+		};
+	};
+	class macro_new_weapon(DC,r15a):3AS_DC15A_F
+	{
+		displayName="Republic DC-15A";
+		reloadTime=0.1;
+		magazines[]=
+		{
+			macro_new_mag(20mwup,20),
+			macro_new_mag(20mwdp,20)
+		};
+		muzzles[]=
+		{
+			"this",
+			"Stun"
+		};
+		class Stun: RD501_stun_muzzle
+		{
+			displayName="High Energy StunMode";
+		};
+		class Single:Single
+		{
+			reloadTime=0.1;						
+		};
+		class Burst:Burst
+		{
+			reloadTime=0.1;
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass = 30;
+			class CowsSlot: CowsSlot
+			{
+				access = 1;
+				compatibleItems[] = 
+				{
+					macro_new_weapon(scope,dc_r15a_acog)
+				};
 
+			};
+		};
+	};
 	#include "DC_15a__LE_rifle.hpp"
 	#include "DC_15a__GL_rifle.hpp"
 	#include "DC_15a__mod0_rifle.hpp"

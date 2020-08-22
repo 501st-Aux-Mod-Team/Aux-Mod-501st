@@ -11,14 +11,16 @@ class CfgPatches
 		addonRootClass= macro_patch_name(weapons)
 		requiredAddons[]=
 		{
-			macro_patch_name(weapons)
+			macro_patch_name(weapons),
+			"3AS_Weapons"
 		};
 		requiredVersion=0.1;
 		units[]={};
 		weapons[]={
 			macro_new_weapon_nofam(Z6),
+			macro_new_weapon_nofam(rZ6),
 			"SWOP_Valken38XAuto_XD",
-			macro_new_weapon(chaingun,z6x)
+			macro_new_weapon_nofam(Z1000)
 		};
 	};
 };
@@ -27,6 +29,7 @@ class Mode_SemiAuto;
 class cfgWeapons 
 {	
 	class Rifle_Base_F;
+	class Mode_FullAuto;
 	class SW_Z6_base_F:Rifle_Base_F
 	{
 		class WeaponSlotsInfo;
@@ -101,216 +104,66 @@ class cfgWeapons
 		};
 
 	};
-
-	class SWOP_BlasterRifle_Base;
-	class SWOP_Valken38XAuto:SWOP_BlasterRifle_Base
+	class LMG_Mk200_F;
+	class JLTS_Z6:LMG_Mk200_F
 	{
-		magazines[] = {};//SWOP_Valken38Xauto_Mag
-		class Single;
-		class FullAuto;
-		class WeaponSlotsInfo;
+		class manual;
 	};
-
-
-	class SWOP_Valken38XAuto_XD:SWOP_Valken38XAuto
+	class macro_new_weapon_nofam(rZ6):JLTS_Z6
 	{
-		magazines[] = {"SWOP_Valken38Xauto_MagXXD"};
-		baseWeapon = "SWOP_Valken38XAuto_XD";
-		//recoil = "Valken_Super_auto_recoil";
-		scopeArsenal=2;
-		
-		ACE_Overheating_Dispersion = 0.0;
-		ACE_Overheating_SlowdownFactor = 1;
-		ACE_Overheating_JamChance = 1.5e-014;
-		ACE_overheating_mrbs = 3e+009;
-		ACE_overheating_allowSwapBarrel = 1;
-		class Single:Single
+		scope=2;
+        scopeArsenal=2;
+		recoil="recoil_mmg_02"
+		baseWeapon=macro_new_weapon_nofam(rZ6)
+        displayName="Republic Z6 Chaingun";
+		magazines[]=
 		{
-			dispersion = 0.0001;
-			reloadTime = 0.06;
-			class BaseSoundModeType
-			{
-				closure1[] = {};
-				closure2[] = {};
-				soundClosure[] = {};
-				weaponSoundEffect = "DefaultRifle";
-			};
-			class StandardSound: BaseSoundModeType
-			{
-				begin1[] = {"SW_CloneWarsWeapons\DCrifles\sounds\dc15s1.ogg", 1, 1, 1800};
-				begin2[] = {"SW_CloneWarsWeapons\DCrifles\sounds\dc15s2.ogg", 1, 1, 1800};
-				begin3[] = {"SW_CloneWarsWeapons\DCrifles\sounds\dc15s3.ogg", 1, 1, 1800};
-				begin4[] = {"SW_CloneWarsWeapons\DCrifles\sounds\dc15s4.ogg", 1, 1, 1800};
-				begin5[] = {"SW_CloneWarsWeapons\DCrifles\sounds\dc15s5.ogg", 1, 1, 1800};
-				begin6[] = {"SW_CloneWarsWeapons\DCrifles\sounds\dc15s6.ogg", 1, 1, 1800};
-				begin7[] = {"SW_CloneWarsWeapons\DCrifles\sounds\dc15s7.ogg", 1, 1, 1800};
-				begin8[] = {"SW_CloneWarsWeapons\DCrifles\sounds\dc15s8.ogg", 1, 1, 1800};
-				begin9[] = {"SW_CloneWarsWeapons\DCrifles\sounds\dc15s9.ogg", 1, 1, 1800};
-				soundBegin[] = {"begin1", 0.11, "begin2", 0.11, "begin3", 0.11, "begin4", 0.11, "begin5", 0.11, "begin6", 0.11, "begin7", 0.11, "begin8", 0.11, "begin9", 0.11};
-				beginwater1[] = {"SW_CloneWarsWeapons\DCrifles\sounds\dc15A_3_bajoagua.ogg", 1, 1, 400};
-				beginwater2[] = {"SW_CloneWarsWeapons\DCrifles\sounds\dc15A_3_bajoagua.ogg", 1.05, 1, 400};
-				beginwater3[] = {"SW_CloneWarsWeapons\DCrifles\sounds\dc15A_3_bajoagua.ogg", 0.95, 1, 400};
-				soundBeginWater[] = {"beginwater1", 0.33, "beginwater2", 0.33, "beginwater3", 0.34};
-				class SoundTails
-				{
-					class TailInterior
-					{
-						sound[] = {"A3\Sounds_F\arsenal\weapons\SMG\Sting\Silencer_Sting_Tail_interior", 1, 1, 400};
-						frequency = 1;
-						volume = "interior";
-					};
-					class TailTrees
-					{
-						sound[] = {"A3\Sounds_F\arsenal\weapons\SMG\Sting\Silencer_Sting_Tail_trees", 1, 1, 400};
-						frequency = 1;
-						volume = "(1-interior/1.4)*trees";
-					};
-					class TailForest
-					{
-						sound[] = {"A3\Sounds_F\arsenal\weapons\SMG\Sting\silencer_Sting_tail_forest", 1, 1, 400};
-						frequency = 1;
-						volume = "(1-interior/1.4)*forest";
-					};
-					class TailMeadows
-					{
-						sound[] = {"A3\Sounds_F\arsenal\weapons\SMG\Sting\Silencer_Sting_Tail_meadows", 1, 1, 400};
-						frequency = 1;
-						volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
-					};
-					class TailHouses
-					{
-						sound[] = {"A3\Sounds_F\arsenal\weapons\SMG\Sting\Silencer_Sting_Tail_houses", 1, 1, 400};
-						frequency = 1;
-						volume = "(1-interior/1.4)*houses";
-					};
-				};
-				weaponSoundEffect = "DefaultRifle";
-			};
+			macro_new_mag(10mw,400)
 		};
-
-		class FullAuto:FullAuto
+		modes[] = {"manual", "Overcharge"};
+		class manual:manual
 		{
-			dispersion = "1*0.0001";
-			reloadTime = 0.08;
-			class BaseSoundModeType
-			{
-				closure1[] = {};
-				closure2[] = {};
-				soundClosure[] = {};
-				weaponSoundEffect = "DefaultRifle";
-			};
-			class StandardSound: BaseSoundModeType
-			{
-				begin1[] = {"SW_CloneWarsWeapons\DCrifles\sounds\dc15s1.ogg", 1, 1, 1800};
-				begin2[] = {"SW_CloneWarsWeapons\DCrifles\sounds\dc15s2.ogg", 1, 1, 1800};
-				begin3[] = {"SW_CloneWarsWeapons\DCrifles\sounds\dc15s3.ogg", 1, 1, 1800};
-				begin4[] = {"SW_CloneWarsWeapons\DCrifles\sounds\dc15s4.ogg", 1, 1, 1800};
-				begin5[] = {"SW_CloneWarsWeapons\DCrifles\sounds\dc15s5.ogg", 1, 1, 1800};
-				begin6[] = {"SW_CloneWarsWeapons\DCrifles\sounds\dc15s6.ogg", 1, 1, 1800};
-				begin7[] = {"SW_CloneWarsWeapons\DCrifles\sounds\dc15s7.ogg", 1, 1, 1800};
-				begin8[] = {"SW_CloneWarsWeapons\DCrifles\sounds\dc15s8.ogg", 1, 1, 1800};
-				begin9[] = {"SW_CloneWarsWeapons\DCrifles\sounds\dc15s9.ogg", 1, 1, 1800};
-				soundBegin[] = {"begin1", 0.11, "begin2", 0.11, "begin3", 0.11, "begin4", 0.11, "begin5", 0.11, "begin6", 0.11, "begin7", 0.11, "begin8", 0.11, "begin9", 0.11};
-				beginwater1[] = {"SW_CloneWarsWeapons\DCrifles\sounds\dc15A_3_bajoagua.ogg", 1, 1, 400};
-				beginwater2[] = {"SW_CloneWarsWeapons\DCrifles\sounds\dc15A_3_bajoagua.ogg", 1.05, 1, 400};
-				beginwater3[] = {"SW_CloneWarsWeapons\DCrifles\sounds\dc15A_3_bajoagua.ogg", 0.95, 1, 400};
-				soundBeginWater[] = {"beginwater1", 0.33, "beginwater2", 0.33, "beginwater3", 0.34};
-				class SoundTails
-				{
-					class TailInterior
-					{
-						sound[] = {"A3\Sounds_F\arsenal\weapons\SMG\Sting\Silencer_Sting_Tail_interior", 1, 1, 400};
-						frequency = 1;
-						volume = "interior";
-					};
-					class TailTrees
-					{
-						sound[] = {"A3\Sounds_F\arsenal\weapons\SMG\Sting\Silencer_Sting_Tail_trees", 1, 1, 400};
-						frequency = 1;
-						volume = "(1-interior/1.4)*trees";
-					};
-					class TailForest
-					{
-						sound[] = {"A3\Sounds_F\arsenal\weapons\SMG\Sting\silencer_Sting_tail_forest", 1, 1, 400};
-						frequency = 1;
-						volume = "(1-interior/1.4)*forest";
-					};
-					class TailMeadows
-					{
-						sound[] = {"A3\Sounds_F\arsenal\weapons\SMG\Sting\Silencer_Sting_Tail_meadows", 1, 1, 400};
-						frequency = 1;
-						volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
-					};
-					class TailHouses
-					{
-						sound[] = {"A3\Sounds_F\arsenal\weapons\SMG\Sting\Silencer_Sting_Tail_houses", 1, 1, 400};
-						frequency = 1;
-						volume = "(1-interior/1.4)*houses";
-					};
-				};
-				weaponSoundEffect = "DefaultRifle";
-			};
+		reloadTime=0.059;
 		};
-
-		displayname = "Valken-39XX-XD";
-		class OpticsModes
+		class Overcharge:manual
 		{
-			class Snip
-			{
-				//modelOptics = "Scope\a180.p3d";
-				modelOptics = "Scope\4x_xm8.p3d";
-				opticsID = 1;
-				opticsDisplayName = "WFOV";
-				useModelOptics = 1;
-				opticsPPEffects[] = {"OpticsCHAbera1", "OpticsBlur1"};
-				opticsZoomMin = ".25/24";
-				opticsZoomMax = 0.25;
-				opticsZoomInit = 0.25;
-				discretefov[] = {.25/4,.25/8,.25/12,.25/24};
-				discreteinitIndex = 0;
-				discreteDistance[] = {100};
-				discreteDistanceInitIndex = 1;
-				distanceZoomMin = 100;
-				distanceZoomMax = 4000;
-				visionMode[] = {"Normal", "NVG","TI"};
-				thermalMode[] = {1};
-				memoryPointCamera = "opticView";
-				//modelOptics = "Scope\dc15zoomscope_sight.p3d";
-				weaponInfoType = "RscOptics_nightstalkerblue";//make diffrent scope?
-				opticsFlare = 1;
-				opticsDisablePeripherialVision = 0;
-				cameraDir = "";
-			};
-			class Iron
-			{
-				opticsID = 2;
-				opticsDisplayName = "";
-				useModelOptics = 0;
-				opticsPPEffects[] = {"", ""};
-				opticsFlare = 0;
-				opticsDisablePeripherialVision = 0;
-				opticsZoomMin = 0.25;
-				opticsZoomMax = 1.25;
-				opticsZoomInit = 0.75;
-				memoryPointCamera = "eye";
-				modelOptics = "\A3\Weapons_F\empty";
-				visionMode[] = {};
-				discretefov[] = {};
-				discreteDistance[] = {200};
-				discreteDistanceInitIndex = 0;
-				distanceZoomMin = 200;
-				distanceZoomMax = 200;
-				discreteInitIndex = 0;
-			};
-		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
-			mass = 0.1;
+			dispersion = Z6_accuracy_burst
+			displayName = "Over Charge Auto";
+			recoil = "recoil_single_smg_02";
+			recoilProne = "recoil_single_prone_smg_02";
+			//reloadTime = 0.1;
+			reloadTime = Z6_burst_reload
+			//soundContinuous = 1;
+			burst = 25;
+			textureType = "fastAuto";
 		};
 
 	};
+	class 3AS_Chaingun;
+    class macro_new_weapon_nofam(z1000): 3AS_Chaingun
+    {
+        scope=2;
+        scopeArsenal=2;
+		recoil="recoil_mmg_01";
+        displayName="Republic Z1000 Chaingun";
+		magazines[]=
+		{
+			macro_new_mag(z1000,3000)
+		};
+    };
+	class macro_new_weapon_nofam(z1000u): 3AS_Chaingun
+    {
+        scope=1;
+        scopeArsenal=1;
+        displayName="Z1000 Chaingun(Used)";
+        _generalMacro="launch_RPG32_F";
+		magazines[]=
+		{
+			"none"
+		};
+    };
 
-	class OPTRE_UnguidedLauncher_Base;
+	/*class OPTRE_UnguidedLauncher_Base;
 	class OPTRE_M41_SSR:OPTRE_UnguidedLauncher_Base
 	{
 		class Single;
@@ -402,7 +255,7 @@ class cfgWeapons
 			maxRange = 600;
 			maxRangeProbab = 0.1;
 		};
-	};
+	};*/
 
 };
 
