@@ -101,7 +101,7 @@ class CfgWeapons
         displayName = "[501st] MYN MED ARMR 01 (Cadet)";
         class ItemInfo : ItemInfo
         {
-            uniformClass = MYNOCK_UNIFORM_SKIN_CLASS(cadet);
+            uniformClass = MYNOCK_MEDIC_UNIFORM_SKIN_CLASS(cadet);
         };
     };
     class MYNOCK_MEDIC_UNIFORM_CLASS(trooper) : RD501_BASE_UNIFORM
@@ -109,7 +109,7 @@ class CfgWeapons
         displayName = "[501st] MYN MED ARMR 02 (Trooper)";
         class ItemInfo : ItemInfo
         {
-            uniformClass = MYNOCK_UNIFORM_SKIN_CLASS(trooper);
+            uniformClass = MYNOCK_MEDIC_UNIFORM_SKIN_CLASS(trooper);
         };
     };
     class MYNOCK_MEDIC_UNIFORM_CLASS(strooper) : RD501_BASE_UNIFORM
@@ -117,7 +117,7 @@ class CfgWeapons
         displayName = "[501st] MYN MED ARMR 03 (Senior Trooper)";
         class ItemInfo : ItemInfo
         {
-            uniformClass = MYNOCK_UNIFORM_SKIN_CLASS(strooper);
+            uniformClass = MYNOCK_MEDIC_UNIFORM_SKIN_CLASS(strooper);
         };
     };
     class MYNOCK_MEDIC_UNIFORM_CLASS(vtrooper) : RD501_BASE_UNIFORM
