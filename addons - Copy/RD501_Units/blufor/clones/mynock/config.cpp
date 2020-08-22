@@ -17,6 +17,13 @@
 #define MYNOCK_TEXTUREPATH CONCAT(TEXTUREPATH,\Republic\clones\mynock\)
 #define MYNOCK_TEXTURE(fileName) RD501_TEXTURE(MYNOCK_TEXTUREPATH,fileName)
 
+
+// ------------------------------------------------------------------------------------
+// MYNOCK UNIFORMS CONFIG
+// ------------------------------------------------------------------------------------
+// As much as you want to put other stuff here, please reconsider your decision. 
+// Splitting the configs up prevents 20k line long config files for uniforms, and makes it easier to understand whats going on.
+
 class CfgPatches
 {
     class macro_patch_name(mynock_uniforms)
@@ -403,4 +410,20 @@ class CfgVehicles
 
 class CfgWeapons{
 
+    // ------------------------------------------------------------------------------------
+    // INHERIT PAULDRON
+    // ------------------------------------------------------------------------------------
+    
+    // ------------------------------------------------------------------------------------
+    // TROOPER PAULDRON
+    // ------------------------------------------------------------------------------------
+
+    // ------------------------------------------------------------------------------------
+    // MEDIC PAULDRON
+    // ------------------------------------------------------------------------------------
+    
+    // ------------------------------------------------------------------------------------
+    // RTO PAULDRON
+    // ------------------------------------------------------------------------------------
+    
 };
