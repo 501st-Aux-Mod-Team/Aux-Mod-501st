@@ -102,7 +102,7 @@ class CfgWeapons
     
     class MYNOCK_UNIFORM_CLASS(corporal) : RD501_BASE_UNIFORM
     {
-        displayName = "[501st] MYN NCO ARMR 01 (Corporal)";
+        displayName = "[501st] MYN ARMR 06 (Corporal)";
         class ItemInfo : ItemInfo
         {
             uniformClass = MYNOCK_UNIFORM_SKIN_CLASS(corporal);
@@ -111,7 +111,7 @@ class CfgWeapons
 
     class MYNOCK_UNIFORM_CLASS(scorporal) : RD501_BASE_UNIFORM
     {
-        displayName = "[501st] MYN NCO ARMR 02 (Senior Corporal)";
+        displayName = "[501st] MYN ARMR 07 (Senior Corporal)";
         class ItemInfo : ItemInfo
         {
             uniformClass = MYNOCK_UNIFORM_SKIN_CLASS(scorporal);
@@ -120,7 +120,7 @@ class CfgWeapons
 
     class MYNOCK_UNIFORM_CLASS(sergeant) : RD501_BASE_UNIFORM
     {
-        displayName = "[501st] MYN NCO ARMR 03 (Sergeant)";
+        displayName = "[501st] MYN ARMR 08 (Sergeant)";
         class ItemInfo : ItemInfo
         {
             uniformClass = MYNOCK_UNIFORM_SKIN_CLASS(sergeant);
@@ -129,7 +129,7 @@ class CfgWeapons
 
     class MYNOCK_UNIFORM_CLASS(ssergeant) : RD501_BASE_UNIFORM
     {
-        displayName = "[501st] MYN NCO ARMR 04 (Senior Sergeant)";
+        displayName = "[501st] MYN ARMR 09 (Senior Sergeant)";
         class ItemInfo : ItemInfo
         {
             uniformClass = MYNOCK_UNIFORM_SKIN_CLASS(ssergeant);
@@ -180,7 +180,7 @@ class CfgWeapons
     
     class MYNOCK_MEDIC_UNIFORM_CLASS(corporal) : RD501_BASE_UNIFORM
     {
-        displayName = "[501st] MYN MED NCO ARMR 01 (Corporal)";
+        displayName = "[501st] MYN MED ARMR 05 (Corporal)";
         class ItemInfo : ItemInfo
         {
             uniformClass = MYNOCK_MEDIC_UNIFORM_SKIN_CLASS(corporal);
@@ -189,7 +189,7 @@ class CfgWeapons
 
     class MYNOCK_MEDIC_UNIFORM_CLASS(scorporal) : RD501_BASE_UNIFORM
     {
-        displayName = "[501st] MYN MED NCO ARMR 02 (Senior Corporal)";
+        displayName = "[501st] MYN MED ARMR 06 (Senior Corporal)";
         class ItemInfo : ItemInfo
         {
             uniformClass = MYNOCK_MEDIC_UNIFORM_SKIN_CLASS(scorporal);
@@ -240,7 +240,7 @@ class CfgWeapons
     
     class MYNOCK_RTO_UNIFORM_CLASS(corporal) : RD501_BASE_UNIFORM
     {
-        displayName = "[501st] MYN RTO NCO ARMR 01 (Corporal)";
+        displayName = "[501st] MYN RTO ARMR 05 (Corporal)";
         class ItemInfo : ItemInfo
         {
             uniformClass = MYNOCK_RTO_UNIFORM_SKIN_CLASS(corporal);
@@ -249,7 +249,7 @@ class CfgWeapons
 
     class MYNOCK_RTO_UNIFORM_CLASS(scorporal) : RD501_BASE_UNIFORM
     {
-        displayName = "[501st] MYN RTO NCO ARMR 02 (Senior Corporal)";
+        displayName = "[501st] MYN RTO ARMR 06 (Senior Corporal)";
         class ItemInfo : ItemInfo
         {
             uniformClass = MYNOCK_RTO_UNIFORM_SKIN_CLASS(scorporal);
