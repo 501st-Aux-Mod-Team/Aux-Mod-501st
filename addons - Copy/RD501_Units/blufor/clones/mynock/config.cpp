@@ -90,6 +90,45 @@ class CfgWeapons
     };
 
     // ------------------------------------------------------------------------------------
+    // TROOPER NCO UNFIORM
+    // ------------------------------------------------------------------------------------
+    
+    class MYNOCK_UNIFORM_CLASS(corporal) : RD501_BASE_UNIFORM
+    {
+        displayName = "[501st] MYN NCO ARMR 01 (Corporal)";
+        class ItemInfo : ItemInfo
+        {
+            uniformClass = MYNOCK_UNIFORM_SKIN_CLASS(corporal);
+        };
+    };
+
+    class MYNOCK_UNIFORM_CLASS(scorporal) : RD501_BASE_UNIFORM
+    {
+        displayName = "[501st] MYN NCO ARMR 02 (Senior Corporal)";
+        class ItemInfo : ItemInfo
+        {
+            uniformClass = MYNOCK_UNIFORM_SKIN_CLASS(scorporal);
+        };
+    };
+
+    class MYNOCK_UNIFORM_CLASS(sergeant) : RD501_BASE_UNIFORM
+    {
+        displayName = "[501st] MYN NCO ARMR 03 (Sergeant)";
+        class ItemInfo : ItemInfo
+        {
+            uniformClass = MYNOCK_UNIFORM_SKIN_CLASS(sergeant);
+        };
+    };
+
+    class MYNOCK_UNIFORM_CLASS(ssergeant) : RD501_BASE_UNIFORM
+    {
+        displayName = "[501st] MYN NCO ARMR 04 (Senior Sergeant)";
+        class ItemInfo : ItemInfo
+        {
+            uniformClass = MYNOCK_UNIFORM_SKIN_CLASS(ssergeant);
+        };
+    };
+    // ------------------------------------------------------------------------------------
     // MEDIC UNFIORM
     // ------------------------------------------------------------------------------------
 
@@ -125,7 +164,28 @@ class CfgWeapons
         displayName = "[501st] MYN MED ARMR 04 (Veteran Trooper)";
         class ItemInfo : ItemInfo
         {
-            uniformClass = MYNOCK_UNIFORM_SKIN_CLASS(vtrooper);
+            uniformClass = MYNOCK_MEDIC_UNIFORM_SKIN_CLASS(vtrooper);
+        };
+    };
+    // ------------------------------------------------------------------------------------
+    // MEDIC NCO UNFIORM
+    // ------------------------------------------------------------------------------------
+    
+    class MYNOCK_MEDIC_UNIFORM_CLASS(corporal) : RD501_BASE_UNIFORM
+    {
+        displayName = "[501st] MYN MED NCO ARMR 01 (Corporal)";
+        class ItemInfo : ItemInfo
+        {
+            uniformClass = MYNOCK_MEDIC_UNIFORM_SKIN_CLASS(corporal);
+        };
+    };
+
+    class MYNOCK_MEDIC_UNIFORM_CLASS(scorporal) : RD501_BASE_UNIFORM
+    {
+        displayName = "[501st] MYN MED NCO ARMR 02 (Senior Corporal)";
+        class ItemInfo : ItemInfo
+        {
+            uniformClass = MYNOCK_MEDIC_UNIFORM_SKIN_CLASS(scorporal);
         };
     };
     // ------------------------------------------------------------------------------------
@@ -165,6 +225,27 @@ class CfgWeapons
         class ItemInfo : ItemInfo
         {
             uniformClass = MYNOCK_RTO_UNIFORM_SKIN_CLASS(vtrooper);
+        };
+    };
+    // ------------------------------------------------------------------------------------
+    // RTO NCO UNFIORM
+    // ------------------------------------------------------------------------------------
+    
+    class MYNOCK_RTO_UNIFORM_CLASS(corporal) : RD501_BASE_UNIFORM
+    {
+        displayName = "[501st] MYN RTO NCO ARMR 01 (Corporal)";
+        class ItemInfo : ItemInfo
+        {
+            uniformClass = MYNOCK_RTO_UNIFORM_SKIN_CLASS(corporal);
+        };
+    };
+
+    class MYNOCK_RTO_UNIFORM_CLASS(scorporal) : RD501_BASE_UNIFORM
+    {
+        displayName = "[501st] MYN RTO NCO ARMR 02 (Senior Corporal)";
+        class ItemInfo : ItemInfo
+        {
+            uniformClass = MYNOCK_RTO_UNIFORM_SKIN_CLASS(scorporal);
         };
     };
 };
@@ -263,4 +344,8 @@ class CfgVehicles
     {
         hiddenSelectionsTextures[] = {MYNOCK_RTO_TEXTURE_UPPER(vtrooper), MYNOCK_RTO_TEXTURE_LOWER(vtrooper)};
     };
+};
+
+class CfgWeapons{
+
 };
