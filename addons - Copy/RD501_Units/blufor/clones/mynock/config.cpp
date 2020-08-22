@@ -1,11 +1,21 @@
 #include "../../../../RD501_Main/config_macros.hpp"
 #include "../../../config_macros.hpp"
 
-#ifndef RD501_CONCAT_PATH
-    #define RD501_CONCAT_PATH(a,b) a##b
+#ifndef CONCAT
+    #define CONCAT(a,b) a##b
 #endif
-#define MYNOCK_TEXTUREPATH RD501_CONCAT_PATH(TEXTUREPATH,\Republic\clones\mynock\)
-#define MYNOCK_TEXTURE(fileName) RD501_CONCAT_PATH(MYNOCK_DETATCHMENT_TEXTUREPATH,RD501_CONCAT_PATH(fileName,.paa))
+#ifndef CONCAT_3
+    #define CONCAT_3(a,b,c) CONCAT(a,CONCAT(b,c))
+#endif
+#ifndef RD501_TEXTURE
+    #define RD501_TEXTURE(basePath,fileName) CONCAT(basePath,CONCAT(fileName,.paa))
+#endif
+#ifndef TEXTUREPATH
+    #define TEXTUREPATH rd501_units\textures
+#endif
+//ENSURE MYNOCK_TEXTUREPATH BEGINS AND ENDS WITH TRAILING BACKSLASH OR THAT THE OTHER PATH SEGMENTS DO THE SAME
+#define MYNOCK_TEXTUREPATH CONCAT(TEXTUREPATH,\Republic\clones\mynock\)
+#define MYNOCK_TEXTURE(fileName) RD501_TEXTURE(MYNOCK_TEXTUREPATH,fileName)
 
 class CfgPatches
 {
@@ -21,57 +31,61 @@ class CfgWeapons
     // ------------------------------------------------------------------------------------
     // INHERIT UNFIORM
     // ------------------------------------------------------------------------------------
+    
     class Uniform_Base
     {
         class ItemInfo;
     };
-    class SWOP_Clonetrooper_F_CombatUniform : Uniform_Base 
+    class SWOP_Clonetrooper_F_CombatUniform : Uniform_Base
     {
         class ItemInfo : ItemInfo
         {
-
         };
     };
-    class macro_new_uniform_class(501_inf,recruit) : SWOP_Clonetrooper_F_CombatUniform
+    #define RD501_BASE_UNIFORM macro_new_uniform_class(501_inf,recruit)
+    class RD501_BASE_UNIFORM : SWOP_Clonetrooper_F_CombatUniform
     {
         class ItemInfo : ItemInfo
         {
-
         };
     };
     // ------------------------------------------------------------------------------------
     // TROOPER UNFIORM
     // ------------------------------------------------------------------------------------
-    class macro_new_uniform_class(501_myn,cadet) : macro_new_uniform_class(501_inf,recruit)
+    
+    #define MYNOCK_UNIFORM_CLASS(rank) macro_new_uniform_class(501_myn,rank)
+    #define MYNOCK_UNIFORM_SKIN_CLASS(rank) macro_new_uniform_skin_class(501_myn,rank)
+
+    class MYNOCK_UNIFORM_CLASS(cadet) : RD501_BASE_UNIFORM
     {
-        displayName = "[501st] INF MYN ARMR 01 (Cadet)";
+        displayName = "[501st] MYN ARMR 01 (Cadet)";
         class ItemInfo : ItemInfo
         {
-            uniformClass = macro_new_uniform_skin_class(501_myn,cadet);
+            uniformClass = MYNOCK_UNIFORM_SKIN_CLASS(cadet);
         };
     };
-    class macro_new_uniform_class(501_myn,trooper) : macro_new_uniform_class(501_inf,recruit)
+    class MYNOCK_UNIFORM_CLASS(trooper) : RD501_BASE_UNIFORM
     {
-        displayName = "[501st] INF MYN ARMR 02 (Trooper)";
+        displayName = "[501st] MYN ARMR 02 (Trooper)";
         class ItemInfo : ItemInfo
         {
-            uniformClass = macro_new_uniform_skin_class(501_myn,trooper);
+            uniformClass = MYNOCK_UNIFORM_SKIN_CLASS(trooper);
         };
     };
-    class macro_new_uniform_class(501_myn,strooper) : macro_new_uniform_class(501_inf,recruit)
+    class MYNOCK_UNIFORM_CLASS(strooper) : RD501_BASE_UNIFORM
     {
-        displayName = "[501st] INF MYN ARMR 03 (Senior Trooper)";
+        displayName = "[501st] MYN ARMR 03 (Senior Trooper)";
         class ItemInfo : ItemInfo
         {
-            uniformClass = macro_new_uniform_skin_class(501_myn,strooper);
+            uniformClass = MYNOCK_UNIFORM_SKIN_CLASS(strooper);
         };
     };
-    class macro_new_uniform_class(501_myn,vtrooper) : macro_new_uniform_class(501_inf,recruit)
+    class MYNOCK_UNIFORM_CLASS(vtrooper) : RD501_BASE_UNIFORM
     {
-        displayName = "[501st] INF MYN ARMR 04 (Veteran Trooper)";
+        displayName = "[501st] MYN ARMR 04 (Veteran Trooper)";
         class ItemInfo : ItemInfo
         {
-            uniformClass = macro_new_uniform_skin_class(501_myn,vtrooper);
+            uniformClass = MYNOCK_UNIFORM_SKIN_CLASS(vtrooper);
         };
     };
 
@@ -79,9 +93,80 @@ class CfgWeapons
     // MEDIC UNFIORM
     // ------------------------------------------------------------------------------------
 
+    #define MYNOCK_MEDIC_UNIFORM_CLASS(rank) macro_new_uniform_class(501_myn_medic,rank)
+    #define MYNOCK_MEDIC_UNIFORM_SKIN_CLASS(rank) macro_new_uniform_skin_class(501_myn_medic,rank)
+    
+    class MYNOCK_MEDIC_UNIFORM_CLASS(cadet) : RD501_BASE_UNIFORM
+    {
+        displayName = "[501st] MYN MED ARMR 01 (Cadet)";
+        class ItemInfo : ItemInfo
+        {
+            uniformClass = MYNOCK_UNIFORM_SKIN_CLASS(cadet);
+        };
+    };
+    class MYNOCK_MEDIC_UNIFORM_CLASS(trooper) : RD501_BASE_UNIFORM
+    {
+        displayName = "[501st] MYN MED ARMR 02 (Trooper)";
+        class ItemInfo : ItemInfo
+        {
+            uniformClass = MYNOCK_UNIFORM_SKIN_CLASS(trooper);
+        };
+    };
+    class MYNOCK_MEDIC_UNIFORM_CLASS(strooper) : RD501_BASE_UNIFORM
+    {
+        displayName = "[501st] MYN MED ARMR 03 (Senior Trooper)";
+        class ItemInfo : ItemInfo
+        {
+            uniformClass = MYNOCK_UNIFORM_SKIN_CLASS(strooper);
+        };
+    };
+    class MYNOCK_MEDIC_UNIFORM_CLASS(vtrooper) : RD501_BASE_UNIFORM
+    {
+        displayName = "[501st] MYN MED ARMR 04 (Veteran Trooper)";
+        class ItemInfo : ItemInfo
+        {
+            uniformClass = MYNOCK_UNIFORM_SKIN_CLASS(vtrooper);
+        };
+    };
     // ------------------------------------------------------------------------------------
     // RTO UNFIORM
     // ------------------------------------------------------------------------------------
+
+    #define MYNOCK_RTO_UNIFORM_CLASS(rank) macro_new_uniform_class(501_myn_rto,rank)
+    #define MYNOCK_RTO_UNIFORM_SKIN_CLASS(rank) macro_new_uniform_skin_class(501_myn_rto,rank)
+    
+    class MYNOCK_RTO_UNIFORM_CLASS(cadet) : RD501_BASE_UNIFORM
+    {
+        displayName = "[501st] MYN RTO ARMR 01 (Cadet)";
+        class ItemInfo : ItemInfo
+        {
+            uniformClass = MYNOCK_RTO_UNIFORM_SKIN_CLASS(cadet);
+        };
+    };
+    class MYNOCK_RTO_UNIFORM_CLASS(trooper) : RD501_BASE_UNIFORM
+    {
+        displayName = "[501st] MYN RTO ARMR 02 (Trooper)";
+        class ItemInfo : ItemInfo
+        {
+            uniformClass = MYNOCK_RTO_UNIFORM_SKIN_CLASS(trooper);
+        };
+    };
+    class MYNOCK_RTO_UNIFORM_CLASS(strooper) : RD501_BASE_UNIFORM
+    {
+        displayName = "[501st] MYN RTO ARMR 03 (Senior Trooper)";
+        class ItemInfo : ItemInfo
+        {
+            uniformClass = MYNOCK_RTO_UNIFORM_SKIN_CLASS(strooper);
+        };
+    };
+    class MYNOCK_RTO_UNIFORM_CLASS(vtrooper) : RD501_BASE_UNIFORM
+    {
+        displayName = "[501st] MYN RTO ARMR 04 (Veteran Trooper)";
+        class ItemInfo : ItemInfo
+        {
+            uniformClass = MYNOCK_RTO_UNIFORM_SKIN_CLASS(vtrooper);
+        };
+    };
 };
 
 class CfgVehicles
@@ -95,37 +180,87 @@ class CfgVehicles
 
     };
 
-    class macro_new_uniform_skin_class(501_inf,recruit) : B_Soldier_f
+    #define RD501_BASE_UNIFORM_SKIN macro_new_uniform_skin_class(501_inf,recruit)
+    class RD501_BASE_UNIFORM_SKIN : B_Soldier_f
     {
-
+        
     };
     // ------------------------------------------------------------------------------------
     // TROOPER SKINS
     // ------------------------------------------------------------------------------------
-    class macro_new_uniform_skin_class(501_myn,cadet) : macro_new_uniform_skin_class(501_inf,recruit)
+    // MYNOCK_UNIFORM_SKIN_CLASS(rank) macro_new_uniform_skin_class(501_myn,rank)
+
+    #define MYNOCK_TEXTURE_UPPER(rank) MYNOCK_TEXTURE(CONCAT_3(mynock,_,CONCAT_3(rank,_,upper)))
+    #define MYNOCK_TEXTURE_LOWER(rank) MYNOCK_TEXTURE(CONCAT_3(mynock,_,CONCAT_3(rank,_,lower)))
+    class MYNOCK_UNIFORM_SKIN_CLASS(cadet) : RD501_BASE_UNIFORM_SKIN
     {
-        hiddenSelectionsTextures[] = {MYNOCK_TEXTURE(mynock_cadet_upper),MYNOCK_TEXTURE(mynock_cadet_lower)};
+        hiddenSelectionsTextures[] = {MYNOCK_TEXTURE_UPPER(cadet), MYNOCK_TEXTURE_LOWER(cadet)};
     };
-    
-    class macro_new_uniform_skin_class(501_myn,trooper) : macro_new_uniform_skin_class(501_inf,recruit)
+
+    class MYNOCK_UNIFORM_SKIN_CLASS(trooper) : RD501_BASE_UNIFORM_SKIN
     {
-        hiddenSelectionsTextures[] = {MYNOCK_TEXTURE(mynock_trooper_upper),MYNOCK_TEXTURE(mynock_trooper_lower)};
+        hiddenSelectionsTextures[] = {MYNOCK_TEXTURE_UPPER(trooper), MYNOCK_TEXTURE_LOWER(trooper)};
     };
-    
-    class macro_new_uniform_skin_class(501_myn,strooper) : macro_new_uniform_skin_class(501_inf,recruit)
+
+    class MYNOCK_UNIFORM_SKIN_CLASS(strooper) : RD501_BASE_UNIFORM_SKIN
     {
-        hiddenSelectionsTextures[] = {MYNOCK_TEXTURE(mynock_strooper_upper),MYNOCK_TEXTURE(mynock_strooper_lower)};
+        hiddenSelectionsTextures[] = {MYNOCK_TEXTURE_UPPER(strooper), MYNOCK_TEXTURE_LOWER(strooper)};
     };
-    
-    class macro_new_uniform_skin_class(501_myn,vtrooper) : macro_new_uniform_skin_class(501_inf,recruit)
+
+    class MYNOCK_UNIFORM_SKIN_CLASS(vtrooper) : RD501_BASE_UNIFORM_SKIN
     {
-        hiddenSelectionsTextures[] = {MYNOCK_TEXTURE(mynock_vtrooper_upper),MYNOCK_TEXTURE(mynock_vtrooper_lower)};
+        hiddenSelectionsTextures[] = {MYNOCK_TEXTURE_UPPER(vtrooper), MYNOCK_TEXTURE_LOWER(vtrooper)};
     };
     // ------------------------------------------------------------------------------------
     // MEDIC SKINS
     // ------------------------------------------------------------------------------------
+    // MYNOCK_MEDIC_UNIFORM_SKIN_CLASS(rank) macro_new_uniform_skin_class(501_myn_medic,rank)
 
+    #define MYNOCK_RTO_TEXTURE_UPPER(rank) MYNOCK_TEXTURE_UPPER(CONCAT_3(medic,_,rank))
+    #define MYNOCK_RTO_TEXTURE_LOWER(rank) MYNOCK_TEXTURE_LOWER(CONCAT_3(medic,_,rank))
+    class MYNOCK_MEDIC_UNIFORM_SKIN_CLASS(cadet) : RD501_BASE_UNIFORM_SKIN
+    {
+        hiddenSelectionsTextures[] = {MYNOCK_MEDIC_TEXTURE_UPPER(cadet), MYNOCK_MEDIC_TEXTURE_LOWER(cadet)};
+    };
+
+    class MYNOCK_MEDIC_UNIFORM_SKIN_CLASS(trooper) : RD501_BASE_UNIFORM_SKIN
+    {
+        hiddenSelectionsTextures[] = {MYNOCK_MEDIC_TEXTURE_UPPER(trooper), MYNOCK_MEDIC_TEXTURE_LOWER(trooper)};
+    };
+
+    class MYNOCK_MEDIC_UNIFORM_SKIN_CLASS(strooper) : RD501_BASE_UNIFORM_SKIN
+    {
+        hiddenSelectionsTextures[] = {MYNOCK_MEDIC_TEXTURE_UPPER(strooper), MYNOCK_MEDIC_TEXTURE_LOWER(strooper)};
+    };
+
+    class MYNOCK_MEDIC_UNIFORM_SKIN_CLASS(vtrooper) : RD501_BASE_UNIFORM_SKIN
+    {
+        hiddenSelectionsTextures[] = {MYNOCK_MEDIC_TEXTURE_UPPER(vtrooper), MYNOCK_MEDIC_TEXTURE_LOWER(vtrooper)};
+    };
     // ------------------------------------------------------------------------------------
     // RTO SKINS
     // ------------------------------------------------------------------------------------
+    // MYNOCK_RTO_UNIFORM_SKIN_CLASS(rank) macro_new_uniform_skin_class(501_myn_rto,rank)
+
+    #define MYNOCK_RTO_TEXTURE_UPPER(rank) MYNOCK_TEXTURE_UPPER(CONCAT_3(rto,_,rank))
+    #define MYNOCK_RTO_TEXTURE_LOWER(rank) MYNOCK_TEXTURE_LOWER(CONCAT_3(rto,_,rank))
+    class MYNOCK_RTO_UNIFORM_SKIN_CLASS(cadet) : RD501_BASE_UNIFORM_SKIN
+    {
+        hiddenSelectionsTextures[] = {MYNOCK_RTO_TEXTURE_UPPER(cadet), MYNOCK_RTO_TEXTURE_LOWER(cadet)};
+    };
+
+    class MYNOCK_RTO_UNIFORM_SKIN_CLASS(trooper) : RD501_BASE_UNIFORM_SKIN
+    {
+        hiddenSelectionsTextures[] = {MYNOCK_RTO_TEXTURE_UPPER(trooper), MYNOCK_RTO_TEXTURE_LOWER(trooper)};
+    };
+
+    class MYNOCK_RTO_UNIFORM_SKIN_CLASS(strooper) : RD501_BASE_UNIFORM_SKIN
+    {
+        hiddenSelectionsTextures[] = {MYNOCK_RTO_TEXTURE_UPPER(strooper), MYNOCK_RTO_TEXTURE_LOWER(strooper)};
+    };
+
+    class MYNOCK_RTO_UNIFORM_SKIN_CLASS(vtrooper) : RD501_BASE_UNIFORM_SKIN
+    {
+        hiddenSelectionsTextures[] = {MYNOCK_RTO_TEXTURE_UPPER(vtrooper), MYNOCK_RTO_TEXTURE_LOWER(vtrooper)};
+    };
 };
