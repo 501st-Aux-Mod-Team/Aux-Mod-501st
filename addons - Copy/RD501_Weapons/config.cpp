@@ -404,19 +404,6 @@ class CfgMagazines
 		initSpeed = 310;
 		author = "RD501";
 	};
-	class macro_new_mag(T21,25): CA_Magazine
-	{
-		author = "RD501";
-		scope = 2;
-		model = "\SW_ExtraWeapons\PICKUPS\energy_cell.p3d";
-		Displayname = "25Rnd R-T21 Mag";
-		ammo = macro_new_ammo(T21);
-		tracersevery = 1;
-		count = 25;
-		descriptionshort = "25Rnd R-T21 Mag";
-		mass = 20;
-		initspeed = 250;
-	};
 	class macro_new_mag(DC15a_LE,15): CA_Magazine
 	{
 		author = "RD501";
@@ -816,16 +803,6 @@ class CfgAmmo
 	
 	};
 	
-	class macro_new_ammo(T21):SWOP_DC15SA_Ammo
-	{
-		hit = 55;
-		indirecthit = 25
-		indirecthitrange = 1
-		explosive = 1;
-		caliber = 10;
-		CraterEffects = "ExploAmmoLaserCrater";
-		timeToLive = 2;
-	};
 
 	class B_127x108_APDS;
 	class SW_iondisruptor_BlasterRifle_Ammo: B_127x108_APDS
