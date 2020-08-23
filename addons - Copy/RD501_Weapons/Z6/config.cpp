@@ -146,6 +146,7 @@ class cfgWeapons
         scopeArsenal=2;
 		recoil="recoil_mmg_01";
         displayName="Republic Z1000 Chaingun";
+		picture = "\RD501_Weapons\Z6\chaingun_icon.paa";
 		RD501_Empty_Weapon = macro_quote(macro_new_weapon_nofam(z1000u));
 		magazines[]=
 		{
@@ -160,6 +161,7 @@ class cfgWeapons
         scope=1;
         scopeArsenal=1;
         displayName="Z1000 Chaingun (Used)";
+		picture = "\RD501_Weapons\Z6\chaingun_icon.paa";
         _generalMacro="launch_RPG32_F";
 		magazines[]=
 		{
