@@ -146,6 +146,7 @@ class cfgWeapons
         scopeArsenal=2;
 		recoil="recoil_mmg_01";
         displayName="Republic Z1000 Chaingun";
+		picture = "\RD501_Weapons\Z6\chaingun_icon.paa";
 		magazines[]=
 		{
 			macro_new_mag(z1000,3000)
@@ -157,6 +158,7 @@ class cfgWeapons
         scopeArsenal=1;
         displayName="Z1000 Chaingun(Used)";
         _generalMacro="launch_RPG32_F";
+		picture = "\RD501_Weapons\Z6\chaingun_icon.paa";
 		magazines[]=
 		{
 			"none"
