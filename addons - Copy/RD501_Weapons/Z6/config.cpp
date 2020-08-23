@@ -152,14 +152,14 @@ class cfgWeapons
 			macro_new_mag(z1000,3000)
 		};
 		class EventHandlers {
-			fired = macro_quote(_this call macro_fnc_name(onWeaponFiredSwap));
+			fired = macro_quote(_this call macro_fnc_name(onWeaponFiredSwapToEmpty));
 		};
     };
 	class macro_new_weapon_nofam(z1000u): 3AS_Chaingun
     {
         scope=1;
         scopeArsenal=1;
-        displayName="Z1000 Chaingun(Used)";
+        displayName="Z1000 Chaingun (Used)";
         _generalMacro="launch_RPG32_F";
 		magazines[]=
 		{
