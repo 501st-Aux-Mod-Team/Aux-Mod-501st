@@ -146,9 +146,13 @@ class cfgWeapons
         scopeArsenal=2;
 		recoil="recoil_mmg_01";
         displayName="Republic Z1000 Chaingun";
+		RD501_Empty_Weapon = macro_quote(macro_new_weapon_nofam(z1000u));
 		magazines[]=
 		{
 			macro_new_mag(z1000,3000)
+		};
+		class EventHandlers {
+			fired = macro_quote(_this call macro_fnc_name(onWeaponFiredSwap));
 		};
     };
 	class macro_new_weapon_nofam(z1000u): 3AS_Chaingun
