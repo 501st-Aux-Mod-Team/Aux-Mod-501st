@@ -93,3 +93,4 @@ macro_prep_xeh(infantry_uav\fnc_refuelUAVDrone.sqf,refuelUAVDrone)
 macro_prep_xeh(infantry_uav\fnc_canRefuel.sqf,canRefuel)
 
 macro_prep_xeh(heavy_weapon\fnc_heavyWeaponHandlePlayerWeaponChanged.sqf,heavyWeaponHandlePlayerWeaponChanged)
+macro_prep_xeh(reload_on_select\fnc_reloadWeaponOnFirstSelected.sqf,reloadWeaponOnFirstSelected)

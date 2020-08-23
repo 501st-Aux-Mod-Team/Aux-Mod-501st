@@ -14,3 +14,6 @@ call macro_fnc_name(nightvision);
 RD501_DRONE_BATTERY = "lightsaberG_swing";
 RD501_FORCE_WALK_WEAPONS = [macro_quote(macro_new_weapon_nofam(z1000))];
 ["weapon", macro_fnc_name(heavyWeaponHandlePlayerWeaponChanged)] call CBA_fnc_addPlayerEventHandler;
+
+RD501_AUTO_RELOAD_ON_EQUIP = [macro_quote(macro_new_weapon_nofam(z1000))];
+["weapon", macro_fnc_name(reloadWeaponOnFirstSelected)] call CBA_fnc_addPlayerEventHandler;
