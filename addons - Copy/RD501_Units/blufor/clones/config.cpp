@@ -1327,6 +1327,34 @@ class cfgWeapons
 			hiddenSelectionsMaterials[]= {"\RD501_Units\materials\razorblade_holster.rvmat"};
 		};
 	};
+	class macro_new_vest_class(501_mynock_sgm,vest):macro_new_vest_class(501_inf,acc_9)
+	{
+		displayname = "[501st] MYN ACC 01"
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestPauldron_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer2.p3d";
+		hiddenSelections[] = {"camo1"};
+		hiddenSelectionsTextures[] = {"MRC\JLTS\characters\CloneArmor\data\Clone_vest_officer_co.paa"};
+        class ItemInfo: ItemInfo
+        {
+            uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer2.p3d";
+			containerClass="Supply100";
+			hiddenSelections[] = {"camo1"};
+        };
+	};
+	class macro_new_vest_class(501_mynock_co,vest):macro_new_vest_class(501_inf,acc_9)
+	{
+		displayname = "[501st] MYN ACC 02"
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestPauldron_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer2.p3d";
+		hiddenSelections[] = {"camo1"};
+		hiddenSelectionsTextures[] = {"\MRC\JLTS\characters\CloneLegions\data\Clone_501stOfficer_vest_co.paa"};
+        class ItemInfo: ItemInfo
+        {
+            uniformModel="\MRC\JLTS\characters\CloneArmor\CloneVestOfficer2.p3d";
+			containerClass="Supply100";
+			hiddenSelections[] = {"camo1"};
+        };
+	};
 };
 
 class DefaultEventhandlers;

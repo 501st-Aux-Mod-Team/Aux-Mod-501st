@@ -28,7 +28,11 @@ class CfgPatches
 {
     class macro_patch_name(mynock_uniforms)
     {
-        requiredAddons[] = { };
+		addonRootClass=macro_patch_name(units);
+		requiredAddons[] = 
+		{
+			macro_patch_name(units)
+		};
         requiredVersion = 0.1;
     };
 };
