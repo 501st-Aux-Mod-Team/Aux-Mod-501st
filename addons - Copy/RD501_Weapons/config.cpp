@@ -477,7 +477,7 @@ class CfgMagazines
 		ammo = macro_new_ammo(z1000)
 		displayName="3000Rnd Z1000 Chaingun Drum";
 		initSpeed=860;
-		weight=400;
+		weight=1;
 		scope=1;
 	};
 	
