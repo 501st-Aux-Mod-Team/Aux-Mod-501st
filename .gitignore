@@ -3,3 +3,4 @@
 *.bak
 *.bisign
 .idea
+*.code-workspace
