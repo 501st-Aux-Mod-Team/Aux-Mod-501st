@@ -24,17 +24,17 @@ params["_target", "_shooter", "_ammo","_projectile"];
 if ((getText(configFile >> "CfgAmmo" >> _ammo >> "simulation") != "shotBullet") && ((_projectile distance _target) > getNumber(configFile >> "CfgAmmo" >> _ammo >> "indirectHitRange"))) exitWith {/*systemChat "Out of range"*/}; 
 
 private _weaponsTarget = weapons _target;
+private _fryOnEMP = false;
 
 if (_target getVariable["JLTS_EMPCooldown",CBA_missionTime - 1] < CBA_missionTime) then {
-	
+
 	if (JLTS_settings_EMP_EMPEffectScope > 0) then {
 		{
-			
 			if (getNumber(configFile >> "CfgWeapons" >> _x >> "JLTS_isFried") == 1) then {} else 
 			{
-				
-				if (getNumber(configFile >> "CfgWeapons" >> _x >> "JLTS_hasElectronics") == 1 && getNumber(configFile >> "CfgWeapons" >> _x >> "JLTS_hasEMPProtection") != 1) then 
-				{
+				if (getNumber(configFile >> "CfgWeapons" >> _x >> "JLTS_hasElectronics") == 1 &&
+				    getNumber(configFile >> "CfgWeapons" >> _x >> "JLTS_hasEMPProtection") != 1 &&
+				    getNumber(configFile >> "CfgWeapons" >> _x >> "RD501_fryOnEMP") != 1) then {
 					private _friedWeapon = getText(configFile >> "CfgWeapons" >> _x >> "JLTS_friedItem");
 					switch (true) do {
 						case (_x in uniformItems _target): {
@@ -58,6 +58,13 @@ if (_target getVariable["JLTS_EMPCooldown",CBA_missionTime - 1] < CBA_missionTim
 							};
 						};
 					};
+					_fryOnEMP = true;
+				} else {
+				    if (getNumber(configFile >> "CfgWeapons" >> _x >> "JLTS_hasEMPProtection") != 1 &&
+                    	getNumber(configFile >> "CfgWeapons" >> _x >> "RD501_fryOnEMP") != 1) then
+                    {
+                        [_target, currentWeapon _target] call ace_overheating_fnc_jamWeapon;
+                    };
 				};
 			};
 		} forEach _weaponsTarget;
@@ -108,8 +115,6 @@ if (_target getVariable["JLTS_EMPCooldown",CBA_missionTime - 1] < CBA_missionTim
 	private _protectedUniforms = missionNamespace getVariable["JLTS_emp_protectedUniforms",[]];
 	private _useConfig = missionNamespace getVariable["JLTS_emp_useConfig",true];
 
-	//if ((_isDroid != 1 || (_uniform in _protectedUniforms)) && !(_uniform in _affectedUniforms)) exitWith {[_target,"HUMAN"] remoteExec ["JLTS_fnc_showHintEMP",0,true];};
-	
 	_toFry = false;
 	
 	if (_useConfig) then {
@@ -135,7 +140,11 @@ if (_target getVariable["JLTS_EMPCooldown",CBA_missionTime - 1] < CBA_missionTim
 
 			waitUntil {_timeOfHit + 1 < CBA_missionTime};
 			_target disableAI "all";
-			[_target,"DROID"] remoteExec ["JLTS_fnc_showHintEMP",0,true];
+            if (_fryOnEMP) then {
+                [_target,"DROID"] remoteExec ["JLTS_fnc_showHintEMP",0,true];
+            } else {
+                [_target,"DROID"] remoteExec ["RD501_fnc_showHintEMP",0,true];
+            };
 			private _delay = _timeOfHit + random[1,5,10];
 			waitUntil {_delay < CBA_missionTime};
 			
@@ -158,7 +167,11 @@ if (_target getVariable["JLTS_EMPCooldown",CBA_missionTime - 1] < CBA_missionTim
 			_target setVariable ["JLTS_EMPCooldown",nil, true];
 		};
 	} else {
-		[_target,"HUMAN"] remoteExec ["JLTS_fnc_showHintEMP",0,true];
+    	if (_fryOnEMP) then {
+		    [_target,"HUMAN"] remoteExec ["JLTS_fnc_showHintEMP",0,true];
+		} else {
+		    [_target,"HUMAN"] remoteExec ["RD501_fnc_showHintEMP",0,true];
+		};
 	};
 } else {
 	//systemChat "EMP cooldown"
