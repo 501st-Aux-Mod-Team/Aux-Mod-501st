@@ -47,7 +47,7 @@ class cfgWeapons
 		displayname="T21 R.A.M.E.R."
 		magazines[]=
 		{
-			macro_new_mag(50mw,10)
+			macro_new_mag(RAMER,6)
 		};
 		class Single : Single
 		{

@@ -45,7 +45,8 @@ class CfgWeapons
 		muzzles[]=
 		{
 			"this",
-			"Stun"
+			"Stun",
+			"EGLM"
 		};
 		class Stun: RD501_stun_muzzle
 		{

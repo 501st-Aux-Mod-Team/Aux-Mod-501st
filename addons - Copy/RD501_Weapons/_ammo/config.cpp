@@ -88,6 +88,9 @@ class CfgAmmo
 	class macro_new_ammo(50mw) : 3AS_EC80_BluePlasma
 	{
 		hit=300;
+		thrust=210;
+		explosive=0.4;
+		thrustTime=1.5;
 		airLock=1;
 		typicalSpeed=1100;
 		caliber=5;

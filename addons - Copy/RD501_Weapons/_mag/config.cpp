@@ -132,6 +132,15 @@ class CfgMagazines
 	{
 		displayName="5 Round Stun Cell";
 		descriptionShort = "5 Round Stun Cell";
+		displayNameShort = "5 Round Stun Cell";
+		count=5;
+		picture="\MRC\JLTS\weapons\Core\data\ui\stun_mag_ui_ca.paa";
+	};
+	class macro_new_mag(pistolstun,5):DCStun_Mag
+	{
+		displayName="5 Round Stun Cell";
+		descriptionShort = "5 Round Stun Cell";
+		displayNameShort = "5 Round Stun Cell";
 		count=5;
 		picture="\MRC\JLTS\weapons\Core\data\ui\stun_mag_ui_ca.paa";
 	};

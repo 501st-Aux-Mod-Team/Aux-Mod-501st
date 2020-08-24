@@ -111,6 +111,7 @@ class cfgWeapons
 	class macro_new_weapon(DC,r17):JLTS_DC17SA
 	{
 		displayName="Republic DC-17";
+		reloadAction="GestureReloadPistol";
 		baseWeapon=macro_new_weapon(DC,r17)
 		magazines[]=
 		{
@@ -121,9 +122,14 @@ class cfgWeapons
 			"this",
 			"Stun"
 		};
+		
 		class Stun: RD501_stun_muzzle
 		{
 			displayName="High Energy StunMode";
+			magazines[]=
+			{
+				macro_new_mag(pistolstun,5)
+			};
 		};
 		class Single : Single
 		{
@@ -147,6 +153,11 @@ class cfgWeapons
 		class Stun: RD501_stun_muzzle
 		{
 			displayName="High Energy StunMode";
+			reloadAction="GestureReloadPistol";
+			magazines[]=
+			{
+				macro_new_mag(pistolstun,5)
+			};
 		};
 		class FullAuto : Single
 		{
