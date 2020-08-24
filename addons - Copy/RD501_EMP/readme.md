@@ -1,13 +1,13 @@
-##RD501 EMP adjustments
-
-###Goal
-
+RD501 EMP adjustments
+======
+Goal
+------
 While JLTS' EMP system works great, its weapon swap feature was deemed to taxing on the servers, especially considering the possibility of cluster-EMP that might hit hundreds of units.
 
 To still have EMP effect guns, but avoid the switching, all guns not configured otherwise will jam when hit by EMP.
 
-###Config
-
+Config
+------
 Default (no config params): Gun jams on EMP
 
 To go back to JLTS behaviour:
