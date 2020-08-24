@@ -33,6 +33,10 @@ class CfgPatches
 		{
 			macro_patch_name(units)
 		};
+		units[]=
+		{
+			
+		};
         requiredVersion = 0.1;
     };
 };
