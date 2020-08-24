@@ -31,13 +31,4 @@ class UserActions
         textToolTip = "<t color='#FF9933'>[RepulsorBrake On]</t>";
         userActionID = 65;
     };	
-};	
-
-class EventHandlers
-{
-    fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-    init = "[_this select 0] execVM '\SW_Droides_2\DroidGunship\initturbine.sqf';";
-    killed = "_this call (uinamespace getvariable 'BIS_fnc_effectKilled');";
-    
-    class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 };

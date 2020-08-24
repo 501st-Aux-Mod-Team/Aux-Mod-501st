@@ -1,5 +1,7 @@
 
 #include "../RD501_main/config_macros.hpp"
+#include "_init_functions/common_xeh.hpp"
+
 
 #define macro_remove_turret\
     class remove_attched_turrets \
@@ -37,13 +39,6 @@ class CfgPatches
 
 class Extended_Init_EventHandlers 
 {
-    // class B_Truck_01_mover_F
-    // {
-    //     class EEE
-    //     {
-    //         init = [_this select 0] spawn macro_fnc_name(og10_move);
-    //     };
-    // };
     class SW_SpeederBike_base
     {
         class anti_wobble
@@ -51,6 +46,7 @@ class Extended_Init_EventHandlers
             init = "(_this select 0) setVelocity [0,0,1]";
         };
     };
+
     class SW_BARC
     {
         class anti_wobble
@@ -77,12 +73,10 @@ class Extended_Init_EventHandlers
 
     class macro_new_vehicle(e_web,shield)
     {
-        
         class shield 
         {
             init = [_this select 0] spawn macro_fnc_name(eweb_shield);
         };
-     
     };
 
     class macro_new_vehicle(droideka,camo)
@@ -90,10 +84,7 @@ class Extended_Init_EventHandlers
     	class droideka_movable 
         {
             init = [_this select 0] spawn macro_fnc_name(droidekka_move);
-        };		
-
-        
-       
+        };
     };
 
     class macro_new_vehicle(dwarf_spider_droid,Movable_MkII)
@@ -137,49 +128,17 @@ class Extended_Init_EventHandlers
         class set_mass
         {
              init = [_this select 0,72800] spawn macro_fnc_name(set_mass);
-
         };
     }
+
     class macro_new_vehicle(ATTE,uav_MkII)//good
     {
         class set_mass
         {
              init = [_this select 0,72800] spawn macro_fnc_name(set_mass);
-
         };
-        
     };
 
-    class macro_new_vehicle(delta,7a_Mk2)
-    {
-        class set_mass
-        {
-             init = [_this select 0,10200] spawn macro_fnc_name(set_mass);
-
-        };
-        
-    };
-
-    class macro_new_vehicle(delta,7b_Mk2)
-    {
-        class set_mass
-        {
-             init = [_this select 0,10200] spawn macro_fnc_name(set_mass);
-
-        };
-        
-    };
-
-    class macro_new_vehicle(eta,lime_Mk2)
-    {
-        class set_mass
-        {
-             init = [_this select 0,15000] spawn macro_fnc_name(set_mass);
-
-        };
-        
-    };
-    
     class macro_new_vehicle(turret_ATTE,Stomper)
     {
         class atte_uav_init
@@ -208,26 +167,7 @@ class Extended_Init_EventHandlers
 		{
 			init = [_this select 0] spawn macro_fnc_name(vehicle_lift);
 		};
-	};  
-    class macro_new_vehicle(HMP,gunship)
-    {
-        class turret1 
-        {
-            init = [_this select 0,macro_single_quote(macro_new_vehicle(Praetorian_Variant,opfor)),[0,5,-.5]] spawn macro_fnc_name(apply_aircraft_turrets);
-        };
-
-        class turret2 
-        {
-            init = [_this select 0,macro_single_quote(macro_new_vehicle(Praetorian_Variant,opfor)),[5,0,-.5]] spawn macro_fnc_name(apply_aircraft_turrets);
-        };
-
-        class turret3 
-        {
-            init = [_this select 0,macro_single_quote(macro_new_vehicle(Praetorian_Variant,opfor)),[-5,0,-.5]] spawn macro_fnc_name(apply_aircraft_turrets);
-        };
-    };	
-
-    
+	};
 
     #include "_init_functions/cis_aircraft_turrets.hpp"
 
@@ -238,7 +178,6 @@ class Extended_Init_EventHandlers
     #include "_init_functions/republic_aircraft_turrets.hpp"
 
     #include "_init_functions/resistance_aircraft_turrets.hpp"
-
 
 };
 
@@ -285,12 +224,8 @@ class Extended_Deleted_EventHandlers
     	macro_remove_attached_stuff_XEH
     };
 
-
-
     #include "_delete_functions/remove_aircraft_turret.hpp"
-   
-
-};
+    };
 
 class Extended_GetIn_EventHandlers 
 {

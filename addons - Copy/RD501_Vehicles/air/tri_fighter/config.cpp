@@ -37,7 +37,6 @@ class CfgPatches
 
 
 #include "../../common/sensor_templates.hpp"
-class CBA_Extended_EventHandlers_base;
 class CfgVehicles
 {
 	class Plane_Base_F;
@@ -53,9 +52,9 @@ class CfgVehicles
 		scopecurator = 2;
 		airBrakeFrictionCoef = 80.4;
 		armor = 100;
-		faction = macro_cis_faction
-		editorSubcategory = macro_editor_cat_air(CIS)
-		vehicleClass = macro_editor_vehicle_type_air(CIS)
+		faction = macro_cis_faction;
+		editorSubcategory = macro_editor_cat_air(CIS);
+		vehicleClass = macro_editor_vehicle_type_air(CIS);
 		weapons[] = {
 			macro_new_weapon(wynd,a2a),
 			macro_basic_air_weapons,
@@ -96,13 +95,6 @@ class CfgVehicles
 				radius = 10;
 				onlyforplayer = 1;
 			};
-		};	
-	
-
-		class EventHandlers {
-			init="[_this select 0] execVM '\vulture\inittri.sqf';[_this select 0] execVM '\vulture\initturbine.sqf';[_this select 0] execVM 'RD501_Vehicles\_init_functions\cis_aircraft_mass.sqf';";
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
-        };
+		};
 	};
-	
 };

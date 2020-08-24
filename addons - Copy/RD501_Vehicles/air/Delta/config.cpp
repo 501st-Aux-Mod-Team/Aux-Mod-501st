@@ -28,8 +28,6 @@ class CfgPatches
 		{
 			macro_new_vehicle(delta,7a_Mk2),
 			macro_new_vehicle(delta,7a_Mk2_red),
-			macro_new_vehicle(delta,7b_Mk2),
-			macro_new_vehicle(delta,7a_Mk2_blue)
 		};
 		weapons[]=
 		{
@@ -40,14 +38,11 @@ class CfgPatches
 
 
 #include "../../common/sensor_templates.hpp"
-class DefaultEventhandlers;
-
 class CfgVehicles
 {
 	class Plane_Base_F;
 	class swop_delta7a:Plane_Base_F
 	{
-		
 		class ACE_SelfActions;
 	};
 	class macro_new_vehicle(delta,7a_Mk2):swop_delta7a
@@ -60,13 +55,11 @@ class CfgVehicles
 
 		hiddenSelections[] = {"camo1", "camo2", "camo3"};
 		hiddenSelectionsTextures[] = {"\A3\boat_f\Boat_Armed_01\data\Boat_Armed_01_ext_co.paa", "\A3\boat_f\Boat_Armed_01\data\Boat_Armed_01_ext_co.paa", "\A3\boat_f\Boat_Armed_01\data\Boat_Armed_01_ext_co.paa"};
-		
 	};
 
 
 	class swop_delta7b_anakin:swop_delta7a
 	{
-		
 		class ACE_SelfActions;
 	};
 
@@ -77,7 +70,7 @@ class CfgVehicles
 		scopeCurator=2;
 		forceInGarage = 1;
 		#include "common_delta.hpp"	
-				visualTarget = 1; 
+		visualTarget = 1;
 		visualTargetSize = 1;
 		reportOwnPosition = true;
 		radarTargetSize = 1;
@@ -88,23 +81,14 @@ class CfgVehicles
 		irTarget = 1;
 		irTargetSize = 1;
 		countermeasureActivationRadius = 2000;
-
-		
 	};
 
 	class macro_new_vehicle(delta,7a_Mk2_red) : macro_new_vehicle(delta,7b_Mk2)
 	{
 		forceInGarage = 0;
-		Displayname = "CS-M Delta-7B (Red) Mk.II"
+		Displayname = "CS-M Delta-7B (Red) Mk.II";
 		hiddenSelections[] = {"camo1","camo2","camo3"};
 		hiddenSelectionsMaterials[] = {"delta7\Delta7wedge_obi.rvmat","delta7\Delta7back_obi.rvmat","delta7\Delta7astro.rvmat"};
 		hiddenSelectionsTextures[] = {"delta7\tx_delta7_wedge_obi.paa","delta7\tx_delta7_back_obi.paa","delta7\tx_delta7_astromech_obi.paa"};
-	};
-	class macro_new_vehicle(delta,7a_Mk2_blue) : macro_new_vehicle(delta,7b_Mk2)
-	{
-		forceInGarage = 0;
-		displayname = "CS-M Delta-7B (Black) Mk.II";
-		hiddenSelections[] = {"camo1", "camo2", "camo3"};
-		hiddenSelectionsTextures[] = {"\A3\boat_f\Boat_Armed_01\data\Boat_Armed_01_ext_co.paa", "\A3\boat_f\Boat_Armed_01\data\Boat_Armed_01_ext_co.paa", "\A3\boat_f\Boat_Armed_01\data\Boat_Armed_01_ext_co.paa"};
 	};
 };

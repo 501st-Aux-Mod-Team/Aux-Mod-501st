@@ -12,7 +12,6 @@
 
 #define new_v_wing_class(name) vehicle_classname##_##name
 
-
 class CfgPatches
 {
 	class macro_patch_name(V_Wing)
@@ -35,35 +34,16 @@ class CfgPatches
 	};
 };
 
-
 #include "../../common/sensor_templates.hpp"
-class CBA_Extended_EventHandlers_base;
-
 class CfgVehicles
 {
-	class Plane;
-	class Plane_Base_F:Plane
-	{
-		class EventHandlers;
-	};
+	class Plane_Base_F;
 
 	class swop_Vwing:Plane_Base_F
 	{
-	
 		class Components;
-		
-	
-		class Eventhandlers: EventHandlers
-		{
-			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-			
-			killed = "_this call (uinamespace getvariable 'BIS_fnc_effectKilled');";
-			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
-		};
 		class ACE_SelfActions;
 	};
-
-
 
 	class macro_new_vehicle(v_wing,MKII):swop_Vwing
 	{
@@ -91,14 +71,7 @@ class CfgVehicles
 		irTarget = 1;
 		irTargetSize = 1;
 		countermeasureActivationRadius = 2000;
-		
-		class Eventhandlers
-		{
-			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-			init = "[_this select 0] execVM '\Vwing\init.sqf';[_this select 0] execVM '\Vwing\initturbine.sqf';[_this select 0] execVM 'RD501_Vehicles\air\V_Wing\vwing_mass.sqf';";
-			killed = "_this call (uinamespace getvariable 'BIS_fnc_effectKilled');";
-			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
-		};
+
 		//flight model
 		maxSpeed=1100;
 		aileronSensitivity=0.41;
@@ -171,8 +144,6 @@ class CfgVehicles
 
 		#include "../../common/universal_mfd.hpp"
 
-	
-
 		weapons[] = {
 			macro_new_weapon(laser,v_wing),
 			macro_new_weapon(wynd,a2a),
@@ -180,14 +151,12 @@ class CfgVehicles
 			macro_basic_air_weapons
 		};
 		magazines[] = {
-		
 			macro_basic_air_mags,
 			macro_new_mag(generic_aircraft_gun_asg,3000),
 			macro_new_mag(a2a,4),
 			macro_new_mag(a2a,4),
 			macro_new_mag(a2a,4),
 			macro_new_mag(lgm,1)
-
 		};
 
 		class pilotCamera
@@ -221,23 +190,17 @@ class CfgVehicles
 						"OpticsBlur2"
 					};
 				};
-
 				class zoomx4: Wide
 				{
 					opticsDisplayName="NFOV";
 					initFov="(0.425/4)";//"(3.75 / 120)";
 					minFov="(0.425/4)";//"(3.75 / 120)";
 					maxFov="(0.425/4)";//"(3.75 / 120)";
-
-				
 					gunnerOpticsModel="\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
 				};
-
 				class zoomX8: Wide
 				{
 					opticsDisplayName="NFOV";
-					
-
 					initFov="(0.42/8)";//"(.375 / 120)";
 					minFov="(0.42/8)";//"(.375 / 120)";
 					maxFov="(0.42/8)";//"(.375 / 120)";
@@ -254,18 +217,14 @@ class CfgVehicles
 				class zoomX50: Wide
 				{
 					opticsDisplayName="NFOV";
-					
-
 					initFov="(0.42/50)";//"(.375 / 120)";
 					minFov="(0.42/50)";//"(.375 / 120)";
 					maxFov="(0.42/50)";//"(.375 / 120)";
 					gunnerOpticsModel="\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
 				};
-
 				class zoomX70: Wide
 				{
 					opticsDisplayName="NFOV";
-
 					initFov="(0.42/70)";//"(.375 / 120)";
 					minFov="(0.42/70)";//"(.375 / 120)";
 					maxFov="(0.42/70)";//"(.375 / 120)";
@@ -330,7 +289,6 @@ class CfgVehicles
 						{
 							//minRange = 500;
 							//maxRange = 2000;
-
 							minRange = 5;
 							maxRange = 12000;
 							objectDistanceLimitCoef = -1;
@@ -340,7 +298,6 @@ class CfgVehicles
 						{
 							//minRange = 500;
 							maxRange = 1500;
-
 							minRange = 5;
 							//maxRange = 7000;
 							objectDistanceLimitCoef = 1;
@@ -443,6 +400,5 @@ class CfgVehicles
 				};
 			};
 		};
-
 	};
 };

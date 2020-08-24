@@ -52,40 +52,29 @@ class CfgPatches
 	};
 };
 
-
 #include "../../common/sensor_templates.hpp"
-class CBA_Extended_EventHandlers_base;
-
 class CfgVehicles
 {
 	class Plane_Base_F;
-	
 
 	class swop_aw:Plane_Base_F
 	{
-		
 		class ACE_SelfActions;
 	};
-
 	class swop_awbl:swop_aw
 	{
-		
 		class ACE_SelfActions;
 	};
 	class swop_awrz2:Plane_Base_F
 	{
-		
 		class ACE_SelfActions;
 	};
-
 	class swop_awrz2b:swop_awrz2
 	{
 		class ACE_SelfActions;
-		
 	};
 	class swop_awrz2g:swop_awrz2
 	{
-		
 		class ACE_SelfActions;
 	};
 
@@ -97,7 +86,6 @@ class CfgVehicles
 		faction = macro_rebel_faction
 		editorSubcategory = macro_editor_cat_air(Rebel_vtol)
 		vehicleClass = macro_editor_vehicle_type_air(Rebel)
-
 
 		scope = 2;
 		altFullForce = 6000;
@@ -131,25 +119,15 @@ class CfgVehicles
 				radius = 10;
 				onlyforplayer = 1;
 			};
-		};	
-		class EventHandlers
-		{
-			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-			init = "[_this select 0] execVM '\awing\init.sqf';[_this select 0] execVM '\awing\initturbine.sqf';";
-			killed = "_this call (uinamespace getvariable 'BIS_fnc_effectKilled');";
-			 class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
-		
 
 		class ACE_SelfActions:ACE_SelfActions
-		{		
-			
+		{
 			#include "../../common/universal_hud_color_changer.hpp"
 		};
 
 		#include "../../common/universal_mfd.hpp"
 
-		
 		weapons[] = {
 			macro_new_weapon(wynd,a2a),
 			macro_new_weapon(wynd,agm),
@@ -158,7 +136,6 @@ class CfgVehicles
 			macro_new_weapon(generic,rebel_aircraft_cannon)
 		};
 		magazines[] = {
-		
 			macro_new_mag(a2a,4),
 			macro_new_mag(agm,6),
 			macro_new_mag(ugm,10),
@@ -166,16 +143,12 @@ class CfgVehicles
 			macro_new_mag(generic_aircraft_cannon_red,1000),
 			macro_new_mag(generic_aircraft_cannon_red,1000)
 		};
-
-	
 	};
 
 	macro_r1_skin(RZ_1_Blue_Leader_MkII,Blue Leader,t_awing_02_cw.paa)
 	macro_r1_skin(RZ_1_Blue_MkII,Blue,t_awing_03_cw.paa)
-
 	macro_r1_skin(RZ_1_Green_Leader_MkII,Green Leader,t_awing_04_cw.paa)
 	macro_r1_skin(RZ_1_Green_MkII,Green,t_awing_05_cw.paa)
-
 	macro_r1_skin(RZ_1_Red_Leader_MkII,Red Leader,t_awing_06_cw.paa)
 
 	//--------------------------------------------------------------------------------
@@ -196,8 +169,7 @@ class CfgVehicles
 		armor = 200;
 		
 		class ACE_SelfActions:ACE_SelfActions
-		{		
-			
+		{
 			#include "../../common/universal_hud_color_changer.hpp"
 		};
 
@@ -229,13 +201,6 @@ class CfgVehicles
 				radius = 10;
 				onlyforplayer = 1;
 			};
-		};	
-		class EventHandlers
-		{
-			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-			init = "[_this select 0] execVM '\awing\init.sqf';[_this select 0] execVM '\awing\initturbine.sqf';";
-			killed = "_this call (uinamespace getvariable 'BIS_fnc_effectKilled');";
-			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
 
 		crew = "SWOP_Rebel_navy_pil_b";
@@ -257,7 +222,6 @@ class CfgVehicles
 			macro_new_mag(generic_aircraft_cannon_red,1000),
 			macro_new_mag(generic_aircraft_cannon_red,1000)
 		};
-
 	};
 
 	class macro_new_vehicle(A_Wing,RZ_2_Mk2_blue) : macro_new_vehicle(A_Wing,RZ_2_Mk2)
@@ -277,9 +241,4 @@ class CfgVehicles
 		hiddenSelections[] = {"camo1"};
 		hiddenSelectionsTextures[] = {"Awing\t_queenhoneybeegreen_co.paa"};
 	};
-
-	
-
-
-	
 };

@@ -1,6 +1,5 @@
 		vtol=4;
 
-
 		airBrakeFrictionCoef = 80.4;
 		rudderInfluence = 0.9*2;
 
@@ -15,13 +14,11 @@
 			{
 				isCopilot = 1;
 				weapons[] = {
-					
 					macro_basic_air_weapons,
 					macro_new_weapon(voltic,y_wing),
 					macro_new_weapon(generic,republic_aircraft_cannon)
 				};
 				magazines[] = {
-				
 					macro_basic_air_mags,
 					macro_new_mag(generic_aircraft_cannon_green,1000),
 					macro_new_mag(generic_aircraft_cannon_green,1000),
@@ -31,7 +28,6 @@
 					macro_new_mag(voltic,200),
 					macro_new_mag(voltic,200)
 				};
-
 			};
 		};
 
@@ -73,7 +69,7 @@
 					maxFov="0.425/8";//"(30 / 120)";
 					gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
 				};
-								class NarrowX16: Wide
+				class NarrowX16: Wide
 				{
 					opticsDisplayName = "NFOV";
 					initFov="0.425/16";//"(30 / 120)";
@@ -145,8 +141,7 @@
 		};
 
         class ACE_SelfActions:ACE_SelfActions
-		{		
-			
+		{
 			#include "../../common/universal_hud_color_changer.hpp"
 		};
 

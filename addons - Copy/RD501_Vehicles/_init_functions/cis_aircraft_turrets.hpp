@@ -1,39 +1,62 @@
-    class macro_new_vehicle(vulture,MKII) {
-    	
+
+//CIS_Air
+	class macro_new_vehicle(vulture,MKII) {
         class turret_script {
             init = [_this select 0,macro_single_quote(macro_new_vehicle(Praetorian_Variant,opfor)),[0,1.5,-.6]] spawn macro_fnc_name(apply_aircraft_turrets);
+        };
+        class swop_init {
+        	init = "[_this select 0] execVM '\vulture\init.sqf';[_this select 0] execVM '\vulture\initturbine.sqf';";
         };
     };
     
     class macro_new_vehicle(trifighter,MKII) {
-        class turret_script2 {
-            init =  "[_this select 0,18000] call RD501_Main_fnc_set_mass;";
+        class weight_script {
+            init = "[_this select 0,18000] call RD501_Main_fnc_set_mass;";
         };
         class turret_script {
-            init =  [_this select 0,macro_single_quote(macro_new_vehicle(Praetorian_Variant,opfor)),[0,1,-1]] spawn macro_fnc_name(apply_aircraft_turrets);
+            init = [_this select 0,macro_single_quote(macro_new_vehicle(Praetorian_Variant,opfor)),[0,1,-1]] spawn macro_fnc_name(apply_aircraft_turrets);
         };
-       
+       class swop_init {
+       		init = "[_this select 0] execVM '\vulture\inittri.sqf';[_this select 0] execVM '\vulture\initturbine.sqf';";
+       };
+		class edit_mass {
+			init = "[_this select 0,15000] call RD501_Main_fnc_set_mass;";
+		};
     };
 
     class macro_new_vehicle(hyena,Mk2) {
-        class turret_script {
-            
+        class turret_1 {
             init = [_this select 0,macro_single_quote(macro_new_vehicle(Praetorian_Variant,opfor)),[-1,1.5,-0.5]] spawn macro_fnc_name(apply_aircraft_turrets);
         };
+		class turret_2 {
+			init = [_this select 0,macro_single_quote(macro_new_vehicle(Praetorian_Variant,opfor)),[1,1.5,-0.5]] spawn macro_fnc_name(apply_aircraft_turrets);
+		};
     };
 
     class macro_new_vehicle(HMP,gunship) {
-        class turret_script {
-            
-            init = [_this select 0,macro_single_quote(macro_new_vehicle(Praetorian_Variant,opfor)),[0,5,-1.5]] spawn macro_fnc_name(apply_aircraft_turrets);
+		class turret1 {
+			init = [_this select 0,macro_single_quote(macro_new_vehicle(Praetorian_Variant,opfor)),[0,5,-.5]] spawn macro_fnc_name(apply_aircraft_turrets);
+		};
+		class turret2 {
+			init = [_this select 0,macro_single_quote(macro_new_vehicle(Praetorian_Variant,opfor)),[5,0,-.5]] spawn macro_fnc_name(apply_aircraft_turrets);
+		};
+		class turret3 {
+			init = [_this select 0,macro_single_quote(macro_new_vehicle(Praetorian_Variant,opfor)),[-5,0,-.5]] spawn macro_fnc_name(apply_aircraft_turrets);
+		};
+		macro_standard_eh
+        class swop_init {
+			init = "[_this select 0] execVM '\SW_Droides_2\DroidGunship\initturbine.sqf';";
         };
     };
 
     class macro_new_vehicle(HMP,transport) {
-        class turret_script {
-            
-            init = [_this select 0,macro_single_quote(macro_new_vehicle(Praetorian_Variant,opfor)),[0,5,-1.5]] spawn macro_fnc_name(apply_aircraft_turrets);
-        };
+		class turret1 {
+			init = [_this select 0,macro_single_quote(macro_new_vehicle(Praetorian_Variant,opfor)),[0,5,-.5]] spawn macro_fnc_name(apply_aircraft_turrets);
+		};
+		macro_standard_eh
+		class swop_init {
+			init = "[_this select 0] execVM '\SW_Droides_2\DroidGunship\initturbine.sqf';";
+		};
     };
 
     class macro_new_vehicle(scimitar,Mk2) {
@@ -41,11 +64,21 @@
             
             init = [_this select 0,macro_single_quote(macro_new_vehicle(Praetorian_Variant,opfor)),[-.4,13,0]] spawn macro_fnc_name(apply_aircraft_turrets);
         };
+		macro_standard_eh
+		class swop_init {
+			init = "[_this select 0] execVM '\Scimitar\initturbine.sqf';";
+		};
     };
 
     class macro_new_vehicle(nantex,Mk2) {
         class turret_script {
-            
             init = [_this select 0,macro_single_quote(macro_new_vehicle(Praetorian_Variant,opfor)),[0,3,.6]] spawn macro_fnc_name(apply_aircraft_turrets);
         };
+		macro_standard_eh
+		class swop_init {
+			init = "[_this select 0] execVM '\GeonFighter\init.sqf';[_this select 0] execVM '\GeonFighter\initturbine.sqf';";
+		};
+		class edit_mass {
+			init = "[_this select 0,15000] call RD501_Main_fnc_set_mass;";
+		};
     };

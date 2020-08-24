@@ -35,39 +35,23 @@ class CfgPatches
 	};
 };
 
-
 #include "../../common/sensor_templates.hpp"
-class DefaultEventhandlers;
-
 class CfgVehicles
 {
 	class Plane_Base_F;
 
 	class Xarc: Plane_Base_F
 	{
-		//class AnimationSources;
 		class Turrets;
-		
 	};
 
-		
 	class swop_arc_t: Xarc
 	{
-		class Eventhandlers: DefaultEventhandlers//remove the script that crashes server lol
-		{
-			killed = "_this call (uinamespace getvariable 'BIS_fnc_effectKilled');";
-			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-			init = "[_this select 0] execVM '\arc\init.sqf';[_this select 0] execVM '\arc\initturbine.sqf';";
-			
-		};
-
 		class Turrets:Turrets
 		{
 			class MainTurret;
-
 			class CopilotTurret;
 		};
-
 		class Components;
 		class ACE_SelfActions;
 	};
@@ -84,7 +68,6 @@ class CfgVehicles
 		editorSubcategory = macro_editor_cat_air(Republic_vtol)
 		vehicleClass = macro_editor_vehicle_type_air(Republic)
 
-
 		visualTarget = 1; 
 		visualTargetSize = 10;
 		reportOwnPosition = true;
@@ -97,10 +80,6 @@ class CfgVehicles
 		irTargetSize = 10;
 		countermeasureActivationRadius = 2000;
 
-
-		// model = "RD501_Vehicles\air\ARC_170\xt.p3d"
-		// hiddenSelections[] = {"camo1"};
-		// hiddenSelectionsTextures[] = {"ywing\Y-Wing_Body_co.paa"};
 		armor = 500;
 		vtol=4;
 		
@@ -130,15 +109,10 @@ class CfgVehicles
 		gearsUpFrictionCoef = 0;
 		elevatorSensitivity = 1*2;
 		airBrakeFrictionCoef = 80.4;
-		
-		//draconicForceXCoef = 15*2;
-		//draconicForceYCoef = 1*2;
-		//draconicForceZCoef = 1*2;
-		
+
 		VTOLYawInfluence = 3*1.5*2;
 		VTOLPitchInfluence = 2*1.5*1.0;
 		VTOLRollInfluence = 3*2*1;
-
 
 		weapons[] = {
 			macro_basic_air_weapons,
@@ -150,7 +124,6 @@ class CfgVehicles
 			
 		};
 		magazines[] = {
-			
 			macro_new_mag(generic_aircraft_cannon_green,1000),
 			macro_new_mag(a2a,4),
 			macro_new_mag(agm,6),
@@ -162,7 +135,7 @@ class CfgVehicles
 		gunnerUsesPilotView = 1;
 		class Turrets:Turrets
 		{
-			//gumner
+			//gunner
 			class MainTurret:MainTurret
 			{
 				stabilizedInAxes = 4;
@@ -255,13 +228,8 @@ class CfgVehicles
 
 				maxHorizontalRotSpeed = 1.2*2;
 				maxVerticalRotSpeed = 1.2*2;
-			
-
 
 				ballisticsComputer = 1+8;
-	
-				
-
 
 				allowTabLock = 1;
 				showCrewAim = 4;
@@ -282,18 +250,15 @@ class CfgVehicles
 					//macro_new_weapon(bomb,cluster),
 					//macro_new_weapon(bomb,LGB),
 					//macro_basic_air_weapons
-					
 				};
 				magazines[] = {
-					
 					//macro_new_mag(generic_aircraft_cannon_green,1000),
 					//macro_basic_air_mags,
 					//macro_new_mag(sdb_bomb,4),
 					//macro_new_mag(cluster_bomb,4),
 					//macro_new_mag(lgb_bomb,4)
 				};
-			
-			
+
 				memoryPointGun = "kulas";
 				muzzleEnd[] = {"cannon1","cannon2"};
 				muzzlePos[] = {"cannon1","cannon2"};
@@ -315,7 +280,6 @@ class CfgVehicles
 					initFov = 0.75;
 					minFov = 0.25;
 					maxFov = 0.75;
-
 
 					visionMode[]=
 					{
@@ -366,7 +330,6 @@ class CfgVehicles
 					};
 				};
 			};
-
 		};
 
 		class pilotCamera
@@ -481,7 +444,6 @@ class CfgVehicles
 
 		class UserActions
 		{
-			
 			class Wing_Close
 			{
 				condition = "this animationPhase ""wing_1_up_A"" == 1 and this animationPhase ""wing_2_up_A"" == 1 and this animationPhase ""wing_1_down_A"" == 1 and this animationPhase ""wing_2_down_A"" == 1";
@@ -513,13 +475,11 @@ class CfgVehicles
 		};	
 
 		class ACE_SelfActions:ACE_SelfActions
-		{		
-			
+		{
 			#include "../../common/universal_hud_color_changer.hpp"
 		};
 
 		#include "../../common/universal_mfd.hpp"
-
 
 		class Components: Components
 		{
@@ -675,15 +635,5 @@ class CfgVehicles
 				};
 			};
 		};
-
-	
-		class EventHandlers : DefaultEventhandlers 
-		{
-			killed = "_this call (uinamespace getvariable 'BIS_fnc_effectKilled');";
-			init = "[_this select 0] execVM 'rd501_vehicles\air\arc_170\arc_mass.sqf';";
-			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-		};
 	};
-
-	
 };

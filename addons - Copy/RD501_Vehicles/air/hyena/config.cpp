@@ -37,10 +37,8 @@ class CfgPatches
 
 
 #include "../../common/sensor_templates.hpp"
-class CBA_Extended_EventHandlers_base;
 class CfgVehicles
 {
-
 	class swop_hbomber;
 	class macro_new_vehicle(hyena,Mk2) : swop_hbomber
 	{
@@ -59,11 +57,7 @@ class CfgVehicles
 		faction = macro_cis_faction
 		editorSubcategory = macro_editor_cat_air(CIS)
 		vehicleClass = macro_editor_vehicle_type_air(CIS)
-		
-		class EventHandlers {
-            
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
-        };
+
 		class UserActions
 		{
 			
@@ -90,9 +84,6 @@ class CfgVehicles
 			macro_new_mag(lgb_bomb,4),
 			macro_new_mag(lgb_bomb,4),
 			macro_new_mag(lgb_bomb,4)
-		
 		};
-
 	};
-	
 };

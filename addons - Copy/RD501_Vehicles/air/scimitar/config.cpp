@@ -43,7 +43,6 @@ class CfgVehicles
 	class Plane_Base_F;
 	class swop_scimitar:Plane_Base_F
 	{
-		
 		class ACE_SelfActions;
 	};
 	class macro_new_vehicle(scimitar,Mk2) : swop_scimitar
@@ -100,21 +99,12 @@ class CfgVehicles
 				condition = "(player == driver this) AND (alive this) and !(this getVariable ['CloakScimitar', false])";
 				statement = "this spawn SWOP_fnc_cloakScimitar";
 			};
-		};	
-		class EventHandlers
-		{
-			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-			init = "[_this select 0] execVM '\Scimitar\initturbine.sqf';";
-			killed = "_this call (uinamespace getvariable 'BIS_fnc_effectKilled');";
-			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
 		class ACE_SelfActions:ACE_SelfActions
-		{		
-			
+		{
 			#include "../../common/universal_hud_color_changer.hpp"
 		};
 		weapons[] = {
-			
 			macro_basic_air_weapons,
 			macro_new_weapon(generic,cis_aircraft_cannon)
 		};

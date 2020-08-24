@@ -37,13 +37,11 @@ class CfgPatches
 
 
 #include "../../common/sensor_templates.hpp"
-class DefaultEventhandlers;
 class CfgVehicles
 {
 	class Plane_Base_F;
 	class swop_geofighter:Plane_Base_F
 	{
-		
 		class ACE_SelfActions;
 	};
 	class macro_new_vehicle(nantex,Mk2) : swop_geofighter
@@ -92,16 +90,6 @@ class CfgVehicles
 				radius = 10;
 				onlyforplayer = 1;
 			};
-		};	
-		class EventHandlers:DefaultEventhandlers
-		{
-			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-			init = "[_this select 0] execVM '\GeonFighter\init.sqf';[_this select 0] execVM '\GeonFighter\initturbine.sqf';[_this select 0] execVM 'RD501_Vehicles\_init_functions\cis_aircraft_mass.sqf';";
-			killed = "_this call (uinamespace getvariable 'BIS_fnc_effectKilled');";
-		
-            
-           //class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
-  
 		};
 		weapons[] = {
 			macro_new_weapon(wynd,a2a),
@@ -111,7 +99,6 @@ class CfgVehicles
 			macro_new_weapon(generic,purple_aircraft_cannon)
 		};
 		magazines[] = {
-		
 			macro_new_mag(a2a,4),
 			macro_new_mag(agm,6),
 			macro_new_mag(ugm,10),

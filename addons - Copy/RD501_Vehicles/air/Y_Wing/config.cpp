@@ -12,7 +12,6 @@
 
 #define new_y_wing_class(name) vehicle_classname##_##name
 
-
 class CfgPatches
 {
 	class macro_patch_name(Y_Wing)
@@ -37,21 +36,16 @@ class CfgPatches
 	};
 };
 
-
 #include "../../common/sensor_templates.hpp"
-class CBA_Extended_EventHandlers_base;
 class CfgVehicles
 {
 	class Plane_Base_F;
 	class swop_ywing_base: Plane_Base_F
 	{
-
 		class Turrets;
-		
 	};
 	class swop_ywclones: swop_ywing_base
 	{
-		
 		class Turrets:Turrets
 		{
 			class MainTurret;
@@ -94,13 +88,6 @@ class CfgVehicles
 			#include "../../common/universal_dmg_report.hpp"
 		};	
 
-		class EventHandlers
-		{
-			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-			init = "[_this select 0] execVM '\ywing\initturbine.sqf';";
-			killed = "_this call (uinamespace getvariable 'BIS_fnc_effectKilled');";
-			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
-		};
 		#include "common.hpp"
 		class Sounds;
 		class SoundsExt;
@@ -1090,7 +1077,6 @@ class CfgVehicles
 
 	class swop_yw: swop_ywing_base
 	{
-		
 		class Turrets:Turrets
 		{
 			class MainTurret;
@@ -1126,13 +1112,6 @@ class CfgVehicles
 		armor=800;
 		
 		#include "common.hpp"
-		class EventHandlers
-		{
-			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-			init = "[_this select 0] execVM '\ywing\initturbine.sqf';";
-			killed = "_this call (uinamespace getvariable 'BIS_fnc_effectKilled');";
-			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
-		};
 
 		weapons[] = {
 			macro_basic_air_weapons,
@@ -1165,9 +1144,5 @@ class CfgVehicles
 			macro_new_mag(lgb_bomb,4),
 			macro_new_mag(lgb_bomb,4)
 		};
-
 	};
- 
-
-	
 };

@@ -1,8 +1,7 @@
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat_air(Republic_vtol)
 		vehicleClass = macro_editor_vehicle_type_air(Republic)
-		
-		class EventHandlers : DefaultEventhandlers {};
+
 		class UserActions
 		{
 			class AfterburnerOff
@@ -33,8 +32,7 @@
 		};	
 
 		class ACE_SelfActions:ACE_SelfActions
-		{		
-			
+		{
 			#include "../../common/universal_hud_color_changer.hpp"
 		};
 
@@ -54,14 +52,12 @@
 			macro_new_weapon(generic,republic_aircraft_cannon)
 		};
 		magazines[] = {
-		
 			macro_basic_air_mags,
 			macro_new_mag(generic_aircraft_cannon_green,1000),
 			macro_new_mag(generic_aircraft_cannon_green,1000),
 			macro_new_mag(a2a,4),
 			macro_new_mag(agm,6),
 			macro_new_mag(ugm,10)
-		
 		};
 
 		armor=200;

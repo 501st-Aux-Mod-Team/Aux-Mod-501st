@@ -50,7 +50,6 @@ class CfgPatches
 
 
 #include "../../common/sensor_templates.hpp"
-class CBA_Extended_EventHandlers_base;
 class CfgVehicles
 {
 	class Plane_Base_F;
@@ -103,13 +102,6 @@ class CfgVehicles
 				radius = 15;
 				onlyforplayer = 1;
 			};
-		};	
-		class EventHandlers
-		{
-			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-			init = "[_this select 0] execVM '\TIE\init.sqf';[_this select 0] execVM '\TIE\initturbine.sqf';";
-			killed = "_this call (uinamespace getvariable 'BIS_fnc_effectKilled');";		
-			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
 
 		weapons[] = {
@@ -173,13 +165,6 @@ class CfgVehicles
 				radius = 15;
 				onlyforplayer = 1;
 			};
-		};	
-		class EventHandlers
-		{
-			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-			init = "[_this select 0] execVM '\TIE\init.sqf';[_this select 0] execVM '\TIE\initturbine.sqf';";
-			killed = "_this call (uinamespace getvariable 'BIS_fnc_effectKilled');";
-			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
 		weapons[] = {
 			macro_basic_air_weapons,
@@ -238,13 +223,6 @@ class CfgVehicles
 				radius = 15;
 				onlyforplayer = 1;
 			};
-		};	
-		class EventHandlers
-		{
-			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-			init = "[_this select 0] execVM '\TIE\init.sqf';[_this select 0] execVM '\TIE\initturbine.sqf';";
-			killed = "_this call (uinamespace getvariable 'BIS_fnc_effectKilled');";
-			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
 		weapons[] = {
 			macro_basic_air_weapons,
@@ -304,13 +282,6 @@ class CfgVehicles
 				radius = 15;
 				onlyforplayer = 1;
 			};
-		};	
-		class EventHandlers
-		{
-			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-			init = "[_this select 0] execVM '\TIEdef\init.sqf';";
-			killed = "_this call (uinamespace getvariable 'BIS_fnc_effectKilled');";
-			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
 		weapons[] = {
 			macro_basic_air_weapons,
@@ -347,13 +318,6 @@ class CfgVehicles
 		class UserActions
 		{
 			
-		};	
-		class EventHandlers
-		{
-			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-			init = "[_this select 0] execVM '\TIE\initturbine.sqf';";
-			killed = "_this call (uinamespace getvariable 'BIS_fnc_effectKilled');";
-			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
 
 		weapons[] = {
@@ -428,13 +392,6 @@ class CfgVehicles
 				radius = 15;
 				onlyforplayer = 1;
 			};
-		};	
-		class EventHandlers
-		{
-			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-			init = "[_this select 0] execVM '\TIE\init.sqf';[_this select 0] execVM '\TIE\initturbine.sqf';";
-			killed = "_this call (uinamespace getvariable 'BIS_fnc_effectKilled');";
-			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
 		
 		weapons[] = {
@@ -509,13 +466,6 @@ class CfgVehicles
 				radius = 15;
 				onlyforplayer = 1;
 			};
-		};	
-		class EventHandlers
-		{
-			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-			init = "[_this select 0] execVM '\TIE\init.sqf';[_this select 0] execVM '\TIE\initturbine.sqf';";
-			killed = "_this call (uinamespace getvariable 'BIS_fnc_effectKilled');";
-			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
 		weapons[] = {
 			macro_basic_air_weapons,
@@ -575,13 +525,6 @@ class CfgVehicles
 				radius = 15;
 				onlyforplayer = 1;
 			};
-		};	
-		class EventHandlers
-		{
-			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-			init = "[_this select 0] execVM '\TIE\init.sqf';[_this select 0] execVM '\TIE\initturbine.sqf';";
-			killed = "_this call (uinamespace getvariable 'BIS_fnc_effectKilled');";
-			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
 		weapons[] = {
 			macro_basic_air_weapons,
@@ -641,13 +584,6 @@ class CfgVehicles
 				radius = 15;
 				onlyforplayer = 1;
 			};
-		};	
-		class EventHandlers
-		{
-			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-			init = "[_this select 0] execVM '\TIEsilencer\init.sqf';[_this select 0] execVM '\TIEsilencer\initturbine.sqf';";
-			killed = "_this call (uinamespace getvariable 'BIS_fnc_effectKilled');";
-			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
 		weapons[] = {
 			macro_basic_air_weapons,
