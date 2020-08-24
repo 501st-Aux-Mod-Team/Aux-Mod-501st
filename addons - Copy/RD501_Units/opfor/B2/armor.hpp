@@ -77,7 +77,7 @@ class HitPoints: HitPoints
     };
     class HitBody: HitChest
     {
-        armor = 1000;
+        armor = 700;
         material = -1;
         name = "body";
         passThrough = 0.1;
