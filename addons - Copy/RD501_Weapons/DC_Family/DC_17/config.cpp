@@ -113,6 +113,7 @@ class cfgWeapons
 		displayName="Republic DC-17";
 		reloadAction="GestureReloadPistol";
 		baseWeapon=macro_new_weapon(DC,r17)
+		JLTS_hasElectronics=0;
 		magazines[]=
 		{
 			macro_new_mag(5mw,10)
@@ -140,6 +141,7 @@ class cfgWeapons
 	{
 		displayName="Republic DC-17A";
 		baseWeapon=macro_new_weapon(DC,r17a)
+		JLTS_hasElectronics=0;
 		magazines[]=
 		{
 			macro_new_mag(2mw,30)

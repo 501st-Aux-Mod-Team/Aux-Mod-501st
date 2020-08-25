@@ -165,6 +165,7 @@ class CfgVehicles
 		uniformClass = macro_new_uniform_class(opfor,B2_Armor);
 		displayname = "B2 (Blaster)";
 		class EventHandlers : DefaultEventhandlers {};
+		#include "armor.hpp"
 	};
 	class  macro_new_unit_class(opfor,B2_droid_Rocket): macro_new_unit_class(opfor,B2_droid_Standard)
 	{

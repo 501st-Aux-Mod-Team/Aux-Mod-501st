@@ -187,6 +187,7 @@ class cfgWeapons
 	{
 		displayName="Republic DC-15S";
 		reloadTime=0.66;
+		reloadAction="ReloadMagazine";
 		magazines[]=
 		{
 			macro_new_mag(5mw,60)
