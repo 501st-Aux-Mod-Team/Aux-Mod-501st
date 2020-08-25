@@ -35,6 +35,7 @@ class CfgWeapons
 	class macro_new_weapon_nofam(valken38x):3AS_Valken38X_F
 	{
 		displayName="Republic Valken 38X";
+		dispersion=0.00045;
 		magazines[]=
 		{
 			macro_new_mag(20mw,20),

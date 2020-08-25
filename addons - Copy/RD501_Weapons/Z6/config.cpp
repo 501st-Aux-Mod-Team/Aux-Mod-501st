@@ -113,6 +113,7 @@ class cfgWeapons
 	{
 		scope=2;
         scopeArsenal=2;
+		JLTS_hasElectronics=0;
 		recoil="recoil_mmg_02"
 		baseWeapon=macro_new_weapon_nofam(rZ6)
         displayName="Republic Z6 Chaingun";

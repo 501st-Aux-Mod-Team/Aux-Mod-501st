@@ -37,6 +37,7 @@ class CfgWeapons
 	class macro_new_weapon(DC,15gl):JLTS_DC15A_ugl_plastic
 	{
 		displayName="Republic DC-15A UGL";
+		JLTS_hasElectronics=0;
 		magazines[]=
 		{
 			macro_new_mag(10mw,30)

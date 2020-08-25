@@ -132,11 +132,13 @@ class cfgWeapons
 		};
 		class Single:Single
 		{
-			reloadTime=0.1;						
+			reloadTime=0.1;		
+			dispersion=0.0006;		
 		};
 		class Burst:Burst
 		{
 			reloadTime=0.1;
+			dispersion=0.0006;
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
