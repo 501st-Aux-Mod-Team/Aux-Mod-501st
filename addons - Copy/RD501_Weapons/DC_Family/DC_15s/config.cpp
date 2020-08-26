@@ -187,6 +187,7 @@ class cfgWeapons
 	{
 		displayName="Republic DC-15S";
 		reloadTime=0.66;
+		recoil="recoil_smg_01";
 		reloadAction="ReloadMagazine";
 		magazines[]=
 		{

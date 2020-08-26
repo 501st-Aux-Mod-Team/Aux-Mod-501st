@@ -138,7 +138,31 @@ class cfgWeapons
 			burst = 25;
 			textureType = "fastAuto";
 		};
-
+		class HitEffects
+		{
+			Hit_Foliage_green="";
+			Hit_Foliage_Dead="";
+			Hit_Foliage_Green_big="";
+			Hit_Foliage_Palm="";
+			Hit_Foliage_Pine="";
+			hitFoliage="";
+			hitGlass="";
+			hitGlassArmored="";
+			hitWood="";
+			hitHay="";
+			hitMetal="";
+			hitMetalPlate="";
+			hitBuilding="";
+			hitPlastic="";
+			hitRubber="";
+			hitConcrete="";
+			hitMan="ImpactEffectsBlood";
+			hitGroundSoft="";
+			hitGroundRed="";
+			hitGroundHard="";
+			hitWater="";
+			hitVirtual="";
+		};
 	};
 	class 3AS_Chaingun;
     class macro_new_weapon_nofam(z1000): 3AS_Chaingun
@@ -155,6 +179,31 @@ class cfgWeapons
 		};
 		class EventHandlers {
 			fired = macro_quote(_this call macro_fnc_name(onWeaponFiredSwapToEmpty));
+		};
+		class HitEffects
+		{
+			Hit_Foliage_green="";
+			Hit_Foliage_Dead="";
+			Hit_Foliage_Green_big="";
+			Hit_Foliage_Palm="";
+			Hit_Foliage_Pine="";
+			hitFoliage="";
+			hitGlass="";
+			hitGlassArmored="";
+			hitWood="";
+			hitHay="";
+			hitMetal="";
+			hitMetalPlate="";
+			hitBuilding="";
+			hitPlastic="";
+			hitRubber="";
+			hitConcrete="";
+			hitMan="ImpactEffectsBlood";
+			hitGroundSoft="";
+			hitGroundRed="";
+			hitGroundHard="";
+			hitWater="";
+			hitVirtual="";
 		};
     };
 	class macro_new_weapon_nofam(z1000u): 3AS_Chaingun
