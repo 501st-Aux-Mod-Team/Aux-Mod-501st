@@ -114,7 +114,7 @@ class cfgWeapons
 		scope=2;
         scopeArsenal=2;
 		JLTS_hasElectronics=0;
-		recoil="recoil_mmg_02"
+		recoil="recoil_lim"
 		baseWeapon=macro_new_weapon_nofam(rZ6)
         displayName="Republic Z6 Chaingun";
 		magazines[]=
@@ -169,7 +169,7 @@ class cfgWeapons
     {
         scope=2;
         scopeArsenal=2;
-		recoil="recoil_mmg_01";
+		recoil="recoil_mmg_02";
         displayName="Republic Z1000 Chaingun";
 		picture = "\RD501_Weapons\Z6\chaingun_icon.paa";
 		RD501_Empty_Weapon = macro_quote(macro_new_weapon_nofam(z1000u));
