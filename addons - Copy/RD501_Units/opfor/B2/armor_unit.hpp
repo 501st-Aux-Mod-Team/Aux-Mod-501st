@@ -27,7 +27,7 @@ class HitPoints
 	};
 	class HitHead: HitNeck
 	{
-		armor = 1000;			// unused
+		armor = 350;			// unused
 		material = -1;
 		name = "head";
 		passThrough = 1.0;
@@ -53,7 +53,7 @@ class HitPoints
 		material = -1;
 		name = "spine1";
 		passThrough = 1.0;
-		radius = 0.15;
+		radius = 0.1;
 		explosionShielding = 0.25;
 		visual = "injury_body";
 		minimalHit = 0.01;
@@ -64,7 +64,7 @@ class HitPoints
 		material = -1;
 		name = "spine2";
 		passThrough = 1.0;
-		radius = 0.15;
+		radius = 0.1;
 		explosionShielding = 2;
 		visual = "injury_body";
 		minimalHit = 0.01;
@@ -75,18 +75,18 @@ class HitPoints
 		material = -1;
 		name = "spine3";
 		passThrough = 1.0;
-		radius = 0.15;
+		radius = 0.1;
 		explosionShielding = 2;
 		visual = "injury_body";
 		minimalHit = 0.01;
 	};
 	class HitBody: HitChest
 	{
-		armor = 1000;			// unused
+		armor = 20;			
 		material = -1;
 		name = "body";
 		passThrough = 1.0;
-		radius = 0.16;
+		radius = 0.1;
 		explosionShielding = 6;
 		visual = "injury_body";
 		minimalHit = 0.01;
