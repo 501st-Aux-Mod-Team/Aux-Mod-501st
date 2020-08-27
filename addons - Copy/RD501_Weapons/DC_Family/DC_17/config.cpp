@@ -127,6 +127,7 @@ class cfgWeapons
 		class Stun: RD501_stun_muzzle
 		{
 			displayName="High Energy StunMode";
+			reloadAction="GestureReloadPistol";
 			magazines[]=
 			{
 				macro_new_mag(pistolstun,5)

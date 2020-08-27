@@ -49,6 +49,7 @@ class CfgAmmo
 		typicalSpeed=450;
 		caliber=1;
 		airFriction=0;
+		explosive = 0.4;
 	};
 	class macro_new_ammo(20mw) : 3AS_EC50_BluePlasma
 	{
@@ -57,6 +58,7 @@ class CfgAmmo
 		typicalSpeed=500;
 		caliber=1.6;
 		airFriction=0;
+		explosive = 0.4;
 	};
 	class macro_new_ammo(20mwup) : 3AS_EC50_BluePlasma
 	{
@@ -65,7 +67,7 @@ class CfgAmmo
 		typicalSpeed=500;
 		indirectHit = 3;
 		indirectHitRange = 0.5;
-		explosive = 0.2;
+		explosive = 0.4;
 		caliber=0.6;
 		airFriction=0;
 	};
@@ -76,6 +78,7 @@ class CfgAmmo
 		typicalSpeed=700;
 		caliber=2.8;
 		airFriction=0;
+		explosive = 0.2;
 	};
 	class macro_new_ammo(30mw) : 3AS_EC60_BluePlasma
 	{
@@ -84,14 +87,16 @@ class CfgAmmo
 		typicalSpeed=800;
 		caliber=2.4;
 		airFriction=0;
+		explosive = 0.4;
 	};
 	class macro_new_ammo(40mw) : 3AS_EC70_BluePlasma
 	{
-		hit=35;
+		hit=60;
 		airLock=1;
 		typicalSpeed=1100;
-		caliber=2.8;
+		caliber=3.6;
 		airFriction=0;
+		explosive = 0.4;
 	};
 	class macro_new_ammo(50mw) : 3AS_EC80_BluePlasma
 	{
