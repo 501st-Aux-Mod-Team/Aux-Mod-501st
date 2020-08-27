@@ -45,6 +45,10 @@ class CfgPatches
 
 class cfgWeapons
 {
+	/**
+	 * UNIFORMS
+	 * the item the unit wears in the uniform slot
+	 */
 	class ItemCore;
 	class Uniform_Base: ItemCore
 	{
@@ -53,7 +57,6 @@ class cfgWeapons
 	class VestItem;
 	class UniformItem;
 	class SWOP_B2_superdroid_F_Spec;
-	//For reference @1,this is wat we see in arsenal.
 	class macro_new_uniform_class(opfor,B2_Armor): Uniform_Base
 	{
 		author = "SWOP";
@@ -68,17 +71,13 @@ class cfgWeapons
 		class ItemInfo: UniformItem
 		{
 			uniformModel = "-";
-			uniformClass = macro_new_uniform_skin_class(opfor,B2_Armor); //ties to @2
-			armor = 100;
-			armorStructural = 20;//30;//20;
-			explosionShielding = 0.001;
-			impactDamageMultiplier = 0.001;
+			uniformClass = macro_new_uniform_skin_class(opfor,B2_Armor);
 			modelSides[] = {6};
 			containerClass = "Supply100";
 			mass = 400;
+			#include "armor_uniform.hpp"
 		};
 	};
-
 
 	class macro_new_uniform_class(opfor,B2_Armor_Test): Uniform_Base
 	{
@@ -104,7 +103,6 @@ class cfgWeapons
 			mass = 400;
 		};
 	};
-
 
 	class macro_new_uniform_class(opfor,B2_Aqua):SWOP_B2_superdroid_F_Spec
 	{
@@ -138,22 +136,27 @@ class DefaultEventhandlers;
 class CfgVehicles
 {
 	class O_Soldier_base_F;
-	class SWOP_CIS_Base:O_Soldier_base_F
+	class SWOP_CIS_Base: O_Soldier_base_F
 	{
 		class HitPoints;
-	}
-	class SWOP_B2_superdroid:SWOP_CIS_Base
-	{
-		#include "armor.hpp"
-	}
+	};
 
-	//THIS IS THE ACUTAL UNIFORM THEY WEAR. @2
+	/**
+	 * UNIFORM SKINS
+	 * units that only act as skins for the uniform
+	 */
+	class SWOP_B2_superdroid: SWOP_CIS_Base
+	{
+		#include "armor_uniform.hpp"
+	};
 	#include "B2_Reskins.hpp"
 
+	/**
+	 * UNITS
+	 * the actual unit running around under the uniform
+	 */
 	class SWOP_CIS_superdroid_B2: SWOP_CIS_Base
 	{
-		//scope=0;
-		displayname = "Standard B2 (Blaster)";
 		class EventHandlers : DefaultEventhandlers {};
 	};
 	class macro_new_unit_class(opfor,B2_droid_Standard): SWOP_CIS_superdroid_B2
@@ -165,44 +168,30 @@ class CfgVehicles
 		uniformClass = macro_new_uniform_class(opfor,B2_Armor);
 		displayname = "B2 (Blaster)";
 		class EventHandlers : DefaultEventhandlers {};
-		#include "armor.hpp"
+		#include "armor_unit.hpp"
 	};
 	class  macro_new_unit_class(opfor,B2_droid_Rocket): macro_new_unit_class(opfor,B2_droid_Standard)
 	{
-		
 		displayname = "B2 (Rocket)";
 		author= "RD501";
 		magazines[] = {"SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag"};
 		respawnMagazines[] = {"SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag"};
-
-		//ties to @1
 		uniformClass = macro_new_uniform_class(opfor,B2_Armor);
-
 	};
 	class macro_new_unit_class(opfor,B2_super_droid_Rocket) : macro_new_unit_class(opfor,B2_droid_Rocket)
 	{
 		scope=2;
 		displayname = "Super B2 (Rocket)";
-	
-	
-		
 	};
 
 	class  macro_new_unit_class(opfor,B2_droid_Test): macro_new_unit_class(opfor,B2_droid_Standard)
 	{
-		
 		displayname = "B2 (TEST)";
 		author= "RD501";
 		magazines[] = {"SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag"};
 		respawnMagazines[] = {"SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag", "SWOP_B2rocket_Mag"};
-
-		//ties to @1
 		uniformClass = macro_new_uniform_class(opfor,B2_Armor_Test);
-		
-
 	};
-
-	
 
 	class  macro_new_unit_class(opfor,B2_aqua): macro_new_unit_class(opfor,B2_droid_Standard)
 	{
@@ -221,6 +210,5 @@ class CfgVehicles
 		magazines[] = {"SWOP_b2gun_Mag","SWOP_b2gun_Mag","SWOP_b2gun_Mag","SWOP_b2gun_Mag"};
 		weapons[] = {macro_new_weapon(b2,aqua_gun),"Throw","Put"};
 		linkedItems[] = {macro_new_weapon(equipment,Water_Filtration),"ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles"};
-		
 	};
 };
