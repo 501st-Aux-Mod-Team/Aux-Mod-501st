@@ -23,11 +23,12 @@ class HitPoints
 	};
 	class HitHead: HitNeck
 	{
-		armor = 1000;
+		armor = 1000;			// unused
 		material = -1;
 		name = "head";
 		passThrough = 0.0;
 		explosionShielding = 0.1;
+		depends = "HitFace max HitNeck";
 	};
 	class HitPelvis
 	{
@@ -63,11 +64,12 @@ class HitPoints
 	};
 	class HitBody: HitChest
 	{
-		armor = 1000;
+		armor = 1000;			// unused
 		material = -1;
 		name = "body";
 		passThrough = 0.0;
 		explosionShielding = 0.1;
+		depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 	};
 	class HitArms
 	{
