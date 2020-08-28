@@ -22,7 +22,8 @@ class CfgPatches
 };
 
 class CfgWeapons
-{
+{	
+	class UnderBarrelSlot;
 	class 3AS_DC15L_Base_F;
 	class 3AS_DC15L_F:3AS_DC15L_Base_F
 	{
@@ -63,6 +64,16 @@ class CfgWeapons
 					macro_new_weapon(scope,dc_15a_acogtcw)
 				};
 
+			};
+		class UnderBarrelSlot
+			{
+			linkProxy="\A3\Data_F_Mark\Proxies\Weapon_Slots\UNDERBARREL";
+			compatibleItems[]=
+				{
+				"bipod_01_F_blk",
+				};
+			iconPicture="\A3\Weapons_F_Mark\Data\UI\attachment_under.paa";
+			iconPinpoint="Bottom";
 			};
 		};
 	};
