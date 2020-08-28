@@ -19,7 +19,7 @@ class CfgPatches
 		};
 		requiredVersion=0.1;
 		units[]={
-			"RD501_B2_droid",
+			macro_new_unit_class(opfor,B2_droid_Standard),
 			"RD501_B2_superdroid",
 			"SWOP_B2_superdroid_F_Spec"
 		};
@@ -32,7 +32,7 @@ class CfgPatches
 
 class Extended_Init_EventHandlers 
 {
-    class RD501_B2_Droid
+    class macro_new_unit_class(opfor,B2_droid_Standard)
     {
         class ForceWalk
         {
@@ -44,7 +44,7 @@ class Extended_Init_EventHandlers
 class CfgVehicles
 {
 	class SWOP_B2_superdroid;
-	class RD501_B2_droid: SWOP_B2_superdroid
+	class macro_new_unit_class(opfor,B2_droid_Standard): SWOP_B2_superdroid
 	{
 		faction=macro_cis_faction
 		editorSubcategory=macro_editor_cat(B2)
@@ -236,7 +236,7 @@ class CfgVehicles
 		armor=30;
 		armorStructural=1;
 		explosionShielding=0.40000001;
-		uniformClass="RD501_B2_Droid_Uniform";
+		uniformClass=macro_new_uniform_class(opfor,B2_Armor)
 		class EventHandlers;
 		hiddenSelections[]=
 		{
@@ -253,12 +253,12 @@ class CfgVehicles
         weapons[] = {"SWOP_B2gun","Throw","Put"};
         linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadio","NVGoggles"};
 	};
-	class RD501_B2_superdroid : RD501_B2_Droid
+	class macro_new_unit_class(opfor,B2_droid_Super) : macro_new_unit_class(opfor,B2_droid_Standard)
 	{
 		displayname = "Super B2";
 		armor=60;
 		armorStructural=10;
-		uniformClass="RD501_B2_SuperDroid_Uniform";
+		uniformClass=macro_new_uniform_class(opfor,B2_SuperArmor)
 		class HitPoints
 		{
 			class HitFace
@@ -450,7 +450,7 @@ class CfgWeapons
 	class DefaultEventhandlers;
 	class SWOP_B2_superdroid_F_Spec;
 	class UniformItem;
-	class RD501_B2_Droid_Uniform: SWOP_B2_superdroid_F_Spec
+	class macro_new_uniform_class(opfor,B2_Armor): SWOP_B2_superdroid_F_Spec
 	{
 		scope=2;
 		displayName="RD501 B2";
@@ -459,7 +459,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem
 		{
 			uniformModel="-";
-			uniformClass="RD501_B2_droid";
+			uniformClass=macro_new_unit_class(opfor,B2_droid_Standard)
 			containerClass="Supply40";
 			mass=80;
 		};
@@ -468,7 +468,7 @@ class CfgWeapons
 		JLTS_deathSounds = "DeathDroid";
 		class EventHandlers : DefaultEventhandlers {};
 	};
-	class RD501_B2_SuperDroid_Uniform: SWOP_B2_superdroid_F_Spec
+	class macro_new_uniform_class(opfor,B2_SuperArmor): SWOP_B2_superdroid_F_Spec
 	{
 		scope=2;
 		displayName="RD501 Super B2";
@@ -477,7 +477,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem
 		{
 			uniformModel="-";
-			uniformClass="RD501_B2_superdroid";
+			uniformClass=macro_new_unit_class(opfor,B2_droid_Super);
 			containerClass="Supply40";
 			mass=80;
 		};
