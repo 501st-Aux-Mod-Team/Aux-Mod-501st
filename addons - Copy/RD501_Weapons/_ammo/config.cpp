@@ -109,7 +109,7 @@ class CfgAmmo
 		caliber=5;
 		airFriction=0;
 	};
-	class macro_new_ammo(UGL_HE): G_40mm_HE
+	class macro_new_ammo(UGL_AP): G_40mm_HE
 	{
 		hit = 350;
 		indirectHit = 0;
@@ -131,7 +131,7 @@ class CfgAmmo
 		ace_frag_gurney_k = "0";
 		ace_rearm_caliber = 0;
 	};
-	class macro_new_ammo(UGL_AP) :G_40mm_HE
+	class macro_new_ammo(UGL_HE) :G_40mm_HE
 	{
 		hit = 60;
 		indirectHit = 50;
