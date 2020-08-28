@@ -79,13 +79,20 @@ class Extended_Init_EventHandlers
         };
     };
 
-    class macro_new_vehicle(droideka,camo)
+    class macro_new_vehicle(droideka,normal)
     {
     	class droideka_movable 
         {
             init = [_this select 0] spawn macro_fnc_name(droidekka_move);
         };
     };
+	class macro_new_vehicle(droideka,camo_depr)
+	{
+		class droideka_movable
+		{
+			init = [_this select 0] spawn macro_fnc_name(droidekka_move);
+		};
+	};
 
     class macro_new_vehicle(dwarf_spider_droid,Movable_MkII)
     {
@@ -94,6 +101,13 @@ class Extended_Init_EventHandlers
             init = [_this select 0] spawn macro_fnc_name(dwarf_move);
         };	                               
     };
+	class macro_new_vehicle(dwarf_spider_droid,Movable_MkII_depr)
+	{
+		class dwarf_movable
+		{
+			init = [_this select 0] spawn macro_fnc_name(dwarf_move);
+		};
+	};
 
     class macro_new_vehicle(marid,MkII_CIS)// not ran
     {

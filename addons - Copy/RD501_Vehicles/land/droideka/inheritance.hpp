@@ -1,1 +1,0 @@
-class SWOP_Droideka;

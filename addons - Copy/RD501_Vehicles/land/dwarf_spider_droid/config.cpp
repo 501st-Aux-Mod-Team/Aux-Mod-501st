@@ -1,16 +1,4 @@
-//Get this addons macro
-
-//get the macro for the air macro_patch_name(vehicles)
-
-//get generlized macros
 #include "../../../RD501_main/config_macros.hpp"
-
-//General name of the vehicle
-#define vehicle_addon dwarf_spider_droid
-#define patch_name MODNAME##vehicle_addon##_Patches
-#define vehicle_classname MODNAME##_##vehicle_addon
-
-#define new_dwarf_class(name) vehicle_classname##_##name
 
 class CfgPatches
 {
@@ -25,9 +13,12 @@ class CfgPatches
 		requiredVersion=0.1;
 		units[]=
 		{
+			// REMOVE FROM HERE
+			macro_new_vehicle(dwarf_spider_droid,MkII_depr),
+			macro_new_vehicle(dwarf_spider_droid,Movable_MkII_depr),
+			// REMOVE TO HERE
 			macro_new_vehicle(dwarf_spider_droid,MkII),
 			macro_new_vehicle(dwarf_spider_droid,Movable_MkII),
-			macro_new_vehicle(dwarf_spider_droid,TEST)
 		};
 		weapons[]=
 		{
@@ -36,23 +27,25 @@ class CfgPatches
 	};
 };
 
-
 #include "../../common/sensor_templates.hpp"
-
 
 class DefaultEventhandlers;
 class CfgVehicles
 {
+	class StaticMGWeapon;
+	class SpiderDSD: StaticMGWeapon
+	{
+		scope=0;
+	};
 
-	#include "inheritance.hpp"
-
-	class macro_new_vehicle(dwarf_spider_droid,MkII):SpiderDSD
+	// REMOVE FROM HERE
+	class macro_new_vehicle(dwarf_spider_droid,MkII_depr): SpiderDSD
 	{
 		displayName = "Dwarf Spider Droid MkII";
 		armor = 350;
 		scope=2;
 		forceInGarage = 1;
-		class EventHandlers: DefaultEventhandlers {}; 
+		class EventHandlers: DefaultEventhandlers {};
 
 		faction = macro_cis_faction
 		editorSubcategory = macro_editor_cat(heavy_armored_infantry)
@@ -75,32 +68,36 @@ class CfgVehicles
 		};
 	};
 
-	class macro_new_vehicle(dwarf_spider_droid,Movable_MkII):macro_new_vehicle(dwarf_spider_droid,MkII)
+	class macro_new_vehicle(dwarf_spider_droid,Movable_MkII_depr): macro_new_vehicle(dwarf_spider_droid,MkII_depr)
 	{
 		displayName = "Dwarf Spider Droid MkII (Moveable)";
 		forceInGarage = 0;
 	};
-	
-	class macro_new_vehicle(dwarf_spider_droid,TEST):SpiderDSD
-	{
-		displayName = "TEST - DSD 1";
+	// REMOVE TO HERE
 
-		scope=2;
+
+	class macro_new_vehicle(dwarf_spider_droid,MkII): SpiderDSD
+	{
+		displayName = "Dwarf Spider Droid MkII (new)";
+		scope = 2;
 		forceInGarage = 1;
+
 		class EventHandlers: DefaultEventhandlers {}; 
 
-		faction = macro_cis_faction
-		editorSubcategory = macro_editor_cat(heavy_armored_infantry)
-		vehicleClass = macro_editor_vehicle_type(heavy_armored_infantry)
+		faction = macro_cis_faction;
+		editorSubcategory = macro_editor_cat(heavy_armored_infantry);
+		vehicleClass = macro_editor_vehicle_type(heavy_armored_infantry);
 
-		armor = 1000;
-		armorLights = 0.4;
-		armorStructural = 3;
+		armor = 250;
+		armorStructural = 1.0;
+		explosionShielding	= 0.1;
+		minTotalDamageThreshold	= 0.02;
+		impactDamageMultiplier = 0.1;
 		class HitPoints
 		{
 			class HitGun
 			{
-				armor = 36;
+				armor = 0.9;
 				material = -1;
 				name = "gun";
 				visual = "autonomous_unhide";
@@ -109,10 +106,14 @@ class CfgVehicles
 			};
 			class HitTurret: HitGun
 			{
-				armor = 36;
+				armor = 0.3;
 			};
 		};
-
 	};
 
+	class macro_new_vehicle(dwarf_spider_droid,Movable_MkII): macro_new_vehicle(dwarf_spider_droid,MkII)
+	{
+		displayName = "Dwarf Spider Droid MkII (new) (Moveable)";
+		forceInGarage = 0;
+	};
 };	
