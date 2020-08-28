@@ -37,6 +37,8 @@ class CfgWeapons
 	class macro_new_weapon(DC,15c):3AS_DC15C_F
 	{
 		displayName="Republic DC-15C";
+		dispersion=0.00116;
+		
 		magazines[]=
 		{
 			macro_new_mag(10mw,30)
@@ -53,10 +55,12 @@ class CfgWeapons
 		class FullAuto:FullAuto
 		{
 			reloadTime=0.08;
+			dispersion=0.00116;
 		};
 		class Single : Single
 		{
 			reloadTime=0.08;
+			dispersion=0.00116;
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
