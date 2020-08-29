@@ -49,7 +49,7 @@ class CfgAmmo
 		typicalSpeed=450;
 		caliber=1;
 		airFriction=0;
-		explosive = 0.4;
+		explosive = 0;
 	};
 	class macro_new_ammo(20mw) : 3AS_EC50_BluePlasma
 	{
@@ -58,7 +58,7 @@ class CfgAmmo
 		typicalSpeed=500;
 		caliber=1.6;
 		airFriction=0;
-		explosive = 0.4;
+		explosive = 0;
 	};
 	class macro_new_ammo(20mwup) : 3AS_EC50_BluePlasma
 	{
