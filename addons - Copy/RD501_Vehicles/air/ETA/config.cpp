@@ -313,7 +313,7 @@ class CfgVehicles
 		displayname = "ETA-3 (Orange) Mk.II";
 		hiddenSelectionsTextures[] = {"\RD501_Vehicles\textures\eta\eta2_main_orange_co.paa","eta2\t_yodasstarfighter_r2d2_co.paa"};
 	};
-	class macro_new_vehicle(eta,poison_Mk2) : macro_new_vehicle(eta,lime_Mk2)
+	class macro_new_vehicle(eta,venom_Mk2) : macro_new_vehicle(eta,lime_Mk2)
 	{
 		displayname = "ETA-3 (Venom) Mk.II";
 		hiddenSelectionsTextures[] = {"\RD501_Vehicles\textures\eta\eta2_main_venom_co.paa","eta2\t_yodasstarfighter_r2d2_co.paa"};
