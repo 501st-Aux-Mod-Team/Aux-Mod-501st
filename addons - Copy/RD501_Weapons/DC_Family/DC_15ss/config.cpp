@@ -1,9 +1,9 @@
-#define COMPONENT DC_15ss
+#define COMPONENT DC_15sa
 #include "../../../RD501_main/config_macros.hpp"
 #include "../../_common/common.hpp"
 class CfgPatches
 {
-	class macro_patch_name(dc_15ss)
+	class macro_patch_name(dc_15sa)
 	{
 		author="RD501";
 		addonRootClass= macro_patch_name(weapons)
@@ -14,18 +14,18 @@ class CfgPatches
 		requiredVersion=0.1;
 		units[]={};
 		weapons[]={
-			macro_new_weapon(DC,15ss)
+			macro_new_weapon(DC,15sa)
 		};
 	};
 };
 class CfgWeapons
 {
 	class SWOP_DC15SAPistol;
-	class macro_new_weapon(DC,15ss):SWOP_DC15SAPistol
+	class macro_new_weapon(DC,15sa):SWOP_DC15SAPistol
 	{
 		scope=2;
 		author = "RD501";
-		displayname = "Republic DC-15s Sidearm";
+		displayname = "Republic DC-15SA Sidearm";
 		descriptionShort = "Heavy Caliber Sidearm";
 		reloadTime=0.75;
 		dispersion=0.00145;
