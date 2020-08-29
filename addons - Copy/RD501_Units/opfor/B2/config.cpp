@@ -259,6 +259,16 @@ class CfgVehicles
 		armor=60;
 		armorStructural=10;
 		uniformClass=macro_new_uniform_class(opfor,B2_SuperArmor)
+		hiddenSelections[]=
+		{
+			"Camo1","Camo2","Camo3"
+		};
+		hiddenSelectionsTextures[]=
+		{
+        "RD501_Units\textures\CIS\B2\super\super_b2_chest.paa",
+        "RD501_Units\textures\CIS\B2\super\super_b2_waist.paa",
+        "RD501_Units\textures\CIS\B2\super\super_b2_legs.paa"
+		};
 		class HitPoints
 		{
 			class HitFace
