@@ -160,7 +160,7 @@ class CfgMagazines
 		displayName = "2 Rd AP DC-15A Grenades";
 		displayNameShort = "2 Rd AP DC-15A";
 		count=2;
-		ammo = macro_new_ammo(UGL_HE)
+		ammo = macro_new_ammo(UGL_AP)
 		descriptionShort = "2Rd AP DC-15A Grenade";
 	}
 	class macro_new_mag(UGL_EMP,1) : 1Rnd_HE_Grenade_shell
