@@ -23,6 +23,7 @@ class CfgMagazines
 	class DCStun_Mag;
 	class 1Rnd_Smoke_Grenade_shell;
 	class UGL_FlareWhite_F;
+	class SWOP_DC15SA_Ammo;
 	///Rifle/Pistol Magazines
 	class macro_new_mag(2mw,30) : 3AS_45Rnd_EC50_Mag
 	{
@@ -53,6 +54,14 @@ class CfgMagazines
 		displayName="30 Round 10MW Cell";
 		count = 30;
 		ammo=macro_new_ammo(10mw)
+		typicalSpeed=450;
+		descriptionShort="Medium power magazine";
+	};
+	class macro_new_mag(10mws,30) : 3AS_45Rnd_EC50_Mag
+	{
+		displayName="30 Round 10MW Stealth Cell";
+		count = 30;
+		ammo=macro_new_ammo(10mws)
 		typicalSpeed=450;
 		descriptionShort="Medium power magazine";
 	};
@@ -93,13 +102,21 @@ class CfgMagazines
 		displayName="240 Round 20MW Cell";
 		count = 240;
 		ammo=macro_new_ammo(20mw)
-		typicalSpeed=500;
+		typicalSpeed=800;
 		descriptionShort="Medium power box magazine";
 	};
 	class macro_new_mag(30mw,10) : 3AS_45Rnd_EC50_Mag
 	{
 		displayName="10 Round 30MW Cell";
 		count = 10;
+		ammo=macro_new_ammo(30mw)
+		typicalSpeed=800;
+		descriptionShort="High power magazine";
+	};
+	class macro_new_mag(30mw,7) : 3AS_45Rnd_EC50_Mag
+	{
+		displayName="7 Round 30MW Cell";
+		count = 7;
 		ammo=macro_new_ammo(30mw)
 		typicalSpeed=800;
 		descriptionShort="High power magazine";
@@ -144,9 +161,9 @@ class CfgMagazines
 		count=5;
 		picture="\MRC\JLTS\weapons\Core\data\ui\stun_mag_ui_ca.paa";
 	};
-	///
-	///Grenade Launcher Magazines
-	///
+	////////////////////////////////////////////////////
+	/////////Grenade Launcher Magazines/////////////////
+	////////////////////////////////////////////////////
 	class macro_new_mag(UGL_HE,3):1Rnd_HE_Grenade_shell
 	{
 		displayName = "3 Rd HE DC-15A Grenades";
@@ -160,7 +177,7 @@ class CfgMagazines
 		displayName = "2 Rd AP DC-15A Grenades";
 		displayNameShort = "2 Rd AP DC-15A";
 		count=2;
-		ammo = macro_new_ammo(UGL_HE)
+		ammo = macro_new_ammo(UGL_AP)
 		descriptionShort = "2Rd AP DC-15A Grenade";
 	}
 	class macro_new_mag(UGL_EMP,1) : 1Rnd_HE_Grenade_shell
