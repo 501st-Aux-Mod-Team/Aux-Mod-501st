@@ -42,7 +42,7 @@ class CfgWeapons
 		{
 			macro_new_mag(10mw,30)
 		};
-		modes[] = {"Single", "Burst","EGLM"};
+		modes[] = {"Single", "Burst"};
 		muzzles[]=
 		{
 			"this",
