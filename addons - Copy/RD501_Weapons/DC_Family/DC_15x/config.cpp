@@ -112,7 +112,8 @@ class cfgWeapons
 		baseWeapon=macro_new_weapon(DC,r15x)
 		magazines[]=
 		{
-			macro_new_mag(40mw,5)
+			macro_new_mag(40mw,5),
+			macro_new_mag(40mwemp,1)
 		};
 		class Single:Single
 		{

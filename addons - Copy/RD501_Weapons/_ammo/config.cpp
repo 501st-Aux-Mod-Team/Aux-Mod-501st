@@ -112,6 +112,16 @@ class CfgAmmo
 		airFriction=0;
 		explosive = 0.4;
 	};
+	class macro_new_ammo(40mwemp) : 3AS_EC70_BluePlasma
+	{
+		hit=0.01;
+		airLock=1;
+		typicalSpeed=1100;
+		caliber=1;
+		airFriction=0;
+		explosive = 0;
+		JLTS_isEMPAmmo=1;
+	};
 	class macro_new_ammo(50mw) : 3AS_EC80_BluePlasma
 	{
 		hit=300;

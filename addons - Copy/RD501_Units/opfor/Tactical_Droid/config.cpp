@@ -10,7 +10,10 @@ class CfgPatches
 		};
 		requiredVersion = 0.1;
 		units[] = {
-			macro_new_unit_class(opfor,Tactical_Droid),
+			macro_new_unit_class(opfor,Tactical_Droid_black),
+			macro_new_unit_class(opfor,Tactical_Droid_blue),
+			macro_new_unit_class(opfor,Tactical_Droid_green),
+			macro_new_unit_class(opfor,Tactical_Droid_red),
 		};
 	};
 };
