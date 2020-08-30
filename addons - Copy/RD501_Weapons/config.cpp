@@ -946,16 +946,4 @@ class CfgRecoils
 		temporary = "0.01*0.25";
 	};
 
-	class macro_new_recoil(chaingun): Default
-	{
-
-
-		muzzleOuter[] = {"0.03", "0.4", "0.03", ".06"};
-		muzzleInner[] = {0, 0, 0.01, 0.01};
-		kickBack[] = {"0.02", "0.03"};
-		permanent = "0.013";
-		temporary = "0.013";
-	   	prone		= 0.0;	//coefficient of recoil forces while in prone (this is further multiplied by weapon resting coefficients)
-		
-	};
 };

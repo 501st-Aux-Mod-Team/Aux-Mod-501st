@@ -7,7 +7,7 @@ class CfgPatches
 {
 	class macro_patch_name(Westar)
 	{
-		author=DANKAUTHORS;
+		author=RD501;
 		addonRootClass= macro_patch_name(weapons)
 		requiredAddons[]=
 		{
@@ -18,7 +18,8 @@ class CfgPatches
 		weapons[]={
 			macro_new_weapon(westar,m5),
 			macro_new_weapon(westar,m5_gl),
-			macro_new_weapon(westar,35)
+			macro_new_weapon(westar,35),
+			macro_new_weapon(westar,rm5)
 		};
 	};
 };
@@ -61,5 +62,29 @@ class cfgWeapons
 	};
 
 	#include "westar_pistol.hpp"
+	class 3AS_WestarM5_Base_F;
+	class 3AS_WestarM5_F:3AS_WestarM5_Base_F
+	{
+		class Single;
+		class FullAuto;
+	};
+	class macro_new_weapon(westar,rm5):3AS_WestarM5_F
+	{
+		scope=2;
+		displayName="Republic Westar M5"
+		magazines[]=
+		{
+				macro_new_mag(10mws,30)
+		};
+		modes[] = {"Single","FullAuto"};
+		class Single:Single
+		{
+			reloadTime=0.1;				
+		};
+		class FullAuto:FullAuto
+		{
+			reloadTime=0.1;
+		};
+	};
 };
 

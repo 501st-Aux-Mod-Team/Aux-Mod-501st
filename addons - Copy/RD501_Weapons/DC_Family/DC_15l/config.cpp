@@ -1,4 +1,4 @@
-#define COMPONENT DC_15s
+#define COMPONENT DC_15l
 #include "../../../RD501_main/config_macros.hpp"
 #include "../../_common/common.hpp"
 
@@ -38,6 +38,7 @@ class CfgWeapons
 	{
 		displayName="Republic DC-15L";
 		recoil="recoil_mmg_02";
+		deployedPivot="bipod";
 		dispersion=0.00145;
 		magazines[]=
 		{
