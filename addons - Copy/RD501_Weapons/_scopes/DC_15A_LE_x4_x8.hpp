@@ -98,7 +98,7 @@ class macro_new_weapon(scope,valken_6_12x): itemCore
                 opticsZoomMin = scope_magnification(12);
                 opticsZoomMax = scope_magnification(1);
                 opticsZoomInit = scope_magnification(1);
-                discretefov[] = {scope_magnification(1),scope_magnification(4),scope_magnification(12)};
+                discretefov[] = {scope_magnification(4),scope_magnification(12)};
                 discreteinitIndex = 0;
                 discreteDistance[] = {100, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800, 1900, 2000,4000};
                 discreteDistanceInitIndex = 1;
