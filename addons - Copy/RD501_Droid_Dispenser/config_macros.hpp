@@ -13,4 +13,5 @@
 	#define GVAR(name) CONCAT(PREFIX,CONCAT(_,name))
 	#define QGVAR(name) QUOTE(GVAR(name))
 	#define UNIT_NAME(side,name) CONCAT_3(PREFIX,_,CONCAT_3(side,_unit_,name))
+	#define ORDNANCE(name) CONCAT_3(PREFIX,_Ordnance_,name)
 #endif
