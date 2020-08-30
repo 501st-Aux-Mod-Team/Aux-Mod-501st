@@ -1,15 +1,15 @@
 #include "function_macros.hpp"
 
-LOG("Triggered newSpawner");
+LOG("Triggered Orbital Drop Droid Dispenser");
 //wait for projectile to land and then spawn vehicle
-params["_module"];
-_position = position _module;
-LOGF_2("Firing Spawner Artillery at %1, for %2",_postition,_unit);
+params["_logic"];
+_position = position _logic;
+LOGF_2("Firing Droid Dispenser Artillery at '%1', for '%2'",_postition,_unit);
 [{
 	params["_position"];
 	_spawner = GVAR(spawnerDefaultObject) createVehicle _position;
-	LOGF_2("Created Spawner %1 at %2",_spawner,position _spawner);
-	[_spawner] call FUNC(spawnerInit);
+	LOGF_2("Created Droid Dispenser Object '%1' at '%2'",_spawner,position _spawner);
+	[_spawner] call FUNC(droidDispenserInit);
 }, [_position], GVAR(fireSupportSpawnDelay)] call CBA_fnc_waitAndExecute;
 
 // fire projectile
