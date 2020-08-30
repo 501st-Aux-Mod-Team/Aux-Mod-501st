@@ -7,44 +7,67 @@ class CfgPatches {
 		name = QUOTE(Droid Dispenser);
 		author = "RD501";
 		requiredAddons[] = {};
-		units[] = { QUOTE(ORDNANCE(DroidDispenser)) };
+		units[] = { 
+			QGVAR(moduleOrdnanceDroidDispenser),
+			GVAR(moduleDroidDispenser)
+		};
 		weapons[] = {};
 	};
 };
+class CfgFactionClasses {
+    class GVAR(DroidDispenser) {
+        displayName = "Droid Factories";
+        priority = 2;
+        side = 7;
+    };
+};
 class CfgVehicles
 {
+	class Module_F;
 	class ModuleOrdnance_F;
-	class ORDNANCE(DroidDispenser): ModuleOrdnance_F
+	class GVAR(moduleOrdnanceDroidDispenser): ModuleOrdnance_F
 	{
 		author = "RD501";
 		isGlobal = 1;
 		scope = 1;
 		scopeCurator = 2;
 		simulation = "house";
-		category = "Ordnance";
+		category = QGVAR(DroidDispenser);
 		model = "\a3\Modules_F_Curator\Ordnance\surfacehowitzer.p3d";
-        function = QUOTE(FUNC(newSpawner));
+        function = QUOTE(FUNC(moduleOrbitalDroidDispenser));
         functionPriority = 1;
-		displayName = QUOTE(Droid Dispenser);
+		displayName = QUOTE(Orbital Drop Droid Factory);
 		portrait = "\a3\Modules_F_Curator\Data\portraitOrdnanceMortar_ca.paa";
-		ammo = QUOTE(RD501_Droid_Dispenser_Round);
+		ammo = QGVAR(DroidDispenser_Round);
 		delete Arguments;
 	};
+    class GVAR(moduleDroidDispenser): Module_F {
+		author = "RD501";
+        curatorCanAttach = 1;
+		isGlobal = 1;
+		scope = 1;
+		scopeCurator = 2;
+        isTriggerActivated = 0;
+        category = QGVAR(DroidDispenser);
+		displayName = QUOTE(Droid Factory);
+        function = QUOTE(FUNC(moduleDroidDispenser));
+		portrait = QUOTE(\ADDON\textures\icons\zeus\droid_dispenser_icon.paa);
+    };
 };
 class CfgAmmo
 {
 	class ModuleOrdnanceHowitzer_F_ammo;
 	class ModuleOrdnanceMortar_F_ammo;
 	class ModuleOrdnanceRocket_F_ammo;
-	class RD501_Droid_Dispenser_Round : ModuleOrdnanceHowitzer_F_ammo
+	class GVAR(DroidDispenser_Round) : ModuleOrdnanceHowitzer_F_ammo
 	{
 		caliber = 950;
-		hit = 1000;
+		hit = 5000;
 		allowAgainstInfantry = 1;
 		canLock = 0;
 		explosive = 1;
 		fuseDistance = 30;
-		indirectHit = 200;
+		indirectHit = 500;
 		indirectHitRange = 2;
 		maxSpeed = 1100;
 		typicalSpeed = 1050;

@@ -1,7 +1,8 @@
 #include "function_macros.hpp"
 params ["_args", "_handle"];
 _args params ["_target"];
-systemChat format["Evaluating PFH %1",_handle];
+
+LOGF_1("Evaluating PFH %1",_handle);
 
 if(isNil "_target") exitWith {
 	LOGF_1("Removing PFH %1, Reason: Null Target",_handle);
@@ -14,7 +15,7 @@ if(!isServer) exitWith {
 }; 
 
 if(!alive _target) exitWith {
-	LOGF_1("Removing PFH %1, Reason: Spawner Dead",_handle);
+	LOGF_1("Removing PFH %1, Reason: Droid Dispenser Dead",_handle);
 	[_handle] call CBA_fnc_removePerFrameHandler;
 };
 
@@ -28,7 +29,7 @@ if(isNil "_group") then
 };
 
 _aliveUnits = ({alive _x} count (units _group));
-LOGF_2("Alive units for spawner %1 :: %2",_target,_aliveUnits);
+LOGF_2("Alive units for Droid Dispenser %1 :: %2",_target,_aliveUnits);
 if(_aliveUnits < _target getVariable QGVAR(maxUnits)) exitWith 
 {
 	_possibleUnits = _target getVariable QGVAR(possibleUnits);
@@ -37,6 +38,8 @@ if(_aliveUnits < _target getVariable QGVAR(maxUnits)) exitWith
 		_selectedUnit = selectRandom _possibleUnits; // if its a b2, (first be default atm) random again (requires 2 rolls on b2 to spawn one)
 	};
 	LOGF_2("%1 spawning in %2",_target,_selectedUnit);
-	_group createUnit [_selectedUnit, position _target, [], 0, "NONE"];
+	_unit = _group createUnit [_selectedUnit, position _target, [], 0, "NONE"];
+	_unit call ace_common_fnc_fixPosition;
+	_unit commandMove (_unit getPos [25, 0]);
 };
 LOGF_1("%1 not spawning anything",_target);
