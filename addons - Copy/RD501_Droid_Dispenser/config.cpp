@@ -16,7 +16,7 @@ class CfgPatches {
 };
 class CfgFactionClasses {
     class GVAR(DroidDispenser) {
-        displayName = "Droid Dispenser";
+        displayName = "Droid Factories";
         priority = 2;
         side = 7;
     };
@@ -36,7 +36,7 @@ class CfgVehicles
 		model = "\a3\Modules_F_Curator\Ordnance\surfacehowitzer.p3d";
         function = QUOTE(FUNC(moduleOrbitalDroidDispenser));
         functionPriority = 1;
-		displayName = QUOTE(Droid Dispenser [Orbital]);
+		displayName = QUOTE(Orbital Drop Droid Factory);
 		portrait = "\a3\Modules_F_Curator\Data\portraitOrdnanceMortar_ca.paa";
 		ammo = QGVAR(DroidDispenser_Round);
 		delete Arguments;
@@ -49,8 +49,9 @@ class CfgVehicles
 		scopeCurator = 2;
         isTriggerActivated = 0;
         category = QGVAR(DroidDispenser);
-		displayName = QUOTE(Droid Dispenser);
+		displayName = QUOTE(Droid Factory);
         function = QUOTE(FUNC(moduleDroidDispenser));
+		portrait = QUOTE(\ADDON\textures\icons\zeus\droid_dispenser_icon.paa);
     };
 };
 class CfgAmmo

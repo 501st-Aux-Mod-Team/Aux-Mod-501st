@@ -40,5 +40,6 @@ if(_aliveUnits < _target getVariable QGVAR(maxUnits)) exitWith
 	LOGF_2("%1 spawning in %2",_target,_selectedUnit);
 	_unit = _group createUnit [_selectedUnit, position _target, [], 0, "NONE"];
 	_unit call ace_common_fnc_fixPosition;
+	_unit commandMove (_unit getPos [25, 0]);
 };
 LOGF_1("%1 not spawning anything",_target);
