@@ -27,6 +27,8 @@ class CfgWeapons
 		displayName="Republic RPS6 Launcher";
 		weaponInfoType="RscOptics_titan";
 		modelOptics="\A3\Weapons_F_Beta\acc\reticle_titan.p3d";
+		icon = "\RD501_Weapons\Launchers\RPS6\icon.paa";
+		picture = "\RD501_Weapons\Launchers\RPS6\icon.paa";
 		magazines[]=
 		{
 			macro_new_mag(RPS_AT,1),

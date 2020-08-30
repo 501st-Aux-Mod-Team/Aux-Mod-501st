@@ -1,12 +1,6 @@
-#define COMPONENT rocket
-#include "../../RD501_main/config_macros.hpp"
-#include "../_common/common.hpp"
+#define COMPONENT RPS1
+#include "../../../RD501_main/config_macros.hpp"
 
-#undef CONCAT
-#define CONCAT(a,b) a##b
-#define DISPOSABLE_BASE(name) macro_new_weapon(launcher,name)
-#define DISPOSABLE_LOADED(name) macro_new_weapon(launcher,CONCAT(name,_Loaded))
-#define DISPOSABLE_USED(name) macro_new_weapon(launcher,CONCAT(name,_Used))
 
 class CfgPatches
 {
@@ -21,8 +15,8 @@ class CfgPatches
 		requiredVersion=0.1;
 		units[]={};
 		weapons[]={
-			macro_quote(DISPOSABLE_BASE(RPS_Disposable)),
-			macro_quote(DISPOSABLE_USED(RPS_Disposable))
+			macro_new_weapon(launcher_rps1),
+			macro_new_weapon(launcher_rps1_u)
 		};
 	};
 };
@@ -34,19 +28,19 @@ class cfgWeapons
         class WeaponSlotsInfo;
     };
 
-	class DISPOSABLE_BASE(RPS_disposable) : Launcher_Base_F
+	class macro_new_weapon(launcher,rps1) : Launcher_Base_F
 	{
 		author= "RD501";
 		scope = 2;
 		scopeArsenal=2;
-		displayName = "Republic RPS Disposable";
+		displayName = "Republic RPS1 Launcher";
 		model = "\3AS\3AS_Weapons\RPS6\3AS_RPS6_F.p3d";
 		modelOptics = "\A3\Weapons_F\acc\reticle_RPG_F";
-        icon = "\RD501_Weapons\RPS_Disposable\rps_disposable_icon.paa";
-		picture = "\RD501_Weapons\RPS_Disposable\rps_disposable_icon.paa";
+        icon = "\RD501_Weapons\Launchers\RPS1\rps_disposable_icon.paa";
+		picture = "\RD501_Weapons\Launchers\RPS1\rps_disposable_icon.paa";
 		recoil = "recoil_single_law";
-		baseWeapon = macro_quote(DISPOSABLE_BASE(RPS_Disposable));
-		RD501_Empty_Weapon = macro_quote(DISPOSABLE_USED(RPS_Disposable));
+		baseWeapon = macro_new_weapon(launcher,rps1)
+		RD501_Empty_Weapon = macro_new_weapon(launcher,rps1_u)
 		magazines[] = { "MRAWS_HEAT55_F" };
 
 		magazineReloadTime = 0.1;
@@ -59,13 +53,15 @@ class cfgWeapons
             mass = 80;
         };
 	};
-	class DISPOSABLE_USED(RPS_Disposable) : DISPOSABLE_BASE(RPS_Disposable)
+class macro_new_weapon(launcher,rps1_u) : macro_new_weapon(launcher,rps1)
 	{
 		author= "RD501";
 		scope = 1;
 		scopeArsenal=1;
-		displayName = "Republic RPS Disposable (Used)";
-		baseWeapon = macro_quote(DISPOSABLE_USED(RPS_Disposable));
+		displayName = "Republic RPS1 Launcher (Used)";
+		icon = "\RD501_Weapons\Launchers\RPS1\rps_disposable_icon.paa";
+		picture = "\RD501_Weapons\Launchers\RPS1\rps_disposable_icon.paa";
+		baseWeapon = macro_new_weapon(launcher,rps1_u)
 
 		magazines[] = { "CBA_FakeLauncherMagazine" };
         class WeaponSlotsInfo: WeaponSlotsInfo {
