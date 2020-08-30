@@ -24,6 +24,8 @@ class CfgMagazines
 	class 1Rnd_Smoke_Grenade_shell;
 	class UGL_FlareWhite_F;
 	class SWOP_DC15SA_Ammo;
+	class SWOP_termDet_Gm;
+	class SWOP_BCCKtermimploder_G;
 	///Rifle/Pistol Magazines
 	class macro_new_mag(2mw,30) : 3AS_45Rnd_EC50_Mag
 	{
@@ -153,14 +155,6 @@ class CfgMagazines
 		count=5;
 		picture="\MRC\JLTS\weapons\Core\data\ui\stun_mag_ui_ca.paa";
 	};
-	class macro_new_mag(pistolstun,5):DCStun_Mag
-	{
-		displayName="5 Round Stun Cell";
-		descriptionShort = "5 Round Stun Cell";
-		displayNameShort = "5 Round Stun Cell";
-		count=5;
-		picture="\MRC\JLTS\weapons\Core\data\ui\stun_mag_ui_ca.paa";
-	};
 	////////////////////////////////////////////////////
 	/////////Grenade Launcher Magazines/////////////////
 	////////////////////////////////////////////////////
@@ -226,7 +220,7 @@ class CfgMagazines
 		displayName = "6 Rd AP RGL6 Grenades";
 		displayNameShort = "6 Rd AP RGL6";
 		count=6;
-		ammo = macro_new_ammo(UGL_HE)
+		ammo = macro_new_ammo(UGL_AP)
 		descriptionShort = "6Rd AP RGL6 Grenade";
 	}
 	class macro_new_mag(UGL_EMP,6) : 1Rnd_HE_Grenade_shell
@@ -277,5 +271,26 @@ class CfgMagazines
 		count=6;
 		ammo = "F_40mm_White";
 		descriptionShort = "6Rd White Flare RGL6 Grenade";
+	};
+	/////////////////////////////////////////////////////
+	/////////////Grenades Magazines/////////////////////
+	////////////////////////////////////////////////////
+	class macro_new_mag(imploder,1):SWOP_BCCKtermimploder_G
+	{
+		scope=2;
+		displayName = "Republic Thermal Imploder";
+		displayNameShort = "Thermal Imploder";
+		count=1;
+		ammo = macro_new_ammo(imploder)
+		descriptionShort = "Thermal Imploder";
+	};
+	class macro_new_mag(thermaldet,1):SWOP_termDet_Gm
+	{
+		scope=2;
+		displayName = "Republic Thermal Detonator";
+		displayNameShort = "Thermal Detonator";
+		count=1;
+		ammo = macro_new_ammo(thermaldet)
+		descriptionShort = "Thermal Detonator";
 	};
 };

@@ -130,7 +130,7 @@ class cfgWeapons
 			reloadAction="GestureReloadPistol";
 			magazines[]=
 			{
-				macro_new_mag(pistolstun,5)
+				macro_new_mag(stun,5)
 			};
 		};
 		class Single : Single
@@ -159,7 +159,7 @@ class cfgWeapons
 			reloadAction="GestureReloadPistol";
 			magazines[]=
 			{
-				macro_new_mag(pistolstun,5)
+				macro_new_mag(stun,5)
 			};
 		};
 		class FullAuto : Single
