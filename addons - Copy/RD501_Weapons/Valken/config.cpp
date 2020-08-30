@@ -53,7 +53,6 @@ class CfgWeapons
 				access = 1;
 				compatibleItems[] = 
 				{
-					macro_new_weapon(scope,dc_15a_acogtcw),
 					macro_new_weapon(scope,valken_6_12x)
 				};
 
