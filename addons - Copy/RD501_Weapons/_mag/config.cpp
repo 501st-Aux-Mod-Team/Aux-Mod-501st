@@ -129,6 +129,14 @@ class CfgMagazines
 		typicalSpeed=1100;
 		descriptionShort="High power magazine";
 	};
+	class macro_new_mag(40mwemp,1) : 3AS_45Rnd_EC50_Mag
+	{
+		displayName="1 Round 40MW EMP Cell";
+		count = 1;
+		ammo=macro_new_ammo(40mwemp)
+		typicalSpeed=1100;
+		descriptionShort="EMP Round";
+	};
 	class macro_new_mag(50mw,10) : 3AS_45Rnd_EC50_Mag
 	{
 		displayName="10 Round 50MW Cell";
