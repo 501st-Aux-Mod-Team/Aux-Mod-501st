@@ -41,5 +41,11 @@ if(_aliveUnits < _target getVariable QGVAR(maxUnits)) exitWith
 	_unit = _group createUnit [_selectedUnit, position _target, [], 0, "NONE"];
 	_unit call ace_common_fnc_fixPosition;
 	_unit commandMove (_unit getPos [25, 0]);
+	[{
+		params["_unit"];
+		{
+			_x addCuratorEditableObjects [[_unit], true];
+		} forEach allCurators;
+	}, _unit] call CBA_fnc_execNextFrame;
 };
 LOGF_1("%1 not spawning anything",_target);
