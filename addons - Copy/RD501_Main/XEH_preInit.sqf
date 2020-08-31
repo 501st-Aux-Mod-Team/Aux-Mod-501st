@@ -65,6 +65,9 @@ macro_prep_xeh(init\aat.sqf,aatInit)
 //nightvision
 macro_prep_xeh(nightvision.sqf,nightvision)
 
+//magclamp
+macro_prep_xeh(magclamp\magclamp.sqf,magclamp)
+
 //HUD color
 macro_prep_xeh(hud_color_change.sqf,change_hud_color)
 
