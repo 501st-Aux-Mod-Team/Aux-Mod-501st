@@ -39,10 +39,13 @@ if(_aliveUnits < _target getVariable QGVAR(maxUnits)) exitWith
 	};
 	LOGF_2("%1 spawning in %2",_target,_selectedUnit);
 	_unit = _group createUnit [_selectedUnit, position _target, [], 0, "NONE"];
-	_unit call ace_common_fnc_fixPosition;
-	_unit commandMove (_unit getPos [25, 0]);
 	[{
-		params["_unit"];
+		params["_unit"];		
+		_unit call ace_common_fnc_fixPosition;
+		_group = group _unit;
+		_group setBehaviour "SAFE";
+		_group1 setCombatMode "RED";
+		_unit commandMove (_unit getPos [25, 0]);
 		{
 			_x addCuratorEditableObjects [[_unit], true];
 		} forEach allCurators;
