@@ -8,18 +8,6 @@ if !(local _logic) exitWith {};
 
 _position = position _logic;
 
-LOGF_2("Firing Droid Dispenser Artillery at '%1', for '%2'",_postition,_unit);
-[{
-	params["_position"];
-	_spawner = GVAR(spawnerDefaultObject) createVehicle _position;
-	LOGF_2("Created Droid Dispenser Object '%1' at '%2'",_spawner, position _spawner);
-	[_spawner] call FUNC(droidDispenserInit);
-	[{
-		params["_unit"];
-		{
-			_x addCuratorEditableObjects [[_unit], true];
-		} forEach allCurators;
-	}, _spawner] call CBA_fnc_execNextFrame;
-}, [_position], GVAR(fireSupportSpawnDelay)] call CBA_fnc_waitAndExecute;
+[_position] remoteExecCall [QUOTE(FUNC(moduleOrbitalDroidDispenserServer)), 2, false];
 // fire projectile
 _this call ace_zeus_fnc_bi_moduleProjectile;
