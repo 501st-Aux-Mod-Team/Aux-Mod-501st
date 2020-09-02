@@ -3,6 +3,7 @@ params["_pos"];
 LOGF_1("Firing Droid Dispenser Artillery at '%1'",_postition);
 [{
 	params["_position"];
+	if !(isServer) exitWith {};
 	_spawner = GVAR(spawnerDefaultObject) createVehicle _position;
 	LOGF_2("Created Droid Dispenser Object '%1' at '%2'",_spawner, position _spawner);
 	[_spawner] call FUNC(droidDispenserInit);
