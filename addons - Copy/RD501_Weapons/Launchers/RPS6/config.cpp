@@ -19,11 +19,16 @@ class CfgPatches
 	};
 };
 class CfgWeapons
-{
-	class 3AS_RPS6_HP;
+{	class Launcher_Base_F;
+	class 3AS_RPS6_HP:Launcher_Base_F
+	{
+		class OpticsModes{class optic;};
+	};
 	class macro_new_weapon(launcher,RPS6):3AS_RPS6_HP
 	{
 		scope=2;
+		canLock = 2;
+		airLock=2;
 		displayName="Republic RPS6 Launcher";
 		weaponInfoType="RscOptics_titan";
 		modelOptics="\A3\Weapons_F_Beta\acc\reticle_titan.p3d";
@@ -32,7 +37,8 @@ class CfgWeapons
 		magazines[]=
 		{
 			macro_new_mag(RPS_AT,1),
-			macro_new_mag(RPS_AA,1)
+			macro_new_mag(RPS_AT,1)
+			
 		};
 		class OpticsModes
 		{
@@ -56,9 +62,10 @@ class CfgWeapons
 				visionMode[]=
 				{
 					"Normal",
+					"NVG",
 					"Ti"
 				};
-				thermalMode[]={0,1};
+				thermalMode[]={0};
 				opticsDisablePeripherialVision=1;
 				discretefov[]={0.083329998,0.041669998};
 				discreteInitIndex=0;

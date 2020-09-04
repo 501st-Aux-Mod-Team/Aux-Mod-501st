@@ -35,7 +35,7 @@ class cfgWeapons
 		scopeArsenal=2;
 		displayName = "Republic RPS1 Launcher";
 		model = "\3AS\3AS_Weapons\RPS6\3AS_RPS6_F.p3d";
-		modelOptics = "\A3\Weapons_F\acc\reticle_RPG_F";
+		modelOptics="\a3\Weapons_F_Tank\acc\reticle_MRAWSNew.p3d";
         icon = "\RD501_Weapons\Launchers\RPS1\rps_disposable_icon.paa";
 		picture = "\RD501_Weapons\Launchers\RPS1\rps_disposable_icon.paa";
 		recoil = "recoil_single_law";

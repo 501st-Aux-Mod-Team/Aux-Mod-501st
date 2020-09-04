@@ -74,7 +74,8 @@ class cfgWeapons
 		displayName="Republic Westar M5"
 		magazines[]=
 		{
-				macro_new_mag(10mws,30)
+				macro_new_mag(10mws,30),
+				"ACE_HuntIR_M203"
 		};
 		modes[] = {"Single","FullAuto"};
 		class Single:Single
