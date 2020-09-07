@@ -5,7 +5,7 @@ Explanation
 ------
 
 Any vehicle can be configured to carry other nearby vehicles via magclamps.
-For or this two small and one large clamp can be defined.
+For this two small and one large clamp can be defined.
 If any clamp is not defined, it is unused.
 By default any vehicle can be clamped and will be carried at the clamps position.
 Individual unit classes can be set to be unclampable for small and large clamps.
