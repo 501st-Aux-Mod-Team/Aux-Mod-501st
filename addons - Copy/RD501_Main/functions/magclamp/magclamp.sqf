@@ -6,7 +6,9 @@ macro_grp_fnc_name(magclamp,handle_universal) = {
     params ["_mc_pos", "_attached_var", "_forbid_param", "_offset_param"];
 
     _vehicle = vehicle player;
+    if (isNull _vehicle) exitWith {};
     _position = (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> _mc_pos) call BIS_fnc_getCfgDataArray;
+    if (count _position == 0) exitWith {};
     _attached = _vehicle getVariable[_attached_var,objNull];
 
     if(isNull _attached) then {
@@ -88,13 +90,13 @@ macro_grp_fnc_name(magclamp,handle_drop_all) = {
 
 
 //add keybinds
-["RD501 Magclamp","small_1",["Laat/C Left    -    Laat/I","Activate/Deactivate left Magclamp on Laat/C or main Magclamp on Laat/I"],{
+["RD501 Magclamp","small_1",["First Small Clamp (Laat/I, Laat/C Left)","Activate/Deactivate left Magclamp on Laat/C or main Magclamp on Laat/I"],{
     [player] call macro_grp_fnc_name(magclamp,handle_small_1_pressed);
 },"",[DIK_7,[false,false,false]],false] call cba_fnc_addKeybind;
-["RD501 Magclamp","large",["Laat/C Center","Activate/Deactivate center Magclamp on Laat/C"],{
+["RD501 Magclamp","large",["Large Clamp (Laat/C Center)","Activate/Deactivate center Magclamp on Laat/C"],{
     [player] call macro_grp_fnc_name(magclamp,handle_large_pressed);
 },"",[DIK_8,[false,false,false]],false] call cba_fnc_addKeybind;
-["RD501 Magclamp","small_2",["Laat/C Right","Activate/Deactivate right Magclamp on Laat/C"],{
+["RD501 Magclamp","small_2",["Second Small Clamp (Laat/C Right)","Activate/Deactivate right Magclamp on Laat/C"],{
     [player] call macro_grp_fnc_name(magclamp,handle_small_2_pressed);
 },"",[DIK_9,[false,false,false]],false] call cba_fnc_addKeybind;
 ["RD501 Magclamp","detach_all",["Detach All","Detach all clamped vehicles"],{

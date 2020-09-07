@@ -90,6 +90,8 @@ class CfgVehicles
 		scope=2;
 		scopeCurator=2;
 
+		RD501_magclamp_small_1[] = {0.0,0.0,-2.5};
+
 		crew=macro_new_unit_class(opfor,B1_pilot)
 
 		#include "common.hpp"

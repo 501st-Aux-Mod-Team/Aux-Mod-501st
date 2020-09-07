@@ -251,7 +251,7 @@ class CfgVehicles
 		};
 		class EventHandlers : DefaultEventhandlers {
 			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-			init = "[_this select 0] call RD501_Main_fnc_laatc_lift";
+			//init = "[_this select 0] call RD501_Main_fnc_laatc_lift";
 		}
  
 		weapons[]=
