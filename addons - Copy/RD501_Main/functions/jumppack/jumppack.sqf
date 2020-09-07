@@ -501,16 +501,16 @@ macro_grp_fnc_name(jumppack,memeify_test) = {
 
 
 //add keybinds
-["RD501 Jumppack Mod","Jump",["Jump","Press to Jump"],{ 
+["RD501 Jumppack","Jump",["Jump","Press to Jump"],{
 	[player] spawn macro_grp_fnc_name(jumppack,decide_jump);
 },"",[DIK_Y, [false, true, false]],false] call cba_fnc_addKeybind;
 
-["RD501 Jumppack Mod","Cycle jump type left",["Cycle jump type left","Cycle jump type left"],{
+["RD501 Jumppack","Cycle jump type left",["Cycle jump type left","Cycle jump type left"],{
 	[player, -1] spawn  macro_grp_fnc_name(jumppack,set_jumptype);
 
 },"",[DIK_G, [false, true, false]],false] call cba_fnc_addKeybind;
 
-["RD501 Jumppack Mod","Cycle jump type right",["Cycle jump type right","Cycle jump type right"],{
+["RD501 Jumppack","Cycle jump type right",["Cycle jump type right","Cycle jump type right"],{
 	[player, 1] spawn  macro_grp_fnc_name(jumppack,set_jumptype);
 
 },"",[DIK_J, [false, true, false]],false] call cba_fnc_addKeybind;
