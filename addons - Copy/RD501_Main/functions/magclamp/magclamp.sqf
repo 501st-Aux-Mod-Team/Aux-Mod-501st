@@ -2,40 +2,101 @@
 #include "../../config_macros.hpp"
 
 
-//handle button press
-macro_grp_fnc_name(magclamp,handle_left_pressed) = {
-    if(isNull vehicle player) exitWith {};
-    systemChat "left clamp";
-};
+macro_grp_fnc_name(magclamp,handle_universal) = {
+    params ["_mc_pos", "_attached_var", "_forbid_param", "_offset_param"];
 
-macro_grp_fnc_name(magclamp,handle_center_pressed) = {
-    if(isNull vehicle player) exitWith {};
-    systemChat "center clamp";
-};
-
-macro_grp_fnc_name(magclamp,handle_right_pressed) = {
     _vehicle = vehicle player;
-    if(isNull _vehicle) exitWith {};
-    _attached = _vehicle getVariable["RD501_mc_attached_right",objNull];
+    _position = (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> _mc_pos) call BIS_fnc_getCfgDataArray;
+    _attached = _vehicle getVariable[_attached_var,objNull];
+
     if(isNull _attached) then {
-    	_objects = nearestObjects [player, ["Car","Tank","Air","Ship","Object"], 20];
-	    _target = _objects select 1;
-	    _target attachTo [_vehicle, [7,-2,-2.5]];
-	    _vehicle setVariable["RD501_mc_attached_right",_target,true];
+    	_objects = nearestObjects [player, ["Car","Tank","Motorcycle","StaticWeapon","Air","Ship","Object"], 20];
+
+    	_target_index = 0;
+	    _target = _objects select _target_index;
+	    _is_attached = _target getVariable["RD501_mc_is_attached",false];
+	    _cant_be_clamped = (configFile >> "CfgVehicles" >> (typeOf _target) >> _forbid_param) call BIS_fnc_getCfgDataBool;
+
+	    while {_target isKindOf "Man" || isPlayer _target || _is_attached || _cant_be_clamped} do {
+	        _target_index = _target_index + 1;
+	        _target = _objects select _target_index;
+	        _is_attached = _target getVariable["RD501_mc_is_attached",false];
+	        _cant_be_clamped = (configFile >> "CfgVehicles" >> (typeOf _target) >> _forbid_param) call BIS_fnc_getCfgDataBool;
+        };
+
+	    _offset = (configFile >> "CfgVehicles" >> (typeOf _target) >> _offset_param) call BIS_fnc_getCfgDataArray;
+	    if (count _offset == 3) then {
+	        _position = [(_position select 0) + (_offset select 0), (_position select 1) + (_offset select 1), (_position select 2) + (_offset select 2)];
+	    };
+
+	    _target attachTo [_vehicle, _position];
+	    _vehicle setVariable[_attached_var,_target,true];
+	    _target setVariable["RD501_mc_is_attached",true,true];
 	} else {
 	    detach _attached;
-	    _vehicle setVariable["RD501_mc_attached_right",objNull,true];
-	}
+	    _vehicle setVariable[_attached_var,objNull,true];
+	    _attached setVariable["RD501_mc_is_attached",false,true];
+	};
+};
+
+macro_grp_fnc_name(magclamp,handle_small_1_pressed) = {
+    if(isNull vehicle player) exitWith {};
+    ["RD501_magclamp_small_1",
+     "RD501_mc_attached_small_1",
+     "RD501_magclamp_small_forbidden",
+     "RD501_magclamp_small_offset"] call macro_grp_fnc_name(magclamp,handle_universal);
+};
+
+macro_grp_fnc_name(magclamp,handle_large_pressed) = {
+    if(isNull vehicle player) exitWith {};
+    ["RD501_magclamp_large",
+     "RD501_mc_attached_large",
+     "RD501_magclamp_large_forbidden",
+     "RD501_magclamp_large_offset"] call macro_grp_fnc_name(magclamp,handle_universal);
+};
+
+macro_grp_fnc_name(magclamp,handle_small_2_pressed) = {
+    if(isNull vehicle player) exitWith {};
+    ["RD501_magclamp_small_2",
+     "RD501_mc_attached_small_2",
+     "RD501_magclamp_small_forbidden",
+     "RD501_magclamp_small_offset"] call macro_grp_fnc_name(magclamp,handle_universal);
+};
+
+macro_grp_fnc_name(magclamp,handle_drop_all) = {
+    if(isNull vehicle player) exitWith {};
+    _vehicle = vehicle player;
+    _attached = _vehicle getVariable["RD501_mc_attached_small_1",objNull];
+    if(isNull _attached) then {} else {
+	    detach _attached;
+	    _vehicle setVariable["RD501_mc_attached_small_1",objNull,true];
+	    _attached setVariable["RD501_mc_is_attached",false,true];
+    };
+    _attached = _vehicle getVariable["RD501_mc_attached_large",objNull];
+    if(isNull _attached) then {} else {
+	    detach _attached;
+	    _vehicle setVariable["RD501_mc_attached_large",objNull,true];
+	    _attached setVariable["RD501_mc_is_attached",false,true];
+    };
+    _attached = _vehicle getVariable["RD501_mc_attached_small_2",objNull];
+    if(isNull _attached) then {} else {
+	    detach _attached;
+	    _vehicle setVariable["RD501_mc_attached_small_2",objNull,true];
+	    _attached setVariable["RD501_mc_is_attached",false,true];
+    };
 };
 
 
 //add keybinds
-["RD501 Magclamp","Left Clamp",["Left","Activate/Deactivate left magclamp"],{
-    [player] call macro_grp_fnc_name(magclamp,handle_left_pressed);
+["RD501 Magclamp","small_1",["Laat/C Left    -    Laat/I","Activate/Deactivate left Magclamp on Laat/C or main Magclamp on Laat/I"],{
+    [player] call macro_grp_fnc_name(magclamp,handle_small_1_pressed);
 },"",[DIK_7,[false,false,false]],false] call cba_fnc_addKeybind;
-["RD501 Magclamp","Center Clamp",["Center","Activate/Deactivate center magclamp"],{
-    [player] call macro_grp_fnc_name(magclamp,handle_center_pressed);
+["RD501 Magclamp","large",["Laat/C Center","Activate/Deactivate center Magclamp on Laat/C"],{
+    [player] call macro_grp_fnc_name(magclamp,handle_large_pressed);
 },"",[DIK_8,[false,false,false]],false] call cba_fnc_addKeybind;
-["RD501 Magclamp","Right Clamp",["Right","Activate/Deactivate right magclamp"],{
-    [player] call macro_grp_fnc_name(magclamp,handle_right_pressed);
+["RD501 Magclamp","small_2",["Laat/C Right","Activate/Deactivate right Magclamp on Laat/C"],{
+    [player] call macro_grp_fnc_name(magclamp,handle_small_2_pressed);
 },"",[DIK_9,[false,false,false]],false] call cba_fnc_addKeybind;
+["RD501 Magclamp","detach_all",["Detach All","Detach all clamped vehicles"],{
+    [player] call macro_grp_fnc_name(magclamp,handle_drop_all);
+},"",[DIK_0,[false,false,false]],false] call cba_fnc_addKeybind;

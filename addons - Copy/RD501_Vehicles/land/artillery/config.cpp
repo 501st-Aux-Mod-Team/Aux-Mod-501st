@@ -88,6 +88,9 @@ class CfgVehicles
 		displayName="AV-76";
 		side=1;
 
+		RD501_magclamp_small_forbidden = 1;
+		RD501_magclamp_large_offset[] = {0.0,-6.0,-9.5};
+
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat(arty)
 		vehicleClass = macro_editor_cat(arty)

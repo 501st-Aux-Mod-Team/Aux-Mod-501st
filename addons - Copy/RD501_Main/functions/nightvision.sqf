@@ -41,6 +41,6 @@ macro_grp_fnc_name(nightvision,handle_switch) = {
 ["loadout", macro_grp_fnc_name(nightvision,handle_change)] call CBA_fnc_addPlayerEventHandler;
 
 //add keybinds
-["RD501 Nightvision Mod","Cycle",["Cycle","Press to Cycle"],{
+["RD501 Nightvision","Cycle",["Cycle","Switch Nightvision on/off"],{
     [player] call macro_grp_fnc_name(nightvision,handle_switch);
 },"",[DIK_N,[false,true,false]],false] call cba_fnc_addKeybind;

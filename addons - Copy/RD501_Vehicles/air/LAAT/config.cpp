@@ -87,6 +87,7 @@ class CfgVehicles
 		#include "flight_model.hpp"
 		#include "common_stuff.hpp"
 
+		RD501_magclamp_small_1[] = {0.0,1.0,-4.5};
 	
 		class UserActions
 		{
@@ -144,6 +145,8 @@ class CfgVehicles
 		#include "ace_stuff.hpp"
 		#include "flight_model.hpp"
 		#include "common_stuff.hpp"
+
+		RD501_magclamp_small_1[] = {0.0,-2.0,-2.5};
 
 		class UserActions
 		{
@@ -227,6 +230,10 @@ class CfgVehicles
 		// bodyFrictionCoef = 0.9*40;
 
 		#include "ace_stuff.hpp"
+
+		RD501_magclamp_small_1[] = {-7.0,-2.0,-2.5};
+		RD501_magclamp_large[] = {0.0,-2.0,-2.0};
+		RD501_magclamp_small_2[] = {7.0,-2.0,-2.5};
 
 		class ACE_SelfActions
 		{		
