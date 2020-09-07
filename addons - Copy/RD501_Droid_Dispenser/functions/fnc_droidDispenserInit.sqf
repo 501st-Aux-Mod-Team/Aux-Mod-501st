@@ -3,9 +3,9 @@ params ["_target"];
 
 if(!isServer) exitWith
 {	
-	LOG_ERROR("Not Server, Exiting PFH"); 
+	LOG("Not Server, Exiting Dispenser Init"); 
 };
-
+LOG("Server, continuing on");
 LOGF_1("Initialising spawner %1",_target);
 // TODO: Read these vars from config, maybe CfgVehicles to allow placement of vehicles, although may be better to use static object with HP and destroyed mesh rather
 _target setVariable [QGVAR(group), createGroup [opfor, true]]; // group that units will be spawned into
