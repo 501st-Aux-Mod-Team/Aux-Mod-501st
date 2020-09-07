@@ -28,7 +28,7 @@ class CfgPatches
 class Mode_SemiAuto;
 class cfgWeapons 
 {	
-	class Rifle_Base_F;
+	/*class Rifle_Base_F;
 	class Mode_FullAuto;
 	class SW_Z6_base_F:Rifle_Base_F
 	{
@@ -103,7 +103,7 @@ class cfgWeapons
 			};
 		};
 
-	};
+	};*/
 	class LMG_Mk200_F;
 	class JLTS_Z6:LMG_Mk200_F
 	{

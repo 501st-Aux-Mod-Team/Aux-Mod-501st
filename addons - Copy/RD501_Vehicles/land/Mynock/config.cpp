@@ -71,9 +71,7 @@ class CfgVehicles
 		editorSubcategory = macro_editor_cat(Tank)
 		vehicleClass = macro_editor_vehicle_type(Tank)
 		class TransportBackpacks;
-		class TransportItems;
-		class TransportWeapons;
-		class TransportMagazines;
+		#include "../../common/smallvehiclekit.hpp"
 
 		#include "common_stuff_mynock.hpp"
 
@@ -119,9 +117,7 @@ class CfgVehicles
 		editorSubcategory = macro_editor_cat(Tank)
 		vehicleClass = macro_editor_vehicle_type(Tank)
 		class TransportBackpacks;
-		class TransportItems;
-		class TransportWeapons;
-		class TransportMagazines;
+		#include "../../common/smallvehiclekit.hpp"
 
 		#include "common_stuff_mynock.hpp"
 
@@ -166,9 +162,7 @@ class CfgVehicles
 		editorSubcategory = macro_editor_cat(Tank)
 		vehicleClass = macro_editor_vehicle_type(Tank)
 		class TransportBackpacks;
-		class TransportItems;
-		class TransportWeapons;
-		class TransportMagazines;
+		#include "../../common/smallvehiclekit.hpp"
 
 		#include "common_stuff_mynock.hpp"
 
@@ -217,9 +211,7 @@ class CfgVehicles
 		editorSubcategory = macro_editor_cat(APC)
 		vehicleClass = macro_editor_vehicle_type(APC)
 		class TransportBackpacks;
-		class TransportItems;
-		class TransportWeapons;
-		class TransportMagazines;
+		#include "../../common/smallvehiclekit.hpp"
 		class EventHandlers: DefaultEventhandlers
 		{
 			fired = "_this call (uinamespace getviariable 'BIS_fnc_effectFired');";
@@ -246,6 +238,7 @@ class CfgVehicles
 	{
 		displayName="Republic Glaive TD"
 		author="RD501"
+		#include "../../common/smallvehiclekit.hpp"
 		hiddenSelectionsTextures[]=
 		{
 			"RD501_Vehicles\textures\glaive\glaive_ext1_republic_co.paa",
@@ -282,9 +275,7 @@ class CfgVehicles
 		editorSubcategory = macro_editor_cat(AA)
 		vehicleClass = macro_editor_vehicle_type(AA)
 		class TransportBackpacks;
-		class TransportItems;
-		class TransportWeapons;
-		class TransportMagazines;
+		#include "../../common/smallvehiclekit.hpp"
 
 		#include "common_stuff_mynock.hpp"
 
@@ -325,5 +316,6 @@ class CfgVehicles
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat(Transport)
 		vehicleClass = macro_editor_vehicle_type(Transport)
+		#include "../../common/smallvehiclekit.hpp"
 	};	
 };

@@ -30,7 +30,7 @@ class cfgWeapons
 	class RocketRPS6_F;
 	class JLTS_PLX1_AT;
 
-	class macro_new_weapon(hh,15):RocketHH15Clone
+	/*class macro_new_weapon(hh,15):RocketHH15Clone
 	{
 		author= "RD501";
 		_generalMacro = macro_new_weapon(hh,15)
@@ -58,7 +58,7 @@ class cfgWeapons
 		#include "rocket_scope_fix.hpp"
 
 		magazineWell[] += {macro_new_magwell(rocket_RPS)};
-	};
+	};*/
 
     class macro_new_weapon(Launcher,PLX1): JLTS_PLX1_AT
     {
@@ -68,6 +68,12 @@ class cfgWeapons
 		scopeCurator=2;
 		scopeArsenal=2;
 		displayName = "Republic PLX1s";
+		ace_javelin_enabled = 1;  // Enable Javelin-style locking (0-disabled, 1-enabled)
+        weaponInfoType = "ACE_RscOptics_javelin";  // Inteface
+        modelOptics = "\z\ace\addons\javelin\data\reticle_titan.p3d";  // Optics model
+        canLock = 0;  // Disable vanilla locking (0-disabled, 1-enabled)
+        lockingTargetSound[] = {"", 0, 1};  // Locking sound
+        lockedTargetSound[] = {"", 0, 1};  // Target acquired sound
     };
 
 };

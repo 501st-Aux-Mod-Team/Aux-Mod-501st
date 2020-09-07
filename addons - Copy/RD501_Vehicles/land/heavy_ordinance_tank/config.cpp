@@ -62,15 +62,7 @@ class CfgVehicles
 
 		forceInGarage=1;
 		author = "RD501";
-		class TransportItems
-		{
-		};
-		class TransportMagazines
-		{
-		};
-		class TransportWeapons 
-		{
-		};
+		#include "../../common/smallvehiclekit.hpp"
 
 		#include "../Mynock/common_stuff_mynock.hpp"
 		class EventHandlers: DefaultEventhandlers

@@ -27,7 +27,7 @@ class CfgPatches
 class cfgWeapons 
 {
 	
-	class SWOP_BlasterRifle_Base;
+	/*class SWOP_BlasterRifle_Base;
 
 	class SWOP_dc15xBlasterRifle: SWOP_BlasterRifle_Base
 	{
@@ -96,7 +96,7 @@ class cfgWeapons
 			};
 		};
 
-	};
+	};*/
 	class arifle_MX_Base_F;
 	class JLTS_DC15X: arifle_MX_Base_F
 	{

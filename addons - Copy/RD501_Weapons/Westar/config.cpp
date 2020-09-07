@@ -26,7 +26,7 @@ class CfgPatches
 
 class cfgWeapons 
 {	
-	class Rifle_Long_Base_F;
+	/*class Rifle_Long_Base_F;
 	class SWOP_BlasterRifle_Base :Rifle_Long_Base_F
 	{
 		
@@ -62,6 +62,7 @@ class cfgWeapons
 	};
 
 	#include "westar_pistol.hpp"
+	*/
 	class 3AS_WestarM5_Base_F;
 	class 3AS_WestarM5_F:3AS_WestarM5_Base_F
 	{
@@ -74,7 +75,8 @@ class cfgWeapons
 		displayName="Republic Westar M5"
 		magazines[]=
 		{
-				macro_new_mag(10mws,30)
+				macro_new_mag(10mws,30),
+				"ACE_HuntIR_M203"
 		};
 		modes[] = {"Single","FullAuto"};
 		class Single:Single
