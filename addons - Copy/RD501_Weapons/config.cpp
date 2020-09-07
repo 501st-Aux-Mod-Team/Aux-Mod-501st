@@ -177,25 +177,25 @@ class CfgMagazines
 		author = "RD501";
 		scope = 2;
 		type = 16;
-		displayName = "2 Rnd AP DC-15A Grenades";
-		displayNameShort = "2 Rnd AP DC-15A";
+		displayName = "2 Rnd LR AP DC-15A Grenades";
+		displayNameShort = "2 Rnd LR AP DC-15A";
 		picture = "\A3\Weapons_f\Data\ui\gear_UGL_slug_CA.paa";
 		ammo = macro_new_ammo(GL_AT)
 		initSpeed = 220;//120;
 		count = 2;
 		nameSound = "";
-		descriptionShort = "2Rnd AP DC-15A Grenade";
+		descriptionShort = "2Rnd LR AP DC-15A Grenade";
 		//mass = 30;
 		mass = 15;
 	};
 
 	class macro_new_mag(HE_GL,3): macro_new_mag(AT_GL,2)
 	{
-		displayName = "3 Rnd HE DC-15A Grenades";
-		displayNameShort = "3 Rnd HE DC-15A";
+		displayName = "3 Rnd LR HE DC-15A Grenades";
+		displayNameShort = "3 RndLR HE DC-15A";
 		count=3;
 		ammo = macro_new_ammo(GL_HE)
-		descriptionShort = "3Rnd HE DC-15A Grenade";
+		descriptionShort = "3Rnd LR HE DC-15A Grenade";
 		initSpeed = 120;
 	};
 
