@@ -23,29 +23,27 @@ class CfgPatches
 
 class cfgWeapons 
 {
-	class Launcher;
-    class Launcher_Base_F: Launcher {
+	class Launcher_Base_F;
+    class launch_RPG32_F: Launcher_Base_F {
         class WeaponSlotsInfo;
     };
 
-	class macro_new_weapon(launcher,rps1) : Launcher_Base_F
+	class macro_new_weapon(launcher,rps1) : launch_RPG32_F
 	{
 		author= "RD501";
 		scope = 2;
 		scopeArsenal=2;
 		displayName = "Republic RPS1 Launcher";
 		model = "\3AS\3AS_Weapons\RPS6\3AS_RPS6_F.p3d";
-		modelOptics = "\A3\Weapons_F\acc\reticle_RPG_F";
         icon = "\RD501_Weapons\Launchers\RPS1\rps_disposable_icon.paa";
 		picture = "\RD501_Weapons\Launchers\RPS1\rps_disposable_icon.paa";
 		recoil = "recoil_single_law";
 		baseWeapon = macro_new_weapon(launcher,rps1)
 		RD501_Empty_Weapon = macro_new_weapon(launcher,rps1_u)
-		magazines[] = { "MRAWS_HEAT55_F" };
-
+		magazines[] = { macro_new_mag(rps1,1) };
+		magazineWell[]={""};
 		magazineReloadTime = 0.1;
         reloadMagazineSound[] = {"",1,1};
-        
 		class EventHandlers {
 			fired = macro_quote(_this call macro_fnc_name(onWeaponFiredSwapToEmpty));
 		};

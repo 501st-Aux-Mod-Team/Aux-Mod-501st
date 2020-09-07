@@ -29,7 +29,7 @@ class CfgPatches
 
 class cfgWeapons 
 {
-	class Rifle_Long_Base_F;
+	/*class Rifle_Long_Base_F;
 	class SWOP_BlasterRifle_Base:Rifle_Long_Base_F
 	{
 		class WeaponSlotsInfo;
@@ -100,7 +100,7 @@ class cfgWeapons
 		{
 			class CowsSlot;
 		};
-	}
+	}*/
 	class 3AS_DC15A_Base_F;
 	class RD501_stun_muzzle;
 	class 3AS_DC15A_F:3AS_DC15A_Base_F
@@ -154,9 +154,9 @@ class cfgWeapons
 			};
 		};
 	};
-	#include "DC_15a__LE_rifle.hpp"
-	#include "DC_15a__GL_rifle.hpp"
-	#include "DC_15a__mod0_rifle.hpp"
-	#include "DC_15a_rifle.hpp"
+	//#include "DC_15a__LE_rifle.hpp"
+	//#include "DC_15a__GL_rifle.hpp"
+	//#include "DC_15a__mod0_rifle.hpp"
+	//#include "DC_15a_rifle.hpp"
 };
 

@@ -180,8 +180,6 @@ class CfgVehicles
 		ace_cargo_size = 1;
 		class TransportItems
         {
-        	#include "ammo_small_items.hpp"
-			#include "medical_small_items.hpp"
         };
 			
 		class TransportMagazines

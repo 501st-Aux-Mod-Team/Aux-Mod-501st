@@ -60,16 +60,7 @@ class CfgVehicles
 		forceInGarage=1;
 
 		#include "../Mynock/common_stuff_mynock.hpp"
-
-		class TransportItems
-		{
-		};
-		class TransportMagazines
-		{
-		};
-		class TransportWeapons 
-		{
-		};
+		#include "../../common/smallvehiclekit.hpp"
 		
 		textureList[] = {};
 		hiddenSelectionsTextures[] = 

@@ -49,7 +49,7 @@ class CfgVehicles
 		displayName = "Republic Pathfinder";
 		forceInGarage = 1;
 		side = 1;
-		
+		#include "../../common/smallvehiclekit.hpp"
 
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat(Transport)
@@ -99,7 +99,7 @@ class CfgVehicles
 			macro_vehicle_textures\Fast_Infantry_Transport\wheels_medical_fit.paa,
 			""
 		};
-
+		
 		smokeLauncherAngle = 360;
 		smokeLauncherGrenadeCount = 20;
 		smokeLauncherVelocity = 16;

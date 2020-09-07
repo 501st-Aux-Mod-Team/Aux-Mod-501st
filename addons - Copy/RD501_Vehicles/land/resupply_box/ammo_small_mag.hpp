@@ -1,95 +1,100 @@
-class DC15_A_Rifle_full_mag
+class transport_2mw30
 {
-	magazine = macro_new_mag(DC15a_High,15);
+	magazine = macro_new_mag(2mw,30);
 	count = 15;
 };
-class _xx_SWOP_DC15ABlasterRifle_Mag
+class transport_5mw15
 {
-	magazine = macro_new_mag(DC15a_Med,30);
+	magazine = macro_new_mag(5mw,10);
 	count = 15;
 };
-class _xx_SWOP_DC15ABlasterRifle_Low_Mag
+class transport_5mw60
 {
-	magazine = 	macro_new_mag(DC15a_Low,60)
+	magazine = 	macro_new_mag(5mw,60)
+	count = 60;
+};
+class transport_10mw30
+{
+	magazine = macro_new_mag(10mw,30);
+	count = 60;
+};
+class transport_10mw400
+{
+	magazine = macro_new_mag(10mw,400);
 	count = 15;
 };
-class _xx_DCStun_Mag
+class _transport_20mw20
 {
-	magazine = "DCStun_Mag";
-	count = 10;
+	magazine = macro_new_mag(20mw,20);
+	count = 20;
 };
-class _xx_SWOP_DC15_Mag_Mag
+class _transport_20mwup20
 {
-	magazine = macro_new_mag(DC15s,60);
-	count = 15;
-};
-class _xx_SWOP_SWOP_dc15xBlasterRifle_RD501_Mag_Mag
-{
-	magazine = macro_new_mag(DC15x,6);
-	count = 15;
-};
-class _xx_SWOP_SWOP_DC15ABlasterRifle_Low_highcap_box_Mag
-{
-	magazine =  macro_new_mag(DC15a_box_mag,240);
-	count = 10;
+	magazine =  macro_new_mag(20mwup,20);
+	count = 40;
 };		
-class _xx_SWOP_1Rnd_AT_Grenade_DC15A_Mag
+class _transport_20mwdp20
 {
-	magazine = macro_new_mag(AT_GL,2);
-	count = 10;
+	magazine = macro_new_mag(20mwdp,20);
+	count = 40;
 };		
-class _xx_SWOP_SWOP_WESTARM5_MAG
+class _transport_20mw240
 {
-	magazine = "SWOP_WESTARM5_Mag";
-	count = 10;
+	magazine = macro_new_mag(20mw,240);
+	count = 20;
 };									
-class _xx_SWOP_SWOP_DC17Pistol_Mag_Mag
+class _transport_30mw10
 {
-	magazine = macro_new_mag(DC17,20)
+	magazine = macro_new_mag(30mw,10);
 	count = 15;
-};					
-class _xx_ACE_HuntIR_M203
+}
+class _transport_30mw7
+{
+	magazine = macro_new_mag(30mw,7)
+	count = 15;
+};
+class _transport_40mw5
+{
+	magazine = macro_new_mag(40mw,5)
+	count = 10;
+};
+class _transport_stun5
+{
+	magazine =  macro_new_mag(stun,5)
+	count = 20;
+};
+class _transport_launcher_AT_mags
+{
+	magazine =  macro_new_mag(RPS_AT,1)
+	count = 20;
+};
+class _transport_launcher_AA_mags
+{
+	magazine =  macro_new_mag(RPS_AA,1)
+	count = 20;
+};
+class _transport_he3
+{
+	magazine = macro_new_mag(UGL_HE,3);
+	count = 15;
+};
+class _transport_ap2
+{
+	magazine = macro_new_mag(UGL_AP,2);
+	count = 15;
+};		
+class _transport_emp1
+{
+	magazine = macro_new_mag(UGL_EMP,1);
+	count = 3;
+};			
+class _transport_HuntIR_M203
 {
 	magazine = "ACE_HuntIR_M203";
-	count = 25;
+	count = 15;
 };
-class _xx_5Rnd_HE_Grenade_DC15A
-{
-	magazine = macro_new_mag(HE_GL,3)
-	count = 10;
-};
-class _xx_300Rnd_BlasterLaser_Belt
-{
-	magazine = macro_new_mag(z6,400)
-	count = 10;
-};
-class _xx_RD501_DC15ABlasterRifleLE_Full_Mag
-{
-	magazine =  macro_new_mag(DC15a_LE,15)
-	count = 10;
-};
-class _xx_C12_Remote_Mag
+class _transport_C12_Remote_Mag
 {
 	magazine = "C12_Remote_Mag";
 	count = 2;
-};
-class _xx_RocketHH15CloneHEATFF_Mag_RD501
-{
-	magazine =  macro_new_mag(RPS_AT,1)
-	count = 10;
-};
-class _xx_Rocket_AA_mags
-{
-	magazine =  macro_new_mag(RPS_AA,1)
-	count = 10;
-};
-class _xx_UGL_FlareWhite_F_3Rnd_RD501
-{
-	magazine = "UGL_FlareWhite_F_3Rnd_RD501";
-	count = 5;
-};
-class _xx_UGL_3Rnd_Smoke_Grenade_shell
-{
-	magazine = "3Rnd_Smoke_Grenade_shell";
-	count = 5;
 };

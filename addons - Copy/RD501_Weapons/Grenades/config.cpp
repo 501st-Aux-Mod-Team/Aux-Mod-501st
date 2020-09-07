@@ -99,7 +99,7 @@ class CfgWeapons
 		class ThrowMuzzle;
 		class Shadow_Muzzle: ThrowMuzzle
 		{
-			magazines[] = {"RD501_BlueShadow_Grenade"};
+			magazines[] = {"RD501_BlueShadow_Grenade",macro_new_mag(imploder,1),macro_new_mag(thermaldet,1)};
 		};
 	};
 };

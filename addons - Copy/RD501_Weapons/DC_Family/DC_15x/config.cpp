@@ -27,7 +27,7 @@ class CfgPatches
 class cfgWeapons 
 {
 	
-	class SWOP_BlasterRifle_Base;
+	/*class SWOP_BlasterRifle_Base;
 
 	class SWOP_dc15xBlasterRifle: SWOP_BlasterRifle_Base
 	{
@@ -96,7 +96,7 @@ class cfgWeapons
 			};
 		};
 
-	};
+	};*/
 	class arifle_MX_Base_F;
 	class JLTS_DC15X: arifle_MX_Base_F
 	{
@@ -112,7 +112,8 @@ class cfgWeapons
 		baseWeapon=macro_new_weapon(DC,r15x)
 		magazines[]=
 		{
-			macro_new_mag(40mw,5)
+			macro_new_mag(40mw,5),
+			macro_new_mag(40mwemp,1)
 		};
 		class Single:Single
 		{

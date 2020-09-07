@@ -19,20 +19,27 @@ class CfgPatches
 	};
 };
 class CfgWeapons
-{
-	class 3AS_RPS6_HP;
+{	class Launcher_Base_F;
+	class 3AS_RPS6_HP:Launcher_Base_F
+	{
+		class OpticsModes{class optic;};
+	};
 	class macro_new_weapon(launcher,RPS6):3AS_RPS6_HP
 	{
 		scope=2;
+		canLock = 2;
+		airLock=2;
 		displayName="Republic RPS6 Launcher";
 		weaponInfoType="RscOptics_titan";
 		modelOptics="\A3\Weapons_F_Beta\acc\reticle_titan.p3d";
 		icon = "\RD501_Weapons\Launchers\RPS6\icon.paa";
 		picture = "\RD501_Weapons\Launchers\RPS6\icon.paa";
+		nameSound="aalauncher";
 		magazines[]=
 		{
 			macro_new_mag(RPS_AT,1),
 			macro_new_mag(RPS_AA,1)
+			
 		};
 		class OpticsModes
 		{
@@ -46,9 +53,9 @@ class CfgWeapons
 					"OpticsBlur1"
 				};
 				opticsFlare=0;
-				opticsZoomMin=0.083329998;
-				opticsZoomMax=0.041669998;
-				opticsZoomInit=0.083329998;
+				opticsZoomInit =scope_magnification(1); //0.1083;
+				opticsZoomMax = scope_magnification(1); //0.1083;
+				opticsZoomMin = scope_magnification(6); //0.1083;
 				distanceZoomMin=300;
 				distanceZoomMax=300;
 				memoryPointCamera="eye";
@@ -56,11 +63,12 @@ class CfgWeapons
 				visionMode[]=
 				{
 					"Normal",
+					"NVG",
 					"Ti"
 				};
-				thermalMode[]={0,1};
+				thermalMode[]={0};
 				opticsDisablePeripherialVision=1;
-				discretefov[]={0.083329998,0.041669998};
+				discretefov[] = {scope_magnification(1),scope_magnification(3),scope_magnification(6)};
 				discreteInitIndex=0;
 			};
 		};

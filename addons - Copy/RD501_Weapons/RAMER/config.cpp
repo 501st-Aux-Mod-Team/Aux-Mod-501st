@@ -21,7 +21,7 @@ class CfgPatches
 };
 class cfgWeapons
 {
-	class SWOP_T21BlasterRifle;
+	/*class SWOP_T21BlasterRifle;
 	class RD501_RAMER: SWOP_T21BlasterRifle
 	{
 		baseWeapon="RD501_RAMER";
@@ -35,7 +35,7 @@ class cfgWeapons
 		{
 			"RD501_RAMER_x6_mag"
 		};
-	};
+	};*/
 	class arifle_MX_Base_F;
 	class JLTS_EPL2:arifle_MX_Base_F
 	{
@@ -53,5 +53,24 @@ class cfgWeapons
 		{
 			reloadTime=2;
 		}
+			class WeaponSlotsInfo
+		{
+			mass = 30;
+			class CowsSlot
+			{
+				displayName = "Optics Slot";
+				iconPicture = "\A3\Weapons_F\Data\UI\attachment_top.paa";
+				iconPinpoint = "Bottom";
+				iconPosition[] = {0.5,0.35};
+				iconScale = 0.2;
+				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				scope = 0;
+				compatibleItems[] = 
+				{
+					"optic_Holosight_blk_F"
+				};
+
+			};
+		};
 	};
 };

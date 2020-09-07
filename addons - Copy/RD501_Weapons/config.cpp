@@ -312,20 +312,18 @@ class CfgMagazines
 
 	class Titan_AA;
 	class CA_LauncherMagazine;
+	class Titan_AT;
 
-	class macro_new_mag(RPS_AT,1): CA_LauncherMagazine
+	class macro_new_mag(RPS_AT,1): Titan_AT
 	{
 		scope = 2;
 		displayName = "RPS AT Rocket";
 		ammo = macro_new_ammo(RPS_AT);
 		type = "2 *   256";
 		count = 1;
-		picture = "\A3\weapons_f\launchers\nlaw\data\UI\gear_nlaw_rocket_ca.paa";
-		model = "\A3\weapons_f\launchers\nlaw\nlaw_proxy";
 		initSpeed = 60;
 		maxLeadSpeed = 60;
 		mass = 70;
-		nameSound = "missiles";
 
 
 	};
@@ -506,6 +504,7 @@ class CfgAmmo
 	class M_Titan_AA;
 	class DH17_Blaster_Ammo;
 	class 3AS_Chaingun_Ammo;
+	class M_Titan_AT;
 
 	class macro_new_ammo(westar_35):SWOP_DC17_Ammo
 	{
@@ -670,7 +669,7 @@ class CfgAmmo
 
 	
 
-	class macro_new_ammo(RPS_AT):A_RocketHH15Clone_HEAT_FireForget
+	class macro_new_ammo(RPS_AT):M_Titan_AT
 	{
 		aiAmmoUsageFlags = "128 + 256 +512";
 		hit = 95;

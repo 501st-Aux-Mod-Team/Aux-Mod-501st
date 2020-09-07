@@ -30,7 +30,7 @@ class macro_new_weapon(scope,dc_r15a_acog): itemCore
                 opticsZoomMin =  scope_magnification(.53);
                 opticsZoomMax = 1.25;
                 opticsZoomInit = 0.75;
-                memoryPointCamera = "eye";
+                memoryPointCamera = "opticView";
                 visionMode[] = {};
                 //discretefov[] = {scope_magnification(.53)};
                 discreteDistance[] = {200};

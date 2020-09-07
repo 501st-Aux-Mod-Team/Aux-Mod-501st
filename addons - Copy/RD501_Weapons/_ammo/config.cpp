@@ -26,6 +26,8 @@ class CfgAmmo
 	class 3AS_EC70_BluePlasma;
 	class 3AS_EC80_BluePlasma;
 	class G_40mm_HE;
+	class SWOP_BCCKtermimploder;
+	class SWOP_termDet;
 	class macro_new_ammo(2mw):3AS_EC20_BluePlasma
 	{
 		hit=4;
@@ -109,6 +111,16 @@ class CfgAmmo
 		caliber=3.6;
 		airFriction=0;
 		explosive = 0.4;
+	};
+	class macro_new_ammo(40mwemp) : 3AS_EC70_BluePlasma
+	{
+		hit=0.01;
+		airLock=1;
+		typicalSpeed=1100;
+		caliber=1;
+		airFriction=0;
+		explosive = 0;
+		JLTS_isEMPAmmo=1;
 	};
 	class macro_new_ammo(50mw) : 3AS_EC80_BluePlasma
 	{
@@ -200,5 +212,17 @@ class CfgAmmo
 			power=0;
 		};
     };
+	class macro_new_ammo(imploder) : SWOP_BCCKtermimploder
+	{
+		hit=50;
+		indirectHit=45;
+		indirectHitRange=2;
+	}
+	class macro_new_ammo(thermaldet) : SWOP_termDet
+	{
+		hit=18;
+		indirectHit=14;
+		indirectHitRange=8;
+	}
 
 };
