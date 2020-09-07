@@ -25,7 +25,7 @@ class CfgPatches
 
 class cfgWeapons 
 {
-	class SWOP_B2gun;
+	/*class SWOP_B2gun;
 	class Rifle_Long_Base_F;
 	class SWOP_BlasterRifle_Base:Rifle_Long_Base_F
 	{
@@ -96,7 +96,7 @@ class cfgWeapons
 
 			};
 		};
-	};
+	};*/
 
 	class Pistol;
 	class Pistol_Base_F:Pistol

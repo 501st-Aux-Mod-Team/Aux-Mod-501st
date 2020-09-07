@@ -28,7 +28,7 @@ class CfgPatches
 
 class cfgWeapons 
 {
-	class Mode_FullAuto;
+	/*class Mode_FullAuto;
 	class Pistol_Base_F;
 	class SWOP_DC17Pistol: Pistol_Base_F
 	{
@@ -101,7 +101,7 @@ class cfgWeapons
 	class SWOP_DC15SAPistol:Pistol_Base_F
 	{
 		class Single;
-	};
+	};*/
 	class RD501_stun_muzzle;
 	class hgun_P07_F;
 	class JLTS_DC17SA:hgun_P07_F
@@ -176,7 +176,7 @@ class cfgWeapons
 			burst=3;
 		};
 	};
-
+/*
 	class RD501_DC_15_RB:SWOP_DC15SAPistol
 	{
 		scope=2;
@@ -280,7 +280,7 @@ class cfgWeapons
 
 			dispersion = 0.0001;
 		};
-	};
+	};*/
 
 	
 };

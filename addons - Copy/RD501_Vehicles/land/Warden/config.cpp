@@ -86,15 +86,8 @@ class CfgVehicles
 		vehicleClass = macro_editor_vehicle_type(APC)
 
 		#include "../Mynock/common_stuff_mynock.hpp"
+		#include "../../common/smallvehiclekit.hpp"
 		
-		class TransportItems
-		{
-			class _xx_ToolKit
-			{
-				name = "ToolKit";
-				count = 4;
-			};
-		};
 		author = "RD501";
 		//faction = "RD501Faction";
 		scope = 2;

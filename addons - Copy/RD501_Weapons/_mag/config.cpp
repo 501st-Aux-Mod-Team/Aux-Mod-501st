@@ -26,6 +26,7 @@ class CfgMagazines
 	class SWOP_DC15SA_Ammo;
 	class SWOP_termDet_Gm;
 	class SWOP_BCCKtermimploder_G;
+	class RPG32_F;
 	///Rifle/Pistol Magazines
 	class macro_new_mag(2mw,30) : 3AS_45Rnd_EC50_Mag
 	{
@@ -287,18 +288,25 @@ class CfgMagazines
 	{
 		scope=2;
 		displayName = "Republic Thermal Imploder";
-		displayNameShort = "Thermal Imploder";
+		displayNameShort = "Republic Thermal Imploder";
 		count=1;
 		ammo = macro_new_ammo(imploder)
-		descriptionShort = "Thermal Imploder";
+		descriptionShort = "Republic Thermal Imploder";
 	};
 	class macro_new_mag(thermaldet,1):SWOP_termDet_Gm
 	{
 		scope=2;
 		displayName = "Republic Thermal Detonator";
-		displayNameShort = "Thermal Detonator";
+		displayNameShort = "Republic Thermal Detonator";
 		count=1;
 		ammo = macro_new_ammo(thermaldet)
-		descriptionShort = "Thermal Detonator";
+		descriptionShort = "Republic Thermal Detonator";
 	};
+	/////////////////////////////////////////////////////
+	/////////////Missile  Magazines/////////////////////
+	////////////////////////////////////////////////////
+	class macro_new_mag(rps1,1):RPG32_F
+	{
+		scope=1;
+	}
 };

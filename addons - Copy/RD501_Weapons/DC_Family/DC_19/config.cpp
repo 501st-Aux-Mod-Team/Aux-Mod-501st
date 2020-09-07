@@ -24,7 +24,7 @@ class CfgPatches
 
 class cfgWeapons 
 {
-	class SWOP_BlasterRifle_Base;
+	/*class SWOP_BlasterRifle_Base;
 	class SWOP_DC19: SWOP_BlasterRifle_Base
 	{
 		
@@ -58,6 +58,6 @@ class cfgWeapons
 			reloadTime = DC19_reloadtime_single
         	dispersion = DC19_accuracy
 		};
-	};
+	};*/
 };
 
