@@ -100,7 +100,6 @@ class CfgVehicles
 	class macro_new_vehicle(droideka,base): SWOP_Droideka
 	{
 		scope=2;
-		armor = 275;
 		displayName = "Static Droideka (new)";
 		class EventHandlers: DefaultEventhandlers {}; 
 
@@ -108,10 +107,10 @@ class CfgVehicles
 		editorSubcategory = macro_editor_cat(heavy_armored_infantry);
 		vehicleClass = macro_editor_vehicle_type(heavy_armored_infantry);
 
-		armor = 250;
+		armor = 225;
 		armorStructural = 1.0;
 		explosionShielding	= 0.1;
-		minTotalDamageThreshold	= 0.02;
+		minTotalDamageThreshold	= 0.01;
 		impactDamageMultiplier = 0.1;
 		class HitPoints
 		{

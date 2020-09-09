@@ -81,7 +81,7 @@ class CfgMagazines
 		displayName="20 Round 20MW Cell";
 		count = 20;
 		ammo=macro_new_ammo(20mw)
-		typicalSpeed=500;
+		typicalSpeed=700;
 		descriptionShort="Medium power magazine";
 	};
 	class macro_new_mag(20mwup,20) : 3AS_45Rnd_EC50_Mag
@@ -113,7 +113,7 @@ class CfgMagazines
 		displayName="10 Round 30MW Cell";
 		count = 10;
 		ammo=macro_new_ammo(30mw)
-		typicalSpeed=800;
+		typicalSpeed=1000;
 		descriptionShort="High power magazine";
 	};
 	class macro_new_mag(30mw,7) : 3AS_45Rnd_EC50_Mag

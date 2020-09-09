@@ -20,7 +20,8 @@ class CfgPatches
 			macro_new_weapon(DC,17),
 			macro_new_weapon(DC,17a),
 			macro_new_weapon(DC,r17),
-			macro_new_weapon(DC,r17a)
+			macro_new_weapon(DC,r17a),
+			macro_new_weapon(DC,17sig)
 			
 		};
 	};
@@ -174,6 +175,26 @@ class cfgWeapons
 			aiDispersionCoefX=2;
 			soundBurst=0;
 			burst=3;
+		};
+	};
+	class macro_new_weapon(DC,17sig):JLTS_DC17SA
+		{
+			scope=2;
+			displayName = "Republic DC17 Signal";
+			baseWeapon=macro_new_weapon(DC,17sig)
+			muzzles[]={"this"};
+			magazines[]=
+				{
+				"1Rnd_Smoke_Grenade_shell",
+				"1Rnd_SmokeRed_Grenade_shell",
+				"1Rnd_SmokeGreen_Grenade_shell",
+				"1Rnd_SmokeYellow_Grenade_shell",
+				"1Rnd_SmokePurple_Grenade_shell",
+				"1Rnd_SmokeBlue_Grenade_shell",
+				"1Rnd_SmokeOrange_Grenade_shell",
+				MACRO_GL_flare_rounds_1rnd
+			};
+			JLTS_hasElectronics=0;
 		};
 	};
 /*

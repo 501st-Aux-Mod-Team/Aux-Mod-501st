@@ -67,10 +67,16 @@ class CfgWeapons
 			mass = 30;
 			class CowsSlot: CowsSlot
 			{
-				access = 1;
+				displayName = "Optics Slot";
+				iconPicture = "\A3\Weapons_F\Data\UI\attachment_top.paa";
+				iconPinpoint = "Bottom";
+				iconPosition[] = {0.5,0.35};
+				iconScale = 0.2;
+				linkProxy = "\a3\data_f\proxies\weapon_slots\top";
+				scope = 0;
 				compatibleItems[] = 
 				{
-					macro_new_weapon(scope,dc_15a_acogtcw)
+					macro_new_weapon(scope,dc_15a_acog)
 				};
 
 			};

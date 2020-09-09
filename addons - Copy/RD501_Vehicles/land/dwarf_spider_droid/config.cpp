@@ -88,10 +88,10 @@ class CfgVehicles
 		editorSubcategory = macro_editor_cat(heavy_armored_infantry);
 		vehicleClass = macro_editor_vehicle_type(heavy_armored_infantry);
 
-		armor = 250;
+		armor = 150;
 		armorStructural = 1.0;
 		explosionShielding	= 0.1;
-		minTotalDamageThreshold	= 0.02;
+		minTotalDamageThreshold	= 0.01;
 		impactDamageMultiplier = 0.1;
 		class HitPoints
 		{

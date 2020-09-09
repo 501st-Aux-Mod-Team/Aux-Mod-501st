@@ -48,7 +48,7 @@ class CfgAmmo
 	{
 		hit=9;
 		airLock=1;
-		typicalSpeed=450;
+		typicalSpeed=550;
 		caliber=1;
 		airFriction=0;
 		explosive = 0;
@@ -57,7 +57,7 @@ class CfgAmmo
 	{
 		hit=9;
 		airLock=1;
-		typicalSpeed=450;
+		typicalSpeed=550;
 		caliber=1;
 		visibleFire=1;
 		audibleFire=5;
@@ -69,10 +69,10 @@ class CfgAmmo
 	{
 		hit=12;
 		airLock=1;
-		typicalSpeed=500;
-		caliber=2;
+		typicalSpeed=700;
+		caliber=2.8;
 		airFriction=0;
-		explosive = 0;
+		explosive = 0.4;
 	};
 	class macro_new_ammo(20mwup) : 3AS_EC50_BluePlasma
 	{
@@ -98,7 +98,7 @@ class CfgAmmo
 	{
 		hit=35;
 		airLock=1;
-		typicalSpeed=800;
+		typicalSpeed=1000;
 		caliber=2.4;
 		airFriction=0;
 		explosive = 0.4;
