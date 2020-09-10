@@ -31,6 +31,7 @@ class CfgWeapons
 		class WeaponSlotsInfo
 		{
 		class CowsSlot;	
+		class MuzzleSlot;
 		};
 	};
 	class macro_new_weapon_nofam(valken38x):3AS_Valken38X_F
@@ -57,7 +58,17 @@ class CfgWeapons
 				{
 					macro_new_weapon(scope,valken_6_12x)
 				};
-
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
+				displayName="$str_a3_cfgweapons_abr_base_f_weaponslotsinfo_muzzleslot0";
+				compatibleItems[]=
+				{
+					"RD501_muzzle_flash"
+				};
+				iconPicture="\A3\Weapons_F\Data\UI\attachment_muzzle.paa";
+				iconPinpoint="Center";
 			};
 		};
 	};
@@ -68,6 +79,7 @@ class CfgWeapons
 		class WeaponSlotsInfo
 		{
 		class CowsSlot;	
+		class MuzzleSlot;
 		};
 	};
 	class macro_new_weapon_nofam(valken38y):JLTS_DW32S
@@ -95,7 +107,17 @@ class CfgWeapons
 				{
 					macro_new_weapon(scope,valken_6_12x)
 				};
-
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
+				displayName="$str_a3_cfgweapons_abr_base_f_weaponslotsinfo_muzzleslot0";
+				compatibleItems[]=
+				{
+					"RD501_muzzle_flash"
+				};
+				iconPicture="\A3\Weapons_F\Data\UI\attachment_muzzle.paa";
+				iconPinpoint="Center";
 			};
 		};
 	};

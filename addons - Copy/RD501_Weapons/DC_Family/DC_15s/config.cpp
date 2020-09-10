@@ -182,6 +182,12 @@ class cfgWeapons
 	{
 		class Single;
 		class FullAuto;
+		class WeaponSlotsInfo
+		{
+			class CowsSlot;
+			class MuzzleSlot;
+			class PointerSlot;
+		};
 	};
 	class macro_new_weapon(DC,r15s):3AS_DC15S_F
 	{
@@ -209,6 +215,41 @@ class cfgWeapons
 		class FullAuto:FullAuto
 		{
 			reloadTime=0.066;
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass = 30;
+			class CowsSlot: CowsSlot
+			{
+				displayName = "Optics Slot";
+				iconPicture = "\A3\Weapons_F\Data\UI\attachment_top.paa";
+				iconPinpoint = "Bottom";
+				iconPosition[] = {0.5,0.35};
+				iconScale = 0.2;
+				linkProxy = "\a3\data_f\proxies\weapon_slots\TOP";
+				scope = 0;
+				compatibleItems[] = 
+				{
+					
+				};
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
+				displayName="$str_a3_cfgweapons_abr_base_f_weaponslotsinfo_muzzleslot0";
+				compatibleItems[]=
+				{
+					"RD501_muzzle_flash"
+				};
+				iconPicture="\A3\Weapons_F\Data\UI\attachment_muzzle.paa";
+				iconPinpoint="Center";
+			};
+			class PointerSlot : PointerSlot
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\SIDE";
+				displayName = "Pointer Slot";
+				compatibleItems[] = {"acc_flashlight","acc_pointer_IR"}; 
+			};
 		};
 	};
 };
