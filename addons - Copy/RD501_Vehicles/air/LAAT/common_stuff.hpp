@@ -1,7 +1,7 @@
 
 	class EventHandlers : DefaultEventhandlers 
 	{
-		//init = "_this execVM "RD501_Main\functions\autocrate\autocrate.sqf"; _this execVM "RD501_Main\functions\vehicle_lift\laat_lift_3.sqf";";
+		init = "_this execVM "RD501_Main\functions\autocrate\autocrate.sqf"; _this execVM "RD501_Main\functions\vehicle_lift\laat_lift_3.sqf";";
 		fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
 		init = "[_this select 0] execVM 'RD501_Main\functions\autocrate\autocrate.sqf';";//[_this select 0] execVM 'RD501_Main\functions\vehicle_lift\laat_lift_3.sqf';";
 	};
