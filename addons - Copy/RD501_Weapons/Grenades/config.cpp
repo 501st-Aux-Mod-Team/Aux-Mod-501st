@@ -92,14 +92,24 @@ class CfgMagazines
 class CfgWeapons
 {
 	class Default;
-	class GrenadeLauncher: Default{};
+	class GrenadeLauncher: Default
+	{
+		class ThrowMuzzle;
+	};
 	class Throw: GrenadeLauncher
 	{
-		muzzles[] += {"Shadow_Muzzle"};
-		class ThrowMuzzle;
+		muzzles[] += {"Shadow_Muzzle","Imploder_Muzzle","Thermaldet_Muzzle"};
 		class Shadow_Muzzle: ThrowMuzzle
 		{
-			magazines[] = {"RD501_BlueShadow_Grenade",macro_new_mag(imploder,1),macro_new_mag(thermaldet,1)};
+			magazines[] = {"RD501_BlueShadow_Grenade"};
+		};
+		class Imploder_Muzzle: ThrowMuzzle
+		{
+			magazines[] = {,macro_new_mag(imploder,1)};
+		};
+		class Thermaldet_Muzzle: ThrowMuzzle
+		{
+			magazines[] = {macro_new_mag(thermaldet,1)};
 		};
 	};
 };

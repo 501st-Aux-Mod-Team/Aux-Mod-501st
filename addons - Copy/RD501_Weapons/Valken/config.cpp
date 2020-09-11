@@ -45,7 +45,7 @@ class CfgWeapons
 		};
 		class Single : Single
 		{
-			reloadTime=0.65;
+			reloadTime=0.35;
 			dispersion=0.00045;
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
@@ -94,7 +94,7 @@ class CfgWeapons
 		muzzles[]={"this"};
 		class Single : Single
 		{
-			reloadTime=0.65;
+			reloadTime=0.35;
 			dispersion=0.00045;
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo

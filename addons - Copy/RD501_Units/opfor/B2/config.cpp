@@ -20,8 +20,7 @@ class CfgPatches
 		requiredVersion=0.1;
 		units[]={
 			macro_new_unit_class(opfor,B2_droid_Standard),
-			"RD501_B2_superdroid",
-			"SWOP_B2_superdroid_F_Spec"
+			macro_new_unit_class(opfor,B2_droid_Super)
 		};
 		weapons[]=
 		{
