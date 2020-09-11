@@ -91,7 +91,7 @@ class CfgVehicles
 		armor = 150;
 		armorStructural = 1.0;
 		explosionShielding	= 0.1;
-		minTotalDamageThreshold	= 0.01;
+		minTotalDamageThreshold	= 0.02;
 		impactDamageMultiplier = 0.1;
 		class HitPoints
 		{

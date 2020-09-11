@@ -32,6 +32,8 @@ class CfgWeapons
 		class WeaponSlotsInfo
 		{
 		class CowsSlot;	
+		class MuzzleSlot;
+		class UnderBarrelSlot;
 		};
 	};
 	class macro_new_weapon(DC,15l):3AS_DC15L_F
@@ -66,7 +68,7 @@ class CfgWeapons
 				};
 
 			};
-		class UnderBarrelSlot
+		class UnderBarrelSlot:UnderBarrelSlot
 			{
 			linkProxy="\A3\Data_F_Mark\Proxies\Weapon_Slots\UNDERBARREL";
 			compatibleItems[]=
@@ -75,6 +77,17 @@ class CfgWeapons
 				};
 			iconPicture="\A3\Weapons_F_Mark\Data\UI\attachment_under.paa";
 			iconPinpoint="Bottom";
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
+				displayName="$str_a3_cfgweapons_abr_base_f_weaponslotsinfo_muzzleslot0";
+				compatibleItems[]=
+				{
+					"RD501_muzzle_flash"
+				};
+				iconPicture="\A3\Weapons_F\Data\UI\attachment_muzzle.paa";
+				iconPinpoint="Center";
 			};
 		};
 	};

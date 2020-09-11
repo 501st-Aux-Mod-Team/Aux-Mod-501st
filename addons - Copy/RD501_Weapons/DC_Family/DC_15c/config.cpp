@@ -20,7 +20,6 @@ class CfgPatches
 		};
 	};
 };
-
 class CfgWeapons
 {	
 	class RD501_stun_muzzle;
@@ -30,8 +29,10 @@ class CfgWeapons
 		class FullAuto;
 		class Single;
 		class WeaponSlotsInfo
-		{
-		class CowsSlot;	
+			{
+			class CowsSlot;	
+			class MuzzleSlot;
+			class PointerSlot;
 		};
 	};
 	class macro_new_weapon(DC,15c):3AS_DC15C_F
@@ -72,13 +73,29 @@ class CfgWeapons
 				iconPinpoint = "Bottom";
 				iconPosition[] = {0.5,0.35};
 				iconScale = 0.2;
-				linkProxy = "\a3\data_f\proxies\weapon_slots\top";
+				linkProxy = "\a3\data_f\proxies\weapon_slots\TOP";
 				scope = 0;
 				compatibleItems[] = 
 				{
-					macro_new_weapon(scope,dc_15a_acog)
+					macro_new_weapon(scope,dc_15a_acogtcw)
 				};
-
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
+				displayName="$str_a3_cfgweapons_abr_base_f_weaponslotsinfo_muzzleslot0";
+				compatibleItems[]=
+				{
+					"RD501_muzzle_flash"
+				};
+				iconPicture="\A3\Weapons_F\Data\UI\attachment_muzzle.paa";
+				iconPinpoint="Center";
+			};
+			class PointerSlot : PointerSlot
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\SIDE";
+				displayName = "Pointer Slot";
+				compatibleItems[] = {"acc_flashlight","acc_pointer_IR"}; 
 			};
 		};
 	};

@@ -110,6 +110,8 @@ class cfgWeapons
 		class WeaponSlotsInfo
 		{
 			class CowsSlot;
+			class MuzzleSlot;
+			class PointerSlot;
 		};
 	};
 	class macro_new_weapon(DC,r15a):3AS_DC15A_F
@@ -151,6 +153,23 @@ class cfgWeapons
 					macro_new_weapon(scope,dc_r15a_acog)
 				};
 
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
+				displayName="$str_a3_cfgweapons_abr_base_f_weaponslotsinfo_muzzleslot0";
+				compatibleItems[]=
+				{
+					"RD501_muzzle_flash"
+				};
+				iconPicture="\A3\Weapons_F\Data\UI\attachment_muzzle.paa";
+				iconPinpoint="Center";
+			};
+			class PointerSlot : PointerSlot
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\SIDE";
+				displayName = "Pointer Slot";
+				compatibleItems[] = {"acc_flashlight","acc_pointer_IR"}; 
 			};
 		};
 	};

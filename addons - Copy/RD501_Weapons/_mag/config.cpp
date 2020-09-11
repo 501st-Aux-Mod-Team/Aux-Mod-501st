@@ -46,7 +46,7 @@ class CfgMagazines
 	};
 	class macro_new_mag(5mw,10) : 3AS_45Rnd_EC50_Mag
 	{
-		displayName="10 Round 5MW Cell";
+		displayName="15 Round 5MW Cell";
 		count = 15;
 		ammo=macro_new_ammo(5mw)
 		typicalSpeed=400;

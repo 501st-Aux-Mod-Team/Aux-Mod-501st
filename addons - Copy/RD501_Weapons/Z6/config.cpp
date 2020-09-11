@@ -108,6 +108,10 @@ class cfgWeapons
 	class JLTS_Z6:LMG_Mk200_F
 	{
 		class manual;
+		class WeaponSlotsInfo
+		{
+			class MuzzleSlot;
+		};
 	};
 	class macro_new_weapon_nofam(rZ6):JLTS_Z6
 	{
@@ -133,6 +137,21 @@ class cfgWeapons
 			reloadTime = Z6_burst_reload
 			burst = 25;
 			textureType = "fastAuto";
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass = 30;
+			class MuzzleSlot: MuzzleSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
+				displayName="$str_a3_cfgweapons_abr_base_f_weaponslotsinfo_muzzleslot0";
+				compatibleItems[]=
+				{
+					"RD501_muzzle_flash"
+				};
+				iconPicture="\A3\Weapons_F\Data\UI\attachment_muzzle.paa";
+				iconPinpoint="Center";
+			};
 		};
 		class HitEffects
 		{
