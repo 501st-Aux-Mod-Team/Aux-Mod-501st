@@ -33,7 +33,7 @@ class CfgWeapons
 		scopeInArsenal=2;
 		author="RD501";
 		displayName="Flash Hider Chip";
-		model="\A3\Weapons_F\Acc\acca_snds_lmg_blk_F.p3d";
+		model="";
 		picture="\RD501_Weapons\_acc\data\icon_flashhider.paa";
 		class ItemInfo: ItemInfo
 		{
@@ -73,4 +73,73 @@ class CfgWeapons
 		};
 		inertia=0.1;
 	};
+/////////////////////////////////////////////////////////////////
+////////////////////////////Optics///////////////////////////////
+/////////////////////////////////////////////////////////////////
+	class ItemCore;
+	class optic_Hamr:ItemCore
+	{
+		class ItemInfo;
+	};
+	class RD501_MRCO: optic_Hamr
+	{
+		author="RD501";
+		scope=2;
+		displayName="Testscope";
+		picture="\a3\Weapons_F\acc\Data\UI\icon_optic_MRCO_ca.paa";
+		model="RD501_Weapons\_acc\data\rd501_sr_01";
+		descriptionShort="$STR_A3_cfgWeapons_optic_Valdada1";
+		weaponInfoType="RscOptics_sos";
+		class ItemInfo: ItemInfo
+		{
+			mass=8;
+			opticType=1;
+			optics=1;
+			modelOptics="\A3\Weapons_F_Beta\acc\acco_hamr_f.p3d";
+			class OpticsModes
+			{
+				class Hamr2Collimator
+				{
+					opticsID=1;
+					useModelOptics=0;
+					opticsPPEffects[]=
+					{
+						"Default"
+					};
+					opticsFlare=0;
+					opticsDisablePeripherialVision=0;
+					opticsZoomMin=0.25;
+					opticsZoomMax=1.25;
+					opticsZoomInit=0.75;
+					memoryPointCamera="eye";
+					visionMode[]={};
+					distanceZoomMin=200;
+					distanceZoomMax=200;
+				};
+				class Hamr2Scope
+				{
+					opticsID=2;
+					useModelOptics=0;//0
+					opticsPPEffects[]=
+					{
+						"OpticsCHAbera5",
+						"OpticsBlur5"
+					};
+					opticsFlare=1;
+					opticsDisablePeripherialVision=1;//1
+					opticsZoomMin=0.125;
+					opticsZoomMax=0.125;
+					opticsZoomInit=0.125;
+					memoryPointCamera="opticView";
+					visionMode[]={};
+					distanceZoomMin=300;
+					distanceZoomMax=300;
+				};
+			};
+		};
+		inertia=0.1;
+	};
+////////////////////////////////////////////////////////////////////////////
+///////////////////////////Lights///////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
 };

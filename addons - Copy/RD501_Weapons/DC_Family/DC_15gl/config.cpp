@@ -84,7 +84,8 @@ class CfgWeapons
 				scope = 0;
 				compatibleItems[] = 
 				{
-					macro_new_weapon(scope,dc_15a_acog)
+					macro_new_weapon(scope,dc_15a_acog),
+					"RD501_MRCO"
 				};
 
 			};
@@ -103,7 +104,7 @@ class CfgWeapons
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\SIDE";
 				displayName = "Pointer Slot";
-				compatibleItems[] = {"acc_flashlight","acc_pointer_IR"}; 
+				compatibleItems[] = {"acc_flashlight","acc_pointer_IR","ace_acc_pointer_green"}; 
 			};
 		};
 	};
