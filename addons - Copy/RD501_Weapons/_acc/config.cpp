@@ -255,14 +255,14 @@ class CfgWeapons
 		scope=2;
 		displayName="DMS LR 6-12x Scope";
 		picture="\a3\Weapons_F\acc\Data\UI\icon_optic_DMS_ca.paa";
-		model="\A3\Weapons_F_EPA\Acc\acco_marksman_F.p3d";
+		model="RD501_Weapons\_acc\data\rd501_dms.p3d";
 		descriptionShort="$STR_A3_CFGWEAPONS_ACC_DMS1";
 		class ItemInfo: ItemInfo
 		{
 			mass=12;
 			opticType=2;
 			optics=1;
-			modelOptics="\A3\Weapons_f\acc\reticle_marksman_F";
+			modelOptics="RD501_Weapons\_acc\data\RD501_reticle_DMS";
 			class OpticsModes
 			{
 				class Snip
@@ -286,15 +286,14 @@ class CfgWeapons
 					memoryPointCamera="opticView";
 					modelOptics[]=
 					{
-						"\A3\Weapons_F_EPA\acc\reticle_marksman_F",
-						"\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"
+						"RD501_Weapons\_acc\data\RD501_reticle_DMS"
 					};
 					visionMode[]=
 					{
 						"Normal"
 					};
 					opticsFlare=1;
-					opticsDisablePeripherialVision=1;
+					opticsDisablePeripherialVision=0;
 					cameraDir="";
 				};
 				class Iron: Snip
@@ -311,7 +310,7 @@ class CfgWeapons
 					opticsZoomMin=0.25;
 					opticsZoomMax=1.25;
 					opticsZoomInit=0.75;
-					memoryPointCamera="eye";
+					memoryPointCamera="opticView";
 					visionMode[]={};
 					discretefov[]={};
 					distanceZoomMin=200;
