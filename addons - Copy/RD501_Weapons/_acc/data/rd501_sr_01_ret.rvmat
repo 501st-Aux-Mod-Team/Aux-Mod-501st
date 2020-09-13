@@ -7,8 +7,9 @@ specularPower=8;
 
 PixelShaderID="Collimator";
 VertexShaderID="Basic";
+RenderFlags[] = {"NoReceiveShadow", "AddBlend", "NoZwrite"};
 
     class Stage0
     {
-      uvSource="UVSet 0";
+      uvSource="tex";
     };

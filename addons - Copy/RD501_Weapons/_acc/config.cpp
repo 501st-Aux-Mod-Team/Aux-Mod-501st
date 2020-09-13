@@ -95,7 +95,7 @@ class CfgWeapons
 			mass=8;
 			opticType=1;
 			optics=1;
-			modelOptics="\A3\Weapons_F_Beta\acc\acco_hamr_f.p3d";
+			modelOptics="\RD501_Weapons\_acc\data\rd501_sr_01";
 			class OpticsModes
 			{
 				class Hamr2Collimator

@@ -11,5 +11,5 @@ RenderFlags[] = {"NoReceiveShadow", "AddBlend", "NoZwrite"};
 
     class Stage0
     {
-      uvSource="UVSet 0";
+      uvSource="tex";
     };
