@@ -87,7 +87,7 @@ class CfgWeapons
 		scope=2;
 		displayName="HAMR SR 2-4x Scope";
 		picture="\a3\Weapons_F\acc\Data\UI\icon_optic_MRCO_ca.paa";
-		model="RD501_Weapons\_acc\data\rd501_sr_01";
+		model="RD501_Weapons\_acc\data\rd501_base_top_and_bottom";
 		descriptionShort="$STR_A3_cfgWeapons_optic_Valdada1";
 		weaponInfoType="RscOptics_sos";
 		class ItemInfo: ItemInfo
@@ -95,7 +95,7 @@ class CfgWeapons
 			mass=8;
 			opticType=1;
 			optics=1;
-			modelOptics="\RD501_Weapons\_acc\data\rd501_sr_01_optic";
+			modelOptics="";
 			class OpticsModes
 			{
 				class Hamr2Collimator
@@ -111,7 +111,7 @@ class CfgWeapons
 					opticsZoomMin=0.25;
 					opticsZoomMax=1.25;
 					opticsZoomInit=0.75;
-					memoryPointCamera="opticView";
+					memoryPointCamera="eye";
 					visionMode[]={};
 					distanceZoomMin=200;
 					distanceZoomMax=200;
@@ -130,7 +130,7 @@ class CfgWeapons
 					opticsZoomMin=0.125;
 					opticsZoomMax=0.125;
 					opticsZoomInit=0.125;
-					memoryPointCamera="eye";
+					memoryPointCamera="opticView";
 					visionMode[]={};
 					distanceZoomMin=300;
 					distanceZoomMax=300;
