@@ -95,7 +95,7 @@ class CfgWeapons
 			mass=8;
 			opticType=1;
 			optics=1;
-			modelOptics="\RD501_Weapons\_acc\data\rd501_sr_01";
+			modelOptics="\RD501_Weapons\_acc\data\rd501_sr_01_optic";
 			class OpticsModes
 			{
 				class Hamr2Collimator
