@@ -85,7 +85,10 @@ class CfgWeapons
 				compatibleItems[] = 
 				{
 					macro_new_weapon(scope,dc_15a_acog),
-					"RD501_MRCO"
+					"RD501_RCO",
+					"RD501_MRCO",
+					"RD501_Holosight",
+					"RD501_DMS"
 				};
 
 			};
