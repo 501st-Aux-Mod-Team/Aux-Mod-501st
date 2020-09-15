@@ -4,7 +4,7 @@ LOG("Spawned Orbital Drop Droid Dispenser Logic");
 
 _logic = _this select 0;
 _units = _this select 1;
-_activated = _this seelct 2;
+_activated = _this select 2;
 
 if ({local _x} count (objectcurators _logic) > 0) then {
     //--- Reveal the circle to curators
