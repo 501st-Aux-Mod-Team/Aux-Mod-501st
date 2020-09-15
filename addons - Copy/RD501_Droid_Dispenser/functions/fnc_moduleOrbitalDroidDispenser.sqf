@@ -153,25 +153,17 @@ if (_activated) then {
 			LOGF_1("Firing Droid Dispenser Artillery at '%1'", _position);
 			_spawner = GVAR(spawnerDefaultObject) createVehicle _position;
 			LOGF_2("Created Droid Dispenser Object '%1' at '%2'", _spawner, _position);
-			[{
-				params["_unit"];
-				LOG("Adding to curators");
-				if(!isServer) exitWith 
-				{
-					LOG("Exiting Client Method Should only run on Server");
-				};
-				[_unit] call FUNC(droidDispenserInit);
-				{
-					_x addCuratorEditableObjects [[_unit], true];
-				} forEach allCurators;
-			}, [_spawner]] call CBA_fnc_execNextFrame;
+            [_spawner] call FUNC(droidDispenserInit);
+            {
+                _x addCuratorEditableObjects [[_spawner], true];
+            } forEach allCurators;
+
             if (count objectcurators _logic > 0) then {
                 //--- Delete curator spawned logic
                 if (_shakeStrength > 0) then {
                     if (_simulation == "shotsubmunitions") then {sleep 0.5;};
                     [[_shakeStrength,0.7,[position _logic,_shakeRadius]],"bis_fnc_shakeCuratorCamera"] call bis_fnc_mp;
                 };
-				
                 deletevehicle _logic;
             } else {
 
