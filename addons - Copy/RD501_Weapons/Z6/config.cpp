@@ -121,6 +121,7 @@ class cfgWeapons
 		recoil="recoil_lim"
 		baseWeapon=macro_new_weapon_nofam(rZ6)
         displayName="Republic Z6 Chaingun";
+		ACE_Overheating_JamChance = 0;
 		magazines[]=
 		{
 			macro_new_mag(10mw,400)

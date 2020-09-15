@@ -195,6 +195,7 @@ class cfgWeapons
 		reloadTime=0.66;
 		recoil="recoil_smg_01";
 		reloadAction="ReloadMagazine";
+		ACE_overheating_mrbs = 3000000000;
 		magazines[]=
 		{
 			macro_new_mag(5mw,60)

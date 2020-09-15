@@ -40,6 +40,7 @@ class CfgWeapons
 	{
 		displayName="Republic DC-15A UGL";
 		JLTS_hasElectronics=0;
+		ACE_Overheating_JamChance = 0;
 		magazines[]=
 		{
 			macro_new_mag(10mw,30)
@@ -84,19 +85,16 @@ class CfgWeapons
 				scope = 0;
 				compatibleItems[] = 
 				{
-					macro_new_weapon(scope,dc_15a_acog),
-					"RD501_RCO",
-					"RD501_RCO_2",
-					"RD501_RCO_3",
+					//macro_new_weapon(scope,dc_15a_acog),
+					//"RD501_RCO",
+					//"RD501_RCO_2",
+					//"RD501_RCO_3",
 					"RD501_MRCO",
 					"RD501_MRCO_2",
-					"RD501_MRCO_3",
-					"RD501_Holosight",
-					"RD501_Holosight_2",
-					"RD501_Holosight_3",
-					"RD501_DMS",
-					"RD501_DMS_2",
-					"RD501_DMS_3"
+					"RD501_MRCO_3"
+					//"RD501_Holosight",
+					//"RD501_Holosight_2",
+					//"RD501_Holosight_3"
 				};
 
 			};

@@ -333,15 +333,14 @@ class CfgWeapons
 						"OpticsCHAbera2",
 						"OpticsBlur3"
 					};
-					opticsZoomMin=0.0625;
-					opticsZoomMax=0.125;
-					opticsZoomInit=0.125;
-					discreteDistance[]={100,200,300,400,500,600,700,800,900,1000,1100,1200};
-					discreteDistanceInitIndex=1;
+					opticsZoomMin = scope_magnification(12);
+					opticsZoomMax = scope_magnification(6);
+					opticsZoomInit = scope_magnification(6);
+					discreteinitIndex = 0;
+					discretefov[] = {scope_magnification(6),scope_magnification(12)};
+					discreteDistanceInitIndex = 1;
 					distanceZoomMin=300;
 					distanceZoomMax=1200;
-					discretefov[]={0.125,0.0625};
-					discreteInitIndex=0;
 					memoryPointCamera="opticView";
 					visionMode[]=
 					{

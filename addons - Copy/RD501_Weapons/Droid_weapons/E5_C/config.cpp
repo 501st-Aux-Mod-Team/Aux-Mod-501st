@@ -19,7 +19,7 @@ class CfgPatches
 		weapons[]={
 			//macro_new_weapon(e5,c)
 			"SWOP_E5C",
-			macro_new_weapon(e5,C_aqua)
+			macro_new_weapon(e5,C)
 		};
 	};
 };
@@ -42,16 +42,16 @@ class cfgWeapons
 	
 	};
 
-	class macro_new_weapon(e5,C_aqua): SWOP_E5C
+	class macro_new_weapon(e5,C): SWOP_E5C
 	{
 		dlc = "rd501";
 		author = "RD501";
 		scope = 2;
-		displayname = "E5C-A Blaster Rifle";
+		displayname = "CIS E5C-A Blaster Rifle";
 		baseweapon = "E5C-A Blaster Rifle";
 		canShootInWater = 1;
-		//magazines[] = {"RD501_Aqua_E5_Mag","RD501_Aqua_E5_Mag","RD501_Aqua_E5_Mag","RD501_Aqua_E5_Mag","RD501_Aqua_E5_Mag","RD501_Aqua_E5_Mag","RD501_Aqua_E5_Mag"};
-		descriptionShort = "Submersible E5 Rifle";
+		magazines[] = {macro_new_mag(20mw,90)};
+		descriptionShort = "E5C Rifle";
 		selectionFireAnim = "muzzleFlash";
 		magazines[]={macro_new_mag(E5c_aqua,90)};
 		class GunParticles : GunParticles

@@ -39,7 +39,8 @@ class CfgWeapons
 	{
 		displayName="Republic DC-15C";
 		dispersion=0.00116;
-		
+		ACE_overheating_mrbs = 3000000000;
+		recoil="recoil_mxc";
 		magazines[]=
 		{
 			macro_new_mag(10mw,30)

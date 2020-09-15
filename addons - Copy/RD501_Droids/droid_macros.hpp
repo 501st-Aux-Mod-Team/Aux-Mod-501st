@@ -13,8 +13,8 @@
 #define macro_e5_mag "JLTS_E5_mag"
 #define macro_e5_mags _8(macro_e5_mag)
 
-#define macro_lmg "SWOP_E5C"
-#define macro_lmg_mag "SWOP_E5C_Mag"
+#define macro_lmg "RD501_e5_C"
+#define macro_lmg_mag "RD501_20mw_x90_mag"
 #define macro_lmg_mags _8(macro_lmg_mag)
 
 #define macro_at_heavy "JLTS_E60R_AT"
@@ -28,16 +28,16 @@
 #define macro_aa_mag "Titan_AA"
 #define macro_aa_mags _4(macro_aa_mag)
 
-#define macro_scattergun "swop_CISShotgun"
-#define macro_scattergun_mag "swop_CISShotgun_Mag"
+#define macro_scattergun "JLTS_DP23"
+#define macro_scattergun_mag "JLTS_DP23_mag"
 #define macro_scattergun_mags _5(macro_scattergun_mag)
 
-#define macro_marksman_rifle "JLTS_E5S"
-#define macro_marksman_rifle_mag "JLTS_E5S_mag"
+#define macro_marksman_rifle "RD501_e5_s"
+#define macro_marksman_rifle_mag "RD501_30mw_x15_mag"
 #define macro_marksman_rifle_mags _10(macro_marksman_rifle_mag)
 
-#define macro_spec_ops_gun "SWOP_E22"
-#define macro_spec_ops_gun_mag "SWOP_E22BlasterRifle_Mag"
+#define macro_spec_ops_gun "RD501_e_22"
+#define macro_spec_ops_gun_mag "JLTS_E5_mag"
 #define macro_spec_ops_gun_mags _6(macro_spec_ops_gun_mag)
 
 #define macro_bx_gun "SWOP_EE4BlasterRifle"
