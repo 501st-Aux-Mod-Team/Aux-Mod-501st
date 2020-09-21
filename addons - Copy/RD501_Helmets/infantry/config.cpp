@@ -159,6 +159,7 @@ class CfgWeapons
 	NEW_501_Inf_Helm_JLTS(Broad,Broad,Broad.paa)
 	NEW_501_Inf_Helm_JLTS(Jub,Jub,Jub.paa)
 	NEW_501_Inf_Helm_JLTS(Bridger,Bridger,Bridger.paa)
+	NEW_501_Inf_Helm_JLTS(Bacon,Bacon,Bacon.paa)
 	NEW_501_ARC_Helm_JLTS(Duke,Duke,Duke.paa)
 	NEW_501_ARC_Helm_JLTS(Bronson,Bronson,Bronson.paa)
 	NEW_501_ARC_Helm_JLTS(Rayne,Rayne,Rayne.paa)

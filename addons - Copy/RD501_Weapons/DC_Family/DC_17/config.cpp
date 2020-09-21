@@ -108,6 +108,10 @@ class cfgWeapons
 	class JLTS_DC17SA:hgun_P07_F
 	{
 		class Single;
+		class WeaponSlotsInfo
+		{
+			class CowsSlot;
+		};
 	};
 	class macro_new_weapon(DC,r17):JLTS_DC17SA
 	{
@@ -137,6 +141,26 @@ class cfgWeapons
 		class Single : Single
 		{
 			reloadTime=0.1;
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass = 30;
+			class CowsSlot: CowsSlot
+			{
+				displayName = "Optics Slot";
+				iconPicture = "\A3\Weapons_F\Data\UI\attachment_top.paa";
+				iconPinpoint = "Bottom";
+				iconPosition[] = {0.5,0.35};
+				iconScale = 0.2;
+				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				scope = 0;
+				access = 1;
+				compatibleItems[] = 
+				{
+					"RD501_pistol",
+					"RD501_pistol_2"
+				};
+			};
 		};
 	};
 	class macro_new_weapon(DC,r17a):JLTS_DC17SA
@@ -175,6 +199,26 @@ class cfgWeapons
 			aiDispersionCoefX=2;
 			soundBurst=0;
 			burst=3;
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass = 30;
+			class CowsSlot: CowsSlot
+			{				
+				displayName = "Optics Slot";
+				iconPicture = "\A3\Weapons_F\Data\UI\attachment_top.paa";
+				iconPinpoint = "Bottom";
+				iconPosition[] = {0.5,0.35};
+				iconScale = 0.2;
+				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				scope = 0;
+				access = 1;
+				compatibleItems[] = 
+				{
+					"RD501_pistol",
+					"RD501_pistol_2"
+				};
+			};
 		};
 	};
 	class macro_new_weapon(DC,17sig):JLTS_DC17SA

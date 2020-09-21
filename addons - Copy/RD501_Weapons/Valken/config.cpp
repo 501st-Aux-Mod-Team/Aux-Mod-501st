@@ -38,6 +38,7 @@ class CfgWeapons
 	{
 		displayName="Republic Valken 38X";
 		dispersion=0.00045;
+		ACE_Overheating_JamChance = 0;
 		magazines[]=
 		{
 			macro_new_mag(20mwdp,20),
@@ -86,6 +87,7 @@ class CfgWeapons
 	{
 		displayName="Republic Valken 38Y";
 		dispersion=0.00045;
+		ACE_Overheating_JamChance = 0;
 		magazines[]=
 		{
 			macro_new_mag(20mwdp,20),
@@ -102,10 +104,20 @@ class CfgWeapons
 			mass = 30;
 			class CowsSlot: CowsSlot
 			{
-				access = 1;
+				displayName = "Optics Slot";
+				iconPicture = "\A3\Weapons_F\Data\UI\attachment_top.paa";
+				iconPinpoint = "Bottom";
+				iconPosition[] = {0.5,0.35};
+				iconScale = 0.2;
+				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				scope = 0;
+				access=1;
 				compatibleItems[] = 
 				{
-					macro_new_weapon(scope,valken_6_12x)
+					"RD501_DMS",
+					"RD501_DMS_2",
+					"RD501_DMS_3",
+					"RD501_DMS_4"
 				};
 			};
 			class MuzzleSlot: MuzzleSlot

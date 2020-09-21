@@ -25,6 +25,7 @@ class CfgAmmo
 	class 3AS_EC60_BluePlasma;
 	class 3AS_EC70_BluePlasma;
 	class 3AS_EC80_BluePlasma;
+	class JLTS_bullet_carbine_red;
 	class G_40mm_HE;
 	class SWOP_BCCKtermimploder;
 	class SWOP_termDet;
@@ -74,6 +75,14 @@ class CfgAmmo
 		airFriction=0;
 		explosive = 0.4;
 	};
+	class macro_new_ammo(20mw_d) : JLTS_bullet_carbine_red
+	{
+		hit=12;
+		airLock=1;
+		typicalSpeed=700;
+		caliber=2.8;
+		airFriction=0;
+	};
 	class macro_new_ammo(20mwup) : 3AS_EC50_BluePlasma
 	{
 		hit=10;
@@ -102,6 +111,14 @@ class CfgAmmo
 		caliber=2.4;
 		airFriction=0;
 		explosive = 0.4;
+	};
+	class macro_new_ammo(30mw_d) : JLTS_bullet_carbine_red
+	{
+		hit=35;
+		airLock=1;
+		typicalSpeed=1000;
+		caliber=2.4;
+		airFriction=0;
 	};
 	class macro_new_ammo(40mw) : 3AS_EC70_BluePlasma
 	{

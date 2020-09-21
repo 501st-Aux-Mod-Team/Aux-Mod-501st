@@ -108,11 +108,27 @@ class CfgMagazines
 		typicalSpeed=800;
 		descriptionShort="Medium power box magazine";
 	};
+	class macro_new_mag(20mw,90) : 3AS_45Rnd_EC50_Mag
+	{
+		displayName="90 Round E5C Cell";
+		count = 90;
+		ammo=macro_new_ammo(20mw_d)
+		typicalSpeed=800;
+		descriptionShort="Medium power box magazine";
+	};
 	class macro_new_mag(30mw,10) : 3AS_45Rnd_EC50_Mag
 	{
 		displayName="10 Round 30MW Cell";
 		count = 10;
 		ammo=macro_new_ammo(30mw)
+		typicalSpeed=1000;
+		descriptionShort="High power magazine";
+	};
+	class macro_new_mag(30mw,15) : 3AS_45Rnd_EC50_Mag
+	{
+		displayName="15 Round E5S Cell";
+		count = 15;
+		ammo=macro_new_ammo(30mw_d)
 		typicalSpeed=1000;
 		descriptionShort="High power magazine";
 	};

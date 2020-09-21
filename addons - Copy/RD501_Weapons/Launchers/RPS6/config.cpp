@@ -35,6 +35,7 @@ class CfgWeapons
 		icon = "\RD501_Weapons\Launchers\RPS6\icon.paa";
 		picture = "\RD501_Weapons\Launchers\RPS6\icon.paa";
 		nameSound="aalauncher";
+		recoil="";
 		magazines[]=
 		{
 			macro_new_mag(RPS_AT,1),

@@ -42,6 +42,7 @@ class CfgWeapons
 		recoil="recoil_mmg_02";
 		deployedPivot="bipod";
 		dispersion=0.00145;
+		ACE_Overheating_mrbs = 450000;
 		magazines[]=
 		{
 			macro_new_mag(20mw,240)
