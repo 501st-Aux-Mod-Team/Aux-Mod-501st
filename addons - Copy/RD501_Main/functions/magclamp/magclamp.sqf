@@ -42,7 +42,6 @@ macro_grp_fnc_name(magclamp,handle_universal) = {
 };
 
 macro_grp_fnc_name(magclamp,handle_small_1_pressed) = {
-    systemChat "left clamp";
     if(isNull vehicle player) exitWith {};
     ["RD501_magclamp_small_1",
      "RD501_mc_attached_small_1",
@@ -51,7 +50,6 @@ macro_grp_fnc_name(magclamp,handle_small_1_pressed) = {
 };
 
 macro_grp_fnc_name(magclamp,handle_large_pressed) = {
-    systemChat "center clamp";
     if(isNull vehicle player) exitWith {};
     ["RD501_magclamp_large",
      "RD501_mc_attached_large",
@@ -60,7 +58,6 @@ macro_grp_fnc_name(magclamp,handle_large_pressed) = {
 };
 
 macro_grp_fnc_name(magclamp,handle_small_2_pressed) = {
-    systemChat "right clamp";
     if(isNull vehicle player) exitWith {};
     ["RD501_magclamp_small_2",
      "RD501_mc_attached_small_2",
@@ -69,7 +66,6 @@ macro_grp_fnc_name(magclamp,handle_small_2_pressed) = {
 };
 
 macro_grp_fnc_name(magclamp,handle_drop_all) = {
-    systemChat "drop all";
     if(isNull vehicle player) exitWith {};
     _vehicle = vehicle player;
     _attached = _vehicle getVariable["RD501_mc_attached_small_1",objNull];
