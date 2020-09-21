@@ -40,7 +40,7 @@ class CfgWeapons
 	{
 		displayName="Republic DC-15A UGL";
 		JLTS_hasElectronics=0;
-		ACE_Overheating_JamChance = 0;
+		ACE_Overheating_mrbs = 300000;
 		magazines[]=
 		{
 			macro_new_mag(10mw,30)

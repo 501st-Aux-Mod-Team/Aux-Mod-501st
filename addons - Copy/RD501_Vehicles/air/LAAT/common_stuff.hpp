@@ -1,9 +1,7 @@
-
-	class EventHandlers : DefaultEventhandlers 
+class EventHandlers : DefaultEventhandlers 
 	{
-		init = "_this execVM "RD501_Main\functions\autocrate\autocrate.sqf"; _this execVM "RD501_Main\functions\vehicle_lift\laat_lift_3.sqf";";
 		fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-		init = "[_this select 0] execVM 'RD501_Main\functions\autocrate\autocrate.sqf';";//[_this select 0] execVM 'RD501_Main\functions\vehicle_lift\laat_lift_3.sqf';";
+		init = "[_this select 0] execVM 'RD501_Main\functions\autocrate\autocrate.sqf';";
 	};
 	
 	faction = macro_republic_faction
@@ -220,132 +218,177 @@
 	//transport
 		class TransportWeapons
 		{
-			class _xx_SWOP_DC15AGL_RD501
-			{
-				weapon = macro_new_weapon(DC,15a);
-				count = 10;
-			};
-			class _xx_RD501_DC15_Carbine
-			{
-				weapon = macro_new_weapon(DC,15s);
-				count = 10;
-			};
-			class _xx_SWOP_DC15ABlasterRifle_mod1_RD501
-			{
-				weapon =  macro_new_weapon(DC,15a_LE);
-				count = 10;
-			};
-			class _xx_SWOP_DC15ABlasterRifle_mod0_RD501
-			{
-				weapon = macro_new_weapon(DC,15a_mod_0_rifle)
-				count = 10;
-			};
-			class _xx_SWOP_Z6Blaster
-			{
-				weapon = macro_new_weapon_nofam(Z6)
-				count = 10;
-			};
-			class _xx_RocketHH15Clone_RD501
-			{
-				weapon = macro_new_weapon(hh,15)
-				count = 10;
-			};
+			class _transport_dc15a
+{
+    weapon = macro_new_weapon(DC,15a)
+    count = 5;
+};
+class _transport_dc15s
+{
+    weapon = macro_new_weapon(DC,r15s)
+    count = 5;
+};
+class _transport_dc15c
+{
+    weapon = macro_new_weapon(DC,15c)
+    count = 5;
+};
+class _transport_dc15l
+{
+    weapon = macro_new_weapon(DC,15l)
+    count = 2;
+};
+class _transport_z6
+{
+    weapon = macro_new_weapon_nofam(rz6)
+    count = 2;
+};
+class _transport_dc15gl
+{
+    weapon = macro_new_weapon(DC,15gl)
+    count = 2;
+};
+class _transport_valken38x
+{
+    weapon = macro_new_weapon_nofam(valken38x)
+    count = 2;
+};
+class _transport_rps6
+{
+    weapon = macro_new_weapon(launcher,rps6)
+    count = 2;
+};
+class _transport_rps1
+{
+    weapon = macro_new_weapon(launcher,rps1)
+    count = 2;
+};
+class _transport_plx
+{
+    weapon = macro_new_weapon(Launcher,PLX1)
+    count = 1;
+};
+class _transport_z1000
+{
+    weapon = macro_new_weapon_nofam(z1000)
+    count = 1;
+};
+class _transport_dc15x
+{
+    weapon = macro_new_weapon(DC,r15x)
+    count = 1;
+};
+class _transport_rgl6
+{
+    weapon = macro_new_weapon_nofam(rgl6)
+    count = 1;
+};
 		};
 		class TransportMagazines
 		{
-			class _xx_SWOP_DC15ABlasterRifle_Full_Mag
-			{
-				magazine = macro_new_mag(DC15a_High,15)
-				count = 15;
-			};
-			class _xx_SWOP_DC15ABlasterRifle_Mag
-			{
-				magazine = macro_new_mag(DC15a_Med,30)
-				count = 20;
-			};
-			class _xx_SWOP_DC15ABlasterRifle_Low_Mag
-			{
-				magazine = macro_new_mag(DC15a_Low,60)
-				count = 20;
-			};
-			class _xx_DC15s_Carbine
-			{
-				magazine = macro_new_mag(DC15s,60)
-				count = 30;
-			};
-			class _xx_300Rnd_BlasterLaser_Belt
-			{
-				magazine = macro_new_mag(z6,400);
-				count = 5;
-			};
-			class _xx_RD501_DC15ABlasterRifleLE_Full_Mag
-			{
-				magazine = macro_new_mag(DC15a_LE,15)
-				count = 10;
-			};
-			class _xx_SWOP_DC15ABlasterRifle_Low_highcap_box_Mag
-			{
-				magazine = macro_new_mag(DC15a_box_mag,240);
-				count = 10;
-			};
-
-			class _xx_DCStun_Mag
-			{
-				magazine = "DCStun_Mag";
-				count = 15;
-			};
-
-			class _xx_ACE_HuntIR_M203
-			{
-				magazine = "ACE_HuntIR_M203";
-				count = 10;
-			};
-
-			class _xx_5Rnd_HE_Grenade_DC15A
-			{
-				magazine = macro_new_mag(HE_GL,3)
-				count = 10;
-			};
-			class _xx_1Rnd_AT_Grenade_DC15A
-			{
-				magazine = macro_new_mag(AT_GL,2)
-				count = 10;
-			};
-
-			
-			class _xx_RocketHH15CloneHEATFF_Mag_RD501
-			{
-				magazine = macro_new_mag(RPS_AT,1);
-				count = 10;
-			};
-			class _xx_RocketHH15CloneHEATFF_Mag_RD5012
-			{
-				magazine = macro_new_mag(RPS_AA,1)
-				count = 10;
-			};
-			class _xx_C12_Remote_Mag
-			{
-				magazine = "C12_Remote_Mag";
-				count = 2;
-			};
+			class transport_2mw30
+{
+	magazine = macro_new_mag(2mw,30);
+	count = 15;
+};
+class transport_5mw15
+{
+	magazine = macro_new_mag(5mw,10);
+	count = 15;
+};
+class transport_5mw60
+{
+	magazine = 	macro_new_mag(5mw,60)
+	count = 60;
+};
+class transport_10mw30
+{
+	magazine = macro_new_mag(10mw,30);
+	count = 60;
+};
+class transport_10mw400
+{
+	magazine = macro_new_mag(10mw,400);
+	count = 15;
+};
+class _transport_20mw20
+{
+	magazine = macro_new_mag(20mw,20);
+	count = 20;
+};
+class _transport_20mwup20
+{
+	magazine =  macro_new_mag(20mwup,20);
+	count = 40;
+};		
+class _transport_20mwdp20
+{
+	magazine = macro_new_mag(20mwdp,20);
+	count = 40;
+};		
+class _transport_20mw240
+{
+	magazine = macro_new_mag(20mw,240);
+	count = 20;
+};									
+class _transport_30mw10
+{
+	magazine = macro_new_mag(30mw,10);
+	count = 15;
+}
+class _transport_30mw7
+{
+	magazine = macro_new_mag(30mw,7)
+	count = 15;
+};
+class _transport_40mw5
+{
+	magazine = macro_new_mag(40mw,5)
+	count = 10;
+};
+class _transport_stun5
+{
+	magazine =  macro_new_mag(stun,5)
+	count = 20;
+};
+class _transport_launcher_AT_mags
+{
+	magazine =  macro_new_mag(RPS_AT,1)
+	count = 20;
+};
+class _transport_launcher_AA_mags
+{
+	magazine =  macro_new_mag(RPS_AA,1)
+	count = 20;
+};
+class _transport_he3
+{
+	magazine = macro_new_mag(UGL_HE,3);
+	count = 15;
+};
+class _transport_ap2
+{
+	magazine = macro_new_mag(UGL_AP,2);
+	count = 15;
+};		
+class _transport_emp1
+{
+	magazine = macro_new_mag(UGL_EMP,1);
+	count = 3;
+};			
+class _transport_HuntIR_M203
+{
+	magazine = "ACE_HuntIR_M203";
+	count = 15;
+};
+class _transport_C12_Remote_Mag
+{
+	magazine = "C12_Remote_Mag";
+	count = 2;
+};
 		};
 		class TransportItems
 		{
-			class _xx_swop_dc15a_zoomholoscope_rd501
-			{
-				name = macro_new_weapon(scope,dc_15a_acog);
-				count = 2;
-			};
-			class _xx_swop_dc15a_zoomscopex6range_rd501
-			{
-				name = macro_new_weapon(scope,dc_15a_x4_x8);
-				count = 2;
-			};
-			class _xx_swop_dc15a_zoomscope_rd501
-			{
-				name = macro_new_weapon(scope,dc_15a_x4);
-				count = 2;
-			};
 			class _xx_SW_SquadShield_Mag
 			{
 				name = "SW_SquadShield_Mag";

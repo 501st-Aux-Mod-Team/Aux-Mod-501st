@@ -116,7 +116,8 @@ class CfgWeapons
 				{
 					"RD501_DMS",
 					"RD501_DMS_2",
-					"RD501_DMS_3"
+					"RD501_DMS_3",
+					"RD501_DMS_4"
 				};
 			};
 			class MuzzleSlot: MuzzleSlot

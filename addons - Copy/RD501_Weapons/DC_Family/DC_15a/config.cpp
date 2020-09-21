@@ -114,11 +114,11 @@ class cfgWeapons
 			class PointerSlot;
 		};
 	};
-	class macro_new_weapon(DC,r15a):3AS_DC15A_F
+	class macro_new_weapon(DC,15a):3AS_DC15A_F
 	{
 		displayName="Republic DC-15A";
 		reloadTime=0.1;
-		ACE_overheating_mrbs = 3000000000;
+		ACE_Overheating_mrbs = 300000;
 		recoil="recoil_mx";
 		magazines[]=
 		{

@@ -399,6 +399,16 @@ class CfgWeapons
 			modelOptics="RD501_Weapons\_acc\data\RD501_scope3_DMS";
 		};
 	};
+	class RD501_DMS_4: RD501_DMS
+	{
+		picture="RD501_Weapons\_acc\data\rd501_ico_lr_03_ca.paa";
+		model="RD501_Weapons\_acc\data\rd501_dms_4.p3d";
+		displayName="DMS LR 6-12x Scope D";
+		class ItemInfo: ItemInfo
+		{
+			modelOptics="RD501_Weapons\_acc\data\RD501_scope4_DMS";
+		};
+	};
 	class optic_MRD:ItemCore
 	{
 		class ItemInfo;
