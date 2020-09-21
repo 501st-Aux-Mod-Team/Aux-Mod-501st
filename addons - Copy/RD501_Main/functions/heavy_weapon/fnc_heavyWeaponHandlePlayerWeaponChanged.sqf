@@ -23,7 +23,7 @@ private _fn_forceWalk = {
 	_target forceWalk true;
 };
 
-diag_log format["Weapon in array :: %1", (_weapon in RD501_FORCE_WALK_WEAPONS)];
+diag_log format["Weapon in force walk list :: %1", (_weapon in RD501_FORCE_WALK_WEAPONS)];
 if(_weapon in RD501_FORCE_WALK_WEAPONS) exitWith 
 {
 	if(!isForcedWalk _unit) then{
