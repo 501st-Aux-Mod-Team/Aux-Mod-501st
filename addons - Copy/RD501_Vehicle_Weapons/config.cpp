@@ -116,11 +116,12 @@ class CfgMagazines
 		count = 2;
 	};
 
-	class macro_new_mag(cluster_emp,4) : macro_new_mag(cluster_bomb,4)
+	class macro_new_mag(cluster_emp,2) : macro_new_mag(cluster_bomb,4)
 	{
 		ammo = macro_new_ammo(cluster_emp)
 		DisplayName = "Lightning EMP CB";
 		displayNameShort = "Lightning EMP CB";
+		count = 2;
 	};
 
 	class macro_new_mag(sdb_bomb,4) : PylonRack_Bomb_SDB_x4
