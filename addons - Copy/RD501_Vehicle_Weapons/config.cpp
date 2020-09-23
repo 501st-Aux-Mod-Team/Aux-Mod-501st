@@ -297,14 +297,12 @@ class CfgAmmo
 		DisplayName = "Lightning EMP CB";
 		displayNameShort  = "Lightning EMP CB";
 		muzzleEffect = "";
-		JLTS_isEMPAmmo=1;
 		tracerColor[] = {"blue"};
 		brightness = 20000;
 		lightColor[] = {0, 0, 1, 1};
 		triggerTime = 0.1;
-		hit = 0.1;
-		indirectHit = 0.01;
-		indirectHitRange = 6;
+		hit = 50;
+		indirectHitRange = 0;
 		submunitionAmmo[]=
 		{
 			macro_new_ammo(cluster_emp_sub),
