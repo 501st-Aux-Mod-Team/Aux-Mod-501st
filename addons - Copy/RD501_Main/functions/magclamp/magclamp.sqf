@@ -1,23 +1,24 @@
 #include "\a3\editor_f\Data\Scripts\dikCodes.h"
 #include "../../config_macros.hpp"
 
-
 macro_grp_fnc_name(magclamp,handle_universal) = {
     params ["_mc_pos", "_attached_var", "_forbid_param", "_offset_param"];
 
-    _vehicle = vehicle player;
-    if (isNull _vehicle) exitWith {};
-    _position = (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> _mc_pos) call BIS_fnc_getCfgDataArray;
+    if (isNull objectParent player) exitWith {};
+    private _vehicle = vehicle player;
+    if !((driver _vehicle) == player or (gunner _vehicle) == player) exitWith {};
+
+    private _position = (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> _mc_pos) call BIS_fnc_getCfgDataArray;
     if (count _position == 0) exitWith {};
-    _attached = _vehicle getVariable[_attached_var,objNull];
+    private _attached = _vehicle getVariable[_attached_var,objNull];
 
     if(isNull _attached) then {
-    	_objects = nearestObjects [player, ["Car","Tank","Motorcycle","StaticWeapon","Air","Ship","Object"], 20];
+    	private _objects = nearestObjects [player, ["Car","Tank","Motorcycle","StaticWeapon","Air","Ship","Object"], 20];
 
-    	_target_index = 0;
-	    _target = _objects select _target_index;
-	    _is_attached = _target getVariable["RD501_mc_is_attached",false];
-	    _cant_be_clamped = (configFile >> "CfgVehicles" >> (typeOf _target) >> _forbid_param) call BIS_fnc_getCfgDataBool;
+    	private _target_index = 0;
+	    private _target = _objects select _target_index;
+	    private _is_attached = _target getVariable["RD501_mc_is_attached",false];
+	    private _cant_be_clamped = (configFile >> "CfgVehicles" >> (typeOf _target) >> _forbid_param) call BIS_fnc_getCfgDataBool;
 
 	    while {_target isKindOf "Man" || isPlayer _target || _is_attached || _cant_be_clamped} do {
 	        _target_index = _target_index + 1;
@@ -26,7 +27,7 @@ macro_grp_fnc_name(magclamp,handle_universal) = {
 	        _cant_be_clamped = (configFile >> "CfgVehicles" >> (typeOf _target) >> _forbid_param) call BIS_fnc_getCfgDataBool;
         };
 
-	    _offset = (configFile >> "CfgVehicles" >> (typeOf _target) >> _offset_param) call BIS_fnc_getCfgDataArray;
+	    private _offset = (configFile >> "CfgVehicles" >> (typeOf _target) >> _offset_param) call BIS_fnc_getCfgDataArray;
 	    if (count _offset == 3) then {
 	        _position = [(_position select 0) + (_offset select 0), (_position select 1) + (_offset select 1), (_position select 2) + (_offset select 2)];
 	    };
@@ -42,7 +43,6 @@ macro_grp_fnc_name(magclamp,handle_universal) = {
 };
 
 macro_grp_fnc_name(magclamp,handle_small_1_pressed) = {
-    if(isNull vehicle player) exitWith {};
     ["RD501_magclamp_small_1",
      "RD501_mc_attached_small_1",
      "RD501_magclamp_small_forbidden",
@@ -50,7 +50,6 @@ macro_grp_fnc_name(magclamp,handle_small_1_pressed) = {
 };
 
 macro_grp_fnc_name(magclamp,handle_large_pressed) = {
-    if(isNull vehicle player) exitWith {};
     ["RD501_magclamp_large",
      "RD501_mc_attached_large",
      "RD501_magclamp_large_forbidden",
@@ -58,7 +57,6 @@ macro_grp_fnc_name(magclamp,handle_large_pressed) = {
 };
 
 macro_grp_fnc_name(magclamp,handle_small_2_pressed) = {
-    if(isNull vehicle player) exitWith {};
     ["RD501_magclamp_small_2",
      "RD501_mc_attached_small_2",
      "RD501_magclamp_small_forbidden",
@@ -66,9 +64,10 @@ macro_grp_fnc_name(magclamp,handle_small_2_pressed) = {
 };
 
 macro_grp_fnc_name(magclamp,handle_drop_all) = {
-    if(isNull vehicle player) exitWith {};
-    _vehicle = vehicle player;
-    _attached = _vehicle getVariable["RD501_mc_attached_small_1",objNull];
+    if (isNull objectParent player) exitWith {};
+    private _vehicle = vehicle player;
+    if !((driver _vehicle) == player or (gunner _vehicle) == player) exitWith {};
+    private _attached = _vehicle getVariable["RD501_mc_attached_small_1",objNull];
     if(isNull _attached) then {} else {
 	    detach _attached;
 	    _vehicle setVariable["RD501_mc_attached_small_1",objNull,true];
