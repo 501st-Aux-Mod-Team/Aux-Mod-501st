@@ -46,12 +46,12 @@ class CfgWeapons
 		};
 		class Single : Single
 		{
-			reloadTime=0.35;
+			reloadTime=0.24;
 			dispersion=0.00045;
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
-			mass = 30;
+			mass = 80;
 			class CowsSlot: CowsSlot
 			{
 				access = 1;
@@ -96,12 +96,12 @@ class CfgWeapons
 		muzzles[]={"this"};
 		class Single : Single
 		{
-			reloadTime=0.35;
+			reloadTime=0.24;
 			dispersion=0.00045;
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
-			mass = 30;
+			mass = 80;
 			class CowsSlot: CowsSlot
 			{
 				displayName = "Optics Slot";

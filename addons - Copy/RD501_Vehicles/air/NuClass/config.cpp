@@ -35,9 +35,35 @@ class CfgVehicles
 	{
 		scope=2;
 		displayName="Republic NuClass Mk.I"
+		armor=1300;
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat_air(Republic_heli)
 		vehicleClass = macro_editor_vehicle_type_air(Republic)
+		weapons[]=
+		{
+			"ParticleBeamCannon_Nu",
+			"CMFlareLauncher",
+			"missiles_DAR",
+			macro_new_weapon(generic,kannon),
+			"Laserdesignator_pilotCamera"
+		};
+		magazines[]=
+		{
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"240Rnd_CMFlare_Chaff_Magazine",
+			"Laser_Battery_F",
+			"Laser_Battery_F",
+			"Laser_Battery_F",
+			"24Rnd_missiles",
+			"24Rnd_missiles",
+			"24Rnd_missiles",
+			"24Rnd_missiles",
+			macro_new_mag(Kannon,100),
+			macro_new_mag(Kannon,100),
+			"Laserbatteries"
+		};
 		class UserActions:UserActions
 		{
 			#include "user_action.hpp"

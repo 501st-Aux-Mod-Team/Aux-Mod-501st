@@ -31,6 +31,7 @@ class CfgMagazines
 	class macro_new_mag(2mw,30) : 3AS_45Rnd_EC50_Mag
 	{
 		displayName="30 Round 2MW Cell";
+		picture="\RD501_Weapons\_mag\data\rd501_icon_mag_dc17a.paa";
 		count = 30;
 		ammo=macro_new_ammo(2mw)
 		typicalSpeed=400;
@@ -38,8 +39,9 @@ class CfgMagazines
 	};
 	class macro_new_mag(5mw,60) : 3AS_45Rnd_EC50_Mag
 	{
-		displayName="60 Round 5MW Cell";
-		count = 60;
+		displayName="75 Round 5MW Cell";
+		picture="\RD501_Weapons\_mag\data\rd501_icon_mag_dc15s.paa";
+		count = 75;
 		ammo=macro_new_ammo(5mw)
 		typicalSpeed=400;
 		descriptionShort="Low power magazine";
@@ -47,6 +49,7 @@ class CfgMagazines
 	class macro_new_mag(5mw,10) : 3AS_45Rnd_EC50_Mag
 	{
 		displayName="15 Round 5MW Cell";
+		picture="\RD501_Weapons\_mag\data\rd501_icon_mag_dc17.paa";
 		count = 15;
 		ammo=macro_new_ammo(5mw)
 		typicalSpeed=400;
@@ -54,16 +57,18 @@ class CfgMagazines
 	};
 	class macro_new_mag(10mw,30) : 3AS_45Rnd_EC50_Mag
 	{
-		displayName="30 Round 10MW Cell";
-		count = 30;
+		displayName="40 Round 10MW Cell";
+		picture="\RD501_Weapons\_mag\data\rd501_icon_mag_dc15c.paa";
+		count = 40;
 		ammo=macro_new_ammo(10mw)
 		typicalSpeed=450;
 		descriptionShort="Medium power magazine";
 	};
 	class macro_new_mag(10mws,30) : 3AS_45Rnd_EC50_Mag
 	{
-		displayName="30 Round 10MW Stealth Cell";
-		count = 30;
+		displayName="40 Round 10MW Stealth Cell";
+		picture="\RD501_Weapons\_mag\data\rd501_icon_mag_dc15c.paa";
+		count = 40;
 		ammo=macro_new_ammo(10mws)
 		typicalSpeed=450;
 		descriptionShort="Medium power magazine";
@@ -71,6 +76,7 @@ class CfgMagazines
 	class macro_new_mag(10mw,400) : 3AS_45Rnd_EC50_Mag
 	{
 		displayName="400 Round 10MW Cell";
+		picture="\RD501_Weapons\_mag\data\rd501_icon_mag_z6.paa";
 		count = 400;
 		ammo=macro_new_ammo(10mw)
 		typicalSpeed=450;
@@ -86,16 +92,18 @@ class CfgMagazines
 	};
 	class macro_new_mag(20mwup,20) : 3AS_45Rnd_EC50_Mag
 	{
-		displayName="20 Round 20MW UP Cell";
-		count = 20;
+		displayName="25 Round 20MW UP Cell";
+		picture="\RD501_Weapons\_mag\data\rd501_icon_mag_dc15a_up.paa";
+		count = 25;
 		ammo=macro_new_ammo(20mwup)
 		typicalSpeed=500;
 		descriptionShort="Medium power unstable plasma magazine";
 	};
 	class macro_new_mag(20mwdp,20) : 3AS_45Rnd_EC50_Mag
 	{
-		displayName="20 Round 20MW DP Cell";
-		count = 20;
+		displayName="25 Round 20MW DP Cell";
+		picture="\RD501_Weapons\_mag\data\rd501_icon_mag_dc15a_dp.paa";
+		count = 25;
 		ammo=macro_new_ammo(20mwdp)
 		typicalSpeed=700;
 		descriptionShort="Medium power dense plasma magazine";
@@ -103,6 +111,7 @@ class CfgMagazines
 	class macro_new_mag(20mw,240) : 3AS_45Rnd_EC50_Mag
 	{
 		displayName="240 Round 20MW Cell";
+		picture="\RD501_Weapons\_mag\data\rd501_icon_mag_dc15l.paa";
 		count = 240;
 		ammo=macro_new_ammo(20mw)
 		typicalSpeed=800;
@@ -119,6 +128,7 @@ class CfgMagazines
 	class macro_new_mag(30mw,10) : 3AS_45Rnd_EC50_Mag
 	{
 		displayName="10 Round 30MW Cell";
+		picture="\RD501_Weapons\_mag\data\rd501_icon_mag_valken38.paa";
 		count = 10;
 		ammo=macro_new_ammo(30mw)
 		typicalSpeed=1000;
@@ -178,7 +188,7 @@ class CfgMagazines
 		descriptionShort = "5 Round Stun Cell";
 		displayNameShort = "5 Round Stun Cell";
 		count=5;
-		picture="\MRC\JLTS\weapons\Core\data\ui\stun_mag_ui_ca.paa";
+		picture="\MRC\JLTS\weapons\Core\data\ui\stun_mag_ui_ca";
 	};
 	////////////////////////////////////////////////////
 	/////////Grenade Launcher Magazines/////////////////
