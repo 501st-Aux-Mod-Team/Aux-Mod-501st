@@ -197,6 +197,7 @@ class CfgVehicles
 			macro_new_weapon(bomb,SDB),
 			macro_new_weapon(bomb,LGB),
 			macro_new_weapon(bomb,cluster),
+			macro_new_weapon(bomb,cluster_emp),
 			macro_new_weapon(bomb,carpet_I)
 		};
 		magazines[] = {
@@ -219,6 +220,7 @@ class CfgVehicles
 			macro_new_mag(cluster_bomb,4),
 			macro_new_mag(cluster_bomb,4),
 		 	macro_new_mag(cluster_bomb,4),
+		 	macro_new_mag(cluster_emp,2),
 			macro_new_mag(sdb_bomb,4),
 			macro_new_mag(sdb_bomb,4),
 			macro_new_mag(sdb_bomb,4),
@@ -1120,6 +1122,7 @@ class CfgVehicles
 			macro_new_weapon(wynd,agm),
 			macro_new_weapon(wynd,ugm),
 			macro_new_weapon(bomb,cluster),
+			macro_new_weapon(bomb,cluster_emp),
 			macro_new_weapon(bomb,SDB),
 			macro_new_weapon(bomb,LGB),
 		};
@@ -1137,6 +1140,7 @@ class CfgVehicles
 			macro_new_mag(cluster_bomb,4),
 			macro_new_mag(cluster_bomb,4),
 			macro_new_mag(cluster_bomb,4),
+			macro_new_mag(cluster_emp,2),
 			macro_new_mag(sdb_bomb,4),
 			macro_new_mag(sdb_bomb,4),
 			macro_new_mag(sdb_bomb,4),

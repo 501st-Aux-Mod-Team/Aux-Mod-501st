@@ -108,13 +108,22 @@ class CfgMagazines
 		ammo = macro_new_ammo(cluster_bomb)
 		count = 4;
 		DisplayName = "Thunderstorm CB";
-		displayNameShort  = "Thunderstorm CB";
+		displayNameShort = "Thunderstorm CB";
 		tracersEvery=1;
 	};
 	class macro_new_mag(cluster_bomb,2) : macro_new_mag(cluster_bomb,4)
 	{
 		count = 2;
 	};
+
+	class macro_new_mag(cluster_emp,2) : macro_new_mag(cluster_bomb,4)
+	{
+		ammo = macro_new_ammo(cluster_emp)
+		DisplayName = "Lightning EMP CB";
+		displayNameShort = "Lightning EMP CB";
+		count = 2;
+	};
+
 	class macro_new_mag(sdb_bomb,4) : PylonRack_Bomb_SDB_x4
 	{
 		ammo = macro_new_ammo(sdb_bomb)
@@ -260,6 +269,51 @@ class CfgAmmo
 		hit = 650;
 		indirectHit =325;
 		indirectHitRange = 6;
+	};
+
+	class Mo_cluster_Bomb_02_F;
+	class macro_new_ammo(cluster_emp_sub): Mo_cluster_Bomb_02_F
+	{
+		hit = 0.1;
+		indirectHit = 0.01;
+		indirectHitRange=40;
+		JLTS_isEMPAmmo=1;
+		explosionEffects="JLTS_fx_exp_EMP";
+		SoundSetExplosion[]=
+		{
+			"JLTS_GrenadeEMP_Exp_SoundSet",
+			"JLTS_GrenadeEMP_Tail_SoundSet",
+			"Explosion_Debris_SoundSet"
+		};
+		class CamShakeExplode
+		{
+			distance=10;
+			duration=1;
+			frequency=20;
+			power=0;
+		};
+	};
+	class macro_new_ammo(cluster_emp) : BombCluster_02_Ammo_F
+	{
+		DisplayName = "Lightning EMP CB";
+		displayNameShort  = "Lightning EMP CB";
+		muzzleEffect = "";
+		tracerColor[] = {"blue"};
+		brightness = 20000;
+		lightColor[] = {0, 0, 1, 1};
+		triggerTime = 0.1;
+		hit = 50;
+		indirectHitRange = 0;
+		submunitionAmmo[]=
+		{
+			macro_new_ammo(cluster_emp_sub),
+			1.0
+		};
+		submunitionConeType[]=
+		{
+			"randomcenter",
+			45
+		};
 	};
 	class macro_new_ammo(sdb_bomb) : ammo_Bomb_SDB
 	{

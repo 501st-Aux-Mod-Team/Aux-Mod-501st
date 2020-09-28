@@ -17,9 +17,9 @@ class CfgPatches
 		units[]={};
 		weapons[]={
 			macro_new_weapon(bomb,cluster),
+			macro_new_weapon(bomb,cluster_emp),
 			macro_new_weapon(bomb,SDB),
 			macro_new_weapon(bomb,LGB)
-			
 		};
 	};
 };
@@ -38,6 +38,10 @@ class CfgWeapons
 		displayNameShort  = "Rayne System";
 		salvo = 4;
 		magazineReloadTime = 5;
+	};
+	class macro_new_weapon(bomb,cluster_emp): macro_new_weapon(bomb,cluster)
+	{
+		magazines[] = {macro_new_mag(cluster_emp,4)};
 	};
 	class macro_new_weapon(bomb,SDB) : weapon_SDBLauncher //RD501_Bomb_SDB_Launcher
 	{

@@ -24,7 +24,7 @@ params["_target", "_shooter", "_ammo","_projectile"];
 if ((getText(configFile >> "CfgAmmo" >> _ammo >> "simulation") != "shotBullet") && ((_projectile distance _target) > getNumber(configFile >> "CfgAmmo" >> _ammo >> "indirectHitRange"))) exitWith {/*systemChat "Out of range"*/}; 
 
 private _weaponsTarget = weapons _target;
-private _fryOnEMP = false;
+_fryOnEMP = false;
 
 if (_target getVariable["JLTS_EMPCooldown",CBA_missionTime - 1] < CBA_missionTime) then {
 
@@ -129,12 +129,12 @@ if (_target getVariable["JLTS_EMPCooldown",CBA_missionTime - 1] < CBA_missionTim
 
 	if (_toFry) then {
 		
-		[_target] spawn {
+		[_target, _fryOnEMP] spawn {
 			private _timeOfHit = CBA_missionTime;
 			private _useDefaultSounds = missionNamespace getVariable["JLTS_emp_useDefaultSounds",true];
 
 			
-			params ["_target"];
+			params ["_target", "_fryOnEMP"];
 			private _uniform = uniform _target;
 			_target stop true;
 
