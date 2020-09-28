@@ -175,13 +175,6 @@ class Extended_Init_EventHandlers
             init = [_this select 0] spawn macro_fnc_name(aatInit);
         }
     };
-	class macro_new_vehicle(laat,cargo_Mk2)
-	{
-		class laatc_lift
-		{
-			init = [_this select 0] spawn macro_fnc_name(vehicle_lift);
-		};
-	};
 
     #include "_init_functions/cis_aircraft_turrets.hpp"
 
