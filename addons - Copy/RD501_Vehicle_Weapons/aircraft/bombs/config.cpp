@@ -41,7 +41,7 @@ class CfgWeapons
 	};
 	class macro_new_weapon(bomb,cluster_emp): macro_new_weapon(bomb,cluster)
 	{
-		magazines[] = {macro_new_mag(cluster_emp,4)};
+		magazines[] = {macro_new_mag(cluster_emp,2)};
 	};
 	class macro_new_weapon(bomb,SDB) : weapon_SDBLauncher //RD501_Bomb_SDB_Launcher
 	{
