@@ -62,7 +62,10 @@ class CfgPatches
 			macro_new_vehicle(AAT,Medium_urban_MkII),
 			macro_new_vehicle(AAT,Medium_snow_MkII),
 			macro_new_vehicle(AAT,King_red_MkII),
-			macro_new_vehicle(AAT,King_green_MkII)
+			macro_new_vehicle(AAT,King_green_MkII),
+			macro_new_vehicle(AAT,Light_MkIII),
+			macro_new_vehicle(AAT,Medium_MkIII),
+			macro_new_vehicle(AAT,King_MkIII)
 		};
 		weapons[]=
 		{
@@ -107,9 +110,7 @@ class CfgVehicles
 						weapons[] = {"Cannon_AAT_mc"};
 						magazines[] = {"100Rnd_Laser_Cannon_AAT_m", "100Rnd_Laser_Cannon_AAT_m", "100Rnd_Laser_Cannon_AAT_m"};
 						macro_enable_rotation
-					};
-					
-							
+					};	
 				};
 				maxHorizontalRotSpeed = 1.2*2;
 				maxVerticalRotSpeed = 1.2*2;
@@ -126,6 +127,7 @@ class CfgVehicles
 		};
 		class EventHandlers :DefaultEventhandlers {};
 	};
+	
 
 	class macro_new_vehicle(AAT,Medium_MkII):O_SWOP_AAT_1
 	{
@@ -241,5 +243,261 @@ class CfgVehicles
 
 	macro_new_king_aat(macro_new_vehicle(AAT,King_red_MkII),"King (Red Bull) AAT MKII",king_AAT\red\king_AAT_body.paa,king_AAT\red\king_AAT_gun.paa)
 	macro_new_king_aat(macro_new_vehicle(AAT,King_green_MkII),"King (Green Bean) AAT MKII",king_AAT\green\king_AAT_body.paa,king_AAT\green\king_AAT_gun.paa)
+
+
+// 3AS AATs
+class LandVehicle;
+	class Tank: LandVehicle
+	{
+		class NewTurret;
+		class Sounds;
+		class HitPoints;
+	};
+
+	class Tank_F: Tank
+	{
+		class Turrets
+		{
+			class MainTurret: NewTurret
+			{
+				class ViewGunner;
+				class Turrets
+				{
+					class CommanderOptics;
+				};
+			};
+		};
+	};
+
+	class 3AS_AAT_base_F : Tank_F {
+		class Turrets : Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				class ViewGunner : ViewGunner {};
+				class Turrets : Turrets
+				{
+					class CommanderOptics : CommanderOptics {};
+				};
+			};
+		};
+	};
+	class 3AS_CIS_AAT_base_F : 3AS_AAT_base_F {
+		class Turrets : Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				class ViewGunner : ViewGunner {};
+				class Turrets : Turrets
+				{
+					class CommanderOptics : CommanderOptics {};
+				};
+			};
+		};
+	};
+	class 3AS_CIS_AAT_F : 3AS_CIS_AAT_base_F {
+		class Turrets : Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				class ViewGunner : ViewGunner {};
+				class Turrets : Turrets
+				{
+					class CommanderOptics : CommanderOptics {};
+				};
+			};
+		};
+	};
+
+	class 3AS_AAT : 3AS_CIS_AAT_F {
+		class Turrets : Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				class ViewGunner : ViewGunner {};
+				class Turrets : Turrets
+				{
+					class CommanderOptics : CommanderOptics {};
+				};
+			};
+		};
+	};
+
+	class 3AS_AAT_snow : 3AS_AAT {
+		class Turrets : Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				class ViewGunner : ViewGunner {};
+				class Turrets : Turrets
+				{
+					class CommanderOptics : CommanderOptics {};
+				};
+			};
+		};
+	};
+
+	class 3AS_AAT_tan : 3AS_AAT {
+		class Turrets : Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				class ViewGunner : ViewGunner {};
+				class Turrets : Turrets
+				{
+					class CommanderOptics : CommanderOptics {};
+				};
+			};
+		};
+	};
+
+	class 3AS_AAT_urban : 3AS_AAT {
+		class Turrets : Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				class ViewGunner : ViewGunner {};
+				class Turrets : Turrets
+				{
+					class CommanderOptics : CommanderOptics {};
+				};
+			};
+		};
+	};
+
+	class macro_new_vehicle(AAT,Light_MkIII) : 3AS_AAT_tan {
+
+		scope=2
+		armor = 800;
+		forceInGarage = 1;
+		displayName="Light AAT Mk.III";
+
+		faction = macro_cis_faction
+		editorSubcategory = macro_editor_cat(tank)
+		vehicleClass = macro_editor_vehicle_type(tank)
+		
+		crew=macro_new_unit_class(opfor,B1_crew)
+		class Turrets:Turrets
+		{
+			class MainTurret:MainTurret
+			{
+				class Turrets:Turrets
+				{
+					class CommanderOptics:CommanderOptics
+					{
+						weapons[] = {"Cannon_AAT_mc"};
+						magazines[] = {"100Rnd_Laser_Cannon_AAT_m", "100Rnd_Laser_Cannon_AAT_m", "100Rnd_Laser_Cannon_AAT_m"};
+						macro_enable_rotation
+					};
+				};
+				maxHorizontalRotSpeed = 1.2*2;
+				maxVerticalRotSpeed = 1.2*2;
+				weapons[] = {"Cannon_EWEBSWBFgun"};
+				magazines[] = 
+				{
+					 "1000Rnd_Laser_Cannon_EWEBSWBF",
+					 "1000Rnd_Laser_Cannon_EWEBSWBF",
+					 "1000Rnd_Laser_Cannon_EWEBSWBF",
+					 "1000Rnd_Laser_Cannon_EWEBSWBF"
+				};
+				
+			};
+		};
+	};
+
+	class macro_new_vehicle(AAT,Medium_MkIII) : 3AS_AAT_snow {
+
+		scope=2
+		forceInGarage = 1;
+		displayName="Medium AAT Mk.III";
+		armor = 2000;
+		maxSpeed = 75;
+
+		faction = macro_cis_faction
+		editorSubcategory = macro_editor_cat(tank)
+		vehicleClass = macro_editor_vehicle_type(tank)
+
+		crew=macro_new_unit_class(opfor,B1_crew)
+		class Turrets:Turrets
+		{
+			class MainTurret:MainTurret
+			{
+				class Turrets:Turrets
+				{
+					//commanders guns,the side ones
+					class CommanderOptics:CommanderOptics
+					{
+						weapons[] = {"Cannon_ITTLaser"};
+						magazines[] = {"10000Rnd_ITTLaser_Cannon_Minigun","10000Rnd_ITTLaser_Cannon_Minigun"};
+						macro_enable_rotation	
+					};
+					
+				};
+				//main turret guns
+				weapons[] = {
+					macro_new_weapon(aat_cannon,mbt),
+					"Cannon_ITTLaser"
+				};
+				magazines[] = 
+				{
+					macro_new_mag(aat_mbt,50),
+					macro_new_mag(aat_mbt,50),
+					macro_new_mag(aat_mbt,50),
+					macro_new_mag(aat_mbt,50),
+					"10000Rnd_ITTLaser_Cannon_Minigun"
+				};
+				maxHorizontalRotSpeed = 1.2;
+				maxVerticalRotSpeed = 1.2;
+				
+			};
+		};
+	};
+
+	class macro_new_vehicle(AAT,King_MkIII) : 3AS_AAT_urban {
+
+		scope=2
+		forceInGarage = 1;
+		displayName="King AAT Mk.III";
+		armor = 4000;
+		maxSpeed = 30;
+
+		crew=macro_new_unit_class(opfor,B1_crew)
+
+		faction = macro_cis_faction
+		editorSubcategory = macro_editor_cat(tank)
+		vehicleClass = macro_editor_vehicle_type(tank)
+		class Turrets:Turrets
+		{
+			class MainTurret:MainTurret
+			{
+				class Turrets:Turrets
+				{
+					class CommanderOptics:CommanderOptics
+					{
+						maxHorizontalRotSpeed = .1;//1.8
+						maxVerticalRotSpeed = .1;//1.8
+						macro_enable_rotation
+						weapons[] = {"Cannon_AAT_mc","Cannon_ATST"};
+						magazines[] = {"1000Rnd_Laser_Cannon_Minigun","1000Rnd_Laser_Cannon_Minigun","100Rnd_Laser_Cannon_AAT_m", "100Rnd_Laser_Cannon_AAT_m", "100Rnd_Laser_Cannon_AAT_m"};
+						
+					};
+					
+				};
+
+				maxHorizontalRotSpeed = 1.2/3;
+				maxVerticalRotSpeed = 1.2/3;
+				weapons[] = {
+					macro_new_weapon(aat_cannon,king),
+					"Cannon_EWEBSWBFgun"
+				};
+				magazines[] = {
+					"1000Rnd_Laser_Cannon_EWEBSWBF",
+					macro_new_mag(aat_mbt,10),
+					macro_new_mag(aat_mbt,10),
+					macro_new_mag(aat_mbt,10)
+				};
+			};
+		};
+	};
 
 };
