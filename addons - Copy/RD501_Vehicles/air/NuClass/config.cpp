@@ -68,5 +68,15 @@ class CfgVehicles
 		{
 			#include "user_action.hpp"
 		};	
+		class ACE_SelfActions
+		{
+			class ACE_Passengers
+			{
+				condition = "alive _target";
+				displayName = "Passengers";
+				insertChildren = "_this call ace_interaction_fnc_addPassengersActions";
+				statement = "";
+			};
+		};
 	};
 };
