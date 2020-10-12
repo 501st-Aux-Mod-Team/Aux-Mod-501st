@@ -43,6 +43,12 @@ class CfgPatches
 		requiredVersion=0.1;
 		units[]=
 		{
+			macro_new_vehicle(laat,Mk1),
+			macro_new_vehicle(laat,Mk1_lights),
+			macro_new_vehicle(laat,Mk2),
+			macro_new_vehicle(laat,Mk2_lights),
+
+
 			macro_new_vehicle(laat,Mk3),
 			macro_new_vehicle(laat,Mk4),
 			macro_new_vehicle(laat,mk4_skin),
@@ -66,8 +72,161 @@ class CfgPatches
 class DefaultEventhandlers; 
 class CfgVehicles
 {
-	
+
 	#include "inheritance.hpp"
+
+	class macro_new_vehicle(laat,Mk1):3as_LAAT_Mk1
+	{
+		displayName="LAAT/I MK.I";
+		transportSoldier=28;
+
+		#include "common_stuff_tcw.hpp"
+
+		RD501_magclamp_small_1[] = {0.0,1.0,-1.0};
+
+		class UserActions: UserActions
+		{
+			#include "user_action.hpp"
+		};
+
+		hiddenSelectionsTextures[]=
+		{
+			"RD501_Vehicles\textures\LAAT\laat_wings_doors_basecolor.paa",
+			"RD501_Vehicles\textures\LAAT\laat_base_basecolor.paa"
+		};
+
+		class Turrets: Turrets
+		{
+			class Gunner: Copilot
+			{
+				minelev=-60;
+				minturn=-240;
+				maxelev=40;
+				maxturn=-120;
+			};
+			class LeftDoorgun: LeftDoorgun
+			{
+				#include "ball_turret_weapons.hpp"
+			};
+			class RightDoorGun: RightDoorGun
+			{
+				#include "ball_turret_weapons.hpp"
+			};
+			class CargoTurret_01: CargoTurret_01{};
+			class CargoTurret_02: CargoTurret_02{};
+			class CargoTurret_03: CargoTurret_03{};
+			class CargoTurret_04: CargoTurret_04{};
+			class CargoTurret_05: CargoTurret_05{};
+			class CargoTurret_06: CargoTurret_06{};
+		};
+	};
+	class macro_new_vehicle(laat,Mk1_lights):3as_LAAT_Mk3
+	{
+		displayName="LAAT/I MK.I (Lights)";
+		transportSoldier=28;
+
+		#include "common_stuff_tcw.hpp"
+
+		RD501_magclamp_small_1[] = {0.0,1.0,-1.0};
+
+		class UserActions: UserActions
+		{
+			#include "user_action.hpp"
+		};
+
+		hiddenSelectionsTextures[]=
+		{
+			"RD501_Vehicles\textures\LAAT\laat_wings_doors_basecolor.paa",
+			"RD501_Vehicles\textures\LAAT\laat_base_basecolor.paa"
+		};
+
+		class Turrets: Turrets
+		{
+			class Gunner: Copilot
+			{
+				minelev=-60;
+				minturn=-240;
+				maxelev=40;
+				maxturn=-120;
+			};
+			class CargoTurret_01: CargoTurret_01{};
+			class CargoTurret_02: CargoTurret_02{};
+			class CargoTurret_03: CargoTurret_03{};
+			class CargoTurret_04: CargoTurret_04{};
+			class CargoTurret_05: CargoTurret_05{};
+			class CargoTurret_06: CargoTurret_06{};
+		};
+	};
+
+	class macro_new_vehicle(laat,Mk2):3as_LAAT_Mk2
+	{
+		displayName="LAAT/I MK.II";
+		transportSoldier=28;
+
+		#include "common_stuff_tcw.hpp"
+
+		RD501_magclamp_small_1[] = {0.0,1.0,-1.0};
+
+		class UserActions: UserActions
+		{
+		#include "user_action.hpp"
+		};
+
+		hiddenSelectionsTextures[]=
+		{
+			"RD501_Vehicles\textures\LAAT\laat_wings_doors_basecolor.paa",
+			"RD501_Vehicles\textures\LAAT\laat_base_basecolor.paa"
+		};
+
+		class Turrets: Turrets
+		{
+			class Gunner: Copilot
+			{
+				minelev=-60;
+				minturn=-240;
+				maxelev=40;
+				maxturn=-120;
+			};
+			class CargoTurret_01: CargoTurret_01{};
+			class CargoTurret_02: CargoTurret_02{};
+		};
+	};
+	class macro_new_vehicle(laat,Mk2_lights):3as_LAAT_Mk2Lights
+	{
+		displayName="LAAT/I MK.II (Lights)";
+		transportSoldier=28;
+
+		#include "common_stuff_tcw.hpp"
+
+		RD501_magclamp_small_1[] = {0.0,1.0,-1.0};
+
+		class UserActions: UserActions
+		{
+			#include "user_action.hpp"
+		};
+
+		hiddenSelectionsTextures[]=
+		{
+			"RD501_Vehicles\textures\LAAT\laat_wings_doors_basecolor.paa",
+			"RD501_Vehicles\textures\LAAT\laat_base_basecolor.paa"
+		};
+
+		class Turrets: Turrets
+		{
+			class Gunner: Copilot
+			{
+				minelev=-60;
+				minturn=-240;
+				maxelev=40;
+				maxturn=-120;
+			};
+			class CargoTurret_01: CargoTurret_01{};
+			class CargoTurret_02: CargoTurret_02{};
+		};
+	};
+
+
+// SWOP START HERE
 
 	class macro_new_vehicle(laat,Mk3):swop_LAAT
 	{
@@ -85,7 +244,7 @@ class CfgVehicles
 		//typing hard
 		#include "ace_stuff.hpp"
 		#include "flight_model.hpp"
-		#include "common_stuff.hpp"
+		#include "common_stuff_swop.hpp"
 
 		RD501_magclamp_small_1[] = {0.0,1.0,-4.5};
 	
@@ -144,7 +303,7 @@ class CfgVehicles
 		//typing hard
 		#include "ace_stuff.hpp"
 		#include "flight_model.hpp"
-		#include "common_stuff.hpp"
+		#include "common_stuff_swop.hpp"
 
 		RD501_magclamp_small_1[] = {0.0,-2.0,-2.5};
 

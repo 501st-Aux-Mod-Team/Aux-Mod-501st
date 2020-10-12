@@ -1,5 +1,4 @@
 
-
 	class ThrusterEngage
 	{
 		displayName = "<t color='#4C9900'>[Impulsor On]</t>";
@@ -11,7 +10,6 @@
 		onlyForPlayer = 1;
 		condition = "(!(this getvariable [""impulsorStatus"",false]) AND (player == driver this) AND (alive this) AND (speed this >10) )";
 		statement = "this execVM ""\LAAT\initTE.sqf""";
-	
 	};
 
 	class ThrusterDisngage: ThrusterEngage
@@ -22,9 +20,7 @@
 		textToolTip = "<t color='#FF9933'>[RepulsorBrake On]</t>";
 		condition = "((this getvariable [""impulsorStatus"",false]) AND (player == driver this) AND (alive this))";
 		statement = "this execVM ""\LAAT\initTD.sqf""";
-	
 	};
-
 
 	class ThrusterEngage_spam: ThrusterEngage
 	{
@@ -39,7 +35,6 @@
 		statement = "this execVM ""\LAAT\initTE.sqf""";
 		shortcut="User19"
 	};
-
 
 
 	class ThrusterDisngage_spam: ThrusterEngage
