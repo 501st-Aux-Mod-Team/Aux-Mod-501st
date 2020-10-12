@@ -137,6 +137,13 @@ class CfgVehicles
 	//O_JM_TX130m1_1 normal
 	//O_JM_TX130m2_1 super
 
+	class Tank_F;
+	class 3as_saber_01_Base: Tank_F
+	{
+		RD501_magclamp_small_offset[] = {0.0,0.0,-3.0};
+		RD501_magclamp_large_offset[] = {0.0,0.0,-3.0};
+	};
+
 	 #include "inheritance.hpp"
 
 	
@@ -148,6 +155,9 @@ class CfgVehicles
 		displayName = "Super Saber Mk.II (Empire)";
 		macro_saber_smoke
 		macro_saber_driver
+
+		RD501_magclamp_small_offset[] = {0.0,2.0,-3.0};
+		RD501_magclamp_large_offset[] = {0.0,2.0,-3.0};
 
 		side=0;
 
@@ -179,6 +189,9 @@ class CfgVehicles
 		displayName = "Saber Mk.II (Empire)";
 		macro_saber_smoke
 		armor =1100;
+
+		RD501_magclamp_small_offset[] = {0.0,2.0,-3.0};
+		RD501_magclamp_large_offset[] = {0.0,2.0,-3.0};
 		
 		faction = macro_empire_faction
 		editorSubcategory = macro_editor_cat(tank)
@@ -214,6 +227,9 @@ class CfgVehicles
 		forceInGarage = 1;
 		displayName = "Saber (Command) Mk.II (Empire)";
 
+		RD501_magclamp_small_offset[] = {0.0,2.0,-3.0};
+		RD501_magclamp_large_offset[] = {0.0,2.0,-3.0};
+
 		armor = 750;
 		macro_command_saber_smoke
 		macro_saber_driver
@@ -247,6 +263,9 @@ class CfgVehicles
 		macro_republic_skin
 		crew = "SWOP_Clonetrooper_P1";
 
+		RD501_magclamp_small_offset[] = {0.0,2.0,-3.0};
+		RD501_magclamp_large_offset[] = {0.0,2.0,-3.0};
+
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat(tank)
 		vehicleClass = macro_editor_vehicle_type(tank)
@@ -276,6 +295,9 @@ class CfgVehicles
 		forceInGarage = 1;
 		displayName = "Saber Mk.II (Republic)";
 		macro_republic_skin
+
+		RD501_magclamp_small_offset[] = {0.0,2.0,-3.0};
+		RD501_magclamp_large_offset[] = {0.0,2.0,-3.0};
 
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat(tank)
@@ -318,6 +340,9 @@ class CfgVehicles
 		macro_saber_driver
 		macro_command_saber_smoke
 		armor = 750;
+
+		RD501_magclamp_small_offset[] = {0.0,2.0,-3.0};
+		RD501_magclamp_large_offset[] = {0.0,2.0,-3.0};
 
 		crew = "SWOP_Clonetrooper_P1";
 		faction = macro_republic_faction
