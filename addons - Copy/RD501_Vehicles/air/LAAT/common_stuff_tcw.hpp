@@ -13,17 +13,18 @@ editorSubcategory = macro_editor_cat_air(Republic_heli)
 vehicleClass = macro_editor_vehicle_type_air(Republic)
 
 weapons[] = {
-	macro_new_weapon(generic,blue_dual_aircraft_laser),
+	macro_basic_air_weapons,
+	macro_new_weapon(generic,green_dual_aircraft_laser),
+	macro_new_weapon(cannon,laat),
 	macro_new_weapon(wynd,lgm),
 	macro_new_weapon(wynd,a2a),
 	macro_new_weapon(wynd,agm),
-	macro_basic_air_weapons,
 	"SmokeLauncher",
-	macro_new_weapon(cannon,laat)
 };
 magazines[] = {
 	macro_basic_air_mags,
-	macro_new_mag(generic_aircraft_gun_dual_blue,1000),
+	macro_new_mag(generic_aircraft_gun_dual_green,1000),
+	macro_new_mag(laat_cannon,100),
 	macro_new_mag(a2a,4),
 	macro_new_mag(agm,6),
 	macro_new_mag(agm,6),
@@ -32,7 +33,6 @@ magazines[] = {
 	"SmokeLauncherMag",
 	"SmokeLauncherMag",
 	"SmokeLauncherMag",
-	macro_new_mag(laat_cannon,100),
 };
 smokeLauncherGrenadeCount=48;
 smokeLauncherAngle=360;

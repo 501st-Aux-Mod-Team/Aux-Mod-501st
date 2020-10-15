@@ -13,9 +13,5 @@ minElev = -90; 										/// what is the lowest possible elevation of the turret
 maxElev = 50;  									/// what is the highest possible elevation of the turret
 initElev = 0;
 
-weapons[] = {
-            macro_new_weapon(cannon,laat)
-            };
-magazines[] = {
-                macro_new_mag(laat_cannon,100),
-              };
+weapons[] = {macro_new_weapon(cannon,laat)};
+magazines[] = {macro_new_mag(laat_cannon_double,100)};

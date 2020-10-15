@@ -154,6 +154,10 @@ class CfgMagazines
 		magazineReloadTime=10;
 		macro_no_muzzle_impulse
 	};
+	class macro_new_mag(laat_cannon_double,100): macro_new_mag(laat_cannon,100)
+	{
+		ammo = macro_new_ammo(laat_cannon_double);
+	};
 
 	class 500Rnd_Cannon_ARCback;
 	class macro_new_mag(voltic,200):500Rnd_Cannon_ARCback
@@ -365,7 +369,6 @@ class CfgAmmo
 
 	class macro_new_ammo(laat_cannon): TurboLaser_Laserx2//TurboLaser_Laserx2//SW_SpeederBikeCanon_Ammo//swop_bywingCannonammo//LAAT_Laser
 	{
-	
 		explosive = 0.5;
 		hit = 1000;
 		indirectHit =800;
@@ -377,7 +380,8 @@ class CfgAmmo
 		explosionSoundEffect = "DefaultExplosion";
 		
 		ExplosionEffects = "ExploAmmoExplosion";
-		model = "\TIE\tracer_green.p3d";
+		model="a3\weapons_f\data\bullettracer\tracer_green";
+		tracerScale = 10;
 		effectFly = "SWOP_greenLaserEffect";
 		aiAmmoUsageFlags = "64 + 128 + 256 + 512";
 		allowAgainstInfantry = 1;
@@ -388,6 +392,11 @@ class CfgAmmo
 		supersonicCrackFar[] = {"\ca\Weapons\Data\Sound\supersonic_crack_50meters.wss", 1, 50};
 		supersonicCrackNear[] = {"\ca\Weapons\Data\Sound\supersonic_crack_close.wss", 1, 50};
 	};
+	class macro_new_ammo(laat_cannon_double): macro_new_ammo(laat_cannon)
+	{
+		model = "\TIE\tracer_green.p3d";
+		tracerScale = 1;
+	}
 
 	class swop_bywingCannonammo;
 	class macro_new_ammo(voltic):swop_bywingCannonammo
