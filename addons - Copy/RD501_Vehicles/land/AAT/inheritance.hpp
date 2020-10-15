@@ -262,5 +262,3 @@ class O_SWOP_AAT_1:O_O_SWOP_AAT_base
 
 	};
 };
-
-
