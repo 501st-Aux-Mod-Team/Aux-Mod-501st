@@ -9,7 +9,8 @@ class CfgPatches
 		author=DANKAUTHORS;
 		requiredAddons[]=
 		{
-			macro_lvl1_req
+			macro_lvl1_req,
+			"3AS_LAAT"
 		};
 		requiredVersion=0.1;
 		units[]={};
@@ -149,7 +150,6 @@ class CfgMagazines
 		count = 100;
 		tracersEvery = 1;
 		initSpeed = 2000;
-		muzzleImpulseFactor = 0;
 		brightness = 100;
 		magazineReloadTime=10;
 		macro_no_muzzle_impulse
@@ -165,6 +165,15 @@ class CfgMagazines
 		initSpeed = 1036;
 		maxLeadSpeed = 300;
 		macro_no_muzzle_impulse
+	};
+
+	class Laser_Battery_F;
+	class macro_new_mag(laat_ball_beam,300): Laser_Battery_F
+	{
+		displayName = "Laat Ball Turret Mag";
+		displayNameShort = "Ball Turret Mag";
+		count = 300;
+		ammo = macro_new_ammo(ball_beam)
 	};
 
 	class 1000Rnd_Laser_Cannon_EWEBSWBF_REP;
@@ -393,6 +402,19 @@ class CfgAmmo
 		
 	};
 
+	class laserAmmo_F;
+	class macro_new_ammo(ball_beam): laserAmmo_F
+	{
+		hit = 600;
+		indirectHit = 400;
+		indirectHitRange = 1;
+		explosive = 1;
+		caliber = 6;
+		ACE_caliber = 0;
+		aiAmmoUsageFlags = "64 + 128 + 256 + 512";
+		allowAgainstInfantry = 1;
+	};
+
 	class macro_new_ammo(ball_turret):TurboLaser_Laserx2//SW_SpeederBikeCanon_Ammo//Vwing_ammo
 	{
 		hit = 600;
@@ -401,13 +423,12 @@ class CfgAmmo
 		indirectHitRange = 1;
 		explosive = 1;
 		caliber = 6;
-		ACE_caliber=0;
+		ACE_caliber = 0;
 		tracerScale = 1;
 		aiAmmoUsageFlags = "64 + 128 + 256 + 512";
 		allowAgainstInfantry = 1;
 	
 		model = "\SWOP_Main\Effects\Tracer\Lasergreen";
-		
 	
 		cost = 1;
 	

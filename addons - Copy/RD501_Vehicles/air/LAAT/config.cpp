@@ -38,7 +38,8 @@ class CfgPatches
 
 		requiredAddons[]=
 		{
-			macro_patch_name(vehicles)
+			macro_patch_name(vehicles),
+			"3AS_LAAT"
 		};
 		requiredVersion=0.1;
 		units[]=
@@ -78,9 +79,9 @@ class CfgVehicles
 	class macro_new_vehicle(laat,Mk1):3as_LAAT_Mk1
 	{
 		displayName="LAAT/I MK.I";
-		transportSoldier=28;
 
 		#include "common_stuff_tcw.hpp"
+		transportSoldier=24;
 
 		RD501_magclamp_small_1[] = {0.0,1.0,-1.0};
 
@@ -103,14 +104,41 @@ class CfgVehicles
 				minturn=-240;
 				maxelev=40;
 				maxturn=-120;
+				#include "common_optics.hpp"
 			};
 			class LeftDoorgun: LeftDoorgun
 			{
-				#include "ball_turret_weapons.hpp"
+				weapons[]=
+				{
+					macro_new_weapon(turret,laat_ball_beam_l),
+					"Laserdesignator_pilotCamera"
+				};
+				magazines[]=
+				{
+					"Laserbatteries",
+					macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),
+					macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),
+					macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300)
+				};
+				#include "common_optics.hpp"
+				memorypointgunneroptics="FIXME";
 			};
 			class RightDoorGun: RightDoorGun
 			{
-				#include "ball_turret_weapons.hpp"
+				weapons[]=
+				{
+					macro_new_weapon(turret,laat_ball_beam_r),
+					"Laserdesignator_pilotCamera"
+				};
+				magazines[]=
+				{
+					"Laserbatteries",
+					macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),
+					macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),
+					macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300)
+				};
+				#include "common_optics.hpp"
+				memorypointgunneroptics="FIXME";
 			};
 			class CargoTurret_01: CargoTurret_01{};
 			class CargoTurret_02: CargoTurret_02{};
@@ -123,9 +151,9 @@ class CfgVehicles
 	class macro_new_vehicle(laat,Mk1_lights):3as_LAAT_Mk3
 	{
 		displayName="LAAT/I MK.I (Lights)";
-		transportSoldier=28;
 
 		#include "common_stuff_tcw.hpp"
+		transportSoldier=29;
 
 		RD501_magclamp_small_1[] = {0.0,1.0,-1.0};
 
@@ -148,6 +176,7 @@ class CfgVehicles
 				minturn=-240;
 				maxelev=40;
 				maxturn=-120;
+				#include "common_optics.hpp"
 			};
 			class CargoTurret_01: CargoTurret_01{};
 			class CargoTurret_02: CargoTurret_02{};
@@ -161,9 +190,9 @@ class CfgVehicles
 	class macro_new_vehicle(laat,Mk2):3as_LAAT_Mk2
 	{
 		displayName="LAAT/I MK.II";
-		transportSoldier=28;
 
 		#include "common_stuff_tcw.hpp"
+		transportSoldier=24;
 
 		RD501_magclamp_small_1[] = {0.0,1.0,-1.0};
 
@@ -186,6 +215,7 @@ class CfgVehicles
 				minturn=-240;
 				maxelev=40;
 				maxturn=-120;
+				#include "common_optics.hpp"
 			};
 			class CargoTurret_01: CargoTurret_01{};
 			class CargoTurret_02: CargoTurret_02{};
@@ -194,9 +224,9 @@ class CfgVehicles
 	class macro_new_vehicle(laat,Mk2_lights):3as_LAAT_Mk2Lights
 	{
 		displayName="LAAT/I MK.II (Lights)";
-		transportSoldier=28;
 
 		#include "common_stuff_tcw.hpp"
+		transportSoldier=29
 
 		RD501_magclamp_small_1[] = {0.0,1.0,-1.0};
 
@@ -219,12 +249,12 @@ class CfgVehicles
 				minturn=-240;
 				maxelev=40;
 				maxturn=-120;
+				#include "common_optics.hpp"
 			};
 			class CargoTurret_01: CargoTurret_01{};
 			class CargoTurret_02: CargoTurret_02{};
 		};
 	};
-
 
 // SWOP START HERE
 
@@ -269,11 +299,35 @@ class CfgVehicles
 
 			class GunnerTurret1:GunnerTurret1
 			{
-				#include "ball_turret_weapons.hpp"
+				weapons[]=
+				{
+					macro_new_weapon(turret,laat_ball_turret),
+					"Laserdesignator_pilotCamera"
+
+				};
+				magazines[]=
+				{
+					"Laserbatteries",
+					macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200),
+					macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200),
+					macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200)
+				};
 			};
 			class GunnerTurret2:GunnerTurret2
 			{
-				#include "ball_turret_weapons.hpp"
+				weapons[]=
+				{
+					macro_new_weapon(turret,laat_ball_turret),
+					"Laserdesignator_pilotCamera"
+
+				};
+				magazines[]=
+				{
+					"Laserbatteries",
+					macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200),
+					macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200),
+					macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200)
+				};
 			};
 			class CargoTurret_01:CargoTurret_01{};
 			class CargoTurret_02:CargoTurret_02{};
@@ -352,11 +406,35 @@ class CfgVehicles
 			
 			class GunnerTurret1:GunnerTurret1
 			{
-				#include "ball_turret_weapons.hpp"
+				weapons[]=
+				{
+					macro_new_weapon(turret,laat_ball_turret),
+					"Laserdesignator_pilotCamera"
+
+				};
+				magazines[]=
+				{
+					"Laserbatteries",
+					macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200),
+					macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200),
+					macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200)
+				};
 			};
 			class GunnerTurret2:GunnerTurret2
 			{
-				#include "ball_turret_weapons.hpp"
+				weapons[]=
+				{
+					macro_new_weapon(turret,laat_ball_turret),
+					"Laserdesignator_pilotCamera"
+
+				};
+				magazines[]=
+				{
+					"Laserbatteries",
+					macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200),
+					macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200),
+					macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200),macro_new_mag(laat_ball_turret,200)
+				};
 			};
 		};
 	};

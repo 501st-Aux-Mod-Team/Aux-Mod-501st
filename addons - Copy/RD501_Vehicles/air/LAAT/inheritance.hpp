@@ -1,18 +1,9 @@
-class B_Heli_Attack_01_base_F;
+class Heli_Attack_01_base_F;
+class B_Heli_Attack_01_base_F: Heli_Attack_01_base_F
+{
+	class Turrets;
+};
 class 3as_laat_Base: B_Heli_Attack_01_base_F
-{
-	class Turrets;
-};
-class 3as_laatUnarmed_Base: 3as_laat_Base
-{
-	class Turrets;
-};
-class 3as_laatFloodLight_Base: 3as_laat_Base
-{
-	class Turrets;
-};
-
-class 3as_LAAT_Mk1: 3as_laat_Base
 {
 	class UserActions;
 	class Turrets: Turrets
@@ -28,9 +19,8 @@ class 3as_LAAT_Mk1: 3as_laat_Base
 		class CargoTurret_06;
 	};
 };
-class 3as_LAAT_Mk2: 3as_laatUnarmed_Base
+class 3as_laatUnarmed_Base: 3as_laat_Base
 {
-	class UserActions;
 	class Turrets: Turrets
 	{
 		class Copilot;
@@ -38,23 +28,8 @@ class 3as_LAAT_Mk2: 3as_laatUnarmed_Base
 		class CargoTurret_02;
 	};
 };
-class 3as_LAAT_Mk2Lights: 3as_laatFloodLight_Base
+class 3as_laatFloodLight_Base: 3as_laat_Base
 {
-	class UserActions;
-	class Turrets: Turrets
-	{
-		class Copilot;
-		class CargoTurret_01;
-		class CargoTurret_02;
-		class CargoTurret_03;
-		class CargoTurret_04;
-		class CargoTurret_05;
-		class CargoTurret_06;
-	};
-};
-class 3as_LAAT_Mk3: 3as_laatFloodLight_Base
-{
-	class UserActions;
 	class Turrets: Turrets
 	{
 		class Copilot;
@@ -66,7 +41,10 @@ class 3as_LAAT_Mk3: 3as_laatFloodLight_Base
 		class CargoTurret_06;
 	};
 };
-
+class 3as_LAAT_Mk1: 3as_laat_Base{};
+class 3as_LAAT_Mk3: 3as_laatFloodLight_Base{};	//Mk1Lights
+class 3as_LAAT_Mk2: 3as_laatUnarmed_Base{};
+class 3as_LAAT_Mk2Lights: 3as_laatFloodLight_Base{};
 
 // SWOP START HERE
 
