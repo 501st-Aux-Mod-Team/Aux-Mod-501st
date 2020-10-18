@@ -255,8 +255,8 @@ class CfgVehicles
 	class macro_new_unit_class(opfor,B2_droid_Super) : macro_new_unit_class(opfor,B2_droid_Standard)
 	{
 		displayname = "Super B2";
-		armor=60;
-		armorStructural=10;
+		armor=45;
+		armorStructural=1;
 		uniformClass=macro_new_uniform_class(opfor,B2_SuperArmor)
 		hiddenSelections[]=
 		{
@@ -268,7 +268,7 @@ class CfgVehicles
         "RD501_Units\textures\CIS\B2\super\super_b2_waist.paa",
         "RD501_Units\textures\CIS\B2\super\super_b2_legs.paa"
 		};
-		class HitPoints
+		/*class HitPoints
 		{
 			class HitFace
 			{
@@ -450,7 +450,7 @@ class CfgVehicles
 				minimalHit=0;
 				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
 			};
-		};
+		};*/
 	};
 };
 
