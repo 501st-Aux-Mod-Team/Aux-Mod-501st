@@ -2,6 +2,7 @@ class Heli_Attack_01_base_F;
 class B_Heli_Attack_01_base_F: Heli_Attack_01_base_F
 {
 	class Turrets;
+	class ViewPilot;
 };
 class 3as_laat_Base: B_Heli_Attack_01_base_F
 {
