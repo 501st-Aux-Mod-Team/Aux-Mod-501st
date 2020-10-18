@@ -121,7 +121,6 @@ class CfgWeapons
 	NEW_501_Inf_Helm_JLTS(Oktapius,Oktapius,Oktapius.paa)
 	NEW_501_Inf_Helm_JLTS(Flux,Flux,Flux.paa)
 	NEW_501_Inf_Helm_JLTS(Goddest,Goddest,Goddest.paa)
-	NEW_501_Inf_Helm_JLTS(Odd,Odd,Odd.paa)
 	NEW_501_Inf_Helm_JLTS(Dusty,Dusty,Dusty.paa)
 	NEW_501_Inf_Helm_JLTS(Chaser,Chaser,Chaser.paa)
 	NEW_501_Inf_Helm_JLTS(Parrot,Parrot,Parrot.paa)
@@ -180,4 +179,5 @@ class CfgWeapons
 	NEW_501_ARC_Helm_JLTS(Darkstar,Darkstar,Darkstar.paa)
 	NEW_501_ARC_Helm_JLTS(Train,Train,Train.paa)
 	NEW_501_ARC_Helm_JLTS(Hook,Hook,Hook.paa)
+	NEW_501_ARC_Helm_JLTS(Odd,Odd,Odd.paa)
 };

@@ -33,6 +33,7 @@ class CfgMagazines
 		displayName="30 Round 2MW Cell";
 		picture="\RD501_Weapons\_mag\data\rd501_icon_mag_dc17a.paa";
 		count = 30;
+		mass=4;
 		ammo=macro_new_ammo(2mw)
 		typicalSpeed=400;
 		descriptionShort="Low power magazine";
@@ -51,6 +52,7 @@ class CfgMagazines
 		displayName="15 Round 5MW Cell";
 		picture="\RD501_Weapons\_mag\data\rd501_icon_mag_dc17.paa";
 		count = 15;
+		mass=4;
 		ammo=macro_new_ammo(5mw)
 		typicalSpeed=400;
 		descriptionShort="Low power magazine";
@@ -334,5 +336,7 @@ class CfgMagazines
 	class macro_new_mag(rps1,1):RPG32_F
 	{
 		scope=1;
+		weight=1;
+		mass=1;
 	}
 };

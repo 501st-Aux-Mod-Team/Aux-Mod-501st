@@ -60,8 +60,8 @@ class macro_new_weapon(launcher,rps1_u) : macro_new_weapon(launcher,rps1)
 		icon = "\RD501_Weapons\Launchers\RPS1\rps_disposable_icon.paa";
 		picture = "\RD501_Weapons\Launchers\RPS1\rps_disposable_icon.paa";
 		baseWeapon = macro_new_weapon(launcher,rps1_u)
-
-		magazines[] = { "CBA_FakeLauncherMagazine" };
+		magazineWell[]={"empty"};
+		magazines[] = { "empty" };
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 10;
         };

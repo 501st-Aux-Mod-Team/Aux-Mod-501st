@@ -10,7 +10,8 @@ linkeditems[]=
 	"ItemMap",
 	"ItemCompass",
 	"ItemWatch",
-	"JLTS_droid_comlink"
+	"JLTS_droid_comlink",
+	"JLTS_NVG_droid_chip_1"
 };
 respawnlinkeditems[]=
 {
@@ -18,7 +19,8 @@ respawnlinkeditems[]=
 	"ItemMap",
 	"ItemCompass",
 	"ItemWatch",
-	"JLTS_droid_comlink"
+	"JLTS_droid_comlink",
+	"JLTS_NVG_droid_chip_1"
 };
 
 class HitPoints

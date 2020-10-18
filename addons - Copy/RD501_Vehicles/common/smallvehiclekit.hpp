@@ -30,7 +30,7 @@ class TransportWeapons
 	{
 	class _transport_dc15a
 		{
-			weapon = macro_new_weapon(DC,r15a)
+			weapon = macro_new_weapon(DC,15a)
 			count = 3;
 		};
 	class _transport_dc15c
