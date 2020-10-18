@@ -55,6 +55,11 @@ class CfgPatches
 		requiredVersion=0.1;
 		units[]=
 		{
+			macro_new_vehicle(AAT,Light_MkIII),
+			macro_new_vehicle(AAT,Medium_MkIII_Snow),
+			macro_new_vehicle(AAT,Medium_MkIII_Tropical),
+			macro_new_vehicle(AAT,King_MkIII),
+			macro_new_vehicle(AAT,King_MkIII_Urban),
 			macro_new_vehicle(AAT,Light_MkII),
 			macro_new_vehicle(AAT,Medium_MkII),
 			macro_new_vehicle(AAT,King_MkII),
@@ -73,11 +78,9 @@ class CfgPatches
 
 
 #include "../../common/sensor_templates.hpp"
-class DefaultEventhandlers ;
+class DefaultEventhandlers;
 class CfgVehicles
 {
-
-
 	#include "inheritance.hpp"
 	class macro_new_vehicle(AAT,Light_MkII):O_SWOP_AAT_1
 	{
@@ -107,9 +110,7 @@ class CfgVehicles
 						weapons[] = {"Cannon_AAT_mc"};
 						magazines[] = {"100Rnd_Laser_Cannon_AAT_m", "100Rnd_Laser_Cannon_AAT_m", "100Rnd_Laser_Cannon_AAT_m"};
 						macro_enable_rotation
-					};
-					
-							
+					};	
 				};
 				maxHorizontalRotSpeed = 1.2*2;
 				maxVerticalRotSpeed = 1.2*2;
@@ -126,6 +127,7 @@ class CfgVehicles
 		};
 		class EventHandlers :DefaultEventhandlers {};
 	};
+	
 
 	class macro_new_vehicle(AAT,Medium_MkII):O_SWOP_AAT_1
 	{
@@ -231,8 +233,6 @@ class CfgVehicles
 				macro_vehicle_textures\AAT\king_AAT\blue\king_AAT_gun.paa
 		};
 		class EventHandlers :DefaultEventhandlers {};
-
-		
 	};
 
 	macro_new_medium_aat(macro_new_vehicle(AAT,Medium_tropical_MkII),"Medium (Tropical Thunder) AAT MKII",medium_aat\tropical\Trop_aat2.paa,medium_aat\tropical\Trop_aat1.paa)
@@ -242,4 +242,29 @@ class CfgVehicles
 	macro_new_king_aat(macro_new_vehicle(AAT,King_red_MkII),"King (Red Bull) AAT MKII",king_AAT\red\king_AAT_body.paa,king_AAT\red\king_AAT_gun.paa)
 	macro_new_king_aat(macro_new_vehicle(AAT,King_green_MkII),"King (Green Bean) AAT MKII",king_AAT\green\king_AAT_body.paa,king_AAT\green\king_AAT_gun.paa)
 
+	/*		--------	*/
+	/*	  | 3AS AATs |	*/
+	/*		--------	*/
+	#include "3as_import.hpp"
+	#include "aat_templates.hpp"
+
+
+	class macro_new_vehicle(AAT,King_MkIII) : 3AS_AAT {
+		AAT_KING("King AAT Mk.III");
+	};
+	class macro_new_vehicle(AAT,King_MkIII_Urban) : 3AS_AAT_urban {
+		AAT_KING("King AAT Mk.III (Urban)");
+	};
+
+	class macro_new_vehicle(AAT,Medium_MkIII_Snow) : 3AS_AAT_snow {
+		AAT_MEDIUM("Medium AAT Mk.III (Snow)");
+	};
+
+	class macro_new_vehicle(AAT,Medium_MkIII_Tropical) : 3AS_AAT_Tropic {
+		AAT_MEDIUM("Medium AAT Mk.III (Tropical)");
+	};
+
+	class macro_new_vehicle(AAT,Light_MkIII) : 3AS_AAT_tan {
+		AAT_LIGHT("Light AAT Mk.III");
+	};
 };
