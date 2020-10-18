@@ -11,19 +11,42 @@ class CfgPatches
 		addonRootClass= macro_patch_name(vehicle_weapons)
 		requiredAddons[]=
 		{
-			macro_patch_name(vehicle_weapons)
+			macro_patch_name(vehicle_weapons),
+			"3AS_LAAT"
 		};
 		requiredVersion=0.1;
 		units[]={};
-		weapons[]={
-			//macro_new_weapon(cannon,laat)
-			
-		};
+		weapons[]={};
 	};
 };
 
 class CfgWeapons
 {
+	class 3as_LAAT_autocannon_30mm;
+	class ParticleBeamCannon_F: 3as_LAAT_autocannon_30mm
+	{
+		class HE;
+	};
+	class ParticleBeamCannon: ParticleBeamCannon_F{};
+	class macro_new_weapon(turret,laat_ball_beam_l): ParticleBeamCannon
+	{
+		displayName = "BeamRider Mk-I";
+		author = DANKAUTHORS;
+
+		magazines[] = {macro_new_mag(laat_ball_beam,300), "Laser_Battery_F"};
+		class HE: HE
+		{
+			displayName = "BeamRider Mk-I";
+			magazines[] = {macro_new_mag(laat_ball_beam,300), "Laser_Battery_F"};
+		};
+
+		stabilizedInAxes = 3;
+		ballisticsComputer = 1;
+		canLock = 2;
+		magazineReloadTime=10;
+	};
+	class macro_new_weapon(turret,laat_ball_beam_r): macro_new_weapon(turret,laat_ball_beam_l){};
+
 	class LMG_RCWS;
 	class Cannon_Portableun:LMG_RCWS
 	{
@@ -43,10 +66,9 @@ class CfgWeapons
 		dlc = "RD501";
 		author= "RD501";
 
-			modes[] = {"manual", "close"};
+		modes[] = {"manual", "close"};
 		class manual: manual
 		{
-			
 			sounds[] = {"StandardSound"};
 			class BaseSoundModeType
 			{
@@ -55,10 +77,8 @@ class CfgWeapons
 			};
 			displayName = "Laat Ball Turret";
 			reloadTime = 0.0009;
-			//sounds[] = {"StandardSound"};
 			class StandardSound
 			{
-				
 				weaponSoundEffect = "DefaultRifle";
 				begin1[] = {"Uwing\uwingcannon.ogg", 0.8, 0.5, 2000};
 				soundBegin[] = {"begin1", 1};
@@ -95,9 +115,6 @@ class CfgWeapons
 			maxRange = 8000;
 			maxRangeProbab = 0.04;
 		};
-		
 	};
-	
-
 }; 
 

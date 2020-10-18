@@ -138,6 +138,45 @@ class CfgWeapons
 		};
 	};
 
+	class 3as_LAAT_autocannon_30mm;
+	class ParticleBeamCannon_F: 3as_LAAT_autocannon_30mm
+	{
+		class HE;
+	};
+	class macro_new_weapon(generic,green_dual_aircraft_laser): ParticleBeamCannon_F
+	{
+		canLock = 1;
+		ballisticsComputer = 1;
+		weaponLockSystem = 0;
+		magazines[] = {macro_new_mag(generic_aircraft_gun_dual_green,1000)};
+		class HE: HE
+		{
+			displayName = "Aircraft Laser Gun";
+			magazines[] = {macro_new_mag(generic_aircraft_gun_dual_green,1000)};
+
+			dispersion = 0.012;
+			autoFire=true;
+			aiRateOfFire = 0.001;
+			reloadTime=0.06;
+
+			aiRateOfFireDispersion = 0.0;
+			aiRateOfFireDistance = 0;
+
+			minRange = 0;
+			minRangeProbab = 1;
+			midRange = 7500;
+			midRangeProbab = 1;
+			maxRange = 15000;
+			maxRangeProbab = 1;
+
+			weaponLockDelay = 0;
+			weaponLockSystem = 0;
+			lockAcquire = 1;
+			FCSMaxLeadSpeed = 1000;
+			burst = 30;//30;
+		};
+	};
+
 	class macro_new_weapon(generic,ion_aircraft_cannon) : macro_new_weapon(generic,rebel_aircraft_cannon)
 	{
 		class LowROF: LowROF

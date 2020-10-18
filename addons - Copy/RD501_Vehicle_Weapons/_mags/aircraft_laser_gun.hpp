@@ -49,9 +49,18 @@
 		count = "15";
 	};
 
-		class macro_new_mag(generic_aircraft_gun_dual_blue,1000): macro_new_mag(generic_aircraft_gun_blue,1000)
+	class macro_new_mag(generic_aircraft_gun_dual_blue,1000): macro_new_mag(generic_aircraft_gun_blue,1000)
 	{
 		displayNameShort = "Plasma Cores (Blue)";
 		displayName = "Plasma Cores (Blue)";
 		ammo = macro_new_ammo(generic_aircraft_laser_cannon_dual_blue)
+	};
+
+	class Laser_Battery_F;
+	class macro_new_mag(generic_aircraft_gun_dual_green,1000): Laser_Battery_F
+	{
+		displayNameShort = "Plasma Cores (Green)";
+		displayName = "Plasma Cores (Green)";
+		ammo = macro_new_ammo(generic_aircraft_laser_cannon_dual_green)
+		count = 1000;
 	};

@@ -35,11 +35,10 @@ class CfgWeapons
 		displayName = "LAAT Laser Cannon";
 		
 		magazines[] = {
-			macro_new_mag(laat_cannon,100)
+			macro_new_mag(laat_cannon,100),
+			macro_new_mag(laat_cannon_double,100)
 		};
 
-		
-		
 		initSpeed = 2000;
 		ballisticsComputer = 1;
 		canLock = 2;

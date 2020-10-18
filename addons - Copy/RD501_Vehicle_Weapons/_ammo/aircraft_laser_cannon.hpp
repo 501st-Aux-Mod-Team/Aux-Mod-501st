@@ -59,3 +59,20 @@
 		effectFly = "SWOP_BlueLaserEffect";
 		model = "\tie\tracer_blue";
 	};
+
+	class laserAmmo_F;
+	class macro_new_ammo(generic_aircraft_laser_cannon_dual_green): laserAmmo_F
+	{
+		hit = 400;
+		indirectHit = 200;
+		indirectHitRange = 0;
+		caliber = 1;
+		explosive = 0.6;
+		dangerRadiusBulletClose = 16;
+		dangerRadiusHit = 40;
+		suppressionRadiusBulletClose = 10;
+		suppressionRadiusHit = 14;
+		craterEffects = "";
+		craterShape = "";
+		explosionEffects = "ExploAmmoLaserCannon";
+	};

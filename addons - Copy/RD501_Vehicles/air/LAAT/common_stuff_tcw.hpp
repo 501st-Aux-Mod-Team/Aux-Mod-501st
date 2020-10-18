@@ -1,6 +1,6 @@
 class EventHandlers : DefaultEventhandlers
 {
-	fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');_this execVM '\3AS\3as_Laat\LAATI\scripts\fired_laser.sqf';";
+	fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');_this execVM '\RD501_Vehicles\air\LAAT\fired_laser.sqf';";
 	init = "[_this select 0] execVM 'RD501_Main\functions\autocrate\autocrate.sqf';";
 };
 
@@ -13,17 +13,18 @@ editorSubcategory = macro_editor_cat_air(Republic_heli)
 vehicleClass = macro_editor_vehicle_type_air(Republic)
 
 weapons[] = {
-	macro_new_weapon(generic,blue_dual_aircraft_laser),
+	macro_basic_air_weapons,
+	macro_new_weapon(generic,green_dual_aircraft_laser),
+	macro_new_weapon(cannon,laat),
 	macro_new_weapon(wynd,lgm),
 	macro_new_weapon(wynd,a2a),
 	macro_new_weapon(wynd,agm),
-	macro_basic_air_weapons,
 	"SmokeLauncher",
-	macro_new_weapon(cannon,laat)
 };
 magazines[] = {
 	macro_basic_air_mags,
-	macro_new_mag(generic_aircraft_gun_dual_blue,1000),
+	macro_new_mag(generic_aircraft_gun_dual_green,1000),
+	macro_new_mag(laat_cannon,100),
 	macro_new_mag(a2a,4),
 	macro_new_mag(agm,6),
 	macro_new_mag(agm,6),
@@ -32,7 +33,6 @@ magazines[] = {
 	"SmokeLauncherMag",
 	"SmokeLauncherMag",
 	"SmokeLauncherMag",
-	macro_new_mag(laat_cannon,100),
 };
 smokeLauncherGrenadeCount=48;
 smokeLauncherAngle=360;
@@ -40,97 +40,16 @@ smokeLauncherVelocity=14;
 
 class pilotCamera
 {
-	class OpticsIn
-	{
-		class Wide
-		{
-			opticsDisplayName="WFOV";
-			initAngleX=0;
-			minAngleX=-10;
-			maxAngleX=90;
-			initAngleY=0;
-			minAngleY=-90;
-			maxAngleY=90;
-			initFov=0.425;//"(30 / 120)";
-			minFov=0.425;//"(30 / 120)";
-			maxFov=0.425;//"(30 / 120)";
-			directionStabilized=1;
-			thermalMode[] = {0,1,2,3,4,5};
-			visionMode[]=
-			{
-				"Normal",
-					"NVG",
-					"Ti"
-			};
-			gunnerOpticsModel="\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_wide_F.p3d";
-			opticsPPEffects[]=
-			{
-				"OpticsCHAbera2",
-					"OpticsBlur2"
-			};
-		};
+	#include "common_optics.hpp"
 
-		class zoomx4: Wide
-		{
-			opticsDisplayName="NFOV";
-			initFov="(0.425/4)";//"(3.75 / 120)";
-			minFov="(0.425/4)";//"(3.75 / 120)";
-			maxFov="(0.425/4)";//"(3.75 / 120)";
-
-
-			gunnerOpticsModel="\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
-		};
-
-		class zoomX8: Wide
-		{
-			opticsDisplayName="NFOV";
-
-
-			initFov="(0.42/8)";//"(.375 / 120)";
-			minFov="(0.42/8)";//"(.375 / 120)";
-			maxFov="(0.42/8)";//"(.375 / 120)";
-			gunnerOpticsModel="\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
-		};
-		class zoomX20: Wide
-		{
-			opticsDisplayName="NFOV";
-			initFov="(0.42/20)";//"(.375 / 120)";
-			minFov="(0.42/20)";//"(.375 / 120)";
-			maxFov="(0.42/20)";//"(.375 / 120)";
-			gunnerOpticsModel="\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
-		};
-		class zoomX50: Wide
-		{
-			opticsDisplayName="NFOV";
-
-
-			initFov="(0.42/50)";//"(.375 / 120)";
-			minFov="(0.42/50)";//"(.375 / 120)";
-			maxFov="(0.42/50)";//"(.375 / 120)";
-			gunnerOpticsModel="\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
-		};
-
-		class zoomX70: Wide
-		{
-			opticsDisplayName="NFOV";
-
-			initFov="(0.42/70)";//"(.375 / 120)";
-			minFov="(0.42/70)";//"(.375 / 120)";
-			maxFov="(0.42/70)";//"(.375 / 120)";
-			gunnerOpticsModel="\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
-		};
-
-		showMiniMapInOptics=1;
-		showUAVViewInOptics=0;
-		showSlingLoadManagerInOptics=1;
-	};
 	minTurn=-180;
 	maxTurn=180;
-
 	initTurn=0;
+
 	minElev=-10;
 	maxElev=90;
 	initElev=-10;
+
 	maxXRotSpeed=0.30000001;
 	maxYRotSpeed=0.30000001;
 	pilotOpticsShowCursor=1;

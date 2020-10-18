@@ -9,7 +9,8 @@ class CfgPatches
 		author=DANKAUTHORS;
 		requiredAddons[]=
 		{
-			macro_lvl1_req
+			macro_lvl1_req,
+			"3AS_LAAT"
 		};
 		requiredVersion=0.1;
 		units[]={};
@@ -149,10 +150,13 @@ class CfgMagazines
 		count = 100;
 		tracersEvery = 1;
 		initSpeed = 2000;
-		muzzleImpulseFactor = 0;
 		brightness = 100;
 		magazineReloadTime=10;
 		macro_no_muzzle_impulse
+	};
+	class macro_new_mag(laat_cannon_double,100): macro_new_mag(laat_cannon,100)
+	{
+		ammo = macro_new_ammo(laat_cannon_double);
 	};
 
 	class 500Rnd_Cannon_ARCback;
@@ -165,6 +169,15 @@ class CfgMagazines
 		initSpeed = 1036;
 		maxLeadSpeed = 300;
 		macro_no_muzzle_impulse
+	};
+
+	class Laser_Battery_F;
+	class macro_new_mag(laat_ball_beam,300): Laser_Battery_F
+	{
+		displayName = "Laat Ball Turret Mag";
+		displayNameShort = "Ball Turret Mag";
+		count = 300;
+		ammo = macro_new_ammo(ball_beam)
 	};
 
 	class 1000Rnd_Laser_Cannon_EWEBSWBF_REP;
@@ -356,7 +369,6 @@ class CfgAmmo
 
 	class macro_new_ammo(laat_cannon): TurboLaser_Laserx2//TurboLaser_Laserx2//SW_SpeederBikeCanon_Ammo//swop_bywingCannonammo//LAAT_Laser
 	{
-	
 		explosive = 0.5;
 		hit = 1000;
 		indirectHit =800;
@@ -368,7 +380,8 @@ class CfgAmmo
 		explosionSoundEffect = "DefaultExplosion";
 		
 		ExplosionEffects = "ExploAmmoExplosion";
-		model = "\TIE\tracer_green.p3d";
+		model="a3\weapons_f\data\bullettracer\tracer_green";
+		tracerScale = 10;
 		effectFly = "SWOP_greenLaserEffect";
 		aiAmmoUsageFlags = "64 + 128 + 256 + 512";
 		allowAgainstInfantry = 1;
@@ -379,6 +392,11 @@ class CfgAmmo
 		supersonicCrackFar[] = {"\ca\Weapons\Data\Sound\supersonic_crack_50meters.wss", 1, 50};
 		supersonicCrackNear[] = {"\ca\Weapons\Data\Sound\supersonic_crack_close.wss", 1, 50};
 	};
+	class macro_new_ammo(laat_cannon_double): macro_new_ammo(laat_cannon)
+	{
+		model = "\TIE\tracer_green.p3d";
+		tracerScale = 1;
+	}
 
 	class swop_bywingCannonammo;
 	class macro_new_ammo(voltic):swop_bywingCannonammo
@@ -393,6 +411,19 @@ class CfgAmmo
 		
 	};
 
+	class laserAmmo_F;
+	class macro_new_ammo(ball_beam): laserAmmo_F
+	{
+		hit = 600;
+		indirectHit = 400;
+		indirectHitRange = 1;
+		explosive = 1;
+		caliber = 6;
+		ACE_caliber = 0;
+		aiAmmoUsageFlags = "64 + 128 + 256 + 512";
+		allowAgainstInfantry = 1;
+	};
+
 	class macro_new_ammo(ball_turret):TurboLaser_Laserx2//SW_SpeederBikeCanon_Ammo//Vwing_ammo
 	{
 		hit = 600;
@@ -401,13 +432,12 @@ class CfgAmmo
 		indirectHitRange = 1;
 		explosive = 1;
 		caliber = 6;
-		ACE_caliber=0;
+		ACE_caliber = 0;
 		tracerScale = 1;
 		aiAmmoUsageFlags = "64 + 128 + 256 + 512";
 		allowAgainstInfantry = 1;
 	
 		model = "\SWOP_Main\Effects\Tracer\Lasergreen";
-		
 	
 		cost = 1;
 	
