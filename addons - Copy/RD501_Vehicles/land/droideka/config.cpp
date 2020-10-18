@@ -38,7 +38,7 @@ class CfgVehicles
 	class SWOP_Droideka;
 
 	// REMOVE FROM HERE
-	class macro_new_vehicle(droideka,base_depr) :SWOP_Droideka
+	/*class macro_new_vehicle(droideka,base_depr) :SWOP_Droideka
 	{
 		scope=2;
 		armor = 275;
@@ -91,7 +91,7 @@ class CfgVehicles
 		hiddenSelections[] = {"Camo1"};
 		hiddenSelectionsTextures[] = {"SW_CloneWarsWeapons\Droideka\DroidikaOK_co.paa"};
 
-	};
+	};*/
 	// REMOVE TO HERE
 
 
@@ -100,7 +100,7 @@ class CfgVehicles
 	class macro_new_vehicle(droideka,base): SWOP_Droideka
 	{
 		scope=2;
-		displayName = "Static Droideka (new)";
+		displayName = "Static Droideka";
 		class EventHandlers: DefaultEventhandlers {}; 
 
 		faction = macro_cis_faction;
@@ -132,17 +132,17 @@ class CfgVehicles
 
 	class macro_new_vehicle(droideka,normal): macro_new_vehicle(droideka,base)
 	{
-		displayName = "Moveable Droideka (new)";
+		displayName = "Moveable Droideka)";
 		hiddenSelectionsTextures[] = {"SW_CloneWarsWeapons\Droideka\DroidikaOK_co.paa"};
 	};
 	class macro_new_vehicle(droideka,camo): macro_new_vehicle(droideka,normal)
 	{
-		displayName = "Moveable Droideka  (new)(Camo)";
+		displayName = "Moveable Droideka(Camo)";
 		hiddenSelectionsTextures[] = {"SW_CloneWarsWeapons\Droideka\DroidikacamoOK_co.paa"};
 	};
 	class macro_new_vehicle(droideka,support): macro_new_vehicle(droideka,normal)
 	{
-		displayName = "Moveable Droideka  (new)(Support)";
+		displayName = "Moveable Droideka(Support)";
 		hiddenSelectionsTextures[] = {"SW_CloneWarsWeapons\Droideka\DroidikasupportOK_co.paa"};
 	};
 

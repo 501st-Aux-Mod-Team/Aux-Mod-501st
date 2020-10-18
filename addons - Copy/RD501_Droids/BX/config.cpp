@@ -68,7 +68,8 @@ class CfgVehicles
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
-			"JLTS_droid_comlink"
+			"JLTS_droid_comlink",
+			"JLTS_NVG_droid_chip_1"
 		};
 		respawnlinkeditems[]=
 		{
@@ -76,7 +77,8 @@ class CfgVehicles
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
-			"JLTS_droid_comlink"
+			"JLTS_droid_comlink",
+			"JLTS_NVG_droid_chip_1"
 		};
 		items[]={
 			_3(macro_zip_tie)

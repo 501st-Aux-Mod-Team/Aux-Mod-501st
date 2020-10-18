@@ -232,7 +232,7 @@ class CfgVehicles
 				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
 			};
 		};
-		armor=30;
+		armor=15;
 		armorStructural=1;
 		explosionShielding=0.40000001;
 		uniformClass=macro_new_uniform_class(opfor,B2_Armor)
@@ -255,7 +255,7 @@ class CfgVehicles
 	class macro_new_unit_class(opfor,B2_droid_Super) : macro_new_unit_class(opfor,B2_droid_Standard)
 	{
 		displayname = "Super B2";
-		armor=45;
+		armor=30;
 		armorStructural=1;
 		uniformClass=macro_new_uniform_class(opfor,B2_SuperArmor)
 		hiddenSelections[]=

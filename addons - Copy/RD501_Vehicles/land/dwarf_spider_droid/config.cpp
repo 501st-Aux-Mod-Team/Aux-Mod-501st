@@ -39,7 +39,7 @@ class CfgVehicles
 	};
 
 	// REMOVE FROM HERE
-	class macro_new_vehicle(dwarf_spider_droid,MkII_depr): SpiderDSD
+	/*class macro_new_vehicle(dwarf_spider_droid,MkII_depr): SpiderDSD
 	{
 		displayName = "Dwarf Spider Droid MkII";
 		armor = 350;
@@ -72,13 +72,13 @@ class CfgVehicles
 	{
 		displayName = "Dwarf Spider Droid MkII (Moveable)";
 		forceInGarage = 0;
-	};
+	};*/
 	// REMOVE TO HERE
 
 
 	class macro_new_vehicle(dwarf_spider_droid,MkII): SpiderDSD
 	{
-		displayName = "Dwarf Spider Droid MkII (new)";
+		displayName = "Dwarf Spider Droid MkII";
 		scope = 2;
 		forceInGarage = 1;
 
@@ -113,7 +113,7 @@ class CfgVehicles
 
 	class macro_new_vehicle(dwarf_spider_droid,Movable_MkII): macro_new_vehicle(dwarf_spider_droid,MkII)
 	{
-		displayName = "Dwarf Spider Droid MkII (new) (Moveable)";
+		displayName = "Dwarf Spider Droid MkII (Moveable)";
 		forceInGarage = 0;
 	};
 };	

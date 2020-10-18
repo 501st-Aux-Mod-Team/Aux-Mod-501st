@@ -55,7 +55,24 @@ class pilotCamera
 	pilotOpticsShowCursor=1;
 	controllable=1;
 };
-
+class ViewPilot
+	{
+		initAngleX = 0;
+		minAngleX = -55;
+		maxAngleX = 85;
+		initAngleY = 0;
+		minAngleY = -150;
+		maxAngleY = 150;
+		minFov = 0.25;
+		maxFov = 1.25;
+		initFov = 0.75;
+		minMoveX = -100;
+		maxMoveX = 100;
+		minMoveY = 0;
+		maxMoveY = 0;
+		minMoveZ = 0;
+		maxMoveZ = 0;
+	};
 //transport
 class TransportWeapons
 {

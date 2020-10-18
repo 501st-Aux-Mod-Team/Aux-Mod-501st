@@ -60,8 +60,6 @@ class Turrets : Turrets {\
 		class Turrets : Turrets {\
 			/*Commanders guns,the side ones*/\
 			class CommanderOptics:CommanderOptics {\
-				weapons[] = {"Cannon_ITTLaser"};\
-				magazines[] = {"10000Rnd_ITTLaser_Cannon_Minigun","10000Rnd_ITTLaser_Cannon_Minigun"};\
 				AAT_WEAPON_ROTATION;\
 			};\
 		};\
@@ -96,11 +94,6 @@ class Turrets : Turrets {\
 	class MainTurret : MainTurret {\
 		class Turrets : Turrets {\
 			class CommanderOptics : CommanderOptics {\
-				maxHorizontalRotSpeed = .1;/*1.8*/\
-				maxVerticalRotSpeed = .1;/*1.8*/\
-				AAT_WEAPON_ROTATION;\
-				weapons[] = {"Cannon_AAT_mc","Cannon_ATST"};\
-				magazines[] = {"1000Rnd_Laser_Cannon_Minigun","1000Rnd_Laser_Cannon_Minigun","100Rnd_Laser_Cannon_AAT_m", "100Rnd_Laser_Cannon_AAT_m", "100Rnd_Laser_Cannon_AAT_m"};\
 			};\
 		};\
 		maxHorizontalRotSpeed = 1.2/3;\
