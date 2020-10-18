@@ -78,7 +78,9 @@ class CfgWeapons
 				scope = 0;
 				compatibleItems[] = 
 				{
-					macro_new_weapon(scope,dc_15a_acogtcw)
+					"RD501_RCO",
+					"RD501_RCO_2",
+					"RD501_RCO_3"
 				};
 			};
 			class MuzzleSlot: MuzzleSlot

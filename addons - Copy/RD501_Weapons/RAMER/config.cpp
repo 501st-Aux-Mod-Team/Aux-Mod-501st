@@ -67,7 +67,9 @@ class cfgWeapons
 				scope = 0;
 				compatibleItems[] = 
 				{
-					"optic_Holosight_blk_F"
+					"RD501_Holosight",
+					"RD501_Holosight_2",
+					"RD501_Holosight_3"
 				};
 
 			};
