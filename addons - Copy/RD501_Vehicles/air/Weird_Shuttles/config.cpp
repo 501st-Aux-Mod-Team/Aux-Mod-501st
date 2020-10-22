@@ -99,6 +99,9 @@ class CfgVehicles
 		armor = 600;
 		forceInGarage=1;
 		displayname = "Millenium Falcon Mk.I";
+
+		class EventHandlers{};
+
 		class UserActions
 		{
 			class AfterburnerOn

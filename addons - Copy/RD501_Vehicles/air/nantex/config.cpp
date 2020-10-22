@@ -35,7 +35,6 @@ class CfgPatches
 	};
 };
 
-
 #include "../../common/sensor_templates.hpp"
 class CfgVehicles
 {
@@ -59,6 +58,8 @@ class CfgVehicles
 		vehicleClass = macro_editor_vehicle_type_air(CIS)
 
 		crew=macro_new_unit_class(opfor,B1_pilot)
+
+		class EventHandlers{};
 
 		class ACE_SelfActions:ACE_SelfActions
 		{

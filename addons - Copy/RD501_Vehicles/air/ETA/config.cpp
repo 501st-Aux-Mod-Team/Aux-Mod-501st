@@ -74,6 +74,9 @@ class CfgVehicles
 		vehicleClass = macro_editor_vehicle_type_air(Republic)
 
 		gearsUpFrictionCoef = 25;
+
+		class EventHandlers{};
+
 		class UserActions
 		{
 			class AfterburnerOff

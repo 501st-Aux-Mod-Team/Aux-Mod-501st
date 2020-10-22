@@ -35,7 +35,6 @@ class CfgPatches
 	};
 };
 
-
 #include "../../common/sensor_templates.hpp"
 class CfgVehicles
 {
@@ -58,10 +57,10 @@ class CfgVehicles
 		editorSubcategory = macro_editor_cat_air(CIS)
 		vehicleClass = macro_editor_vehicle_type_air(CIS)
 
-		class UserActions
-		{
-			
-		};	
+		class EventHandlers{};
+
+		class UserActions{};
+
 		weapons[] = {
 			macro_new_weapon(wynd,agm),
 			macro_new_weapon(bomb,cluster),

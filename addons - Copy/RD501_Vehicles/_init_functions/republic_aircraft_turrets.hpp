@@ -4,7 +4,7 @@
             init = "[_this select 0] execVM '\arc\init.sqf';[_this select 0] execVM '\arc\initturbine.sqf';";
         }
         class drone_script {
-            init = [_this select 0,macro_single_quote(macro_new_vehicle(drone,Clone_Recon_Droid)),[0,-2.2,1.75]] spawn macro_fnc_name(apply_aircraft_drone);
+            init = [_this select 0,macro_single_quote(macro_new_vehicle(drone,Clone_Recon_Droid)),[0,-2.2,1.0]] spawn macro_fnc_name(apply_aircraft_drone);
         };
 		macro_standard_eh
     };

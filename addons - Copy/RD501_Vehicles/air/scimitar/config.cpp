@@ -35,7 +35,6 @@ class CfgPatches
 	};
 };
 
-
 #include "../../common/sensor_templates.hpp"
 class CBA_Extended_EventHandlers_base;
 class CfgVehicles
@@ -58,6 +57,9 @@ class CfgVehicles
 		faction = macro_empire_faction
 		editorSubcategory = macro_editor_cat_air(Empire_vtol)
 		vehicleClass = macro_editor_vehicle_type_air(Empire)
+
+		class EventHandlers{};
+
 		class UserActions
 		{
 			class AfterburnerOn

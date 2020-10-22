@@ -54,6 +54,7 @@ class CfgVehicles
 		};
 		class Components;
 		class ACE_SelfActions;
+		class EventHandlers{};
 	};
 
 	class macro_new_vehicle(ARC_170,MKII):swop_arc_t

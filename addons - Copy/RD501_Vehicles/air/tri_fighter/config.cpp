@@ -69,6 +69,8 @@ class CfgVehicles
 
 		crew=macro_new_unit_class(opfor,B1_pilot)
 
+		class EventHandlers{};
+
 		class UserActions
 		{
 			class AfterburnerOn
