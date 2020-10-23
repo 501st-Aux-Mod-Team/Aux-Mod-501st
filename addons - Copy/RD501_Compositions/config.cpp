@@ -49,6 +49,13 @@ class CfgGroups {
                     icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
                     #include "data\cis\bases\example_base.hpp"
                 };
+                
+                class RD501_Compositions_CIS_Base_1 {
+                    name="Snivy Submission Base (Blood Splatters)";
+                    side = 8;
+                    icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                    #include "data\cis\bases\snivy_test_base_1.hpp"
+                };
             };
             class RD501_Compositions_CIS_Ships {
                 name = "Ships";
