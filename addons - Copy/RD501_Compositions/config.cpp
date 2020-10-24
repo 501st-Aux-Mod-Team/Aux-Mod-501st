@@ -22,11 +22,17 @@ class CfgGroups {
             };
             class RD501_Compositions_Republic_Ships {
                 name = "Ships";
-                class RD501_Compositions_Republic_Ship_0 {
+                /*class RD501_Compositions_Republic_Ship_0 {
                     name="Example Ship";
                     side = 8;
                     icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
                     #include "data\republic\ships\example_ship.hpp"
+                };*/
+				class RD501_Compositions_Republic_Ship_0 {
+                    name="Quasaar FARP";
+                    side = 8;
+                    icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                    #include "data\republic\ships\quasaar_farp.hpp"
                 };
             };
             class RD501_Compositions_Republic_Installations {

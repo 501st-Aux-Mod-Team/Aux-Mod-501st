@@ -41,7 +41,7 @@ class CfgWeapons
 		displayName="Republic DC-15L";
 		recoil="recoil_mmg_02";
 		deployedPivot="bipod";
-		dispersion=0.00145;
+		dispersion=0.00075;
 		ACE_Overheating_mrbs = 450000;
 		magazines[]=
 		{
@@ -50,12 +50,12 @@ class CfgWeapons
 		class FullAuto:FullAuto
 		{
 			reloadTime=0.08;
-			dispersion=0.00145;
+			dispersion=0.00075;
 		};
 		class Single : Single
 		{
 			reloadTime=0.08;
-			dispersion=0.00145;
+			dispersion=0.00075;
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{

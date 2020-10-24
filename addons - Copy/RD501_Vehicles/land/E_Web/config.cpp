@@ -138,7 +138,7 @@ class CfgVehicles
 			base = "";
 			assembleTo = "";
 			displayName = "";
-			dissasembleTo[] = {"RD501_cis_backpacks_eweb_bag"};
+			dissasembleTo[] = {macro_new_vehicle(blufor,eweb_bag)};
 		};
 
 		class EventHandlers :DefaultEventhandlers {};

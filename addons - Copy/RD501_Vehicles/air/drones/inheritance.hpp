@@ -27,6 +27,7 @@ class Weapon_Bag_Base: Bag_Base
 	class assembleInfo;
 };
 class JLTS_UAV_prowler_gar;
+class B_UAV_06_F;
 class O_UAV_01_F:UAV_01_base_F
 {
 	class Turrets;
