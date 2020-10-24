@@ -105,6 +105,7 @@ class CfgVehicles
 		rudderControlsSensitivityCoef=4.5;
 		gearsUpFrictionCoef=0;
 
+		class EventHandlers{};
 		class UserActions
 		{
 			class AfterburnerOn

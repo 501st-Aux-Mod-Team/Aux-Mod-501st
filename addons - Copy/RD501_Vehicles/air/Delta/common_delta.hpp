@@ -2,6 +2,7 @@
 		editorSubcategory = macro_editor_cat_air(Republic_vtol)
 		vehicleClass = macro_editor_vehicle_type_air(Republic)
 
+		class EventHandlers{};
 		class UserActions
 		{
 			class AfterburnerOff

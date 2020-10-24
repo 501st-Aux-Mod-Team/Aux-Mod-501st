@@ -92,7 +92,9 @@ class CfgVehicles
 		altNoForce = 9000;
 		airBrakeFrictionCoef = 80.4;
 		armor = 200;
-		
+
+		class EventHandlers{};
+
 		class UserActions
 		{
 			class AfterburnerOn
@@ -167,7 +169,9 @@ class CfgVehicles
 		airBrakeFrictionCoef = 80.4;
 		altNoForce = 9000;
 		armor = 200;
-		
+
+		class EventHandlers{};
+
 		class ACE_SelfActions:ACE_SelfActions
 		{
 			#include "../../common/universal_hud_color_changer.hpp"

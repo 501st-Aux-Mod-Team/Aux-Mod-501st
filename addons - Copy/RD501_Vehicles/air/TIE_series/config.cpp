@@ -61,8 +61,6 @@ class CfgVehicles
 	macro_inherit_ace_selfactions(swop_tiedef,Plane_Base_F)
 	macro_inherit_ace_selfactions(swop_tieb,Plane_Base_F)
 	macro_inherit_ace_selfactions(swop_tiex1,Plane_Base_F)
-	
-	
 
 	class macro_new_vehicle(TIE,stryker_MkII) : swop_tie_stryker
 	{
@@ -76,6 +74,9 @@ class CfgVehicles
 		faction = macro_empire_faction
 		editorSubcategory = macro_editor_cat_air(Empire_vtol)
 		vehicleClass = macro_editor_vehicle_type_air(Empire)
+
+		class EventHandlers{};
+
 		class UserActions
 		{
 			class AfterburnerOn
@@ -139,6 +140,9 @@ class CfgVehicles
 		faction = macro_empire_faction
 		editorSubcategory = macro_editor_cat_air(Empire_vtol)
 		vehicleClass = macro_editor_vehicle_type_air(Empire)
+
+		class EventHandlers{};
+
 		class UserActions
 		{
 			class AfterburnerOn
@@ -197,6 +201,9 @@ class CfgVehicles
 		faction = macro_empire_faction
 		editorSubcategory = macro_editor_cat_air(Empire_vtol)
 		vehicleClass = macro_editor_vehicle_type_air(Empire)
+
+		class EventHandlers{};
+
 		class UserActions
 		{
 			class AfterburnerOn
@@ -256,6 +263,9 @@ class CfgVehicles
 		faction = macro_empire_faction
 		editorSubcategory = macro_editor_cat_air(Empire_vtol)
 		vehicleClass = macro_editor_vehicle_type_air(Empire)
+
+		class EventHandlers{};
+
 		class UserActions
 		{
 			class AfterburnerOn
@@ -315,10 +325,9 @@ class CfgVehicles
 		faction = macro_empire_faction
 		editorSubcategory = macro_editor_cat_air(Empire_vtol)
 		vehicleClass = macro_editor_vehicle_type_air(Empire)
-		class UserActions
-		{
-			
-		};
+
+		class EventHandlers{};
+		class UserActions{};
 
 		weapons[] = {
 			macro_basic_air_weapons,
@@ -366,6 +375,9 @@ class CfgVehicles
 		faction = macro_empire_faction
 		editorSubcategory = macro_editor_cat_air(Empire_vtol)
 		vehicleClass = macro_editor_vehicle_type_air(Empire)
+
+		class EventHandlers{};
+
 		class UserActions
 		{
 			class AfterburnerOn
@@ -414,14 +426,18 @@ class CfgVehicles
 	};
 
 	class Xtiefo;
+
 	macro_inherit_ace_selfactions(swop_tie_silencer,Plane_Base_F)
 	macro_inherit_ace_selfactions(swop_tiefo,Xtiefo)
 	macro_inherit_ace_selfactions(swop_tiefosf,Xtiefo)
+
 	class macro_new_vehicle(TIE,fo) : swop_tiefo
 	{
 
 		forceInGarage=1;
 		displayName="TIE First Order Class Mk.II";
+
+		class EventHandlers{};
 
 		class ACE_SelfActions:ACE_SelfActions
 		{		
@@ -481,6 +497,8 @@ class CfgVehicles
 	{
 		forceInGarage=1;
 		displayName="TIE Special Forces Class Mk.II";
+
+		class EventHandlers{};
 
 		class ACE_SelfActions:ACE_SelfActions
 		{		
@@ -548,6 +566,8 @@ class CfgVehicles
 		faction = macro_first_order_faction
 		editorSubcategory = macro_editor_cat_air(First_Order)
 		vehicleClass = macro_editor_vehicle_type_air(First_Order)
+
+		class EventHandlers{};
 
 		class ACE_SelfActions:ACE_SelfActions
 		{		

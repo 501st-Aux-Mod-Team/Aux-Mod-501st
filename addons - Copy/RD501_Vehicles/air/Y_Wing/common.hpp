@@ -8,6 +8,8 @@
 		VTOLRollInfluence = 6*5;
 		gearsUpFrictionCoef = 25;
 
+		class EventHandlers{};
+
 		class Turrets:Turrets
 		{
 			class MainTurret:MainTurret

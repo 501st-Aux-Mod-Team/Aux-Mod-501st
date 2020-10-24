@@ -59,6 +59,9 @@ class CfgVehicles
 		faction = macro_cis_faction
 		editorSubcategory = macro_editor_cat_air(CIS)
 		vehicleClass = macro_editor_vehicle_type_air(CIS)
+
+		class EventHandlers{};
+
 		class UserActions
 		{
 			class AfterburnerOn

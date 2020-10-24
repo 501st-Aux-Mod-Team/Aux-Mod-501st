@@ -42,8 +42,6 @@ class CfgPatches
 
 class CfgVehicles
 {
-	
-
 	class swop_HMP_droidgunship;
 
 	class swop_HMP_droidgunship_transport;

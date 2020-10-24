@@ -50,27 +50,20 @@ class CfgVehicles
 	class swop_xw:Plane_Base_F
 	{
 		class ACE_SelfActions;
+		class EventHandlers{};
 	};
 
 	class swop_xwt70:Plane_Base_F
 	{
 		scope=0;
-		class EventHandlers
-		{
-			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-			init = "[_this select 0] execVM '\XT\init.sqf';[_this select 0] execVM '\XT\initturbine.sqf';";
-			killed = "_this call (uinamespace getvariable 'BIS_fnc_effectKilled');";
-			 class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
-		};
+		class EventHandlers{};
 		class ACE_SelfActions;
 	};
 
 	class swop_xwt70bo:swop_xwt70
 	{
 		scope=0;
-		class ACE_SelfActions:ACE_SelfActions{
-
-		};
+		class ACE_SelfActions:ACE_SelfActions{};
 	};
 
 	class macro_new_vehicle(X_wing,T_65_MkII) : swop_xw
@@ -174,7 +167,6 @@ class CfgVehicles
 		hiddenSelections[] = {"camo1", "camo2", "start", "start2", "burn", "burn2", "t1l", "t2l", "t1r", "t2r"};
 		hiddenSelectionsTextures[] = {"XT\fusfive.paa", "XT\wingsfive.paa"};
 	};
-
 	class macro_new_vehicle(X_wing,T_65_blue_MkII) : macro_new_vehicle(X_wing,T_65_MkII)
 	{
 		displayname = "X-Wing T-65 (Blue) Mk.II";
