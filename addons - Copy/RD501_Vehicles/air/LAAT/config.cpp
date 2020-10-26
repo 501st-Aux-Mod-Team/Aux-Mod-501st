@@ -481,6 +481,30 @@ class CfgVehicles
 		class UserActions
 		{
 			#include "user_action.hpp"
+			class StartRefuel
+			{
+				displayName = "<t color='#07CC0C'>[Start Refueling]</t>";
+				displayNameDefault = "<t color='#07CC0C'>[Start Refueling]</t>";
+				textToolTip = "<t color='#07CC0C'>[Start Refueling]</t>";
+				position = "pilotview";
+				radius = 20;
+				priority = 21;
+				onlyForPlayer = 1;
+				condition = "((player == driver this) AND (alive this))";
+				statement = "this call RD501_fnc_mc_startRefuel;";
+			};
+			class StopRefuel
+			{
+				displayName = "<t color='#BC0404'>[Stop Refueling]</t>";
+				displayNameDefault = "<t color='#BC0404'>[Stop Refueling]</t>";
+				textToolTip = "<t color='#BC0404'>[Stop Refueling]</t>";
+				position = "pilotview";
+				radius = 20;
+				priority = 21;
+				onlyForPlayer = 1;
+				condition = "((player == driver this) AND (alive this))";
+				statement = "this call RD501_fnc_mc_stopRefuel;";
+			};
 		};
 		class EventHandlers : DefaultEventhandlers {
 			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";

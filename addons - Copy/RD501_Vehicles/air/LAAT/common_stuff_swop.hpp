@@ -1,13 +1,16 @@
 class EventHandlers : DefaultEventhandlers 
-	{
-		fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-		init = "[_this select 0] execVM 'RD501_Main\functions\autocrate\autocrate.sqf';";
-	};
-	
+{
+	fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
+	init = "[_this select 0] execVM 'RD501_Main\functions\autocrate\autocrate.sqf';";
+};
+
+RD501_magclamp_small_forbidden=1;
+RD501_magclamp_large_offset={0.0,0.0,-5.0};
+
 	faction = macro_republic_faction
 	editorSubcategory = macro_editor_cat_air(Republic_heli)
 	vehicleClass = macro_editor_vehicle_type_air(Republic)
-	
+
 	maximumLoad = 5000000000;
 	slingLoadMaxCargoMass = 5000000000;
 
