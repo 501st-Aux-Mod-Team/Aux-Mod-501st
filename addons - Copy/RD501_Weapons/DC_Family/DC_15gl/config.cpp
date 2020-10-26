@@ -17,12 +17,20 @@ class CfgPatches
 		units[]={};
 		weapons[]={
 			macro_new_weapon(DC,15gl),
+			macro_new_weapon(DC,r15gl)
 		};
 	};
 };
 
 class CfgWeapons
 {
+	class 3AS_DC15A_Base_F;
+	class 3AS_DC15A_GL: 3AS_DC15A_Base_F
+	{
+		class WeaponSlotsInfo;
+		class Single;
+		class Burst;
+	};
 	class RD501_stun_muzzle;
 	class JLTS_DC15A_ugl;
 	class JLTS_DC15A_ugl_plastic:JLTS_DC15A_ugl
@@ -36,6 +44,7 @@ class CfgWeapons
 		class MuzzleSlot;
 		};
 	};
+	class 3AS_GL_F;
 	class macro_new_weapon(DC,15gl):JLTS_DC15A_ugl_plastic
 	{
 		displayName="Republic DC-15A UGL";
@@ -115,6 +124,46 @@ class CfgWeapons
 				displayName = "Pointer Slot";
 				compatibleItems[] = {"acc_flashlight","acc_pointer_IR","ace_acc_pointer_green"}; 
 			};
+		};
+	};
+	class macro_new_weapon(DC,r15gl):3AS_DC15A_GL
+	{
+		displayName="Republic DC-15A UGL mod0";
+		JLTS_hasElectronics=0;
+		ACE_Overheating_mrbs = 300000;
+		magazines[]=
+		{
+			macro_new_mag(10mw,30)
+		};
+		modes[] = {"Single", "Burst"};
+		muzzles[]=
+		{
+			"this",
+			"Stun",
+			"RD501_15A_UGL_Muzzle"
+		};
+		class RD501_15A_UGL_Muzzle:3AS_GL_F
+		{
+		magazines[] = {};
+		magazineWell[] += {macro_new_magwell(GL_Mags)};
+		};
+		class Stun: RD501_stun_muzzle
+		{
+			displayName="High Energy StunMode";
+		};
+		class Single:Single
+		{
+			reloadTime=0.1;
+		};
+		class Burst : Single
+		{
+			reloadTime=0.1;
+			burst=3;
+			textureType="burst";
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=80;
 		};
 	};
 };
