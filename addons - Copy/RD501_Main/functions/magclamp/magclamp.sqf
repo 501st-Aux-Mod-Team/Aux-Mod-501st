@@ -20,12 +20,14 @@ macro_grp_fnc_name(magclamp,handle_universal) = {
 	    private _is_attached = _target getVariable["RD501_mc_is_attached",false];
 	    private _cant_be_clamped = (configFile >> "CfgVehicles" >> (typeOf _target) >> _forbid_param) call BIS_fnc_getCfgDataBool;
 
-	    while {_target isKindOf "Man" || isPlayer _target || _is_attached || _cant_be_clamped} do {
+	    while {_target isKindOf "Man" || _is_attached || _cant_be_clamped} do {
 	        _target_index = _target_index + 1;
 	        _target = _objects select _target_index;
 	        _is_attached = _target getVariable["RD501_mc_is_attached",false];
 	        _cant_be_clamped = (configFile >> "CfgVehicles" >> (typeOf _target) >> _forbid_param) call BIS_fnc_getCfgDataBool;
         };
+
+        if (isNull _target) exitWith {};
 
 	    private _offset = (configFile >> "CfgVehicles" >> (typeOf _target) >> _offset_param) call BIS_fnc_getCfgDataArray;
 	    if (count _offset == 3) then {
