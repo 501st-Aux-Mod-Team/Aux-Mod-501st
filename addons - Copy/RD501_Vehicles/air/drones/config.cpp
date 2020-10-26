@@ -520,7 +520,7 @@ class CfgVehicles
 	};
 	class macro_new_vehicle(drone,razor_ammo): B_UAV_06_F
 	{
-		displayName = "Prime Medical Drone"
+		displayName = "Prime Ammo Drone"
 		faction = macro_republic_faction
 		scope=2;
 		forceInGarage = 1;
