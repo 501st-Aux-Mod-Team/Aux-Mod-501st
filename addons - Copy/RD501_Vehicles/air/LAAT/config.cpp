@@ -81,7 +81,6 @@ class CfgVehicles
 		displayName="LAAT/I MK.I";
 
 		#include "common_stuff_tcw.hpp"
-		transportSoldier=24;
 
 		RD501_magclamp_small_1[] = {0.0,1.0,-1.0};
 
@@ -153,7 +152,6 @@ class CfgVehicles
 		displayName="LAAT/I MK.I (Lights)";
 
 		#include "common_stuff_tcw.hpp"
-		transportSoldier=29;
 
 		RD501_magclamp_small_1[] = {0.0,1.0,-1.0};
 
@@ -192,7 +190,6 @@ class CfgVehicles
 		displayName="LAAT/I MK.II";
 
 		#include "common_stuff_tcw.hpp"
-		transportSoldier=24;
 
 		RD501_magclamp_small_1[] = {0.0,1.0,-1.0};
 
@@ -226,7 +223,6 @@ class CfgVehicles
 		displayName="LAAT/I MK.II (Lights)";
 
 		#include "common_stuff_tcw.hpp"
-		transportSoldier=29
 
 		RD501_magclamp_small_1[] = {0.0,1.0,-1.0};
 
