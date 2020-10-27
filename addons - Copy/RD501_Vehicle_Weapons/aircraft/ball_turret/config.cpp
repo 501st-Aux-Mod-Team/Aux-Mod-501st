@@ -16,7 +16,10 @@ class CfgPatches
 		};
 		requiredVersion=0.1;
 		units[]={};
-		weapons[]={};
+		weapons[]={
+			macro_new_weapon(turret,laat_ball_beam_l),
+			macro_new_weapon(turret,laat_ball_beam_r)
+		};
 	};
 };
 
