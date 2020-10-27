@@ -43,7 +43,7 @@ class 3as_laatFloodLight_Base: 3as_laat_Base
 	};
 };
 class 3as_LAAT_Mk1: 3as_laat_Base{};
-class 3as_LAAT_Mk3: 3as_laatFloodLight_Base{};	//Mk1Lights
+class 3as_LAAT_Mk1Lights: 3as_laatFloodLight_Base{};
 class 3as_LAAT_Mk2: 3as_laatUnarmed_Base{};
 class 3as_LAAT_Mk2Lights: 3as_laatFloodLight_Base{};
 
