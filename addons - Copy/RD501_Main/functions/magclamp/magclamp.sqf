@@ -105,10 +105,8 @@ macro_grp_fnc_name(magclamp,handle_drop_all) = {
 
 // refuel target function
 ["RD501_mc_set_fuel", {
-    systemChat str this;
-    systemChat str vehicle this;
     _vehicle = (vehicle this);
-    if (isNil _vehicle) exitWith {};
+    if (isNull _vehicle) exitWith {};
     _new_fuel = _vehicle getVariable["RD501_mc_targetFuel", 0];
     _vehicle setFuel _new_fuel;
 }, []] call CBA_fnc_addEventHandlerArgs;

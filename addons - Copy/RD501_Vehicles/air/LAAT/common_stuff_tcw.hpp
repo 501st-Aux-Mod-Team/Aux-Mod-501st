@@ -5,7 +5,7 @@ class EventHandlers : DefaultEventhandlers
 };
 
 scope=2;
-author="RD501"
+author="RD501";
 forceInGarage = 1;
 
 faction = macro_republic_faction
@@ -13,7 +13,7 @@ editorSubcategory = macro_editor_cat_air(Republic_heli)
 vehicleClass = macro_editor_vehicle_type_air(Republic)
 
 RD501_magclamp_small_forbidden=1;
-RD501_magclamp_large_offset={0.0,0.0,-5.0};
+RD501_magclamp_large_offset[]={0.0,0.0,-3.0};
 
 weapons[] = {
 	macro_basic_air_weapons,

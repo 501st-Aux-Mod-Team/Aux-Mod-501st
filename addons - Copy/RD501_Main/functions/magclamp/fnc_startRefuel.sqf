@@ -42,6 +42,8 @@ _vehicle setVariable["RD501_mc_lastRefuelTick", _firstTick, true];
     private _target_new_fuel = ((_target_fuel + _transfer) / _maxFuelTarget);
     private _source_new_fuel = ((_source_fuel - _transfer) / _maxFuelSource);
 
+    systemChat str _transfer;
+
     _target setVariable ["RD501_mc_targetFuel", _target_new_fuel];
     ["RD501_mc_set_fuel", [], _target] call CBA_fnc_targetEvent;
 

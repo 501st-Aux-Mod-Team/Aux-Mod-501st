@@ -5,7 +5,7 @@ class EventHandlers : DefaultEventhandlers
 };
 
 RD501_magclamp_small_forbidden=1;
-RD501_magclamp_large_offset={0.0,0.0,-5.0};
+RD501_magclamp_large_offset[]={0.0,0.0,-3.0};
 
 	faction = macro_republic_faction
 	editorSubcategory = macro_editor_cat_air(Republic_heli)
