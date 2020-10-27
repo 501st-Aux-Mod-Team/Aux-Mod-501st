@@ -2,8 +2,8 @@ params["_vehicle"];
 
 private _rate = 10;
 
-private _attached = _vehicle getVariable["RD501_mc_attached_large",objNull];
-_vehicle setVariable["RD501_mc_stop_refuel",false,true];
+private _attached = _vehicle getVariable["RD501_mc_attached_large", objNull];
+_vehicle setVariable["RD501_mc_stop_refuel", false, true];
 
 _maxFuelSource = getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "fuelCapacity");
 _maxFuelTarget = getNumber (configFile >> "CfgVehicles" >> typeOf _attached >> "fuelCapacity");
@@ -17,7 +17,7 @@ if (isMultiplayer) then
     _firstTick = time;
 };
 
-_vehicle setVariable["RD501_mc_lastRefuelTick",_firstTick,true];
+_vehicle setVariable["RD501_mc_lastRefuelTick", _firstTick, true];
 
 [{
     params ["_args", "_pfID"];
@@ -39,15 +39,16 @@ _vehicle setVariable["RD501_mc_lastRefuelTick",_firstTick,true];
 
     private _transfer = _rate * _deltaT;
 
-    /*
-     *  REMOTE EXECUTE THIS
-     */
-    _target setFuel ((_target_fuel + _transfer) / _maxFuelTarget);
+    private _target_new_fuel = ((_target_fuel + _transfer) / _maxFuelTarget);
+    private _source_new_fuel = ((_source_fuel - _transfer) / _maxFuelSource);
 
-    _source setFuel ((_source_fuel - _transfer) / _maxFuelSource);
-    _source setVariable["RD501_mc_lastRefuelTick",_currentTime,true];
+    _target setVariable ["RD501_mc_targetFuel", _target_new_fuel];
+    ["RD501_mc_set_fuel", [], _target] call CBA_fnc_targetEvent;
 
-    private _stop = _source getVariable["RD501_mc_stop_refuel",false];
+    _source setFuel _source_new_fuel;
+    _source setVariable["RD501_mc_lastRefuelTick", _currentTime, true];
+
+    private _stop = _source getVariable["RD501_mc_stop_refuel", false];
     if (_stop) then
     {
         [_pfID] call CBA_fnc_removePerFrameHandler;

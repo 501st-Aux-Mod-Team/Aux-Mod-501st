@@ -89,8 +89,7 @@ macro_grp_fnc_name(magclamp,handle_drop_all) = {
     };
 };
 
-
-//add keybinds
+// add keybinds
 ["RD501 Magclamp","small_1",["First Small Clamp (Laat/I, Laat/C Left)","Activate/Deactivate left Magclamp on Laat/C or main Magclamp on Laat/I"],{
     [player] call macro_grp_fnc_name(magclamp,handle_small_1_pressed);
 },"",[DIK_7,[false,false,false]],false] call cba_fnc_addKeybind;
@@ -103,3 +102,13 @@ macro_grp_fnc_name(magclamp,handle_drop_all) = {
 ["RD501 Magclamp","detach_all",["Detach All","Detach all clamped vehicles"],{
     [player] call macro_grp_fnc_name(magclamp,handle_drop_all);
 },"",[DIK_0,[false,false,false]],false] call cba_fnc_addKeybind;
+
+// refuel target function
+["RD501_mc_set_fuel", {
+    systemChat str this;
+    systemChat str vehicle this;
+    _vehicle = (vehicle this);
+    if (isNil _vehicle) exitWith {};
+    _new_fuel = _vehicle getVariable["RD501_mc_targetFuel", 0];
+    _vehicle setFuel _new_fuel;
+}, []] call CBA_fnc_addEventHandlerArgs;
