@@ -26,7 +26,20 @@ _vehicle setVariable["RD501_mc_nextRefuelUpdate", 0.1, true];
     params ["_args", "_pfID"];
     _args params ["_target", "_source", "_rate", "_maxFuelSource", "_maxFuelTarget"];
 
-    private _stop = _source getVariable["RD501_mc_stop_refuel", false];
+    if (!alive _source || {!alive _sink}) then 
+    {
+        _vehicle setVariable["RD501_mc_lastRefuelTick", nil, true];
+        _vehicle setVariable["RD501_mc_nextRefuelUpdate", nil, true];
+        [_pfID] call CBA_fnc_removePerFrameHandler;
+    };
+
+    if (_source getVariable["RD501_mc_stop_refuel", false]) then
+    {
+        hint "Refueling stopped";
+        _vehicle setVariable["RD501_mc_lastRefuelTick", nil, true];
+        _vehicle setVariable["RD501_mc_nextRefuelUpdate", nil, true];
+        [_pfID] call CBA_fnc_removePerFrameHandler;
+    };
 
     private _currentTime = 0;
     if (isMultiplayer) then
@@ -36,12 +49,11 @@ _vehicle setVariable["RD501_mc_nextRefuelUpdate", 0.1, true];
     {
         _currentTime = time;
     };
-    private _lastTick = _source getVariable["RD501_mc_lastRefuelTick",objNull];
-    private _deltaT = _currentTime - _lastTick;
-
+    
     private _target_fuel = (fuel _target) * _maxFuelTarget;
     private _source_fuel = (fuel _source) * _maxFuelSource;
 
+    private _deltaT = _currentTime - (_source getVariable["RD501_mc_lastRefuelTick", 0]);
     private _transfer = _rate * _deltaT;
 
     private _target_new_fuel = ((_target_fuel + _transfer) / _maxFuelTarget);
@@ -53,27 +65,22 @@ _vehicle setVariable["RD501_mc_nextRefuelUpdate", 0.1, true];
     {
         _target_new_fuel = 1.0;
         hint "Refueling complete";
-        _stop = true;
+        _vehicle setVariable["RD501_mc_lastRefuelTick", nil, true];
+        _vehicle setVariable["RD501_mc_nextRefuelUpdate", nil, true];
+        [_pfID] call CBA_fnc_removePerFrameHandler;
     } else 
     {
         if (_target_new_fuel >= _last_update) then
         {
             _last_update = round(_target_new_fuel * 10) / 10;
-            hint format ["Refueling at %1", _last_update];
+            hint format ["Refueling at %1 percent", str (_last_update*100)];
             _source setVariable["RD501_mc_nextRefuelUpdate", _last_update+0.1, true];
         };
     };
 
-    systemChat format ["Refuel status: %1", _target_new_fuel * 100];
-
-    _target setVariable ["RD501_mc_targetFuel", _target_new_fuel];
-    ["RD501_mc_set_fuel", [], _target] call CBA_fnc_targetEvent;
+    ["RD501_mc_set_fuel", _target_new_fuel, _target] call CBA_fnc_targetEvent;
 
     _source setFuel _source_new_fuel;
     _source setVariable["RD501_mc_lastRefuelTick", _currentTime, true];
 
-    if (_stop) then
-    {
-        [_pfID] call CBA_fnc_removePerFrameHandler;
-    };
 }, 1, [_attached, _vehicle, _rate, _maxFuelSource, _maxFuelTarget]] call CBA_fnc_addPerFrameHandler;

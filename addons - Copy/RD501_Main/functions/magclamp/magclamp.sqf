@@ -20,7 +20,7 @@ macro_grp_fnc_name(magclamp,handle_universal) = {
 	    private _is_attached = _target getVariable["RD501_mc_is_attached",false];
 	    private _cant_be_clamped = (configFile >> "CfgVehicles" >> (typeOf _target) >> _forbid_param) call BIS_fnc_getCfgDataBool;
 
-	    while {_target isKindOf "Man" || _is_attached || _cant_be_clamped} do {
+	    while {_target == _vehicle || _target isKindOf "Man" || _is_attached || _cant_be_clamped} do {
 	        _target_index = _target_index + 1;
 	        _target = _objects select _target_index;
 	        _is_attached = _target getVariable["RD501_mc_is_attached",false];
@@ -40,6 +40,10 @@ macro_grp_fnc_name(magclamp,handle_universal) = {
 	} else {
 	    detach _attached;
 	    _vehicle setVariable[_attached_var,objNull,true];
+        if (_mc_pos == "RD501_magclamp_large") then
+        {
+            _vehicle setVariable["RD501_mc_stop_refuel",true,true];
+        };
 	    _attached setVariable["RD501_mc_is_attached",false,true];
 	};
 };
@@ -78,6 +82,7 @@ macro_grp_fnc_name(magclamp,handle_drop_all) = {
     _attached = _vehicle getVariable["RD501_mc_attached_large",objNull];
     if(isNull _attached) then {} else {
 	    detach _attached;
+        _vehicle setVariable["RD501_mc_stop_refuel",true,true];
 	    _vehicle setVariable["RD501_mc_attached_large",objNull,true];
 	    _attached setVariable["RD501_mc_is_attached",false,true];
     };
@@ -107,6 +112,5 @@ macro_grp_fnc_name(magclamp,handle_drop_all) = {
 ["RD501_mc_set_fuel", {
     _vehicle = (vehicle this);
     if (isNull _vehicle) exitWith {};
-    _new_fuel = _vehicle getVariable["RD501_mc_targetFuel", 0];
-    _vehicle setFuel _new_fuel;
+    _vehicle setFuel _this;
 }, []] call CBA_fnc_addEventHandlerArgs;

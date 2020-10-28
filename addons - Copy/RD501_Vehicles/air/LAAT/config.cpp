@@ -467,6 +467,8 @@ class CfgVehicles
 		RD501_magclamp_small_1[] = {-7.0,-2.0,-2.5};
 		RD501_magclamp_large[] = {0.0,-2.0,-2.0};
 		RD501_magclamp_small_2[] = {7.0,-2.0,-2.5};
+		RD501_magclamp_small_forbidden=1;
+		RD501_magclamp_large_offset[]={0.0,1.0,-4.5};
 
 		class ACE_SelfActions
 		{		
@@ -490,7 +492,7 @@ class CfgVehicles
 				radius = 20;
 				priority = 21;
 				onlyForPlayer = 1;
-				condition = "((player == driver this) AND (alive this))";
+				condition = "this call RD501_fnc_mc_canRefuel";
 				statement = "this call RD501_fnc_mc_startRefuel;";
 			};
 			class StopRefuel
@@ -502,8 +504,8 @@ class CfgVehicles
 				radius = 20;
 				priority = 21;
 				onlyForPlayer = 1;
-				condition = "((player == driver this) AND (alive this))";
-				statement = "this call RD501_fnc_mc_stopRefuel;";
+				condition = "this call RD501_fnc_mc_canStopRefuel";
+				statement = "_vehicle setVariable['RD501_mc_stop_refuel',true,true];";
 			};
 		};
 		class EventHandlers : DefaultEventhandlers {
