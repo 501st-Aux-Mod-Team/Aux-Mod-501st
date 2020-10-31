@@ -56,11 +56,11 @@ _vehicle setVariable["RD501_mc_nextRefuelUpdate", 0.1, true];
     private _source_fuel = (fuel _source) * _maxFuelSource;
 
     // if last ticks have not been applied yet, act as if they have
-    private _last_Target_fuel = _target getVariable["RD501_mc_lastTargetFuelAmount", 0];
+    private _last_target_fuel = (_source getVariable["RD501_mc_lastTargetFuelAmount", 0]) * _maxFuelTarget;
     if (_last_target_fuel > _target_fuel) then
     {
         _target_fuel = _last_target_fuel;
-    }
+    };
 
     private _deltaT = _currentTime - (_source getVariable["RD501_mc_lastRefuelTick", 0]);
     private _transfer = _rate * _deltaT;
@@ -89,7 +89,7 @@ _vehicle setVariable["RD501_mc_nextRefuelUpdate", 0.1, true];
     };
 
     ["RD501_mc_set_fuel", _target_new_fuel, _target] call CBA_fnc_targetEvent;
-    _source setVariable["RD501_mc_lastTargetFuelAmount", _target_fuel, true];
+    _source setVariable["RD501_mc_lastTargetFuelAmount", _target_new_fuel, true];
 
     _source setFuel _source_new_fuel;
     _source setVariable["RD501_mc_lastRefuelTick", _currentTime, true];
