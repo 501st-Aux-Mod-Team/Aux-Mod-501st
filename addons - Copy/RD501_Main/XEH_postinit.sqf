@@ -37,4 +37,7 @@ _fnc_endLoadingScreen = {
 		[_handle] call CBA_fnc_removePerFrameHandler;
 	};
 };
-[_fnc_endLoadingScreen, 1, []] call CBA_fnc_addPerFrameHandler;
+[_fnc_endLoadingScreen, 5, []] call CBA_fnc_addPerFrameHandler;
+
+// Flip Backpack
+rd501_flip_vehicle_validBackpacks = ["RD501_JLTS_Clone_Flip_backpack"];

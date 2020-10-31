@@ -456,3 +456,10 @@ class RD501_JLTS_Clone_ARC_backpack: JLTS_Clone_ARC_backpack
 	tf_range=35000;
 	Displayname="[501st] Specialist Pack (ARC)"
 };
+class RD501_JLTS_Clone_Flip_backpack: JLTS_Clone_backpack
+{
+	maximumload = 0;
+	Displayname="[501st] Grav Lift Pack "
+	hiddenSelectionsTextures[] = {"rd501_units\textures\Republic\clones\mynock\mynock_backpack_flip.paa"};
+	picture = "rd501_units\textures\Republic\clones\mynock\mynock_backpack_flip_icon_co.paa";
+};
