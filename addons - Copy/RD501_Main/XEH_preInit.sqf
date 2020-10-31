@@ -67,6 +67,9 @@ macro_prep_xeh(nightvision.sqf,nightvision)
 
 //magclamp
 macro_prep_xeh(magclamp\magclamp.sqf,magclamp)
+macro_prep_xeh(magclamp\fnc_startRefuel.sqf,mc_startRefuel)
+macro_prep_xeh(magclamp\fnc_canRefuel.sqf,mc_canRefuel)
+macro_prep_xeh(magclamp\fnc_canStopRefuel.sqf,mc_canStopRefuel)
 
 //HUD color
 macro_prep_xeh(hud_color_change.sqf,change_hud_color)

@@ -467,6 +467,8 @@ class CfgVehicles
 		RD501_magclamp_small_1[] = {-7.0,-2.0,-2.5};
 		RD501_magclamp_large[] = {0.0,-2.0,-2.0};
 		RD501_magclamp_small_2[] = {7.0,-2.0,-2.5};
+		RD501_magclamp_small_forbidden=1;
+		RD501_magclamp_large_offset[]={0.0,1.0,-4.5};
 
 		class ACE_SelfActions
 		{		
@@ -481,6 +483,30 @@ class CfgVehicles
 		class UserActions
 		{
 			#include "user_action.hpp"
+			class StartRefuel
+			{
+				displayName = "<t color='#07CC0C'>[Start Refueling]</t>";
+				displayNameDefault = "<t color='#07CC0C'>[Start Refueling]</t>";
+				textToolTip = "<t color='#07CC0C'>[Start Refueling]</t>";
+				position = "pilotview";
+				radius = 20;
+				priority = 21;
+				onlyForPlayer = 1;
+				condition = "this call RD501_fnc_mc_canRefuel";
+				statement = "this call RD501_fnc_mc_startRefuel;";
+			};
+			class StopRefuel
+			{
+				displayName = "<t color='#BC0404'>[Stop Refueling]</t>";
+				displayNameDefault = "<t color='#BC0404'>[Stop Refueling]</t>";
+				textToolTip = "<t color='#BC0404'>[Stop Refueling]</t>";
+				position = "pilotview";
+				radius = 20;
+				priority = 21;
+				onlyForPlayer = 1;
+				condition = "this call RD501_fnc_mc_canStopRefuel";
+				statement = "_vehicle setVariable['RD501_mc_stop_refuel',true,true];";
+			};
 		};
 		class EventHandlers : DefaultEventhandlers {
 			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
