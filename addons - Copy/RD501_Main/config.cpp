@@ -586,9 +586,10 @@ class CfgVehicles
 		class ACE_Actions {
 			class ACE_MainActions {
 				class rd501_flip_vehicle_flip {
-					displayName = "Flip Vehicle"
-					condition = "[_player] call rd501_fnc_canFlipVehicle"
+					displayName = "Flip Vehicle";
+					condition = "[_player] call rd501_fnc_canFlipVehicle";
 					statement = "[_target] call rd501_fnc_flipVehicle";
+					exceptions[] = {};
 				};
 			};
 		};
