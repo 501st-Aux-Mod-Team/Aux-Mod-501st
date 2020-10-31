@@ -4,3 +4,4 @@
 *.bisign
 .idea
 *.code-workspace
+/.vs

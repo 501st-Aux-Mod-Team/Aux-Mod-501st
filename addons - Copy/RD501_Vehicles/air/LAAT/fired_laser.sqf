@@ -53,7 +53,7 @@ if (isServer) then {
 		if (_w == "RD501_turret_laat_ball_beam_l") then {
 			_laser_chamber = "Laser_L_chamber";
 			_laser_muzzle = "Laser_L_muzzle";
-			_laser_anim = "Laser"; // would be cleaner if you renamed this to "Laser_Left" or something
+			_laser_anim = "Laser_L"; // would be cleaner if you renamed this to "Laser_Left" or something
 		} else {
 			if (_w == "RD501_turret_laat_ball_beam_r") then { // replace this with the new "Laser_weapon_right" weapon classname
 				_laser_chamber = "Lazer_R_chamber";// replace this with new "Laser_R_chamber" that you set up in the memory lod
