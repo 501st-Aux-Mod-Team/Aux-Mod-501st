@@ -590,6 +590,7 @@ class CfgVehicles
 					condition = "[_player] call rd501_fnc_canFlipVehicle";
 					statement = "[_target] call rd501_fnc_flipVehicle";
 					exceptions[] = {};
+					icon = "rd501_main\ui_icons\mynock_flip_ace_icon.paa";
 				};
 			};
 		};
