@@ -26,7 +26,6 @@ class CfgPatches
 
 class CfgVehicles
 {
-	class B_static_AT_F;
 	class StaticMGWeapon;
 	class 3AS_HeavyRepeater_base:StaticMGWeapon
 	{
@@ -46,10 +45,17 @@ class CfgVehicles
 			class MainTurret;
 		};
 	};
-	class StaticWeapon;
-	class StaticAAWeapon:StaticWeapon
+	class LandVehicle;
+	class StaticWeapon : LandVehicle
 	{
 		class Turrets;
+	};
+	class StaticAAWeapon:StaticWeapon
+	{
+		class Turrets : Turrets
+		{
+			
+		};
 	};
 	class OPTRE_LAU65D_pod:StaticAAWeapon 
 	{
@@ -122,6 +128,7 @@ class CfgVehicles
 				gunnerForceOptics = 0;
 				turretInfoType = "ACE_RscOptics_javelin";  // Inteface
 				gunnerOpticsModel = "\z\ace\addons\javelin\data\reticle_titan.p3d";  // Optics model
+				opticsFlare = 0;
 				weapons[]=
 				{
 					macro_new_weapon(stat,aap4)
