@@ -33,8 +33,8 @@ class CfgWeapons
 	{
 		class manual: manual
 		{
-			dispersion=0.007;
-			reloadTime=0.01;
+			dispersion=0.011;
+			reloadTime=0.05;
 		};
 		magazines[]=
 		{
@@ -48,19 +48,33 @@ class CfgWeapons
 			macro_new_mag(ragl40he,40)
 		};
 	};
+	class ace_javelin_Titan_Static;
+	class macro_new_weapon(stat,aap4):ace_javelin_Titan_Static
+	{
+		magazines[]=
+		{
+			macro_new_mag(aap,4)
+		};
+	};
 };
 class CfgMagazines
 {
 	class 3AS_500_Rnd_BlasterTurret_mag;
+	class 40Rnd_20mm_G_belt;
+	class 1Rnd_GAT_missiles;
 	class macro_new_mag(eweb,600): 3AS_500_Rnd_BlasterTurret_mag
 	{
 		count=600;
 		ammo=macro_new_ammo(z1000)
 	};
-	class macro_new_mag(ragl40he,40): 3AS_500_Rnd_BlasterTurret_mag
+	class macro_new_mag(ragl40he,40): 40Rnd_20mm_G_belt
 	{
 		count=40;
 		ammo=macro_new_ammo(UGL_HE)
+	};
+	class macro_new_mag(aap,4): 1Rnd_GAT_missiles
+	{
+		count=4;
 	};
 };
 class CfgAmmo

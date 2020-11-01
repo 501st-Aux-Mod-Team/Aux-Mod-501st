@@ -26,6 +26,7 @@ class CfgPatches
 
 class CfgVehicles
 {
+	class B_static_AT_F;
 	class StaticMGWeapon;
 	class 3AS_HeavyRepeater_base:StaticMGWeapon
 	{
@@ -45,7 +46,18 @@ class CfgVehicles
 			class MainTurret;
 		};
 	};
-	class OPTRE_LAU65D_pod;
+	class StaticWeapon;
+	class StaticAAWeapon:StaticWeapon
+	{
+		class Turrets;
+	};
+	class OPTRE_LAU65D_pod:StaticAAWeapon 
+	{
+		class Turrets: Turrets
+		{
+			class MainTurret;
+		};
+	};
 	class OPTRE_Static_Gauss;
 	class macro_new_vehicle(stat,reweb): 3AS_HeavyRepeater_Unarmoured
 	{
@@ -101,6 +113,25 @@ class CfgVehicles
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat(turrets)
 		vehicleClass = macro_editor_vehicle_type(turrets)
+		_generalMacro = "B_static_AT_F";
+		radarType = 0;
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				gunnerForceOptics = 0;
+				turretInfoType = "ACE_RscOptics_javelin";  // Inteface
+				gunnerOpticsModel = "\z\ace\addons\javelin\data\reticle_titan.p3d";  // Optics model
+				weapons[]=
+				{
+					macro_new_weapon(stat,aap4)
+				};
+				magazines[]=
+				{
+					macro_new_mag(aap,4)
+				};
+			};
+		};
 	};
 	class macro_new_vehicle(stat,Railgun): OPTRE_Static_Gauss
 	{
