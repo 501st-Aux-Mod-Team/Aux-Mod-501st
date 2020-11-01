@@ -580,6 +580,21 @@ class CfgVehicleClasses
 
 class CfgVehicles
 {
+	class LandVehicle;
+	class Car : LandVehicle
+	{
+		class ACE_Actions {
+			class ACE_MainActions {
+				class rd501_flip_vehicle_flip {
+					displayName = "Flip Vehicle";
+					condition = "[_player] call rd501_fnc_canFlipVehicle";
+					statement = "[_target] call rd501_fnc_flipVehicle";
+					exceptions[] = {};
+					icon = "rd501_main\ui_icons\mynock_flip_ace_icon.paa";
+				};
+			};
+		};
+	};
 	class Man;
 	class CAManBase: Man
 	{

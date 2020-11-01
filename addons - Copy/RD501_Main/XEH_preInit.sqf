@@ -102,3 +102,7 @@ macro_prep_xeh(heavy_weapon\fnc_heavyWeaponHandlePlayerWeaponChanged.sqf,heavyWe
 macro_prep_xeh(reload_on_select\fnc_reloadWeaponOnFirstSelected.sqf,reloadWeaponOnFirstSelected)
 macro_prep_xeh(reload_on_select\fnc_swapToEmptyWeapon.sqf,swapToEmptyWeapon)
 macro_prep_xeh(reload_on_select\fnc_onWeaponFiredSwapToEmpty.sqf,onWeaponFiredSwapToEmpty)
+
+// Flip backpack
+macro_prep_xeh(flip_vehicle\fnc_flipVehicle.sqf,flipVehicle)
+macro_prep_xeh(flip_vehicle\fnc_canFlipVehicle.sqf,canFlipVehicle)

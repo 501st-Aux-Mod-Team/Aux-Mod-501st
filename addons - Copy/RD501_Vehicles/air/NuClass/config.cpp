@@ -26,12 +26,48 @@ class CfgPatches
 };
 class CfgVehicles
 {
-	class 3as_nuclass_f;
+	class Helicopter
+    {
+        class ACE_SelfActions;
+    };
+
+    class Helicopter_Base_F: Helicopter
+    {
+        class ACE_SelfActions : ACE_SelfActions {};
+	};
+
+    class Heli_Attack_01_base_F : Helicopter_Base_F
+	{
+		class ACE_SelfActions : ACE_SelfActions {};
+	};
+
+	class B_Heli_Attack_01_base_F: Heli_Attack_01_base_F
+	{
+		class ACE_SelfActions : ACE_SelfActions {};
+	};
+
+	class 3as_laat_Base: B_Heli_Attack_01_base_F
+	{
+		class ACE_SelfActions : ACE_SelfActions {};
+	};
+
+	class 3as_nuclass_base : 3as_laat_Base
+	{
+		class ACE_SelfActions : ACE_SelfActions {};
+	};
+
+	class 3as_nuclass_f : 3as_nuclass_base
+	{
+		class ACE_SelfActions : ACE_SelfActions {};
+	};
+
 	class 3AS_Nuclass : 3as_nuclass_f
 	{
 		class UserActions;
+		class ACE_SelfActions : ACE_SelfActions {};
 	};
-	class macro_new_vehicle(nuclass,mk1):3AS_Nuclass
+
+	class macro_new_vehicle(nuclass,mk1) : 3AS_Nuclass
 	{
 		scope=2;
 		displayName="Republic NuClass Mk.I"
@@ -67,16 +103,10 @@ class CfgVehicles
 		class UserActions:UserActions
 		{
 			#include "user_action.hpp"
-		};	
-		class ACE_SelfActions
+		};
+		class ACE_SelfActions : ACE_SelfActions
 		{
-			class ACE_Passengers
-			{
-				condition = "alive _target";
-				displayName = "Passengers";
-				insertChildren = "_this call ace_interaction_fnc_addPassengersActions";
-				statement = "";
-			};
+
 		};
 	};
 };
