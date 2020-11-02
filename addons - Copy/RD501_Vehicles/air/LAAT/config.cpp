@@ -146,6 +146,16 @@ class CfgVehicles
 			class CargoTurret_05: CargoTurret_05{};
 			class CargoTurret_06: CargoTurret_06{};
 		};
+		class ACE_SelfActions
+		{
+			class ACE_Passengers
+			{
+				condition = "alive _target";
+				displayName = "Passengers";
+				insertChildren = "_this call ace_interaction_fnc_addPassengersActions";
+				statement = "";
+			};
+		};
 	};
 	class macro_new_vehicle(laat,Mk1_lights):3as_LAAT_Mk1Lights
 	{
@@ -183,6 +193,16 @@ class CfgVehicles
 			class CargoTurret_05: CargoTurret_05{};
 			class CargoTurret_06: CargoTurret_06{};
 		};
+		class ACE_SelfActions
+		{
+			class ACE_Passengers
+			{
+				condition = "alive _target";
+				displayName = "Passengers";
+				insertChildren = "_this call ace_interaction_fnc_addPassengersActions";
+				statement = "";
+			};
+		};
 	};
 
 	class macro_new_vehicle(laat,Mk2):3as_LAAT_Mk2
@@ -217,6 +237,16 @@ class CfgVehicles
 			class CargoTurret_01: CargoTurret_01{};
 			class CargoTurret_02: CargoTurret_02{};
 		};
+		class ACE_SelfActions
+		{
+			class ACE_Passengers
+			{
+				condition = "alive _target";
+				displayName = "Passengers";
+				insertChildren = "_this call ace_interaction_fnc_addPassengersActions";
+				statement = "";
+			};
+		};
 	};
 	class macro_new_vehicle(laat,Mk2_lights):3as_LAAT_Mk2Lights
 	{
@@ -249,6 +279,16 @@ class CfgVehicles
 			};
 			class CargoTurret_01: CargoTurret_01{};
 			class CargoTurret_02: CargoTurret_02{};
+		};
+		class ACE_SelfActions
+		{
+			class ACE_Passengers
+			{
+				condition = "alive _target";
+				displayName = "Passengers";
+				insertChildren = "_this call ace_interaction_fnc_addPassengersActions";
+				statement = "";
+			};
 		};
 	};
 

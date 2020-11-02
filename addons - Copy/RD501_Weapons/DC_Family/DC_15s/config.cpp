@@ -231,7 +231,9 @@ class cfgWeapons
 				scope = 0;
 				compatibleItems[] = 
 				{
-					
+					"RD501_Holosight",
+					"RD501_Holosight_2",
+					"RD501_Holosight_3"
 				};
 			};
 			class MuzzleSlot: MuzzleSlot
