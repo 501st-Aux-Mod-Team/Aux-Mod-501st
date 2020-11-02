@@ -288,6 +288,7 @@ class CfgWeapons
 	}
 	class macro_new_weapon(stat,eweb):3AS_BlasterTurret_Repeater
 	{
+		magazineReloadTime=2;
 		class manual: manual
 		{
 			dispersion=0.011;
@@ -300,6 +301,7 @@ class CfgWeapons
 	};
 	class macro_new_weapon(stat,ragl40):3AS_BlasterTurret_Repeater
 	{
+		magazineReloadTime=2;
 		magazines[]=
 		{
 			macro_new_mag(ragl40he,40)
@@ -308,6 +310,7 @@ class CfgWeapons
 	class ace_javelin_Titan_Static;
 	class macro_new_weapon(stat,aap4):ace_javelin_Titan_Static
 	{
+		magazineReloadTime=2;
 		ace_javelin_enabled = 1;  // Enable Javelin-style locking (0-disabled, 1-enabled)
         weaponInfoType = "ACE_RscOptics_javelin";  // Inteface
         modelOptics = "\z\ace\addons\javelin\data\reticle_titan.p3d";  // Optics model
@@ -325,10 +328,10 @@ class CfgWeapons
 	};
 	class macro_new_weapon(stat,mar1):3AS_BlasterTurret_Repeater
 	{
+		magazineReloadTime=2;
 		class manual: manual
 		{
 			dispersion=0.00001;
-			reloadTime=0.05;
 		};
 		magazines[]=
 		{
@@ -344,6 +347,8 @@ class CfgMagazines
 	class macro_new_mag(eweb,600): 3AS_500_Rnd_BlasterTurret_mag
 	{
 		scope=2;
+		scopeArsenal = 2;
+		type=256;
 		displayName= "Republic E-Web Charge"
 		count=600;
 		ammo=macro_new_ammo(z1000)
@@ -351,6 +356,9 @@ class CfgMagazines
 	class macro_new_mag(ragl40he,40): 40Rnd_20mm_G_belt
 	{
 		scope=2;
+		scopeArsenal = 2;
+		type=256;
+		muzzleImpulseFactor[] = {0.1,0.1};
 		displayName= "RAGL40 'Boomer' belt"
 		count=40;
 		ammo=macro_new_ammo(UGL_HE)
@@ -358,12 +366,16 @@ class CfgMagazines
 	class macro_new_mag(aap,4): 1Rnd_GAT_missiles
 	{
 		scope=2;
+		scopeArsenal = 2;
+		type=256;
 		displayName= "AAP4 'Striker' Pod"
 		count=4;
 	};
 		class macro_new_mag(mar,1): 3AS_500_Rnd_BlasterTurret_mag
 	{
 		scope=2;
+		scopeArsenal = 2;
+		type=256;
 		displayName= "MAR1 'Driver' Slug"
 		count=1;
 		ammo=macro_new_ammo(mar1)
