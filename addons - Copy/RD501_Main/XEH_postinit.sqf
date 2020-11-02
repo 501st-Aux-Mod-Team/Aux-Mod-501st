@@ -30,7 +30,7 @@ call macro_fnc_name(magclamp);
 // Check every second for if the Loading Screen is still up and forcibly end it.
 _fnc_endLoadingScreen = {
 	params ["_args", "_handle"];
-	systemChat format["Ending LoadingScreen [Attempt %1]", _handle];
+	systemChat format["Ending LoadingScreen [Handle %1]", _handle];
 	endLoadingScreen;
 	_stillLoading = call BIS_fnc_isLoading;
 	if(!_stillLoading) exitWith {
@@ -38,6 +38,6 @@ _fnc_endLoadingScreen = {
 	};
 };
 [_fnc_endLoadingScreen, 5, []] call CBA_fnc_addPerFrameHandler;
-
 // Flip Backpack
 rd501_flip_vehicle_validBackpacks = ["RD501_JLTS_Clone_Flip_backpack"];
+["rd501_external_reload", { _this call rd501_fnc_onReloadExternalHandler }, []] call CBA_fnc_addEventHandlerArgs;

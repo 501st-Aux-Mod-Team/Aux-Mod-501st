@@ -595,6 +595,19 @@ class CfgVehicles
 			};
 		};
 	};
+	class StaticWeapon: LandVehicle {
+		class ACE_Actions {
+			class ACE_MainActions {
+				class rd501_external_reload {
+					displayName = "Reload";
+					condition = "_this call rd501_fnc_canReloadExternal";
+					statement = "_this call rd501_fnc_reloadExternal";
+					exceptions[] = {};
+					runOnHover = 0;
+				};
+			};
+		};
+	};
 	class Man;
 	class CAManBase: Man
 	{

@@ -314,6 +314,10 @@ class CfgWeapons
         canLock = 0;  // Disable vanilla locking (0-disabled, 1-enabled)
         lockingTargetSound[] = {"", 0, 1};  // Locking sound
         lockedTargetSound[] = {"", 0, 1};  // Target acquired sound
+		hiddenSelectionsTextures[]=
+		{
+			"RD501_Vehicles\textures\static\warthog_addons_grey_co.paa"
+		};
 		magazines[]=
 		{
 			macro_new_mag(aap,4)
