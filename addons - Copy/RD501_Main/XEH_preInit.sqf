@@ -106,3 +106,8 @@ macro_prep_xeh(reload_on_select\fnc_onWeaponFiredSwapToEmpty.sqf,onWeaponFiredSw
 // Flip backpack
 macro_prep_xeh(flip_vehicle\fnc_flipVehicle.sqf,flipVehicle)
 macro_prep_xeh(flip_vehicle\fnc_canFlipVehicle.sqf,canFlipVehicle)
+
+// Reload Externally
+macro_prep_xeh(external_reload\fnc_canReloadExternal.sqf,canReloadExternal)
+macro_prep_xeh(external_reload\fnc_reloadExternal.sqf,reloadExternal)
+macro_prep_xeh(external_reload\fnc_onReloadExternalHandler.sqf,onReloadExternalHandler)

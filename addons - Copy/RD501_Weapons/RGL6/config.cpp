@@ -42,7 +42,7 @@ class CfgWeapons
 		};
 		class Single : Single
 		{
-			reloadTime=2;
+			reloadTime=0.24;
 		};
 	};
 };
