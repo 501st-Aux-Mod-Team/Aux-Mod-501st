@@ -150,6 +150,17 @@ class CfgAmmo
 		caliber=5;
 		airFriction=0;
 	};
+	class macro_new_ammo(mar1) : 3AS_EC80_BluePlasma
+	{
+		hit=900;
+		thrust=500;
+		explosive=0;
+		thrustTime=1.5;
+		airLock=1;
+		typicalSpeed=3000;
+		caliber=50;
+		airFriction=0;
+	};
 	class macro_new_ammo(UGL_AP): G_40mm_HE
 	{
 		hit = 350;

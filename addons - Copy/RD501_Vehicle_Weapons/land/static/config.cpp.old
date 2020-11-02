@@ -17,7 +17,8 @@ class CfgPatches
 		units[]={};
 		weapons[]={
 			macro_new_weapon(stat,eweb),
-			macro_new_weapon(stat,ragl40)
+			macro_new_weapon(stat,ragl40),
+			macro_new_weapon(stat,aap4)
 		};
 	};
 };
@@ -51,10 +52,10 @@ class CfgWeapons
 	class ace_javelin_Titan_Static;
 	class macro_new_weapon(stat,aap4):ace_javelin_Titan_Static
 	{
-		magazines[]=
+		/*magazines[]=
 		{
 			macro_new_mag(aap,4)
-		};
+		};*/
 	};
 };
 class CfgMagazines
