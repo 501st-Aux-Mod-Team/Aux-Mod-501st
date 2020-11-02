@@ -57,3 +57,11 @@ class TransportMagazines
 			count = 40;
 		};
 	};
+class TransportBackpacks
+	{
+		class _transport_gravpack
+			{
+				backpack="RD501_JLTS_Clone_Flip_backpack";
+				count=1;
+			};
+	};

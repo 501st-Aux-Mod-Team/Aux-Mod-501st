@@ -73,6 +73,16 @@ class _transport_launcher_AA_mags
 	magazine =  macro_new_mag(RPS_AA,1)
 	count = 20;
 };
+class _transport_launcher_PLXAT_mags
+{
+	magazine =  "JLTS_PLX1_AT_Missile"
+	count = 10;
+};
+class _transport_launcher_PLXAP_mags
+{
+	magazine =  "JLTS_PLX1_AP_Missile"
+	count = 10;
+};
 class _transport_he3
 {
 	magazine = macro_new_mag(UGL_HE,3);
