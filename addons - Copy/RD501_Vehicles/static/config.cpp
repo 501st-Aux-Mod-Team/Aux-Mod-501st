@@ -141,5 +141,10 @@ class CfgVehicles
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat(turrets)
 		vehicleClass = macro_editor_vehicle_type(turrets)
+		
+		hiddenSelectionsTextures[]=
+		{
+			"RD501_Vehicles\textures\static\warthog_addons_grey_co.paa"
+		};
 	};
 };
