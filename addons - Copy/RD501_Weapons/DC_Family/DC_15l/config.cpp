@@ -40,7 +40,6 @@ class CfgWeapons
 	{
 		displayName="Republic DC-15L";
 		recoil="recoil_mmg_02";
-		deployedPivot="bipod";
 		dispersion=0.00075;
 		ACE_Overheating_mrbs = 450000;
 		magazines[]=
@@ -91,5 +90,13 @@ class CfgWeapons
 				iconPinpoint="Center";
 			};
 		};
+		/*class LinkedItems
+        {
+            class LinkedItemsUnder
+            {
+                slot = "UnderBarrelSlot";
+                item = "bipod_01_F_blk";
+            };
+        };*/
 	};
 };
