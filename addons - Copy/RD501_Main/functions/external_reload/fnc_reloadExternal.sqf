@@ -28,7 +28,7 @@ _magazine = _magazine select 0;
 private _onFinish = {
     (_this select 0) params ["_player", "_target", "_magazine", "_ammoAmount"];
 	[_player, _magazine, _ammoAmount] call ace_common_fnc_removeSpecificMagazine;
-	["rd501_external_reload", [_target, _magazine, _ammoAmount], _target] call CBA_fnc_targetEvent;
+	["rd501_external_reload", [_target, _magazine, _ammoAmount]] call CBA_fnc_globalEvent;
 	[format["Reload Complete"], true, 4, 0] call ace_common_fnc_displayText;
     [_player, "AmovPknlMstpSrasWrflDnon", 1] call ace_common_fnc_doAnimation;
 };
