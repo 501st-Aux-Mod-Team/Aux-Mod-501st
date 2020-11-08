@@ -75,6 +75,7 @@ class CfgVehicles
 	};
 	class macro_new_vehicle(stat,reweb): 3AS_HeavyRepeater_Unarmoured
 	{
+		armor=50;
 		scope = 2;
 		author="501st Aux Mod";
 		displayName = "Republic Heavy E-Web";
@@ -105,6 +106,7 @@ class CfgVehicles
 	};
 	class macro_new_vehicle(stat,ragl40): 3AS_HeavyRepeater_Armoured
 	{
+		armor=50;
 		scope = 2;
 		author="501st Aux Mod";
 		displayName	= "RAGL40 'Boomer'";
@@ -135,6 +137,7 @@ class CfgVehicles
 	};
 	class macro_new_vehicle(stat,Striker): B_static_AT_F
 	{
+		armor=50;
 		scope = 2;
 		author="501st Aux Mod";
 		displayName = "AAP4 'Striker'";
@@ -170,6 +173,7 @@ class CfgVehicles
 	};
 	class macro_new_vehicle(stat,Railgun): OPTRE_Static_Gauss
 	{
+		armor=50;
 		scope = 2;
 		author="501st Aux Mod";
 		displayName = "MAR1 'Driver'";
@@ -302,6 +306,10 @@ class CfgWeapons
 	class macro_new_weapon(stat,ragl40):3AS_BlasterTurret_Repeater
 	{
 		magazineReloadTime=2;
+		class manual: manual
+		{
+			multiplier=1;
+		};
 		magazines[]=
 		{
 			macro_new_mag(ragl40he,40)
@@ -349,35 +357,43 @@ class CfgMagazines
 		scope=2;
 		scopeArsenal = 2;
 		type=256;
+		picture = "\SW_ExtraWeapons\PICKUPS\UI\icons\energycell_X_ca.paa"; 
 		displayName= "Republic E-Web Charge"
 		count=600;
 		ammo=macro_new_ammo(z1000)
+		weaponpoolavailable=1;
 	};
 	class macro_new_mag(ragl40he,40): 40Rnd_20mm_G_belt
 	{
 		scope=2;
 		scopeArsenal = 2;
 		type=256;
+		picture = "\SW_ExtraWeapons\PICKUPS\UI\icons\energycell_X_ca.paa"; 
 		muzzleImpulseFactor[] = {0.1,0.1};
 		displayName= "RAGL40 'Boomer' belt"
 		count=40;
 		ammo=macro_new_ammo(UGL_HE)
+		weaponpoolavailable=1;
 	};
 	class macro_new_mag(aap,4): 1Rnd_GAT_missiles
 	{
 		scope=2;
 		scopeArsenal = 2;
 		type=256;
+		picture = "\SW_ExtraWeapons\PICKUPS\UI\icons\energycell_X_ca.paa"; 
 		displayName= "AAP4 'Striker' Pod"
 		count=4;
+		weaponpoolavailable=1;
 	};
 		class macro_new_mag(mar,1): 3AS_500_Rnd_BlasterTurret_mag
 	{
 		scope=2;
 		scopeArsenal = 2;
 		type=256;
+		picture = "\SW_ExtraWeapons\PICKUPS\UI\icons\energycell_X_ca.paa"; 
 		displayName= "MAR1 'Driver' Slug"
 		count=1;
 		ammo=macro_new_ammo(mar1)
+		weaponpoolavailable=1;
 	};
 };
