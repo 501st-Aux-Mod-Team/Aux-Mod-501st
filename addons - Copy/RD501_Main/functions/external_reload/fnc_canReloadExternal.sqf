@@ -1,6 +1,6 @@
 params ["_target", "_player", "_params"];
 if(!(alive _target) || !(alive _player)) exitWith { false };
-if(vehicle _target != _target) exitWith {false};
+if(vehicle _target != _target) exitWith { false };
 _currentTurret = _target currentWeaponTurret [0];
 if(_currentTurret == "") then {
 	_currentTurret =  _target weaponsTurret [0] select 0;
