@@ -445,7 +445,9 @@ class CfgVehicles
 		peakTorque = 7400;
 		torqueCurve[] = {[0.291667,0.540541],[0.416667,0.675676],[0.583333,0.810811],[0.666667,0.891892],[0.75,0.972973],[0.833333,1.02703],[0.916667,1],[1,0.945946]};
 		engineMOI = 1;
-		armor = 100;
+		armor = 500;
+		weapons[]={"SmokeLauncher"};
+		magazines[]={"SmokeLauncherMag"};
 		hiddenSelections[] = {"camo1", "camo2", "camo3", "camo4", "CamoNet"};
 		hiddenSelectionsTextures[]=
 		{

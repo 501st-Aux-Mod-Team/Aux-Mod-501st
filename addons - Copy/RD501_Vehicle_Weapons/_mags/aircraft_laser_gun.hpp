@@ -64,3 +64,41 @@
 		ammo = macro_new_ammo(generic_aircraft_laser_cannon_dual_green)
 		count = 1000;
 	};
+	class macro_new_mag(pylon_generic_aircraft_gun_asg,3000): 500Rnd_Cannon_30mm_Plane_CAS_02_F
+	{
+		displayNameShort = "AS Gun";
+		displayName = "Air Superiority Gun";
+		ammo = macro_new_ammo(generic_aircraft_laser_gun_green);
+		count = 3000;
+		hardpoints[]=
+		{
+			"RD501_Gun_rail"
+		};
+		pylonWeapon=macro_new_weapon(pylon_laser,v_wing)
+	};
+	class macro_new_mag(pylon_voltic,200):500Rnd_Cannon_ARCback
+	{
+		displayNameShort = "Voltic";
+		ammo = macro_new_ammo(voltic)
+		count = 200;
+		tracersEvery = 1;
+		initSpeed = 1036;
+		maxLeadSpeed = 300;
+		macro_no_muzzle_impulse
+		hardpoints[]=
+		{
+			"RD501_Gun_rail"
+		};
+		pylonWeapon=macro_new_weapon(pylon_voltic,y_wing)
+	};
+	class macro_new_mag(pylon_Kannon,100) : macro_new_mag(generic_aircraft_gun_green,1000)
+	{
+		ammo = macro_new_ammo(generic_kannon)
+		displayNameShort = "Coaxium Shells";
+		count = 15;
+		hardpoints[]=
+		{
+			"RD501_Gun_rail"
+		};
+		pylonWeapon=macro_new_weapon(pylon_generic,kannon)
+	};
