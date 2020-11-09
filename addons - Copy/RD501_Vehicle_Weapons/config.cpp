@@ -15,7 +15,8 @@ class CfgPatches
 		requiredVersion=0.1;
 		units[]={};
 		weapons[]={
-		
+			macro_new_weapon(pylon_laser,v_wing),
+			macro_new_weapon(pylon_generic,kannon)
 		};
 	};
 };
@@ -23,7 +24,21 @@ class CfgPatches
 //scopes
 class CfgWeapons
 {
-
+	class macro_new_weapon(laser,v_wing);
+	class macro_new_weapon(generic,kannon);
+	class macro_new_weapon(pylon_laser,v_wing) : macro_new_weapon(laser,v_wing)
+	{
+		displayName = "Laser gun (Pylon)";
+		displayNameShort = "Laser";
+		magazines[]={macro_new_mag(pylon_generic_aircraft_gun_asg,3000)};
+	};
+	class macro_new_weapon(pylon_generic,kannon):macro_new_weapon(generic,kannon)
+	{
+		displayName = "Coaxium (Pylon)";
+		displayNameShort = "Coax";
+		magazines[]={macro_new_mag(pylon_Kannon,100)};
+	};
+	
 };
 
 class CfgMagazineWells
@@ -58,7 +73,8 @@ class CfgMagazineWells
 };
 
 class CfgMagazines
-{
+{	
+	class 500Rnd_Cannon_ARCback;
 	class 500Rnd_Cannon_30mm_Plane_CAS_02_F;
 
 	//laser gun + kannon
@@ -98,6 +114,7 @@ class CfgMagazines
 	class magazine_Missile_rim162_x8;
 	class PylonRack_12Rnd_PG_missiles;
 	class 4Rnd_LG_Jian;
+	class PylonRack_1Rnd_Missile_AGM_01_F;
 
 	#include "_mags/missiles.hpp"
 

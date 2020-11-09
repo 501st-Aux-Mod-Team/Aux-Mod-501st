@@ -31,6 +31,7 @@ class CfgWeapons
 	class Rocket_04_AP_Plane_CAS_01_F;
 	class missiles_DAGR;
 	class missiles_Jian;
+	class Missile_AGM_01_Plane_CAS_02_F;
 	
 
 	class macro_new_weapon(wynd,a2a) : missiles_ASRAAM
@@ -47,7 +48,7 @@ class CfgWeapons
 		displayName = "Torrent (AGM)";
 		displayNameShort = "Torrent";
 		canLock = 2;
-		magazines[] = {macro_new_mag(agm,6) };
+		magazines[] = {macro_new_mag(agm,6)};
 		soundfly[] = {"\xt\SWionrocketloop.ogg",3,1,800};
 		lockedTargetSound[] = {"TIE\LockedOn_2.ogg",0.7,1};
 		lockingTargetSound[] = {"TIE\Locking_Beep1.ogg",1,1};
@@ -73,6 +74,42 @@ class CfgWeapons
 		displayNameShort = "Flashfire";
 		soundfly[] = {"\rd501_vehicle_weapons\_sounds\proton_torp.ogg",3,1,800};
 		magazines[] = {macro_new_mag(lgm,1)};
+	};
+	class macro_new_weapon(pylon,agm):missiles_DAGR
+	{
+		displayName = "Torrent(Pylon)";
+		displayNameShort = "Torrent";
+		canLock = 2;
+		magazines[] = {
+			macro_new_mag(pylon_agm,6)
+		};
+		soundfly[] = {"\xt\SWionrocketloop.ogg",3,1,800};
+		lockedTargetSound[] = {"TIE\LockedOn_2.ogg",0.7,1};
+		lockingTargetSound[] = {"TIE\Locking_Beep1.ogg",1,1};	
+	};
+	class macro_new_weapon(pylon,a2a) : missiles_ASRAAM
+	{
+		displayName = "Zephyr Pylon)";
+		displayNameShort = "Zephyr";
+		magazines[] = {mmacro_new_mag(pylon_aa,4)};
+		soundFly[] = {"\xt\SWrocketloop.ogg",3,1,800};
+		lockedTargetSound[] = {"TIE\LockedOn_2.ogg",0.7,1};
+		lockingTargetSound[] = {"TIE\Locking_Beep1.ogg",1,1};
+	};
+	class macro_new_weapon(pylon,ugm) : Rocket_04_AP_Plane_CAS_01_F
+	{
+		displayName = "Hurricane(Pylon)";
+		displayNameShort = "Hurricane";
+		soundfly[] = {"\xt\SWionrocketloop.ogg",3,1,800};
+		magazines[] = {macro_new_mag(pylon_ugm,10)};
+		autoFire=true;
+	};
+	class macro_new_weapon(pylon,lgm) : missiles_Jian
+	{
+		displayName = "Flashfire (Pylon)";
+		displayNameShort = "Flashfire";
+		soundfly[] = {"\rd501_vehicle_weapons\_sounds\proton_torp.ogg",3,1,800};
+		magazines[] = {macro_new_mag(pylon_lgm,4)};
 	};
 }; 
 

@@ -16,7 +16,8 @@ class CfgPatches
 		requiredVersion=0.1;
 		units[]={};
 		weapons[]={
-			macro_new_weapon(voltic,y_wing)
+			macro_new_weapon(voltic,y_wing),
+			macro_new_weapon(pylon_voltic,y_wing)
 			
 		};
 	};
@@ -73,7 +74,11 @@ class CfgWeapons
 			reloadTime = 0.04;
 		};
 	};
-
-
+	class macro_new_weapon(pylon_voltic,y_wing) : macro_new_weapon(voltic,y_wing)
+	{
+		displayName = "Voltic (Pylon)";
+		displayNameShort = "Voltic";
+		magazines[]={macro_new_mag(pylon_voltic,200)};
+	};
 }; 
 

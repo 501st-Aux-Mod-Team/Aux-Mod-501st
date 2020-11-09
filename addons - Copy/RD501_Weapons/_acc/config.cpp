@@ -78,6 +78,11 @@ class CfgWeapons
 ////////////////////////////Optics///////////////////////////////
 /////////////////////////////////////////////////////////////////
 	class ItemCore;
+	class optic_LRPS:ItemCore
+	{
+		class ItemInfo;
+	}
+	class JLTS_DC15X_scope;
 	class optic_Hamr:ItemCore
 	{
 		class ItemInfo;
@@ -456,6 +461,59 @@ class CfgWeapons
 		picture="RD501_Weapons\_acc\data\rd501_ico_pistol_03_ca.paa";
 		model="RD501_Weapons\_acc\data\rd501_pistol_3.p3d";
 		displayName="Pistol Holo B";
+	};
+	class RD501_LRPS : optic_LRPS
+	{
+		author="RD501";
+		scope=2;
+		displayName="LRPS LR 12-20x Scope";
+		class ItemInfo:ItemInfo
+		{
+			mass=16;
+			opticType=2;
+			weaponInfoType="RscWeaponRangeZeroingFOV";
+			optics=1;
+			modelOptics="\A3\Weapons_F\acc\reticle_sniper_F";
+            class OpticsModes
+            {
+                class Snip
+                {
+                    opticsID=1;
+                    opticsDisplayName="WFOV";
+                    useModelOptics=1;
+                    opticsPPEffects[]=
+                    {
+                        "OpticsCHAbera1",
+                        "OpticsBlur1"
+                    };
+                    opticsZoomMin=0.0099999998;
+                    opticsZoomMax=0.041999999;
+                    opticsZoomInit=0.041999999;
+                    discreteDistance[]={300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000,2100,2200,2300,2400};
+                    discreteDistanceInitIndex=2;
+                    distanceZoomMin=300;
+                    distanceZoomMax=2400;
+                    discretefov[]={0.041999999,0.0099999998};
+                    discreteInitIndex=0;
+                    memoryPointCamera="opticView";
+                    modelOptics[]=
+                    {
+                        "\A3\Weapons_F\acc\reticle_lrps_F",
+                        "\A3\Weapons_F\acc\reticle_lrps_z_F"
+                    };
+					visionMode[]=
+                    {
+                        "Normal",
+                        "NVG",
+                        "Ti"
+                    };
+                    thermalMode[]={4};
+                    opticsFlare=1;
+                    opticsDisablePeripherialVision=1;
+                    cameraDir="";
+                };
+            };
+		};
 	};
 ////////////////////////////////////////////////////////////////////////////
 ///////////////////////////Lights///////////////////////////////////////////

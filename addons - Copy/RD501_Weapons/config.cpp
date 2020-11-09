@@ -37,7 +37,6 @@ class CfgWeapons
 	
 	#include "_scopes/DC_15A_2-6x_acog.hpp"
 	
-	#include "_scopes/DC_15X_12_20x_scope.hpp"
 	class GrenadeLauncher;
 	class JLTS_stun_muzzle;
 	class RD501_stun_muzzle: JLTS_stun_muzzle
@@ -63,7 +62,8 @@ class CfgMagazineWells
 		macro_new_magwell(GL_AP)[]=
 		{
 			macro_new_mag(AT_GL,2),
-			macro_new_mag(UGL_AP,2)
+			macro_new_mag(UGL_AP,2),
+			"2Rnd_12Gauge_Pellets"
 		};
 
 		macro_new_magwell(GL_HE)[]=
