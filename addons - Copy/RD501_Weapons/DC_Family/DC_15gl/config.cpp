@@ -166,4 +166,97 @@ class CfgWeapons
 			mass=80;
 		};
 	};
+	class 3AS_DC15C_Base_GL;
+	class 3AS_DC15C_GL: 3AS_DC15C_Base_GL
+	{
+		class 3AS_15CGL;
+		class FullAuto;
+		class Single;
+		class WeaponSlotsInfo
+			{
+			class CowsSlot;	
+			class MuzzleSlot;
+			class PointerSlot;
+		};
+	};
+	class macro_new_weapon(DC,15cgl):3AS_DC15C_GL
+	{
+		displayName="Republic DC-15C UGL";
+		dispersion=0.00116;
+		ACE_Overheating_mrbs = 300000;
+		recoil="recoil_mxc";
+		magazines[]=
+		{
+			macro_new_mag(10mw,30)
+		};
+		muzzles[]=
+		{
+			"this",
+			"Shotgun_Muzzle",
+			"Stun"
+		};
+		class Shotgun_Muzzle: 3AS_15CGL
+		{
+			displayName="Shotgun Attachment";
+			descriptionShort="Shotgun";
+			magazines[]=
+					{			
+				macro_new_mag(shotgun_scatter,6),
+				macro_new_mag(shotgun_HE,6),
+				macro_new_mag(shotgun_EMP,2)
+					};
+			magazineWell[]={};
+		};
+		class Stun: RD501_stun_muzzle
+		{
+			displayName="High Energy StunMode";
+		};
+		class FullAuto:FullAuto
+		{
+			reloadTime=0.08;
+			dispersion=0.00116;
+		};
+		class Single : Single
+		{
+			reloadTime=0.08;
+			dispersion=0.00116;
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass = 30;
+			class CowsSlot: CowsSlot
+			{
+				displayName = "Optics Slot";
+				iconPicture = "\A3\Weapons_F\Data\UI\attachment_top.paa";
+				iconPinpoint = "Bottom";
+				iconPosition[] = {0.5,0.35};
+				iconScale = 0.2;
+				linkProxy = "\a3\data_f\proxies\weapon_slots\TOP";
+				scope = 0;
+				compatibleItems[] = 
+				{
+					/*"RD501_RCO",
+					"RD501_RCO_2",
+					"RD501_RCO_3"*/
+				};
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
+				displayName="$str_a3_cfgweapons_abr_base_f_weaponslotsinfo_muzzleslot0";
+				compatibleItems[]=
+				{
+					"RD501_muzzle_flash"
+				};
+				iconPicture="\A3\Weapons_F\Data\UI\attachment_muzzle.paa";
+				iconPinpoint="Center";
+			};
+			class PointerSlot : PointerSlot
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\SIDE";
+				displayName = "Pointer Slot";
+				compatibleItems[] = {"acc_flashlight","acc_pointer_IR"}; 
+			};
+		};
+	};
 };

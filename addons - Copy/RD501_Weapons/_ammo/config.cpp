@@ -29,6 +29,8 @@ class CfgAmmo
 	class G_40mm_HE;
 	class SWOP_BCCKtermimploder;
 	class SWOP_termDet;
+	class B_12Gauge_Pellets_Submunition;
+	class  B_12Gauge_Pellets_Submunition_Deploy;
 	class macro_new_ammo(2mw):3AS_EC20_BluePlasma
 	{
 		hit=4;
@@ -252,5 +254,41 @@ class CfgAmmo
 		indirectHit=14;
 		indirectHitRange=8;
 	}
-
+///////////////////////////////////////////////////////////////////////
+/////////////////////////Shotgun///////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+	class macro_new_ammo(shotgun_scatter): B_12Gauge_Pellets_Submunition
+	{
+		hit=20;
+		submunitionConeAngle = 0.8;
+		submunitionAmmo=macro_new_ammo(shotgun_scatter_submunition)
+	};
+	class macro_new_ammo(shotgun_scatter_submunition) : B_12Gauge_Pellets_Submunition_Deploy
+	{
+		hit=12;
+	};
+	class macro_new_ammo(shotgun_HE): B_12Gauge_Pellets_Submunition
+	{
+		hit=20;
+		submunitionConeAngle = 3;
+		submunitionAmmo=macro_new_ammo(shotgun_HE_submunition)
+	};
+	class macro_new_ammo(shotgun_HE_submunition) : B_12Gauge_Pellets_Submunition_Deploy
+	{
+		hit=8;
+		indirectHit=8;
+		indirectHitRange=0.9;
+	};
+	class macro_new_ammo(shotgun_EMP): B_12Gauge_Pellets_Submunition
+	{
+		hit=20;
+		submunitionConeAngle = 20;
+		submunitionAmmo=macro_new_ammo(shotgun_EMP_submunition)
+	};
+	class macro_new_ammo(shotgun_EMP_submunition) : B_12Gauge_Pellets_Submunition_Deploy
+	{
+		hit=1;
+		timeToLive = 0.05;
+		JLTS_isEMPAmmo=1;
+	};
 };

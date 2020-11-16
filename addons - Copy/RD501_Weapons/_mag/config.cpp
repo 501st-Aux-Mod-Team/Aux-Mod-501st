@@ -27,6 +27,7 @@ class CfgMagazines
 	class SWOP_termDet_Gm;
 	class SWOP_BCCKtermimploder_G;
 	class RPG32_F;
+	class 2Rnd_12Gauge_Pellets;
 
 	////////////////////////////////////////////////////
 	/////////////Rifle/Pistol Magazines/////////////////
@@ -345,4 +346,34 @@ class CfgMagazines
 		weight=1;
 		mass=1;
 	}
+	////////////////////////////////////////////////////
+	/////////////Shotgun  Magazines/////////////////////
+	////////////////////////////////////////////////////
+	class macro_new_mag(shotgun_scatter,6):2Rnd_12Gauge_Pellets
+	{
+		scope=2;
+		displayName = "6 Rnd SP Magazine";
+		displayNameShort = "6 Rnd SP Mag";
+		count=6;
+		ammo = macro_new_ammo(shotgun_scatter)
+		descriptionShort = "6 Rnd SP";
+	};
+	class macro_new_mag(shotgun_HE,6):2Rnd_12Gauge_Pellets
+	{
+		scope=2;
+		displayName = "6 Rnd UP Magazine";
+		displayNameShort = "6 Rnd UP Mag";
+		count=6;
+		ammo = macro_new_ammo(shotgun_HE)
+		descriptionShort = "6 Rnd UP";
+	};
+	class macro_new_mag(shotgun_EMP,2):2Rnd_12Gauge_Pellets
+	{
+		scope=2;
+		displayName = "2 Rnd EMP Magazine";
+		displayNameShort = "2 Rnd EMP Mag";
+		count=2;
+		ammo = macro_new_ammo(shotgun_EMP)
+		descriptionShort = "2 Rnd EMP";
+	};
 };

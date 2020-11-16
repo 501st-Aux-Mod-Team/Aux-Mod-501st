@@ -80,7 +80,7 @@
 	{
 		displayNameShort = "Voltic";
 		ammo = macro_new_ammo(voltic)
-		count = 200;
+		count = 1000;
 		tracersEvery = 1;
 		initSpeed = 1036;
 		maxLeadSpeed = 300;
@@ -90,15 +90,4 @@
 			"RD501_Gun_rail"
 		};
 		pylonWeapon=macro_new_weapon(pylon_voltic,y_wing)
-	};
-	class macro_new_mag(pylon_Kannon,100) : macro_new_mag(generic_aircraft_gun_green,1000)
-	{
-		ammo = macro_new_ammo(generic_kannon)
-		displayNameShort = "Coaxium Shells";
-		count = 15;
-		hardpoints[]=
-		{
-			"RD501_Gun_rail"
-		};
-		pylonWeapon=macro_new_weapon(pylon_generic,kannon)
 	};

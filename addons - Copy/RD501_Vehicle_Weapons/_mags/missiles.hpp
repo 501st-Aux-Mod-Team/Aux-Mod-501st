@@ -75,7 +75,7 @@
 	class macro_new_mag(pylon_ugm,10):7Rnd_Rocket_04_AP_F
 	{
 		ammo = macro_new_ammo(ugm)
-		count = 10;
+		count = 15;
 		displayName = "Hurricane UGM";	
 		displayNameShort = "Hurricane UGM";
 		tracersEvery=1;
