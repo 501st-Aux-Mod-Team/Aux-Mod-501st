@@ -79,6 +79,13 @@ class CfgWeapons
 		displayName = "Voltic (Pylon)";
 		displayNameShort = "Voltic";
 		magazines[]={macro_new_mag(pylon_voltic,200)};
+		class LowROF: LowROF
+		{
+			burst = 1;
+			soundContinuous=0;
+			reloadTime = 0.04;
+			dispersion=0.0025;
+		};
 	};
 }; 
 
