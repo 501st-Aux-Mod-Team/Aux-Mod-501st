@@ -25,18 +25,11 @@ class CfgPatches
 class CfgWeapons
 {
 	class macro_new_weapon(laser,v_wing);
-	class macro_new_weapon(generic,kannon);
 	class macro_new_weapon(pylon_laser,v_wing) : macro_new_weapon(laser,v_wing)
 	{
 		displayName = "Laser gun (Pylon)";
 		displayNameShort = "Laser";
 		magazines[]={macro_new_mag(pylon_generic_aircraft_gun_asg,3000)};
-	};
-	class macro_new_weapon(pylon_generic,kannon):macro_new_weapon(generic,kannon)
-	{
-		displayName = "Coaxium (Pylon)";
-		displayNameShort = "Coax";
-		magazines[]={macro_new_mag(pylon_Kannon,100)};
 	};
 	
 };

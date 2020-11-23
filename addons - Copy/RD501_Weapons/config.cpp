@@ -62,8 +62,7 @@ class CfgMagazineWells
 		macro_new_magwell(GL_AP)[]=
 		{
 			macro_new_mag(AT_GL,2),
-			macro_new_mag(UGL_AP,2),
-			"2Rnd_12Gauge_Pellets"
+			macro_new_mag(UGL_AP,2)
 		};
 
 		macro_new_magwell(GL_HE)[]=
@@ -110,6 +109,16 @@ class CfgMagazineWells
 			"ACE_HuntIR_M203"
 		};
 	}
+	
+	class macro_new_magwell(DC15C_Shotgun)
+	{
+		macro_new_magwell(shotgun)[]=
+		{
+			macro_new_mag(shotgun_scatter,6),
+			macro_new_mag(shotgun_HE,6),
+			macro_new_mag(shotgun_EMP,2)
+		};
+	};
 	
 
 	class macro_new_magwell(DC_15a_energy)

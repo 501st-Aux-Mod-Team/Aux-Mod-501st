@@ -357,7 +357,7 @@ class CfgMagazines
 		scope=2;
 		scopeArsenal = 2;
 		type=256;
-		picture = "\SW_ExtraWeapons\PICKUPS\UI\icons\energycell_X_ca.paa"; 
+		picture="\RD501_Vehicles\static\data\rd501_icon_mag_staticeweb.paa";
 		displayName= "Republic E-Web Charge"
 		count=600;
 		ammo=macro_new_ammo(z1000)
@@ -368,7 +368,7 @@ class CfgMagazines
 		scope=2;
 		scopeArsenal = 2;
 		type=256;
-		picture = "\SW_ExtraWeapons\PICKUPS\UI\icons\energycell_X_ca.paa"; 
+		picture="\RD501_Vehicles\static\data\rd501_icon_mag_staticgl.paa";
 		muzzleImpulseFactor[] = {0.1,0.1};
 		displayName= "RAGL40 'Boomer' belt"
 		count=40;
@@ -380,7 +380,7 @@ class CfgMagazines
 		scope=2;
 		scopeArsenal = 2;
 		type=256;
-		picture = "\SW_ExtraWeapons\PICKUPS\UI\icons\energycell_X_ca.paa"; 
+		picture="\RD501_Vehicles\static\data\rd501_icon_mag_staticaap.paa";
 		displayName= "AAP4 'Striker' Pod"
 		count=4;
 		weaponpoolavailable=1;
@@ -390,7 +390,7 @@ class CfgMagazines
 		scope=2;
 		scopeArsenal = 2;
 		type=256;
-		picture = "\SW_ExtraWeapons\PICKUPS\UI\icons\energycell_X_ca.paa"; 
+		picture="\RD501_Vehicles\static\data\rd501_icon_mag_staticrailgun.paa";
 		displayName= "MAR1 'Driver' Slug"
 		count=1;
 		ammo=macro_new_ammo(mar1)
