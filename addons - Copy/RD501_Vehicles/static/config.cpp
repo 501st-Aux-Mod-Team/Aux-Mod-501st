@@ -30,11 +30,12 @@ class CfgPatches
 class CfgVehicles
 {
 	class StaticMGWeapon;
-	class AT_01_base_F:StaticMGWeapon
+	class StaticWeapon;
+	class StaticAAWeapon:StaticWeapon
 	{
 		class Turrets;
 	};
-	class B_static_AT_F:AT_01_base_F 
+	class OPTRE_LAU65D_pod:StaticAAWeapon  
 	{
 		class Turrets:Turrets{
 		class MainTurret;};
@@ -135,7 +136,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class macro_new_vehicle(stat,Striker): B_static_AT_F
+	class macro_new_vehicle(stat,Striker): OPTRE_LAU65D_pod
 	{
 		armor=50;
 		scope = 2;
@@ -161,6 +162,11 @@ class CfgVehicles
 			maxTurn = 360;
 			weapons[] = {macro_new_weapon(stat,aap4)};
 			magazines[] = {macro_new_mag(aap,4)};
+			turretInfoType = "ACE_RscOptics_javelin";
+			gunnerOpticsColor[] = {0,0,0,1};
+			gunnerOpticsEffect[] = {};
+			gunnerOpticsModel = "\z\ace\addons\javelin\data\reticle_titan.p3d";
+			gunnerOpticsShowCursor = 0;
 		};
 		};
 		class assembleInfo
@@ -248,7 +254,7 @@ class CfgVehicles
 		displayName="RAGL40 'Boomer' Bag";
 		hiddenSelectionsTextures[]=
 		{
-			"\RD501_Vehicles\air\drones\Clone_backpack_uav.paa"
+			"\RD501_Vehicles\static\data\rd501_backpack_staticweapons_grenade.paa"
 		};
 		class assembleInfo: assembleInfo
 		{
@@ -261,7 +267,7 @@ class CfgVehicles
 		displayName="AAP4 'Striker' Bag";
 		hiddenSelectionsTextures[]=
 		{
-			"\RD501_Vehicles\air\drones\Clone_backpack_uav.paa"
+			"\RD501_Vehicles\static\data\rd501_backpack_staticweapons_rocket.paa"
 		};
 		class assembleInfo: assembleInfo
 		{
@@ -274,7 +280,7 @@ class CfgVehicles
 		displayName="MAR1 'Driver' Bag";
 		hiddenSelectionsTextures[]=
 		{
-			"\RD501_Vehicles\air\drones\Clone_backpack_uav.paa"
+			"\RD501_Vehicles\static\data\rd501_backpack_staticweapons_sniper.paa"
 		};
 		class assembleInfo: assembleInfo
 		{

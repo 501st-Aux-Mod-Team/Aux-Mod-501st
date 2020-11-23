@@ -130,6 +130,13 @@ class CfgVehicles
 					};
 					class pylons4: pylons3
 					{
+						hardpoints[]=
+						{
+							"RD501_Universal_rail"
+						};
+						attachment=macro_new_mag(pylon_agm,6)
+						priority=13;
+						maxweight=5000;
 						UIposition[]={0.1,0.34999999};
 						mirroredMissilePos=3;
 					};
@@ -146,6 +153,13 @@ class CfgVehicles
 					};
 					class pylons6: pylons5
 					{
+						hardpoints[]=
+						{
+							"RD501_Universal_rail"
+						};
+						attachment=macro_new_mag(pylon_agm,6)
+						priority=12;
+						maxweight=5000;
 						UIposition[]={0.15000001,0.25};
 						mirroredMissilePos=5;
 					};

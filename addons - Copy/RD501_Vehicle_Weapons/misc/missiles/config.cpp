@@ -91,7 +91,7 @@ class CfgWeapons
 	{
 		displayName = "Zephyr Pylon)";
 		displayNameShort = "Zephyr";
-		magazines[] = {mmacro_new_mag(pylon_aa,4)};
+		magazines[] = {macro_new_mag(pylon_aa,4)};
 		soundFly[] = {"\xt\SWrocketloop.ogg",3,1,800};
 		lockedTargetSound[] = {"TIE\LockedOn_2.ogg",0.7,1};
 		lockingTargetSound[] = {"TIE\Locking_Beep1.ogg",1,1};
