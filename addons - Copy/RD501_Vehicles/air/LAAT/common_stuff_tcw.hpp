@@ -15,6 +15,20 @@ vehicleClass = macro_editor_vehicle_type_air(Republic)
 RD501_magclamp_small_forbidden=1;
 RD501_magclamp_large_offset[]={0.0,1.6,-7.3};
 
+///Flight model
+	liftForceCoef = 2;
+	bodyFrictionCoef = 15;//25.5;//0.6777;
+	cyclicAsideForceCoef = 4*1.2;
+	cyclicForwardForceCoef = 2*1.2;
+	maxSpeed=200;
+	fuelCapacity = 700;
+	fuelConsumptionRate = 0.2;
+///
+//dmg properties
+	armor=500;
+	crewCrashProtection=0;
+	epeImpulseDamageCoef=0;
+///
 weapons[] = {
 	macro_basic_air_weapons,
 	macro_new_weapon(generic,green_dual_aircraft_laser),
