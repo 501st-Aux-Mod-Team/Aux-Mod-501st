@@ -18,6 +18,9 @@ if (isServer) then {
 	_aidrive setBehaviour "CARELESS";
 	[_aidrive, true] remoteExec ["hideObjectGlobal", 0];
 
+	_curators = objectCurators _vic;	
+	{ _x addCuratorEditableObjects [[_aidrive], true] } forEach _curators;
+
 	_vic addEventHandler ["Killed", {
 		params ["_unit", "_killer", "_instigator", "_useEffects"];
 			[_unit] spawn macro_fnc_name(remove_attached_objects)

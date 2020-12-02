@@ -23,6 +23,9 @@ if (isServer) then {
 	_ai_unit setSpeedMode "LIMITED";
 	_ai_unit forceWalk true;
 
+	_curators = objectCurators _vic;	
+	{ _x addCuratorEditableObjects [[_aidrive], true] } forEach _curators;
+
 	_vic addEventHandler ["Killed", {
 		params ["_unit", "_killer", "_instigator", "_useEffects"];
 			[_unit] spawn macro_fnc_name(remove_attached_objects)
