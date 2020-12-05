@@ -41,3 +41,6 @@ _fnc_endLoadingScreen = {
 // Flip Backpack
 rd501_flip_vehicle_validBackpacks = ["RD501_JLTS_Clone_Flip_backpack"];
 ["rd501_external_reload", { _this call rd501_fnc_onReloadExternalHandler }, []] call CBA_fnc_addEventHandlerArgs;
+
+// Fortify Tool Adjustments
+call macro_fnc_name(fortify_tool);
