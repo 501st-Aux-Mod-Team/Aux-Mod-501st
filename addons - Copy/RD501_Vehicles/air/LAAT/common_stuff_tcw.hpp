@@ -24,7 +24,7 @@ RD501_magclamp_large_offset[]={0.0,1.6,-7.3};
 	fuelCapacity = 700;
 	fuelConsumptionRate = 0.2;
 ///
-//dmg properties
+///dmg properties
 	armor=500;
 	crewCrashProtection=0;
 	epeImpulseDamageCoef=0;
