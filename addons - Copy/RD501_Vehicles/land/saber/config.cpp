@@ -140,103 +140,54 @@ class CfgVehicles
 	//O_JM_TX130_1  empire command
 	//O_JM_TX130m1_1 normal
 	//O_JM_TX130m2_1 super
-	class LandVehicle;
-	class Tank: LandVehicle
-	{
-		class NewTurret;
-		class Sounds;
-		class HitPoints;
-	};
-	class Tank_F: Tank
-	{
-		class Turrets
-		{
-			class MainTurret: NewTurret
-			{
-				class Turrets
-				{
-					class CommanderOptics;
-				};
-			};
-		};
-	};
+	class Tank_F;
 	class 3as_saber_01_Base: Tank_F
 	{
 		RD501_magclamp_small_offset[] = {0.0,0.0,-3.0};
 		RD501_magclamp_large_offset[] = {0.0,0.0,-3.0};
-		class Turrets:Turrets
-		{
-			class MainTurret_bottom: NewTurret{};
-			class Mainturret_top:MainTurret_bottom{};
-		};
+		class Turrets;
 	};
 
 	 #include "inheritance.hpp"
-	class 3as_saber_Base:3as_saber_01_Base
-	{
-		class Turrets:Turrets
-		{
-			class MainTurret_bottom:MainTurret_bottom{};
-			class Mainturret_top:Mainturret_top{};
-		};
-	};
+	class 3as_saber_Base:3as_saber_01_Base{};
 	class 3as_saber_m1:3as_saber_Base
 	{
 		class Turrets: Turrets
 		{
-			class MainTurret_bottom:MainTurret_bottom{};
-			class Mainturret_top:Mainturret_top{};
+			class MainTurret_bottom;
+			class Mainturret_top;
 		};
 	};
-	class 3as_saber_02_Base:3as_saber_01_Base
-	{
-		class Turrets:Turrets
-		{
-			class MainTurret_bottom:MainTurret_bottom{};
-			class MainTurret_top: Mainturret_top{};
-		};
-	};
+	class 3as_saber_02_Base:3as_saber_01_Base{};
 	class 3as_saber_m1G:3as_saber_02_Base
 	{
 		class Turrets: Turrets
 		{
-			class MainTurret_bottom:MainTurret_bottom{};
-			class MainTurret_top: Mainturret_top{};
+			class MainTurret_bottom;
+			class MainTurret_top;
 		}
 	};
-	class 3as_saber_super_base:3as_saber_01_Base
-	{
-		class Turrets:Turrets
-		{
-			class Mainturret_super: MainTurret_bottom{};
-		};
-	};
+	class 3as_saber_super_base:3as_saber_01_Base{};
 	class 3as_saber_super:3as_saber_super_base
 	{
 		class Turrets: Turrets
 		{
-			class Mainturret_super: Mainturret_super{};
+			class Mainturret_super;
 		};
 	};
-	class 3as_saber_03_Base:3as_saber_01_Base
-	{
-		class Turrets:Turrets
-		{
-			class MainTurret_top: Mainturret_top{};
-			class MainTurret_bottom: MainTurret_bottom{};
-		};
-	};
+	class 3as_saber_03_Base:3as_saber_01_Base{};
 	class 3as_saber_m1Recon:3as_saber_03_Base
 	{
 		class Turrets: Turrets
 		{
-			class MainTurret_top: Mainturret_top{};
-			class MainTurret_bottom: MainTurret_bottom{};
+			class MainTurret_top;
+			class MainTurret_bottom;
 		};
 	};
 	class macro_new_vehicle(saber,republic_tx130_MkII):3as_saber_m1
 	{
 		scope=2;
+		forceInGarage = 1;
 		scopeCurator=2;
 		displayName = "Saber TX-130 Mk.II"
 		faction = macro_republic_faction
@@ -269,6 +220,7 @@ class CfgVehicles
 	class macro_new_vehicle(saber,republic_tx130_gl_MkII):3as_saber_m1G
 	{
 		scope=2;
+		forceInGarage = 1;
 		scopeCurator=2;
 		displayName = "Saber TX-130 GL Mk.II"
 		faction = macro_republic_faction
@@ -290,6 +242,7 @@ class CfgVehicles
 	class macro_new_vehicle(saber,republic_tx130_super_MkII):3as_saber_super
 	{
 		scope=2;
+		forceInGarage = 1;
 		scopeCurator=2;
 		displayName = "Saber TX-130 Super Mk.II"
 		faction = macro_republic_faction
@@ -327,6 +280,7 @@ class CfgVehicles
 	class macro_new_vehicle(saber,republic_tx130_recon_MkII):3as_saber_m1Recon
 	{
 		scope=2;
+		forceInGarage = 1;
 		scopeCurator=2;
 		displayName = "Saber TX-130 Recon Mk.II"
 		faction = macro_republic_faction
