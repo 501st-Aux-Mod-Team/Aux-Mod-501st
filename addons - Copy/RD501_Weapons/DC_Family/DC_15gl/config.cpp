@@ -181,7 +181,7 @@ class CfgWeapons
 	};
 	class macro_new_weapon(DC,15cgl):3AS_DC15C_GL
 	{
-		displayName="Republic DC-15C UGL";
+		displayName="Republic DC-15C US";
 		dispersion=0.00116;
 		ACE_Overheating_mrbs = 300000;
 		recoil="recoil_mxc";

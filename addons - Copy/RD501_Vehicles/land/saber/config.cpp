@@ -302,8 +302,24 @@ class CfgVehicles
 				weapons[]=
 				{
 					macro_new_weapon(saber_cannon,supermkii),
-					"SmokeLauncher",
-					"Missiles_DAGR"
+					macro_new_weapon(saber_mg,50cal),
+					"SmokeLauncher"
+				};
+				magazines[]=
+				{
+					"3as_25rnd_Sabre_Super_Mag",
+					"3as_25rnd_Sabre_Super_Mag",
+					"3as_25rnd_Sabre_Super_Mag",
+					"3as_25rnd_Sabre_Super_Mag",
+					"3as_25rnd_Sabre_Super_Mag",
+					"3as_25rnd_Sabre_Super_Mag",
+					"3as_25rnd_Sabre_Super_Mag",
+					macro_new_mag(saber_mg,300),
+					macro_new_mag(saber_mg,300),
+					macro_new_mag(saber_mg,300),
+					macro_new_mag(saber_mg,300),
+					macro_new_mag(saber_mg,300),
+					"SmokeLauncherMag"
 				};
 			};
 		};
@@ -610,36 +626,6 @@ class CfgWeapons
 				macro_new_mag(saber_recon,100)
 			};
 			magazineReloadTime=3;
-			/*class player: player
-			{
-				reloadTime=0.30000001;
-				dispersion=0.0018;
-				magazineReloadTime=10;
-				sounds[]=
-				{
-					"StandardSound_1"
-				};
-				class StandardSound_1
-				{
-					begin1[]=
-					{
-						"3as\3as_saber\sounds\wpn_saberTank_autocannon_fire",
-						1.99526,
-						1,
-						1500
-					};
-					soundBegin[]=
-					{
-						"begin1",
-						0.33000001
-					};
-					soundsetshot[]=
-					{
-						"Autocannon30mmTurret_Shot_SoundSet",
-						"Autocannon30mmBody_tail_SoundSet"
-					};
-				};
-			};*/
 		};
 	};
 };
