@@ -70,6 +70,7 @@ class CfgVehicles
 		aileronSensitivity=2.9;
 		aileronControlsSensitivityCoef=4;
 		#include "../../common/universal_mfd.hpp"
+		#include "../../common/common_pilotCamera.hpp"
 		weapons[]=
 		{
 			"CMFlareLauncher",

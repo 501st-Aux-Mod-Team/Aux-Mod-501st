@@ -103,7 +103,7 @@ class CfgVehicles
 				minturn=-240;
 				maxelev=40;
 				maxturn=-120;
-				#include "common_optics.hpp"
+				#include "../../common/common_optics.hpp"
 			};
 			class LeftDoorgun: LeftDoorgun
 			{
@@ -119,7 +119,7 @@ class CfgVehicles
 					macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),
 					macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300)
 				};
-				#include "common_optics.hpp"
+				#include "../../common/common_optics.hpp"
 				memorypointgunneroptics="FIXME";
 			};
 			class RightDoorGun: RightDoorGun
@@ -136,7 +136,7 @@ class CfgVehicles
 					macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),
 					macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300)
 				};
-				#include "common_optics.hpp"
+				#include "../../common/common_optics.hpp"
 				memorypointgunneroptics="FIXME";
 			};
 			class CargoTurret_01: CargoTurret_01{};
@@ -184,7 +184,7 @@ class CfgVehicles
 				minturn=-240;
 				maxelev=40;
 				maxturn=-120;
-				#include "common_optics.hpp"
+				#include "../../common/common_optics.hpp"
 			};
 			class CargoTurret_01: CargoTurret_01{};
 			class CargoTurret_02: CargoTurret_02{};
@@ -232,7 +232,7 @@ class CfgVehicles
 				minturn=-240;
 				maxelev=40;
 				maxturn=-120;
-				#include "common_optics.hpp"
+				#include "../../common/common_optics.hpp"
 			};
 			class CargoTurret_01: CargoTurret_01{};
 			class CargoTurret_02: CargoTurret_02{};
@@ -275,7 +275,7 @@ class CfgVehicles
 				minturn=-240;
 				maxelev=40;
 				maxturn=-120;
-				#include "common_optics.hpp"
+				#include "../../common/common_optics.hpp"
 			};
 			class CargoTurret_01: CargoTurret_01{};
 			class CargoTurret_02: CargoTurret_02{};
