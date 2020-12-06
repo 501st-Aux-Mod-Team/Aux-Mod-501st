@@ -40,6 +40,9 @@ class CfgVehicles
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat_air(Republic_heli)
 		vehicleClass = macro_editor_vehicle_type_air(Republic)
+		
+		#include "../../common/common_pilotCamera.hpp"
+
 		weapons[]=
 		{
 			"ParticleBeamCannon_Nu",

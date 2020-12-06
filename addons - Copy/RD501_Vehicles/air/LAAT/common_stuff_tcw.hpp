@@ -55,23 +55,7 @@ smokeLauncherGrenadeCount=48;
 smokeLauncherAngle=360;
 smokeLauncherVelocity=14;
 
-class pilotCamera
-{
-	#include "common_optics.hpp"
-
-	minTurn=-180;
-	maxTurn=180;
-	initTurn=0;
-
-	minElev=-10;
-	maxElev=90;
-	initElev=-10;
-
-	maxXRotSpeed=0.30000001;
-	maxYRotSpeed=0.30000001;
-	pilotOpticsShowCursor=1;
-	controllable=1;
-};
+#include "../../common/common_pilotCamera.hpp"
 class ViewPilot: ViewPilot
 {
 	initAngleX = 0;
