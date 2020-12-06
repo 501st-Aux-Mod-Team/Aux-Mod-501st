@@ -163,7 +163,8 @@ class CfgVehicles
 	{
 		class Turrets: Turrets
 		{
-			class Mainturret_top;
+			class MainTurret_bottom;
+			class MainTurret_top;
 		}
 	};
 	class 3as_saber_super_base:3as_saber_01_Base{};
@@ -179,12 +180,14 @@ class CfgVehicles
 	{
 		class Turrets: Turrets
 		{
+			class MainTurret_top;
 			class MainTurret_bottom;
 		};
 	};
 	class macro_new_vehicle(saber,republic_tx130_MkII):3as_saber_m1
 	{
 		scope=2;
+		forceInGarage = 1;
 		scopeCurator=2;
 		displayName = "Saber TX-130 Mk.II"
 		faction = macro_republic_faction
@@ -217,6 +220,7 @@ class CfgVehicles
 	class macro_new_vehicle(saber,republic_tx130_gl_MkII):3as_saber_m1G
 	{
 		scope=2;
+		forceInGarage = 1;
 		scopeCurator=2;
 		displayName = "Saber TX-130 GL Mk.II"
 		faction = macro_republic_faction
@@ -224,6 +228,7 @@ class CfgVehicles
 		vehicleClass = macro_editor_vehicle_type(tank)
 		class Turrets: Turrets
 		{
+			class MainTurret_bottom:MainTurret_bottom{};
 			class MainTurret_top: Mainturret_top
 			{
 				weapons[]=
@@ -237,6 +242,7 @@ class CfgVehicles
 	class macro_new_vehicle(saber,republic_tx130_super_MkII):3as_saber_super
 	{
 		scope=2;
+		forceInGarage = 1;
 		scopeCurator=2;
 		displayName = "Saber TX-130 Super Mk.II"
 		faction = macro_republic_faction
@@ -258,6 +264,7 @@ class CfgVehicles
 	class macro_new_vehicle(saber,republic_tx130_recon_MkII):3as_saber_m1Recon
 	{
 		scope=2;
+		forceInGarage = 1;
 		scopeCurator=2;
 		displayName = "Saber TX-130 Recon Mk.II"
 		faction = macro_republic_faction
@@ -265,10 +272,12 @@ class CfgVehicles
 		vehicleClass = macro_editor_vehicle_type(tank)
 		class Turrets: Turrets
 		{
+			class MainTurret_top: Mainturret_top{};
 			class MainTurret_bottom: MainTurret_bottom
 			{
 				weapons[]=
 				{
+					macro_new_weapon(saber_gl,40mm),
 					macro_new_weapon(saber_mg,50cal),
 					"SmokeLauncher",
 					"missiles_DAGR"
@@ -602,6 +611,7 @@ class CfgMagazines
 	class macro_new_mag(saber_recon,100):3as_saber_200Rnd_autocannon_30mm_mag
 	{
 		count=100;
+		ammo=macro_new_ammo(saber_mg);
 	};
 };
 class CfgAmmo
