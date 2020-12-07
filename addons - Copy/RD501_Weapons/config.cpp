@@ -833,6 +833,9 @@ class CfgAmmo
 	{
 		hit=57.45;
 		caliber=3.5999999;
+		indirectHit = 3;
+		indirectHitRange = 0.5;
+		explosive = 0.4;
 		ACE_caliber=1;
 		typicalSpeed=860;
 		model="\A3\Weapons_f\Data\bullettracer\tracer_green";

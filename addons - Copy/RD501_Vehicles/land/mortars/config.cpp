@@ -40,7 +40,11 @@ class CfgPatches
 class DefaultEventhandlers;
 class CfgVehicles
 {
-
+	class Weapon_bag_base;
+	class JLTS_UAV_prowler_gar_backpack:Weapon_bag_base
+	{
+		class assembleInfo;
+	};
 	class B_Mortar_01_F;
 	class macro_new_vehicle(mortar,republic):B_Mortar_01_F
 	{
@@ -57,6 +61,13 @@ class CfgVehicles
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat(static_turrets)
 		vehicleClass = macro_editor_vehicle_type(static_turrets)
+		class assembleInfo
+		{
+			dissasembleTo[]=
+			{
+				macro_new_vehicle(stat,mortar_bag)
+			};
+		};
 	};
 
 	class macro_new_vehicle(mortar,cis):macro_new_vehicle(mortar,republic)
@@ -73,5 +84,17 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"optre_vehicles\hev\data\pod_CO.paa"};
 		availableForSupportTypes[] = {"Artillery"};
 	};
-
+class macro_new_vehicle(stat,mortar_bag):JLTS_UAV_prowler_gar_backpack
+	{
+		displayName="Republic Mortar Bag";
+		hiddenSelectionsTextures[]=
+		{
+			"\RD501_Vehicles\static\data\rd501_backpack_staticweapons_sniper.paa"
+		};
+		class assembleInfo: assembleInfo
+		{
+			displayName="Republic Mortar";
+			assembleTo = macro_new_vehicle(mortar,republic)
+		};
+	};
 };

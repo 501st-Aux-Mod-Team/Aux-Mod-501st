@@ -245,7 +245,7 @@ class CfgVehicles
 		};
 		class assembleInfo: assembleInfo
 		{
-			displayName="Assemble E-Web Bag";
+			displayName="E-Web";
 			assembleTo = macro_new_vehicle(stat,reweb)
 		};
 	};
@@ -258,7 +258,7 @@ class CfgVehicles
 		};
 		class assembleInfo: assembleInfo
 		{
-			displayName="Assemble Boomer";
+			displayName="Boomer";
 			assembleTo = macro_new_vehicle(stat,ragl40)
 		};
 	};
@@ -271,7 +271,7 @@ class CfgVehicles
 		};
 		class assembleInfo: assembleInfo
 		{
-			displayName="Assemble Striker";
+			displayName="Striker";
 			assembleTo = macro_new_vehicle(stat,Striker)
 		};
 	};
@@ -284,7 +284,7 @@ class CfgVehicles
 		};
 		class assembleInfo: assembleInfo
 		{
-			displayName="Assemble Driver";
+			displayName="Driver";
 			assembleTo = macro_new_vehicle(stat,Railgun)
 		};
 	};
