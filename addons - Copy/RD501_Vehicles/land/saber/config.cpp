@@ -566,6 +566,10 @@ class CfgWeapons
 	class macro_new_weapon(saber_gl,40mm):3as_saber_gmg_40mm
 	{
 		magazineReloadTime=3;
+		magazines[]=
+		{
+			macro_new_mag(saber_recon,100)
+		};
 	};
 	class macro_new_weapon(saber_cannon,supermkii):3AS_Sabre_Cannons_Super
 	{
@@ -597,7 +601,6 @@ class CfgMagazines
 	class macro_new_mag(saber_recon,100):3as_saber_200Rnd_autocannon_30mm_mag
 	{
 		count=100;
-		ammo=macro_new_ammo(saber_mg);
 	};
 };
 class CfgAmmo
