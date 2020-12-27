@@ -114,3 +114,6 @@ macro_prep_xeh(flip_vehicle\fnc_canFlipVehicle.sqf,canFlipVehicle)
 macro_prep_xeh(external_reload\fnc_canReloadExternal.sqf,canReloadExternal)
 macro_prep_xeh(external_reload\fnc_reloadExternal.sqf,reloadExternal)
 macro_prep_xeh(external_reload\fnc_onReloadExternalHandler.sqf,onReloadExternalHandler)
+
+// Deploy Medic CCP
+macro_prep_xeh(medical_ccp\fnc_deployCcp.sqf,deployCcp)

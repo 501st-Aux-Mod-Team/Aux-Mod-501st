@@ -44,3 +44,6 @@ rd501_flip_vehicle_validBackpacks = ["RD501_JLTS_Clone_Flip_backpack"];
 
 // Fortify Tool Adjustments
 call macro_fnc_name(fortify_tool);
+
+// Medical CCP Building
+rd501_medical_ccp_building = "Land_Medevac_house_V1_F";
