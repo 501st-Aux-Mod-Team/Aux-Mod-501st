@@ -162,24 +162,6 @@ class CfgMagazines
 		initSpeed = 310;
 	};
 
-	class macro_new_mag(z6,400): SWOP_e11_Mag
-	{
-		author = "rd501";
-		model = "\SW_ExtraWeapons\PICKUPS\power_cell.p3d";
-		ammo = macro_new_ammo(z6);
-		displayName = "400Rnd Z6 Rotary Blaster Magazine";
-		descriptionShort = "400Rnd Z6 Magazine";
-		count = 400;
-		weight = 100;
-		mass = 30;
-		ACE_isBelt = 1;
-		initSpeed = 500;//360;
-		picture = "\SW_CloneWarsWeapons\SW_Z6\UI\SW_Z6-mag.paa";
-		
-	};
-
-	
-	#include "_mag/flare_mag.hpp"
 	class 1Rnd_HE_Grenade_shell;
 	class macro_new_mag(AT_GL,2): CA_Magazine
 	{
@@ -241,84 +223,6 @@ class CfgMagazines
 		initSpeed = 310;
 	};
 
-	class SWOP_DC15ABlasterRifle_Mag;
-	class macro_new_mag(DC15a_Med,30): SWOP_DC15ABlasterRifle_Mag
-	{
-		author = "RD501";
-		scope = 2;
-		model = "\SW_ExtraWeapons\PICKUPS\energy_cell.p3d";
-		picture = "\SW_ExtraWeapons\PICKUPS\UI\icons\energycell_X_ca.paa";
-		displayName = "30Rnd DC-15A Mid Energy Rounds";
-		ammo = macro_new_ammo(dc15a_med);
-		tracersEvery = 1;
-		count = 30;
-		descriptionShort = "30Rnd DC15A Mid Energy";
-		mass = 20;
-		initSpeed = 380;
-	};
-
-	class macro_new_mag(DC15a_High,15): macro_new_mag(DC15a_Med,30)
-	{
-		displayName = "15Rnd DC-15A High Energy Rounds";
-		ammo = macro_new_ammo(dc15a_high);
-		count = 15;
-		descriptionShort = "15Rnd DC15A High Energy Rounds";
-		mass = 35;
-		initSpeed = 1200;
-	};
-	 
-	class macro_new_mag(DC15a_Low,60): macro_new_mag(DC15a_Med,30)
-	{
-		displayName = "60Rnd DC-15A Low Energy Rounds";
-		ammo = macro_new_ammo(dc15a_low);
-		count = 60;
-		descriptionShort = "60Rnd DC15A Low Energy";
-		mass = 30;
-	};
-
-	class  macro_new_mag(DC15a_box_mag,240): CA_Magazine
-	{
-		author = "RD501";
-		scope = 2;
-		model = "\SW_ExtraWeapons\PICKUPS\energy_cell.p3d";
-		picture = "\SW_ExtraWeapons\PICKUPS\UI\icons\energycell_X_ca.paa";
-		displayName = "240Rnd Box DC-15A Low Energy Rounds";
-		ammo =  macro_new_ammo(dc15a_low);
-		tracersEvery = 1;
-		count =240;
-		descriptionShort = "240Rnd DC15A Low Energy";
-		mass = 40;
-		initSpeed = 300;
-		ACE_isBelt = 1;
-	};
-
-	class SWOP_DC17Pistol_Mag;
-	class macro_new_mag(DC17,20): SWOP_DC17Pistol_Mag
-	{
-		scope = 2;
-		model = "\SW_ExtraWeapons\PICKUPS\energy_cell.p3d";
-		picture = "\SW_ExtraWeapons\PICKUPS\UI\icons\energycell_X_ca.paa";
-		displayName = "20Rnd DC17 Magazine.";
-		ammo = macro_new_ammo(dc_17);
-		tracersEvery = 1;
-		type = 16;
-		count = 20;
-		descriptionShort = "20Rnd DC17 Magazine";
-		mass = 6;
-		initSpeed = 310;
-		//initSpeed = 110;
-	};
-
-
-	class macro_new_mag(DC17,40): macro_new_mag(DC17,20)
-	{
-		displayName = "40Rnd DC17 Magazine.";
-		tracersEvery = 1;
-		count = 40;
-		descriptionShort = "40Rnd DC17 Magazine";
-		mass = 13;
-	};
-
 	class Titan_AA;
 	class CA_LauncherMagazine;
 	class Titan_AT;
@@ -372,30 +276,6 @@ class CfgMagazines
 		nameSound = "missiles";
 	};
 
-	class SWOP_E5C_Mag;
-	class SWOP_E5_Mag;
-	class macro_new_mag(E5c_aqua,90): SWOP_E5C_Mag
-	{
-		author = "RD501";
-		scope = 2;
-		displayName = "90Rnd E5C-Aqua Magazine";
-		ammo = macro_new_ammo(E5c_Aqua);
-		tracersEvery = 1;
-		count = 90;
-		descriptionShort = "90Rnd E5-Aqua Magazine";
-	};
-
-	class macro_new_mag(E5_aqua,60): SWOP_E5_Mag
-	{
-		author = "RD501";
-		scope = 2;
-		displayName = "60Rnd E5-Aqua Magazine";
-		ammo = macro_new_ammo(E5_Aqua);
-		tracersEvery = 1;
-		count = 60;
-		descriptionShort = "60Rnd E5-A Magazine";
-	};
-
 	class SW_iondisruptor_BlasterRifle_Mag;
 	class macro_new_mag(RAMER,6):SW_iondisruptor_BlasterRifle_Mag
 	{
@@ -410,21 +290,6 @@ class CfgMagazines
 		mass = 50;
 		initSpeed = 310;
 		author = "RD501";
-	};
-	class macro_new_mag(DC15a_LE,15): CA_Magazine
-	{
-		author = "RD501";
-		scope = 2;
-		model = "\SW_ExtraWeapons\PICKUPS\energy_cell.p3d";
-		picture = "\SW_ExtraWeapons\PICKUPS\UI\icons\energycell_X_ca.paa";
-		displayName = "15Rnd DC-15 LE Mag";
-		ammo = macro_new_ammo(dc15_LE);
-		tracersEvery = 1;
-		//count = 10;
-		count = 15;
-		descriptionShort = "15Rnd DC-15 LE Mag";
-		mass = 20;
-		initSpeed = 1200;
 	};
 
 
@@ -457,25 +322,6 @@ class CfgMagazines
 		displayName = "[]M18 Smoke Grenade (Yeet)";
 	};
 
-	 
-
-	class macro_new_mag(DC15_underwater,40): CA_Magazine
-	{
-		author = "RD501";
-		scope = 2;
-		model = "\SW_ExtraWeapons\PICKUPS\energy_cell.p3d";
-		picture = "\SW_ExtraWeapons\PICKUPS\UI\icons\energycell_X_ca.paa";
-		displayName = "40Rnd Republic Aqua Rounds";
-		ammo = macro_new_ammo(dc15_underwater);
-		tracersEvery = 1;
-		type = 16;
-		count = 40;
-		descriptionShort = "40Rnd Republic Aqua Rounds";
-		//mass = 15;
-		mass = 20;
-		initSpeed = 310;
-	};
-
 	class 3AS_Chaingun_Drum_Mag;
 	class macro_new_mag(z1000,3000) : 3AS_Chaingun_Drum_Mag
 	{
@@ -494,18 +340,12 @@ class CfgMagazines
 class CfgAmmo
 {	
 	class GrenadeHand;
-	class SWOP_DC17_Ammo;
 	class M_Titan_AT;
 	class R_PG32V_F;
 	class R_TBG32V_F;
 	class LaserAmmo_Minigun;
 	class FlareBase;
 	class G_40mm_HE;
-	class SWOP_dc15xBlasterRifle_Ammo;
-	class SWOP_DC15ABlasterRifle_Ammo;
-	class SWOP_DC15ABlasterRifle_Full_Ammo;
-	class SWOP_DC15ABlasterRifle_L_Ammo;
-	class SWOP_DC15_Ammo;
 
 	class ATMine_Range_Ammo;
 	class PipeBombBase;
@@ -514,25 +354,6 @@ class CfgAmmo
 	class DH17_Blaster_Ammo;
 	class 3AS_Chaingun_Ammo;
 	class M_Titan_AT;
-
-	class macro_new_ammo(westar_35):SWOP_DC17_Ammo
-	{
-		hit = pistol_hit_high;
-		indirectHit = 0.0;
-		indirectHitRange = 0.0;
-		explosive = 0.0;
-		caliber = pistol_cali_high;
-	};
-
-	class macro_new_ammo(dc_17): SWOP_DC17_Ammo
-	{
-		hit = 10;
-		waterFriction = -0.001;//
-		indirectHit = 0.2;
-		indirectHitRange = 0.2;
-		explosive = 0.05;
-		caliber = 2.8;//7
-	};
 	
 	class macro_new_ammo(z6):LaserAmmo_Minigun
 	{
@@ -543,8 +364,6 @@ class CfgAmmo
 		caliber = mg_cali_high;
 		ACE_caliber = 0;
 	};
-
-	#include "_ammo/40mm_flare.hpp"
 
 	class  macro_new_ammo(GL_AT): G_40mm_HE
 	{
@@ -580,78 +399,7 @@ class CfgAmmo
 
 		
 	};
-	
-	class macro_new_ammo(DC15x): SWOP_dc15xBlasterRifle_Ammo
-	{
-		hit = 55;//35
-		indirectHit = 0;
-		indirectHitRange = 0;
-		explosive = 0.0;
-		caliber = 6;//15
-		waterFriction = -0.001;//
-		timeToLive = 5;
-		
-	};
 
-	
-	class macro_new_ammo(dc15s_carbine):SWOP_DC15_Ammo
-	{
-		waterFriction = -0.001;//
-		hit = 7;
-		indirectHit = 0.1;
-		indirectHitRange = 0.2;
-		explosive = 0.1;//.4
-		caliber = 2;//5
-		timeToLive = 4;
-	};
-
-	class macro_new_ammo(dc15_underwater):macro_new_ammo(dc15s_carbine)
-	{
-		waterFriction = -0.001;//
-		hit = 7;
-		indirectHit = 0.1;
-		indirectHitRange = 0.2;
-		explosive = 0.1;//.4
-		caliber = 2;//5
-		timeToLive = 4;
-	
-		effectFly = "AmmoUnderwater";
-		nvgOnly = 1;
-		aiAmmoUsageFlags = "64 + 32";
-	};
-
-	class macro_new_ammo(dc15a_med):SWOP_DC15ABlasterRifle_Ammo
-	{
-		hit = 8;
-		waterFriction = -0.001;
-		indirectHit = 0.1;
-		indirectHitRange = 0.2;
-		explosive = 0.4;
-		caliber = 3;//7
-		timeToLive = 4;
-	};
-	
-	class macro_new_ammo(dc15a_high):SWOP_DC15ABlasterRifle_Full_Ammo
-	{
-		hit = 20;
-		waterFriction = -0.001;
-		indirectHit = 0.5;
-		indirectHitRange = 0.4;
-		explosive = 0.2;
-		caliber = 4;//10
-		timeToLive = 4;
-	};
-
-	class macro_new_ammo(dc15a_low):SWOP_DC15ABlasterRifle_L_Ammo
-	{
-		hit = 6;
-		waterFriction = -0.001;//
-		indirectHit = 0.1;
-		indirectHitRange = 0.2;
-		explosive = 0.4;
-		caliber = 2;//5
-		timeToLive = 4;
-	};
 
 	class UNSC_Mine_Ammo: ATMine_Range_Ammo
 	{
@@ -696,58 +444,6 @@ class CfgAmmo
 		indirectHitRange = 1;
 	};
 
-	
-	class macro_new_ammo(E5c_Aqua): DH17_Blaster_Ammo
-	{
-		airFriction = 0;
-		waterFriction = 0;
-		effectFly = "AmmoUnderwater";
-	};
-
-	class macro_new_ammo(E5_Aqua): DH17_Blaster_Ammo
-	{
-		airFriction = 0;
-		waterFriction = 0;
-		effectFly = "AmmoUnderwater";
-	};
-
-	class SWOP_bactagammo:GrenadeHand
-	{
-		soundFly[] = {"\thermalD\diox1.ogg", 1, 1, 60};
-		class NVGMarkers
-		{
-			class Blinking1
-			{
-				name = "blinkpos1";
-				color[] = {0.01, 0.01, 0.01, 1};
-				ambient[] = {0.005, 0.005, 0.005, 1};
-				blinking = 1;
-				brightness = 0.002;
-				onlyInNvg = 1;
-			};
-			class Blinking2
-			{
-				color[] = {0.9, 0.1, 0.1};
-				ambient[] = {0.1, 0.1, 0.1};
-				name = "blinkpos2";
-				blinking = 1;
-				blinkingStartsOn = 1;
-				blinkingPattern[] = {0.1, 0.9};
-				blinkingPatternGuarantee = 1;
-				drawLightSize = 0.35;
-				drawLightCenterSize = 0.05;
-				brightness = 0.002;
-				dayLight = 1;
-				onlyInNvg = 0;
-				intensity = 75;
-				drawLight = 1;
-				activeLight = 0;
-				useFlare = 0;
-			};
-		};
-	};
-
-
 	//212th stuff
 	class SCI_PLX1_R : M_Titan_AT
 	{
@@ -767,58 +463,9 @@ class CfgAmmo
 		indirectHit = 60;
 		indirectHitRange = 8;
 	};
-
-	class macro_new_ammo(dc15_LE): SWOP_DC15ABlasterRifle_Full_Ammo
-	{
-	
-		//hit = 15;
-		hit = 33;
-		waterFriction = -0.001;//
-		indirectHit = 0.5;
-		indirectHitRange = 0.4;
-		//explosive = 0.45;
-		explosive = 0.4;
-		caliber = 5;//10
-		cartridge = "";
-		cost = 1;
-		model = "\SWOP_Main\Effects\Tracer\laserblue";
-		tracerScale = 1.5;
-		tracerStartTime = 0;
-		tracerEndTime = 2;
-		//timeToLive = 2;
-		timeToLive = 4;
-		nvgOnly = 0;
-		typicalSpeed = 70;
-		visibleFire = 3;
-		audibleFire = 5;
-		visibleFireTime = 4;
-		dangerRadiusBulletClose = 16;
-		dangerRadiusHit = 40;
-		suppressionRadiusBulletClose = 10;
-		suppressionRadiusHit = 14;
-	};
-
-	class SWOP_DC15SA_Ammo;
-
-	class macro_new_ammo(DC15_Razor_Blade):SWOP_DC15SA_Ammo
-	{
-		hit = 50;
-		indirectHit = 0.0;
-		indirectHitRange = 0.0;
-		explosive = 0;
-		caliber = 5;
-		CraterEffects = "ExploAmmoLaserCrater";
-	
-	};
 	
 
 	class B_127x108_APDS;
-	class SW_iondisruptor_BlasterRifle_Ammo: B_127x108_APDS
-	{
-		timeToLive = 2;
-	};
-
-	
 	class SmokeShell;
 	class smoke_meme: SmokeShell
 	{

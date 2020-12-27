@@ -13,8 +13,8 @@
 #define macro_e5_mag "JLTS_E5_mag"
 #define macro_e5_mags _8(macro_e5_mag)
 
-#define macro_lmg "RD501_e5_C"
-#define macro_lmg_mag "RD501_20mw_x90_mag"
+#define macro_lmg "JLTS_E5C"
+#define macro_lmg_mag "JLTS_E5C_mag"
 #define macro_lmg_mags _8(macro_lmg_mag)
 
 #define macro_at_heavy "JLTS_E60R_AT"
