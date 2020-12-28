@@ -13,7 +13,7 @@ macro_grp_fnc_name(magclamp,handle_universal) = {
     private _attached = _vehicle getVariable[_attached_var,objNull];
 
     if(isNull _attached) then {
-    	private _objects = nearestObjects [player, ["Car","Tank","Motorcycle","StaticWeapon","Air","Ship","Object"], 20];
+    	private _objects = nearestObjects [player, ["Car","Tank","Motorcycle","StaticWeapon","Air","Ship","Thing"], 20];
 
     	private _target_index = 0;
 	    private _target = _objects select _target_index;
