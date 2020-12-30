@@ -42,11 +42,11 @@ class CfgPatches
 
 class CfgVehicles
 {
-	class swop_HMP_droidgunship;
+	class 442_hmp;//swop_HMP_droidgunship;
 
-	class swop_HMP_droidgunship_transport;
+	class 442_hmp_transport;//swop_HMP_droidgunship_transport;
 
-	class macro_new_vehicle(HMP,gunship):swop_HMP_droidgunship
+	class macro_new_vehicle(HMP,gunship):442_hmp//swop_HMP_droidgunship
 	{
 		scope=2;
 		scopeCurator=2;
@@ -75,7 +75,7 @@ class CfgVehicles
 
 	};
 
-	class macro_new_vehicle(HMP,transport): swop_HMP_droidgunship_transport//macro_new_vehicle(HMP,gunship)
+	class macro_new_vehicle(HMP,transport): 442_hmp_transport//swop_HMP_droidgunship_transport
 	{
 		displayName = "H.M.P Transport Mk.I";
 		forceInGarage = 1;
