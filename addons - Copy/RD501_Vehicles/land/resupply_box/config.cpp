@@ -30,7 +30,8 @@ class CfgPatches
 			macro_new_vehicle(resuppy_box,platoon_joint),
 			macro_new_vehicle(resuppy_box,small_medical),
 			macro_new_vehicle(resuppy_box,small_ammo),
-			macro_new_vehicle(resuppy_box,small_joint)
+			macro_new_vehicle(resuppy_box,small_joint),
+			macro_new_vehicle(resuppy_box,platoon_medical_tent)
 		};
 		weapons[]=
 		{
@@ -64,6 +65,26 @@ class CfgVehicles
 		};
 		class EventHandlers :DefaultEventhandlers{};
 	};
+	class macro_new_vehicle(resuppy_box,platoon_medical_tent): plp_ct_HighSecContBlack
+	{
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "Republic M*A*S*H";
+		hiddenSelections[] = {"camo", "camoB", "camo1", "camo2"};
+		hiddenSelectionsTextures[] = {"\plp_containers\StcHighSec\plp_ct_HighSecContRed.paa", "", "\plp_containers\StcHighSec\plp_ct_HighSec_LightOrange_co.paa", ""};
+		hiddenSelectionsMaterials[] = {"\plp_containers\StcHighSec\plp_ct_HighSecCont_Metal.rvmat", "\plp_containers\StcHighSec\plp_ct_HighSecCont_MetalB.rvmat", "\plp_containers\StcHighSec\plp_ct_HighSec_Light.rvmat", ""};
+		editorCategory = macro_editor_cat(suppplies)
+		editorSubcategory = macro_editor_cat(resupply)
+		class TransportItems{};
+		class EventHandlers :DefaultEventhandlers{};
+		class assembleInfo
+		{
+			dissasembleTo[]=
+			{
+				"Land_Medevac_house_V1_F";
+			};
+		};
+	};
 
 	class macro_new_vehicle(resuppy_box,platoon_ammo): plp_ct_HighSecContBlack
 	{
@@ -78,17 +99,17 @@ class CfgVehicles
 
 		class TransportItems
 		{
-			#include "ammo_platoon_items.hpp"
+			//#include "ammo_platoon_items.hpp"
 		};
 
 		class TransportMagazines
 		{
-			#include"ammo_platoon_mag.hpp"
+			//#include"ammo_platoon_mag.hpp"
 		};	
 
 		class TransportWeapons
 		{
-			#include "ammo_platoon_weap.hpp"
+			//#include "ammo_platoon_weap.hpp"
 		};
 
 		class EventHandlers :DefaultEventhandlers{};
@@ -105,18 +126,18 @@ class CfgVehicles
 
 		class TransportItems
 		{
-			#include "ammo_platoon_items.hpp"
-			#include "medical_platoon_items.hpp"
+			//#include "ammo_platoon_items.hpp"
+			//#include "medical_platoon_items.hpp"
 		};
 
 		class TransportMagazines
 		{
-			#include"ammo_platoon_mag.hpp"
+			//#include"ammo_platoon_mag.hpp"
 		};	
 
 		class TransportWeapons
 		{
-			#include "ammo_platoon_weap.hpp"
+			//#include "ammo_platoon_weap.hpp"
 		};
 
 		class EventHandlers :DefaultEventhandlers{};
@@ -216,17 +237,17 @@ class CfgVehicles
 		ace_cargo_canLoad = 1;  
 		class TransportItems
         {
-        	#include "ammo_small_items.hpp"
+        	//#include "ammo_small_items.hpp"
         };
 			
 		class TransportMagazines
         {
-        	#include "ammo_small_mag.hpp"	
+        	//#include "ammo_small_mag.hpp"	
         };	
 		
 		class TransportWeapons
         {
-        	#include "ammo_small_weap.hpp"
+        	//#include "ammo_small_weap.hpp"
         };
 		
 

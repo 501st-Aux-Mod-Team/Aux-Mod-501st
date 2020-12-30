@@ -35,7 +35,7 @@ class CfgPatches
 class DefaultEventhandlers;
 class CfgVehicles
 {
-	class SWOP_Droideka;
+	class k_CIS_Droideka;
 
 	// REMOVE FROM HERE
 	/*class macro_new_vehicle(droideka,base_depr) :SWOP_Droideka
@@ -97,7 +97,7 @@ class CfgVehicles
 
 
 
-	class macro_new_vehicle(droideka,base): SWOP_Droideka
+	class macro_new_vehicle(droideka,base): k_CIS_Droideka
 	{
 		scope=2;
 		displayName = "Static Droideka";

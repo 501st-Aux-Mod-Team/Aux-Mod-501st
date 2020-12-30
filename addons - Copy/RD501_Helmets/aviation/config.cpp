@@ -7,7 +7,7 @@ class CfgPatches
 {
 	class macro_patch_name(aviation_helmets)
 	{
-		author=DANKAUTHORS
+		author=RD501
 		addonRootClass= macro_patch_name(helmets)
 		requiredAddons[]=
 		{
@@ -66,13 +66,11 @@ class CfgWeapons
 	NEW_501_Pilot_HELM(keryl,Keryl,pilots\keryl.paa)
 	NEW_501_Pilot_HELM(kaj,Kaj,pilots\Kaj.paa)
 	NEW_501_Pilot_HELM(kitty,Kitty,pilots\kitty.paa)
-	NEW_501_Pilot_HELM(koop,Koop,pilots\Koop.paa)
 	NEW_501_Pilot_HELM(kushiban,Kushiban,pilots\Kushiban.paa)
 	NEW_501_Pilot_HELM(orange,Orange,pilots\orange.paa)
 	NEW_501_Pilot_HELM(nocturnal,Warbird,pilots\Nocturnal.paa)
 	NEW_501_Pilot_HELM(aspect,Aspect,pilots\Aspect.paa)
 	NEW_501_Pilot_HELM(Galaxy,Galaxy,pilots\Galaxy.paa)
-	NEW_501_Pilot_HELM(Halligan,Halligan,pilots\Halligan.paa)
 	NEW_501_Pilot_HELM(Floff,Floff,pilots\Floff.paa)
 	NEW_501_Pilot_HELM(Gothic,Gothic,pilots\Gothic.paa)
 	NEW_501_Pilot_HELM(Shnuffles,Shnuffles,pilots\Shnuffles.paa)
@@ -118,66 +116,6 @@ class CfgWeapons
 			"\501st_Helmets\AB\data\red_glow.rvmat"//"swop_clones\data\helmpilot.rvmat"//  \501st_Helmets\AB\data\white_glow.rvmat
 		};
 	};
-	class macro_new_helmet(pilot,lord_krayt): macro_new_helmet(pilot,base)
-	{
-		scope = 2;
-		displayName = "Clone pilot helmet (501st legion) Lord Krayt";
-		hiddenSelectionsTextures[] = {macro_custom_helmet_textures\aviation\pilots\LordKrayt.paa};
-		subItems[] = {"G_B_Diving"};
-
-		#include "memenai.hpp"
-
-	};
-
-	class macro_new_helmet(pilot,king_krayt): macro_new_helmet(pilot,lum_base)
-	{
-		scope = 2;
-		displayName = "Clone pilot helmet (501st legion) King Krayt";
-		hiddenSelectionsTextures[] = {macro_custom_helmet_textures\aviation\pilots\KingKrayt.paa};
-		subItems[] = {"G_B_Diving"};
-		#include "memenai.hpp"
-
-		hiddenSelectionsMaterials[]=
-		{
-			"",
-			"\501st_Helmets\AB\data\white_glow.rvmat"//"swop_clones\data\helmpilot.rvmat"//  \501st_Helmets\AB\data\white_glow.rvmat
-		};
-	};
-
-	class macro_new_helmet(pilot,royal_krayt): macro_new_helmet(pilot,king_krayt)
-	{
-		displayName = "Clone pilot helmet (501st legion) Royal Krayt";
-		hiddenSelectionsTextures[] = {macro_custom_helmet_textures\aviation\pilots\purple.paa};
-	}
-
-	class macro_new_helmet(pilot,cold_krayt): macro_new_helmet(pilot,king_krayt)
-	{
-			displayName = "Clone pilot helmet (501st legion) Ice Krayt";
-		hiddenSelectionsTextures[] = {macro_custom_helmet_textures\aviation\pilots\blue.paa};
-	}
-
-	class macro_new_helmet(pilot,angrr_krayt): macro_new_helmet(pilot,king_krayt)
-	{
-		displayName = "Clone pilot helmet (501st legion) Angrr Krayt";
-		hiddenSelectionsTextures[] = {macro_custom_helmet_textures\aviation\pilots\red.paa};
-	}
-
-	//gollddd
-	// class macro_new_helmet(pilot,midas_lrayt): macro_new_helmet(pilot,lum_base)
-	// {
-	// 	scope = 2;
-	// 	displayName = "Clone pilot helmet (501st legion) Midas Krayt";
-	// 	hiddenSelectionsTextures[] = {macro_custom_helmet_textures\aviation\pilots\KingKrayt.paa};
-	// 	subItems[] = {"G_B_Diving"};
-	// 	#include "memenai.hpp"
-
-	// 	hiddenSelectionsMaterials[]=
-	// 	{
-	// 		"", //RD501_Laat\textures\gold.rvmat
-	// 		"RD501_Helmets\_materials\gold.rvmat",//"\501st_Helmets\AB\data\white_glow.rvmat"//"swop_clones\data\helmpilot.rvmat"//  \501st_Helmets\AB\data\white_glow.rvmat
-	// 	};
-	// };
-
 
 
 	class 212th_Engineer_Helmet_501st;
