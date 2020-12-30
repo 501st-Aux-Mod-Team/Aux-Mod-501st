@@ -55,11 +55,11 @@ class CfgPatches
 		requiredVersion=0.1;
 		units[]=
 		{
-			macro_new_vehicle(AAT,Medium_tropical_MkII),
-			macro_new_vehicle(AAT,Medium_urban_MkII),
-			macro_new_vehicle(AAT,Medium_snow_MkII),
-			macro_new_vehicle(AAT,King_red_MkII),
-			macro_new_vehicle(AAT,King_green_MkII)
+			macro_new_vehicle(AAT,King_MkIII),
+			macro_new_vehicle(AAT,King_MkIII_Urban),
+			macro_new_vehicle(AAT,Medium_MkIII_Snow),
+			macro_new_vehicle(AAT,Medium_MkIII_Tropical),
+			macro_new_vehicle(AAT,Light_MkIII)
 		};
 		weapons[]=
 		{

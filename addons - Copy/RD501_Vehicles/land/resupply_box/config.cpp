@@ -99,17 +99,17 @@ class CfgVehicles
 
 		class TransportItems
 		{
-			#include "ammo_platoon_items.hpp"
+			//#include "ammo_platoon_items.hpp"
 		};
 
 		class TransportMagazines
 		{
-			#include"ammo_platoon_mag.hpp"
+			//#include"ammo_platoon_mag.hpp"
 		};	
 
 		class TransportWeapons
 		{
-			#include "ammo_platoon_weap.hpp"
+			//#include "ammo_platoon_weap.hpp"
 		};
 
 		class EventHandlers :DefaultEventhandlers{};
@@ -126,18 +126,18 @@ class CfgVehicles
 
 		class TransportItems
 		{
-			#include "ammo_platoon_items.hpp"
-			#include "medical_platoon_items.hpp"
+			//#include "ammo_platoon_items.hpp"
+			//#include "medical_platoon_items.hpp"
 		};
 
 		class TransportMagazines
 		{
-			#include"ammo_platoon_mag.hpp"
+			//#include"ammo_platoon_mag.hpp"
 		};	
 
 		class TransportWeapons
 		{
-			#include "ammo_platoon_weap.hpp"
+			//#include "ammo_platoon_weap.hpp"
 		};
 
 		class EventHandlers :DefaultEventhandlers{};
@@ -237,17 +237,17 @@ class CfgVehicles
 		ace_cargo_canLoad = 1;  
 		class TransportItems
         {
-        	#include "ammo_small_items.hpp"
+        	//#include "ammo_small_items.hpp"
         };
 			
 		class TransportMagazines
         {
-        	#include "ammo_small_mag.hpp"	
+        	//#include "ammo_small_mag.hpp"	
         };	
 		
 		class TransportWeapons
         {
-        	#include "ammo_small_weap.hpp"
+        	//#include "ammo_small_weap.hpp"
         };
 		
 

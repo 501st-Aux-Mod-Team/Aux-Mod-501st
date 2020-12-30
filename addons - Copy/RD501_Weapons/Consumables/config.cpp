@@ -1,19 +1,17 @@
 class cfgPatches
 {
-    class newacestuff
+    class RD501_ACE_Medical
     {
-        requiredAddons[] = 
-        {
-            "ace_medical_engine",
-            "ace_medical_treatment",
-        };
+        requiredAddons[] = {};
+		units[]={};
+		weapons[]={"RD501_Painkiller"};
     };
 };
-class cfgweapons
+class CfgWeapons
 {
-    class ACE_Morphine;
+    class ACE_ItemCore;
 	class CBA_MiscItem_ItemInfo;
-    class RD501_Painkiller: ACE_Morphine
+    class RD501_Painkiller: ACE_ItemCore
     {
         scope = 2;
 		displayName = "Painkiller Autoinjector";
