@@ -77,6 +77,19 @@ class CfgVehicles
 		editorSubcategory = macro_editor_cat(resupply)
 		class TransportItems{};
 		class EventHandlers :DefaultEventhandlers{};
+		class ACE_Actions {
+			class ACE_MainActions {
+				displayName = "Deployable CCP";
+				condition = "true";
+				distance = 4;
+				class rd501_deploy_medical_ccp {
+					displayName = "Deploy";
+					statement = "_this call rd501_fnc_deployCcp";
+					icon = "rd501_main\ui_icons\medical_emblem.paa";
+					exceptions[] = {};
+				};
+			};
+		};
 	};
 
 	class macro_new_vehicle(resuppy_box,platoon_ammo): plp_ct_HighSecContBlack
