@@ -58,6 +58,16 @@ class CfgVehicles
 	
 		editorSubcategory = macro_editor_cat(static_msc)
 		class EventHandlers:DefaultEventhandlers {}; 
+         class ACE_Actions {
+            class ACE_MainActions {
+                class RD501_Heal_All_Nearby
+                {
+                    displayName = "Heal Nearby";
+                    statement = "[_player, _target, 10] call rd501_fnc_healAllNearby";
+                    condition = "true";
+                };
+            };
+        };
 		
 	};
 	
