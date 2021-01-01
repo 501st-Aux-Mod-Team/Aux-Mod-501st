@@ -595,19 +595,6 @@ class CfgVehicles
 			};
 		};
 	};
-	class macro_new_vehicle(resuppy_box,platoon_medical_tent)
-	{
-		class ACE_Actions {
-			class ACE_MainActions {
-				class rd501_deploy_medical_ccp {
-					displayName = "Deploy CCP";
-					statement = "_this call rd501_fnc_deployCcp";
-					icon = "rd501_main\ui_icons\medical_emblem.paa";
-					exceptions[] = {};
-				};
-			};
-		};
-	};
 	class Tank : LandVehicle
 	{
 		class ACE_Actions {

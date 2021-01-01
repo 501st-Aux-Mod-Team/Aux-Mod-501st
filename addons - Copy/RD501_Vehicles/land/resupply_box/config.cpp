@@ -77,13 +77,6 @@ class CfgVehicles
 		editorSubcategory = macro_editor_cat(resupply)
 		class TransportItems{};
 		class EventHandlers :DefaultEventhandlers{};
-		class assembleInfo
-		{
-			dissasembleTo[]=
-			{
-				"Land_Medevac_house_V1_F";
-			};
-		};
 	};
 
 	class macro_new_vehicle(resuppy_box,platoon_ammo): plp_ct_HighSecContBlack

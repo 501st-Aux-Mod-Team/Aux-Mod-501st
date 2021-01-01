@@ -47,3 +47,8 @@ call macro_fnc_name(fortify_tool);
 
 // Medical CCP Building
 rd501_medical_ccp_building = "Land_Medevac_house_V1_F";
+
+// Medical CCP Interaciton
+_action = ["rd501_medical_deploy_ccp", "Deploy CCP", "",  { _this call rd501_fnc_deployCcp }, {true}] call ace_interact_menu_fnc_createAction;
+["RD501_resuppy_box_platoon_medical_tent", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
+["RD501_resuppy_box_small_medical", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
