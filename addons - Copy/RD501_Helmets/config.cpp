@@ -263,16 +263,16 @@ class CfgWeapons
 		ace_hearing_lowerVolume = 0;    
 		subItems[] = {"G_B_Diving","ItemcTabHCam"};
 		displayName = "[501st] ARC HELM (Base)";
-		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneHelmetP2_ui_ca.paa";
-		model = "\MRC\JLTS\characters\CloneArmor\CloneHelmetP2.p3d";
+		picture="\MRC\JLTS\characters\CloneArmor2\data\ui\CloneHelmetARC_ui_ca.paa";
+		model = "\MRC\JLTS\characters\CloneArmor2\CloneHelmetARC.p3d";
 		hiddenSelections[] = {"Camo1"};
-		hiddenSelectionsTextures[] = {"RD501_Units\textures\republic\clones\arc\arc_helmet.paa"};
-		hiddenSelectionsMaterials[]= {"RD501_Helmets\_materials\clone_helmet_p2.rvmat"};
+		hiddenSelectionsTextures[] = {"RD501_Helmets\_textures\ARC\ARC.paa"};
+		hiddenSelectionsMaterials[]= {"RD501_Helmets\_materials\Clone_helmet_ARC"};
 		class ItemInfo: HeadgearItem
 		{
 			mass = 30;
-			uniformmodel = "\MRC\JLTS\characters\CloneArmor\CloneHelmetP2.p3d";
-			hiddenSelectionsMaterials[]= {"RD501_Helmets\_materials\clone_helmet_p2.rvmat"};
+			uniformmodel = "\MRC\JLTS\characters\CloneArmor2\CloneHelmetARC.p3d";
+			hiddenSelectionsMaterials[]= {"RD501_Helmets\_materials\Clone_helmet_ARC.rvmat"};
 			modelSides[] = {6};
 			hiddenSelections[] = {"Camo1"};
 			material = -1;

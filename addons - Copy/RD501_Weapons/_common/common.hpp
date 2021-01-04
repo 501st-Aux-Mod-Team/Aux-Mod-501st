@@ -61,11 +61,7 @@
 	macro_new_mag(40mm_Purple,3)
 
 #define MACRO_GL_flare_rounds_1rnd \
-	macro_new_mag(40mm_white,1),\
-	macro_new_mag(40mm_CIR,1),\
-	macro_new_mag(40mm_Green,1),\
-	macro_new_mag(40mm_Red,1),\
-	macro_new_mag(40mm_Yellow,1),\
-	macro_new_mag(40mm_Blue,1),\
-	macro_new_mag(40mm_Cyan,1),\
-	macro_new_mag(40mm_Purple,1)
+	"UGL_FlareGreen_F",\
+	"UGL_FlareRed_F",\
+	"UGL_FlareWhite_F",\
+	"UGL_FlareYellow_F"
