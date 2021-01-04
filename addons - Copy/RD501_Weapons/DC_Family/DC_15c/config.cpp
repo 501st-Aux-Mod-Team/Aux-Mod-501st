@@ -28,12 +28,7 @@ class CfgWeapons
 	{
 		class FullAuto;
 		class Single;
-		class WeaponSlotsInfo
-			{
-			class CowsSlot;	
-			class MuzzleSlot;
-			class PointerSlot;
-		};
+		class WeaponSlotsInfo;
 	};
 	class macro_new_weapon(DC,15c):3AS_DC15C_F
 	{
@@ -67,7 +62,7 @@ class CfgWeapons
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass = 30;
-			class CowsSlot: CowsSlot
+			class CowsSlot
 			{
 				displayName = "Optics Slot";
 				iconPicture = "\A3\Weapons_F\Data\UI\attachment_top.paa";
@@ -80,10 +75,20 @@ class CfgWeapons
 				{
 					"RD501_RCO",
 					"RD501_RCO_2",
-					"RD501_RCO_3"
+					"RD501_RCO_3",
+					"RD501_Holosight",
+					"RD501_Holosight_2",
+					"RD501_Holosight_3",
+					"RD501_DMS",
+					"RD501_DMS_2",
+					"RD501_DMS_3",
+					"RD501_DMS_4",
+					"RD501_MRCO",
+					"RD501_MRCO_2",
+					"RD501_MRCO_3"
 				};
 			};
-			class MuzzleSlot: MuzzleSlot
+			class MuzzleSlot
 			{
 				linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
 				displayName="$str_a3_cfgweapons_abr_base_f_weaponslotsinfo_muzzleslot0";
@@ -94,7 +99,7 @@ class CfgWeapons
 				iconPicture="\A3\Weapons_F\Data\UI\attachment_muzzle.paa";
 				iconPinpoint="Center";
 			};
-			class PointerSlot : PointerSlot
+			class PointerSlot
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\SIDE";
 				displayName = "Pointer Slot";

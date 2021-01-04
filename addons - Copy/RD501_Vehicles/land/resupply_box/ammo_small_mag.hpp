@@ -75,12 +75,12 @@ class _transport_launcher_AA_mags
 };
 class _transport_launcher_PLXAT_mags
 {
-	magazine =  "JLTS_PLX1_AT_Missile"
+	magazine =  "JLTS_PLX1_AT_mag"
 	count = 10;
 };
 class _transport_launcher_PLXAP_mags
 {
-	magazine =  "JLTS_PLX1_AP_Missile"
+	magazine =  "JLTS_PLX1_AP_mag"
 	count = 10;
 };
 class _transport_he3
