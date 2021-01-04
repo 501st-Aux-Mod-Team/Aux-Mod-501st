@@ -58,6 +58,26 @@ class CfgVehicles
 	
 		editorSubcategory = macro_editor_cat(static_msc)
 		class EventHandlers:DefaultEventhandlers {}; 
+         class ACE_Actions {
+            class ACE_MainActions {
+				displayName = "Bacta Tank";
+                selection = "";
+                distance = 4;
+                condition = "true";
+                class RD501_Heal_All_Nearby
+                {
+                    displayName = "Heal Nearby";
+                    statement = "[_player, _target, 10] call rd501_fnc_healAllNearby";
+                    condition = "true";
+                };
+				class RD501_Heal_Self
+				{
+					displayName = "Heal";
+					statement = "[_player, _player] call ace_medical_treatment_fnc_fullHeal";
+					condition = "true";
+				};
+            };
+        };
 		
 	};
 	

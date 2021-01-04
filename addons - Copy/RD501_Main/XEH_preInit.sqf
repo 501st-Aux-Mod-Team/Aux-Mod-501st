@@ -114,3 +114,6 @@ macro_prep_xeh(flip_vehicle\fnc_canFlipVehicle.sqf,canFlipVehicle)
 macro_prep_xeh(external_reload\fnc_canReloadExternal.sqf,canReloadExternal)
 macro_prep_xeh(external_reload\fnc_reloadExternal.sqf,reloadExternal)
 macro_prep_xeh(external_reload\fnc_onReloadExternalHandler.sqf,onReloadExternalHandler)
+
+// Heal Nearby
+macro_prep_xeh(heal_nearby\fnc_healAllNearby.sqf,healAllNearby)
