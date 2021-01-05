@@ -68,6 +68,7 @@ class cfgWeapons
 	{
 		class Single;
 		class FullAuto;
+		class WeaponSlotsInfo;
 	};
 	class macro_new_weapon(westar,rm5):3AS_WestarM5_F
 	{
@@ -86,6 +87,53 @@ class cfgWeapons
 		class FullAuto:FullAuto
 		{
 			reloadTime=0.1;
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass = 30;
+			class CowsSlot
+			{
+				displayName = "Optics Slot";
+				iconPicture = "\A3\Weapons_F\Data\UI\attachment_top.paa";
+				iconPinpoint = "Bottom";
+				iconPosition[] = {0.5,0.35};
+				iconScale = 0.2;
+				linkProxy = "\a3\data_f\proxies\weapon_slots\TOP";
+				scope = 0;
+				compatibleItems[] = 
+				{
+					"RD501_RCO",
+					"RD501_RCO_2",
+					"RD501_RCO_3",
+					"RD501_Holosight",
+					"RD501_Holosight_2",
+					"RD501_Holosight_3",
+					"RD501_DMS",
+					"RD501_DMS_2",
+					"RD501_DMS_3",
+					"RD501_DMS_4",
+					"RD501_MRCO",
+					"RD501_MRCO_2",
+					"RD501_MRCO_3"
+				};
+			};
+			class MuzzleSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
+				displayName="$str_a3_cfgweapons_abr_base_f_weaponslotsinfo_muzzleslot0";
+				compatibleItems[]=
+				{
+					"RD501_muzzle_flash"
+				};
+				iconPicture="\A3\Weapons_F\Data\UI\attachment_muzzle.paa";
+				iconPinpoint="Center";
+			};
+			class PointerSlot
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\SIDE";
+				displayName = "Pointer Slot";
+				compatibleItems[] = {"acc_flashlight","acc_pointer_IR"}; 
+			};
 		};
 	};
 };

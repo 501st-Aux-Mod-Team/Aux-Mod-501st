@@ -26,12 +26,12 @@ class CfgVehicles
 {
 	#include "arc170_inheritance.hpp"
 
-	class macro_new_vehicle(arc_170,razor): 3as_arc_170_razor
+	/*class macro_new_vehicle(arc_170,razor): 3as_arc_170_razor
 	{
 		displayName="ARC-170 (Razor)";
 		#include "../../common/universal_mfd.hpp"
 		#include "arc170_common.hpp"
-	};
+	};*/
 	class macro_new_vehicle(arc_170,blue): 3as_arc_170_blue
 	{
 		displayName="ARC-170 (Blue)";

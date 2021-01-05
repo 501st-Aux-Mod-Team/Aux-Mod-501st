@@ -94,16 +94,19 @@ class CfgWeapons
 				scope = 0;
 				compatibleItems[] = 
 				{
-					//macro_new_weapon(scope,dc_15a_acog),
-					//"RD501_RCO",
-					//"RD501_RCO_2",
-					//"RD501_RCO_3",
+					"RD501_RCO",
+					"RD501_RCO_2",
+					"RD501_RCO_3",
+					"RD501_Holosight",
+					"RD501_Holosight_2",
+					"RD501_Holosight_3",
+					"RD501_DMS",
+					"RD501_DMS_2",
+					"RD501_DMS_3",
+					"RD501_DMS_4",
 					"RD501_MRCO",
 					"RD501_MRCO_2",
 					"RD501_MRCO_3"
-					//"RD501_Holosight",
-					//"RD501_Holosight_2",
-					//"RD501_Holosight_3"
 				};
 
 			};
@@ -164,20 +167,58 @@ class CfgWeapons
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=80;
+			class CowsSlot
+			{
+				displayName = "Optics Slot";
+				iconPicture = "\A3\Weapons_F\Data\UI\attachment_top.paa";
+				iconPinpoint = "Bottom";
+				iconPosition[] = {0.5,0.35};
+				iconScale = 0.2;
+				linkProxy = "\a3\data_f\proxies\weapon_slots\TOP";
+				scope = 0;
+				compatibleItems[] = 
+				{
+					"RD501_RCO",
+					"RD501_RCO_2",
+					"RD501_RCO_3",
+					"RD501_Holosight",
+					"RD501_Holosight_2",
+					"RD501_Holosight_3",
+					"RD501_DMS",
+					"RD501_DMS_2",
+					"RD501_DMS_3",
+					"RD501_DMS_4",
+					"RD501_MRCO",
+					"RD501_MRCO_2",
+					"RD501_MRCO_3"
+				};
+			};
+			class MuzzleSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
+				displayName="$str_a3_cfgweapons_abr_base_f_weaponslotsinfo_muzzleslot0";
+				compatibleItems[]=
+				{
+					"RD501_muzzle_flash"
+				};
+				iconPicture="\A3\Weapons_F\Data\UI\attachment_muzzle.paa";
+				iconPinpoint="Center";
+			};
+			class PointerSlot
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\SIDE";
+				displayName = "Pointer Slot";
+				compatibleItems[] = {"acc_flashlight","acc_pointer_IR"}; 
+			};
 		};
 	};
-	class 3AS_DC15C_Base_GL;
-	class 3AS_DC15C_GL: 3AS_DC15C_Base_GL
+	class 3AS_DC15C_Base_F;
+	class 3AS_DC15C_GL: 3AS_DC15C_Base_F
 	{
 		class 3AS_15CGL;
 		class FullAuto;
 		class Single;
-		class WeaponSlotsInfo
-			{
-			class CowsSlot;	
-			class MuzzleSlot;
-			class PointerSlot;
-		};
+		class WeaponSlotsInfo;
 	};
 	class macro_new_weapon(DC,15cgl):3AS_DC15C_GL
 	{
@@ -185,6 +226,7 @@ class CfgWeapons
 		dispersion=0.00116;
 		ACE_Overheating_mrbs = 300000;
 		recoil="recoil_mxc";
+		scope = 2;
 		magazines[]=
 		{
 			macro_new_mag(10mw,30)
@@ -224,7 +266,7 @@ class CfgWeapons
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass = 30;
-			class CowsSlot: CowsSlot
+			class CowsSlot
 			{
 				displayName = "Optics Slot";
 				iconPicture = "\A3\Weapons_F\Data\UI\attachment_top.paa";
@@ -235,12 +277,22 @@ class CfgWeapons
 				scope = 0;
 				compatibleItems[] = 
 				{
-					/*"RD501_RCO",
+					"RD501_RCO",
 					"RD501_RCO_2",
-					"RD501_RCO_3"*/
+					"RD501_RCO_3",
+					"RD501_Holosight",
+					"RD501_Holosight_2",
+					"RD501_Holosight_3",
+					"RD501_DMS",
+					"RD501_DMS_2",
+					"RD501_DMS_3",
+					"RD501_DMS_4",
+					"RD501_MRCO",
+					"RD501_MRCO_2",
+					"RD501_MRCO_3"
 				};
 			};
-			class MuzzleSlot: MuzzleSlot
+			class MuzzleSlot
 			{
 				linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
 				displayName="$str_a3_cfgweapons_abr_base_f_weaponslotsinfo_muzzleslot0";
@@ -251,7 +303,7 @@ class CfgWeapons
 				iconPicture="\A3\Weapons_F\Data\UI\attachment_muzzle.paa";
 				iconPinpoint="Center";
 			};
-			class PointerSlot : PointerSlot
+			class PointerSlot 
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\SIDE";
 				displayName = "Pointer Slot";
