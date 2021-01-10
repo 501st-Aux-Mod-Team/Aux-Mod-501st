@@ -37,7 +37,12 @@ class _xx_ACE_morphine
 {
     name = "ACE_morphine";
     count = 30;
-};									
+};		
+class _xx_ACE_painkiller
+{
+    name = "RD501_Painkiller";
+    count = 30;
+};								
 class _xx_ACE_epinephrine
 {
     name = "ACE_epinephrine";

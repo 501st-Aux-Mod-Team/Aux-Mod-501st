@@ -75,6 +75,44 @@
 		indirectHitRange = 15;
 		cameraViewAvailable = 1; 
 	};
+	class macro_new_ammo(spark) : Rocket_04_AP_F
+	{
+		displayName = "Spark UGM";	
+		displayNameShort = "Spark UGM";
+		effectFly = "RD501_Effect_Violet";
+		effectsFire = "RD501_Effect_Violet";
+		effectsMissileInit = "RD501_laat_PylonBackEffectsFFAR";
+		effectsMissile = "RD501_FX_Missile_AA_Violet";
+		explosionEffects="JLTS_fx_exp_EMP";
+		SoundSetExplosion[]=
+		{
+			"JLTS_GrenadeEMP_Exp_SoundSet",
+			"JLTS_GrenadeEMP_Tail_SoundSet",
+			"Explosion_Debris_SoundSet"
+		};
+		muzzleEffect = "";
+		effectsSmoke = "RD501_Effect_Violet";
+		soundfly[] = {"\xt\SWionrocketloop.ogg",3,1,800};
+		model = "\SWOP_Main\Effects\Tracer\laserred";
+		tracerColor[] = {"blue"};
+		brightness = 20000;
+		lightColor[] = {0, 0, 1, 1};
+		triggerTime = 0.1;
+		hit = 0.1;
+		indirectHit = 0.1;
+		indirectHitRange = 40;
+		cameraViewAvailable = 1;	
+		JLTS_isEMPAmmo=1;	
+		submunitionAmmo=macro_new_ammo(spark_sub)
+	};
+	class ammo_Penetrator_Rocket_04_AP;
+	class macro_new_ammo(spark_sub) :ammo_Penetrator_Rocket_04_AP
+	{
+		hit = 0.1;
+		indirectHit = 0.1;
+		indirectHitRange = 40;
+		JLTS_isEMPAmmo=1;	
+	}
 	
 	class macro_new_ammo(lgm) : M_Jian_AT
 	{

@@ -290,6 +290,43 @@ class CfgWeapons
 			};
 		};
 	};
+	class macro_new_helmet(arc,base_jlts) : itemCore
+	{
+		scope = 2;
+		author = "RD501";
+		weaponPoolAvailable = 1;       
+		subItems[] = {"G_B_Diving"};
+		ace_hearing_protection = 0.85; 		
+		ace_hearing_lowerVolume = 0;    
+		subItems[] = {"G_B_Diving","ItemcTabHCam"};
+		displayName = "[501st] ARC HELM (Sergeant)";
+		picture="\MRC\JLTS\characters\CloneArmor2\data\ui\CloneHelmetARC_ui_ca.paa";
+		model = "\MRC\JLTS\characters\CloneArmor2\CloneHelmetARC.p3d";
+		hiddenSelections[] = {"Camo1"};
+		hiddenSelectionsTextures[] = {"RD501_Helmets\_textures\ARC\ARC_CS.paa"};
+		hiddenSelectionsMaterials[]= {"RD501_Helmets\_materials\Clone_helmet_ARC"};
+		class ItemInfo: HeadgearItem
+		{
+			mass = 30;
+			uniformmodel = "\MRC\JLTS\characters\CloneArmor2\CloneHelmetARC.p3d";
+			hiddenSelectionsMaterials[]= {"RD501_Helmets\_materials\Clone_helmet_ARC.rvmat"};
+			modelSides[] = {6};
+			hiddenSelections[] = {"Camo1"};
+			material = -1;
+			explosionShielding = 2.2;
+			minimalHit = 0.01;
+			passThrough = 0.01;
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 50;
+					passThrough = 0.6;
+				};
+			};
+		};
+	};
 
 	//AB
 	class macro_new_helmet(airborne,base): H_HelmetSpecB

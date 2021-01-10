@@ -108,3 +108,53 @@ class _transport_C12_Remote_Mag
 	magazine = "C12_Remote_Mag";
 	count = 2;
 };
+class _transport_RGLHE
+{
+	magazine = macro_new_mag(UGL_HE,6)
+	count = 10;
+};
+class _transport_RGLAP
+{
+	magazine = macro_new_mag(UGL_AP,6)
+	count = 10;
+};
+class _transport_RGPEMP
+{
+	magazine = macro_new_mag(UGL_EMP,6)
+	count = 5;
+};
+class _transport_ShotgunSP
+{
+	magazine = macro_new_mag(shotgun_scatter,6)
+	count = 20;
+};
+class _transport_ShotgunUO
+{
+	magazine = macro_new_mag(shotgun_HE,6)
+	count = 20;
+};
+class _transport_ShotgunEMP
+{
+	magazine = macro_new_mag(shotgun_EMP,2)
+	count = 10;
+};
+class _transport_StaticEweb
+{
+	magazine = macro_new_mag(eweb,600)
+	count = 10;
+};
+class _transport_StaticStriker
+{
+	magazine = macro_new_mag(ragl40he,40)
+	count = 10;
+};
+class _transport_StaticBoomer
+{
+	magazine = macro_new_mag(aap,4)
+	count = 10;
+};
+class _transport_StaticDriver
+{
+	magazine = macro_new_mag(mar,1)
+	count = 10;
+};

@@ -78,7 +78,7 @@ class CfgWeapons
 ////////////////////////////Optics///////////////////////////////
 /////////////////////////////////////////////////////////////////
 	class ItemCore;
-	class optic_LRPS:ItemCore
+	class optic_DMS:ItemCore
 	{
 		class ItemInfo;
 	}
@@ -462,7 +462,7 @@ class CfgWeapons
 		model="RD501_Weapons\_acc\data\rd501_pistol_3.p3d";
 		displayName="Pistol Holo B";
 	};
-	class RD501_LRPS : optic_LRPS
+	class RD501_LRPS : optic_DMS
 	{
 		author="RD501";
 		scope=2;
@@ -512,6 +512,28 @@ class CfgWeapons
                     opticsDisablePeripherialVision=1;
                     cameraDir="";
                 };
+			class Iron: Snip
+				{
+					opticsID=2;
+					useModelOptics=0;
+					opticsPPEffects[]=
+					{
+						"",
+						""
+					};
+					opticsFlare=0;
+					opticsDisablePeripherialVision=0;
+					opticsZoomMin=0.25;
+					opticsZoomMax=1.25;
+					opticsZoomInit=0.75;
+					memoryPointCamera="eye";
+					visionMode[]={};
+					discretefov[]={};
+					distanceZoomMin=200;
+					distanceZoomMax=200;
+					discreteDistance[]={200};
+					discreteDistanceInitIndex=0;
+				};
             };
 		};
 	};

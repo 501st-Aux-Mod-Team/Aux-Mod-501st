@@ -296,10 +296,6 @@ class CfgEditorCategories
 	{
 		displayName = "Speeders";
 	};
-	class kobra
-	{
-		displayname = "[K] Kobra";
-	};
 	
 };
 
@@ -410,12 +406,12 @@ class CfgEditorSubcategories
 
 	class macro_editor_cat(wall)
 	{
-		displayName = "sheild walls";
+		displayName = "Shield Walls";
 	};
 
 	class macro_editor_cat(static_msc)
 	{
-		displayName = "static stuff";
+		displayName = "Bacta Tanks";
 	};
 	class macro_editor_cat(turrets)
 	{
@@ -472,18 +468,6 @@ class CfgEditorSubcategories
 	class macro_editor_cat_air(heli)
 	{
 		displayName = "Starfighter";
-	};
-	class 442_ships
-	{
-		displayname = "Static Ship";
-	};
-	class 442_ships_parts
-	{
-		displayname = "Static Ship Parts";
-	};
-	class 442_hallway
-	{
-		displayname = "Hallways";
 	};
 
 };

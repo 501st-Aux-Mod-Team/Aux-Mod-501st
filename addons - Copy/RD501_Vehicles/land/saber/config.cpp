@@ -228,6 +228,7 @@ class LandVehicle;
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat(tank)
 		vehicleClass = macro_editor_vehicle_type(tank)
+		#include "../../common/smallvehiclekit.hpp"
 		class Turrets: Turrets
 		{
 			class MainTurret_bottom : MainTurret_bottom{};
@@ -261,6 +262,7 @@ class LandVehicle;
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat(tank)
 		vehicleClass = macro_editor_vehicle_type(tank)
+		#include "../../common/smallvehiclekit.hpp"
 	};
 	class macro_new_vehicle(saber,republic_tx130_super_MkII):3as_saber_super
 	{
@@ -271,6 +273,7 @@ class LandVehicle;
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat(tank)
 		vehicleClass = macro_editor_vehicle_type(tank)
+		#include "../../common/smallvehiclekit.hpp"
 		class Turrets: Turrets
 		{
 			class Mainturret_super: Mainturret_super
@@ -309,6 +312,7 @@ class LandVehicle;
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat(tank)
 		vehicleClass = macro_editor_vehicle_type(tank)
+		#include "../../common/smallvehiclekit.hpp"
 		class Turrets: Turrets
 		{
 			class MainTurret_top: Mainturret_top{};
