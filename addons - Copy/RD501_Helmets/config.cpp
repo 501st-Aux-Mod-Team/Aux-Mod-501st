@@ -290,7 +290,7 @@ class CfgWeapons
 			};
 		};
 	};
-	class macro_new_helmet(arc,base_jlts) : itemCore
+	class macro_new_helmet(arc,sgt_jlts) : itemCore
 	{
 		scope = 2;
 		author = "RD501";
