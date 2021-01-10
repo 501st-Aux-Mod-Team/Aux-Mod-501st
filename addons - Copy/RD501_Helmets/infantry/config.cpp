@@ -148,4 +148,5 @@ class CfgWeapons
 	NEW_501_ARC_Helm_JLTS(Jink,Jink,Jink.paa)
 	NEW_501_ARC_Helm_JLTS(Brennan,Brennan,Brennan.paa)
 	NEW_501_ARC_Helm_JLTS(Bronson,Bronson,Bronson.paa)
+	NEW_501_ARC_Helm_JLTS(Darkstar,Darkstar,Darkstar.paa)
 };
