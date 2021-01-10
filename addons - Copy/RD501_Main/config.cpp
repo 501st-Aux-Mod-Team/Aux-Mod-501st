@@ -679,6 +679,7 @@ class CfgVehicles
 			killed="(_this select 0) setVariable ['GEARF_HelmetAttached', false]; (_this select 0) setVariable ['GEARF_HelmetAttachedClass','']; (_this select 0) setVariable ['GEARF_HelmetAdditionalClass',''];";
 			getInMan="[(_this select 0), true] call GEARF_fnc_hideSlungHelmet";
 			getOutMan="[(_this select 0), false] call GEARF_fnc_hideSlungHelmet;";
+			hit="[(_this select 0), (_this select 1), (_this select 3)] call RD501_fnc_stun";
 		};
 	};
 };
