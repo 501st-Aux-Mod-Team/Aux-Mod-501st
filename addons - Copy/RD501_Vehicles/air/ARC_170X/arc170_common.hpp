@@ -9,20 +9,14 @@ weapons[]=
 	"Laserdesignator_pilotCamera",
 	"CMFlareLauncher",
 	macro_new_weapon(generic,republic_aircraft_cannon),
-	macro_new_weapon(generic,kannon),
-	macro_new_weapon(wynd,a2a),
-	macro_new_weapon(wynd,agm),
-	macro_new_weapon(wynd,ugm)
+	macro_new_weapon(generic,kannon)
 };
 magazines[]=
 {
 	macro_new_mag(generic_aircraft_cannon_green,1000),
-	macro_new_mag(a2a,4),
-	macro_new_mag(agm,6),
-	macro_new_mag(ugm,10),
 	macro_basic_air_mags,
 	macro_new_mag(Kannon,100),
-	macro_new_mag(Kannon,100),
+	macro_new_mag(Kannon,100)
 };
 class Components: Components
 {
@@ -32,54 +26,68 @@ class Components: Components
 
 		class Pylons
 		{
-			class Pylons1
-			{
-				attachment = "empty";
-				priority = 5;
-				maxweight = 2000;
-				UIposition[]={ 0.34999999, 0 };
-			};
-
-			class Pylons2 : Pylons1
-			{
-				attachment = "empty";
-				UIposition[]={ 0.34999999, 0.5 };
-				mirroredMissilePos = 1;
-			};
-
-			class Pylons3
-			{
-				hardpoints[]=
-				{
-					"ARC_BOMB_PYLON"
-				};
-				attachment = "empty";
-				priority = 3;
-				maxweight = 4000;
-				UIposition[]={ 0.34999999, 0.1 };
-			};
-
-			class Pylons4 : Pylons3
-			{
-				attachment = "empty";
-				UIposition[]={ 0.34999999, 0.40000001 };
-				mirroredMissilePos = 4;
-			};
-
-			class Pylons5
-			{
-				attachment = "empty";
-				priority = 4;
-				maxweight = 100000;
-				UIposition[]={ 0.34999999, 0.2 };
-			};
-
-			class Pylons6 : Pylons5
-			{
-				attachment = "empty";
-				UIposition[]={ 0.34999999, 0.30000001 };
-				mirroredMissilePos = 5;
-			};
+			class pylons1
+					{
+						hardpoints[]=
+						{
+							"RD501_Universal_rail"
+						};
+						attachment=macro_new_mag(pylon_agm,6)
+						priority=10;
+						maxweight=300;
+						UIposition[]={0.60000002,0.44999999};
+					};
+					class pylons2: pylons1
+					{
+						UIposition[]={0.050000001,0.44999999};
+						mirroredMissilePos=1;
+					};
+					class pylons3: pylons1
+					{
+						hardpoints[]=
+						{
+							"RD501_Universal_rail"
+						};
+						attachment=macro_new_mag(pylon_agm,6)
+						priority=9;
+						maxweight=2500;
+						UIposition[]={0.55000001,0.34999999};
+					};
+					class pylons4: pylons3
+					{
+						hardpoints[]=
+						{
+							"RD501_Universal_rail"
+						};
+						attachment=macro_new_mag(pylon_agm,6)
+						priority=13;
+						maxweight=5000;
+						UIposition[]={0.1,0.34999999};
+						mirroredMissilePos=3;
+					};
+					class pylons5: pylons1
+					{
+						hardpoints[]=
+						{
+							"RD501_Universal_rail"
+						};
+						attachment=macro_new_mag(pylon_agm,6)
+						priority=7;
+						maxweight=5000;
+						UIposition[]={0.5,0.25};
+					};
+					class pylons6: pylons5
+					{
+						hardpoints[]=
+						{
+							"RD501_Universal_rail"
+						};
+						attachment=macro_new_mag(pylon_agm,6)
+						priority=12;
+						maxweight=5000;
+						UIposition[]={0.15000001,0.25};
+						mirroredMissilePos=5;
+					};
 
 			class Pylons7
 			{

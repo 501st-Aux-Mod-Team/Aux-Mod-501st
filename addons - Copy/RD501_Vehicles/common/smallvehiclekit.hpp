@@ -5,9 +5,9 @@ class TransportItems
 			name = "ToolKit";
 			count = 2;
 		};
-		class _transport_ACE_morphine
+		class _transport_ACE_painkiller
 		{
-			name = "ACE_morphine";
+			name = "RD501_Painkiller";
 			count = 10;
 		};	
 		class _transport_ACE_epinephrine

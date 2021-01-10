@@ -60,6 +60,14 @@ class cfgWeapons
 					"RD501_LRPS"
 				};
 			};
+		class UnderBarrelSlot
+			{
+			linkProxy="\A3\Data_F_Mark\Proxies\Weapon_Slots\UNDERBARREL";
+			compatibleItems[]=
+				{
+				"bipod_01_F_blk",
+				};
+			};
 		};
 	};
 };

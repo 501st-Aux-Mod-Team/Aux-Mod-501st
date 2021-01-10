@@ -184,6 +184,7 @@ class CfgMagazines
 	{
 		displayName="8 Round 50MW Cell";
 		count = 8;
+		mass=4;
 		ammo=macro_new_ammo(50mw)
 		typicalSpeed=1100;
 		descriptionShort="High power magazine";

@@ -17,7 +17,7 @@ class CfgWeapons
 		displayName = "Painkiller Autoinjector";
 		picture = "\z\ace\addons\medical_treatment\ui\morphine_ca.paa";
 		model = "\z\ace\addons\medical_treatment\data\morphine.p3d";
-		descriptionShort = "Drink some water and Rest";
+		descriptionShort = "Painkillers";
 		descriptionUse = "Inbuilt Clone Armor injector for easy pain relief";
 		class ItemInfo: CBA_MiscItem_ItemInfo
 		{

@@ -38,7 +38,7 @@
 	class macro_new_mag(pylon_agm,6):PylonRack_1Rnd_Missile_AGM_01_F
 	{
 		ammo = macro_new_ammo(agm)
-		count = 6;
+		count = 3;
 		displayName = "Torrent AGM";	
 		displayNameShort = "Torrent AGM";
 		tracersEvery=1;
@@ -51,7 +51,7 @@
 	class macro_new_mag(pylon_aa,4):4Rnd_AAA_missiles
 	{
 		ammo = macro_new_ammo(a2a)
-		count = 4;
+		count = 2;
 		displayName = "Zephyr A2A";
 		displayNameShort = "Zephyr A2A";
 		tracersEvery=1;
@@ -64,6 +64,7 @@
 	class macro_new_mag(pylon_lgm,4):4Rnd_LG_Jian
 	{
 		ammo = macro_new_ammo(lgm)
+		count=2;
 		displayName = "Flashfire WGM";	
 		displayNameShort = "Flashfire WGM";
 		hardpoints[]=
@@ -84,4 +85,17 @@
 			"RD501_Universal_rail"
 		};
 		pylonWeapon=macro_new_weapon(pylon,ugm)
+	};
+	class macro_new_mag(pylon_spark,6):7Rnd_Rocket_04_AP_F
+	{
+		ammo = macro_new_ammo(spark)
+		count = 6;
+		displayName = "Spark UGM";	
+		displayNameShort = "Spark UGM";
+		tracersEvery=1;
+		hardpoints[]=
+		{
+			"RD501_Universal_rail"
+		};
+		pylonWeapon=macro_new_weapon(pylon,spark)
 	};
