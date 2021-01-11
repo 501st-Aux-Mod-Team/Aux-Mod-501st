@@ -34,7 +34,7 @@ params["_healer", "_origin", "_radius"];
 private _nearbyPatients = _origin nearEntities ["CAManBase", _radius] select {
 	[_x] call rd501_fnc_checkInsideCCP &&
 	{
-		count (_x getVariable ["ace_medical_openWounds", []]) > 0
+		count (_x getVariable ["ace_medical_bandagedWounds", []]) > 0
 	}
 };
 
@@ -44,7 +44,7 @@ if(count _nearbyPatients == 0) exitWith {
 	["Nobody to Stitch Inside CCP", true, 2, 0] call ace_common_fnc_displayText;
 };
 
-[format["Bandaging %1 Patient(s)", count _nearbyPatients], false, 10, 0] call ace_common_fnc_displayText;
+[format["Stitching %1 Patient(s)", count _nearbyPatients], false, 10, 0] call ace_common_fnc_displayText;
 
 private _onFinish = {
     (_this select 0) params ["_player", "_patients", "_building"];
@@ -63,7 +63,7 @@ private _onFailure = {
     _args params["_healer","_nearbyPatients", "_building"];
     [_healer, "AmovPknlMstpSrasWrflDnon", 1] call ace_common_fnc_doAnimation;
     _stitchers = _building getVariable ["rd501_medical_ccp_stitchMembers", []];
-    systemChat format["_stitchers %1", _stitchers];
+    diag_log format["_stitchers %1", _stitchers];
     if(count _stitchers <= 1) then {
         _building setVariable ["rd501_medical_ccp_stitchProgress", -1, true];
         _building setVariable["rd501_medical_ccp_stitchMembers", [], true];
@@ -100,18 +100,18 @@ else
         _args params ["_healer", "_nearbyPatients", "_origin"];
         _progress = _origin getVariable ["rd501_medical_ccp_stitchProgress", -1];
         if(_progress > 100 || _progress < 0) exitWith {
-            systemChat "EH Exit";
+            diag_log "EH Exit";
             [_handle] call CBA_fnc_removePerFrameHandler;
         };
         if!(_healer getVariable ["ACE_Unconscious", false]) exitWith {
-            systemChat "EH Increment";
+            diag_log "EH Increment";
             [_origin, _healer] call rd501_fnc_incrementStitchProgress;
         };
-    }, 
+    },
     0.5,
     _args
 ] call CBA_fnc_addPerFrameHandler;
 
 [_healer, "AinvPknlMstpSnonWnonDr_medic5", 0] call ace_common_fnc_doAnimation;
 
-[_origin, _args, _onFinish, _onFailure, "Bandaging All Patients Inside CCP", _condition] call rd501_fnc_valueProgressBar;
+[_origin, _args, _onFinish, _onFailure, "Stitching All Patients Inside CCP", _condition] call rd501_fnc_valueProgressBar;
