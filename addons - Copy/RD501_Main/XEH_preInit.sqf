@@ -117,3 +117,6 @@ macro_prep_xeh(external_reload\fnc_onReloadExternalHandler.sqf,onReloadExternalH
 
 // Heal Nearby
 macro_prep_xeh(heal_nearby\fnc_healAllNearby.sqf,healAllNearby)
+
+// stun
+macro_prep_xeh(stun\stun.sqf,stun)
