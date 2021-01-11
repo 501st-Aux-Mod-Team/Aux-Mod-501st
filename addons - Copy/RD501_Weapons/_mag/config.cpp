@@ -195,6 +195,7 @@ class CfgMagazines
 		displayNameShort = "5 Round Stun Cell";
 		count=5;
 		picture="\MRC\JLTS\weapons\Core\data\ui\stun_mag_ui_ca";
+		ammo=macro_new_ammo(surrender_stun)
 	};
 
 	////////////////////////////////////////////////////
