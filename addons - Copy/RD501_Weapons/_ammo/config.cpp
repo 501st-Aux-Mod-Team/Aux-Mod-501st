@@ -32,6 +32,17 @@ class CfgAmmo
 	class B_12Gauge_Pellets_Submunition;
 	class  B_12Gauge_Pellets_Submunition_Deploy;
 	class FlareBase;
+	class JLTS_bullet_stun;
+	class macro_new_ammo(surrender_stun): JLTS_bullet_stun
+	{
+		model="\MRC\JLTS\weapons\Core\effects\stun.p3d";
+		hit=0.0099999998;
+		JLTS_isStunAmmo=0;
+		typicalSpeed=30;
+		timetolive=3;
+		aiAmmoUsageFlags=0;
+		RD501_stunDuration=30;
+	};
 	class macro_new_ammo(2mw):3AS_EC20_BluePlasma
 	{
 		hit=4;
