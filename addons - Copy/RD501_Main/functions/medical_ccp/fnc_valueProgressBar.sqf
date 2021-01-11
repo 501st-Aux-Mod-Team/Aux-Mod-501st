@@ -22,7 +22,7 @@
  * Public: Yes
  */
 
-params ["_building", "_args", "_onFinish", "_onFail", ["_localizedTitle", ""], ["_condition", {true}], ["_exceptions", []]];
+params ["_progressVar", "_building", "_args", "_onFinish", "_onFail", ["_localizedTitle", ""], ["_condition", {true}], ["_exceptions", []]];
 
 private _player = ACE_player;
 
@@ -44,9 +44,9 @@ _ctrlPos set [1, ((0 + 29 * ace_common_settingProgressBarLocation) * ((((safezon
 (uiNamespace getVariable "ace_common_ctrlProgressBarTitle") ctrlCommit 0;
 
 [{
-    (_this select 0) params ["_args", "_onFinish", "_onFail", "_condition", "_player", "_building", "_exceptions"];
+    (_this select 0) params ["_progressVar","_args", "_onFinish", "_onFail", "_condition", "_player", "_building", "_exceptions"];
 
-    private _progress = _building getVariable["rd501_medical_ccp_bandageProgress", -1];
+    private _progress = _building getVariable[_progressVar, -1];
     private _errorCode = -1;
 
     // this does not check: target fell unconscious, target died, target moved inside vehicle / left vehicle, target moved outside of players range, target moves at all.
@@ -96,4 +96,4 @@ _ctrlPos set [1, ((0 + 29 * ace_common_settingProgressBarLocation) * ((((safezon
     } else {
         (uiNamespace getVariable "ace_common_ctrlProgressBar") progressSetPosition _progress / 100;
     };
-}, 0, [_args, _onFinish, _onFail, _condition, _player, _building, _exceptions]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_progressVar, _args, _onFinish, _onFail, _condition, _player, _building, _exceptions]] call CBA_fnc_addPerFrameHandler;

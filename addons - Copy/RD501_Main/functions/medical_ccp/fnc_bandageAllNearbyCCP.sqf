@@ -99,4 +99,4 @@ else
 
 [_healer, "AinvPknlMstpSnonWnonDr_medic5", 0] call ace_common_fnc_doAnimation;
 
-[_origin, _args, _onFinish, _onFailure, "Bandaging All Patients Inside CCP", _condition] call rd501_fnc_valueProgressBar;
+["rd501_medical_ccp_bandageProgress", _origin, _args, _onFinish, _onFailure, "Bandaging All Patients Inside CCP", _condition] call rd501_fnc_valueProgressBar;
