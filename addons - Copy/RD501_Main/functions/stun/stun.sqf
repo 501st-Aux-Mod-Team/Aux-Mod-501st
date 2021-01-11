@@ -2,7 +2,7 @@
 // Runs only on the machine where the hit unit is local
 _fnc_onHit = {
 	params ["_unit", "_source", "_damage", "_instigator"];
-	["rd501_stun_onHit", [_unit, _source], _instigator] call CBA_fnc_targetEvent;
+	["rd501_stun_onHit", [_unit, _source]] call CBA_fnc_globalEvent;
 };
 
 // Runs on the person who shot
