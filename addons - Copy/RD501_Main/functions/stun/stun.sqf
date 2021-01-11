@@ -1,20 +1,26 @@
 
-_onHit = {
+// Runs only on the machine where the hit unit is local
+_fnc_onHit = {
 	params ["_unit", "_source", "_damage", "_instigator"];
-
-	{
-		private _mag = currentMagazine _source;
-		private _ammo = (configFile >> "CfgMagazines" >> _mag >> "ammo") call BIS_fnc_getCfgData;
-		private _stunDuration = (configFile >> "CfgAmmo" >> _ammo >> "RD501_stunDuration") call BIS_fnc_getCfgData;
-
-		if (_stunDuration > 0.0) then
-		{
-			["ace_captives_setSurrendered" ,[_unit, true]] call CBA_fnc_globalEvent;
-			[{
-				["ace_captives_setSurrendered", [_this select 0, false]] call CBA_fnc_globalEvent;
-			}, [_unit], _stunDuration] call CBA_fnc_waitAndExecute;
-
-		};
-	} remoteExec ['call', _instigator];
+	["rd501_stun_onHit", [_unit, _source], _instigator] call CBA_fnc_targetEvent;
 };
-_handler = ["CAManBase", "Hit", _onHit] call CBA_fnc_addClassEventHandler;
+
+// Runs on the person who shot
+_fnc_stun = {
+	params["_unit", "_source"];
+
+	private _mag = currentMagazine _source;
+	private _ammo = (configFile >> "CfgMagazines" >> _mag >> "ammo") call BIS_fnc_getCfgData;
+	private _stunDuration = (configFile >> "CfgAmmo" >> _ammo >> "RD501_stunDuration") call BIS_fnc_getCfgData;
+
+	if (_stunDuration > 0.0) then
+	{
+		["ace_captives_setSurrendered" ,[_unit, true]] call CBA_fnc_globalEvent;
+		[{
+			["ace_captives_setSurrendered", [_this select 0, false]] call CBA_fnc_globalEvent;
+		}, [_unit], _stunDuration] call CBA_fnc_waitAndExecute;
+	};
+};
+
+["CAManBase", "Hit", _fnc_onHit] call CBA_fnc_addClassEventHandler;
+["rd501_stun_onHit", _fnc_stun] call CBA_fnc_addEventHandler;
