@@ -1,18 +1,22 @@
 params [
-	["_target"], 
-	["_player"], 
-	["_params"]
+	"_target", 
+	"_player", 
+	"_params"
 ];
 
 _position = position _target;
 deleteVehicle _target;
+_spawner = rd501_medical_ccp_building createVehicle _position;
+systemChat format["Deployed CCP"];
 
-[
-	{
-		params["_position"];
-		systemChat format["Deploying CCP"];
-		_spawner = rd501_medical_ccp_building createVehicle _position;
-	},
-	[_position],
-	0.1
-] call CBA_fnc_waitAndExecute;
+_action = ["rd501_medical_ccp_bandageAll", "Bandage All Patients", "", {
+	params ["_target", "_player", "_params"];
+		[_player, _target, 20] call rd501_fnc_bandageAllNearbyCCP;
+	}, {true}] call ace_interact_menu_fnc_createAction;
+[_spawner, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
+
+_action = ["rd501_medical_ccp_stitchAll", "Stitch All Patients", "", {
+	params ["_target", "_player", "_params"];
+		[_this select 0, _this select 1, 20] call rd501_fnc_stitchAllWoundsNearbyCCP;
+	}, {true}] call ace_interact_menu_fnc_createAction;
+[_spawner, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
