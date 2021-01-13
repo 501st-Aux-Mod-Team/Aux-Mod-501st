@@ -84,7 +84,7 @@ class CfgVehicles
 				distance = 4;
 				class rd501_deploy_medical_ccp {
 					displayName = "Deploy";
-					statement = "_this call rd501_fnc_deployCcp";
+					statement = "_this call rd501_fnc_deployCCP";
 					icon = "rd501_main\ui_icons\medical_emblem.paa";
 					exceptions[] = {};
 				};

@@ -116,7 +116,6 @@ macro_prep_xeh(external_reload\fnc_reloadExternal.sqf,reloadExternal)
 macro_prep_xeh(external_reload\fnc_onReloadExternalHandler.sqf,onReloadExternalHandler)
 
 // Medical CCP
-macro_prep_xeh(medical_ccp\fnc_deployCCP.sqf,deployCCP)
 macro_prep_xeh(medical_ccp\fnc_stitchAllWounds.sqf,stitchAllWounds)
 macro_prep_xeh(medical_ccp\fnc_bandageAllWounds.sqf,bandageAllWounds)
 macro_prep_xeh(medical_ccp\fnc_checkInsideCCP.sqf,checkInsideCCP)
@@ -125,5 +124,8 @@ macro_prep_xeh(medical_ccp\fnc_bandageAllNearbyCCP.sqf,bandageAllNearbyCCP)
 macro_prep_xeh(medical_ccp\fnc_valueProgressBar.sqf,valueProgressBar)
 macro_prep_xeh(medical_ccp\fnc_incrementBandageProgress.sqf,incrementBandageProgress)
 macro_prep_xeh(medical_ccp\fnc_incrementStitchProgress.sqf,incrementStitchProgress)
+macro_prep_xeh(medical_ccp\fnc_deployCCP.sqf,deployCCP)
+macro_prep_xeh(medical_ccp\fnc_deployCCPLocal.sqf,deployCCPLocal)
+macro_prep_xeh(medical_ccp\fnc_deployCCPServer.sqf,deployCCPServer)
 
 diag_log "RD501 PREP Complete";
