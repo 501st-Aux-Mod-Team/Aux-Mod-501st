@@ -1,7 +1,7 @@
 #include "../../config_macros.hpp"
 #include "\z\acex\addons\main\script_macros.hpp"
 
-#define AMMOITEM "MCC_bacon"
+#define AMMOITEM "RD501_fortify_nanobots"
 
 macro_grp_fnc_name(fortify,handleObjectPlaced) = {
 	params ["_player", "_side", "_objectPlaced"];
