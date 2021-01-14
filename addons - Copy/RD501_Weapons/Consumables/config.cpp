@@ -32,7 +32,7 @@ class CfgWeapons
     {
         displayName = "RD501 Nanobot Charge";
         descriptionShort = "No, you can't eat that!";
-        //picture = "RD501_Weapons\Consumables\data\nanobot_charge_ico.paa";
+        picture = "\RD501_Weapons\Consumables\data\nanobot_charge_ico.paa";
         author = "RD501";
         mass = 1;
     };
