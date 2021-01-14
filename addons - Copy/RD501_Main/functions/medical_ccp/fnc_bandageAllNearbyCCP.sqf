@@ -48,7 +48,6 @@ private _onFailure = {
     _args params["_healer","_nearbyPatients", "_building"];
     [_healer, "AmovPknlMstpSrasWrflDnon", 1] call ace_common_fnc_doAnimation;
     _bandagers = _building getVariable ["rd501_medical_ccp_bandageMembers", []];
-    systemChat format["_bandagers %1", _bandagers];
     if(count _bandagers <= 1) then {
         _building setVariable ["rd501_medical_ccp_bandageProgress", -1, true];
         _building setVariable["rd501_medical_ccp_bandageMembers", [], true];
@@ -85,11 +84,9 @@ else
         _args params ["_healer", "_nearbyPatients", "_origin"];
         _progress = _origin getVariable ["rd501_medical_ccp_bandageProgress", -1];
         if(_progress > 100 || _progress < 0) exitWith {
-            systemChat "EH Exit";
             [_handle] call CBA_fnc_removePerFrameHandler;
         };
         if!(_healer getVariable ["ACE_Unconscious", false]) exitWith {
-            systemChat "EH Increment";
             [_origin, _healer] call rd501_fnc_incrementBandageProgress;
         };
     }, 
