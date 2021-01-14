@@ -100,12 +100,10 @@ else
         _args params ["_healer", "_nearbyPatients", "_origin"];
         _progress = _origin getVariable ["rd501_medical_ccp_stitchProgress", -1];
         if(_progress > 100 || _progress < 0) exitWith {
-            diag_log "EH Exit";
             [_handle] call CBA_fnc_removePerFrameHandler;
         };
         if!(_healer getVariable ["ACE_Unconscious", false]) exitWith {
-            diag_log "EH Increment";
-            [_origin, _healer] call rd501_fnc_incrementStitchProgress;
+            ["rd501_medical_ccp_incrementStitch",[_origin, _healer]] call CBA_fnc_serverEvent;
         };
     },
     0.5,

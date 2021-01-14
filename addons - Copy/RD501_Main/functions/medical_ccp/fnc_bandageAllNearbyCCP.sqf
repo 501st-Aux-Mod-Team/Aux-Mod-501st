@@ -87,7 +87,7 @@ else
             [_handle] call CBA_fnc_removePerFrameHandler;
         };
         if!(_healer getVariable ["ACE_Unconscious", false]) exitWith {
-            [_origin, _healer] call rd501_fnc_incrementBandageProgress;
+            ["rd501_medical_ccp_incrementBandage",[_origin, _healer]] call CBA_fnc_serverEvent;
         };
     }, 
     0.5,
