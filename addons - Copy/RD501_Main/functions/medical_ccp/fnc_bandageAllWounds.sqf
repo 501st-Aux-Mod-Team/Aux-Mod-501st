@@ -17,7 +17,13 @@ params ["_healer", "_patient"];
 
 private _openWounds = (_patient getVariable ["ace_medical_openWounds", []]);
 if (_openWounds isEqualTo []) exitWith {};
-_patient setVariable ["ace_medical_openWounds", [], true];
+
+{
+	_x params ["_classId", "_bodyPartN", "_amountOf", "_bloodloss", "_damage"];
+	_x set [2,0];
+}forEach(_openWounds);
+
+_patient setVariable ["ace_medical_openWounds", _openWounds, true];
 
 [_patient] call ace_medical_status_fnc_updateWoundBloodLoss;
 [_patient] call ace_medical_engine_fnc_updateDamageEffects;
