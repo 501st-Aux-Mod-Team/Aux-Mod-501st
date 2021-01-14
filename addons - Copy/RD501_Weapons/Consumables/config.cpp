@@ -1,3 +1,5 @@
+#include "../../RD501_main/config_macros.hpp"
+
 class cfgPatches
 {
     class RD501_ACE_Medical
@@ -24,6 +26,16 @@ class CfgWeapons
 			mass = 0.1;
 		};
 	};  
+    
+    class MCC_bacon;
+    class macro_new_weapon(fortify,nanobots): MCC_bacon
+    {
+        displayName = "RD501 Nanobot Charge";
+        descriptionShort = "No, you can't eat that!";
+        picture = "\RD501_Weapons\Consumables\data\nanobot_charge_ico.paa";
+        author = "RD501";
+        mass = 1;
+    };
 };
 class ACE_Medical_Treatment
 {

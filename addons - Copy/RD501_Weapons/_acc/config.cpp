@@ -35,7 +35,7 @@ class CfgWeapons
 		author="RD501";
 		displayName="Flash Hider Chip";
 		model="";
-		picture="\RD501_Weapons\_acc\data\icon_flashhider.paa";
+		picture="\RD501_weapons\_acc\data\icon_flashhider.paa";
 		class ItemInfo: ItemInfo
 		{
 			mass=10;
@@ -92,8 +92,8 @@ class CfgWeapons
 		author="RD501";
 		scope=2;
 		displayName="Short Range Scope A";
-		picture="RD501_Weapons\_acc\data\rd501_ico_sr_01_ca.paa";
-		model="RD501_Weapons\_acc\data\rd501_hamr_1.p3d";
+		picture="\RD501_weapons\_acc\data\rd501_ico_sr_01_ca.paa";
+		model="\RD501_weapons\_acc\data\rd501_hamr_1.p3d";
 		descriptionShort="HAMR SR 2-4x Scope";
 		weaponInfoType="RscOptics_sos";
 		class ItemInfo: ItemInfo
@@ -101,7 +101,7 @@ class CfgWeapons
 			mass=8;
 			opticType=1;
 			optics=1;
-			modelOptics="RD501_Weapons\_acc\data\rd501_hamr_scope_1";
+			modelOptics="\RD501_weapons\_acc\data\rd501_hamr_scope_1";
 			class OpticsModes
 			{
 				class Hamr2Collimator
@@ -150,22 +150,22 @@ class CfgWeapons
 	};
 	class RD501_RCO_2: RD501_RCO
 	{
-		picture="RD501_Weapons\_acc\data\rd501_ico_sr_02_ca.paa";
-		model="RD501_Weapons\_acc\data\rd501_hamr_2.p3d";
+		picture="\RD501_weapons\_acc\data\rd501_ico_sr_02_ca.paa";
+		model="\RD501_weapons\_acc\data\rd501_hamr_2.p3d";
 		displayName="Short Range Scope B";
 		class ItemInfo: ItemInfo
 		{
-			modelOptics="RD501_Weapons\_acc\data\RD501_hamr_scope_2";
+			modelOptics="\RD501_weapons\_acc\data\RD501_hamr_scope_2";
 		};
 	};
 	class RD501_RCO_3: RD501_RCO
 	{
-		picture="RD501_Weapons\_acc\data\rd501_ico_sr_03_ca.paa";
-		model="RD501_Weapons\_acc\data\rd501_hamr_3.p3d";
+		picture="\RD501_weapons\_acc\data\rd501_ico_sr_03_ca.paa";
+		model="\RD501_weapons\_acc\data\rd501_hamr_3.p3d";
 		displayName="Short Range Scope C";
 		class ItemInfo: ItemInfo
 		{
-			modelOptics="RD501_Weapons\_acc\data\RD501_hamr_scope_3";
+			modelOptics="\RD501_weapons\_acc\data\RD501_hamr_scope_3";
 		};
 	};
 	class optic_MRCO: ItemCore
@@ -177,8 +177,8 @@ class CfgWeapons
 		author="RD501";
 		scope=2;
 		displayName="Medium Range Scope A";
-		picture="RD501_Weapons\_acc\data\rd501_ico_mr_01_ca.paa";
-		model="RD501_Weapons\_acc\data\rd501_mrco_1.p3d";
+		picture="\RD501_weapons\_acc\data\rd501_ico_mr_01_ca.paa";
+		model="\RD501_weapons\_acc\data\rd501_mrco_1.p3d";
 		descriptionShort="MRCO MR 2-6x Scope";
 		weaponInfoType="RscOptics_sos";
 		class ItemInfo: ItemInfo
@@ -186,7 +186,7 @@ class CfgWeapons
 			mass=8;
 			opticType=1;
 			optics=1;
-			modelOptics="RD501_Weapons\_acc\data\rd501_mrco_scope_1.p3d";
+			modelOptics="\RD501_weapons\_acc\data\rd501_mrco_scope_1.p3d";
 			class OpticsModes
 			{
 				class MRCOcq
@@ -235,22 +235,22 @@ class CfgWeapons
 	};
 	class RD501_MRCO_2: RD501_MRCO
 	{
-		picture="RD501_Weapons\_acc\data\rd501_ico_mr_02_ca.paa";
-		model="RD501_Weapons\_acc\data\rd501_mrco_2.p3d";
+		picture="\RD501_weapons\_acc\data\rd501_ico_mr_02_ca.paa";
+		model="\RD501_weapons\_acc\data\rd501_mrco_2.p3d";
 		displayName="Medium Range Scope B";
 		class ItemInfo: ItemInfo
 		{
-			modelOptics="RD501_Weapons\_acc\data\RD501_MRCO_scope_2";
+			modelOptics="\RD501_weapons\_acc\data\RD501_MRCO_scope_2";
 		};
 	};
 	class RD501_MRCO_3: RD501_MRCO
 	{
-		picture="RD501_Weapons\_acc\data\rd501_ico_mr_03_ca.paa";
-		model="RD501_Weapons\_acc\data\rd501_mrco_3.p3d";
+		picture="\RD501_weapons\_acc\data\rd501_ico_mr_03_ca.paa";
+		model="\RD501_weapons\_acc\data\rd501_mrco_3.p3d";
 		displayName="Medium Range Scope C";
 		class ItemInfo: ItemInfo
 		{
-			modelOptics="RD501_Weapons\_acc\data\RD501_MRCO_scope_3";
+			modelOptics="\RD501_weapons\_acc\data\RD501_MRCO_scope_3";
 		};
 	};
 	class optic_Holosight:ItemCore
@@ -262,8 +262,8 @@ class CfgWeapons
 		author="RD501";
 		scope=2;
 		displayName="Holo Sight A";
-		picture="RD501_Weapons\_acc\data\rd501_ico_holo_01_ca.paa";
-		model="RD501_Weapons\_acc\data\rd501_holo_1.p3d";
+		picture="\RD501_weapons\_acc\data\rd501_ico_holo_01_ca.paa";
+		model="\RD501_weapons\_acc\data\rd501_holo_1.p3d";
 		descriptionShort="Holo 1x Scope";
 		weaponInfoType="RscWeaponZeroing";
 		class ItemInfo: ItemInfo
@@ -298,14 +298,14 @@ class CfgWeapons
 	};
 	class RD501_Holosight_2: RD501_Holosight
 	{
-		picture="RD501_Weapons\_acc\data\rd501_ico_holo_02_ca.paa";
-		model="RD501_Weapons\_acc\data\rd501_holo_2.p3d";
+		picture="\RD501_weapons\_acc\data\rd501_ico_holo_02_ca.paa";
+		model="\RD501_weapons\_acc\data\rd501_holo_2.p3d";
 		displayName="Holo Sight B";
 	};
 	class RD501_Holosight_3: RD501_Holosight
 	{
-		picture="RD501_Weapons\_acc\data\rd501_ico_holo_03_ca.paa";
-		model="RD501_Weapons\_acc\data\rd501_holo_3.p3d";
+		picture="\RD501_weapons\_acc\data\rd501_ico_holo_03_ca.paa";
+		model="\RD501_weapons\_acc\data\rd501_holo_3.p3d";
 		displayName="Holo Sight C";
 	};
 	class optic_DMS:ItemCore
@@ -318,15 +318,15 @@ class CfgWeapons
 		_generalMacro="optic_DMS";
 		scope=2;
 		displayName="DMS LR 6-12x Scope A";
-		picture="RD501_Weapons\_acc\data\rd501_ico_lr_01_ca.paa";
-		model="RD501_Weapons\_acc\data\rd501_dms.p3d";
+		picture="\RD501_weapons\_acc\data\rd501_ico_lr_01_ca.paa";
+		model="\RD501_weapons\_acc\data\rd501_dms.p3d";
 		descriptionShort="Long Range Scope";
 		class ItemInfo: ItemInfo
 		{
 			mass=12;
 			opticType=2;
 			optics=1;
-			modelOptics="RD501_Weapons\_acc\data\RD501_scope_DMS";
+			modelOptics="\RD501_weapons\_acc\data\RD501_scope_DMS";
 			class OpticsModes
 			{
 				class Snip
@@ -386,32 +386,32 @@ class CfgWeapons
 	};
 	class RD501_DMS_2: RD501_DMS
 	{
-		picture="RD501_Weapons\_acc\data\rd501_ico_lr_02_ca.paa";
-		model="RD501_Weapons\_acc\data\rd501_dms_2.p3d";
+		picture="\RD501_weapons\_acc\data\rd501_ico_lr_02_ca.paa";
+		model="\RD501_weapons\_acc\data\rd501_dms_2.p3d";
 		displayName="DMS LR 6-12x Scope B";
 		class ItemInfo: ItemInfo
 		{
-			modelOptics="RD501_Weapons\_acc\data\RD501_scope2_DMS";
+			modelOptics="\RD501_weapons\_acc\data\RD501_scope2_DMS";
 		};
 	};
 	class RD501_DMS_3: RD501_DMS
 	{
-		picture="RD501_Weapons\_acc\data\rd501_ico_lr_03_ca.paa";
-		model="RD501_Weapons\_acc\data\rd501_dms_3.p3d";
+		picture="\RD501_weapons\_acc\data\rd501_ico_lr_03_ca.paa";
+		model="\RD501_weapons\_acc\data\rd501_dms_3.p3d";
 		displayName="DMS LR 6-12x Scope C";
 		class ItemInfo: ItemInfo
 		{
-			modelOptics="RD501_Weapons\_acc\data\RD501_scope3_DMS";
+			modelOptics="\RD501_weapons\_acc\data\RD501_scope3_DMS";
 		};
 	};
 	class RD501_DMS_4: RD501_DMS
 	{
-		picture="RD501_Weapons\_acc\data\rd501_ico_lr_03_ca.paa";
-		model="RD501_Weapons\_acc\data\rd501_dms_4.p3d";
+		picture="\RD501_weapons\_acc\data\rd501_ico_lr_03_ca.paa";
+		model="\RD501_weapons\_acc\data\rd501_dms_4.p3d";
 		displayName="DMS LR 6-12x Scope D";
 		class ItemInfo: ItemInfo
 		{
-			modelOptics="RD501_Weapons\_acc\data\RD501_scope4_DMS";
+			modelOptics="\RD501_weapons\_acc\data\RD501_scope4_DMS";
 		};
 	};
 	class optic_MRD:ItemCore
@@ -423,8 +423,8 @@ class CfgWeapons
 		author="RD501";
 		scope=2;
 		displayName="Pistol Holo A";
-		picture="RD501_Weapons\_acc\data\rd501_ico_pistol_01_ca.paa";
-		model="RD501_Weapons\_acc\data\rd501_pistol_1.p3d";
+		picture="\RD501_weapons\_acc\data\rd501_ico_pistol_01_ca.paa";
+		model="\RD501_weapons\_acc\data\rd501_pistol_1.p3d";
 		descriptionShort="Pistol Scope";
 		class ItemInfo: ItemInfo
 		{
@@ -458,8 +458,8 @@ class CfgWeapons
 	};
 	class RD501_pistol_2: RD501_pistol
 	{
-		picture="RD501_Weapons\_acc\data\rd501_ico_pistol_03_ca.paa";
-		model="RD501_Weapons\_acc\data\rd501_pistol_3.p3d";
+		picture="\RD501_weapons\_acc\data\rd501_ico_pistol_03_ca.paa";
+		model="\RD501_weapons\_acc\data\rd501_pistol_3.p3d";
 		displayName="Pistol Holo B";
 	};
 	class RD501_LRPS : optic_DMS
