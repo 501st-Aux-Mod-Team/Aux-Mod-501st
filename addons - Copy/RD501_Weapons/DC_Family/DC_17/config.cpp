@@ -21,7 +21,9 @@ class CfgPatches
 			macro_new_weapon(DC,17a),
 			macro_new_weapon(DC,r17),
 			macro_new_weapon(DC,r17a),
-			macro_new_weapon(DC,17sig)
+			macro_new_weapon(DC,17sig),
+			macro_new_weapon(DC,r17_shield),
+			macro_new_weapon(DC,r17a_shield)
 			
 		};
 	};
@@ -119,6 +121,8 @@ class cfgWeapons
 		reloadAction="GestureReloadPistol";
 		baseWeapon=macro_new_weapon(DC,r17)
 		JLTS_hasElectronics=0;
+		JLTS_canHaveShield=1;
+		JLTS_shieldedWeapon=macro_new_weapon(DC,r17_shield)
 		magazines[]=
 		{
 			macro_new_mag(5mw,10)
@@ -163,11 +167,49 @@ class cfgWeapons
 			};
 		};
 	};
+	class macro_new_weapon(DC,r17_shield): macro_new_weapon(DC,r17)
+	{
+		displayName="Republic DC-17 Shield";
+		baseWeapon=macro_new_weapon(DC,r17_shield)
+		scope=1;
+		JLTS_isShielded=1;
+		JLTS_baseWeapon=macro_new_weapon(DC,r17)
+		model="\MRC\JLTS\weapons\DC17SA\DC17SA_shielded.p3d";
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"\MRC\JLTS\weapons\DC17SA\anims\DC17SA_shielded_handanim.rtm"
+		};
+		inertia=0.80000001;
+		recoil="recoil_pdw";
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=110;
+			class UnderBarrelSlot
+			{
+				linkProxy="\A3\Data_F_Mark\Proxies\Weapon_Slots\UNDERBARREL";
+				iconPicture="\A3\Weapons_F_Mark\Data\UI\attachment_under.paa";
+				iconPinpoint="Bottom";
+				compatibleItems[]=
+				{
+					"JLTS_riot_shield_attachment",
+					"JLTS_riot_shield_212_attachment",
+					"JLTS_riot_shield_501_attachment",
+					"JLTS_riot_shield_101_attachment",
+					"JLTS_riot_shield_CG_attachment",
+					"JLTS_riot_shield_GD_attachment",
+					"JLTS_riot_shield_droid_attachment"
+				};
+			};
+		};
+	};
 	class macro_new_weapon(DC,r17a):JLTS_DC17SA
 	{
 		displayName="Republic DC-17A";
 		baseWeapon=macro_new_weapon(DC,r17a)
 		JLTS_hasElectronics=0;
+		JLTS_canHaveShield=1;
+		JLTS_shieldedWeapon=macro_new_weapon(DC,r17a_shield)
 		magazines[]=
 		{
 			macro_new_mag(2mw,30)
@@ -217,6 +259,42 @@ class cfgWeapons
 				{
 					"RD501_pistol",
 					"RD501_pistol_2"
+				};
+			};
+		};
+	};
+	class macro_new_weapon(DC,r17a_shield): macro_new_weapon(DC,r17a)
+	{
+		displayName="Republic DC-17A Shield";
+		baseWeapon=macro_new_weapon(DC,r17a_shield)
+		scope=1;
+		JLTS_isShielded=1;
+		JLTS_baseWeapon=macro_new_weapon(DC,r17a)
+		model="\MRC\JLTS\weapons\DC17SA\DC17SA_shielded.p3d";
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"\MRC\JLTS\weapons\DC17SA\anims\DC17SA_shielded_handanim.rtm"
+		};
+		inertia=0.80000001;
+		recoil="recoil_pdw";
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=110;
+			class UnderBarrelSlot
+			{
+				linkProxy="\A3\Data_F_Mark\Proxies\Weapon_Slots\UNDERBARREL";
+				iconPicture="\A3\Weapons_F_Mark\Data\UI\attachment_under.paa";
+				iconPinpoint="Bottom";
+				compatibleItems[]=
+				{
+					"JLTS_riot_shield_attachment",
+					"JLTS_riot_shield_212_attachment",
+					"JLTS_riot_shield_501_attachment",
+					"JLTS_riot_shield_101_attachment",
+					"JLTS_riot_shield_CG_attachment",
+					"JLTS_riot_shield_GD_attachment",
+					"JLTS_riot_shield_droid_attachment"
 				};
 			};
 		};

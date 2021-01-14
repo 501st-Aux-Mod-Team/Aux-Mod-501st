@@ -104,6 +104,14 @@ class CfgWeapons
 		magazines[] = {macro_new_mag(pylon_ugm,10)};
 		autoFire=true;
 	};
+	class macro_new_weapon(pylon,spark) : Rocket_04_AP_Plane_CAS_01_F
+	{
+		displayName = "Spark(Pylon)";
+		displayNameShort = "Spark";
+		soundfly[] = {"\xt\SWionrocketloop.ogg",3,1,800};
+		magazines[] = {macro_new_mag(pylon_spark,6)};
+		autoFire=true;
+	};
 	class macro_new_weapon(pylon,lgm) : missiles_Jian
 	{
 		displayName = "Flashfire (Pylon)";

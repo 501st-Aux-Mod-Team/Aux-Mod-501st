@@ -9,7 +9,7 @@
 
 //ARC
 	#define NEW_501_ARC_Helm(classname,displayname,texture)\
-		class macro_new_helmet(arc,classname) : macro_new_helmet(infantry,base)\
+		class macro_new_helmet(arc,classname) : macro_new_helmet(arc,base_jlts)\
 		{\
 			scope = 2;\
 			displayName = Clonetrooper helmet (501st '##displayname##');\
@@ -36,7 +36,7 @@
 
 //ARC JLTS
 	#define NEW_501_ARC_Helm_JLTS(classname,displayname,texture)\
-		class macro_new_helmet(arc,classname) : macro_new_helmet(infantry,jlts_recruit)\
+		class macro_new_helmet(arc,classname) : macro_new_helmet(arc,base_jlts)\
 		{\
 			scope = 2;\
 			displayName = [501st] ARC HELM ('##displayname##');\

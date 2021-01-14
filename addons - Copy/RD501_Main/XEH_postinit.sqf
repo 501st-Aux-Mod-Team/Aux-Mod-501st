@@ -58,3 +58,6 @@ rd501_medical_ccp_classes = ["Land_Medevac_house_V1_F"];
 ["rd501_medical_ccp_deployCCPServer", {
 	_this call rd501_fnc_deployCCPServer;
 }] call CBA_fnc_addEventHandler;
+
+// Surrender stun
+call macro_fnc_name(stun);

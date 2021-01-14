@@ -25,6 +25,7 @@ class CfgWeapons
 	class macro_new_helmet(infantry,base);
 	class macro_new_helmet(infantry,lum_base);
 	class macro_new_helmet_jlts(infantry,jlts_recruit);
+	class macro_new_helmet(arc,base_jlts);
 
 	NEW_501_Inf_Helm_JLTS(Pilot,Pilot,Pilot.paa)
 	
@@ -144,15 +145,8 @@ class CfgWeapons
 	NEW_501_Inf_Helm_JLTS(Power,Power,Power.paa)
 	NEW_501_Inf_Helm_JLTS(Vulpes,Vulpes,Vulpes.paa)
 	NEW_501_ARC_Helm_JLTS(Duke,Duke,Duke.paa)
-	NEW_501_ARC_Helm_JLTS(Bronson,Bronson,Bronson.paa)
-	NEW_501_ARC_Helm_JLTS(Rayne,Rayne,Rayne.paa)
-	NEW_501_ARC_Helm_JLTS(Halo,Halo,Halo.paa)
-	NEW_501_ARC_Helm_JLTS(Habivi,Habivi,Habivi.paa)
 	NEW_501_ARC_Helm_JLTS(Jink,Jink,Jink.paa)
 	NEW_501_ARC_Helm_JLTS(Brennan,Brennan,Brennan.paa)
-	NEW_501_ARC_Helm_JLTS(Korvus,Korvus,Korvus.paa)
+	NEW_501_ARC_Helm_JLTS(Bronson,Bronson,Bronson.paa)
 	NEW_501_ARC_Helm_JLTS(Darkstar,Darkstar,Darkstar.paa)
-	NEW_501_ARC_Helm_JLTS(Train,Train,Train.paa)
-	NEW_501_ARC_Helm_JLTS(Hook,Hook,Hook.paa)
-	NEW_501_ARC_Helm_JLTS(Odd,Odd,Odd.paa)
 };

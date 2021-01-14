@@ -28,11 +28,7 @@ class CfgWeapons
 	class 3AS_Valken38X_F:3AS_Valken38X_Base_F
 	{
 		class Single;
-		class WeaponSlotsInfo
-		{
-		class CowsSlot;	
-		class MuzzleSlot;
-		};
+		class WeaponSlotsInfo;
 	};
 	class macro_new_weapon_nofam(valken38x):3AS_Valken38X_F
 	{
@@ -52,15 +48,34 @@ class CfgWeapons
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass = 80;
-			class CowsSlot: CowsSlot
+			class CowsSlot
 			{
-				access = 1;
+				displayName = "Optics Slot";
+				iconPicture = "\A3\Weapons_F\Data\UI\attachment_top.paa";
+				iconPinpoint = "Bottom";
+				iconPosition[] = {0.5,0.35};
+				iconScale = 0.2;
+				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				scope = 0;
+				access=1;
 				compatibleItems[] = 
 				{
-					macro_new_weapon(scope,valken_6_12x)
+					"RD501_RCO",
+					"RD501_RCO_2",
+					"RD501_RCO_3",
+					"RD501_Holosight",
+					"RD501_Holosight_2",
+					"RD501_Holosight_3",
+					"RD501_DMS",
+					"RD501_DMS_2",
+					"RD501_DMS_3",
+					"RD501_DMS_4",
+					"RD501_MRCO",
+					"RD501_MRCO_2",
+					"RD501_MRCO_3"
 				};
 			};
-			class MuzzleSlot: MuzzleSlot
+			class MuzzleSlot
 			{
 				linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
 				displayName="$str_a3_cfgweapons_abr_base_f_weaponslotsinfo_muzzleslot0";
@@ -77,11 +92,7 @@ class CfgWeapons
 	class JLTS_DW32S:arifle_MX_Base_F
 	{
 		class Single;
-		class WeaponSlotsInfo
-		{
-		class CowsSlot;	
-		class MuzzleSlot;
-		};
+		class WeaponSlotsInfo;
 	};
 	class macro_new_weapon_nofam(valken38y):JLTS_DW32S
 	{
@@ -102,7 +113,7 @@ class CfgWeapons
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass = 80;
-			class CowsSlot: CowsSlot
+			class CowsSlot
 			{
 				displayName = "Optics Slot";
 				iconPicture = "\A3\Weapons_F\Data\UI\attachment_top.paa";
@@ -114,13 +125,22 @@ class CfgWeapons
 				access=1;
 				compatibleItems[] = 
 				{
+					"RD501_RCO",
+					"RD501_RCO_2",
+					"RD501_RCO_3",
+					"RD501_Holosight",
+					"RD501_Holosight_2",
+					"RD501_Holosight_3",
 					"RD501_DMS",
 					"RD501_DMS_2",
 					"RD501_DMS_3",
-					"RD501_DMS_4"
+					"RD501_DMS_4",
+					"RD501_MRCO",
+					"RD501_MRCO_2",
+					"RD501_MRCO_3"
 				};
 			};
-			class MuzzleSlot: MuzzleSlot
+			class MuzzleSlot
 			{
 				linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
 				displayName="$str_a3_cfgweapons_abr_base_f_weaponslotsinfo_muzzleslot0";
