@@ -7,7 +7,7 @@ macro_grp_fnc_name(fortify,handleObjectPlaced) = {
 	params ["_player", "_side", "_objectPlaced"];
 	if (RD501_Fortify_useAmmo) then
 	{
-		_player removeItem AMMOITEM;
+		["RD501_fortify_remove_ammo", _player, _player] call CBA_fnc_targetEvent;
 	};
 };
 
@@ -15,7 +15,7 @@ macro_grp_fnc_name(fortify,handleObjectDeleted) = {
 	params ["_player", "_side", "_objectDeleted"];
 	if (RD501_Fortify_useAmmo) then
 	{
-		_player addItem AMMOITEM;
+		["RD501_fortify_add_ammo", _player, _player] call CBA_fnc_targetEvent;
 	};
 };
 
@@ -36,10 +36,20 @@ macro_grp_fnc_name(fortify,deployHandler) = {
 	};
 };
 
+// Eventhandlers to be executed for acting player only
+["RD501_fortify_add_ammo", {
+    _player addItem AMMOITEM;
+}, [_player]] call CBA_fnc_addEventHandlerArgs;
+["RD501_fortify_remove_ammo", {
+    _player removeItem AMMOITEM;
+}, [_player]] call CBA_fnc_addEventHandlerArgs;
+
+// Register EventHandler for ACEX Fortify Events
 [macro_grp_fnc_name(fortify,deployHandler)] call acex_fortify_fnc_addDeployHandler;
 ["acex_fortify_objectPlaced", macro_grp_fnc_name(fortify,handleObjectPlaced)] call CBA_fnc_addEventHandler;
 ["acex_fortify_objectDeleted", macro_grp_fnc_name(fortify,handleObjectDeleted)] call CBA_fnc_addEventHandler;
 
+// Add Settings to switch on/off
 private _item_name = (configFile >> "CfgWeapons" >> AMMOITEM >> "displayName") call BIS_fnc_getCfgData;
 [
     "RD501_Fortify_useAmmo",
