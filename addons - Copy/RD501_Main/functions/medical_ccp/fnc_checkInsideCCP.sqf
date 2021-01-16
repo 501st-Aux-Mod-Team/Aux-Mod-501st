@@ -1,3 +1,17 @@
+/*
+ * Author: M3ales
+ *
+ * Arguments:
+ * Unit to check for
+ * Return Value:
+ * True if inside the bounds of a given structure
+ *
+ * Example:
+ * [player] call rd501_fnc_checkInsideCCP
+ *
+ * Public: No
+ */
+
 params ["_unit"];
 
 private _fnc_check = {

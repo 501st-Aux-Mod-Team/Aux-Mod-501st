@@ -133,5 +133,6 @@ macro_prep_xeh(medical_ccp\fnc_incrementStitchProgress.sqf,incrementStitchProgre
 macro_prep_xeh(medical_ccp\fnc_deployCCP.sqf,deployCCP)
 macro_prep_xeh(medical_ccp\fnc_deployCCPLocal.sqf,deployCCPLocal)
 macro_prep_xeh(medical_ccp\fnc_deployCCPServer.sqf,deployCCPServer)
+macro_prep_xeh(medical_ccp\fnc_isDoctor.sqf,isDoctor)
 
 diag_log "RD501 PREP Complete";

@@ -1,3 +1,17 @@
+/*
+ * Author: M3ales
+ *
+ * Arguments:
+ * The player who is performing the action
+ * The player who is being healed
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [player, player] call rd501_fnc_stitchAllWounds
+ *
+ * Public: No
+ */
 
 params["_healer","_patient"];
 

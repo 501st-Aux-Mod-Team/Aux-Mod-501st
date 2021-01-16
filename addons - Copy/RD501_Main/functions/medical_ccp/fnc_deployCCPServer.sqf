@@ -1,3 +1,19 @@
+/*
+ * Author: M3ales
+ *
+ * Replaces the given target object with the CCP object, and adds an ace interact on JIP
+ *
+ * Arguments:
+ * Target Object
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [cursorTarget] call rd501_fnc_deployCCPServer
+ *
+ * Public: No
+ */
+
 params["_target"];
 
 _position = position _target;

@@ -17,12 +17,12 @@
  * None
  *
  * Example:
- * [5, [], {Hint "Finished!"}, {hint "Failure!"}, "My Title"] call ace_common_fnc_progressBar
+ * ["rd501_medical_ccp_stitchProgress", [], {Hint "Finished!"}, {hint "Failure!"}, "My Title"] call rd501_fnc_valueProgressBar
  *
  * Public: Yes
  */
 
-params ["_progressVar", "_building", "_args", "_onFinish", "_onFail", ["_localizedTitle", ""], ["_condition", {true}], ["_exceptions", []]];
+params ["_progressVar","_progressCompleteVar", "_building", "_args", "_onFinish", "_onFail", ["_localizedTitle", ""], ["_condition", {true}], ["_exceptions", []]];
 
 private _player = ACE_player;
 
@@ -44,7 +44,7 @@ _ctrlPos set [1, ((0 + 29 * ace_common_settingProgressBarLocation) * ((((safezon
 (uiNamespace getVariable "ace_common_ctrlProgressBarTitle") ctrlCommit 0;
 
 [{
-    (_this select 0) params ["_progressVar","_args", "_onFinish", "_onFail", "_condition", "_player", "_building", "_exceptions"];
+    (_this select 0) params ["_progressVar", "_progressCompleteVar", "_args", "_onFinish", "_onFail", "_condition", "_player", "_building", "_exceptions"];
 
     private _progress = _building getVariable[_progressVar, -1];
     private _errorCode = -1;
