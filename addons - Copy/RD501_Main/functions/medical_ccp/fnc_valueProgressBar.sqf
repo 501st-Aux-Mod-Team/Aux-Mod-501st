@@ -5,7 +5,8 @@
  * Finish/Failure/Conditional are all passed [_args, _elapsedTime, _totalTime, _errorCode]
  *
  * Arguments:
- * 0: Progress Variable Func: 0-100 representation of how complete the bar should be.
+ * 0: Progress Variable: representation of how complete the bar should be.
+ * 0: Progress Complete Variable: representation of when the bar should be considered 'complete', must be larger than progressVar value.
  * 1: Arguments, passed to condition, fail and finish <ARRAY>
  * 2: On Finish: Code called or STRING raised as event. <CODE, STRING>
  * 3: On Failure: Code called or STRING raised as event. <CODE, STRING>
@@ -17,7 +18,7 @@
  * None
  *
  * Example:
- * ["rd501_medical_ccp_stitchProgress", [], {Hint "Finished!"}, {hint "Failure!"}, "My Title"] call rd501_fnc_valueProgressBar
+ * ["rd501_medical_ccp_stitchProgress", "rd501_medical_ccp_stitchProgressComplete", [], {Hint "Finished!"}, {hint "Failure!"}, "My Title"] call rd501_fnc_valueProgressBar
  *
  * Public: Yes
  */
@@ -47,6 +48,7 @@ _ctrlPos set [1, ((0 + 29 * ace_common_settingProgressBarLocation) * ((((safezon
     (_this select 0) params ["_progressVar", "_progressCompleteVar", "_args", "_onFinish", "_onFail", "_condition", "_player", "_building", "_exceptions"];
 
     private _progress = _building getVariable[_progressVar, -1];
+    private _progressComplete = _building getVariable[_progressCompleteVar, 100];
     private _errorCode = -1;
 
     // this does not check: target fell unconscious, target died, target moved inside vehicle / left vehicle, target moved outside of players range, target moves at all.
@@ -62,7 +64,7 @@ _ctrlPos set [1, ((0 + 29 * ace_common_settingProgressBarLocation) * ((((safezon
                 if !([_player, objNull, _exceptions] call ace_common_fnc_canInteractWith) then {
                     _errorCode = 4;
                 } else {
-                    if (_progress >= 100) then {
+                    if (_progress >= _progressComplete) then {
                         _errorCode = 0;
                     };
                 };
@@ -94,6 +96,6 @@ _ctrlPos set [1, ((0 + 29 * ace_common_settingProgressBarLocation) * ((((safezon
             };
         };
     } else {
-        (uiNamespace getVariable "ace_common_ctrlProgressBar") progressSetPosition _progress / 100;
+        (uiNamespace getVariable "ace_common_ctrlProgressBar") progressSetPosition _progress / _progressComplete;
     };
 }, 0, [_progressVar, _args, _onFinish, _onFail, _condition, _player, _building, _exceptions]] call CBA_fnc_addPerFrameHandler;

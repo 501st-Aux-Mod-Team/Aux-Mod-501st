@@ -13,21 +13,6 @@
  *
  * Public: No
  */
-/*
- * Author: M3ales
- *
- * Arguments:
- * Healer
- * Origin To Search from
- * Radius To Search Around for People
- * Return Value:
- * Nothing
- *
- * Example:
- * [player, cursorTarget] call rd501_fnc_stitchAllNearbyCCP
- *
- * Public: No
- */
 
 params["_healer", "_origin", "_radius"];
 
@@ -67,6 +52,7 @@ private _onFailure = {
     if(count _stitchers <= 1) then {
         _building setVariable ["rd501_medical_ccp_stitchProgress", -1, true];
         _building setVariable["rd501_medical_ccp_stitchMembers", [], true];
+        _progressComplete = _building setVariable ["rd501_medical_ccp_stitchProgressComplete", 100];
     }
     else
     {
@@ -84,8 +70,10 @@ private _condition = {
 };
 
 if(_origin getVariable ["rd501_medical_ccp_stitchProgress", -1] == -1) then {
+    private _stitchDuration = ((count _nearbyPatients) * rd501_medical_ccp_stitchDurationSeconds);
     _origin setVariable ["rd501_medical_ccp_stitchProgress", 0, true];
     _origin setVariable ["rd501_medical_ccp_stitchMembers", [player], true];
+    _origin setVariable ["rd501_medical_ccp_stitchProgressComplete", _stitchDuration, true];
 }
 else
 {
@@ -99,7 +87,8 @@ else
         params ["_args", "_handle"];
         _args params ["_healer", "_nearbyPatients", "_origin"];
         _progress = _origin getVariable ["rd501_medical_ccp_stitchProgress", -1];
-        if(_progress > 100 || _progress < 0) exitWith {
+        _progressComplete = _origin getVariable ["rd501_medical_ccp_stitchProgressComplete", 100];
+        if(_progress >= _progressComplete || _progress < 0) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
         };
         if!(_healer getVariable ["ACE_Unconscious", false]) exitWith {
@@ -112,4 +101,4 @@ else
 
 [_healer, "AinvPknlMstpSnonWnonDr_medic5", 0] call ace_common_fnc_doAnimation;
 
-["rd501_medical_ccp_stitchProgress", _origin, _args, _onFinish, _onFailure, "Stitching All Patients Inside CCP", _condition] call rd501_fnc_valueProgressBar;
+["rd501_medical_ccp_stitchProgress", "rd501_medical_ccp_stitchProgressComplete",_origin, _args, _onFinish, _onFailure, "Stitching All Patients Inside CCP", _condition] call rd501_fnc_valueProgressBar;

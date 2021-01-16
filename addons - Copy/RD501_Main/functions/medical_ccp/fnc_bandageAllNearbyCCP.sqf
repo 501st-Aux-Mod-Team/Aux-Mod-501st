@@ -68,8 +68,10 @@ private _condition = {
 };
 
 if(_origin getVariable ["rd501_medical_ccp_bandageProgress", -1] == -1) then {
+    private _bandageDuration = ((count _nearbyPatients) * rd501_medical_ccp_bandageDurationSeconds);
     _origin setVariable ["rd501_medical_ccp_bandageProgress", 0, true];
     _origin setVariable ["rd501_medical_ccp_bandageMembers", [player], true];
+    _origin setVariable ["rd501_medical_ccp_stitchProgressComplete", _bandageDuration, true];
 }
 else
 {
@@ -83,17 +85,18 @@ else
         params ["_args", "_handle"];
         _args params ["_healer", "_nearbyPatients", "_origin"];
         _progress = _origin getVariable ["rd501_medical_ccp_bandageProgress", -1];
-        if(_progress > 100 || _progress < 0) exitWith {
+        _progressComplete = _origin getVariable ["rd501_medical_ccp_bandageProgressComplete", 100];
+        if(_progress >= _progressComplete || _progress < 0) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
         };
         if!(_healer getVariable ["ACE_Unconscious", false]) exitWith {
             ["rd501_medical_ccp_incrementBandage",[_origin, _healer]] call CBA_fnc_serverEvent;
         };
     }, 
-    0.5,
+    1,
     _args
 ] call CBA_fnc_addPerFrameHandler;
 
 [_healer, "AinvPknlMstpSnonWnonDr_medic5", 0] call ace_common_fnc_doAnimation;
 
-["rd501_medical_ccp_bandageProgress", _origin, _args, _onFinish, _onFailure, "Bandaging All Patients Inside CCP", _condition] call rd501_fnc_valueProgressBar;
+["rd501_medical_ccp_bandageProgress", "rd501_medical_ccp_bandageProgressComplete", _origin, _args, _onFinish, _onFailure, "Bandaging All Patients Inside CCP", _condition] call rd501_fnc_valueProgressBar;

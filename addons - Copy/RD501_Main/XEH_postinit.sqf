@@ -50,6 +50,8 @@ rd501_medical_ccp_building = "Land_Medevac_house_V1_F";
 rd501_medical_ccp_bandage_treatmentTime = 1;
 rd501_medical_ccp_stitch_treatmentTime = 1;
 rd501_medical_ccp_classes = ["Land_Medevac_house_V1_F"];
+rd501_medical_ccp_stitchDurationSeconds = 10;
+rd501_medical_ccp_bandageDurationSeconds = 10;
 
 ["rd501_medical_ccp_deployCCPLocal", {
 	_this call rd501_fnc_deployCCPLocal;
