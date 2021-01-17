@@ -19,5 +19,5 @@ params [
 ];
 
 alive _target &&
-_player call rd501_fnc_checkInsideCCP &&
-_player call rd501_fnc_isDoctor
+{ _player call rd501_fnc_checkInsideCCP } &&
+{ _player call rd501_fnc_isDoctor }
