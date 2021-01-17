@@ -50,7 +50,8 @@ private _onFailure = {
     _bandagers = _building getVariable ["rd501_medical_ccp_bandageMembers", []];
     if(count _bandagers <= 1) then {
         _building setVariable ["rd501_medical_ccp_bandageProgress", -1, true];
-        _building setVariable["rd501_medical_ccp_bandageMembers", [], true];
+        _building setVariable ["rd501_medical_ccp_bandageMembers", [], true];
+        _building setVariable ["rd501_medical_ccp_bandageProgressComplete", 100];
     }
     else
     {
@@ -86,7 +87,7 @@ else
         _args params ["_healer", "_nearbyPatients", "_origin"];
         _progress = _origin getVariable ["rd501_medical_ccp_bandageProgress", -1];
         _progressComplete = _origin getVariable ["rd501_medical_ccp_bandageProgressComplete", 100];
-        if( _progress < 0 || _progress >= _progressComplete) exitWith {
+        if(_progress < 0 || _progress >= _progressComplete) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
         };
         if!(_healer getVariable ["ACE_Unconscious", false]) exitWith {

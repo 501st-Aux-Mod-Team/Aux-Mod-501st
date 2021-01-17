@@ -46,13 +46,12 @@ private _onFinish = {
 private _onFailure = {
     params["_args", "_progress", "_errorCode"];
     _args params["_healer","_nearbyPatients", "_building"];
-    [_healer, "AmovPknlMstpSrasWrflDnon", 1] call ace_common_fnc_doAnimation;
+    [_healer, "", 1] call ace_common_fnc_doAnimation;
     _stitchers = _building getVariable ["rd501_medical_ccp_stitchMembers", []];
-    diag_log format["_stitchers %1", _stitchers];
     if(count _stitchers <= 1) then {
         _building setVariable ["rd501_medical_ccp_stitchProgress", -1, true];
-        _building setVariable["rd501_medical_ccp_stitchMembers", [], true];
-        _progressComplete = _building setVariable ["rd501_medical_ccp_stitchProgressComplete", 100];
+        _building setVariable ["rd501_medical_ccp_stitchMembers", [], true];
+        _building setVariable ["rd501_medical_ccp_stitchProgressComplete", 100];
     }
     else
     {
@@ -88,7 +87,7 @@ else
         _args params ["_healer", "_nearbyPatients", "_origin"];
         _progress = _origin getVariable ["rd501_medical_ccp_stitchProgress", -1];
         _progressComplete = _origin getVariable ["rd501_medical_ccp_stitchProgressComplete", 100];
-        if(_progress >= _progressComplete || _progress < 0) exitWith {
+        if(_progress < 0 || _progress >= _progressComplete) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
         };
         if!(_healer getVariable ["ACE_Unconscious", false]) exitWith {
