@@ -98,4 +98,4 @@ _ctrlPos set [1, ((0 + 29 * ace_common_settingProgressBarLocation) * ((((safezon
     } else {
         (uiNamespace getVariable "ace_common_ctrlProgressBar") progressSetPosition _progress / _progressComplete;
     };
-}, 0, [_progressVar, _args, _onFinish, _onFail, _condition, _player, _building, _exceptions]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_progressVar, _progressCompleteVar, _args, _onFinish, _onFail, _condition, _player, _building, _exceptions]] call CBA_fnc_addPerFrameHandler;
