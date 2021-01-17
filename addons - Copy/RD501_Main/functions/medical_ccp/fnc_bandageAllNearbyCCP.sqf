@@ -71,7 +71,7 @@ if(_origin getVariable ["rd501_medical_ccp_bandageProgress", -1] == -1) then {
     private _bandageDuration = ((count _nearbyPatients) * rd501_medical_ccp_bandageDurationSeconds);
     _origin setVariable ["rd501_medical_ccp_bandageProgress", 0, true];
     _origin setVariable ["rd501_medical_ccp_bandageMembers", [player], true];
-    _origin setVariable ["rd501_medical_ccp_stitchProgressComplete", _bandageDuration, true];
+    _origin setVariable ["rd501_medical_ccp_bandageProgressComplete", _bandageDuration, true];
 }
 else
 {
