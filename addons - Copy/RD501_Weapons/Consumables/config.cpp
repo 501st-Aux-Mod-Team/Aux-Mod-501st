@@ -34,8 +34,11 @@ class CfgWeapons
         descriptionShort = "No, you can't eat that!";
         picture = "\RD501_Weapons\Consumables\data\nanobot_charge_ico.paa";
         author = "RD501";
-        mass = 1;
-    };
+		class ItemInfo: CBA_MiscItem_ItemInfo
+		{
+			mass = 1;
+		};
+	};
 };
 class ACE_Medical_Treatment
 {
