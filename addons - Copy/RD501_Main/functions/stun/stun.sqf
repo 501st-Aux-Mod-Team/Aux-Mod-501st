@@ -2,7 +2,7 @@
 // Runs only on the machine where the hit unit is local
 _fnc_onHit = {
 	params ["_unit", "_source", "_damage", "_instigator"];
-	["rd501_stun_onHit", [_unit, _source]] call CBA_fnc_globalEvent;
+	["rd501_stun_onHit", [_unit, _source], _instigator] call CBA_fnc_targetEvent;
 };
 
 // Runs on the person who shot
@@ -15,9 +15,9 @@ _fnc_stun = {
 
 	if (_stunDuration > 0.0) then
 	{
-		["ace_captives_setSurrendered" ,[_unit, true]] call CBA_fnc_globalEvent;
+		["ace_captives_setSurrendered" ,[_unit, true], _unit] call CBA_fnc_targetEvent;
 		[{
-			["ace_captives_setSurrendered", [_this select 0, false]] call CBA_fnc_globalEvent;
+			["ace_captives_setSurrendered", [_this select 0, false], _this select 0] call CBA_fnc_targetEvent;
 		}, [_unit], _stunDuration] call CBA_fnc_waitAndExecute;
 	};
 };
