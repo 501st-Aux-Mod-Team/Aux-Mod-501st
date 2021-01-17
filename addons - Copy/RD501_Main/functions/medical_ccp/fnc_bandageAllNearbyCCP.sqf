@@ -46,7 +46,7 @@ private _onFinish = {
 private _onFailure = {
     params["_args", "_progress", "_errorCode"];
     _args params["_healer","_nearbyPatients", "_building"];
-    [_healer, "AmovPknlMstpSrasWrflDnon", 1] call ace_common_fnc_doAnimation;
+    [_healer, "", 1] call ace_common_fnc_doAnimation;
     _bandagers = _building getVariable ["rd501_medical_ccp_bandageMembers", []];
     if(count _bandagers <= 1) then {
         _building setVariable ["rd501_medical_ccp_bandageProgress", -1, true];
@@ -86,13 +86,13 @@ else
         _args params ["_healer", "_nearbyPatients", "_origin"];
         _progress = _origin getVariable ["rd501_medical_ccp_bandageProgress", -1];
         _progressComplete = _origin getVariable ["rd501_medical_ccp_bandageProgressComplete", 100];
-        if(_progress >= _progressComplete || _progress < 0) exitWith {
+        if( _progress < 0 || _progress >= _progressComplete) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
         };
         if!(_healer getVariable ["ACE_Unconscious", false]) exitWith {
             ["rd501_medical_ccp_incrementBandage",[_origin, _healer]] call CBA_fnc_serverEvent;
         };
-    }, 
+    },
     1,
     _args
 ] call CBA_fnc_addPerFrameHandler;

@@ -51,6 +51,14 @@ rd501_medical_ccp_classes = ["Land_Medevac_house_V1_F"];
 rd501_medical_ccp_stitchDurationSeconds = 10;
 rd501_medical_ccp_bandageDurationSeconds = 10;
 
+["rd501_medical_ccp_incrementStitch",{ 
+	_this call rd501_fnc_incrementStitchProgress 
+}] call CBA_fnc_addEventHandler;
+
+["rd501_medical_ccp_incrementBandage",{
+	_this call rd501_fnc_incrementBandageProgress
+}] call CBA_fnc_addEventHandler;
+
 ["rd501_medical_ccp_deployCCPLocal", {
 	_this call rd501_fnc_deployCCPLocal;
 }] call CBA_fnc_addEventHandler;

@@ -95,7 +95,7 @@ else
             ["rd501_medical_ccp_incrementStitch",[_origin, _healer]] call CBA_fnc_serverEvent;
         };
     },
-    0.5,
+    1,
     _args
 ] call CBA_fnc_addPerFrameHandler;
 
