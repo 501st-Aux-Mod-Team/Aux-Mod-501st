@@ -28,82 +28,6 @@ class CfgPatches
 class Mode_SemiAuto;
 class cfgWeapons 
 {	
-	/*class Rifle_Base_F;
-	class Mode_FullAuto;
-	class SW_Z6_base_F:Rifle_Base_F
-	{
-		class WeaponSlotsInfo;
-	};
-
-	class SWOP_Z6Blaster:SW_Z6_base_F
-	{
-
-		displayName="Z6 Rotary Cannon";
-		class FullAuto1;
-		class FullAuto2;
-
-		class WeaponSlotsInfo:WeaponSlotsInfo
-		{
-			class CowsSlot;
-		};
-	};
-
-	class macro_new_weapon_nofam(Z6):SWOP_Z6Blaster
-	{
-		displayName="Z6 Rotary Cannon";
-		scope=2;
-		scopeArsenal=2;
-
-		dlc = "RD501";
-
-		author= "RD501";
-		baseWeapon = macro_new_weapon_nofam(Z6)
-
-		modes[] = {"FullAuto1", "overcharge_burst", "medium1", "medium2", "far1", "far2"};
-
-		ACE_Overheating_Dispersion = DC15a_Overheat_Dispersion
-		ACE_Overheating_SlowdownFactor = DC15a_Overheat_SlowdownFactor
-		ACE_Overheating_JamChance = DC15a_Overheat_JamChance
-		ACE_overheating_mrbs = DC15a_Overheat_mrbs
-		ACE_overheating_allowSwapBarrel = 1;
-		ACE_clearJamAction = "ReloadMagazine";
-
-		magazines[] = {macro_new_mag(z6,400)};
-
-		class FullAuto1:FullAuto1
-		{	
-			dispersion = Z6_accuracy
-			recoil = "recoil_single_smg_02";
-			recoilProne = "recoil_single_prone_smg_02";
-			reloadTime = Z6_fullauto_reload
-		};
-
-		class overcharge_burst:FullAuto1
-		{
-
-			dispersion = Z6_accuracy_burst
-			displayName = "Over Charge Auto";
-			recoil = "recoil_single_smg_02";
-			recoilProne = "recoil_single_prone_smg_02";
-			//reloadTime = 0.1;
-			reloadTime = Z6_burst_reload
-			//soundContinuous = 1;
-			burst = 25;
-			textureType = "fastAuto";
-		};
-
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
-			mass = 30;
-			class CowsSlot: CowsSlot
-			{
-				compatibleItems[] = {
-					macro_new_weapon(scope,dc_15a_acog)
-				};
-			};
-		};
-
-	};*/
 	class LMG_Mk200_F;
 	class JLTS_Z6:LMG_Mk200_F
 	{
@@ -148,7 +72,9 @@ class cfgWeapons
 				displayName="$str_a3_cfgweapons_abr_base_f_weaponslotsinfo_muzzleslot0";
 				compatibleItems[]=
 				{
-					"RD501_muzzle_flash"
+					"RD501_muzzle_flash",
+					"RD501_acc_particle_condenser",
+					"RD501_acc_particle_accelerator"
 				};
 				iconPicture="\A3\Weapons_F\Data\UI\attachment_muzzle.paa";
 				iconPinpoint="Center";

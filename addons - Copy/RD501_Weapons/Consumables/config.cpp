@@ -30,7 +30,7 @@ class CfgWeapons
     class MCC_bacon;
     class macro_new_weapon(fortify,nanobots): MCC_bacon
     {
-        displayName = "RD501 Nanobot Charge";
+        displayName = "Nanobot Charge";
         descriptionShort = "No, you can't eat that!";
         picture = "\RD501_Weapons\Consumables\data\nanobot_charge_ico.paa";
         author = "RD501";

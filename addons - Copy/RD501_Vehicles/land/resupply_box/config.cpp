@@ -30,7 +30,7 @@ class CfgPatches
 			macro_new_vehicle(resuppy_box,platoon_joint),
 			macro_new_vehicle(resuppy_box,small_medical),
 			macro_new_vehicle(resuppy_box,small_ammo),
-			macro_new_vehicle(resuppy_box,small_joint),
+			macro_new_vehicle(resuppy_box,small_uav),
 			macro_new_vehicle(resuppy_box,platoon_medical_tent)
 		};
 		weapons[]=
@@ -219,7 +219,7 @@ class CfgVehicles
         	#include "ammo_small_weap.hpp"
         };
 	};
-	class macro_new_vehicle(resuppy_box,small_joint): plp_ct_HighSecBigBlack
+	class macro_new_vehicle(resuppy_box,small_uav): plp_ct_HighSecBigBlack
 	{
 		author = "RD501";
 		class SimpleObject
@@ -234,27 +234,26 @@ class CfgVehicles
 		scope = 2;
 		
 		scopeCurator = 2;
-		displayName = "Republic Squad Resupply (Joint)";
+		displayName = "Republic UAV Resupply";
 		editorSubcategory = macro_editor_cat(resupply)
 		vehicleClass = "Ammo";
 		editorCategory = macro_editor_cat(suppplies)
 		maxload=1000000000;
 		ace_cargo_size = 2;
 		ace_cargo_canLoad = 1;  
-		class TransportItems
-        {
-        	//#include "ammo_small_items.hpp"
-        };
-			
-		class TransportMagazines
-        {
-        	//#include "ammo_small_mag.hpp"	
-        };	
-		
-		class TransportWeapons
-        {
-        	//#include "ammo_small_weap.hpp"
-        };
+		class TransportBackpacks
+			{
+				class _transport_r2
+					{
+						backpack=macro_new_vehicle(drone,Clone_Recon_bag)
+						count=1;
+					};
+				class _transport_eddie
+					{
+						backpack="B_UGV_02_Demining_backpack_F";
+						count=1;
+					};
+			};
 		
 
 		class EventHandlers :DefaultEventhandlers{

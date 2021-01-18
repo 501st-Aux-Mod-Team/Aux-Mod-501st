@@ -144,6 +144,8 @@ class CfgWeapons
 	NEW_501_Inf_Helm_JLTS(Kyrie,Kyrie,Kyrie.paa)
 	NEW_501_Inf_Helm_JLTS(Power,Power,Power.paa)
 	NEW_501_Inf_Helm_JLTS(Vulpes,Vulpes,Vulpes.paa)
+	NEW_501_Inf_Helm_JLTS(Cutter,Cutter,Cutter.paa)
+	NEW_501_Inf_Helm_JLTS(Schames,Schames,Schames.paa)
 	NEW_501_ARC_Helm_JLTS(Duke,Duke,Duke.paa)
 	NEW_501_ARC_Helm_JLTS(Jink,Jink,Jink.paa)
 	NEW_501_ARC_Helm_JLTS(Brennan,Brennan,Brennan.paa)

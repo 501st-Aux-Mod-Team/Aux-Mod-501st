@@ -103,7 +103,9 @@ class cfgWeapons
 				displayName="$str_a3_cfgweapons_abr_base_f_weaponslotsinfo_muzzleslot0";
 				compatibleItems[]=
 				{
-					"RD501_muzzle_flash"
+					"RD501_muzzle_flash",
+					"RD501_acc_particle_condenser",
+					"RD501_acc_particle_accelerator"
 				};
 				iconPicture="\A3\Weapons_F\Data\UI\attachment_muzzle.paa";
 				iconPinpoint="Center";
