@@ -102,7 +102,7 @@ class CfgWeapons
 				audibleFireTime=1;
 				cost=1;
 			};
-			soundTypeIndex=1;
+			soundTypeIndex=0;
 			muzzleEnd="zaslehPoint";
 			alternativeFire="Zasleh2";
 			class MuzzleCoef
@@ -153,7 +153,7 @@ class CfgWeapons
 				audibleFireTime=1;
 				cost=1;
 			};
-			soundTypeIndex=1;
+			soundTypeIndex=0;
 			muzzleEnd="zaslehPoint";
 			alternativeFire="Zasleh2";
 			class MuzzleCoef
