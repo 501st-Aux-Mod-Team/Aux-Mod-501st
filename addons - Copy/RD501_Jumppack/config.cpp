@@ -870,6 +870,7 @@ class CfgVehicles
 		tf_range=35000;
 		tf_hasLRradio=1;
 		maximumLoad=700;
+		JLTS_isJumppack = 0;
 		RD501_jumppack_is_jumppack=1;
 		RD501_jumppack_spam_delay=1;
 		RD501_jumppack_energy_capacity=100;
@@ -917,6 +918,7 @@ class CfgVehicles
 		scope = 2;
 		displayname = "[501st] AB Jumppack 01 no LR";
 		maximumLoad = 700;
+		JLTS_isJumppack = 0;
 		RD501_jumppack_is_jumppack = 1;
 		RD501_jumppack_spam_delay = 1;
 		RD501_jumppack_energy_capacity = 100;
@@ -1024,6 +1026,7 @@ class CfgVehicles
 		tf_range=35000;
 		tf_hasLRradio=1;
 		maximumLoad=700;
+		JLTS_isJumppack = 0;
 		RD501_jumppack_is_jumppack=1;
 		RD501_jumppack_spam_delay=1;
 		RD501_jumppack_energy_capacity=100;

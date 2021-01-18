@@ -23,12 +23,9 @@ class CfgPatches
 
 class CfgWeapons
 {
-	class muzzle_snds_H;
-	class muzzle_snds_M:muzzle_snds_H
-	{
-		class ItemInfo;
-	};
-	class RD501_muzzle_flash:muzzle_snds_M
+	class InventoryMuzzleItem_Base_F;
+	class ItemCore;
+	class RD501_muzzle_flash:ItemCore
 	{
 		scope=2;
 		scopeInArsenal=2;
@@ -36,7 +33,7 @@ class CfgWeapons
 		displayName="Flash Hider Chip";
 		model="";
 		picture="\RD501_weapons\_acc\data\icon_flashhider.paa";
-		class ItemInfo: ItemInfo
+		class ItemInfo: InventoryMuzzleItem_Base_F
 		{
 			mass=10;
 			class MagazineCoef
@@ -73,6 +70,108 @@ class CfgWeapons
 			};
 		};
 		inertia=0.1;
+	};
+	class RD501_acc_particle_condenser: ItemCore
+	{
+		author="RD501";
+		htMin=1;
+		htMax=600;
+		afMax=0;
+		mfMax=0;
+		mFact=1;
+		tBody=100;
+		scope=2;
+		displayName="Particle Condenser Chip";
+		picture="\RD501_weapons\_acc\data\icon_yellow_chip_64.paa";
+		model="";
+		class ItemInfo: InventoryMuzzleItem_Base_F
+		{
+			mass=10;
+			class MagazineCoef
+			{
+				initSpeed=1.05;
+			};
+			class AmmoCoef
+			{
+				hit=1;
+				typicalSpeed=0.5;
+				airFriction=1;
+				visibleFire=1;
+				audibleFire=1;
+				visibleFireTime=1;
+				audibleFireTime=1;
+				cost=1;
+			};
+			soundTypeIndex=1;
+			muzzleEnd="zaslehPoint";
+			alternativeFire="Zasleh2";
+			class MuzzleCoef
+			{
+				dispersionCoef="0.5f";
+				artilleryDispersionCoef="1.0f";
+				fireLightCoef="1.0f";
+				recoilCoef="1.0f";
+				recoilProneCoef="1.0f";
+				minRangeCoef="1.0f";
+				minRangeProbabCoef="1.0f";
+				midRangeCoef="1.0f";
+				midRangeProbabCoef="1.0f";
+				maxRangeCoef="1.0f";
+				maxRangeProbabCoef="1.0f";
+			};
+		};
+		inertia=0.2;
+	};
+	class RD501_acc_particle_accelerator: ItemCore
+	{
+		author="RD501";
+		htMin=1;
+		htMax=600;
+		afMax=0;
+		mfMax=0;
+		mFact=1;
+		tBody=100;
+		scope=2;
+		displayName="Particle Accelerator Chip";
+		picture="\RD501_weapons\_acc\data\icon_red_chip_64.paa";
+		model="";
+		class ItemInfo: InventoryMuzzleItem_Base_F
+		{
+			mass=10;
+			class MagazineCoef
+			{
+				initSpeed=1.05;
+			};
+			class AmmoCoef
+			{
+				hit=1;
+				typicalSpeed=1.5;
+				airFriction=1;
+				visibleFire=1;
+				audibleFire=1;
+				visibleFireTime=1;
+				audibleFireTime=1;
+				cost=1;
+			};
+			soundTypeIndex=1;
+			muzzleEnd="zaslehPoint";
+			alternativeFire="Zasleh2";
+			class MuzzleCoef
+			{
+				dispersionCoef="1.5f";
+				artilleryDispersionCoef="1.0f";
+				fireLightCoef="1.0f";
+				recoilCoef="1.0f";
+				recoilProneCoef="1.0f";
+				minRangeCoef="1.0f";
+				minRangeProbabCoef="1.0f";
+				midRangeCoef="1.0f";
+				midRangeProbabCoef="1.0f";
+				maxRangeCoef="1.0f";
+				maxRangeProbabCoef="1.0f";
+			};
+		};
+		inertia=0.2;
 	};
 /////////////////////////////////////////////////////////////////
 ////////////////////////////Optics///////////////////////////////

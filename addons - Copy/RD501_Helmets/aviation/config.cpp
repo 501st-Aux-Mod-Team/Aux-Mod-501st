@@ -50,16 +50,6 @@ class CfgWeapons
 	NEW_501_Pilot_HELM(cxx,CX-X,pilots\cxx.paa)
 	NEW_501_Pilot_HELM(cxc,CX-C,pilots\cxc.paa)
 	NEW_501_Pilot_HELM(dylan,Dylan,pilots\Dylanhelmet.paa)
-
-	class macro_new_helmet(pilot,erlien): macro_new_helmet(pilot,base)
-	{
-		scope = 2;
-		author = "RD501";
-		displayName = [501st] AVI HELM ('Erlien');
-		hiddenSelectionsTextures[] = {"SWOP_clones\data\helmetsOther\clonePilotHelmet501.paa"};
-		subItems[] = {"G_B_Diving"};
-	};
-
 	NEW_501_Pilot_HELM(exose,Exose,pilots\Exose.paa)
 	NEW_501_Pilot_HELM(jackson,Jackson,pilots\Jackson.paa)
 	NEW_501_Pilot_HELM(jaisus,Jaisus,pilots\Jaisus.paa)
@@ -73,6 +63,7 @@ class CfgWeapons
 	NEW_501_Pilot_HELM(Galaxy,Galaxy,pilots\Galaxy.paa)
 	NEW_501_Pilot_HELM(Floff,Floff,pilots\Floff.paa)
 	NEW_501_Pilot_HELM(Gothic,Gothic,pilots\Gothic.paa)
+	NEW_501_Pilot_HELM(Canik,Canik,pilots\Canik.paa)
 	NEW_501_Pilot_HELM(Shnuffles,Shnuffles,pilots\Shnuffles.paa)
 	NEW_501_Pilot_HELM(Legal,Legal,pilots\Legal.paa)
 	NEW_501_Pilot_HELM(Ethan,Ethan,pilots\Ethan.paa)

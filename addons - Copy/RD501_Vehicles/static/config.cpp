@@ -83,6 +83,7 @@ class CfgVehicles
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat(turrets)
 		vehicleClass = macro_editor_vehicle_type(turrets)
+		ace_cargo_size = 1;
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
@@ -93,7 +94,7 @@ class CfgVehicles
 				};
 				magazines[]=
 				{
-					macro_new_mag(eweb,600)
+					macro_new_mag(eweb,1000)
 				};
 			};
 		};
@@ -114,6 +115,7 @@ class CfgVehicles
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat(turrets)
 		vehicleClass = macro_editor_vehicle_type(turrets)
+		ace_cargo_size = 1;
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
@@ -146,6 +148,7 @@ class CfgVehicles
 		editorSubcategory = macro_editor_cat(turrets)
 		vehicleClass = macro_editor_vehicle_type(turrets)
 		model = "\OPTRE_Weapons\static\LAU65D\LAU65D_pod.p3d";
+		ace_cargo_size = 1;
 		class Turrets: Turrets
 		{
 		class MainTurret: MainTurret
@@ -186,6 +189,7 @@ class CfgVehicles
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat(turrets)
 		vehicleClass = macro_editor_vehicle_type(turrets)
+		ace_cargo_size = 1;
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
@@ -241,7 +245,7 @@ class CfgVehicles
 		displayName="Republic E-Web Bag";
 		hiddenSelectionsTextures[]=
 		{
-			"\RD501_Vehicles\air\drones\Clone_backpack_uav.paa"
+			"\RD501_Vehicles\static\data\rd501_backpack_staticweapons_eweb.paa"
 		};
 		class assembleInfo: assembleInfo
 		{
@@ -306,7 +310,7 @@ class CfgWeapons
 		};
 		magazines[]=
 		{
-			macro_new_mag(eweb,600)
+			macro_new_mag(eweb,1000)
 		};
 	};
 	class macro_new_weapon(stat,ragl40):3AS_BlasterTurret_Repeater
@@ -358,14 +362,14 @@ class CfgMagazines
 	class 3AS_500_Rnd_BlasterTurret_mag;
 	class 40Rnd_20mm_G_belt;
 	class 1Rnd_GAT_missiles;
-	class macro_new_mag(eweb,600): 3AS_500_Rnd_BlasterTurret_mag
+	class macro_new_mag(eweb,1000): 3AS_500_Rnd_BlasterTurret_mag
 	{
 		scope=2;
 		scopeArsenal = 2;
 		type=256;
 		picture="\RD501_Vehicles\static\data\rd501_icon_mag_staticeweb.paa";
 		displayName= "Republic E-Web Charge"
-		count=600;
+		count=1000;
 		ammo=macro_new_ammo(z1000)
 		weaponpoolavailable=1;
 	};
@@ -375,7 +379,7 @@ class CfgMagazines
 		scopeArsenal = 2;
 		type=256;
 		picture="\RD501_Vehicles\static\data\rd501_icon_mag_staticgl.paa";
-		muzzleImpulseFactor[] = {0.1,0.1};
+		muzzleImpulseFactor[] = {0,0};
 		displayName= "RAGL40 'Boomer' belt"
 		count=40;
 		ammo=macro_new_ammo(UGL_HE)
@@ -389,6 +393,7 @@ class CfgMagazines
 		picture="\RD501_Vehicles\static\data\rd501_icon_mag_staticaap.paa";
 		displayName= "AAP4 'Striker' Pod"
 		count=4;
+		//ammo=macro_new_ammo(striker)
 		weaponpoolavailable=1;
 	};
 		class macro_new_mag(mar,1): 3AS_500_Rnd_BlasterTurret_mag
