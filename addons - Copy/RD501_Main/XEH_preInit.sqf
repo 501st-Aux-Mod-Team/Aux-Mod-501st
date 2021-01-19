@@ -137,4 +137,10 @@ macro_prep_xeh(medical_ccp\fnc_isDoctor.sqf,isDoctor)
 macro_prep_xeh(medical_ccp\fnc_canBandageNearbyCCP.sqf,canBandageNearbyCCP)
 macro_prep_xeh(medical_ccp\fnc_canStitchNearbyCCP.sqf,canStitchNearbyCCP)
 
+// Jammer
+macro_prep_xeh(jammer\fnc_addJammer.sqf,addJammer)
+macro_prep_xeh(jammer\fnc_addJammerLocal.sqf,addJammerLocal)
+macro_prep_xeh(jammer\fnc_jammersPFH.sqf,jammersPFH)
+macro_prep_xeh(jammer\fnc_jammersServerPFH.sqf,jammersServerPFH)
+
 diag_log "RD501 PREP Complete";

@@ -69,3 +69,8 @@ rd501_medical_ccp_bandageDurationSeconds = 10;
 
 // Surrender stun
 call macro_fnc_name(stun);
+
+// Jammers
+["rd501_addJammerLocal", {
+	_this call rd501_fnc_addJammerLocal
+}] call CBA_fnc_addEventHandler;

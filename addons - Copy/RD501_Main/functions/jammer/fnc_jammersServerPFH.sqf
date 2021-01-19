@@ -5,6 +5,7 @@ if(!isServer) exitWith {
 };
 
 _jammers = missionNamespace getVariable ["rd501_jammers",[]];
+if(_jammers == []) exitWith { };
 
 _toRemoveIndexes = [];
 {
@@ -22,5 +23,6 @@ _toRemoveIndexes = [];
 missionNamespace setVariable ["rd501_jammers", _jammers, true];
 
 if(count _jammers == 0) exitWith {
+	systemChat "Exiting Server PFH";
 	[_handle] call CBA_fnc_removePerFrameHandler;
 };
