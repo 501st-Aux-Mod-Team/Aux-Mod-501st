@@ -6,6 +6,7 @@ _args params["_player"];
 *		["bis_o1", 1000, 400]
 *	];
 */
+systemChat "Server PFH";
 if(!alive _player) exitWith { systemChat format["Player dead for %1", _handle] };
 
 _jammers = missionNamespace getVariable ["rd501_jammers",[]];
@@ -26,6 +27,7 @@ private _signalStrength = 1;
 	private _distance = _player distance _jammer;
 	if (_distance < _radius) then {
 		//cubic bezier curve
+
 		// private _t = 0;
 		// private _m = 1 -_t;
 		// private _x0 = 0;
@@ -36,17 +38,20 @@ private _signalStrength = 1;
 		// private _y1 = 0.5;
 		// private _y2 = 0.8;
 		// private _y3 = 1;
+
 		// private _xr = (_y0*_m*_m*_m) + (3*_t*_y1*_m*_m) + (3*_t*_t*_y2*_m) + (_t*_t*_t*_y3);
 		// private _yr = (_x0*_m*_m*_m) + (3*_t*_x1*_m*_m) + (3*_t*_t*_x2*_m) + (_t*_t*_t*_x3);
+
 		// _yr simplifies approx to y=1.6t³ - 3.9t² + 3.3t
 		// or t(1.6t² - 3.9t + 3.3)
+
 		private _t = _distance/_radius;
 		private _specificInterference = _t * ((1.6*_t*_t) - (3.9 * _t) + 3.3);
 		if(_signalStrength == 1) then {
 			_signalStrength = _specificInterference;
 			continue
 		};
-		_signalStrength = (_signalStrength + _specificInterference)/2; // Average of interference plus current
+		_signalStrength = _signalStrength min _specificInterference; // Lowest value
 		if(_signalStrength < 0.01) then {
 			_signalStrength = 0.01; //prevent 0 from being final value
 		};
