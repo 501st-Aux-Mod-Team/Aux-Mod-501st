@@ -1,6 +1,5 @@
 params["_jammer", "_radius", "_strength"];
-if(isDedicated || !hasInterface) exitWith {
-};
+if(isDedicated || !hasInterface) exitWith { };
 systemChat "Adding Jammer Local";
 if(player getVariable ["rd501_jammers_pfh", -1] == -1) exitWith {
 	systemChat "Adding Client Per Frame Handler";

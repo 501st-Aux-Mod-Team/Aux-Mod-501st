@@ -6,7 +6,6 @@ _args params["_player"];
 *		["bis_o1", 1000, 400]
 *	];
 */
-systemChat "Server PFH";
 if(!alive _player) exitWith { systemChat format["Player dead for %1", _handle] };
 
 _jammers = missionNamespace getVariable ["rd501_jammers",[]];
