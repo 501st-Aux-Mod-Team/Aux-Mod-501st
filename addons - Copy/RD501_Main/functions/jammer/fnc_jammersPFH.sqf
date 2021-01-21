@@ -22,7 +22,7 @@ if(count _jammers == 0) exitWith {
 // Aggregate the mean interference (multiple jammers allowed)
 private _signalStrength = 1;
 {
-	_x params["_jammer", "_radius, _strength"];
+	_x params["_jammer", "_radius", "_strength"];
 	private _distance = _player distance _jammer;
 	if (_distance < _radius) then {
 		//cubic bezier curve
@@ -45,7 +45,7 @@ private _signalStrength = 1;
 		// or t(1.6t² - 3.9t + 3.3)
 
 		private _t = _distance/_radius;
-		private _specificInterference = _strength * _t * ((1.6*_t*_t) - (3.9 * _t) + 3.3);
+		private _specificInterference = _strength * (_t * ((1.6*_t*_t) - (3.9 * _t) + 3.3));
 		if(_signalStrength == 1) then {
 			_signalStrength = _specificInterference;
 			continue
