@@ -25,27 +25,8 @@ private _interference = 1;
 	_x params["_jammer", "_radius", "_strength"];
 	private _distance = _player distance _jammer;
 	if (_distance < _radius) then {
-		//cubic bezier curve
-
-		// private _t = 0;
-		// private _m = 1 -_t;
-		// private _x0 = 0;
-		// private _x1 = 1.1;
-		// private _x2 = 0.9;
-		// private _x3 = 1;
-		// private _y0 = 0.1;
-		// private _y1 = 0.5;
-		// private _y2 = 0.8;
-		// private _y3 = 1;
-
-		// private _xr = (_y0*_m*_m*_m) + (3*_t*_y1*_m*_m) + (3*_t*_t*_y2*_m) + (_t*_t*_t*_y3);
-		// private _yr = (_x0*_m*_m*_m) + (3*_t*_x1*_m*_m) + (3*_t*_t*_x2*_m) + (_t*_t*_t*_x3);
-
-		// _yr simplifies approx to y=1.6t³ - 3.9t² + 3.3t
-		// or t(1.6t² - 3.9t + 3.3)
-
-		private _t = _distance/_radius;
-		private _specificSignal =  (_t * ((1.6*_t*_t) - (3.9 * _t) + 3.3));
+		private _d = _distance/_radius;
+		private _specificSignal =  1/(1 + ((_d/(1 -_d)) ^ -2.3));
 		private _specificInterference = _strength * (1 - _specificSignal);
 		if(_interference == 1) then {
 			_interference = _specificInterference;

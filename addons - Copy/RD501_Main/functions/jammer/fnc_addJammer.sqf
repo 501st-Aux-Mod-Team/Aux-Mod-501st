@@ -1,5 +1,4 @@
-params["_jammer", ["_radius", 300], ["_strength", 400]];
-
+params["_jammer", ["_radius", 300], ["_strength", 160]];
 
 _jammers = missionNamespace getVariable ["rd501_jammers",[]];
 
