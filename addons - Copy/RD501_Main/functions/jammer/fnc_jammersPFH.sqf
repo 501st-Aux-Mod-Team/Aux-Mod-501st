@@ -20,7 +20,7 @@ if(count _jammers == 0) exitWith {
 };
 
 // Aggregate the mean interference (multiple jammers allowed)
-private _signalStrength = 1;
+private _interference = 1;
 {
 	_x params["_jammer", "_radius", "_strength"];
 	private _distance = _player distance _jammer;
@@ -45,23 +45,23 @@ private _signalStrength = 1;
 		// or t(1.6t² - 3.9t + 3.3)
 
 		private _t = _distance/_radius;
-		private _specificInterference =  (_t * ((1.6*_t*_t) - (3.9 * _t) + 3.3));
-		private _specificSignal = _strength * (1 - _specificInterference);
-		if(_signalStrength == 1) then {
-			_signalStrength = _specificSignal;
+		private _specificSignal =  (_t * ((1.6*_t*_t) - (3.9 * _t) + 3.3));
+		private _specificInterference = _strength * (1 - _specificSignal);
+		if(_interference == 1) then {
+			_interference = _specificInterference;
 			continue
 		};
-		_signalStrength = _signalStrength min _specificSignal; // Lowest value
-		if(_signalStrength < 1) then {
-			_signalStrength = 1; //prevent 0 from being final value
+		_interference = _interference min _specificInterference; // Lowest value
+		if(_interference < 1) then {
+			_interference = 1; //prevent 0 from being final value
 		};
-		if(_signalStrength > _strength) then {
-			_signalStrength = _strength; // prevent tfar from being exposed to 1.6e^24 when distance is null
+		if(_interference > _strength) then {
+			_interference = _strength; // prevent tfar from being exposed to 1.6e^24 when distance is null
 		}
 	};
 } forEach _jammers;
 
 // Set interference locally
-_player setVariable ["tf_receivingDistanceMultiplicator", _signalStrength];
-_player setVariable ["tf_transmittingDistanceMultiplicator", _signalStrength];
-systemChat format["Signal Strength: %1", _signalStrength];
+_player setVariable ["tf_receivingDistanceMultiplicator", _interference];
+_player setVariable ["tf_transmittingDistanceMultiplicator", _interference];
+systemChat format["Interference: %1", _interference];
