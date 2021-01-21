@@ -8,11 +8,10 @@ diag_log "Server PFH";
 private _jammers = missionNamespace getVariable ["rd501_jammers",[]];
  
 {
-	_x params["_jammer", "_radius", "_strength"];
+	_x params["_jammer", "_radius", "_strength", "_jipId"];
 	diag_log format["Reading %1",_x];
 	if(_jammer isEqualTo objNull || !(alive _jammer)) then {
 		diag_log format["Removing Jammer %1",_jammer];
-		_jipId = _jammer getVariable ["rd501_jammer_jipId", -1];
 	 	_jammers set [_foreachIndex, []];
 		 if(_jipId != -1) then {
  			[_jipId] call CBA_fnc_removeGlobalEventJIP;

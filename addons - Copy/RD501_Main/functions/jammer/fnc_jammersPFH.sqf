@@ -45,14 +45,15 @@ private _signalStrength = 1;
 		// or t(1.6t² - 3.9t + 3.3)
 
 		private _t = _distance/_radius;
-		private _specificInterference = _strength * (_t * ((1.6*_t*_t) - (3.9 * _t) + 3.3));
+		private _specificInterference =  (_t * ((1.6*_t*_t) - (3.9 * _t) + 3.3));
+		private _specificSignal = _strength * (1 - _specificInterference);
 		if(_signalStrength == 1) then {
-			_signalStrength = _specificInterference;
+			_signalStrength = _specificSignal;
 			continue
 		};
-		_signalStrength = _signalStrength min _specificInterference; // Lowest value
-		if(_signalStrength < 0.01) then {
-			_signalStrength = 0.01; //prevent 0 from being final value
+		_signalStrength = _signalStrength min _specificSignal; // Lowest value
+		if(_signalStrength < 1) then {
+			_signalStrength = 1; //prevent 0 from being final value
 		};
 		if(_signalStrength > _strength) then {
 			_signalStrength = _strength; // prevent tfar from being exposed to 1.6e^24 when distance is null
