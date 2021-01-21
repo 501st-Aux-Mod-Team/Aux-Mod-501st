@@ -16,7 +16,7 @@ if(count _jammers == 0) exitWith {
 	[_handle] call CBA_fnc_removePerFrameHandler;
 	_player setVariable ["rd501_jammers_pfh", -1];
 	_player setVariable ["tf_receivingDistanceMultiplicator", 1];
-	_player setVariable ["tf_transmittingDistanceMultiplicator", 1];
+	//_player setVariable ["tf_transmittingDistanceMultiplicator", 1]; // Unused by TFAR 0.9.7
 };
 
 // Aggregate the mean interference (multiple jammers allowed)
@@ -44,5 +44,5 @@ private _interference = 1;
 
 // Set interference locally
 _player setVariable ["tf_receivingDistanceMultiplicator", _interference];
-_player setVariable ["tf_transmittingDistanceMultiplicator", _interference];
+// _player setVariable ["tf_transmittingDistanceMultiplicator", _interference]; // Unused by TFAR 0.9.7
 systemChat format["Interference: %1", _interference];
