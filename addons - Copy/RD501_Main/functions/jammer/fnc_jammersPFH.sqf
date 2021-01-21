@@ -54,8 +54,8 @@ private _signalStrength = 1;
 		if(_signalStrength < 0.01) then {
 			_signalStrength = 0.01; //prevent 0 from being final value
 		};
-		if(_signalStrength > 1) then {
-			_signalStrength = 1; // prevent tfar from being exposed to 1.6e^24 when distance is null
+		if(_signalStrength > _strength) then {
+			_signalStrength = _strength; // prevent tfar from being exposed to 1.6e^24 when distance is null
 		}
 	};
 } forEach _jammers;
