@@ -39,7 +39,7 @@ class CfgMagazines
 		count = 30;
 		mass=4;
 		ammo=macro_new_ammo(2mw)
-		typicalSpeed=400;
+		initSpeed=400;
 		descriptionShort="Low power magazine";
 	};
 	class macro_new_mag(5mw,60) : 3AS_45Rnd_EC50_Mag
@@ -48,7 +48,7 @@ class CfgMagazines
 		picture="\RD501_Weapons\_mag\data\rd501_icon_mag_dc15s.paa";
 		count = 75;
 		ammo=macro_new_ammo(5mw)
-		typicalSpeed=400;
+		initSpeed=400;
 		descriptionShort="Low power magazine";
 	};
 	class macro_new_mag(5mw,10) : 3AS_45Rnd_EC50_Mag
@@ -58,7 +58,7 @@ class CfgMagazines
 		count = 15;
 		mass=4;
 		ammo=macro_new_ammo(5mw)
-		typicalSpeed=400;
+		initSpeed=400;
 		descriptionShort="Low power magazine";
 	};
 	class macro_new_mag(10mw,30) : 3AS_45Rnd_EC50_Mag
@@ -67,7 +67,7 @@ class CfgMagazines
 		picture="\RD501_Weapons\_mag\data\rd501_icon_mag_dc15c.paa";
 		count = 40;
 		ammo=macro_new_ammo(10mw)
-		typicalSpeed=450;
+		initSpeed=550;
 		descriptionShort="Medium power magazine";
 	};
 	class macro_new_mag(10mws,30) : 3AS_45Rnd_EC50_Mag
@@ -76,7 +76,7 @@ class CfgMagazines
 		picture="\RD501_Weapons\_mag\data\rd501_icon_mag_dc15c.paa";
 		count = 40;
 		ammo=macro_new_ammo(10mws)
-		typicalSpeed=450;
+		initSpeed=550;
 		descriptionShort="Medium power magazine";
 	};
 	class macro_new_mag(10mw,400) : 3AS_45Rnd_EC50_Mag
@@ -85,7 +85,7 @@ class CfgMagazines
 		picture="\RD501_Weapons\_mag\data\rd501_icon_mag_z6.paa";
 		count = 400;
 		ammo=macro_new_ammo(10mw)
-		typicalSpeed=450;
+		initSpeed=550;
 		descriptionShort="Medium power box magazine";
 	};
 	class macro_new_mag(20mw,20) : 3AS_45Rnd_EC50_Mag
@@ -93,7 +93,7 @@ class CfgMagazines
 		displayName="20 Round 20MW Cell";
 		count = 20;
 		ammo=macro_new_ammo(20mw)
-		typicalSpeed=700;
+		initSpeed=700;
 		descriptionShort="Medium power magazine";
 	};
 	class macro_new_mag(20mwup,20) : 3AS_45Rnd_EC50_Mag
@@ -102,7 +102,7 @@ class CfgMagazines
 		picture="\RD501_Weapons\_mag\data\rd501_icon_mag_dc15a_up.paa";
 		count = 25;
 		ammo=macro_new_ammo(20mwup)
-		typicalSpeed=500;
+		initSpeed=600;
 		descriptionShort="Medium power unstable plasma magazine";
 	};
 	class macro_new_mag(20mwdp,20) : 3AS_45Rnd_EC50_Mag
@@ -111,7 +111,7 @@ class CfgMagazines
 		picture="\RD501_Weapons\_mag\data\rd501_icon_mag_dc15a_dp.paa";
 		count = 25;
 		ammo=macro_new_ammo(20mwdp)
-		typicalSpeed=700;
+		initSpeed=700;
 		descriptionShort="Medium power dense plasma magazine";
 	};
 	class macro_new_mag(20mw,240) : 3AS_45Rnd_EC50_Mag
@@ -120,7 +120,7 @@ class CfgMagazines
 		picture="\RD501_Weapons\_mag\data\rd501_icon_mag_dc15l.paa";
 		count = 240;
 		ammo=macro_new_ammo(20mw)
-		typicalSpeed=800;
+		initSpeed=700;
 		descriptionShort="Medium power box magazine";
 	};
 	class macro_new_mag(20mw,90) : 3AS_45Rnd_EC50_Mag
@@ -128,7 +128,7 @@ class CfgMagazines
 		displayName="90 Round E5C Cell";
 		count = 90;
 		ammo=macro_new_ammo(20mw_d)
-		typicalSpeed=800;
+		initSpeed=700;
 		descriptionShort="Medium power box magazine";
 	};
 	class macro_new_mag(30mw,10) : 3AS_45Rnd_EC50_Mag
@@ -137,7 +137,7 @@ class CfgMagazines
 		picture="\RD501_Weapons\_mag\data\rd501_icon_mag_valken38.paa";
 		count = 10;
 		ammo=macro_new_ammo(30mw)
-		typicalSpeed=1000;
+		initSpeed=1000;
 		descriptionShort="High power magazine";
 	};
 	class macro_new_mag(30mw,15) : 3AS_45Rnd_EC50_Mag
@@ -145,7 +145,7 @@ class CfgMagazines
 		displayName="15 Round E5S Cell";
 		count = 15;
 		ammo=macro_new_ammo(30mw_d)
-		typicalSpeed=1000;
+		initSpeed=1000;
 		descriptionShort="High power magazine";
 	};
 	class macro_new_mag(30mw,7) : 3AS_45Rnd_EC50_Mag
@@ -153,7 +153,7 @@ class CfgMagazines
 		displayName="7 Round 30MW Cell";
 		count = 7;
 		ammo=macro_new_ammo(30mw)
-		typicalSpeed=800;
+		initSpeed=800;
 		descriptionShort="High power magazine";
 	};
 	class macro_new_mag(40mw,5) : 3AS_45Rnd_EC50_Mag
@@ -161,7 +161,7 @@ class CfgMagazines
 		displayName="5 Round 40MW Cell";
 		count = 5;
 		ammo=macro_new_ammo(40mw)
-		typicalSpeed=1100;
+		initSpeed=1100;
 		descriptionShort="High power magazine";
 	};
 	class macro_new_mag(40mwemp,1) : 3AS_45Rnd_EC50_Mag
@@ -169,7 +169,7 @@ class CfgMagazines
 		displayName="1 Round 40MW EMP Cell";
 		count = 1;
 		ammo=macro_new_ammo(40mwemp)
-		typicalSpeed=1100;
+		initSpeed=1100;
 		descriptionShort="EMP Round";
 	};
 	class macro_new_mag(50mw,10) : 3AS_45Rnd_EC50_Mag
@@ -177,7 +177,7 @@ class CfgMagazines
 		displayName="10 Round 50MW Cell";
 		count = 10;
 		ammo=macro_new_ammo(50mw)
-		typicalSpeed=1100;
+		initSpeed=1100;
 		descriptionShort="High power magazine";
 	};
 	class macro_new_mag(50mw,8) : 3AS_45Rnd_EC50_Mag
@@ -186,7 +186,7 @@ class CfgMagazines
 		count = 8;
 		mass=4;
 		ammo=macro_new_ammo(50mw)
-		typicalSpeed=1100;
+		initSpeed=1100;
 		descriptionShort="High power magazine";
 	};
 	class macro_new_mag(stun,5):DCStun_Mag

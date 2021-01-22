@@ -101,7 +101,7 @@ class CfgAmmo
 	{
 		hit=10;
 		airLock=1;
-		typicalSpeed=500;
+		typicalSpeed=600;
 		indirectHit = 3;
 		indirectHitRange = 0.5;
 		explosive = 0.4;
@@ -112,7 +112,7 @@ class CfgAmmo
 	{
 		hit=17;
 		airLock=1;
-		typicalSpeed=800;
+		typicalSpeed=700;
 		caliber=2.8;
 		airFriction=0;
 		explosive = 0.2;
