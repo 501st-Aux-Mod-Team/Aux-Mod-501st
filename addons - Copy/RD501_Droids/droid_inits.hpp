@@ -12,7 +12,7 @@ class Extended_Init_EventHandlers
 	{
 		class rd501_jammer
 		{
-			init = "[_this, 300, 160] call rd501_fnc_addJammer";
+			init = "[_this select 0, 300, 160] call rd501_fnc_addJammer";
 		};
 	};
 }

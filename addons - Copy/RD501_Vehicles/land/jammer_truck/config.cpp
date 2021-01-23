@@ -46,7 +46,7 @@ class Extended_Init_EventHandlers
 	class macro_new_vehicle(cis,jammer_truck)
 	{
 		class rd501_jammer {
-			init = "[_this, 600, 160] call rd501_fnc_addJammer";
+			init = "[_this select 0, 600, 160] call rd501_fnc_addJammer";
 		};
 	}
 };
