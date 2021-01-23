@@ -40,6 +40,25 @@ class CfgPatches
 	};
 };
 
+class CfgWeapons
+{
+	class UniformItem;
+	class JLTS_DroidB1;
+
+	// custom uniforms
+	class macro_new_uniform_class(opfor,B1_jammer): JLTS_DroidB1
+	{
+		displayName="RD501 B1 (Jammer)";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass=macro_new_unit_class(opfor,B1_jammer);
+			containerClass="Supply150";
+			mass=40;
+		};
+	};
+};
+
 class CfgVehicles
 {
 	#include "backpacks.hpp"
@@ -352,6 +371,11 @@ class CfgVehicles
 	{
 		displayName="B1 Battledroid (Jammer)";
 		backpack=macro_backpack_jammer;
+		uniformClass=macro_new_uniform_class(opfor,B1_jammer);
+		hiddenSelectionsTextures[]=
+		{
+			"\RD501_Droids\data\b1_jammer.paa"
+		};
 		cost=3;
 	}
 	class macro_new_unit_class(opfor,B1_E_Web): macro_new_unit_class(opfor,B1)
