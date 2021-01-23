@@ -10,9 +10,9 @@ class Extended_Init_EventHandlers
 	};
 	class macro_new_unit_class(opfor,B1_jammer)
 	{
-		class jammer
+		class rd501_jammer
 		{
-			init = [_this select 0] spawn macro_fnc_name(apply_jammer);
+			init = "[_this, 300, 160] call rd501_fnc_addJammer";
 		};
 	};
 }
