@@ -41,8 +41,6 @@ class cfgWeapons
 	#include "_clone_armor_readjust_base.hpp"
 	#include "_clone_armor_readjust_1.hpp"
 	#include "_cadet_armor.hpp"
-	#include "_medic_armor.hpp"
-	#include "_rto_armor.hpp"
 	#include "_other_armor.hpp"
 	#include "_headwear.hpp"
 
@@ -368,27 +366,7 @@ class cfgWeapons
 		{
 			uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestCommander.p3d";
 		};
-	};	
-	class macro_new_vest_class(501_inf,acc_7_v3): macro_new_vest_class(501_inf,acc_7)
-	{
-		displayName = "[501st] INF ACC 07 (Sgt. Major (B) RTO)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneVestCommander.p3d";
-		hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\Infantry\acc\bn_rto_pauldron.paa};
-		class ItemInfo: ItemInfo
-		{
-			uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestCommander.p3d";
-		};
-	};	
-	class macro_new_vest_class(501_inf,acc_7_v4): macro_new_vest_class(501_inf,acc_7)
-	{
-		displayName = "[501st] INF ACC 07 (Sgt. Major (B) Medic)";
-		model="\MRC\JLTS\characters\CloneArmor\CloneVestCommander.p3d";
-		hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\Infantry\acc\bn_medic_pauldron.paa};
-		class ItemInfo: ItemInfo
-		{
-			uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestCommander.p3d";
-		};
-	};	
+	};
 	class macro_new_vest_class(501_inf,acc_10): macro_new_vest_class(501_inf,acc_9)
 	{
 		displayName = "[501st] INF ACC 10 (Captain)";
