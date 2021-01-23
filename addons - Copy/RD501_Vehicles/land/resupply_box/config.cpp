@@ -75,6 +75,7 @@ class CfgVehicles
 		hiddenSelectionsMaterials[] = {"\plp_containers\StcHighSec\plp_ct_HighSecCont_Metal.rvmat", "\plp_containers\StcHighSec\plp_ct_HighSecCont_MetalB.rvmat", "\plp_containers\StcHighSec\plp_ct_HighSec_Light.rvmat", ""};
 		editorCategory = macro_editor_cat(suppplies)
 		editorSubcategory = macro_editor_cat(resupply)
+		RD501_magclamp_small_offset[]={0.0,0.0,-0.4};
 		class TransportItems{};
 		class EventHandlers :DefaultEventhandlers{};
 		class ACE_Actions {
