@@ -41,8 +41,11 @@ class CfgPatches
 class DefaultEventhandlers;
 class CfgVehicles
 {
-
-	#include "inheritance.hpp"
+	class B_MBT_01_mlrs_base_F;
+	class B_MBT_01_mlrs_F: B_MBT_01_mlrs_base_F
+	{
+		RD501_magclamp_small_offset[]={-0.7,0.0,-1.0};
+	};
 	class macro_new_vehicle(rocket_ordinance_tank,Mynock) : B_MBT_01_mlrs_F
 	{
 		displayName = "Republic Catapult (Mynock)";
