@@ -1,0 +1,41 @@
+
+#include "../../../RD501_main/config_macros.hpp"
+
+class CfgPatches
+{
+	class macro_patch_name(jammer_truck)
+	{
+		addonRootClass=macro_patch_name(vehicles)
+
+		requiredAddons[]=
+		{
+			macro_patch_name(vehicles)
+		};
+		requiredVersion=0.1;
+		units[]=
+		{
+			macro_new_vehicle(cis,jammer_truck),
+		};
+		weapons[]=
+		{
+			
+		};
+	};
+};
+
+class CfgVehicles
+{
+    class I_Truck_02_ammo_F;
+
+	class macro_new_vehicle(cis,jammer_truck): I_Truck_02_ammo_F
+    {
+		displayName = "CIS Marille";
+		crew = macro_new_unit_class(opfor,B1_crew)
+		faction = macro_cis_faction
+		editorSubcategory = macro_editor_cat(APC)
+		vehicleClass = macro_editor_vehicle_type(APC)
+		scope = 2;
+		scopeCurator = 2;
+		forceInGarage = 1;
+    };
+};
