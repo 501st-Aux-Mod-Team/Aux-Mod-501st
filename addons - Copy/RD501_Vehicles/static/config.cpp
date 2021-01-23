@@ -393,7 +393,7 @@ class CfgMagazines
 		picture="\RD501_Vehicles\static\data\rd501_icon_mag_staticaap.paa";
 		displayName= "AAP4 'Striker' Pod"
 		count=4;
-		//ammo=macro_new_ammo(striker)
+		ammo=macro_new_ammo(striker)
 		weaponpoolavailable=1;
 	};
 		class macro_new_mag(mar,1): 3AS_500_Rnd_BlasterTurret_mag

@@ -302,7 +302,7 @@ class CfgGroups
 						position[]={0,0,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
+						vehicle=macro_new_unit_class(opfor,B1_heavy);
 					};
 					class Unit1
 					{
@@ -323,7 +323,7 @@ class CfgGroups
 						position[]={1,-1,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_heavy);
+						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
 					};
 					class Unit4
 					{
@@ -351,7 +351,7 @@ class CfgGroups
 						position[]={2,-2,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_AT_light);
+						vehicle=macro_new_unit_class(opfor,B1_shotgun);
 					};
 					class Unit8
 					{
@@ -408,7 +408,7 @@ class CfgGroups
 						position[]={1,-1,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_AT_light);
+						vehicle=macro_new_unit_class(opfor,B1_heavy);
 					};
 					class Unit4
 					{
@@ -545,6 +545,98 @@ class CfgGroups
 						vehicle=macro_new_unit_class(opfor,B1_shotgun);
 					};
 				};
+				class macro_new_composition(opfor,human_weapons_section)
+				{
+					name="Loyalist Weapons Section";
+					side=0;
+					faction = macro_cis_faction
+					icon="\A3\ui_f\data\map\markers\nato\o_inf.paa";
+					rarityGroup=1;
+					class Unit0
+					{
+						position[]={0,0,0};
+						rank="CORPORAL";
+						side=0;
+						vehicle=macro_new_unit_class(opfor,human_heavy);
+					};
+					class Unit1
+					{
+						position[]={.5,-.5,0};
+						rank="CORPORAL";
+						side=0;
+						vehicle=macro_new_unit_class(opfor,human_rifleman);
+					};
+					class Unit2
+					{
+						position[]={-.5,-.5,0};
+						rank="CORPORAL";
+						side=0;
+						vehicle=macro_new_unit_class(opfor,human_AT);
+					};
+					class Unit3
+					{
+						position[]={1,-1,0};
+						rank="CORPORAL";
+						side=0;
+						vehicle=macro_new_unit_class(opfor,human_marksman);
+					};
+					class Unit4
+					{
+						position[]={-1,-1,0};
+						rank="CORPORAL";
+						side=0;
+						vehicle=macro_new_unit_class(opfor,human_heavy);
+					};
+					class Unit5
+					{
+						position[]={1.5,-1.5,0};
+						rank="CORPORAL";
+						side=0;
+						vehicle=macro_new_unit_class(opfor,human_rifleman);
+					};
+					class Unit6
+					{
+						position[]={-1.5,-1.5,0};
+						rank="CORPORAL";
+						side=0;
+						vehicle=macro_new_unit_class(opfor,human_AT);
+					};
+					class Unit7
+					{
+						position[]={2,-2,0};
+						rank="PRIVATE";
+						side=0;
+						vehicle=macro_new_unit_class(opfor,human_marksman);
+					};
+					class Unit8
+					{
+						position[]={-2,-2,0};
+						rank="PRIVATE";
+						side=0;
+						vehicle=macro_new_unit_class(opfor,human_heavy);
+					};
+					class Unit9
+					{
+						position[]={2.5,-2.5,0};
+						rank="SERGEANT";
+						side=0;
+						vehicle=macro_new_unit_class(opfor,human_rifleman);
+					};
+					class Unit10
+					{
+						position[]={-2.5,-2.5,0};
+						rank="SERGEANT";
+						side=0;
+						vehicle=macro_new_unit_class(opfor,human_shotgun);
+					};
+					class Unit11
+					{
+						position[]={3,-3,0};
+						rank="SERGEANT";
+						side=0;
+						vehicle=macro_new_unit_class(opfor,human_shotgun);
+					};
+				};
 			};
 			class Squads
 			{
@@ -561,7 +653,7 @@ class CfgGroups
 						position[]={0,0,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
+						vehicle=macro_new_unit_class(opfor,B1_heavy);
 					};
 					class Unit1
 					{
@@ -582,7 +674,8 @@ class CfgGroups
 						position[]={1,-1,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_heavy);
+						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
+						
 					};
 					class Unit4
 					{
@@ -611,7 +704,8 @@ class CfgGroups
 						position[]={0,0,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
+						vehicle=macro_new_unit_class(opfor,B1_heavy);
+						
 					};
 					class Unit1
 					{
@@ -632,7 +726,7 @@ class CfgGroups
 						position[]={1,-1,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_heavy);
+						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
 					};
 					class Unit4
 					{
@@ -675,14 +769,15 @@ class CfgGroups
 						position[]={0,0,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
+						vehicle=vehicle=macro_new_unit_class(opfor,B1);
+						
 					};
 					class Unit1
 					{
 						position[]={.5,-.5,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_AT_heavy);
+						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
 					};
 					class Unit2
 					{
@@ -696,7 +791,7 @@ class CfgGroups
 						position[]={1,-1,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_AT_light);
+						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
 					};
 					class Unit4
 					{
@@ -789,14 +884,15 @@ class CfgGroups
 						position[]={0,0,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
+						vehicle=macro_new_unit_class(opfor,B1_heavy);
+						
 					};
 					class Unit1
 					{
 						position[]={.5,-.5,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_heavy);
+						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
 					};
 					class Unit2
 					{
@@ -960,14 +1056,14 @@ class CfgGroups
 						position[]={0,0,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
+						vehicle=macro_new_unit_class(opfor,B1_heavy);
 					};
 					class Unit1
 					{
 						position[]={.5,-.5,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_heavy);
+						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
 					};
 					class Unit2
 					{
@@ -1017,7 +1113,7 @@ class CfgGroups
 						position[]={0,0,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
+						vehicle=macro_new_unit_class(opfor,B1_heavy);
 					};
 					class Unit1
 					{
@@ -1031,7 +1127,7 @@ class CfgGroups
 						position[]={-.5,-.5,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_heavy);
+						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
 					};
 					class Unit3
 					{
@@ -1255,6 +1351,120 @@ class CfgGroups
 						vehicle=macro_new_unit_class(opfor,magna_guard_blackop);
 					};
 				};
+				class macro_new_composition(opfor,human_rifle_squad)
+				{
+					name="Loyalist Rifle Squad";
+					side=0;
+					faction = macro_cis_faction
+					icon="\A3\ui_f\data\map\markers\nato\o_inf.paa";
+					rarityGroup=1;
+					class Unit0
+					{
+						position[]={0,0,0};
+						rank="CORPORAL";
+						side=0;
+						vehicle=macro_new_unit_class(opfor,human_heavy);
+					};
+					class Unit1
+					{
+						position[]={.5,-.5,0};
+						rank="CORPORAL";
+						side=0;
+						vehicle=macro_new_unit_class(opfor,human_rifleman);
+					};
+					class Unit2
+					{
+						position[]={-.5,-.5,0};
+						rank="CORPORAL";
+						side=0;
+						vehicle=macro_new_unit_class(opfor,human_rifleman);
+					};
+					class Unit3
+					{
+						position[]={1,-1,0};
+						rank="CORPORAL";
+						side=0;
+						vehicle=macro_new_unit_class(opfor,human_heavy);
+					};
+					class Unit4
+					{
+						position[]={-1,-1,0};
+						rank="PRIVATE";
+						side=0;
+						vehicle=macro_new_unit_class(opfor,human_rifleman);
+					};
+					class Unit5
+					{
+						position[]={1.5,-1.5,0};
+						rank="PRIVATE";
+						side=0;
+						vehicle=macro_new_unit_class(opfor,human_rifleman);
+					};
+					class Unit6
+					{
+						position[]={-1.5,-1.5,0};
+						rank="PRIVATE";
+						side=0;
+						vehicle=macro_new_unit_class(opfor,human_rifleman);
+					};
+				};
+				class macro_new_composition(opfor,human_AT_squad)
+				{
+					name="Loyalist Weapons Squad";
+					side=0;
+					faction = macro_cis_faction
+					icon="\A3\ui_f\data\map\markers\nato\o_inf.paa";
+					rarityGroup=1;
+					class Unit0
+					{
+						position[]={0,0,0};
+						rank="CORPORAL";
+						side=0;
+						vehicle=macro_new_unit_class(opfor,human_heavy);
+					};
+					class Unit1
+					{
+						position[]={.5,-.5,0};
+						rank="CORPORAL";
+						side=0;
+						vehicle=macro_new_unit_class(opfor,human_shotgun);
+					};
+					class Unit2
+					{
+						position[]={-.5,-.5,0};
+						rank="CORPORAL";
+						side=0;
+						vehicle=macro_new_unit_class(opfor,human_rifleman);
+					};
+					class Unit3
+					{
+						position[]={1,-1,0};
+						rank="CORPORAL";
+						side=0;
+						vehicle=macro_new_unit_class(opfor,human_heavy);
+					};
+					class Unit4
+					{
+						position[]={-1,-1,0};
+						rank="PRIVATE";
+						side=0;
+						vehicle=macro_new_unit_class(opfor,human_rifleman);
+					};
+					class Unit5
+					{
+						position[]={1.5,-1.5,0};
+						rank="PRIVATE";
+						side=0;
+						vehicle=macro_new_unit_class(opfor,human_marksman);
+					};
+					class Unit6
+					{
+						position[]={-1.5,-1.5,0};
+						rank="PRIVATE";
+						side=0;
+						vehicle=macro_new_unit_class(opfor,human_AT);
+					};
+				};
 			};
 			class Teams
 			{
@@ -1271,7 +1481,7 @@ class CfgGroups
 						position[]={0,0,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit1
 					{
@@ -1292,7 +1502,7 @@ class CfgGroups
 						position[]={1,-1,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1);
+						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
 					};
 				};
 				class macro_new_composition(opfor,light_assault_team)
@@ -1307,7 +1517,7 @@ class CfgGroups
 						position[]={0,0,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
+						vehicle=macro_new_unit_class(opfor,B1_heavy);
 					};
 					class Unit1
 					{
@@ -1321,7 +1531,7 @@ class CfgGroups
 						position[]={-.5,-.5,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_heavy);
+						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
 					};
 				};
 				class macro_new_composition(opfor,super_team)
@@ -1437,7 +1647,7 @@ class CfgGroups
 						position[]={0,0,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_AT_heavy);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit1
 					{
@@ -1560,7 +1770,7 @@ class CfgGroups
 						position[]={0,0,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit1
 					{
@@ -1581,7 +1791,7 @@ class CfgGroups
 						position[]={1,-1,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1);
+						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
 					};
 				};
 				class macro_new_composition(opfor,light_infiltration_team)
@@ -1748,6 +1958,42 @@ class CfgGroups
 						rank="CORPORAL";
 						side=0;
 						vehicle=macro_new_unit_class(opfor,magna_guard_blackop);
+					};
+				};
+				class macro_new_composition(opfor,human_team)
+				{
+					name="Loyalist Team";
+					side=0;
+					faction = macro_cis_faction
+					icon="\A3\ui_f\data\map\markers\nato\o_inf.paa";
+					rarityGroup=1;
+					class Unit0
+					{
+						position[]={0,0,0};
+						rank="LIEUTENANT";
+						side=0;
+						vehicle=macro_new_unit_class(opfor,human_heavy);
+					};
+					class Unit1
+					{
+						position[]={.5,-.5,0};
+						rank="CORPORAL";
+						side=0;
+						vehicle=macro_new_unit_class(opfor,human_rifleman);
+					};
+					class Unit2
+					{
+						position[]={-.5,-.5,0};
+						rank="CORPORAL";
+						side=0;
+						vehicle=macro_new_unit_class(opfor,human_rifleman);
+					};
+					class Unit3
+					{
+						position[]={1,-1,0};
+						rank="CORPORAL";
+						side=0;
+						vehicle=macro_new_unit_class(opfor,human_marksman);
 					};
 				};
 			};

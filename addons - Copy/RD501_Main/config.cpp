@@ -395,6 +395,10 @@ class CfgEditorSubcategories
 	{
 		displayName = "Special Forces";
 	};
+	class macro_editor_cat(CIS_Humans)
+	{
+		displayName = "Humans";
+	};
 	class macro_editor_cat(posters)
 	{
 		displayName = "Star Wars Posters";
