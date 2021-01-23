@@ -404,6 +404,7 @@ class CfgMagazines
 		picture="\RD501_Vehicles\static\data\rd501_icon_mag_staticrailgun.paa";
 		displayName= "MAR1 'Driver' Slug"
 		count=1;
+		initSpeed=1500;
 		ammo=macro_new_ammo(mar1)
 		weaponpoolavailable=1;
 	};
