@@ -63,8 +63,8 @@ class CfgVehicles
 		};
 
 		faction = macro_cis_faction
-		editorSubcategory = macro_editor_cat(Transport)
-		vehicleClass = macro_editor_vehicle_type(Transport)
+        editorSubcategory = macro_editor_cat(car)
+        vehicleClass = macro_editor_vehicle_type(Car)
 
 		class EventHandlers
 		{

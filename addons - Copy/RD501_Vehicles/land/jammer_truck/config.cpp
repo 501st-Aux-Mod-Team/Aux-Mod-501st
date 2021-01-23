@@ -29,14 +29,14 @@ class CfgVehicles
 
 	class macro_new_vehicle(cis,jammer_truck): I_Truck_02_ammo_F
     {
-		displayName = "CIS Marille";
-		crew = macro_new_unit_class(opfor,B1_crew)
+        displayName = "CIS Marille";
+        crew = macro_new_unit_class(opfor,B1_crew)
         side = 0;
-		faction = macro_cis_faction
-		editorSubcategory = macro_editor_cat(APC)
-		vehicleClass = macro_editor_vehicle_type(APC)
-		scope = 2;
-		scopeCurator = 2;
-		forceInGarage = 1;
+        faction = macro_cis_faction
+        editorSubcategory = macro_editor_cat(car)
+        vehicleClass = macro_editor_vehicle_type(Car)
+        scope = 2;
+        scopeCurator = 2;
+        forceInGarage = 1;
     };
 };
