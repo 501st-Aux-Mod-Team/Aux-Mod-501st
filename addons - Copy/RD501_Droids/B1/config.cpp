@@ -370,7 +370,7 @@ class CfgVehicles
 	class macro_new_unit_class(opfor,B1_jammer): macro_new_unit_class(opfor,B1)
 	{
 		displayName="B1 Battledroid (Jammer)";
-		backpack=macro_backpack_jammer;
+		backpack="tf_rt1523g_big_bwmod_tropen";
 		uniformClass=macro_new_uniform_class(opfor,B1_jammer);
 		hiddenSelectionsTextures[]=
 		{
