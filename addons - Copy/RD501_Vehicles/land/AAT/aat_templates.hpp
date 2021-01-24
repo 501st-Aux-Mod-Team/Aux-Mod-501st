@@ -14,6 +14,7 @@ initElev = 0;\
 minTurn = -5;\
 maxTurn = 5;\
 initTurn = 0
+#define AAT_MAGCLAMP_OFFSET {0.0,0.0,-3.0}
 
 #define AAT_LIGHT(quotedDisplayName) \
 scope=2;\
@@ -24,6 +25,8 @@ faction = AAT_FACTION;\
 editorSubcategory = AAT_EDITOR_CATEGORY;\
 vehicleClass = AAT_VEHICLE_CLASS;\
 crew = AAT_CREW;\
+RD501_magclamp_small_offset[] = AAT_MAGCLAMP_OFFSET;\
+RD501_magclamp_large_offset[] = AAT_MAGCLAMP_OFFSET;\
 class Turrets : Turrets {\
 	class MainTurret : MainTurret {\
 		class Turrets : Turrets {\
@@ -55,6 +58,8 @@ faction = AAT_FACTION;\
 editorSubcategory = AAT_EDITOR_CATEGORY;\
 vehicleClass = AAT_VEHICLE_CLASS;\
 crew = AAT_CREW;\
+RD501_magclamp_small_offset[] = AAT_MAGCLAMP_OFFSET;\
+RD501_magclamp_large_offset[] = AAT_MAGCLAMP_OFFSET;\
 class Turrets : Turrets {\
 	class MainTurret : MainTurret {\
 		class Turrets : Turrets {\
@@ -87,6 +92,8 @@ displayName = quotedDisplayName;\
 armor = AAT_KING_ARMOUR;\
 maxSpeed = AAT_KING_MAXSPEED;\
 crew = AAT_CREW;\
+RD501_magclamp_small_offset[] = AAT_MAGCLAMP_OFFSET;\
+RD501_magclamp_large_offset[] = AAT_MAGCLAMP_OFFSET;\
 faction = AAT_FACTION;\
 editorSubcategory = AAT_EDITOR_CATEGORY;\
 vehicleClass = AAT_VEHICLE_CLASS;\
