@@ -6,13 +6,13 @@ _args params["_player"];
 *		["bis_o1", 1000, 400]
 *	];
 */
-if(!alive _player) exitWith { systemChat format["Player dead for %1", _handle] };
+if(!alive _player) exitWith { diag_log format["Player dead for %1", _handle] };
 
 _jammers = missionNamespace getVariable ["rd501_jammers",[]];
 
 // Exit if jammer list is empty, remove PFH and rely on someone else calling it via jammer placement
 if(count _jammers == 0) exitWith {
-	systemChat "Exiting Client PFH";
+	diag_log "Exiting Client PFH";
 	[_handle] call CBA_fnc_removePerFrameHandler;
 	_player setVariable ["rd501_jammers_pfh", -1];
 	_player setVariable ["tf_receivingDistanceMultiplicator", 1];
@@ -45,4 +45,3 @@ private _interference = 1;
 // Set interference locally
 _player setVariable ["tf_receivingDistanceMultiplicator", _interference];
 // _player setVariable ["tf_transmittingDistanceMultiplicator", _interference]; // Unused by TFAR 0.9.7
-systemChat format["Interference: %1", _interference];

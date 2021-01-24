@@ -1,7 +1,4 @@
 #include "../RD501_main/config_macros.hpp"
-
-
-
 class CfgPatches
 {
 	class macro_patch_name(zeus)
@@ -16,16 +13,39 @@ class CfgPatches
 			macro_new_ordnance(AV7_Cluster),
 			macro_new_ordnance(ModuleSquadShield),
 			macro_new_ordnance(ModuleDioxis),
-			macro_new_ordnance(ModuleShadow)
+			macro_new_ordnance(ModuleShadow),
+			rd501_moduleJammerSettings
 		};
 		weapons[] = {};
 	};
 };
+class CfgFactionClasses {
+    class Jammers {
+        displayName = "Jammers";
+        priority = 2;
+        side = 7;
+    };
+};
 class CfgVehicles
 {
+	class Module_F;
 	class ModuleOrdnance_F;
 	class ModuleChemlight_F;
-	
+    class rd501_moduleJammerSettings: Module_F  {
+		author = "RD501";
+        category = "Jammers";
+        function = "ace_common_dummy";
+        functionPriority = 1;
+        isGlobal = 1;
+        isTriggerActivated = 0;
+        scope = 1;
+        scopeCurator = 2;
+        curatorCanAttach = 1;
+        displayName = "Add Jammer";
+        curatorInfoType = "RD501_RscJammerSettings";
+		portrait = "RD501_Zeus\ui\jammer_icon.paa";
+    };
+
 	class macro_new_ordnance(ModuleSquadShield): ModuleChemlight_F
 	{
 		author = "RD501";
@@ -34,7 +54,7 @@ class CfgVehicles
 		scopeCurator = 2;
 		category = "Ordnance";
 		displayName = "Squad Shield";
-		portrait = "RD501_Zeus\icons\wide_kite_64.paa";
+		portrait = "RD501_Zeus\ui\wide_kite_64.paa";
 		ammo = "SW_SquadShield_ammoCARGA";
 		delete Arguments;
 	};
@@ -46,7 +66,7 @@ class CfgVehicles
 		scopeCurator = 2;
 		category = "Ordnance";
 		displayName = "Dioxis Cloud";
-		portrait = "RD501_Zeus\icons\biohazard_64.paa";
+		portrait = "RD501_Zeus\ui\biohazard_64.paa";
 		ammo = macro_new_ordnance_ammo(Dioxis_long)
 		delete Arguments;
 	};
@@ -58,7 +78,7 @@ class CfgVehicles
 		scopeCurator = 2;
 		category = "Ordnance";
 		displayName = "Shadow Virus";
-		portrait = "RD501_Zeus\icons\biohazard_64.paa";
+		portrait = "RD501_Zeus\ui\biohazard_64.paa";
 		ammo = macro_new_ordnance_ammo(Shadow_long)
 		delete Arguments;
 	};
@@ -212,3 +232,12 @@ class CfgAmmo
 		ExplosionEffects = "ProtonbombAmmoExplosion";
 	};
 };
+class Extended_PreInit_EventHandlers
+{
+	class RD501_Zeus_PreInit
+	{
+		init="call compileFinal preprocessFileLineNumbers 'RD501_Zeus\XEH_preInit.sqf'";
+	};
+};
+
+#include "ui\RscAttributes.hpp"

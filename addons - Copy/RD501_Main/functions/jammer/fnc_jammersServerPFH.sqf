@@ -4,7 +4,7 @@ if(!isServer) exitWith {
 	[_handle] call CBA_fnc_removePerFrameHandler;
 };
 
-diag_log "Server PFH";
+diag_log "Server PFH Tick";
 private _jammers = missionNamespace getVariable ["rd501_jammers",[]];
  
 {
