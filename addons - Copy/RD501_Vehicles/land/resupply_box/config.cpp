@@ -59,6 +59,7 @@ class CfgVehicles
 		hiddenSelectionsMaterials[] = {"\plp_containers\StcHighSec\plp_ct_HighSecCont_Metal.rvmat", "\plp_containers\StcHighSec\plp_ct_HighSecCont_MetalB.rvmat", "\plp_containers\StcHighSec\plp_ct_HighSec_Light.rvmat", ""};
 		editorCategory = macro_editor_cat(suppplies)
 		editorSubcategory = macro_editor_cat(resupply)
+		RD501_magclamp_small_offset[]={0.0,0.0,-0.4};
 		class TransportItems
 		{
 			#include "medical_platoon_items.hpp"
@@ -103,6 +104,7 @@ class CfgVehicles
 		hiddenSelectionsMaterials[] = {"\plp_containers\StcHighSec\plp_ct_HighSecCont_Metal.rvmat", "\plp_containers\StcHighSec\plp_ct_HighSecCont_MetalB.rvmat", "\plp_containers\StcHighSec\plp_ct_HighSec_Light.rvmat", ""};
 		editorCategory = macro_editor_cat(suppplies)
 		editorSubcategory = macro_editor_cat(resupply)
+		RD501_magclamp_small_offset[]={0.0,0.0,-0.4};
 
 		class TransportItems
 		{
@@ -130,6 +132,7 @@ class CfgVehicles
 		model = "plp_containers\StcHighSec\plp_cts_HighSecContBlack.p3d";
 		editorCategory = macro_editor_cat(suppplies)
 		editorSubcategory = macro_editor_cat(resupply)
+		RD501_magclamp_small_offset[]={0.0,0.0,-0.4};
 
 		class TransportItems
 		{
