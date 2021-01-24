@@ -89,12 +89,12 @@ class CfgWeapons
 			mass=10;
 			class MagazineCoef
 			{
-				initSpeed=0.5;
+				initSpeed=0.75;
 			};
 			class AmmoCoef
 			{
 				hit=1;
-				typicalSpeed=0.5;
+				typicalSpeed=0.75;
 				airFriction=1;
 				visibleFire=1;
 				audibleFire=1;
@@ -158,7 +158,7 @@ class CfgWeapons
 			alternativeFire="Zasleh2";
 			class MuzzleCoef
 			{
-				dispersionCoef="1.5f";
+				dispersionCoef="2.0f";
 				artilleryDispersionCoef="1.0f";
 				fireLightCoef="1.0f";
 				recoilCoef="1.0f";
