@@ -14,7 +14,6 @@ class CfgPatches
 		units[]={};
 		weapons[]=
 		{
-			"RD501_RAMER",
 			macro_new_weapon_nofam(t21)
 		};
 	};
@@ -29,14 +28,14 @@ class cfgWeapons
 	class macro_new_weapon_nofam(t21):JLTS_EPL2
 	{
 		baseWeapon=macro_new_weapon_nofam(t21)
-		displayname="T21 R.A.M.E.R."
+		displayname="Republic T21 R.A.M.E.R."
 		magazines[]=
 		{
 			macro_new_mag(50mw,10)
 		};
 		class Single : Single
 		{
-			reloadTime=2;
+			reloadTime=0.24;
 		}
 			class WeaponSlotsInfo
 		{
