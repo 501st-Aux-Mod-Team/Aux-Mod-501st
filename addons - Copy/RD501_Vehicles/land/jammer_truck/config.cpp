@@ -29,7 +29,7 @@ class CfgVehicles
 
 	class macro_new_vehicle(cis,jammer_truck): I_Truck_02_ammo_F
     {
-        displayName = "CIS Marille";
+        displayName = "CIS Enigma (Jammer)";
         crew = macro_new_unit_class(opfor,B1_crew)
         side = 0;
         faction = macro_cis_faction
