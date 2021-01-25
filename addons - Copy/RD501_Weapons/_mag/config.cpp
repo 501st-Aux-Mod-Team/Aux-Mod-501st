@@ -26,7 +26,6 @@ class CfgMagazines
 	class SWOP_DC15SA_Ammo;
 	class SWOP_termDet_Gm;
 	class SWOP_BCCKtermimploder_G;
-	class RPG32_F;
 	class 2Rnd_12Gauge_Pellets;
 
 	////////////////////////////////////////////////////
@@ -342,12 +341,27 @@ class CfgMagazines
 	////////////////////////////////////////////////////
 	/////////////Missile  Magazines/////////////////////
 	////////////////////////////////////////////////////
+	class RPG32_F;
+	class RPG32_HE_F;
 	class macro_new_mag(rps1,1):RPG32_F
 	{
 		scope=1;
 		weight=1;
 		mass=1;
-	}
+	};
+	class macro_new_mag(rps4heat,1): RPG32_F
+	{
+		author="RD501";
+		displayName="RPS4 HEAT Rocket";
+		descriptionShort="HEAT Rocket";
+		ammo=macro_new_ammo(rps4heat)
+	};
+	class macro_new_mag(rps4he,1): RPG32_HE_F
+	{
+		author="RD501";
+		displayName="RPS4 HE Rocket";
+		descriptionShort="HE Rocket";
+	};
 	////////////////////////////////////////////////////
 	/////////////Shotgun  Magazines/////////////////////
 	////////////////////////////////////////////////////
