@@ -29,7 +29,7 @@ class CfgVehicles
 
 	class macro_new_vehicle(cis,jammer_truck): I_Truck_02_ammo_F
     {
-        displayName = "CIS Marille";
+        displayName = "CIS Enigma (Jammer)";
         crew = macro_new_unit_class(opfor,B1_crew)
         side = 0;
         faction = macro_cis_faction
@@ -39,4 +39,14 @@ class CfgVehicles
         scopeCurator = 2;
         forceInGarage = 1;
     };
+};
+
+class Extended_Init_EventHandlers 
+{
+	class macro_new_vehicle(cis,jammer_truck)
+	{
+		class rd501_jammer {
+			init = "[_this select 0, 600, 160] call rd501_fnc_addJammer";
+		};
+	}
 };

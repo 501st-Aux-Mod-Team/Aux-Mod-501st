@@ -1,5 +1,5 @@
 #include "config_macros.hpp"
-#define COMPILE_FILE(name) compile preprocessFileLineNumbers SQUOTE(ADDON\name.sqf)
+#define COMPILE_FILE(name) compileFinal preprocessFileLineNumbers SQUOTE(ADDON\name.sqf)
 //Land_Cargo_House_V1_F
 class CfgPatches {
 	class ADDON
