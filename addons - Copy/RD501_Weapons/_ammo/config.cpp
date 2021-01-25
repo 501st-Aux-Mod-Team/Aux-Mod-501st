@@ -30,7 +30,7 @@ class CfgAmmo
 	class SWOP_BCCKtermimploder;
 	class SWOP_termDet;
 	class B_12Gauge_Pellets_Submunition;
-	class  B_12Gauge_Pellets_Submunition_Deploy;
+	class B_12Gauge_Pellets_Submunition_Deploy;
 	class FlareBase;
 	class JLTS_bullet_stun;
 	class macro_new_ammo(surrender_stun): JLTS_bullet_stun
@@ -380,6 +380,7 @@ class CfgAmmo
 /////////////////////////Rockets///////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 	class M_Titan_AT;
+	class R_PG32V_F;
 	class macro_new_ammo(striker):M_Titan_AT
 	{
 		hit=115;
@@ -417,6 +418,10 @@ class CfgAmmo
             attackProfiles[] = { "JAV_TOP", "JAV_DIR" };
             useModeForAttackProfile = 1;
         };
+	};
+	class macro_new_ammo(rps4heat):R_PG32V_F
+	{
+		hit=150;
 	};
 
 };
