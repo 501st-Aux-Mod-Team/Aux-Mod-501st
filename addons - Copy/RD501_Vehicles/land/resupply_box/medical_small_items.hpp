@@ -3,6 +3,11 @@ class _xx_ACE_tourniquet
     name = "ACE_tourniquet";
     count = 15;
 };
+class _xx_ACE_splint
+{
+    name = "ACE_splint";
+    count = 15;
+};
 class _xx_ACE_plasmaIV_250
 {
     name = "ACE_plasmaIV_250";

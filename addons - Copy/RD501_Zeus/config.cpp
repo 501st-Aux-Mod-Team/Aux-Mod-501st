@@ -9,14 +9,46 @@ class CfgPatches
 		requiredVersion = 0.1;
 		units[] = {
 			macro_new_ordnance(IonBomb),
-			macro_new_ordnance(AV7),
-			macro_new_ordnance(AV7_Cluster),
+			macro_new_ordnance(Orbit),
 			macro_new_ordnance(ModuleSquadShield),
 			macro_new_ordnance(ModuleDioxis),
 			macro_new_ordnance(ModuleShadow),
+			macro_new_ordnance(OrbitalLaser),
 			rd501_moduleJammerSettings
 		};
 		weapons[] = {};
+	};
+};
+class CfgFunctions
+{
+	class tts_beam
+	{
+		class beam
+		{
+			file = "\RD501_Zeus\functions";
+			class beam {};
+			class rayParticles {};
+			class ragdollUnit {};
+			class explosionDamage {};
+			class explosionParticles {};
+			class postProcessEffects {};
+			class customZeusModules {};
+		};
+	};
+};
+class CfgSounds
+{
+	class laser_impact
+	{
+		name = "laser_impact";
+		sound[] = {"\RD501_Zeus\sounds\laser_impact.ogg", 50, 1, 5000};
+		titles[] = {};
+	};
+	class laser
+	{
+		name = "laser";
+		sound[] = {"\RD501_Zeus\sounds\laser.ogg", 50, 1, 5000};
+		titles[] = {};
 	};
 };
 class CfgFactionClasses {
@@ -31,6 +63,7 @@ class CfgVehicles
 	class Module_F;
 	class ModuleOrdnance_F;
 	class ModuleChemlight_F;
+	class ModuleOrdnanceHowitzer_F;
     class rd501_moduleJammerSettings: Module_F  {
 		author = "RD501";
         category = "Jammers";
@@ -97,38 +130,34 @@ class CfgVehicles
 		ammo = macro_new_ordnance_ammo(IonBomb)
 		delete Arguments;
 	};
-	class macro_new_ordnance(Orbit): macro_new_ordnance(IonBomb)
+	class macro_new_ordnance(Orbit): ModuleOrdnance_F
 	{
 		author = "RD501";
 		_generalMacro = macro_new_ordnance(Orbit)
 		displayName = "Orbital Strike";
-		model = "\a3\Modules_F_Curator\Ordnance\surfaceRocket.p3d";
+		model = "\a3\Modules_F_Curator\Ordnance\surfacehowitzer.p3d";
 		isGlobal = 1;
 		scope = 1;
 		scopeCurator = 2;
 		simulation = "house";
 		category = "Ordnance";
 		portrait = "\a3\Modules_F_Curator\Data\portraitOrdnanceMortar_ca.paa";
-		ammo = macro_new_ordnance_ammo(Orbit)
+		ammo = macro_new_ordnance_ammo(Orbital)
 		delete Arguments;
 
 	};
-	class macro_new_ordnance(OrbitalCluster): macro_new_ordnance(IonBomb)
-	{
+     class macro_new_ordnance(OrbitalLaser): Module_F {
 		author = "RD501";
-		_generalMacro = macro_new_ordnance(OrbitalCluster)
-		model = "\a3\Modules_F_Curator\Ordnance\surfacehowitzer.p3d";
-		simulation = "house";
+        curatorCanAttach = 1;
+		isGlobal = 1;
 		scope = 1;
 		scopeCurator = 2;
-		isGlobal = 1;
-		category = "Ordnance";
-		displayName = "AV-7 Cluster Strike";
-		portrait = "\a3\Modules_F_Curator\Data\portraitOrdnanceMortar_ca.paa";
-		ammo = macro_new_ordnance_ammo(OrbitalCluster)
-		delete Arguments;
-	};
- 
+        isTriggerActivated = 0;
+        category = "Ordnance";
+		displayName = "Orbital Laser";
+        function = "tts_beam_fnc_beam";
+		portrait = "RD501_Zeus\ui\explosion_zeus_icon_small.paa";
+    };
 };
 class CfgAmmo
 {
