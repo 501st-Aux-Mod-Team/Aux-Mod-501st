@@ -57,7 +57,7 @@ if (!isNull (getAssignedCuratorLogic player) && {isClass (configFile >> "CfgPatc
 };
 
 if (!isNull (getAssignedCuratorLogic player) && {isClass (configFile >> "CfgPatches" >> "zen_main")}) then {
-	["Fire Support", "Beam Laser Strike",
+	["Fire Support", "Orbital Laser",
 	{
 		params [["_position", [0,0,0], [[]], 3], ["_attachedObject", objNull, [objNull]]];
 
@@ -109,6 +109,7 @@ if (!isNull (getAssignedCuratorLogic player) && {isClass (configFile >> "CfgPatc
 				_beamTarget spawn {sleep 60; deleteVehicle _this;}; // wait and cleanup target pos
 			}, {}, [_position] // args
 		] call zen_dialog_fnc_create;
-	}] call zen_custom_modules_fnc_register
+	}, 
+	"RD501_Zeus\ui\explosion_zeus_icon_small.paa"] call zen_custom_modules_fnc_register
 };
 

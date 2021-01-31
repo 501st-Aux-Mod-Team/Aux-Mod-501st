@@ -146,18 +146,6 @@ class CfgVehicles
 		delete Arguments;
 
 	};
-     class macro_new_ordnance(OrbitalLaser): Module_F {
-		author = "RD501";
-        curatorCanAttach = 1;
-		isGlobal = 1;
-		scope = 1;
-		scopeCurator = 2;
-        isTriggerActivated = 0;
-        category = "Ordnance";
-		displayName = "Orbital Laser";
-        function = "tts_beam_fnc_beam";
-		portrait = "RD501_Zeus\ui\explosion_zeus_icon_small.paa";
-    };
 };
 class CfgAmmo
 {
