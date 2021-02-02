@@ -32,7 +32,7 @@ class CfgFunctions
 			class explosionDamage {};
 			class explosionParticles {};
 			class postProcessEffects {};
-			class customZeusModules {};
+			class configMenu {};
 		};
 	};
 };
@@ -144,8 +144,19 @@ class CfgVehicles
 		portrait = "\a3\Modules_F_Curator\Data\portraitOrdnanceMortar_ca.paa";
 		ammo = macro_new_ordnance_ammo(Orbital)
 		delete Arguments;
-
-	};
+	};	
+	class macro_new_ordnance(OrbitalLaser): Module_F {
+		author = "RD501";
+        curatorCanAttach = 1;
+		isGlobal = 0;
+		scope = 1;
+		scopeCurator = 2;
+        isTriggerActivated = 0;
+        category = "Ordnance";
+		displayName = "Orbital Laser";
+        function = "tts_beam_fnc_configMenu";
+		portrait = "RD501_Zeus\ui\explosion_zeus_icon_small.paa";
+    };
 };
 class CfgAmmo
 {
