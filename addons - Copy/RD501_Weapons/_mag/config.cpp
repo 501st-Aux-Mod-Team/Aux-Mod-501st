@@ -362,6 +362,15 @@ class CfgMagazines
 		displayName="RPS4 HE Rocket";
 		descriptionShort="HE Rocket";
 	};
+	class macro_new_mag(rps4burst,1) : RPG32_F
+	{
+		author="RD501";
+		displayName="RPS4 Burst Rocket";
+		descriptionShort="Burst Rocket";
+		count=1;
+		scope=1;
+		ammo = macro_new_ammo(rps4burst);
+	};
 	////////////////////////////////////////////////////
 	/////////////Shotgun  Magazines/////////////////////
 	////////////////////////////////////////////////////

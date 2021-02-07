@@ -46,6 +46,9 @@ class DefaultEventhandlers;
 class CfgVehicles
 {
 	class plp_ct_HighSecContBlack;
+	class 442_box5_1;
+	class 442_box10;
+	class 442_box4;
 	class SWOP_BOX_BASE;
 		class plp_ct_HighSecBigBlack;
 
@@ -153,7 +156,7 @@ class CfgVehicles
 		class EventHandlers :DefaultEventhandlers{};
 	};
 
-	class macro_new_vehicle(resuppy_box,small_medical): SWOP_BOX_BASE
+	class macro_new_vehicle(resuppy_box,small_medical): 442_box5_1
 	{
 		author = "RD501";
 		class SimpleObject
@@ -168,7 +171,6 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Republic Squad Resupply (Medical)";
-		model = "\SWOP_props_new\Containers\BoxMedium3r.p3d";
 		icon = "iconObject_4x5";
 		vehicleClass = "Ammo";
 		editorCategory = macro_editor_cat(suppplies)
@@ -181,13 +183,15 @@ class CfgVehicles
             {
                 #include "medical_small_items.hpp"				
             };
+			class TransportMagazines{};
+			class TransportBackpacks{};
 		class EventHandlers :DefaultEventhandlers{
 			init ="ACE_maxWeightCarry = 20000;ACE_maxWeightDrag = 20000;";
 		};
 			
 	};
 
-	class macro_new_vehicle(resuppy_box,small_ammo): SWOP_BOX_BASE
+	class macro_new_vehicle(resuppy_box,small_ammo): 442_box10
 	{
 		author = "RD501";
 		class SimpleObject
@@ -204,7 +208,6 @@ class CfgVehicles
 		scopeCurator = 2;
 		displayName = "Republic Squad Resupply (Ammo)";
 		editorSubcategory = macro_editor_cat(resupply)
-		model = "\SWOP_props_new\Containers\BoxMedium3w.p3d";
 		icon = "iconObject_4x5";
 		vehicleClass = "Ammo";
 		editorCategory = macro_editor_cat(suppplies)
@@ -222,8 +225,9 @@ class CfgVehicles
         {
         	#include "ammo_small_weap.hpp"
         };
+		class TransportBackpacks{};
 	};
-	class macro_new_vehicle(resuppy_box,small_uav): plp_ct_HighSecBigBlack
+	class macro_new_vehicle(resuppy_box,small_uav): 442_box4
 	{
 		author = "RD501";
 		class SimpleObject
@@ -257,6 +261,7 @@ class CfgVehicles
 						backpack="B_UGV_02_Demining_backpack_F";
 						count=1;
 					};
+				class TransportMagazines{};
 			};
 		
 

@@ -381,6 +381,7 @@ class CfgAmmo
 //////////////////////////////////////////////////////////////////////
 	class M_Titan_AT;
 	class R_PG32V_F;
+	class Mo_cluster_AP;
 	class macro_new_ammo(striker):M_Titan_AT
 	{
 		hit=115;
@@ -423,6 +424,23 @@ class CfgAmmo
 	{
 		hit=150;
 	};
-
+	class macro_new_ammo(rps4burst):R_PG32V_F
+	{
+		triggerTime  = 1;
+		submunitionConeType[] = {"poissondisc", 16};
+		submunitionAmmo[] = {macro_new_ammo(rps4burstsub),1};
+		triggerOnImpact=0;
+		deleteParentWhenTriggered=1;
+		//submunitionParentSpeedCoef = 0;
+		submunitionInitSpeed = 50;
+		submunitionDirectionType = "SubmunitionAutoLeveling";
+		
+	};
+	class macro_new_ammo(rps4burstsub):Mo_cluster_AP
+	{
+		hit=12;
+		indirectHit=8;
+		indirectHitRange=8;
+	};
 };
 	
