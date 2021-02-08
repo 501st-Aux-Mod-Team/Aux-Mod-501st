@@ -26,7 +26,6 @@ class CfgPatches
 		units[]=
 		{
 			macro_new_vehicle(mortar,republic),
-			macro_new_vehicle(mortar,cis)
 		};
 		weapons[]=
 		{
@@ -70,20 +69,6 @@ class CfgVehicles
 		};
 	};
 
-	class macro_new_vehicle(mortar,cis):macro_new_vehicle(mortar,republic)
-	{
-		displayname = "C.I.S Plasma Mortar";
-		crew=macro_new_unit_class(opfor,B1_crew)
-		forceInGarage = 1;
-		side=0;
-		faction = macro_cis_faction
-		editorSubcategory = macro_editor_cat(static_turrets)
-		vehicleClass = macro_editor_vehicle_type(static_turrets)
-
-		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"optre_vehicles\hev\data\pod_CO.paa"};
-		availableForSupportTypes[] = {"Artillery"};
-	};
 class macro_new_vehicle(stat,mortar_bag):JLTS_UAV_prowler_gar_backpack
 	{
 		displayName="Republic Mortar Bag";

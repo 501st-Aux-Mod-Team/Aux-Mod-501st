@@ -47,8 +47,8 @@ class CfgVehicles
 	{
 		displayName = "CIS Rocket Truck";
 		
-		scope = 2;
-		scopeCurator=2;
+		scope = 0;
+		scopeCurator=0;
 		
 		forceInGarage = 1;
 
@@ -81,8 +81,8 @@ class CfgVehicles
 
 	class macro_new_vehicle(artillery,av76):SW_AV7//MBT_01_arty_base_F
 	{
-		scope=2;
-		scopeCurator=2;
+		scope=0;
+		scopeCurator=0;
 		scopeArsenal=2;
 		forceInGarage=1;
 		displayName="AV-76";

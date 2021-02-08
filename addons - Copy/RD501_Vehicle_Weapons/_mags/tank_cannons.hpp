@@ -9,9 +9,11 @@
 	};
 
 	class 50Rnd_Laser_Cannon_AAT;
-	class macro_new_mag(aat_mbt,50): 50Rnd_Laser_Cannon_AAT
+	class 3as_24Rnd_AAT_AP;
+	class 3AS_24Rnd_GAT_AP;
+	class macro_new_mag(aat_mbt,50): 3AS_24Rnd_GAT_AP
 	{
-		displayNameShort = "AAT MBT 50 round mag";
+		displayNameShort = "GAT MBT 50 round mag";
 		ammo = macro_new_ammo(aat_mbt)
 		count = 50;
 		tracersEvery = 1;
@@ -20,7 +22,7 @@
 		maxLeadSpeed = 300;
 	};
 
-	class macro_new_mag(aat_mbt,10): 50Rnd_Laser_Cannon_AAT
+	class macro_new_mag(aat_mbt,10): 3as_24Rnd_AAT_AP
 	{
 		displayNameShort = "10Rnd King Laser Mag";
 		ammo = macro_new_ammo(aat_king)

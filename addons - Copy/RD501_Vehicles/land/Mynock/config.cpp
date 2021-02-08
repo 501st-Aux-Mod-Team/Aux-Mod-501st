@@ -25,13 +25,9 @@ class CfgPatches
 		requiredVersion=0.1;
 		units[]=
 		{
-			macro_new_vehicle(T1000,Republic),
-			macro_new_vehicle(Claymore,Republic),
-			macro_new_vehicle(Warhammer,Republic),
-			macro_new_vehicle(Glaive,Mynock),
-			macro_new_vehicle(Glaive,Republic),
 			macro_new_vehicle(Longbow,Republic),
-			macro_new_vehicle(Courser,Republic)
+			macro_new_vehicle(av7,republic),
+			macro_new_vehicle(rocketartillery,Republic)
 		};
 		weapons[]=
 		{
@@ -46,276 +42,103 @@ class DefaultEventhandlers;
 
 class CfgVehicles
 {
-	#include "inheritance.hpp"
-	class macro_new_vehicle(T1000,Republic):O_MBT_02_Cannon_F
+	class Land;
+	class LandVehicle: Land
+	{
+		class NewTurret;
+	};
+	class Tank: LandVehicle
+	{
+		class NewTurret;
+		class Sounds;
+		class HitPoints;
+		class CommanderOptics;
+	};
+	class Tank_F: Tank
+	{
+		class Turrets
+		{
+			class MainTurret: NewTurret
+			{
+				class Turrets
+				{
+					class CommanderOptics;
+				};
+			};
+		};
+	};
+	class 442_rx200_base:Tank_F
+	{
+		class Turrets
+		{
+			class MainTurret: NewTurret
+			{
+				class Turrets
+				{
+					class CommanderOptics;
+				};
+			};
+		};
+	};
+	class macro_new_vehicle(rocketartillery,Republic):442_rx200_base
 	{
 		scope=2;
-		scopeCurator = 2;
-		forceInGarage = 1;
-		side=1;
-		displayName="Republic T1000 MBT (Mynock)"
+		armor = 1000;
+		displayName = "Republic RX200 Rocket Artillery"
 		crew = "SWOP_Clonetrooper_P1";
-		author="RD501"
-		
-		hiddenSelections[] = {"Camo1", "Camo2", "Camo3", "Camo4", "Camo5", "CamoSlat"};
-		textureList[] = {};
-		hiddenSelectionsTextures[] = 
-		{
-			"RD501_Vehicles\textures\t1000\t1000_ext1_mynock_co.paa",
-			"RD501_Vehicles\textures\t1000\t1000_turret_mynock_co.paa",
-			"RD501_Vehicles\textures\t1000\t1000_ext2_mynock_co.paa",
-			"RD501_Vehicles\textures\grey.paa"
-		};
-
-		faction = macro_republic_faction
-		editorSubcategory = macro_editor_cat(Tank)
-		vehicleClass = macro_editor_vehicle_type(Tank)
-		class TransportBackpacks;
-		#include "../../common/smallvehiclekit.hpp"
-
-		#include "common_stuff_mynock.hpp"
-
+        side = 1;
+        faction = macro_republic_faction
+        editorSubcategory = macro_editor_cat(arty)
+        vehicleClass = macro_editor_vehicle_type(arty)
+        scopeCurator = 2;
+        forceInGarage = 1;
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
 			{
-				weapons[] = {macro_new_weapon(mynock_cannon,mbt), macro_new_weapon(generic,plasma_aircraft_cannon)};
-				magazines[] = {macro_new_mag(mynock_mbt_ap,12), macro_new_mag(mynock_mbt_ap,12), macro_new_mag(mynock_mbt_ap,12),  macro_new_mag(mynock_mbt_he,12), macro_new_mag(mynock_mbt_he,12), macro_new_mag(mynock_mbt_he,12), macro_new_mag(generic_aircraft_cannon_plasma_red,1000), macro_new_mag(generic_aircraft_cannon_plasma_red,1000)};
-				class Turrets: Turrets
+				weapons[]=
 				{
-					class CommanderOptics: CommanderOptics
-					{
-						weapons[] = {macro_new_weapon(generic,plasma_aircraft_cannon),"CMFlareLauncher","SmokeLauncher"};
-						magazines[] = {"300Rnd_CMFlare_Chaff_Magazine",macro_new_mag(generic_aircraft_cannon_plasma_red,1000), macro_new_mag(generic_aircraft_cannon_plasma_red,1000), "SmokeLauncherMag"};
-					};
+					"rockets_230mm_GAT",
+					"SmokeLauncher"
+				};
+				magazines[]=
+				{
+					"12Rnd_230mm_rockets",
+					"12Rnd_230mm_rockets",
+					"SmokeLauncherMag"
 				};
 			};
 		};
 	};
-
-	class macro_new_vehicle(Claymore,Republic):B_MBT_01_TUSK_F
-	{	
+	class 442_rx200_aa;
+	class macro_new_vehicle(Longbow,Republic):442_rx200_aa
+	{
 		scope=2;
 		side=1;
 		scopeCurator=2;
 		forceInGarage = 1;
-		displayName="Republic Claymore MBT (Mynock)"
+		displayName="Republic Longbow AA"
 		crew = "SWOP_Clonetrooper_P1";
 		author="RD501"
-		
-		hiddenSelections[] = {"Camo1", "Camo2", "Camo3", "Camo4", "Camo5", "CamoSlat"};
-		textureList[] = {};
-		hiddenSelectionsTextures[] = 
-		{
-			"RD501_Vehicles\textures\mbt01\mbt01_ext1_mynock_co.paa",
-			"RD501_Vehicles\textures\mbt01\claymore\claymore_tower_mynock_co.paa",
-			"RD501_Vehicles\textures\mbt01\claymore\claymore_addons_mynock_co.paa",
-			"a3\Armor_F\Data\camonet_NATO_Desert_CO.paa"
-		};
-
 		faction = macro_republic_faction
-		editorSubcategory = macro_editor_cat(Tank)
-		vehicleClass = macro_editor_vehicle_type(Tank)
-		class TransportBackpacks;
+        editorSubcategory = macro_editor_cat(aa)
+        vehicleClass = macro_editor_vehicle_type(aa)
+		
 		#include "../../common/smallvehiclekit.hpp"
 
-		#include "common_stuff_mynock.hpp"
-
-		class Turrets: Turrets
-		{
-			class MainTurret: MainTurret
-			{
-				weapons[] = {macro_new_weapon(mynock_cannon,mbt), macro_new_weapon(generic,plasma_aircraft_cannon)};
-				magazines[] = {macro_new_mag(mynock_mbt_ap,12), macro_new_mag(mynock_mbt_ap,12), macro_new_mag(mynock_mbt_ap,12),  macro_new_mag(mynock_mbt_he,12), macro_new_mag(mynock_mbt_he,12), macro_new_mag(mynock_mbt_he,12), macro_new_mag(generic_aircraft_cannon_plasma_red,1000), macro_new_mag(generic_aircraft_cannon_plasma_red,1000)};
-				class Turrets: Turrets
-				{
-					class CommanderOptics: CommanderOptics
-					{
-						weapons[] = {macro_new_weapon(generic,plasma_aircraft_cannon),"CMFlareLauncher","SmokeLauncher"};
-						magazines[] = {"300Rnd_CMFlare_Chaff_Magazine",macro_new_mag(generic_aircraft_cannon_plasma_red,1000), macro_new_mag(generic_aircraft_cannon_plasma_red,1000), "SmokeLauncherMag"};
-					};
-				};
-			};
-		};
-	};
-	class macro_new_vehicle(Warhammer,Republic):I_MBT_03_cannon_F
-	{	
-		scope=2;
-		side=1;
-		scopeCurator=2;
-		forceInGarage = 1;
-		displayName="Republic Warhammer MBT (Mynock)"
-		crew = "SWOP_Clonetrooper_P1";
-		author="RD501"
-		
-		hiddenSelections[] = {"Camo1", "Camo2", "Camo3", "Camo4", "Camo5", "CamoSlat"};
-		textureList[] = {};
-		hiddenSelectionsTextures[] = 
-		{
-			"RD501_Vehicles\textures\warhammer\warhammer_ext01_mynock_co.paa",
-			"RD501_Vehicles\textures\warhammer\warhammer_ext02_mynock_co.paa",
-			"RD501_Vehicles\textures\warhammer\warhammer_ext03_mynock_co.paa",
-			"A3\Armor_F\Data\camonet_AAF_Digi_Green_CO.paa"
-		};
-
-		faction = macro_republic_faction
-		editorSubcategory = macro_editor_cat(Tank)
-		vehicleClass = macro_editor_vehicle_type(Tank)
-		class TransportBackpacks;
-		#include "../../common/smallvehiclekit.hpp"
-
-		#include "common_stuff_mynock.hpp"
-
-		class Turrets: Turrets
-		{
-			class MainTurret: MainTurret
-			{
-				weapons[] = {macro_new_weapon(mynock_cannon,mbt), macro_new_weapon(generic,plasma_aircraft_cannon)};
-				magazines[] = {"300Rnd_CMFlare_Chaff_Magazine",macro_new_mag(mynock_mbt_ap,12), macro_new_mag(mynock_mbt_ap,12), macro_new_mag(mynock_mbt_ap,12),  macro_new_mag(mynock_mbt_he,12), macro_new_mag(mynock_mbt_he,12), macro_new_mag(mynock_mbt_he,12), macro_new_mag(generic_aircraft_cannon_plasma_red,1000), macro_new_mag(generic_aircraft_cannon_plasma_red,1000)};
-				class Turrets: Turrets
-				{
-					class CommanderOptics: CommanderOptics
-					{
-						weapons[] = {macro_new_weapon(generic,plasma_aircraft_cannon),"CMFlareLauncher","SmokeLauncher"};
-						magazines[] = {macro_new_mag(generic_aircraft_cannon_plasma_red,1000), macro_new_mag(generic_aircraft_cannon_plasma_red,1000), "SmokeLauncherMag"};
-					};
-				};
-			};
-		};
-	};
-	
-	class macro_new_vehicle(Glaive,Mynock):B_AFV_Wheeled_01_up_cannon_F
-	{	
-		scope=2;
-		side=1;
-		scopeCurator=2;
-		forceInGarage = 1;
-		displayName="Republic Glaive TD (Mynock)"
-		crew = "SWOP_Clonetrooper_P1";
-		author="RD501"
-		
-		hiddenSelections[] = {"Camo1", "Camo2", "Camo3", "Camo4", "Camo5", "CamoSlat"};
-		textureList[] = {};
-		hiddenSelectionsTextures[] = 
-		{
-			"RD501_Vehicles\textures\glaive\glaive_ext1_mynock_co.paa",
-			"RD501_Vehicles\textures\glaive\glaive_ext2_mynock_co.paa",
-			"RD501_Vehicles\textures\glaive\glaive_wheel_mynock_co.paa",
-			"RD501_Vehicles\textures\glaive\glaive_ext3_mynock_co.paa",
-			"RD501_Vehicles\textures\glaive\glaive_turret_mynock_co.paa",
-			"RD501_Vehicles\textures\grey.paa",
-			"RD501_Vehicles\textures\glaive\glaive_ext3_mynock_co.paa"
-		};
-
-		faction = macro_republic_faction
-		editorSubcategory = macro_editor_cat(APC)
-		vehicleClass = macro_editor_vehicle_type(APC)
-		class TransportBackpacks;
-		#include "../../common/smallvehiclekit.hpp"
-		class EventHandlers: DefaultEventhandlers
-		{
-			fired = "_this call (uinamespace getviariable 'BIS_fnc_effectFired');";
-			init = "[_this select 0] execVM 'RD501_Vehicles\_init_functions\wheel_dmg.sqf';";
-		};
-
-		class Turrets: Turrets
-		{
-			class MainTurret: MainTurret
-			{
-				weapons[] = {macro_new_weapon(mynock_cannon,td), macro_new_weapon(generic,plasma_aircraft_cannon)};
-				magazines[] = {macro_new_mag(mynock_mbt_td,12), macro_new_mag(mynock_mbt_td,12), macro_new_mag(mynock_mbt_td,12),  macro_new_mag(mynock_mbt_td,12), macro_new_mag(mynock_mbt_td,12), macro_new_mag(mynock_mbt_td,12), macro_new_mag(generic_aircraft_cannon_plasma_red,1000), macro_new_mag(generic_aircraft_cannon_plasma_red,1000)};				class Turrets: Turrets
-				{
-					class CommanderOptics: CommanderOptics
-					{
-						weapons[] = {macro_new_weapon(generic,plasma_aircraft_cannon),"SmokeLauncher","CMFlareLauncher"};
-						magazines[] = {"300Rnd_CMFlare_Chaff_Magazine",macro_new_mag(generic_aircraft_cannon_plasma_red,1000), macro_new_mag(generic_aircraft_cannon_plasma_red,1000), "SmokeLauncherMag"};
-					};
-				};
-			};
-		};
 	};	
-	class macro_new_vehicle(Glaive,Republic): macro_new_vehicle(Glaive,Mynock)
+	class 3as_01_arty_base_F;
+	class macro_new_vehicle(av7,republic):3as_01_arty_base_F
 	{
-		displayName="Republic Glaive TD"
+		scope=2;
+		side=1;
+		scopeCurator=2;
+		forceInGarage = 1;
+		displayName="Republic AV7"
+		crew = "SWOP_Clonetrooper_P1";
 		author="RD501"
-		#include "../../common/smallvehiclekit.hpp"
-		hiddenSelectionsTextures[]=
-		{
-			"RD501_Vehicles\textures\glaive\glaive_ext1_republic_co.paa",
-			"RD501_Vehicles\textures\glaive\glaive_ext2_republic_co.paa",
-			"RD501_Vehicles\textures\glaive\glaive_wheel_republic_co.paa",
-			"RD501_Vehicles\textures\glaive\glaive_ext3_republic_co.paa",
-			"RD501_Vehicles\textures\glaive\glaive_turret_republic_co.paa",
-			"RD501_Vehicles\textures\cream.paa",
-			"RD501_Vehicles\textures\glaive\glaive_ext3_republic_co.paa"
-		};
+		faction = macro_republic_faction
+        editorSubcategory = macro_editor_cat(arty)
+        vehicleClass = macro_editor_vehicle_type(arty)
 	};
-	class macro_new_vehicle(Longbow,Republic):O_APC_Tracked_02_AA_F
-	{
-		scope=2;
-		side=1;
-		scopeCurator=2;
-		forceInGarage = 1;
-		displayName="Republic Longbow AA (Mynock)"
-		crew = "SWOP_Clonetrooper_P1";
-		author="RD501"
-		
-		hiddenSelections[] = {"Camo1", "Camo2", "Camo3", "Camo4", "Camo5", "CamoSlat"};
-		textureList[] = {};
-		hiddenSelectionsTextures[] = 
-		{
-			"RD501_Vehicles\textures\longbow\longbow_ext1_mynock_co.paa",
-			"RD501_Vehicles\textures\longbow\longbow_ext2_mynock_co.paa",
-			"RD501_Vehicles\textures\longbow\longbow_tower_mynock_co.paa",
-			"A3\Armor_F\Data\camonet_CSAT_HEX_Desert_CO.paa",
-			"RD501_Vehicles\FE_Vehicles\textures\grey.paa",
-		};
-
-		faction = macro_republic_faction
-		editorSubcategory = macro_editor_cat(AA)
-		vehicleClass = macro_editor_vehicle_type(AA)
-		class TransportBackpacks;
-		#include "../../common/smallvehiclekit.hpp"
-
-		#include "common_stuff_mynock.hpp"
-
-		class Turrets: Turrets
-		{
-			class MainTurret: MainTurret
-			{
-				weapons[] = {macro_new_weapon(aa_gun,aa_gun_base),"missiles_titan_AA"};
-				magazines[] = {macro_new_mag(AA_Gun_Base,1000),macro_new_mag(AA_Gun_Base,1000),macro_new_mag(AA_Gun_Base,1000),macro_new_mag(AA_Gun_Base,1000),"4Rnd_Titan_long_missiles_O","4Rnd_Titan_long_missiles_O"};
-				class Turrets: Turrets
-				{
-					class CommanderOptics: CommanderOptics
-					{
-						weapons[] = {"CMFlareLauncher","SmokeLauncher"};
-						magazines[] = {"300Rnd_CMFlare_Chaff_Magazine","SmokeLauncherMag"};
-					};
-				};
-			};
-		};
-	};	
-	
-	class macro_new_vehicle(Courser,Republic):O_LSV_02_unarmed_F
-	{
-		scope=2;
-		side=1;
-		scopeCurator=2;
-		forceInGarage = 1;
-		displayName="Republic Courser"
-		crew = "SWOP_Clonetrooper_P1";
-		author="RD501"
-		//hiddenSelections[] = {"Camo1","Camo2","Camo3"};
-		//hiddenSelectionsTextures[] = 
-		//{
-		//	"\RD501_Vehicles\textures\LAAT\krayt_black_red\laatkraytbodyblackred.paa",
-		//	"\RD501_Vehicles\textures\LAAT\krayt_black_red\laatkraytbodyblackred.paa",
-		//	"\RD501_Vehicles\textures\LAAT\krayt_black_red\laatkraytbodyblackred.paa"
-		//};
-		faction = macro_republic_faction
-		editorSubcategory = macro_editor_cat(Transport)
-		vehicleClass = macro_editor_vehicle_type(Transport)
-		#include "../../common/smallvehiclekit.hpp"
-	};	
 };

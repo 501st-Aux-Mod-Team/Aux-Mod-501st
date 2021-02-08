@@ -101,13 +101,13 @@ class Extended_Init_EventHandlers
             init = [_this select 0] spawn macro_fnc_name(dwarf_move);
         };	                               
     };
-	class macro_new_vehicle(dwarf_spider_droid,Movable_MkII_depr)
-	{
-		class dwarf_movable
-		{
-			init = [_this select 0] spawn macro_fnc_name(dwarf_move);
-		};
-	};
+class macro_new_vehicle(crab_droid,Movable_MkII)
+    {
+        class crab_movable 
+        {
+            init = [_this select 0] spawn macro_fnc_name(dwarf_move);
+        };	                               
+    };
 
     class macro_new_vehicle(marid,MkII_CIS)// not ran
     {

@@ -237,6 +237,7 @@ class CfgAmmo
 	class M_Jian_AT;
 	class ammo_Missile_rim116;
 	class TurboLaser_Laserx2;
+	class 3AS_ATT_redPlasma_AT;
 
 	//laser gun + kannon
 	#include "_ammo/aircraft_laser_gun.hpp"

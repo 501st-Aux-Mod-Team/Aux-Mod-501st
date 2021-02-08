@@ -1,5 +1,3 @@
-//Get this addons macro
-
 //get the macro for the air macro_patch_name(vehicles)
 
 //get generlized macros
@@ -51,9 +49,9 @@ class CfgVehicles
 		displayName = "Republic Catapult (Mynock)";
 		crew = "SWOP_Clonetrooper_P1";
 		author="RD501"
-		scope = 2;
+		scope = 0;
 		side=1;
-		scopeCurator=2;
+		scopeCurator=0;
 		
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat(arty)

@@ -30,13 +30,10 @@ class CfgPatches
 		units[]=
 		{
 			macro_new_vehicle(drone,cis_Hover_Droid),
-			macro_new_vehicle(drone,Interrogation_Droid),
-			macro_new_vehicle(drone,CIS_Dio_Droid),
 			macro_new_vehicle(drone,Rebel_Dio_Droid),
 			macro_new_vehicle(drone,Clone_Recon_Droid),
 			macro_new_vehicle(drone,Clone_Recon_Droid_ATTE),
 			macro_new_vehicle(drone,rep_stealth_fixedwing),
-			macro_new_vehicle(drone,cis_stealth_fixedwing),
 			macro_new_vehicle(drone,razor_stealth_fixedwing),
 			macro_new_vehicle(drone,razor_recon),
 			macro_new_vehicle(drone,razor_recon_bag),
@@ -59,10 +56,11 @@ class CBA_Extended_EventHandlers_base;
 class CfgVehicles
 {
 	#include "inheritance.hpp"
-	class macro_new_vehicle(drone,cis_Hover_Droid): swcishoverdroid
+	class 3as_CIS_ScavDroid;
+	class macro_new_vehicle(drone,cis_Hover_Droid): 3as_CIS_ScavDroid
 	{
 		scope=2
-		
+		side=0;
 		forceInGarage = 1;
 		displayName = "CIS Hover Droid MK.II";
 		armor = 0.1;
@@ -70,62 +68,10 @@ class CfgVehicles
 		altFullForce = 1000;
 		altNoForce = 1100;
 		LODTurnedIn = -1;
-		hiddenselectionstextures[] = {"SW_CloneWarsWeapons\Recon\hover_droid_diff.paa"};
 		faction = macro_cis_faction
+		editorSubcategory="EdSubcat_Drones";
+		vehicleClass="Autonomous";
 
-		class EventHandlers {
-            
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
-        };
-
-		class Turrets: Turrets
-		{
-			class MainTurret:MainTurret
-			{
-				weapons[] = {"Laserdesignator_mounted","heavyrepeater"};
-				magazines[] = {
-					"Laserbatteries",
-					"SWOP_HeavyRepeater_Mag",
-					"SWOP_HeavyRepeater_Mag",
-					"SWOP_HeavyRepeater_Mag","SWOP_HeavyRepeater_Mag",
-					"SWOP_HeavyRepeater_Mag","SWOP_HeavyRepeater_Mag",
-					"SWOP_HeavyRepeater_Mag","SWOP_HeavyRepeater_Mag"
-				};
-			}
-		}
-	};
-
-	class macro_new_vehicle(drone,Interrogation_Droid): SWOP_interrogationdroid
-	{
-		author = "RD501";
-		scope=2
-		forceInGarage = 1;
-		displayName = "Interrogation Droid MK.II";
-		altFullForce = 1000;
-		altNoForce = 1100;
-
-		faction = macro_cis_faction
-		
-		class EventHandlers {
-            
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
-        };
-	};
-	
-	class macro_new_vehicle(drone,CIS_Dio_Droid): SWOP_Dio_Droid
-	{
-		author = "RD501";
-		scope=2
-		forceInGarage = 1;
-		displayName = "ID10 Droid MK.II";
-		altFullForce = 1000;
-		altNoForce = 1100;
-
-		faction = macro_cis_faction
-		class EventHandlers {
-            
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
-        };
 	};
 		
 	class macro_new_vehicle(drone,Rebel_Dio_Droid): SWOP_Rebel_Dio_Droid
@@ -382,64 +328,6 @@ class CfgVehicles
 	{
 		displayname = "GAR Phantom (Razor)";
 		hiddenSelectionsTextures[] = {"\RD501_Vehicles\textures\sentinel\phantom_fuselage_01_razor_co.paa",""};
-	};
-	class macro_new_vehicle(drone,cis_stealth_fixedwing):B_UAV_05_F
-	{
-		displayname = "CIS Phantom";
-		scope=2;
-		forceInGarage = 1;
-		side=0;
-		author = "RD501";
-		faction = macro_cis_faction
-		crew = "SWOP_CIS_droid_crew";
-		hiddenSelections[] = {"camo1","camo2"};
-		hiddenSelectionsMaterials[] = {"\RD501_Vehicles\textures\sentinel\phantom_fuselage_01.rvmat",""};
-		hiddenSelectionsTextures[] = {"\RD501_Vehicles\textures\sentinel\phantom_fuselage_01_cis_co",""};
-		weapons[] = {
-			macro_basic_air_weapons,
-			macro_new_weapon(generic,cis_aircraft_cannon)
-			};
-		magazines[] = {
-			macro_basic_air_mags,
-			macro_new_mag(generic_aircraft_cannon_red,1000),
-			macro_new_mag(generic_aircraft_cannon_red,1000),
-			};
-		class EventHandlers 
-		{
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base 
-			{};
-        };
-		class Components:Components
-		{};
-		class GunClouds:GunClouds
-		{};
-		class GunFire:GunFire
-		{};
-		class HitPoints:HitPoints
-		{};
-		class MGunClouds:MGunClouds
-		{};
-		class OpticsIn:OpticsIn
-		{};
-		class OpticsOut:OpticsOut
-		{};
-		class Reflectors:Reflectors
-		{};
-		class TurnIn:TurnIn
-		{};
-		class TurnOut:TurnOut
-		{};
-		class Turrets:Turrets
-		{
-			class MainTurret:MainTurret
-			{};
-		};
-		class TurretSpec:TurretSpec
-		{};
-		class ViewGunner:ViewGunner
-		{};
-		class ViewOptics:ViewOptics
-		{};
 	};
 	class macro_new_vehicle(drone,razor_recon_bag):JLTS_UAV_prowler_gar_backpack
 	{

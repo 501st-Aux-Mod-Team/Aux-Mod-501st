@@ -442,7 +442,7 @@ class cfgWeapons
 	};
 	class macro_new_vest_class(501_inf,acc_1): macro_new_vest_class(501_inf,acc_9)
 	{
-		displayName = "[501st] INF ACC 01 (Vet. Trooper)";
+		displayName = "[501st] INF ACC 01 A (Vet. Trooper)";
 		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
 		model = "\MRC\JLTS\characters\CloneArmor\CloneVestRecon.p3d";
 		hiddenSelections[] = {"Camo1"};
@@ -458,6 +458,112 @@ class cfgWeapons
 			hiddenSelectionsMaterials[]=
 			{
 			
+			};
+		};
+	};
+class macro_new_vest_class(501_inf,acc_1_b): macro_new_vest_class(501_inf,acc_9)
+	{
+		displayName = "[501st] INF ACC 01 B (Vet. Trooper)";
+		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
+		model = "\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\MRC\JLTS\characters\CloneArmor\data\Clone_vest_suspender_co.paa"
+		};
+		class ItemInfo: ItemInfo
+		{
+			uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestSuspender.p3d";
+			containerClass="Supply100";
+			hiddenSelectionsMaterials[]=
+			{
+			
+			};
+		};
+	};
+	class JLTS_CloneVestAirborne;
+class macro_new_vest_class(501_inf,acc_1_c): macro_new_vest_class(501_inf,acc_9)
+	{
+		displayName = "[501st] INF ACC 01 C (Vet. Trooper)";
+		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
+		model = "\MRC\JLTS\characters\CloneArmor\CloneVestAirborne.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[] = 
+		{
+			"",
+			TEXTUREPATH\Republic\clones\Infantry\acc\trooper_heavy_acc.paa
+		};
+		hiddenSelectionsMaterials[]=
+		{
+		
+		};
+		class ItemInfo: ItemInfo
+		{
+			uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestAirborne.p3d";
+			containerClass="Supply100";
+			hiddenSelections[]=
+			{
+				"camo1",
+				"camo2"
+			};
+		};
+	};
+class macro_new_vest_class(501_inf,acc_1_c_medic): macro_new_vest_class(501_inf,acc_9)
+	{
+		displayName = "[501st] INF ACC 01 C (Vet. Trooper Medic)";
+		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
+		model = "\MRC\JLTS\characters\CloneArmor\CloneVestAirborne.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[] = {"",TEXTUREPATH\Republic\clones\Infantry\acc\medic_heavy_acc.paa};
+		hiddenSelectionsMaterials[]=
+		{
+		
+		};
+		class ItemInfo: ItemInfo
+		{
+			uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestAirborne.p3d";
+			containerClass="Supply100";
+			hiddenSelections[]=
+			{
+				"camo1",
+				"camo2"
+			};
+		};
+	};
+class macro_new_vest_class(501_inf,acc_1_c_rto): macro_new_vest_class(501_inf,acc_9)
+	{
+		displayName = "[501st] INF ACC 01 C (Vet. Trooper RTO)";
+		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
+		model = "\MRC\JLTS\characters\CloneArmor\CloneVestAirborne.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[] = {"",TEXTUREPATH\Republic\clones\Infantry\acc\rto_heavy_acc.paa};
+		hiddenSelectionsMaterials[]=
+		{
+		
+		};
+		class ItemInfo: ItemInfo
+		{
+			uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestAirborne.p3d";
+			containerClass="Supply100";
+			hiddenSelections[]=
+			{
+				"camo1",
+				"camo2"
 			};
 		};
 	};

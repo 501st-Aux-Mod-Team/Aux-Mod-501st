@@ -1,7 +1,3 @@
-//Get this addons macro
-
-//get the macro for the air macro_patch_name(vehicles)
-
 //get generlized macros
 #include "../../../RD501_main/config_macros.hpp"
 
@@ -182,10 +178,6 @@ class CfgVehicles
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat(turrets)
 		vehicleClass = macro_editor_vehicle_type(turrets)
-		class EventHandlers :DefaultEventhandlers 
-		{
-			init = "[_this select 0] execVM 'RD501_Vehicles\land\E_Web\setmass.sqf'";
-		};
 		class assembleInfo
 		{
 			primary = 1;

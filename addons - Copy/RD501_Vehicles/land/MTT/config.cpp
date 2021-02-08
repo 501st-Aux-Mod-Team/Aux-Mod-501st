@@ -26,7 +26,7 @@ class CfgPatches
 		requiredVersion=0.1;
 		units[]=
 		{
-			"o_swop_mtt_1"
+			macro_new_vehicle(cis,mtt)
 		};
 		weapons[]=
 		{
@@ -40,31 +40,22 @@ class CfgPatches
 class DefaultEventhandlers;
 class CfgVehicles
 {
-	class O_O_SWOP_MTT_base;
+	class 3as_MTT;
 
-	class o_swop_mtt_1 : O_O_SWOP_MTT_base
+	class macro_new_vehicle(cis,mtt) : 3as_MTT
 	{
-		class EventHandlers :DefaultEventhandlers{};
-		class UserActions
-		{
-			class deploy_droids
-			{
-				displayName = "<t color='#00FF00'>DEPLOY THE DROIDS</t>";
-				displayNameDefault = "<t color='#00FF00'>DEPLOY THE DROIDS</t>";
-				textToolTip = "<t color='#00FF00'>DEPLOY THE DROIDS</t>";
-				position = "pilotview";
-				radius = 20;
-				priority = 21;
-				onlyForPlayer = 1;
-				condition = "!(this getVariable ['RD501_Deployed',false])";
-				statement = "this call RD501_Main_fnc_mtt_deploy_droids";
-				shortcut=""
-			};
-		};
+		displayName = "CIS MTT";
+		crew=macro_new_unit_class(opfor,B1_crew)
+		scope = 2;
+		side=0;
+		scopeCurator=2;
 
 		faction = macro_cis_faction
 		editorSubcategory = macro_editor_cat(tank)
 		vehicleClass = macro_editor_vehicle_type(tank)
+
+		author = "RD501";
+		forceInGarage=1;
 	};
 	
 
