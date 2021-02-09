@@ -83,27 +83,23 @@ class CfgVehicles
 		editorSubcategory = macro_editor_cat(heavy_armored_infantry);
 		vehicleClass = macro_editor_vehicle_type(heavy_armored_infantry);
 
-		//armor = 150;
-		//armorStructural = 1.0;
-		//explosionShielding	= 0.1;
-		//minTotalDamageThreshold	= 0.02;
-		//impactDamageMultiplier = 0.1;
-		/*class HitPoints
+		armor = 125;
+		armorStructural = 1.0;
+		explosionShielding	= 0.1;
+		minTotalDamageThreshold	= 0.01;
+		impactDamageMultiplier = 0.1;
+		class HitPoints
 		{
-			class HitGun
+			class telo
 			{
 				armor = 0.9;
 				material = -1;
-				name = "gun";
+				name = "telo";
 				visual = "autonomous_unhide";
-				passThrough = 0;
-				radius = 0.2;
+				passThrough = 1;
+				radius = 1.5
 			};
-			class HitTurret: HitGun
-			{
-				armor = 0.3;
-			};
-		};*/
+		};
 	};
 
 	class macro_new_vehicle(dwarf_spider_droid,Movable_MkII): macro_new_vehicle(dwarf_spider_droid,MkII)
@@ -126,7 +122,11 @@ class CfgVehicles
 		displayName = "Crab Droid";
 		scope = 2;
 		forceInGarage = 1;
-
+		armor = 125;
+		armorStructural = 1.0;
+		explosionShielding	= 0.1;
+		minTotalDamageThreshold	= 0.01;
+		impactDamageMultiplier = 0.1;
 		class EventHandlers: DefaultEventhandlers {}; 
 
 		faction = macro_cis_faction;
@@ -148,29 +148,20 @@ class CfgVehicles
 					"40Rnd_20mm_g_belt",
 					"40Rnd_20mm_g_belt"
 				};
+				class HitPoints
+				{
+					class telo
+					{
+						armor=0.9;
+						material=-1;
+						name="telo";
+						visual="autonomous_unhide";
+						passThrough=1;
+						radius=1.5;
+					};
+				};
 			};
 		};
-		//armor = 150;
-		//armorStructural = 1.0;
-		//explosionShielding	= 0.1;
-		//minTotalDamageThreshold	= 0.02;
-		//impactDamageMultiplier = 0.1;
-		/*class HitPoints
-		{
-			class HitGun
-			{
-				armor = 0.9;
-				material = -1;
-				name = "gun";
-				visual = "autonomous_unhide";
-				passThrough = 0;
-				radius = 0.2;
-			};
-			class HitTurret: HitGun
-			{
-				armor = 0.3;
-			};
-		};*/
 	};
 	class macro_new_vehicle(crab_droid,Movable_MkII): macro_new_vehicle(crab_droid,MkII)
 	{

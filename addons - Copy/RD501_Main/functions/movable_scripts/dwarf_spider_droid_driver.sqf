@@ -12,7 +12,7 @@ if (isServer) then {
 	_group = createGroup east;
 	_aidrive = _group createUnit ["O_Soldier_VR_F", position _vic, [], 0, "CAN_COLLIDE"];
 	_aidrive allowDamage false;
-	_vic attachTo [_aidrive,[0,-0.3,1.45]]; 
+	_vic attachTo [_aidrive,[0,-0.3,0]]; 
 	//_aidrive AddUniform "SWOP_tacticdroid_black_F_spec";
 	_aidrive setUnitPos "down";
 	_aidrive setBehaviour "CARELESS";

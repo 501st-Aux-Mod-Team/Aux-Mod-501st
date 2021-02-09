@@ -71,6 +71,8 @@ class CfgVehicles
 		faction = macro_cis_faction
 		editorSubcategory = macro_editor_cat(turrets)
 		vehicleClass = macro_editor_vehicle_type(turrets)
+		ace_dragging_canCarry = 0;
+		ace_dragging_canDrag = 0;
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret

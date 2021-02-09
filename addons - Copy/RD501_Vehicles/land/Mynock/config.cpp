@@ -69,9 +69,9 @@ class CfgVehicles
 	};
 	class 442_rx200_base:Tank_F
 	{
-		class Turrets
+		class Turrets:Turrets
 		{
-			class MainTurret: NewTurret
+			class MainTurret: MainTurret
 			{
 				class Turrets
 				{
@@ -80,7 +80,20 @@ class CfgVehicles
 			};
 		};
 	};
-	class macro_new_vehicle(rocketartillery,Republic):442_rx200_base
+	class 442_rx200_arty:442_rx200_base
+	{
+		class Turrets:Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				class Turrets
+				{
+					class CommanderOptics;
+				};
+			};
+		};
+	};
+	class macro_new_vehicle(rocketartillery,Republic):442_rx200_arty
 	{
 		scope=2;
 		armor = 1000;
@@ -92,6 +105,9 @@ class CfgVehicles
         vehicleClass = macro_editor_vehicle_type(arty)
         scopeCurator = 2;
         forceInGarage = 1;
+		artilleryScanner = 1;
+		laserScanner = 1;
+		availableforsuppoerttypes[]={"Artillery"};
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
@@ -110,7 +126,19 @@ class CfgVehicles
 			};
 		};
 	};
-	class 442_rx200_aa;
+	class 442_rx200_aa:442_rx200_base
+	{
+		class Turrets:Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				class Turrets
+				{
+					class CommanderOptics;
+				};
+			};
+		};
+	};
 	class macro_new_vehicle(Longbow,Republic):442_rx200_aa
 	{
 		scope=2;
@@ -123,9 +151,31 @@ class CfgVehicles
 		faction = macro_republic_faction
         editorSubcategory = macro_editor_cat(aa)
         vehicleClass = macro_editor_vehicle_type(aa)
-		
+		irScanGround = 0;
+		irScanRangeMax = 10000;
+		irScanRangeMin = 200;
+		irScanToEyeFactor = 2;
+		irTarget = 1;
+		irTargetSize = 1.2;
 		#include "../../common/smallvehiclekit.hpp"
-
+		class Turrets:Turrets
+		{
+			class MainTurret: MainTurret
+			{
+			weapons[]=
+				{
+					macro_new_weapon(turret,laat_ball_beam_l),
+					"Laserdesignator_pilotCamera"
+				};
+			magazines[]=
+				{
+					"Laserbatteries",
+					macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),
+					macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),
+					macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300),macro_new_mag(laat_ball_beam,300)
+				};	
+			}
+		}
 	};	
 	class 3as_01_arty_base_F;
 	class macro_new_vehicle(av7,republic):3as_01_arty_base_F

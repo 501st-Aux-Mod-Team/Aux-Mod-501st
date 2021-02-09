@@ -433,6 +433,7 @@ class CfgAmmo
 		ACE_caliber = 0;
 		aiAmmoUsageFlags = "64 + 128 + 256 + 512";
 		allowAgainstInfantry = 1;
+		airLock=1;
 	};
 
 	class macro_new_ammo(ball_turret):TurboLaser_Laserx2//SW_SpeederBikeCanon_Ammo//Vwing_ammo
