@@ -9,7 +9,6 @@ class CfgPatches
 		addonRootClass=macro_patch_name(droids_config);
 		requiredAddons[] = {
 			macro_patch_name(droids_config),
-			macro_patch_name(E_Web),
 			"JLTS_characters_DroidArmor",
    			"JLTS_weapons_RPS6",
 			"JLTS_weapons_E5",

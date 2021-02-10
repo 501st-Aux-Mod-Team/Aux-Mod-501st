@@ -25,8 +25,7 @@ class CfgPatches
 		requiredVersion=0.1;
 		units[]=
 		{
-			macro_new_vehicle(light_infantry_transport,CIS_MkII),
-			macro_new_vehicle(light_infantry_transport,Rep_MkII)
+			macro_new_vehicle(light_infantry_transport,CIS_MkII)
 		};
 		weapons[]=
 		{
@@ -43,7 +42,8 @@ class CfgVehicles
 {
 
 	#include "inheritance.hpp"
-	class macro_new_vehicle(light_infantry_transport,CIS_MkII):O_Truck_03_covered_F
+	class 3as_SAC_Trade;
+	class macro_new_vehicle(light_infantry_transport,CIS_MkII):3as_SAC_Trade
 	{
 		
 		scope=2;
@@ -51,17 +51,6 @@ class CfgVehicles
 		forceInGarage = 1;
 		displayName="CIS Tempest"
 		crew=macro_new_unit_class(opfor,B1_crew)
-		
-		hiddenSelections[] = {"Camo1", "Camo2", "Camo3", "Camo4"};
-		textureList[] = {};
-		hiddenSelectionsTextures[] = 
-		{
-			macro_vehicle_textures\Tempest\CIS_Tempest_Ext.paa,
-			"",
-			"a3\static_f_jets\aaa_system_01\data\aaa_system_01_co.paa",
-			macro_vehicle_textures\Tempest\CIS_Tempest_Cover.paa
-		};
-
 		faction = macro_cis_faction
         editorSubcategory = macro_editor_cat(car)
         vehicleClass = macro_editor_vehicle_type(Car)
@@ -72,31 +61,5 @@ class CfgVehicles
 		};
 
 		#include "sounds.hpp"
-	};
-
-
-	class macro_new_vehicle(light_infantry_transport,Rep_MkII):macro_new_vehicle(light_infantry_transport,CIS_MkII)
-	{
-		side=1;
-		scope=2;
-		forceInGarage = 1;
-		displayName="Republic Tempest"
-		crew = "SWOP_Clonetrooper_P1";
-
-		faction = macro_republic_faction
-		editorSubcategory = macro_editor_cat(Transport)
-		vehicleClass = macro_editor_vehicle_type(Transport)
-		class EventHandlers
-		{
-			init = "[_this select 0] execVM 'RD501_Vehicles\_init_functions\wheel_dmg.sqf';";
-		};
-		hiddenSelectionsTextures[] = 
-		{
-			macro_vehicle_textures\Tempest\Rep_Temp_Ext.paa,
-			"",
-			"a3\static_f_jets\aaa_system_01\data\aaa_system_01_co.paa",
-			macro_vehicle_textures\Tempest\REP_Temp_Cover.paa
-		};
-	};
-	
+	};	
 };

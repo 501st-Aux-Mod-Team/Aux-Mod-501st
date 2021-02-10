@@ -48,8 +48,12 @@ class CfgWeapons
 	{
 		class manual;
 	};
-
-	class macro_new_weapon(aat_cannon,mbt) : Cannon_TurboLaser
+	class 3AS_HeavyGATCannon_Base;
+	class 3AS_GATCannon:3AS_HeavyGATCannon_Base
+	{
+		class manual;
+	}
+	class macro_new_weapon(aat_cannon,mbt) : 3AS_GATCannon
 	{
 		
 		displayName = "Heavy Laser Cannon";
@@ -67,42 +71,13 @@ class CfgWeapons
 		ace_overpressure_angle = 30;
 		ace_overpressure_range = 10;
 		ace_overpressure_damage = 0.1;
-
+		reloadTime=2;
 		magazineReloadTime = 6;
 
 		modes[] = {"manual","close"};
 		class manual: manual
 		{
-			sounds[] = {"StandardSound"};
-			class StandardSound
-			{
-				begin1[] = {"AAT\sounds\aat1.ogg", 2, 1, 2000};
-				begin2[] = {"AAT\sounds\aat2.ogg", 2, 1, 2000};
-				begin3[] = {"AAT\sounds\aat3.ogg", 2, 1, 2000};
-				soundBegin[] = {"begin1", 33, "begin2", 34, "begin3", 33};
-			};
-			
-			reloadTime = 5;
-			magazineReloadTime = 6;
-			autoReload = 1;
-			ballisticsComputer = 1;
-			canLock = 2;
-			dispersion = 0;//0.0001;
-			autoFire = 0;
-		};
-		class close: manual
-		{
-			showToPlayer = 0;
-			aiRateOfFire = .5;
-			aiRateOfFireDistance = 6000;
-			minRange = 0;
-			minRangeProbab = 1.0;//0.35;
-			midRange = 3000;
-			midRangeProbab = 1.0;//0.78;
-			maxRange = 6000;
-			maxRangeProbab = 1.0;
-			aiDispersionCoefX = 10;
-			aiDispersionCoefY = 10;
+			reloadTime=1;
 		};
 	};
 

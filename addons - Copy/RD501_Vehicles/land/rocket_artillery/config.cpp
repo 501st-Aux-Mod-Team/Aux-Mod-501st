@@ -1,7 +1,3 @@
-//Get this addons macro
-
-//get the macro for the air macro_patch_name(vehicles)
-
 //get generlized macros
 #include "../../../RD501_main/config_macros.hpp"
 
@@ -46,8 +42,8 @@ class CfgVehicles
 	class macro_new_vehicle(itt_rocket_artillery,CIS):O_SWOP_HoverTr_2
 	{
 		displayName="CIS Rocket ITT Artillery";
-		forceInGarage = 1;
-		scope=2;
+		forceInGarage = 0;
+		scope=0;
 		side=0;
 
 		faction = macro_cis_faction

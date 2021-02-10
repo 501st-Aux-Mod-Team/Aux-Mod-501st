@@ -1,4 +1,4 @@
-		soundGetIn[] = {"A3\sounds_f\vehicles\armor\noises\get_in_out", 0.562341, 1};
+soundGetIn[] = {"A3\sounds_f\vehicles\armor\noises\get_in_out", 0.562341, 1};
 		soundGetOut[] = {"A3\sounds_f\vehicles\armor\noises\get_in_out", 0.562341, 1, 70};
 		soundDammage[] = {"", 0.562341, 1};
 		soundEngineOnInt[] = {"ITT\ABRAMS_engine_int_start", "db+1", 1.5, 200};

@@ -15,8 +15,8 @@
 		caliber = 7;
 		//submunitionAmmo = "ammo_Penetrator_120mm";
 	};
-
-	class macro_new_ammo(aat_mbt): TurboLaser_Laserx2//AAT_Laser
+	class 3AS_GAT_redPlasma_AT;
+	class macro_new_ammo(aat_mbt): 3AS_GAT_redPlasma_AT//AAT_Laser
 	{
 		hit = 450;
 		indirectHit = 120;
@@ -30,29 +30,24 @@
 
 		CraterEffects = "ATMissileCrater";
 		explosionEffects = "IEDMineSmallExplosion";
-		model = "\SWOP_Main\Effects\Tracer\LaserRed";
 		tracerScale = 3;
-		effectFly = "SWOP_RedLaserEffect";	
 		tracerStartTime = 0;
 		tracerEndTime = 10;
 		timeToLive=10;
 	}
-	class macro_new_ammo(aat_king): TurboLaser_Laserx2//AAT_Laser
+	class macro_new_ammo(aat_king): 3AS_ATT_redPlasma_AT//AAT_Laser
 	{
-		hit = 575;
+		hit = 650;
 		indirectHit = 130;
 		indirectHitRange = 10;
 		visibleFire = 42;
 		audibleFire = 42;
-		
+		initSpeed=1000;
 		explosionSoundEffect = "DefaultExplosion";
 		explosive = 0.1;
 		cost = 22;
 		CraterEffects = "ATMissileCrater";
 		explosionEffects = "IEDMineSmallExplosion";
-		model = "\SWOP_Main\Effects\Tracer\LaserRed";
-		
-		effectFly = "SWOP_RedLaserEffect";
 		tracerStartTime = 0;
 		tracerEndTime = 10;
 		airFriction = 0;

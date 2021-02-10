@@ -43,7 +43,7 @@ class DefaultEventhandlers ;
 class CfgVehicles
 {
 	#include "inheritance.hpp"
-	class macro_new_vehicle(Archer,CIS):I_LT_01_AA_F
+	/*class macro_new_vehicle(Archer,CIS):I_LT_01_AA_F
 	{
 		
 		scope=2;
@@ -271,15 +271,15 @@ class CfgVehicles
 				};
 			};
 		};	
-	};
-	class macro_new_vehicle(Scorpion,CIS):I_LT_01_Cannon_F
+	};*/
+	/*class macro_new_vehicle(Scorpion,CIS):I_LT_01_Cannon_F
 	{
 		
 		scope=2;
 		side=0;
 		scopeCurator=2;
 		forceInGarage = 1;
-		displayName="CIS Scorpion IFV"
+		displayName="CIS AAT"
 
 		crew=macro_new_unit_class(opfor,B1_crew)
 		
@@ -296,8 +296,8 @@ class CfgVehicles
 		};
 
 		faction = macro_cis_faction
-		editorSubcategory = macro_editor_cat(APC)
-		vehicleClass = macro_editor_vehicle_type(APC)
+		editorSubcategory = macro_editor_cat(tank)
+		vehicleClass = macro_editor_vehicle_type(tank)
 
 		class EventHandlers :DefaultEventhandlers {};
 		class Turrets: Turrets
@@ -516,8 +516,8 @@ class CfgVehicles
 				};
 			};
 		};	
-	};
-	class macro_new_vehicle(Tarantula,CIS):B_APC_Tracked_01_AA_F
+	};*/
+	/*class macro_new_vehicle(Tarantula,CIS):B_APC_Tracked_01_AA_F
 	{
 		
 		scope=2;
@@ -765,5 +765,5 @@ class CfgVehicles
 				};
 			};
 		};	
-	};
+	};*/
 };
