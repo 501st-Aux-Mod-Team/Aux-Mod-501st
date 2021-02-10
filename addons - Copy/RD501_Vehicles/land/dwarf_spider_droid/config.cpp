@@ -83,7 +83,7 @@ class CfgVehicles
 		editorSubcategory = macro_editor_cat(heavy_armored_infantry);
 		vehicleClass = macro_editor_vehicle_type(heavy_armored_infantry);
 
-		armor = 125;
+		armor = 35;
 		armorStructural = 1.0;
 		explosionShielding	= 0.1;
 		minTotalDamageThreshold	= 0.01;
@@ -97,7 +97,7 @@ class CfgVehicles
 				name = "telo";
 				visual = "autonomous_unhide";
 				passThrough = 1;
-				radius = 1.5
+				radius = 3;
 			};
 		};
 	};
@@ -122,7 +122,7 @@ class CfgVehicles
 		displayName = "Crab Droid";
 		scope = 2;
 		forceInGarage = 1;
-		armor = 125;
+		armor = 35;
 		armorStructural = 1.0;
 		explosionShielding	= 0.1;
 		minTotalDamageThreshold	= 0.01;
@@ -157,7 +157,7 @@ class CfgVehicles
 						name="telo";
 						visual="autonomous_unhide";
 						passThrough=1;
-						radius=1.5;
+						radius=3;
 					};
 				};
 			};
