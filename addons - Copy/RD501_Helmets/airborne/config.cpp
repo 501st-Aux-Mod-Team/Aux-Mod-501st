@@ -77,6 +77,9 @@ class CfgWeapons
 	NEW_501_AB_HELM_JLTS(501st_Oneill_helmet,Oneill,Oneill.paa)
 	NEW_501_AB_HELM_JLTS(501st_Monty_helmet,Monty,Monty.paa)
 	NEW_501_AB_HELM_JLTS(501st_Slim_helmet,Slim,Slim.paa)
+	NEW_501_AB_HELM_JLTS(501st_Loken_helmet,Loken,Loken.paa)
+	NEW_501_AB_HELM_JLTS(501st_Volley_helmet,Volley,Volley.paa)
+	NEW_501_AB_HELM_JLTS(501st_Jericho_helmet,Jericho,Jericho.paa)
 
 	
 
