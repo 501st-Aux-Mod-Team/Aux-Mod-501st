@@ -49,6 +49,7 @@ class CfgVehicles
 		scope = 2;
 		side=0;
 		scopeCurator=2;
+		armor=4000;
 
 		faction = macro_cis_faction
 		editorSubcategory = macro_editor_cat(tank)

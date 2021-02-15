@@ -156,7 +156,7 @@ class CfgVehicles
 			{};
 		};
 	};
-	class macro_new_vehicle(mortar,cis):3AS_Republic_Mortar
+	/*class macro_new_vehicle(mortar,cis):3AS_Republic_Mortar
 	{
 		author = "RD501";
 		scope = 2;
@@ -167,5 +167,5 @@ class CfgVehicles
 		faction = macro_cis_faction
 		editorSubcategory = macro_editor_cat(turrets)
 		vehicleClass = macro_editor_vehicle_type(turrets)
-	}
+	}*/
 };

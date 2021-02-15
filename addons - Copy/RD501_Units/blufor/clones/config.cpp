@@ -424,7 +424,7 @@ class cfgWeapons
 		displayName = "[501st] INF ACC 03 (Sr. Corporal)";
 		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
 		model = "\MRC\JLTS\characters\CloneArmor\CloneVestReconNCO.p3d";
-		hiddenSelections[] = {"Camo1"};
+		hiddenSelections[] = {"camo2"};
 		hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\Infantry\acc\sr_nco_acc.paa};
 		hiddenSelectionsMaterials[]=
         {
@@ -434,9 +434,51 @@ class cfgWeapons
 		{
 			uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestReconNCO.p3d";
 			containerClass="Supply100";
-			hiddenSelectionsMaterials[]=
+			hiddenSelections[]=
 			{
-			
+				"camo2"
+			};
+		};
+	};
+	class macro_new_vest_class(501_inf,acc_3_b): macro_new_vest_class(501_inf,acc_9)
+	{
+		displayName = "[501st] INF ACC 03 Medic (Sr. Corporal)";
+		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
+		model = "\MRC\JLTS\characters\CloneArmor\CloneVestReconNCO.p3d";
+		hiddenSelections[] = {"camo2"};
+		hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\Infantry\acc\inf_medic_nco.paa};
+		hiddenSelectionsMaterials[]=
+        {
+        
+        };
+		class ItemInfo: ItemInfo
+		{
+			uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestReconNCO.p3d";
+			containerClass="Supply100";
+			hiddenSelections[]=
+			{
+				"camo2"
+			};
+		};
+	};
+	class macro_new_vest_class(501_inf,acc_3_c): macro_new_vest_class(501_inf,acc_9)
+	{
+		displayName = "[501st] INF ACC 03 RTO (Sr. Corporal)";
+		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
+		model = "\MRC\JLTS\characters\CloneArmor\CloneVestReconNCO.p3d";
+		hiddenSelections[] = {"camo2"};
+		hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\Infantry\acc\inf_rto_nco.paa};
+		hiddenSelectionsMaterials[]=
+        {
+        
+        };
+		class ItemInfo: ItemInfo
+		{
+			uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestReconNCO.p3d";
+			containerClass="Supply100";
+			hiddenSelections[]=
+			{
+				"camo2"
 			};
 		};
 	};

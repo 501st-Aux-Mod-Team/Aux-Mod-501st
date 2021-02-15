@@ -61,6 +61,7 @@ class CfgVehicles
 		scopeCurator=2;
 		forceInGarage = 1;
 		side=1;
+		stallSpeed=5;
 		displayName = "Republic Z95 'Headhunter'"
 		author = "RD501"
 		faction = macro_republic_faction

@@ -29,6 +29,7 @@ class CfgWeapons
 		displayName="Republic RPS4 Launcher";
 		icon = "\RD501_Weapons\Launchers\RPS6\icon.paa";
 		picture = "\RD501_Weapons\Launchers\RPS6\icon.paa";
+		weaponInfoType="RscOpticsRangeFinderNLAW";
 		JLTS_hasElectronics=0;
 		recoil="";
 		hiddenSelections[]=
