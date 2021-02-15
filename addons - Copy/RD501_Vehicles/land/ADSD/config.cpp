@@ -67,6 +67,7 @@ class CfgVehicles
         scope = 2;
         scopeCurator = 2;
         forceInGarage = 1;
+		armor=1300;
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret

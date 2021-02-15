@@ -61,12 +61,16 @@ class CfgVehicles
 		scopeCurator=2;
 		forceInGarage = 1;
 		side=1;
+		stallSpeed=5;
 		displayName = "Republic Z95 'Headhunter'"
 		author = "RD501"
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat_air(Republic_vtol)
 		vehicleClass = macro_editor_vehicle_type_air(Republic)
-		/*aileronCoef[]={0.5,0.69999999,1,1,1.2,1.15,1.1};*/
+		stallSpeed=5;
+		draconicTorqueYCoef[]={1.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+		draconicForceYCoef=6;
+		envelope[] = {0.5,2.11,2.43,1.97,1.72,2.69,3.87,5.27,6.89,8.72,9.7,9.6,9.2,8.5,8.2,8};
 		aileronSensitivity=2.9;
 		aileronControlsSensitivityCoef=4;
 		#include "../../common/universal_mfd.hpp"

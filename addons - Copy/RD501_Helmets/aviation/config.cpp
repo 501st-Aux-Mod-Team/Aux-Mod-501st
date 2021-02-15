@@ -66,6 +66,7 @@ class CfgWeapons
 	NEW_501_Pilot_HELM(Canik,Canik,pilots\Canik.paa)
 	NEW_501_Pilot_HELM(Shnuffles,Shnuffles,pilots\Shnuffles.paa)
 	NEW_501_Pilot_HELM(Legal,Legal,pilots\Legal.paa)
+	NEW_501_Pilot_HELM(Shock,Shock,pilots\Shock.paa)
 	NEW_501_Pilot_HELM(Ethan,Ethan,pilots\Ethan.paa)
 	NEW_501_Pilot_HELM(Blast,Blast,pilots\Blast.paa)
 	NEW_501_Pilot_HELM(Duncan,Duncan,pilots\Duncan.paa)

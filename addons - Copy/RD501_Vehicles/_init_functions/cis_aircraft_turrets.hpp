@@ -1,11 +1,8 @@
 
 //CIS_Air
-	class macro_new_vehicle(vulture,MKII) {
+	class macro_new_vehicle(cis,vulture) {
         class turret_script {
             init = [_this select 0,macro_single_quote(macro_new_vehicle(Praetorian_Variant,opfor)),[0,1.5,-.6]] spawn macro_fnc_name(apply_aircraft_turrets);
-        };
-        class swop_init {
-        	init = "[_this select 0] execVM '\vulture\init.sqf';[_this select 0] execVM '\vulture\initturbine.sqf';";
         };
     };
     

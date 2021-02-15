@@ -3,6 +3,11 @@ class _xx_ACE_tourniquet
     name = "ACE_tourniquet";
     count = 8;
 };
+class _xx_ACE_splint
+{
+    name = "ACE_splint";
+    count = 8;
+};
 class _xx_ACE_plasmaIV_250
 {
     name = "ACE_plasmaIV_250";
@@ -36,7 +41,7 @@ class _xx_ACE_packingBandage
 class _xx_ACE_morphine
 {
     name = "ACE_morphine";
-    count = 15;
+    count = 10;
 };									
 class _xx_ACE_epinephrine
 {
@@ -48,3 +53,8 @@ class _xx_SmokeShellPurple
     name = "SmokeShellPurple";
     count = 5;
 };
+class _xx_ACE_painkiller
+{
+    name = "RD501_Painkiller";
+    count = 10;
+};	
