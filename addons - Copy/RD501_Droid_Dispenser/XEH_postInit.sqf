@@ -22,3 +22,13 @@ GVAR(spawnerDefaultObject) = "Land_Cargo_House_V1_F";
 
 // The time to delay spawning the dispenser object for orbital missions
 GVAR(fireSupportSpawnDelay) = 8;
+
+if(isServer) then {
+	[QUOTE(GVAR(droidDispenserUpdateGlobals)), {
+		params["_possibleUnits", "_maxUnits", "_spawnTime"];
+		diag_log format["[%1 Server] Updating Dispenser Globals ::: Units: %2 | MaxUnits: %3 | SpawnTime: %4", QUOTE(ADDON), _possibleUnits, _maxUnits, _spawnTime];
+		GVAR(droidDispenserPossibleUnitsGlobal) = _possibleUnits;
+		GVAR(droidDispenserMaxUnitsGlobal) = _maxUnits;
+		GVAR(spawnTime) = _spawnTime;
+	}] call CBA_fnc_addEventHandler;
+};

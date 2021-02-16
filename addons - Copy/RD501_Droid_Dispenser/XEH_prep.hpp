@@ -5,3 +5,4 @@ PREP(droidDispenserInit);
 PREP(moduleDroidDispenser);
 PREP(moduleOrbitalDroidDispenser);
 PREP(moduleOrbitalDroidDispenserServer);
+PREP(buildZenDialog);
