@@ -16,7 +16,7 @@
 		//submunitionAmmo = "ammo_Penetrator_120mm";
 	};
 	class 3AS_GAT_redPlasma_AT;
-	class macro_new_ammo(aat_mbt): 3AS_GAT_redPlasma_AT//AAT_Laser
+	class macro_new_ammo(aat_mbt): 3AS_GAT_redPlasma_AT//GAT_Laser
 	{
 		hit = 450;
 		indirectHit = 120;
@@ -27,35 +27,42 @@
 		typicalSpeed = 70;
 		aiAmmoUsageFlags = "64 + 128 + 256 + 512";
 		allowAgainstInfantry = 1;
-
+		model = "\RD501_Vehicle_Weapons\_ammo\data\laser_medium_blue.p3d";
 		CraterEffects = "ATMissileCrater";
 		explosionEffects = "IEDMineSmallExplosion";
-		tracerScale = 3;
+		tracerScale = 1;
 		tracerStartTime = 0;
 		tracerEndTime = 10;
+		brightness = 100000;
+		tracerColor[] = {0,0,1,0};
 		timeToLive=10;
 	}
-	class macro_new_ammo(aat_king): 3AS_ATT_redPlasma_AT//AAT_Laser
+	class macro_new_ammo(aat_king): 3AS_ATT_redPlasma_AT//AAT_ADSD_Laser
 	{
 		hit = 650;
 		indirectHit = 130;
 		indirectHitRange = 10;
 		visibleFire = 42;
 		audibleFire = 42;
-		initSpeed=1000;
+		//initSpeed=1000;
+		initSpeed=20;
 		explosionSoundEffect = "DefaultExplosion";
 		explosive = 0.1;
 		cost = 22;
 		CraterEffects = "ATMissileCrater";
 		explosionEffects = "IEDMineSmallExplosion";
+		tracerScale=1;
 		tracerStartTime = 0;
 		tracerEndTime = 10;
+		brightness = 100000;
+		tracerColor[] = {1,0,0,0};
 		airFriction = 0;
 		muzzleEffect = "";
 		caliber = 5;
 		typicalSpeed = 70;
 		aiAmmoUsageFlags = "64 + 128 + 256 + 512";
 		allowAgainstInfantry = 1;
+		model = "\RD501_Vehicle_Weapons\_ammo\data\laser_big_red.p3d";
 		timeToLive=10;
 	};
 

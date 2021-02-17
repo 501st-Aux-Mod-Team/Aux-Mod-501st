@@ -77,7 +77,7 @@ class CfgWeapons
 		modes[] = {"manual","close"};
 		class manual: manual
 		{
-			reloadTime=1;
+			reloadTime=0.5;
 		};
 	};
 

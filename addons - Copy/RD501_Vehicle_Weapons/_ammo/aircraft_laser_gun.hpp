@@ -12,7 +12,7 @@ class macro_new_ammo(generic_aircraft_laser_gun_red) : B_35mm_AA_Tracer_Red
     caliber = 1;
     explosive = 0;
     cost = 1;
-    model = "\SWOP_Main\Effects\Tracer\laserred";
+    model = "\RD501_Vehicle_Weapons\_ammo\data\laser_small_red.p3d";
     tracerScale = 1;
     brightness = 100000;
     tracerColor[] = {"Red"};
@@ -249,19 +249,16 @@ class macro_new_ammo(generic_aircraft_laser_gun_blue) : macro_new_ammo(generic_a
     model = "\SWOP_Main\Effects\Tracer\laserblue";
     tracerColor[] = {"Blue"};
     muzzleEffect = "";
-    effectFly = "SWOP_BlueLaserEffect";
 };
 class macro_new_ammo(generic_aircraft_laser_gun_green) : macro_new_ammo(generic_aircraft_laser_gun_red)
 {
     model = "\SWOP_Main\Effects\Tracer\LaserGreen";
-    effectFly = "SWOP_greenLaserEffect";
     tracerColor[] = {"Green"};
     muzzleEffect = "";
 };
 class macro_new_ammo(generic_aircraft_laser_gun_purple) : macro_new_ammo(generic_aircraft_laser_gun_red)
 {
-    model = "\GeonFighter\LaserGeon.p3d";
-    effectFly = "SWOP_RedLaserEffect";
+    model = "\RD501_Vehicle_Weapons\_ammo\data\laser_medium_purple.p3d";
     tracerColor[] = {0.4,0,0.5,1};
 };
 class macro_new_ammo(generic_aircraft_laser_gun_praetorian): macro_new_ammo(generic_aircraft_laser_gun_purple)

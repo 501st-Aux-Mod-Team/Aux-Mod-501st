@@ -26,7 +26,8 @@ class CfgPatches
 		requiredVersion=0.1;
 		units[]=
 		{
-			macro_new_vehicle(bacta,healing)
+			macro_new_vehicle(bacta,healing),
+			"RD501_Squad_Shield"
 		};
 		weapons[]=
 		{
@@ -79,6 +80,30 @@ class CfgVehicles
             };
         };
 		
+	};
+	class Land_House_Small_03_V1_ruins_F;
+	class RD501_Squad_Shield: Land_House_Small_03_V1_ruins_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=21.1;
+		class SimpleObject
+		{
+			eden=0;
+			animate[]={};
+			hide[]={};
+			verticalOffset=-0.023;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\Land_House_Small_03_V1_ruins_F.jpg";
+		_generalMacro="Land_House_Small_03_V1_ruins_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="Squad Shield";
+		model="\RD501_Vehicles\static\bubble.p3d";
+		icon="iconObject_1x1";
+		editorCategory="EdCat_Ruins_Altis";
+		editorSubcategory="EdSubcat_Residential_City";
 	};
 	
 };

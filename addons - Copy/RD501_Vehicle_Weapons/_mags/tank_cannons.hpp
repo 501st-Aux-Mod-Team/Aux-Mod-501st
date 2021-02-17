@@ -28,7 +28,8 @@
 		ammo = macro_new_ammo(aat_king)
 		count = 10;
 		tracersEvery = 1;
-		initSpeed = 800;
+		//typicalSpeedSpeed = 800;
+		typicalSpeedSpeed = 20;
 		muzzleImpulseFactor = 0;
 		maxLeadSpeed = 600;
 	};
