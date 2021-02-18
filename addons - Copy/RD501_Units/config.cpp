@@ -21,15 +21,6 @@ class CfgPatches
 
 class Extended_Init_EventHandlers 
 {
-	//class name of the object
-    class macro_new_unit_class(civ,random_civ) 
-    {
-    	//doesnt matter wat this is
-        class randomize 
-        {
-            init = [_this select 0] spawn macro_fnc_name(random_starwars_civ);
-        };
-    };
 
 	class SWOP_CIS_superdroid_B2 
     {
@@ -73,38 +64,10 @@ class Extended_Respawn_EventHandlers
     };
 };
 
-class cfgWeapons
-{
-    class SWOP_jedi_vest_invisible;
-
-   
-	class macro_new_weapon(equipment,Water_Filtration): SWOP_jedi_vest_invisible
-	{
-		displayname = "Water Filtration Device";
-		scope=2;
-		picture = "\SWOP_droids\data\ico\B2ico.paa";
-		OxygenCapacity=6969;
-	};
-
-    
-};
-
 class CfgVehicles
 {
 	class Bag_Base;
-	class SWOP_B_Droid_camo_backpack;
 	class B_UAV_01_backpack_F;
-	class SWOP_snowpackFO;
-	class SWOP_FlameBFO;
-	class SWOP_B_ImDVSnowBackpack_Base;
-	class SWOP_B_ImMedicSnowBackpack_Base;
-	class SWOP_B_ImSnowBackpack_Base;
-	class SWOP_B_BlackBackpack_Base;
-	class SWOP_B_SnowBackpack_Base;
-	class SWOP_resistance_backpack_b;
-	class SWOP_resistance_backpack2_b;
-	class SWOP_resistance_BigBackpack_b;
-	class SWOP_resistance_BigBackpack2_b;
 	class b_Parachute;
 	class JLTS_Clone_backpack;
 	class JLTS_Clone_backpack_s;
@@ -125,11 +88,6 @@ class CfgVehicles
 		class assembleInfo;
 		
 	};
-
-	#include "_backpacks/b1_at.hpp"
-
-
-	#include "_backpacks/b1_aa.hpp"
 
 	#include "_backpacks/legacy_backpacks.hpp"
 };

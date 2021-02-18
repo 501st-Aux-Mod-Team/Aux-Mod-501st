@@ -30,7 +30,6 @@ class CfgPatches
 		units[]=
 		{
 			macro_new_vehicle(drone,cis_Hover_Droid),
-			macro_new_vehicle(drone,Rebel_Dio_Droid),
 			macro_new_vehicle(drone,Clone_Recon_Droid),
 			macro_new_vehicle(drone,Clone_Recon_Droid_ATTE),
 			macro_new_vehicle(drone,rep_stealth_fixedwing),
@@ -74,22 +73,6 @@ class CfgVehicles
 
 	};
 		
-	class macro_new_vehicle(drone,Rebel_Dio_Droid): SWOP_Rebel_Dio_Droid
-	{
-		author = "RD501";
-		scope=2
-		forceInGarage = 1;
-		displayName = "Rebel ID10 Droid MK.II";
-		altFullForce = 1000;
-		altNoForce = 1100;
-
-		faction = macro_rebel_faction
-		class EventHandlers {
-            
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
-        };
-	};
-	
 	class macro_new_vehicle(drone,Clone_Recon_bag):JLTS_UAV_prowler_gar_backpack
 	{
 		displayName="R-2 Drone Bag";
