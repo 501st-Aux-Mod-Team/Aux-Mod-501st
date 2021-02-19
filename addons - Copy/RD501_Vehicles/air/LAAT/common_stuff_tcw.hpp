@@ -31,9 +31,8 @@ RD501_magclamp_large_offset[]={0.0,1.6,-7.3};
 ///
 weapons[] = {
 	macro_basic_air_weapons,
-	//macro_new_weapon(generic,green_dual_aircraft_laser),
-	//macro_new_weapon(cannon,laat),
-	"ParticleBeamCannon_F",
+	macro_new_weapon(generic,green_dual_aircraft_laser),
+	macro_new_weapon(cannon,laat),
 	macro_new_weapon(wynd,lgm),
 	macro_new_weapon(wynd,a2a),
 	macro_new_weapon(wynd,agm),
@@ -41,13 +40,12 @@ weapons[] = {
 };
 magazines[] = {
 	macro_basic_air_mags,
-	//macro_new_mag(generic_aircraft_gun_dual_green,1000),
-	//macro_new_mag(laat_cannon,100),
+	macro_new_mag(generic_aircraft_gun_dual_green,1000),
+	macro_new_mag(laat_cannon,100),
 	macro_new_mag(a2a,4),
 	macro_new_mag(agm,6),
 	macro_new_mag(agm,6),
 	macro_new_mag(lgm,4),
-	"Laser_Battery_F",
 	"SmokeLauncherMag",
 	"SmokeLauncherMag",
 	"SmokeLauncherMag",
