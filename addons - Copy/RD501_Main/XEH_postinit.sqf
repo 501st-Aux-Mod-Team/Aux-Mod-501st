@@ -86,7 +86,6 @@ call macro_fnc_name(stun);
     params["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile"];
 
     if (isNull _projectile) then {
-        systemChat "Empty projectile, fixing...";
         _projectile = nearestObject [_unit, _ammo];
     };
     private _config = configFile >> "CfgAmmo" >> _ammo;
@@ -96,17 +95,15 @@ call macro_fnc_name(stun);
         if(isNil "_ttl") then {
             _ttl = -1;
         };
-        systemChat str _ttl;
         [
             {
                 params["_projectile", "_deployable"];
                 private _speed = vectorMagnitude (velocity _projectile);
-                _speed <= 0.1
+                !(isNil "_projectile") && (alive _projectile) && _speed <= 0.1
             }, 
             {
                 params["_projectile", "_deployable", "_timeToLive"];
                 private _position = getPosATL _projectile;
-                systemChat format["Deploying at %1", _position];
                 private _deployed = _deployable createVehicle _position;
                 deleteVehicle _projectile;
                 if(_timeToLive > 0) then {
@@ -146,6 +143,7 @@ call macro_fnc_name(stun);
 		params ["_curator","_entity"];
 		if!(_entity isKindOf "Man") then {
 			_entity allowCrewInImmobile true;
+            _entity setVehicleLock "LOCKED";
 			{
 				_x disableAI "FSM";
 				_x setBehaviour "CARELESS";
