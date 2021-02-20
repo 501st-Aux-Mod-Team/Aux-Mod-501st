@@ -72,6 +72,7 @@
 		dangerRadiusHit = 40;
 		suppressionRadiusBulletClose = 10;
 		suppressionRadiusHit = 14;
+		tracerStartTime = 0.0001;
 		craterEffects = "";
 		craterShape = "";
 		explosionEffects = "ExploAmmoLaserCannon";

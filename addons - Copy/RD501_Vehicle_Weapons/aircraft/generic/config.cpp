@@ -149,6 +149,7 @@ class CfgWeapons
 		ballisticsComputer = 1;
 		weaponLockSystem = 0;
 		magazines[] = {macro_new_mag(generic_aircraft_gun_dual_green,1000)};
+		initSpeed = 2000;
 		class HE: HE
 		{
 			displayName = "Aircraft Laser Gun";
@@ -169,9 +170,9 @@ class CfgWeapons
 			maxRange = 15000;
 			maxRangeProbab = 1;
 
+			ballisticsComputer = 1;
 			weaponLockDelay = 0;
 			weaponLockSystem = 0;
-			lockAcquire = 1;
 			FCSMaxLeadSpeed = 1000;
 			burst = 30;//30;
 		};
