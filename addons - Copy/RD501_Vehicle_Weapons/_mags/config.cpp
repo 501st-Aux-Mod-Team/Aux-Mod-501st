@@ -18,7 +18,7 @@ class CfgPatches
 class CfgMagazines
 {	
 	class 500Rnd_Cannon_ARCback;
-	class 500Rnd_Cannon_30mm_Plane_CAS_02_F;
+	class 1000Rnd_Gatling_30mm_Plane_CAS_01_F;
 	class OPTRE_6Rnd_ASGM2_rockets;
 	class macro_new_mag(MRLS_M80,2): OPTRE_6Rnd_ASGM2_rockets
 	{
@@ -102,7 +102,7 @@ class CfgMagazines
 		ammo = macro_new_ammo(laat_cannon_double);
 	};
 
-	class macro_new_mag(voltic,200):500Rnd_Cannon_30mm_Plane_CAS_02_F
+	class macro_new_mag(voltic,200):1000Rnd_Gatling_30mm_Plane_CAS_01_F
 	{
 		displayNameShort = "HE";
 		ammo = macro_new_ammo(voltic)
@@ -152,7 +152,7 @@ class CfgMagazines
 ///////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////Aircraft Cannons///////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////
-	class macro_new_mag(generic_aircraft_gun,1000): 500Rnd_Cannon_30mm_Plane_CAS_02_F
+	class macro_new_mag(generic_aircraft_gun,1000): 1000Rnd_Gatling_30mm_Plane_CAS_01_F
 	{
 		displayNameShort = "Plasma Cores (Red)";
 		displayName = "Plasma Cores (Red)";
@@ -174,13 +174,13 @@ class CfgMagazines
 	{
 		displayNameShort = "Plasma Cores (Green)";
 		displayName = "Plasma Cores (Green)";
-		ammo = macro_new_ammo(generic_aircraft_laser_gun_green);
+		ammo = macro_new_ammo(generic_aircraft_laser_cannon_green);
 	};
 	class macro_new_mag(generic_aircraft_gun_asg,3000) : macro_new_mag(generic_aircraft_gun,1000)
 	{
 		displayNameShort = "AS Gun";
 		displayName = "Air Superiority Gun";
-		ammo = macro_new_ammo(generic_aircraft_laser_gun_green);
+		ammo = macro_new_ammo(generic_aircraft_laser_cannon_green);
 		count = 3000;
 	};
 	class macro_new_mag(generic_aircraft_gun_purple,1000) : macro_new_mag(generic_aircraft_gun,1000)
@@ -252,7 +252,7 @@ class CfgMagazines
 		ammo = macro_new_ammo(generic_aircraft_laser_cannon_dual_blue)
 	};
 
-	class macro_new_mag(generic_aircraft_gun_dual_green,1000): 500Rnd_Cannon_30mm_Plane_CAS_02_F
+	class macro_new_mag(generic_aircraft_gun_dual_green,1000): 1000Rnd_Gatling_30mm_Plane_CAS_01_F
 	{
 		displayNameShort = "Plasma Cores (Green)";
 		displayName = "Plasma Cores (Green)";
@@ -263,7 +263,7 @@ class CfgMagazines
 		maxLeadSpeed = 300;
 		macro_no_muzzle_impulse
 	};
-	class macro_new_mag(pylon_generic_aircraft_gun_asg,3000): 500Rnd_Cannon_30mm_Plane_CAS_02_F
+	class macro_new_mag(pylon_generic_aircraft_gun_asg,3000): 1000Rnd_Gatling_30mm_Plane_CAS_01_F
 	{
 		displayNameShort = "AS Gun";
 		displayName = "Air Superiority Gun";
@@ -290,7 +290,7 @@ class CfgMagazines
 		};
 		pylonWeapon=macro_new_weapon(pylon_voltic,y_wing)
 	};
-	class macro_new_mag(AA_Gun_Base,1000): 500Rnd_Cannon_30mm_Plane_CAS_02_F
+	class macro_new_mag(AA_Gun_Base,1000): 1000Rnd_Gatling_30mm_Plane_CAS_01_F
 	{
 		displayNameShort = "Plasma Cores";
 		displayName = "Plasma Cores";

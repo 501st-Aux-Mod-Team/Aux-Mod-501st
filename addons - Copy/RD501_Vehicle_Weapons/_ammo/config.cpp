@@ -156,8 +156,7 @@ class CfgAmmo
 		indirectHit =650;
 		indirectHitRange = 25;
 	};
-	class 3AS_Sabre_HE;
-	class macro_new_ammo(laat_cannon): 3AS_Sabre_HE//TurboLaser_Laserx2//SW_SpeederBikeCanon_Ammo//swop_bywingCannonammo//LAAT_Laser
+	class macro_new_ammo(laat_cannon): B_35mm_AA_Tracer_Red//TurboLaser_Laserx2//SW_SpeederBikeCanon_Ammo//swop_bywingCannonammo//LAAT_Laser
 	{
 		explosive = 0.5;
 		hit = 1000;
@@ -588,14 +587,25 @@ class CfgAmmo
 		explosive = 0.6;
 		model="RD501_Vehicle_Weapons\_ammo\data\laser_small_green.p3d"
 	};
-	class macro_new_ammo(generic_aircraft_laser_cannon_dual_blue) : macro_new_ammo(generic_aircraft_laser_cannon_blue)
+	class macro_new_ammo(generic_aircraft_laser_cannon_green) : macro_new_ammo(generic_aircraft_laser_gun_red)
 	{
-		tracerColor[] = {"Blue"};
-		muzzleEffect = "";
-		effectFly = "SWOP_BlueLaserEffect";
-		model = "\tie\tracer_blue";
+		hit = 400;
+		indirectHit = 200;
+		indirectHitRange = 0;
+		caliber = 1;
+		explosive = 0.6;
+		model="RD501_Vehicle_Weapons\_ammo\data\laser_small_green.p3d"
 	};
-	class macro_new_ammo(generic_aircraft_laser_cannon_dual_green): laserAmmo_F
+	class macro_new_ammo(generic_aircraft_laser_gun_praetorian) : macro_new_ammo(generic_aircraft_laser_gun_red)
+	{
+		hit = 75;
+		caliber = 1;
+		indirectHit = 0;
+		indirectHitRange = 0;
+		explosive = 0;
+		model="RD501_Vehicle_Weapons\_ammo\data\laser_medium_purple.p3d"
+	};
+	class macro_new_ammo(generic_aircraft_laser_cannon_dual_green): macro_new_ammo(generic_aircraft_laser_gun_red)
 	{
 		hit = 400;
 		indirectHit = 200;
@@ -773,7 +783,7 @@ class CfgAmmo
 		typicalSpeed = 70;
 		aiAmmoUsageFlags = "64 + 128 + 256 + 512";
 		allowAgainstInfantry = 1;
-		model = "\RD501_Vehicle_Weapons\_ammo\data\laser_medium_blue.p3d";
+		model = "\RD501_Vehicle_Weapons\_ammo\data\laser_big_red.p3d";
 		CraterEffects = "ATMissileCrater";
 		explosionEffects = "IEDMineSmallExplosion";
 		tracerScale = 1;

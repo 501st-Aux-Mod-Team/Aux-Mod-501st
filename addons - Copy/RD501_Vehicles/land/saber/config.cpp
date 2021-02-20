@@ -231,7 +231,26 @@ class LandVehicle;
 		#include "../../common/smallvehiclekit.hpp"
 		class Turrets: Turrets
 		{
-			class MainTurret_bottom : MainTurret_bottom{};
+			class MainTurret_bottom : MainTurret_bottom{
+				weapons[]=
+				{
+					macro_new_weapon(saber_main,cannon),
+					"SmokeLauncher",
+					"missiles_DAGR"
+				};
+				magazines[]=
+				{
+					macro_new_mag(saber_main,10),
+					macro_new_mag(saber_main,10),
+					macro_new_mag(saber_main,10),
+					macro_new_mag(saber_main,10),
+					macro_new_mag(saber_main,10),
+					macro_new_mag(saber_main,10),
+					macro_new_mag(saber_main,10),
+					"SmokeLauncherMag",
+					"12Rnd_PG_missiles"
+				};
+			};
 			class Mainturret_top : Mainturret_top
 			{
 				weapons[]=
@@ -286,13 +305,13 @@ class LandVehicle;
 				};
 				magazines[]=
 				{
-					"3as_25rnd_Sabre_Super_Mag",
-					"3as_25rnd_Sabre_Super_Mag",
-					"3as_25rnd_Sabre_Super_Mag",
-					"3as_25rnd_Sabre_Super_Mag",
-					"3as_25rnd_Sabre_Super_Mag",
-					"3as_25rnd_Sabre_Super_Mag",
-					"3as_25rnd_Sabre_Super_Mag",
+					macro_new_mag(saber_super_3as,25),
+					macro_new_mag(saber_super_3as,25),
+					macro_new_mag(saber_super_3as,25),
+					macro_new_mag(saber_super_3as,25),
+					macro_new_mag(saber_super_3as,25),
+					macro_new_mag(saber_super_3as,25),
+					macro_new_mag(saber_super_3as,25),
 					macro_new_mag(saber_mg,300),
 					macro_new_mag(saber_mg,300),
 					macro_new_mag(saber_mg,300),
@@ -355,6 +374,14 @@ class CfgWeapons
 	{
 		class HE;
 	};
+	class 3AS_Sabre_Cannons;
+	class macro_new_weapon(saber_main,cannon): 3AS_Sabre_Cannons
+	{
+		magazines[]=
+		{
+			macro_new_mag(saber_main,10)
+		};
+	};
 	class macro_new_weapon(saber_mg,50cal):3AS_Sabre_MG
 	{
 		magazineReloadTime=3;
@@ -366,6 +393,10 @@ class CfgWeapons
 	class macro_new_weapon(saber_cannon,supermkii):3AS_Sabre_Cannons_Super
 	{
 		magazineReloadTime=6;
+		magazines[]=
+		{
+			macro_new_mag(saber_super_3as,25)
+		};
 	};
 	class macro_new_weapon(saber_cannon,recon):3as_saber_autocannon_30mm
 	{
@@ -383,7 +414,9 @@ class CfgWeapons
 class CfgMagazines
 {
 	class 3AS_300Rnd_SabreMG_Mag;
+	class 3AS_10Rnd_Sabre_mag;
 	class 3as_saber_80Rnd_autocannon_30mm_mag;
+	class 3as_25rnd_Sabre_Super_Mag;
 	class macro_new_mag(saber_mg,300):3AS_300Rnd_SabreMG_Mag
 	{
 		displayName="300 Rnd Heavy MG Ammo";
@@ -393,11 +426,25 @@ class CfgMagazines
 	class macro_new_mag(saber_recon,100):3as_saber_80Rnd_autocannon_30mm_mag
 	{
 		count=100;
+		ammo=macro_new_ammo(saber_auto)
+	};
+	class macro_new_mag(saber_main,10): 3AS_10Rnd_Sabre_mag
+	{
+		displayNameShort="HEAT";
+		ammo=macro_new_ammo(saber_main)
+
+	};
+	class macro_new_mag(saber_super_3as,25): 3as_25rnd_Sabre_Super_Mag
+	{
+		ammo=macro_new_ammo(saber_super_3as)
 	};
 };
 class CfgAmmo
 {
 	class 3AS_EC60_BluePlasma;
+	class 3AS_Sabre_HE;
+	class 3as_saber_autocannon_ammo;
+	class 3AS_Sabre_AT;
 	class macro_new_ammo(saber_mg):3AS_EC60_BluePlasma
 	{
 		hit=30;
@@ -415,5 +462,30 @@ class CfgAmmo
 		caliber=2.5999999;
 		typicalSpeed=880;
 		timeToLive=10;
+		model = "\RD501_Vehicle_Weapons\_ammo\data\laser_small_green.p3d";
+		tracerScale=1;
+		tracerStartTime=0;
+		tracerEndTime=10;
+	};
+class macro_new_ammo(saber_auto): 3as_saber_autocannon_ammo
+	{
+		model = "\RD501_Vehicle_Weapons\_ammo\data\laser_medium_green.p3d";
+		tracerScale=1;
+		tracerStartTime=0;
+		tracerEndTime=10;
+	};
+	class macro_new_ammo(saber_main): 3AS_Sabre_HE
+	{
+		model = "\RD501_Vehicle_Weapons\_ammo\data\laser_big_green.p3d";
+		tracerScale=1;
+		tracerStartTime=0;
+		tracerEndTime=10;
+	};
+	class macro_new_ammo(saber_super_3as): 3AS_Sabre_AT
+	{
+		model = "\RD501_Vehicle_Weapons\_ammo\data\laser_big_green.p3d";
+		tracerScale=1;
+		tracerStartTime=0;
+		tracerEndTime=10;
 	};
 };

@@ -28,7 +28,48 @@ class CfgPatches
 		};
 	};
 };
-
+/////////////Radar classes////////////
+class SensorTemplatePassiveRadar;
+class SensorTemplateAntiRadiation;
+class SensorTemplateActiveRadar;
+class SensorTemplateIR;
+class SensorTemplateVisual;
+class SensorTemplateMan;
+class SensorTemplateLaser;
+class SensorTemplateNV;
+class SensorTemplateDataLink;
+class DefaultVehicleSystemsDisplayManagerLeft
+{
+	class components;
+};
+class DefaultVehicleSystemsDisplayManagerRight
+{
+	class components;
+};
+class VehicleSystemsTemplateLeftDriver: DefaultVehicleSystemsDisplayManagerLeft
+{
+	class components;
+};
+class VehicleSystemsTemplateRightDriver: DefaultVehicleSystemsDisplayManagerRight
+{
+	class components;
+};
+class VehicleSystemsTemplateLeftCommander: DefaultVehicleSystemsDisplayManagerLeft
+{
+	class components;
+};
+class VehicleSystemsTemplateRightCommander: DefaultVehicleSystemsDisplayManagerRight
+{
+	class components;
+};
+class VehicleSystemsTemplateLeftGunner: DefaultVehicleSystemsDisplayManagerLeft
+{
+	class components;
+};
+class VehicleSystemsTemplateRightGunner: DefaultVehicleSystemsDisplayManagerRight
+{
+	class components;
+};
 class CfgVehicles
 {
 	class LandVehicle;
@@ -46,6 +87,7 @@ class CfgVehicles
 	};
 	class 3AS_GAT_base_F:Tank_F
 	{
+		class Components;
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
@@ -152,6 +194,46 @@ class CfgVehicles
         vehicleClass = macro_editor_vehicle_type(AA)
         scopeCurator = 2;
         forceInGarage = 1;
+		irScanGround = 0;
+		irScanRangeMax = 10000;
+		irScanRangeMin = 200;
+		irScanToEyeFactor = 2;
+		irTarget = 1;
+		irTargetSize = 1.2;
+		class Components: Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class ActiveRadarSensorComponent: SensorTemplateActiveRadar
+					{
+						class AirTarget
+						{
+							minRange=9000;
+							maxRange=9000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						class GroundTarget
+						{
+							minRange=6000;
+							maxRange=6000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						typeRecognitionDistance=6000;
+						angleRangeHorizontal=360;
+						angleRangeVertical=100;
+						aimDown=-45;
+						maxTrackableSpeed=694.44397;
+					};
+					class DataLinkSensorComponent: SensorTemplateDataLink
+					{
+					};
+				};
+			};
+		};
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
@@ -166,7 +248,39 @@ class CfgVehicles
 				{
 					"4Rnd_Titan_long_missiles","4Rnd_Titan_long_missiles",
 					macro_new_mag(generic_aircraft_gun_preatorian,1000),
+					macro_new_mag(generic_aircraft_gun_preatorian,1000),
+					macro_new_mag(generic_aircraft_gun_preatorian,1000),
+					macro_new_mag(generic_aircraft_gun_preatorian,1000),
+					macro_new_mag(generic_aircraft_gun_preatorian,1000),
 					macro_new_mag(generic_aircraft_gun_preatorian,1000)
+				};
+				class Components
+				{
+					class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftGunner
+					{
+						class Components: components
+						{
+							class SensorDisplay
+							{
+								componentType="SensorsDisplayComponent";
+								range[]={16000,8000,4000,2000};
+								resource="RscCustomInfoSensors";
+							};
+						};
+					};
+					class VehicleSystemsDisplayManagerComponentRight: VehicleSystemsTemplateRightGunner
+					{
+						defaultDisplay="SensorDisplay";
+						class Components: components
+						{
+							class SensorDisplay
+							{
+								componentType="SensorsDisplayComponent";
+								range[]={16000,8000,4000,2000};
+								resource="RscCustomInfoSensors";
+							};
+						};
+					};
 				};
 			};
 		};

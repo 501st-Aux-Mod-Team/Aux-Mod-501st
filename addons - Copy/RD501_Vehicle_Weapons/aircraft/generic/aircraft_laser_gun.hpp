@@ -1,5 +1,4 @@
-    class Gatling_30mm_Plane_CAS_01_F;
-	class Mode_FullAuto;
+
 	class macro_new_weapon(generic,aircraft_laser) : Gatling_30mm_Plane_CAS_01_F
 	{
 		scope = 2;
@@ -7,13 +6,12 @@
 		//magazines[] = {"10000Rnd_RD501_RED_AircraftGun_Mag"};
 		modes[] = {"LowROF"};
 		canLock = 1;//changed from tri
-		ballisticsComputer = 1;
 		//multiplier=1;
 		weaponLockSystem = 0;//changed
 		
 		magazines[] = {macro_new_mag(generic_aircraft_gun_blue,1000)};
-		magazineWell[] = {macro_new_magwell(generic_aircraft_laser)};
-		class LowROF: Mode_FullAuto
+		ballisticsComputer = 4;
+		class LowROF: LowROF
 		{
 			displayName="Aircraft Laser Cannon";
 			sounds[]=
@@ -40,9 +38,10 @@
 					"Autocannon30mmBody_tail_SoundSet"
 				};
 			};
-			ballisticscomputer = 1;
+			ballisticsComputer = 4;
 			soundContinuous=1;
 			autoFire=1;
+			multiplier=1;
 			flash="gunfire";
 			flashSize=0.1;
 			recoil="Empty";

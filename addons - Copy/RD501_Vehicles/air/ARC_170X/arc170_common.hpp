@@ -17,7 +17,7 @@ weapons[]=
 };
 magazines[]=
 {
-	macro_new_mag(generic_aircraft_cannon_green,1000),
+	macro_new_mag(generic_aircraft_gun_green,1000),
 	macro_basic_air_mags,
 	macro_new_mag(Kannon,100),
 	macro_new_mag(Kannon,100)

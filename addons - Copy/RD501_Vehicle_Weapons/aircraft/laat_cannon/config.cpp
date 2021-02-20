@@ -24,8 +24,12 @@ class CfgPatches
 
 class CfgWeapons
 {
-	class Gatling_30mm_Plane_CAS_01_F;
-	class Mode_FullAuto;
+	class CannonCore;
+
+	class Gatling_30mm_Plane_CAS_01_F:CannonCore
+	{
+		class LowROF;
+	};
 	class macro_new_weapon(cannon,laat): Gatling_30mm_Plane_CAS_01_F//Cannon_TurboLaserx2_RD501//Cannon_LAAT
 	{
 		author= "RD501";
@@ -37,11 +41,13 @@ class CfgWeapons
 			};
 		scope=2;
 		initSpeed = 2000;
-		ballisticsComputer = 1;
+		ballisticsComputer = 4;
 		canLock = 2;
 		FCSMaxLeadSpeed = 1500;
 		magazineReloadTime=6;
-		class LowROF: Mode_FullAuto
+		autoFire=0;
+		burst=1;
+		class LowROF: LowROF
 		{
 			displayName="LAAT Laser Cannon";
 			sounds[]=
@@ -68,7 +74,8 @@ class CfgWeapons
 					"Autocannon30mmBody_tail_SoundSet"
 				};
 			};
-			ballisticscomputer = 1;
+			multiplier=1;
+			ballisticscomputer = 4;
 			soundContinuous=1;
 			autoFire=1;
 			flash="gunfire";

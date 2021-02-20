@@ -32,7 +32,8 @@ class CfgPatches
 			macro_new_weapon(generic,plasma_aircraft_cannon),
 			macro_new_weapon(generic,preatorian_gun_opfor),
 			macro_new_weapon(aa_gun,aa_gun_base),
-			macro_new_weapon(generic,blue_dual_aircraft_laser)
+			macro_new_weapon(generic,blue_dual_aircraft_laser),
+			macro_new_weapon(generic,green_dual_aircraft_laser)
 		};
 	};
 };
@@ -45,15 +46,19 @@ class CfgWeapons
 		class LowROF;
 
 	};
+	class CannonCore;
 
+	class Gatling_30mm_Plane_CAS_01_F:CannonCore
+	{
+		class LowROF;
+	};
 	//Laser Guns
 	#include "aircraft_laser_gun.hpp"
 
 	//Laser Cannon
 	class macro_new_weapon(generic,republic_aircraft_cannon) : macro_new_weapon(generic,aircraft_laser)
 	{
-		magazines[] = {macro_new_mag(generic_aircraft_cannon_green,1000)};
-		ballisticsComputer = "1+4";
+		magazines[] = {macro_new_mag(generic_aircraft_gun_green,1000)};
 		displayName = "Laser Cannon";
 		burst = 1;
 		class LowROF: LowROF
@@ -88,42 +93,60 @@ class CfgWeapons
 		};
 	};
 
-	class 3as_LAAT_autocannon_30mm;
-	class ParticleBeamCannon_F: 3as_LAAT_autocannon_30mm
+	class macro_new_weapon(generic,green_dual_aircraft_laser): macro_new_weapon(generic,aircraft_laser)
 	{
-		class HE;
-	};
-	class macro_new_weapon(generic,green_dual_aircraft_laser): ParticleBeamCannon_F
-	{
+		scope=2;
 		canLock = 1;
-		ballisticsComputer = 1;
+		ballisticsComputer = 4;
 		weaponLockSystem = 0;
 		magazines[] = {macro_new_mag(generic_aircraft_gun_dual_green,1000)};
-		class HE: HE
+		class LowROF: LowROF
 		{
-			displayName = "Aircraft Laser Gun";
-			magazines[] = {macro_new_mag(generic_aircraft_gun_dual_green,1000)};
+            displayName = "Aircraft Laser Gun";
+			sounds[]=
+			{
+				"StandardSound_1"
+			};
+			class StandardSound_1
+			{
+				begin1[]=
+				{
+					"3as\3as_saber\sounds\wpn_saberTank_autocannon_fire",
+					1.99526,
+					1,
+					1500
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.33000001
+				};
+				soundsetshot[]=
+				{
+					"Autocannon30mmTurret_Shot_SoundSet",
+					"Autocannon30mmBody_tail_SoundSet"
+				};
+            dispersion = 0.012;
+            autoFire=true;
+            aiRateOfFire = 0.001;
+            reloadTime=0.06;
 
-			dispersion = 0.012;
-			autoFire=true;
-			aiRateOfFire = 0.001;
-			reloadTime=0.06;
+            aiRateOfFireDispersion = 0.0;
+            aiRateOfFireDistance = 0;
 
-			aiRateOfFireDispersion = 0.0;
-			aiRateOfFireDistance = 0;
+            minRange = 0;
+            minRangeProbab = 1;
+            midRange = 7500;
+            midRangeProbab = 1;
+            maxRange = 15000;
+            maxRangeProbab = 1;
 
-			minRange = 0;
-			minRangeProbab = 1;
-			midRange = 7500;
-			midRangeProbab = 1;
-			maxRange = 15000;
-			maxRangeProbab = 1;
-
-			weaponLockDelay = 0;
-			weaponLockSystem = 0;
-			lockAcquire = 1;
-			FCSMaxLeadSpeed = 1000;
-			burst = 30;//30;
+            weaponLockDelay = 0;
+            weaponLockSystem = 0;
+            lockAcquire = 1;
+            FCSMaxLeadSpeed = 1000;
+            burst = 10;//30;
+			};
 		};
 	};
 
@@ -182,22 +205,14 @@ class CfgWeapons
 		};
 	};
 	//Preatorian gun
-	class macro_new_weapon(generic,preatorian_gun_opfor): macro_new_weapon(generic,purple_aircraft_laser)
+	class autocannon_35mm;
+	class macro_new_weapon(generic,preatorian_gun_opfor): autocannon_35mm
 	{
 		displayName = "B.E.A.R.D";
 		magazines[] = {
 			macro_new_mag(generic_aircraft_gun_preatorian,1000)
 		};
 		
-		class LowROF: LowROF
-		{
-			burst = 1;
-			class StandardSound
-			{
-				begin1[] = {"SW_EmpireWeapons\e11\e1.ogg", 0.7, 1, 3000};
-				soundBegin[] = {"begin1", 0.2};
-			};
-		};
 	};
 
 
