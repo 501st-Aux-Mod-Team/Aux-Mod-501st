@@ -83,56 +83,68 @@ call macro_fnc_name(stun);
 
 // Grenade Deployables
 ["ace_firedPlayer", {
-	params["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile"];
+    params["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile"];
 
-	if (isNull _projectile) then {
-		systemChat "Empty projectile, fixing...";
-		_projectile = nearestObject [_unit, _ammo];
-	};
-	private _config = configFile >> "CfgAmmo" >> _ammo;
-	if (getNumber (_config >> "rd501_grenade_deployable") == 1) then {
-		private _deployable = getText (_config >> "rd501_grenade_deployable_object");
-		private _ttl = getNumber (_config >> "rd501_grenade_deployable_timeToLive");
-		if(isNil "_ttl") then {
-			_ttl = -1;
-		};
-		systemChat str _ttl;
-		[
-			{
-				params["_projectile", "_deployable"];
-				private _speed = vectorMagnitude (velocity _projectile);
-				_speed <= 0.1
-			}, 
-			{
-				params["_projectile", "_deployable", "_timeToLive"];
-				private _position = getPosATL _projectile;
-				systemChat format["Deploying at %1", _position];
-				private _deployed = _deployable createVehicle _position;
-				if(_timeToLive > 0) then {
-					[
-						{
-							params["_deployed"];
-							systemChat "Destroying";
-							deleteVehicle _deployed;
-						},
-						[_deployed],
-						_timeToLive
-					] call CBA_fnc_waitAndExecute;
-				};
-			},
-			[_projectile, _deployable, _ttl],
-			10, 
-			{ systemChat "Give grenade back to person, something went wrong"; }
-		] call CBA_fnc_waitUntilAndExecute;
-	};
+    if (isNull _projectile) then {
+        systemChat "Empty projectile, fixing...";
+        _projectile = nearestObject [_unit, _ammo];
+    };
+    private _config = configFile >> "CfgAmmo" >> _ammo;
+    if (getNumber (_config >> "rd501_grenade_deployable") == 1) then {
+        private _deployable = getText (_config >> "rd501_grenade_deployable_object");
+        private _ttl = getNumber (_config >> "rd501_grenade_deployable_timeToLive");
+        if(isNil "_ttl") then {
+            _ttl = -1;
+        };
+        systemChat str _ttl;
+        [
+            {
+                params["_projectile", "_deployable"];
+                private _speed = vectorMagnitude (velocity _projectile);
+                _speed <= 0.1
+            }, 
+            {
+                params["_projectile", "_deployable", "_timeToLive"];
+                private _position = getPosATL _projectile;
+                systemChat format["Deploying at %1", _position];
+                private _deployed = _deployable createVehicle _position;
+                deleteVehicle _projectile;
+                if(_timeToLive > 0) then {
+                    [
+                        {
+                            params["_deployed"];
+                            deleteVehicle _deployed;
+                        },
+                        [_deployed],
+                        _timeToLive
+                    ] call CBA_fnc_waitAndExecute;
+                };
+            },
+            [_projectile, _deployable, _ttl, _magazine, _unit],
+            10, 
+            { 
+                params["", "", "", "_magazine", "_unit"];
+				systemChat "Something went wrong with your order, we apologise for the inconvenience.";
+				systemChat "Please file all complaints with Mirror at the Aux Office.";
+				[
+					{
+						params["_unit", "_mag"];
+						_unit addItem _mag;
+						systemChat "We've attached a complementary replacement if you had any inventory space.";
+					},
+					[_unit, _magazine],
+					2
+				] call CBA_fnc_waitAndExecute;
+			}
+        ] call CBA_fnc_waitUntilAndExecute;
+    };
 }] call CBA_fnc_addEventHandler;
 
 // Prevent Dismount on all Zeus Placed Items
 {
 	private _idx = _x addEventHandler ["CuratorObjectPlaced", {
 		params ["_curator","_entity"];
-		private _config = isClass(configFile >> "CfgVehicles" >> (typeof _entity));
-		if(_config) then {
+		if!(_entity isKindOf "Man") then {
 			_entity allowCrewInImmobile true;
 			{
 				_x disableAI "FSM";
