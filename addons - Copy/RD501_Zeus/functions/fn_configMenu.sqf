@@ -1,6 +1,8 @@
 _logic = param [0,objNull,[objNull]];
 _units = param [1,[],[[]]];
 
+if !(local _logic) exitWith {};
+
 _position = getPos _logic;
 
 [
