@@ -108,7 +108,7 @@ call macro_fnc_name(stun);
 				private _position = getPosATL _projectile;
 				systemChat format["Deploying at %1", _position];
 				private _deployed = _deployable createVehicle _position;
-				if(_timeToLive > -1) then {
+				if(_timeToLive > 0) then {
 					[
 						{
 							params["_deployed"];
@@ -126,3 +126,19 @@ call macro_fnc_name(stun);
 		] call CBA_fnc_waitUntilAndExecute;
 	};
 }] call CBA_fnc_addEventHandler;
+
+// Prevent Dismount on all Zeus Placed Items
+{
+	private _idx = _x addEventHandler ["CuratorObjectPlaced", {
+		params ["_curator","_entity"];
+		private _config = isClass(configFile >> "CfgVehicles" >> (typeof _entity));
+		if(_config) then {
+			_entity allowCrewInImmobile true;
+			{
+				_x disableAI "FSM";
+				_x setBehaviour "CARELESS";
+			} forEach crew _entity;
+		};
+	}];
+	_x setVariable ["rd501_curator_dismount_disable_index", _idx, false];
+} forEach allCurators;
