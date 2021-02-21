@@ -104,7 +104,8 @@ call macro_fnc_name(stun);
             {
                 params["_projectile", "_deployable", "_timeToLive"];
                 private _position = getPosATL _projectile;
-                private _deployed = _deployable createVehicle _position;
+                private _deployed = createVehicle [_deployable, _position, [], 0, "CAN_COLLIDE"];
+				_deployed setPosATL _position;
                 deleteVehicle _projectile;
                 if(_timeToLive > 0) then {
                     [
