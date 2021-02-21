@@ -145,10 +145,6 @@ call macro_fnc_name(stun);
 		if!(_entity isKindOf "Man" && side _entity == east) then {
 			_entity allowCrewInImmobile true;
 			_entity setVehicleLock "LOCKED";
-			{
-				_x disableAI "FSM";
-				_x setBehaviour "CARELESS";
-			} forEach crew _entity;
 		};
 	}];
 	_x setVariable ["rd501_curator_dismount_disable_index", _idx, false];
