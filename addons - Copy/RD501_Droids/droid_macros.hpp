@@ -36,12 +36,12 @@
 #define macro_marksman_rifle_mag "RD501_30mw_x15_mag"
 #define macro_marksman_rifle_mags _10(macro_marksman_rifle_mag)
 
-#define macro_spec_ops_gun "RD501_e_22"
+#define macro_spec_ops_gun "RD501_e5_special"
 #define macro_spec_ops_gun_mag "JLTS_E5_mag"
 #define macro_spec_ops_gun_mags _6(macro_spec_ops_gun_mag)
 
-#define macro_bx_gun "SWOP_EE4BlasterRifle"
-#define macro_bx_gun_mag "SWOP_EE4BlasterRifle_Mag"
+#define macro_bx_gun "RD501_e5_special"
+#define macro_bx_gun_mag "JLTS_E5_mag"
 #define macro_bx_gun_mags _6(macro_bx_gun_mag)
 
 #define macro_grenade_launcher "212th_relbyv10"

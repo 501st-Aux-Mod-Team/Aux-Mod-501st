@@ -24,8 +24,8 @@ class CfgMagazines
 	class 1Rnd_Smoke_Grenade_shell;
 	class UGL_FlareWhite_F;
 	class SWOP_DC15SA_Ammo;
-	class SWOP_termDet_Gm;
-	class SWOP_BCCKtermimploder_G;
+	class 3AS_ThermalDetonator;
+	class 3AS_BaridumCore;
 	class 2Rnd_12Gauge_Pellets;
 
 	////////////////////////////////////////////////////
@@ -319,23 +319,32 @@ class CfgMagazines
 	////////////////////////////////////////////////////
 	/////////////Grenades Magazines/////////////////////
 	////////////////////////////////////////////////////
-	class macro_new_mag(imploder,1):SWOP_BCCKtermimploder_G
+	class macro_new_mag(imploder,1):3AS_BaridumCore
 	{
 		scope=2;
 		displayName = "Republic Thermal Imploder";
-		displayNameShort = "Republic Thermal Imploder";
+		displayNameShort = "Thermal Imploder";
 		count=1;
 		ammo = macro_new_ammo(imploder)
 		descriptionShort = "Republic Thermal Imploder";
 	};
-	class macro_new_mag(thermaldet,1):SWOP_termDet_Gm
+	class macro_new_mag(thermaldet,1):3AS_ThermalDetonator
 	{
 		scope=2;
 		displayName = "Republic Thermal Detonator";
-		displayNameShort = "Republic Thermal Detonator";
+		displayNameShort = "Thermal Detonator";
 		count=1;
 		ammo = macro_new_ammo(thermaldet)
 		descriptionShort = "Republic Thermal Detonator";
+	};
+	class macro_new_mag(squad_shield_sigma,1):3AS_BaridumCore
+	{
+		scope=2;
+		displayName = "Republic Squad Shield Sigma";
+		displayNameShort = "Squad Shield Sigma";
+		count=1;
+		ammo = macro_new_ammo(squad_shield_sigma)
+		descriptionShort = "Republic Thermal Imploder";
 	};
 
 	////////////////////////////////////////////////////

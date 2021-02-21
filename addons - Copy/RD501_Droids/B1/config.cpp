@@ -13,8 +13,7 @@ class CfgPatches
    			"JLTS_weapons_RPS6",
 			"JLTS_weapons_E5",
 			"JLTS_weapons_E5S",
-			"JLTS_weapons_E60R",
-			"212th_swop_weapons",
+			"JLTS_weapons_E60R"
 		};
 		requiredVersion = 0.1;
 		units[] = {

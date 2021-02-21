@@ -27,8 +27,8 @@ class CfgAmmo
 	class 3AS_EC80_BluePlasma;
 	class JLTS_bullet_carbine_red;
 	class G_40mm_HE;
-	class SWOP_BCCKtermimploder;
-	class SWOP_termDet;
+	class 3AS_CoreDetonator_1RND;
+	class 3AS_Detonator_1RND;
 	class B_12Gauge_Pellets_Submunition;
 	class B_12Gauge_Pellets_Submunition_Deploy;
 	class FlareBase;
@@ -257,19 +257,30 @@ class CfgAmmo
 			power=0;
 		};
     };
-	class macro_new_ammo(imploder) : SWOP_BCCKtermimploder
+	class macro_new_ammo(imploder) : 3AS_CoreDetonator_1RND
 	{
 		hit=50;
 		indirectHit=45;
 		indirectHitRange=2;
 	}
-	class macro_new_ammo(thermaldet) : SWOP_termDet
+	class macro_new_ammo(thermaldet) : 3AS_Detonator_1RND
 	{
 		hit=18;
 		indirectHit=14;
 		indirectHitRange=8;
-		model="\RD501_Weapons\Grenades\data\icecream.p3d";
+
 	};
+	class macro_new_ammo(squad_shield_sigma) : 3AS_CoreDetonator_1RND
+	{
+		hit=0;
+		indirectHit=0;
+		indirectHitRange=0;
+		model="\RD501_Weapons\Grenades\data\icecream.p3d";
+		rd501_grenade_deployable = 1;
+        rd501_grenade_deployable_object = "RD501_Squad_Shield";
+        rd501_grenade_deployable_timeToLive = 30;
+		simulation="shotShell";
+	}
 ///////////////////////////////////////////////////////////////////////
 /////////////////////////Shotgun///////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
@@ -380,18 +391,18 @@ class CfgAmmo
 ///////////////////////////////////////////////////////////////////////
 /////////////////////////Rockets///////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-	class M_Titan_AT;
+	class ACE_Javelin_FGM148_static;
 	class R_PG32V_F;
 	class Mo_cluster_AP;
-	class macro_new_ammo(striker):M_Titan_AT
+	class macro_new_ammo(striker):ACE_Javelin_FGM148_static
 	{
-		hit=115;
+		hit=1650;
 		effectsMissileInit="RocketBackEffectsStaticRPG";
 		initTime=0.1;
 		irLock = 1;
         laserLock = 0;
         airLock = 0;
-		class ace_missileguidance {
+		/*class ace_missileguidance {
             enabled = 1;
 
             minDeflection = 0.00005;      // Minium flap deflection for guidance
@@ -419,11 +430,12 @@ class CfgAmmo
             defaultAttackProfile = "JAV_TOP";
             attackProfiles[] = { "JAV_TOP", "JAV_DIR" };
             useModeForAttackProfile = 1;
-        };
+        };*/
 	};
 	class macro_new_ammo(rps4heat):R_PG32V_F
 	{
 		hit=150;
+		submunitionAmmo="ammo_Penetrator_Titan_AT";
 	};
 	class macro_new_ammo(rps4burst):R_PG32V_F
 	{

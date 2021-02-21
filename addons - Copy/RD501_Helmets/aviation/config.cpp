@@ -21,10 +21,11 @@ class CfgPatches
 
 class CfgWeapons
 {
-	class itemCore;
-	class macro_new_helmet(pilot,base):itemCore
+	class H_HelmetB;
+	class macro_new_helmet(pilot,base):H_HelmetB
 	{
 		displayname = Clone Pilot Base Model;
+		scopeArsenal = 2;
 		hiddenSelectionsTextures[]=
         {
             "RD501_Helmets\_textures\aviation\clonePilotHelmet_co.paa"
@@ -117,6 +118,7 @@ class CfgWeapons
 	class macro_new_helmet(warden,501st):212th_Engineer_Helmet_501st
 	{
 		author="RD501"
+		scopeArsenal = 2;
 		DisplayName="[501st] WRDN HELM (Base)";
 		picture="RD501_Helmets\_textures\aviation\warden_ico.paa"
 		hiddenSelections[]=

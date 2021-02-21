@@ -9,7 +9,7 @@
 		//multiplier=1;
 		weaponLockSystem = 0;//changed
 		
-		magazines[] = {macro_new_mag(generic_aircraft_gun_blue,1000)};
+		magazines[] = {macro_new_mag(generic_aircraft_gun,1000)};
 		ballisticsComputer = 4;
 		class LowROF: LowROF
 		{
@@ -48,9 +48,9 @@
 			ffMagnitude=0.5;
 			ffFrequency=11;
 			ffCount=6;
-			burst=1;
 			showToPlayer=1;
-			reloadTime = 0.4;
+			burst = 1;
+			reloadTime=0.04; 
 			dispersion = 0.00001;
 			aiRateOfFire=1;
 			aiRateOfFireDistance=10;

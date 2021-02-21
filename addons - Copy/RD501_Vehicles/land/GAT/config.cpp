@@ -239,6 +239,7 @@ class CfgVehicles
 			class MainTurret: MainTurret
 			{
 				maxElev = 60;
+				canUseScanner = 1;
 				weapons[] = 
 				{
 					macro_new_weapon(generic,preatorian_gun_opfor),

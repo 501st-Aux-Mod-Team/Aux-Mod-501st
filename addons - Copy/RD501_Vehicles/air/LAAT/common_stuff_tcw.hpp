@@ -11,6 +11,7 @@ forceInGarage = 1;
 faction = macro_republic_faction
 editorSubcategory = macro_editor_cat_air(Republic_heli)
 vehicleClass = macro_editor_vehicle_type_air(Republic)
+weaponLockSystem = "2+4+8";
 
 RD501_magclamp_small_forbidden=1;
 RD501_magclamp_large_offset[]={0.0,1.6,-7.3};

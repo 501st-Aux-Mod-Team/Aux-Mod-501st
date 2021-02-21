@@ -18,7 +18,8 @@ class CfgPatches
 		requiredVersion=0.1;
 		units[]=
 		{
-			"RD501_Squad_Shield"
+			"RD501_Squad_Shield",
+			"RD501_Squad_Shield_trench"
 		};
 		weapons[]=
 		{
@@ -48,6 +49,29 @@ class CfgVehicles
 		scopeCurator=2;
 		displayName="Squad Shield";
 		model="\RD501_Vehicles\static\shields\bubble\bubble.p3d";
+		icon="iconObject_1x1";
+		vehicleClass = macro_editor_vehicle_type(statics)
+		editorCategory =  macro_editor_cat(statics)
+		editorSubcategory = macro_editor_cat(static_msc)
+	};
+	class RD501_Squad_Shield_trench: Land_House_Small_03_V1_ruins_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=21.1;
+		class SimpleObject
+		{
+			eden=0;
+			animate[]={};
+			hide[]={};
+			verticalOffset=-0.023;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\Land_House_Small_03_V1_ruins_F.jpg";
+		scope=2;
+		scopeCurator=2;
+		displayName="Trench Shield";
+		model="\RD501_Vehicles\static\shields\trench\trench.p3d";
 		icon="iconObject_1x1";
 		vehicleClass = macro_editor_vehicle_type(statics)
 		editorCategory =  macro_editor_cat(statics)
