@@ -15,7 +15,7 @@ class CfgPatches
 			"A3_Data_F_Enoch_Loadorder",//Load all of arma first
 			cba_patches ,//cba stuff
 			//cancer_pbos ,//all of swop pbos
-			"212th_Engineer"
+			//"212th_Engineer"
 		};
 		requiredVersion=0.1;
 		units[]={};

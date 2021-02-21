@@ -150,20 +150,6 @@ class CfgWeapons
 		};
 	};
 
-	class macro_new_weapon(generic,ion_aircraft_cannon) :macro_new_weapon(generic,republic_aircraft_cannon)
-	{
-		class LowROF: LowROF
-		{
-			class StandardSound
-			{
-				begin1[] = {"TIEdef\ioncanon1.ogg",1.1,1.1,3000};
-				begin2[] = {"TIEdef\ioncanon2.ogg",1.1,1.1,3000};
-				begin3[] = {"TIEdef\ioncanon3.ogg",1.1,1.1,3000};
-				soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin3",0.34};
-			};
-		};
-	};
-
 	class macro_new_weapon(generic,purple_aircraft_cannon) :macro_new_weapon(generic,republic_aircraft_cannon)
 	{
 		class LowROF: LowROF

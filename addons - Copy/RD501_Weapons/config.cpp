@@ -485,7 +485,7 @@ class CfgAmmo
 		explosive = 0.4;
 		ACE_caliber=1;
 		typicalSpeed=860;
-		model="\A3\Weapons_f\Data\bullettracer\tracer_green";
+		model="RD501_Vehicle_Weapons\_ammo\data\laser_small_blue.p3d";
 	};
 	
 

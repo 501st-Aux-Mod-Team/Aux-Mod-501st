@@ -638,10 +638,10 @@ class CfgAmmo
 		muzzleEffect = "";
 		cmimmunity = 0.6;
 		effectsSmoke = "RD501_Effect_Violet";
-		soundFly[] = {"\xt\SWionrocketloop.ogg",3,1,800};
-		lockedTargetSound[] = {"TIE\LockedOn_2.ogg",0.7,1};
-		lockingTargetSound[] = {"TIE\Locking_Beep1.ogg",1,1};
-		model = "\SWOP_Main\Effects\Tracer\laserred";
+		//soundFly[] = {"\xt\SWionrocketloop.ogg",3,1,800};
+		//lockedTargetSound[] = {"TIE\LockedOn_2.ogg",0.7,1};
+		//lockingTargetSound[] = {"TIE\Locking_Beep1.ogg",1,1};
+		//model = "\SWOP_Main\Effects\Tracer\laserred";
 		tracerColor[] = {"blue"};
 		brightness = 20000;
 		lightColor[] = {0, 0, 1, 1};
@@ -663,10 +663,10 @@ class CfgAmmo
 		effectsMissile = "RD501_FX_Missile_AA_Violet";
 		muzzleEffect = "";
 		effectsSmoke = "RD501_Effect_Violet";
-		soundfly[] = {"\xt\SWionrocketloop.ogg",3,1,800};
-		lockedTargetSound[] = {"TIE\LockedOn_2.ogg",0.7,1};
-		lockingTargetSound[] = {"TIE\Locking_Beep1.ogg",1,1};
-		model = "\SWOP_Main\Effects\Tracer\laserred";
+		//soundfly[] = {"\xt\SWionrocketloop.ogg",3,1,800};
+		//lockedTargetSound[] = {"TIE\LockedOn_2.ogg",0.7,1};
+		//lockingTargetSound[] = {"TIE\Locking_Beep1.ogg",1,1};
+		//model = "\SWOP_Main\Effects\Tracer\laserred";
 		tracerColor[] = {"blue"};
 		canLock = 2;
 		weaponLockSystem = "1 + 2 + 4 + 8"; 
@@ -693,8 +693,8 @@ class CfgAmmo
 		effectsMissile = "RD501_FX_Missile_AA_Violet";
 		muzzleEffect = "";
 		effectsSmoke = "RD501_Effect_Violet";
-		soundfly[] = {"\xt\SWionrocketloop.ogg",3,1,800};
-		model = "\SWOP_Main\Effects\Tracer\laserred";
+		//soundfly[] = {"\xt\SWionrocketloop.ogg",3,1,800};
+		//model = "\SWOP_Main\Effects\Tracer\laserred";
 		tracerColor[] = {"blue"};
 		brightness = 20000;
 		lightColor[] = {0, 0, 1, 1};
@@ -721,8 +721,8 @@ class CfgAmmo
 		};
 		muzzleEffect = "";
 		effectsSmoke = "RD501_Effect_Violet";
-		soundfly[] = {"\xt\SWionrocketloop.ogg",3,1,800};
-		model = "\SWOP_Main\Effects\Tracer\laserred";
+		//soundfly[] = {"\xt\SWionrocketloop.ogg",3,1,800};
+		//model = "\SWOP_Main\Effects\Tracer\laserred";
 		tracerColor[] = {"blue"};
 		brightness = 20000;
 		lightColor[] = {0, 0, 1, 1};
@@ -754,7 +754,7 @@ class CfgAmmo
 		muzzleEffect = "";
 		effectsSmoke = "RD501_Effect_Violet";
 		soundfly[] = {"\rd501_vehicle_weapons\_sounds\proton_torp.ogg",3,1,800};
-		model = "\SWOP_Main\Effects\Tracer\laserblue";
+		//model = "\SWOP_Main\Effects\Tracer\laserblue";
 		tracerColor[] = {"blue"};
 		brightness = 20000;
 		lightColor[] = {0, 0, 1, 1};
@@ -836,7 +836,7 @@ class CfgAmmo
 		cost = 22;
 		CraterEffects = "ATMissileCrater";
 		explosionEffects = "IEDMineSmallExplosion";
-		model = "SW_AV7\ion.p3d";		
+		model="RD501_Vehicle_Weapons\_ammo\data\laser_big_purple.p3d";		
 		effectFly = "SWOP_BlueLaserEffect";
 		tracerStartTime = 0;
 		tracerEndTime = 10;
@@ -873,33 +873,6 @@ class CfgAmmo
 		aiAmmoUsageFlags = "64 + 128 + 256 + 512";
 		allowAgainstInfantry = 1;
 		timeToLive=10;
-	};
-	class macro_new_ammo(mynock_mbt_td): macro_new_ammo(aat_king)//AAT_Laser
-	{
-		displayname = "Tankbuster Shell"
-		warheadName = "Tankbuster Shell"
-		hit = 15000;
-		indirectHit = 0;
-		indirectHitRange = 0;
-		visibleFire = 42;
-		audibleFire = 42;
-		explosionSoundEffect = "DefaultExplosion";
-		explosive = 0;
-		cost = 22;
-		CraterEffects = "ATMissileCrater";
-		explosionEffects = "IEDMineSmallExplosion";
-		model = "SW_AV7\ion.p3d";		
-		effectFly = "SWOP_BlueLaserEffect";
-		tracerStartTime = 0;
-		tracerEndTime = 10;
-		airFriction = 0;
-		muzzleEffect = "";
-		caliber = 1;
-		tracerScale = 4;
-		typicalSpeed = 600;
-		aiAmmoUsageFlags = "64 + 128 + 256 + 512";
-		allowAgainstInfantry = 1;
-		timeToLive=20;
 	};
 	class ATTE_Laser;
 	class macro_new_ammo(atte):ATTE_Laser
