@@ -25,7 +25,7 @@ class _transport_z6
 };
 class _transport_dc15gl
 {
-    weapon = macro_new_weapon(DC,15gl)
+    weapon = macro_new_weapon(DC,15cgl)
     count = 2;
 };
 class _transport_valken38x

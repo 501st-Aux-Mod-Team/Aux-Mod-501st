@@ -14,7 +14,7 @@ call macro_fnc_name(nightvision);
 #define QWEAP_LAUNCH(name) macro_quote(macro_new_weapon(launcher,name))
 
 // Drone Recharge
-RD501_DRONE_BATTERY = "lightsaberG_swing";
+RD501_DRONE_BATTERY = "RD501_10mw_x30_mag";
 
 //Force Walk
 RD501_FORCE_WALK_WEAPONS = [macro_quote(macro_new_weapon_nofam(z1000))];

@@ -395,13 +395,11 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			macro_grenade_launcher_mags,
-			macro_grenade_launcher_grenades
+			macro_grenade_launcher_mags
 		};
 		respawnMagazines[]=
 		{
-			macro_grenade_launcher_mags,
-			macro_grenade_launcher_grenades
+			macro_grenade_launcher_mags
 		};
 		cost=2;
 	}

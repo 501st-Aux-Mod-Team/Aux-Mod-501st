@@ -184,7 +184,7 @@ class CfgAmmo
 		indirectHit = 0;
 		indirectHitRange = .1;
 		timeToLive =30;
-		model = "\GeonFighter\LaserGeon.p3d";
+		model="\3AS\3AS_Equipment\model\3AS_coredetonator.p3d";
 		fuseDistance = 3;
 
 		explosive = 0.0001;
@@ -206,7 +206,7 @@ class CfgAmmo
 		indirectHit = 50;
 		indirectHitRange = 5;
 		timeToLive =30;
-		model = "SW_AV7\ion.p3d";
+		model="\3AS\3AS_Equipment\model\3AS_thermaldet.p3d";
 		fuseDistance = 3;
 	};
 	class RD501_grenade_emp_ammo: G_40mm_HE
@@ -216,7 +216,7 @@ class CfgAmmo
 		indirectHit = 0.01;
 		indirectHitRange = 12;
 		timeToLive =30;
-		model = "\thermalD\EMP_Grenade_ammo.p3d";
+		model = "\MRC\JLTS\weapons\Core\effects\emp_blue.p3d";
 		fuseDistance = 1
 		explosive = 0.0001;
 		deflecting = 5;
@@ -262,6 +262,7 @@ class CfgAmmo
 		hit=50;
 		indirectHit=45;
 		indirectHitRange=2;
+		simulation="shotShell";
 	}
 	class macro_new_ammo(thermaldet) : 3AS_Detonator_1RND
 	{

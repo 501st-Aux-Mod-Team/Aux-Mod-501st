@@ -92,7 +92,7 @@ class TransportWeapons
 	};
 	class _transport_dc15gl
 	{
-		weapon = macro_new_weapon(DC,15gl)
+		weapon = macro_new_weapon(DC,15cgl)
 		count = 2;
 	};
 	class _transport_valken38x
@@ -236,9 +236,9 @@ class TransportMagazines
 };
 class TransportItems
 {
-	class _xx_SW_SquadShield_Mag
+	class _xx_RD_SquadShield_Mag
 	{
-		name = "SW_SquadShield_Mag";
+		name = macro_new_mag(squad_shield_sigma,1)
 		count = 2;
 	};
 	class _xx_ACE_HuntIR_monitor

@@ -106,11 +106,11 @@ class CfgVehicles
 		editorSubcategory = macro_editor_cat(AA)
 		vehicleClass = macro_editor_vehicle_type(AA)
 		//faction = "RD501FactionOpfor";
-		hiddenSelectionsTextures[] = 
+		/*hiddenSelectionsTextures[] = 
 		{
 			"awing\t_awing_03_cw.paa",
 			"awing\t_awing_03_cw.paa"
-		};
+		};*/
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
@@ -347,11 +347,11 @@ class CfgVehicles
 		scopecurator = 1;
 		weaponLockSystem = "2+4+8";
 		 
-		hiddenSelectionsTextures[] = 
+		/*hiddenSelectionsTextures[] = 
 		{
 			"awing\t_awing_03_cw.paa",
 			"awing\t_awing_03_cw.paa"
-		};
+		};*/
 		
 		
 		class Turrets: Turrets
@@ -376,71 +376,6 @@ class CfgVehicles
 			};
 		};
 	};	
-	class macro_new_vehicle(Praetorian_Variant,rebel): macro_new_vehicle(Praetorian_Variant,normal)//
-	{
-		side = 1;
-		displayName = "Laser Cannons (rebel)";
-
-		faction = macro_rebel_faction
-		editorSubcategory = macro_editor_cat(AA)
-		vehicleClass = macro_editor_vehicle_type(AA)
-		class Turrets: Turrets
-		{
-			class MainTurret: MainTurret
-			{
-				weapons[] = {
-					macro_new_weapon(generic,rebel_aircraft_laser)
-				};
-				magazines[] = {
-					macro_new_mag(generic_aircraft_gun,1000),
-					macro_new_mag(generic_aircraft_gun,1000)
-				};
-			};
-		};
-	};
-	class macro_new_vehicle(Praetorian_Variant,republic): macro_new_vehicle(Praetorian_Variant,normal)//
-	{
-		displayName = "Laser Cannons (republic)";
-		side = 1;
-
-		faction = 
-		editorSubcategory = macro_editor_cat(AA)
-		vehicleClass = macro_editor_vehicle_type(AA)
-		class Turrets: Turrets
-		{
-			class MainTurret: MainTurret
-			{
-				weapons[] = {
-					macro_new_weapon(generic,tie_aircraft_laser)
-				};
-				magazines[] = {
-					macro_new_mag(generic_aircraft_gun_green,1000),
-					macro_new_mag(generic_aircraft_gun_green,1000)
-				};
-			};
-		};
-	};
-	class macro_new_vehicle(Praetorian_Variant,imperial): macro_new_vehicle(Praetorian_Variant,normal)//
-	{
-		displayName = "Laser Cannons (Imperial)";
-
-		faction = macro_empire_faction
-		editorSubcategory = macro_editor_cat(AA)
-		vehicleClass = macro_editor_vehicle_type(AA)
-		class Turrets: Turrets
-		{
-			class MainTurret: MainTurret
-			{
-				weapons[] = {
-					macro_new_weapon(generic,tie_aircraft_laser)
-				};
-				magazines[] = {
-					macro_new_mag(generic_aircraft_gun_green,1000),
-					macro_new_mag(generic_aircraft_gun_green,1000)
-				};
-			};
-		};
-	};
 	class macro_new_vehicle(Praetorian_Variant,Ion): macro_new_vehicle(Praetorian_Variant,normal)//
 	{
 		side = 1;

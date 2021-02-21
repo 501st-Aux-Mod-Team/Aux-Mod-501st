@@ -123,7 +123,7 @@ class CfgVehicles
 			};
 		};
 	};
-		class StaticMortar: StaticWeapon
+	/*class StaticMortar: StaticWeapon
 	{
 		class Turrets: Turrets
 		{
@@ -155,7 +155,7 @@ class CfgVehicles
 			class MainTurret: MainTurret
 			{};
 		};
-	};
+	};*/
 	/*class macro_new_vehicle(mortar,cis):3AS_Republic_Mortar
 	{
 		author = "RD501";

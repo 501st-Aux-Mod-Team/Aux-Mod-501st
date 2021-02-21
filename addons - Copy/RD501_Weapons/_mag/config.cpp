@@ -20,7 +20,7 @@ class CfgMagazines
 {
 	class 3AS_45Rnd_EC50_Mag;
 	class 1Rnd_HE_Grenade_shell;
-	class DCStun_Mag;
+	class JLTS_stun_mag_long;
 	class 1Rnd_Smoke_Grenade_shell;
 	class UGL_FlareWhite_F;
 	class SWOP_DC15SA_Ammo;
@@ -188,7 +188,7 @@ class CfgMagazines
 		initSpeed=1100;
 		descriptionShort="High power magazine";
 	};
-	class macro_new_mag(stun,5):DCStun_Mag
+	class macro_new_mag(stun,5):JLTS_stun_mag_long
 	{
 		displayName="5 Round Stun Cell";
 		descriptionShort = "5 Round Stun Cell";
@@ -321,6 +321,7 @@ class CfgMagazines
 	////////////////////////////////////////////////////
 	class macro_new_mag(imploder,1):3AS_BaridumCore
 	{
+		author="RD501";
 		scope=2;
 		displayName = "Republic Thermal Imploder";
 		displayNameShort = "Thermal Imploder";
@@ -330,6 +331,7 @@ class CfgMagazines
 	};
 	class macro_new_mag(thermaldet,1):3AS_ThermalDetonator
 	{
+		author="RD501";
 		scope=2;
 		displayName = "Republic Thermal Detonator";
 		displayNameShort = "Thermal Detonator";
@@ -339,6 +341,7 @@ class CfgMagazines
 	};
 	class macro_new_mag(squad_shield_sigma,1):3AS_BaridumCore
 	{
+		author="RD501";
 		scope=2;
 		displayName = "Republic Squad Shield Sigma";
 		displayNameShort = "Squad Shield Sigma";
@@ -354,6 +357,7 @@ class CfgMagazines
 	class RPG32_HE_F;
 	class macro_new_mag(rps1,1):RPG32_F
 	{
+		author="RD501";
 		scope=1;
 		weight=1;
 		mass=1;
