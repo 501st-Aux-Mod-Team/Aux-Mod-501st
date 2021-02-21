@@ -142,9 +142,9 @@ call macro_fnc_name(stun);
 {
 	private _idx = _x addEventHandler ["CuratorObjectPlaced", {
 		params ["_curator","_entity"];
-		if!(_entity isKindOf "Man") then {
+		if!(_entity isKindOf "Man" && side _entity == east) then {
 			_entity allowCrewInImmobile true;
-            _entity setVehicleLock "LOCKED";
+			_entity setVehicleLock "LOCKED";
 			{
 				_x disableAI "FSM";
 				_x setBehaviour "CARELESS";
