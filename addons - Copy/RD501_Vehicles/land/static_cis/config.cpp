@@ -117,13 +117,13 @@ class CfgVehicles
 			{
 				weapons[]=
 				{
-					"Cannon_ATST"
+					macro_new_weapon(generic,aircraft_laser)
 				};
-				magazines[]={"1000Rnd_Laser_Cannon_Minigun","1000Rnd_Laser_Cannon_Minigun","1000Rnd_Laser_Cannon_Minigun","1000Rnd_Laser_Cannon_Minigun","1000Rnd_Laser_Cannon_Minigun"};
+				magazines[]={macro_new_mag(generic_aircraft_gun,1000),macro_new_mag(generic_aircraft_gun,1000),macro_new_mag(generic_aircraft_gun,1000),macro_new_mag(generic_aircraft_gun,1000),macro_new_mag(generic_aircraft_gun,1000)};
 			};
 		};
 	};
-		class StaticMortar: StaticWeapon
+	/*class StaticMortar: StaticWeapon
 	{
 		class Turrets: Turrets
 		{
@@ -155,7 +155,7 @@ class CfgVehicles
 			class MainTurret: MainTurret
 			{};
 		};
-	};
+	};*/
 	/*class macro_new_vehicle(mortar,cis):3AS_Republic_Mortar
 	{
 		author = "RD501";

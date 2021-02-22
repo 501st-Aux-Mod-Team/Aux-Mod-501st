@@ -14,7 +14,7 @@ call macro_fnc_name(nightvision);
 #define QWEAP_LAUNCH(name) macro_quote(macro_new_weapon(launcher,name))
 
 // Drone Recharge
-RD501_DRONE_BATTERY = "lightsaberG_swing";
+RD501_DRONE_BATTERY = "RD501_10mw_x30_mag";
 
 //Force Walk
 RD501_FORCE_WALK_WEAPONS = [macro_quote(macro_new_weapon_nofam(z1000))];
@@ -80,3 +80,72 @@ call macro_fnc_name(stun);
 		_this call rd501_fnc_jammersServerPFH
 	}, 1] call CBA_fnc_addPerFrameHandler;
 }] call CBA_fnc_addEventHandler;
+
+// Grenade Deployables
+["ace_firedPlayer", {
+    params["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile"];
+
+    if (isNull _projectile) then {
+        _projectile = nearestObject [_unit, _ammo];
+    };
+    private _config = configFile >> "CfgAmmo" >> _ammo;
+    if (getNumber (_config >> "rd501_grenade_deployable") == 1) then {
+        private _deployable = getText (_config >> "rd501_grenade_deployable_object");
+        private _ttl = getNumber (_config >> "rd501_grenade_deployable_timeToLive");
+        if(isNil "_ttl") then {
+            _ttl = -1;
+        };
+        [
+            {
+                params["_projectile", "_deployable"];
+                private _speed = vectorMagnitude (velocity _projectile);
+                !(isNil "_projectile") && (alive _projectile) && _speed <= 0.1
+            }, 
+            {
+                params["_projectile", "_deployable", "_timeToLive"];
+                private _position = getPosATL _projectile;
+                private _deployed = createVehicle [_deployable, _position, [], 0, "CAN_COLLIDE"];
+				_deployed setPosATL _position;
+                deleteVehicle _projectile;
+                if(_timeToLive > 0) then {
+                    [
+                        {
+                            params["_deployed"];
+                            deleteVehicle _deployed;
+                        },
+                        [_deployed],
+                        _timeToLive
+                    ] call CBA_fnc_waitAndExecute;
+                };
+            },
+            [_projectile, _deployable, _ttl, _magazine, _unit],
+            10, 
+            { 
+                params["", "", "", "_magazine", "_unit"];
+				systemChat "Something went wrong with your order, we apologise for the inconvenience.";
+				systemChat "Please file all complaints with Mirror at the Aux Office.";
+				[
+					{
+						params["_unit", "_mag"];
+						_unit addItem _mag;
+						systemChat "We've attached a complementary replacement if you had any inventory space.";
+					},
+					[_unit, _magazine],
+					2
+				] call CBA_fnc_waitAndExecute;
+			}
+        ] call CBA_fnc_waitUntilAndExecute;
+    };
+}] call CBA_fnc_addEventHandler;
+
+// Prevent Dismount on all Zeus Placed Items
+{
+	private _idx = _x addEventHandler ["CuratorObjectPlaced", {
+		params ["_curator","_entity"];
+		if!(_entity isKindOf "Man" && side _entity == east) then {
+			_entity allowCrewInImmobile true;
+			_entity setVehicleLock "LOCKED";
+		};
+	}];
+	_x setVariable ["rd501_curator_dismount_disable_index", _idx, false];
+} forEach allCurators;

@@ -1,4 +1,4 @@
-#define COMPONENT nvg
+/*#define COMPONENT nvg
 #include "../../RD501_main/config_macros.hpp"
 #include "../_common/common.hpp"
 
@@ -189,23 +189,7 @@ class cfgWeapons
 		macro_thermal_nvg_default
  	};
 
-	class macro_new_weapon(nvg,shock_trooper) : SWOP_NVChip2
-	{
-		visionMode[] = {"Normal"};
-		dlc = "rd501";
-		author= "RD501";
-		RD501_isNV = 1;
-		displayName = "Shock Trooper Chip";
-	};
 
-	class macro_new_weapon(nvg,shock_trooper_enhanced) : SWOP_NVChip2
-	{
-		visionMode[] = {"Normal","TI"};
-		thermalMode[] = {0,2};
-		dlc = "rd501";
-		author= "RD501";
-		RD501_isNV = 1;
-		displayName = "Shock Trooper Enhanced Chip";
-	};
 };
 
+*/

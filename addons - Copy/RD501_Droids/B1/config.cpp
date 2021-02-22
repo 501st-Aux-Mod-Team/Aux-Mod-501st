@@ -13,8 +13,7 @@ class CfgPatches
    			"JLTS_weapons_RPS6",
 			"JLTS_weapons_E5",
 			"JLTS_weapons_E5S",
-			"JLTS_weapons_E60R",
-			"212th_swop_weapons",
+			"JLTS_weapons_E60R"
 		};
 		requiredVersion = 0.1;
 		units[] = {
@@ -396,13 +395,11 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			macro_grenade_launcher_mags,
-			macro_grenade_launcher_grenades
+			macro_grenade_launcher_mags
 		};
 		respawnMagazines[]=
 		{
-			macro_grenade_launcher_mags,
-			macro_grenade_launcher_grenades
+			macro_grenade_launcher_mags
 		};
 		cost=2;
 	}

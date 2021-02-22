@@ -98,7 +98,7 @@ class CfgWeapons
 	};
 	class Throw: GrenadeLauncher
 	{
-		muzzles[] += {"Shadow_Muzzle","Imploder_Muzzle","Thermaldet_Muzzle"};
+		muzzles[] += {"Shadow_Muzzle","Imploder_Muzzle","Thermaldet_Muzzle","Squad_Shield_Muzzle"};
 		class Shadow_Muzzle: ThrowMuzzle
 		{
 			magazines[] = {"RD501_BlueShadow_Grenade"};
@@ -110,6 +110,10 @@ class CfgWeapons
 		class Thermaldet_Muzzle: ThrowMuzzle
 		{
 			magazines[] = {macro_new_mag(thermaldet,1)};
+		};
+		class Squad_Shield_Muzzle: ThrowMuzzle
+		{
+			magazines[] = {macro_new_mag(squad_shield_sigma,1)};
 		};
 	};
 };

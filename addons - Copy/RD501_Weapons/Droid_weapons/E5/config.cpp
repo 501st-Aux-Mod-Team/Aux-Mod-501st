@@ -17,43 +17,61 @@ class CfgPatches
 		requiredVersion=0.1;
 		units[]={};
 		weapons[]={
-			//macro_new_weapon(e5,c)
-			macro_new_weapon(e5,aqua)
+			macro_new_weapon(e5,special)
 		};
 	};
 };
+class Mode_SemiAuto;
 class Mode_FullAuto;
 class cfgWeapons 
 {
 	
-	class SWOP_BlasterRifle_Base;
-
-	class SWOP_E5:SWOP_BlasterRifle_Base
+	class Rifle_Base_F;
+	class arifle_MX_Base_F: Rifle_Base_F
+	{	};
+	class JLTS_E5: arifle_MX_Base_F
 	{
-		class GunParticles;
+		class Single: Mode_SemiAuto
+		{};
+		class FullAuto: Mode_FullAuto
+		{};
 	};
-	class macro_new_weapon(e5,aqua): SWOP_E5
+	class macro_new_weapon(e5,special): JLTS_E5
 	{
-		dlc = "rd501";
-		author = "RD501";
-		scope = 2;
-		displayname = "E5-A Blaster Rifle";
-		baseweapon = "E5-A Blaster Rifle";
-		canShootInWater = 1;
-		//magazines[] = {"RD501_Aqua_E5_Mag","RD501_Aqua_E5_Mag","RD501_Aqua_E5_Mag","RD501_Aqua_E5_Mag","RD501_Aqua_E5_Mag","RD501_Aqua_E5_Mag","RD501_Aqua_E5_Mag"};
-		descriptionShort = "Submersible E5 Rifle";
-		selectionFireAnim = "muzzleFlash";
-		
-		magazines[]={macro_new_mag(E5_aqua,60)};
-		class GunParticles : GunParticles
-		{	class SecondEffect
-			{
-				effectName = "ShotUnderwater";
-				positionName = "barrel";
-				directionName = "Tip";
-			};
+		scope=2;
+        scopeArsenal=2;
+		JLTS_hasElectronics=0;
+		recoil="recoil_mxm"
+		baseWeapon=macro_new_weapon(e5,special)
+        displayName="CIS E5 Special";
+		ACE_Overheating_mrbs = 450000;
+		class Single: Single
+		{
+			reloadTime=0.055;
+			recoil="recoil_single_mx";
+			recoilProne="recoil_single_prone_mx";
+			dispersion=0.0010000001;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=200;
+			midRangeProbab=0.69999999;
+			maxRange=400;
+			maxRangeProbab=0.30000001;
+		};
+		class FullAuto: FullAuto
+		{
+			reloadTime=0.07;
+			dispersion=0.0010000001;
+			recoil="recoil_auto_mx";
+			recoilProne="recoil_auto_prone_mx";
+			minRange=0;
+			minRangeProbab=0.89999998;
+			midRange=15;
+			midRangeProbab=0.69999999;
+			maxRange=30;
+			maxRangeProbab=0.1;
+			aiRateOfFire=1e-006;
 		};
 	};
-
 };
 

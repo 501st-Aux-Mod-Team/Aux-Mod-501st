@@ -46,7 +46,7 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator=2;
 		author = "Spartan163";
-		model = "\SW_medical\bacta_tank.p3d";
+		model="kobra\442_misc\bacta\bacta_tank.p3d";
 		displayName = "Bacta Tank Mk.II";
 		hiddenSelections[] = {};
 		hiddenSelectionsTextures[] = {};

@@ -30,7 +30,6 @@ class CfgPatches
 		units[]=
 		{
 			macro_new_vehicle(drone,cis_Hover_Droid),
-			macro_new_vehicle(drone,Rebel_Dio_Droid),
 			macro_new_vehicle(drone,Clone_Recon_Droid),
 			macro_new_vehicle(drone,Clone_Recon_Droid_ATTE),
 			macro_new_vehicle(drone,rep_stealth_fixedwing),
@@ -74,22 +73,6 @@ class CfgVehicles
 
 	};
 		
-	class macro_new_vehicle(drone,Rebel_Dio_Droid): SWOP_Rebel_Dio_Droid
-	{
-		author = "RD501";
-		scope=2
-		forceInGarage = 1;
-		displayName = "Rebel ID10 Droid MK.II";
-		altFullForce = 1000;
-		altNoForce = 1100;
-
-		faction = macro_rebel_faction
-		class EventHandlers {
-            
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
-        };
-	};
-	
 	class macro_new_vehicle(drone,Clone_Recon_bag):JLTS_UAV_prowler_gar_backpack
 	{
 		displayName="R-2 Drone Bag";
@@ -104,7 +87,7 @@ class CfgVehicles
 		};
 	};
 	#define ARR_2(a,b) a,b
-	class macro_new_vehicle(drone,Clone_Recon_Droid): swclonerecondroid
+	class macro_new_vehicle(drone,Clone_Recon_Droid): JLTS_UAV_prowler_gar
 	{
 		author = "RD501";
 		scope=2
@@ -124,17 +107,19 @@ class CfgVehicles
         {
             "\SW_CloneWarsWeapons\Recon\com_weap_probedroid.paa"
         };*/
-		 class ACE_Actions: ACE_Actions {
-            class ACE_MainActions: ACE_MainActions {
-				condition = macro_quote(true);
+		class ACE_Actions {
+            distance = 4;
+            condition = macro_quote(true);
+            class ACE_MainActions {
+                condition = macro_quote(true);
                 class RD501_Drone_Refuel
-				{
-					displayName = "Refuel Drone";
-					distance = 4;
-					condition = macro_quote([ARR_2(_player,_target)] call macro_fnc_name(canRefuel));
-					statement = macro_quote([ARR_2(_player,_target)] call macro_fnc_name(refuelUAVDrone));
-					position = macro_quote(call ace_interaction_fnc_getVehiclePos);
-				};
+                {
+                    displayName = "Refuel Drone";
+                    distance = 4;
+                    condition = macro_quote([ARR_2(_player,_target)] call macro_fnc_name(canRefuel));
+                    statement = macro_quote([ARR_2(_player,_target)] call macro_fnc_name(refuelUAVDrone));
+                    position = macro_quote(call ace_interaction_fnc_getVehiclePos);
+                };
             };
         };
 		class assembleInfo

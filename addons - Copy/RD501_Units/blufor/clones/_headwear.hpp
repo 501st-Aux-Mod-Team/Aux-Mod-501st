@@ -9,9 +9,9 @@ class JLTS_CloneNVGCC;
 class JLTS_CloneNVGMC;
 class JLTS_CloneBinocular;
 class JLTS_CloneBinocular_black;
-class swop_nvchipclean;
+class JLTS_NVG_droid_chip_1;
 
-class rd501_swop_nvchipclean: swop_nvchipclean
+class rd501_swop_nvchipclean: JLTS_NVG_droid_chip_1
 {
     displayname = "Operator Class Vision Enhancement Chip";
     modelOptics="";
@@ -155,6 +155,33 @@ class rd501_JLTS_CloneNVGMC: JLTS_CloneNVGMC
         "TI"
     };
 };
+class macro_new_weapon(nvg,shock_trooper) : JLTS_NVG_droid_chip_1
+{
+	visionMode[] = {"Normal","NVG"};
+	dlc = "rd501";
+	author= "RD501";
+	displayName = "SW NVG Chip(Clear)";
+	macro_thermal_nvg_default
+};
+
+	class macro_new_weapon(nvg,shock_trooper) : JLTS_NVG_droid_chip_1
+	{
+		visionMode[] = {"Normal"};
+		dlc = "rd501";
+		author= "RD501";
+		RD501_isNV = 1;
+		displayName = "Shock Trooper Chip";
+	};
+
+	class macro_new_weapon(nvg,shock_trooper_enhanced) : JLTS_NVG_droid_chip_1
+	{
+		visionMode[] = {"Normal","TI"};
+		thermalMode[] = {0,2};
+		dlc = "rd501";
+		author= "RD501";
+		RD501_isNV = 1;
+		displayName = "Shock Trooper Enhanced Chip";
+	};
 class rd501_JLTS_CloneBinocular: JLTS_CloneBinocular
 {
     displayname = "[501st] Clone Macrobinoculars (White)";

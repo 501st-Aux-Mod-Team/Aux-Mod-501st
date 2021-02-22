@@ -51,75 +51,11 @@ class CfgGlasses
 		hiddenSelectionsTextures[] = {""};
 		mass = 0.1;
 	};
-
-	class SWOP_Clones_HUD;
-	class macro_new_glass(phase2_hud): SWOP_Clones_HUD
-	{
-		displayname = "Phase2 - CloneTrooper HUD";
-		
-		model = "\A3\Weapons_f\DummyNVG";
-		author = "SWOP";
-		scope = 2;
-		scopeCurator = 2;
-		scopeArsenal = 2;
-		mode = 0;
-		picture = "\SWOP_Main\NVG\hudCT_x_ca.paa";
-		ACE_Overlay = macro_unit_skin_textures\glasses\phase2.paa;
-		ace_overlayDirt = macro_unit_skin_textures\glasses\phase2dirt.paa;
-		ace_dustPath = "";
-		ACE_OverlayCracked = macro_unit_skin_textures\glasses\phase2crack.paa;
-		ACE_Resistance = 2;
-		ACE_Protection = 1;
-		identityTypes[] = {};
-		mass = 2;
-	};
-
-	class macro_new_glass(phase2_hud_snow): macro_new_glass(phase2_hud)
-	{
-		displayname = "Phase2 - CloneTrooper HUD(Snow)";
-		
-	
-		ACE_Overlay = macro_unit_skin_textures\glasses\phase2.paa;
-		ace_overlayDirt = macro_unit_skin_textures\glasses\phase2frozen.paa;
-		ace_dustPath = "";
-		ACE_OverlayCracked = macro_unit_skin_textures\glasses\phase2crack_frozen.paa;
-	
-	};
-	class macro_new_glass(phase1_hud): macro_new_glass(phase2_hud)
-	{
-		displayname = "Phase1 - CloneTrooper HUD";
-	
-	
-		ACE_Overlay = macro_unit_skin_textures\glasses\phase1.paa;
-		ace_overlayDirt = "";
-		ace_dustPath = "";
-		ACE_OverlayCracked = "\SWOP_Main\NVG\hudgoogles_clonescracked.paa";
-		ACE_Resistance = 2;
-		ACE_Protection = 1;
-		identityTypes[] = {};
-		mass = 2;
-	};
-
-
-	class macro_new_glass(acklay_hud):macro_new_glass(phase2_hud)
-	{
-		displayname = "AB - CloneTrooper HUD";
-		ACE_Overlay = macro_unit_skin_textures\glasses\HudAcklay.paa;
-		ace_overlayDirt = macro_unit_skin_textures\glasses\HudAcklay.paa;
-		ace_dustPath = "";
-		ACE_OverlayCracked = macro_unit_skin_textures\glasses\HudAcklay.paa;
-	}
-	class macro_new_glass(dark_mask_2):g_balaclava_blk
-	{
-		Displayname="Stealth Balaclava (Dark)"
-		hiddenSelectionsTextures[] = {"rd501_units\textures\glasses\dark_mask_2.paa"};
-	}
-
-	class macro_new_glass(remove_blue): macro_new_glass(phase2_hud)
+	class macro_new_glass(remove_blue): macro_new_glass(Diving_Goggles)
 	{
 		displayName = "Color Suppression Chip (Blue)";
 		author = DANKAUTHORS;
-		picture = "RD501_Units\textures\icons\no_blue.paa"
+		picture = "\RD501_Units\textures\icons\no_blue.paa"
 		scope = 2;
 		scopeCurator = 2;
 		scopeArsenal = 2;
@@ -137,13 +73,13 @@ class CfgGlasses
 	class macro_new_glass(remove_red): macro_new_glass(remove_blue)
 	{
 		displayName = "Color Suppression Chip (Red)";
-		picture = "RD501_Units\textures\icons\no_red.paa"
+		picture = "\RD501_Units\textures\icons\no_red.paa"
 		ace_color[] = {-150.0,0.0,0.0};
 	}
 	class macro_new_glass(remove_green): macro_new_glass(remove_blue)
 	{
 		displayName = "Color Suppression Chip (Green)";
-		picture = "RD501_Units\textures\icons\no_green.paa"
+		picture = "\RD501_Units\textures\icons\no_green.paa"
 		ace_color[] = {0.0,-100.0,0.0};
 	}
 };

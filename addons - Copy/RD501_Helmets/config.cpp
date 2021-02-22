@@ -12,20 +12,22 @@ class CfgPatches
 		};
 		requiredVersion=0.1;
 		units[]={};
-		weapons[]={};
+		weapons[]={
+			macro_new_helmet(infantry,jlts_recruit)
+		};
 	};
 };
 
 class CfgWeapons
 {
-	class itemCore;
 	class HeadgearItem;
-	class H_HelmetSpecB;
+	class H_HelmetB;
 	
 	//pilots
-	class macro_new_helmet(pilot,base): itemCore//RD501_501st_Pilot_Base
+	class macro_new_helmet(pilot,base): H_HelmetB//RD501_501st_Pilot_Base
 	{
 		scope = 2;
+		scopeArsenal = 2;
 		author = "RD501";
 		weaponPoolAvailable = 1;       
 		ace_hearing_protection = 0.85; 		
@@ -89,138 +91,10 @@ class CfgWeapons
 		};
 		subItems[] = {"G_B_Diving","ItemcTabHCam"};
 	};
-
-	class macro_new_helmet(pilot,gold): itemCore//RD501_501st_Pilot_Base
+	class macro_new_helmet(empire_rg,boi) : H_HelmetB
 	{
 		scope = 2;
-		author = "RD501";
-		weaponPoolAvailable = 1;       
-		ace_hearing_protection = 0.85; 		
-		ace_hearing_lowerVolume = 0;    
-		displayName = "Clone pilot helmet (501st legion) Gold";
-		picture = "\SWOP_clones\data\helmets\ico\ico_pilot.paa";
-		//model = "SWOP_clones\helmet\CloneHelmetPilot.p3d";
-		subItems[] = {"G_B_Diving","ItemcTabHCam"};
-		model = "\501st_helmets\AB\AB_helmet_p1.p3d";	
-		hiddenSelections[] = {
-			"camo1",
-			"mat"
-		};
-	
-		hiddenSelectionsTextures[] = {
-			macro_custom_helmet_textures\aviation\pilots\LordKrayt.paa
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"",
-			"swop_clones\data\helmpilot.rvmat"//"swop_clones\data\helmpilot.rvmat"//  \501st_Helmets\AB\data\white_glow.rvmat
-		};
-
-
-		class ItemInfo: HeadgearItem
-		{
-			mass = 30;
-			uniformmodel = "\501st_helmets\AB\AB_helmet_p1_gold.p3d";//"SWOP_clones\helmet\CloneHelmetPilot.p3d";
-			modelSides[] = {6};
-			hiddenSelections[] = {
-				"camo1",
-				"mat"
-			};
-			material = -1;
-			explosionShielding = 2.2;
-			minimalHit = 0.01;
-			passThrough = 0.01;
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointName = "HitHead";
-					armor = 50;
-					passThrough = 0.6;
-				};
-			};
-		};
-
-		subItems[] = {macro_new_weapon(nvg_integrated,pilot_test),"G_B_Diving"};
-	};
-
-
-	//inf,arc
-	class macro_new_helmet(infantry,base) : itemCore
-	{
-		scope = 2;
-		author = "RD501";
-		weaponPoolAvailable = 1;       
-		subItems[] = {"G_B_Diving","ItemcTabHCam"};
-		ace_hearing_protection = 0.85; 		
-		ace_hearing_lowerVolume = 0;   
-
-		displayName = "Clonetrooper helmet (501st 'Dino')";
-		picture = "\SWOP_clones\data\helmets\ico\Ico_helm_501.paa";
-		model = "SWOP_clones\helmet\cloneHelmet.p3d";
-		hiddenSelections[] = {"Camo1"};
-		hiddenSelectionsTextures[] = {"SWOP_clones\data\helmets\Helmet501dino_co.paa"};
-		class ItemInfo: HeadgearItem
-		{
-			mass = 30;
-			uniformmodel = "SWOP_clones\helmet\cloneHelmet.p3d";
-			modelSides[] = {6};
-			hiddenSelections[] = {"Camo1"};
-			material = -1;
-			explosionShielding = 2.2;
-			minimalHit = 0.01;
-			passThrough = 0.01;
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointName = "HitHead";
-					armor = 50;
-					passThrough = 0.6;
-				};
-			};
-		};
-	};
-
-	class macro_new_helmet(infantry,lum_base) : itemCore
-	{
-		scope = 0;
-		author = "RD501";
-		weaponPoolAvailable = 1;       
-		subItems[] = {"G_B_Diving","ItemcTabHCam"};
-		ace_hearing_protection = 0.85; 		
-		ace_hearing_lowerVolume = 0;    
-
-		displayName = "Clonetrooper helmet (501st)";
-		picture = "\SWOP_clones\data\helmets\ico\Ico_helm_501.paa";
-		model = "SWOP_clones\helmet\cloneHelmetLumVisor.p3d";//
-		hiddenSelections[] = {"Camo1"};
-		hiddenSelectionsTextures[] = {"SWOP_clones\data\helmets\Helmet501clutch_co.paa"};
-		class ItemInfo: HeadgearItem
-		{
-			mass = 30;
-			uniformmodel = "SWOP_clones\helmet\cloneHelmetLumVisor.p3d";//
-			modelSides[] = {6};
-			hiddenSelections[] = {"Camo1"};
-			material = -1;
-			explosionShielding = 2.2;
-			minimalHit = 0.01;
-			passThrough = 0.01;
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointName = "HitHead";
-					armor = 50;
-					passThrough = 0.6;
-				};
-			};
-		};
-	};
-	
-	class macro_new_helmet(empire_rg,boi) : itemCore
-	{
-		scope = 2;
+		scopeArsenal = 2;
 		author = "RD501";
 		weaponPoolAvailable = 1;       
 		subItems[] = {"G_B_Diving","ItemcTabHCam"};
@@ -253,9 +127,10 @@ class CfgWeapons
 			};
 		};
 	};
-	class macro_new_helmet(arc,base_jlts) : itemCore
+	class macro_new_helmet(arc,base_jlts) : H_HelmetB
 	{
 		scope = 2;
+		scopeArsenal = 2;
 		author = "RD501";
 		weaponPoolAvailable = 1;       
 		subItems[] = {"G_B_Diving"};
@@ -290,9 +165,10 @@ class CfgWeapons
 			};
 		};
 	};
-	class macro_new_helmet(arc,sgt_jlts) : itemCore
+	class macro_new_helmet(arc,sgt_jlts) : H_HelmetB
 	{
 		scope = 2;
+		scopeArsenal = 2;
 		author = "RD501";
 		weaponPoolAvailable = 1;       
 		subItems[] = {"G_B_Diving"};
@@ -329,10 +205,11 @@ class CfgWeapons
 	};
 
 	//AB
-	class macro_new_helmet(airborne,base): H_HelmetSpecB
+	class macro_new_helmet(airborne,base): H_HelmetB
 	{
 		author = "";
 		scope = 2;
+		scopeArsenal = 2;
 		displayName = "Clone airborne helmet";
 		model = "\501st_helmets\AB\AB_helmet.p3d";
 		subItems[] = {"G_B_Diving","ItemcTabHCam"};
@@ -375,7 +252,7 @@ class CfgWeapons
 		};
 	};
 
-	class macro_new_helmet(airborne,lum_base): macro_new_helmet(airborne,base)//H_HelmetSpecB
+	class macro_new_helmet(airborne,lum_base): macro_new_helmet(airborne,base)//H_HelmetB
 	{
 		author = "";
 		scope = 0;
@@ -392,9 +269,10 @@ class CfgWeapons
 		
 	};
 
-	class macro_new_helmet(infantry,jlts_recruit) : itemCore
+	class macro_new_helmet(infantry,jlts_recruit) : H_HelmetB
 	{
 		scope = 2;
+		scopeArsenal = 2;
 		author = "RD501";
 		weaponPoolAvailable = 1;       
 		ace_hearing_protection = 0.85; 		
@@ -427,9 +305,10 @@ class CfgWeapons
 			};
 		};
 	};
-	class macro_new_helmet(infantry,jlts_cadet) : itemCore
+	class macro_new_helmet(infantry,jlts_cadet) : H_HelmetB
 	{
 		scope = 2;
+		scopeArsenal = 2;
 		author = "RD501";
 		weaponPoolAvailable = 1;       
 		
@@ -463,9 +342,10 @@ class CfgWeapons
 			};
 		};
 	};
-	class macro_new_helmet(infantry,jlts_trooper) : itemCore
+	class macro_new_helmet(infantry,jlts_trooper) : H_HelmetB
 	{
 		scope = 2;
+		scopeArsenal = 2;
 		author = "RD501";
 		weaponPoolAvailable = 1;       
 		subItems[] = {"G_B_Diving","ItemcTabHCam"};
@@ -499,9 +379,10 @@ class CfgWeapons
 			};
 		};
 	};
-	class macro_new_helmet(infantry,jlts_sgt) : itemCore
+	class macro_new_helmet(infantry,jlts_sgt) : H_HelmetB
 	{
 		scope = 2;
+		scopeArsenal = 2;
 		author = "RD501";
 		weaponPoolAvailable = 1;       
 		subItems[] = {"G_B_Diving","ItemcTabHCam"};
@@ -535,10 +416,11 @@ class CfgWeapons
 			};
 		};
 	};			
-	class macro_new_helmet(airborne,jlts_trooper): H_HelmetSpecB
+	class macro_new_helmet(airborne,jlts_trooper): H_HelmetB
 	{
 		author = "RD501";
 		scope = 2;
+		scopeArsenal = 2;
 		subItems[] = {"G_B_Diving","ItemcTabHCam"};
 		displayName = "[501st] AB HELM 02 (Trooper)";
 		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
@@ -566,10 +448,11 @@ class CfgWeapons
 			};
 		};
 	};
-	class macro_new_helmet(airborne,jlts_vtrooper): H_HelmetSpecB
+	class macro_new_helmet(airborne,jlts_vtrooper): H_HelmetB
 	{
 		author = "RD501";
 		scope = 2;
+		scopeArsenal = 2;
 		displayName = "[501st] AB HELM 03 (Vet. Trooper)";
 		subItems[] = {"G_B_Diving","ItemcTabHCam"};
 		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
@@ -597,10 +480,11 @@ class CfgWeapons
 			};
 		};
 	};
-	class macro_new_helmet(airborne,jlts_base): H_HelmetSpecB
+	class macro_new_helmet(airborne,jlts_base): H_HelmetB
 	{
 		author = "RD501";
 		scope = 2;
+		scopeArsenal = 2;
 		displayName = "[501st] AB HELM 01 (Base)";
 		subItems[] = {"G_B_Diving","ItemcTabHCam"};
 		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";

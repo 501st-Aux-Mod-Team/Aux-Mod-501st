@@ -30,7 +30,11 @@ class CfgPatches
 class CfgVehicles
 {
 	class StaticMGWeapon;
-	class StaticWeapon;
+	class LandVehicle;
+	class StaticWeapon : LandVehicle
+	{
+		class Turrets;
+	};
 	class StaticAAWeapon:StaticWeapon
 	{
 		class Turrets;
@@ -58,16 +62,11 @@ class CfgVehicles
 			class MainTurret;
 		};
 	};
-	class LandVehicle;
-	class StaticWeapon : LandVehicle
-	{
-		class Turrets;
-	};
 	class OPTRE_Static_M41:StaticMGWeapon
 	{
 		class Turrets;
 	};
-	class OPTRE_Static_Gauss:OPTRE_Static_M41
+	class OPTRE_Static_Gauss : OPTRE_Static_M41
 	{
 		class Turrets: Turrets
 		{
@@ -165,6 +164,8 @@ class CfgVehicles
 			maxTurn = 360;
 			weapons[] = {macro_new_weapon(stat,aap4)};
 			magazines[] = {macro_new_mag(aap,4)};
+			//weapons[]={"ace_javelin_Titan_Static"};
+			//magazines[]={"1Rnd_GAT_missiles"};
 			turretInfoType = "ACE_RscOptics_javelin";
 			gunnerOpticsColor[] = {0,0,0,1};
 			gunnerOpticsEffect[] = {};
@@ -334,7 +335,7 @@ class CfgWeapons
         modelOptics = "\z\ace\addons\javelin\data\reticle_titan.p3d";  // Optics model
         canLock = 0;  // Disable vanilla locking (0-disabled, 1-enabled)
         lockingTargetSound[] = {"", 0, 1};  // Locking sound
-        lockedTargetSound[] = {"", 0, 1};  // Target acquired sound
+        lockedTargetSound[] = {"", 0, 1};  // Target acquired sound*/
 		hiddenSelectionsTextures[]=
 		{
 			"RD501_Vehicles\textures\static\warthog_addons_grey_co.paa"
@@ -393,7 +394,8 @@ class CfgMagazines
 		picture="\RD501_Vehicles\static\data\rd501_icon_mag_staticaap.paa";
 		displayName= "AAP4 'Striker' Pod"
 		count=4;
-		ammo=macro_new_ammo(striker)
+		ammo="ACE_Javelin_FGM148_Static";
+		//ammo=macro_new_ammo(striker)
 		weaponpoolavailable=1;
 	};
 		class macro_new_mag(mar,1): 3AS_500_Rnd_BlasterTurret_mag

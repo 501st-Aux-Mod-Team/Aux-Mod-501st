@@ -14,8 +14,8 @@ class CfgPatches
 			//"sci_APC",
 			"A3_Data_F_Enoch_Loadorder",//Load all of arma first
 			cba_patches ,//cba stuff
-			cancer_pbos ,//all of swop pbos
-			"212th_Engineer"
+			//cancer_pbos ,//all of swop pbos
+			//"212th_Engineer"
 		};
 		requiredVersion=0.1;
 		units[]={};
@@ -669,47 +669,4 @@ class CfgVehicles
 			getOutMan="[(_this select 0), false] call GEARF_fnc_hideSlungHelmet;";
 		};
 	};
-};
-
-class cfgheads
-{
-	class head_maul_head;
-    class rd501_invis_head: head_maul_head
-    {
-		model = "";
-		selectionHeadWound = "injury_head";
-		selectionPersonality = "personality";
-		selectionPersonalityHL = "hl";
-    };
-};
-
-class cfgfaces
-{
-    class man_a3
-    {
-		class head_maul;
-        class rd501_invis_head: head_maul
-        {
-            disabled = 0;
-            displayname = "Invisible Head";
-            head = "rd501_invis_head";
-            identityTypes[] = {"rd501_invis_head"};
-            material = "A3\Characters_F\Heads\Data\m_White_01.rvmat";
-            materialHL = "\A3\Characters_F\Heads\Data\hl_white_bald_muscular.rvmat";
-            materialHL2 = "\A3\Characters_F\Heads\Data\hl_white_bald_muscular.rvmat";
-            name = "Clone";
-            texture = "";
-            textureHL = "\A3\Characters_F\Heads\Data\hl_white_bald_co.paa";
-            textureHL2 = "\A3\Characters_F\Heads\Data\hl_white_bald_co.paa";
-        };
-    };
-};
-
-class cfgidentities
-{
-	class headmaul;
-    class rd501_invis_head: headmaul
-    {
-        name = "Clone";
-    };
 };

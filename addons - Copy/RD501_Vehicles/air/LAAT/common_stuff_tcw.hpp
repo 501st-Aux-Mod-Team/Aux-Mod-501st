@@ -11,6 +11,7 @@ forceInGarage = 1;
 faction = macro_republic_faction
 editorSubcategory = macro_editor_cat_air(Republic_heli)
 vehicleClass = macro_editor_vehicle_type_air(Republic)
+weaponLockSystem = "2+4+8";
 
 RD501_magclamp_small_forbidden=1;
 RD501_magclamp_large_offset[]={0.0,1.6,-7.3};
@@ -31,7 +32,7 @@ RD501_magclamp_large_offset[]={0.0,1.6,-7.3};
 ///
 weapons[] = {
 	macro_basic_air_weapons,
-	macro_new_weapon(generic,green_dual_aircraft_laser),
+	macro_new_weapon(generic,republic_aircraft_cannon),
 	macro_new_weapon(cannon,laat),
 	macro_new_weapon(wynd,lgm),
 	macro_new_weapon(wynd,a2a),
@@ -40,7 +41,7 @@ weapons[] = {
 };
 magazines[] = {
 	macro_basic_air_mags,
-	macro_new_mag(generic_aircraft_gun_dual_green,1000),
+	macro_new_mag(generic_aircraft_gun_green,1000),
 	macro_new_mag(laat_cannon,100),
 	macro_new_mag(a2a,4),
 	macro_new_mag(agm,6),
@@ -91,7 +92,7 @@ class TransportWeapons
 	};
 	class _transport_dc15gl
 	{
-		weapon = macro_new_weapon(DC,15gl)
+		weapon = macro_new_weapon(DC,15cgl)
 		count = 2;
 	};
 	class _transport_valken38x
@@ -235,9 +236,9 @@ class TransportMagazines
 };
 class TransportItems
 {
-	class _xx_SW_SquadShield_Mag
+	class _xx_RD_SquadShield_Mag
 	{
-		name = "SW_SquadShield_Mag";
+		name = macro_new_mag(squad_shield_sigma,1)
 		count = 2;
 	};
 	class _xx_ACE_HuntIR_monitor

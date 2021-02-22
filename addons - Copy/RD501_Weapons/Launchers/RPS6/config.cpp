@@ -19,11 +19,8 @@ class CfgPatches
 	};
 };
 class CfgWeapons
-{	class Launcher_Base_F;
-	class 3AS_RPS6_HP:Launcher_Base_F
-	{
-		class OpticsModes{class optic;};
-	};
+{
+	class 3AS_RPS6_HP;
 	class macro_new_weapon(launcher,RPS6):3AS_RPS6_HP
 	{
 		scope=2;
