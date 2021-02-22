@@ -148,7 +148,7 @@ class CfgVehicles
 	class macro_new_ordnance(OrbitalLaser): Module_F {
 		author = "RD501";
         curatorCanAttach = 1;
-		isGlobal = 0;
+		isGlobal = 1;
 		scope = 1;
 		scopeCurator = 2;
         isTriggerActivated = 0;
