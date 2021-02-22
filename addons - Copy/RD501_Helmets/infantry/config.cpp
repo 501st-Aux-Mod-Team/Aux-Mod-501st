@@ -151,6 +151,8 @@ class CfgWeapons
 	NEW_501_Inf_Helm_JLTS(Garviel,Garviel,Garviel.paa)
 	NEW_501_Inf_Helm_JLTS(Genesis,Genesis,Genesis.paa)
 	NEW_501_Inf_Helm_JLTS(Cherokee,Cherokee,Cherokee.paa)
+	NEW_501_Inf_Helm_JLTS(Rayne,Rayne,Rayne.paa)
+	NEW_501_Inf_Helm_JLTS(Anta,Anta,Anta.paa)
 	NEW_501_ARC_Helm_JLTS(Duke,Duke,Duke.paa)
 	NEW_501_ARC_Helm_JLTS(Jink,Jink,Jink.paa)
 	NEW_501_ARC_Helm_JLTS(Brennan,Brennan,Brennan.paa)
