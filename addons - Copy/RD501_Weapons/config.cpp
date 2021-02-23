@@ -24,20 +24,6 @@ class CfgPatches
 //scopes
 class CfgWeapons
 {
-	class Mode_SemiAuto;
-	class ItemCore;
-	class InventoryItem_Base_F;
-	class InventoryOpticsItem_Base_F;
-
-	#include "_scopes/DC_15A_modeled_x4.hpp"
-
-	#include "_scopes/DC_15A_x4_acog.hpp"
-
-	#include "_scopes/DC_15A_LE_x4_x8.hpp"
-	
-	#include "_scopes/DC_15A_2-6x_acog.hpp"
-	
-	class GrenadeLauncher;
 	class JLTS_stun_muzzle;
 	class RD501_stun_muzzle: JLTS_stun_muzzle
 	{
@@ -259,7 +245,7 @@ class CfgMagazines
 		mass = 100;
 	};
 
-	class SWOP_b2rocket_Mag: CA_Magazine
+	/*class SWOP_b2rocket_Mag: CA_Magazine
 	{
 		scope = 2;
 		displayName = "5Rnd B2 Wrist Rockets";
@@ -274,7 +260,7 @@ class CfgMagazines
 		initSpeed = 100;
 		soundFly[] = {"A3\Sounds_F\weapons\Rockets\rocket_fly_2", 0.501187, 1.3, 400};
 		nameSound = "missiles";
-	};
+	};*/
 
 	class SW_iondisruptor_BlasterRifle_Mag;
 	class macro_new_mag(RAMER,6):SW_iondisruptor_BlasterRifle_Mag

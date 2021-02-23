@@ -87,6 +87,18 @@ class rd501_JLTS_CloneNVGRange: JLTS_CloneNVGRange
         "TI"
     };
 };
+class rd501_JLTS_ShockTrooperNVGRange: JLTS_CloneNVGRange
+{
+    displayname = "[501st] Shock Trooper Viewfinder Antenna (Toggle)";
+    modelOptics="";
+    hiddenSelectionsTextures[] = {"RD501_Units\textures\Republic\clones\clone_rangefinder.paa"};
+	RD501_isNV=1;
+    visionMode[]=
+    {
+        "Normal",
+        "TI"
+    };
+};
 class rd501_JLTS_CloneNVGRange_arc: JLTS_CloneNVGRange
 {
     displayname = "[501st] ARC Viewfinder Antenna (Toggle)";

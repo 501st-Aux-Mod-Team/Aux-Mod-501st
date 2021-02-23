@@ -329,6 +329,17 @@ class CfgMagazines
 		ammo = macro_new_ammo(imploder)
 		descriptionShort = "Republic Thermal Imploder";
 	};
+	class macro_new_mag(throwable_c_type,1):3AS_BaridumCore
+	{
+		author="RD501";
+		scope=2;
+		displayName = "Republic Throwable C-Type";
+		displayNameShort = "Throwable C-Type";
+		count=1;
+		initSpeed=12;
+		ammo = macro_new_ammo(throwable_c_type)
+		descriptionShort = "Republic Throwable C-Type";
+	};
 	class macro_new_mag(thermaldet,1):3AS_ThermalDetonator
 	{
 		author="RD501";

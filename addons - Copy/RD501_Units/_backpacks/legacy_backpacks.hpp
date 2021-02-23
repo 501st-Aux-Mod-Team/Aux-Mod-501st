@@ -12,6 +12,12 @@ class RD501_JLTS_Clone_backpack_s: JLTS_Clone_backpack_s
 	maximumload=700;
 	Displayname="[501st] Combat Pack (Straps)"
 };
+class RD501_JLTS_Clone_backpack_invisible: JLTS_Clone_backpack_s
+{
+	maximumload=700;
+	Displayname="[501st] Combat Invisible Backpack"
+	model="RD501_Units\nothing.p3d";
+};
 class RD501_JLTS_Clone_backpack_medic: JLTS_Clone_backpack_medic
 {
 	maximumload=700;
@@ -62,6 +68,13 @@ class RD501_JLTS_Clone_LR_attachment: JLTS_Clone_LR_attachment
 	maximumload=700;
 	tf_range=35000;
 	Displayname="[501st] Radio Pack (Attachment)"
+};
+class RD501_JLTS_Clone__invis_LR_attachment: JLTS_Clone_LR_attachment
+{
+	maximumload=700;
+	tf_range=35000;
+	Displayname="[501st] Command Invisible Pack"
+	model="RD501_Units\nothing.p3d";
 };
 class RD501_JLTS_Clone_ARC_backpack: JLTS_Clone_ARC_backpack
 {

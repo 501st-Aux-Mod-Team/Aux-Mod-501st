@@ -81,7 +81,7 @@ class CfgWeapons
 		};
 	};
 
-	class macro_new_weapon(aat_cannon,king) : Cannon_TurboLaser
+	class macro_new_weapon(aat_cannon,king) : 3AS_GATCannon
 	{
 		
 		displayName = "King Heavy Laser Cannon";

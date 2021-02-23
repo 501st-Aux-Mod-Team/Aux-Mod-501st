@@ -264,6 +264,19 @@ class CfgAmmo
 		indirectHitRange=2;
 		simulation="shotShell";
 	}
+	class macro_new_ammo(throwable_c_type) : 3AS_CoreDetonator_1RND
+	{
+		hit=1500;
+		indirectHit=1500;
+		indirectHitRange=10;
+		typicalspeed=40;
+		explosionTime=15;
+		timeToLive=20;
+		model="\A3\Weapons_F\Explosives\satchel";
+		simulation="shotShell";
+		ExplosionEffects="MineNondirectionalExplosion";
+		CraterEffects="MineNondirectionalCrater";
+	}
 	class macro_new_ammo(thermaldet) : 3AS_Detonator_1RND
 	{
 		hit=18;
@@ -395,7 +408,7 @@ class CfgAmmo
 	class ACE_Javelin_FGM148_static;
 	class R_PG32V_F;
 	class Mo_cluster_AP;
-	class macro_new_ammo(striker):ACE_Javelin_FGM148_static
+	/*class macro_new_ammo(striker):ACE_Javelin_FGM148_static
 	{
 		hit=1650;
 		effectsMissileInit="RocketBackEffectsStaticRPG";
@@ -403,7 +416,7 @@ class CfgAmmo
 		irLock = 1;
         laserLock = 0;
         airLock = 0;
-		/*class ace_missileguidance {
+		class ace_missileguidance {
             enabled = 1;
 
             minDeflection = 0.00005;      // Minium flap deflection for guidance
@@ -431,8 +444,8 @@ class CfgAmmo
             defaultAttackProfile = "JAV_TOP";
             attackProfiles[] = { "JAV_TOP", "JAV_DIR" };
             useModeForAttackProfile = 1;
-        };*/
-	};
+        };
+	};*/
 	class macro_new_ammo(rps4heat):R_PG32V_F
 	{
 		hit=150;

@@ -70,7 +70,7 @@ class CfgVehicles
 		
 		transportSoldier=8;
 		LESH_canTow = 1;
-		crew = "SWOP_Clonetrooper_P1";
+		crew = "JLTS_Clone_P2_Rex_501";
 		LESH_AxisOffsetTower[] = {0,-6,1};
 		driverCanSee = 31;
 		gunnerCanSee = 31;

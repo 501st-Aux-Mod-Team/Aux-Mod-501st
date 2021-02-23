@@ -335,7 +335,7 @@ class CfgWeapons
         modelOptics = "\z\ace\addons\javelin\data\reticle_titan.p3d";  // Optics model
         canLock = 0;  // Disable vanilla locking (0-disabled, 1-enabled)
         lockingTargetSound[] = {"", 0, 1};  // Locking sound
-        lockedTargetSound[] = {"", 0, 1};  // Target acquired sound*/
+        lockedTargetSound[] = {"", 0, 1};  // Target acquired sound
 		hiddenSelectionsTextures[]=
 		{
 			"RD501_Vehicles\textures\static\warthog_addons_grey_co.paa"

@@ -98,7 +98,7 @@ class CfgVehicles
 		scope=2;
 		armor = 1000;
 		displayName = "Republic RX200 Rocket Artillery"
-		crew = "SWOP_Clonetrooper_P1";
+		crew = "JLTS_Clone_P2_Rex_501";
         side = 1;
         faction = macro_republic_faction
         editorSubcategory = macro_editor_cat(arty)
@@ -146,7 +146,7 @@ class CfgVehicles
 		scopeCurator=2;
 		forceInGarage = 1;
 		displayName="Republic Longbow AA"
-		crew = "SWOP_Clonetrooper_P1";
+		crew = "JLTS_Clone_P2_Rex_501";
 		author="RD501"
 		faction = macro_republic_faction
         editorSubcategory = macro_editor_cat(aa)
@@ -185,7 +185,7 @@ class CfgVehicles
 		scopeCurator=2;
 		forceInGarage = 1;
 		displayName="Republic AV7"
-		crew = "SWOP_Clonetrooper_P1";
+		crew = "JLTS_Clone_P2_Rex_501";
 		author="RD501"
 		faction = macro_republic_faction
         editorSubcategory = macro_editor_cat(arty)
