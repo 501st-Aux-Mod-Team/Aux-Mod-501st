@@ -20,10 +20,10 @@ class CfgGroups {
                     #include "data\republic\bases\example_base.hpp"
                 };
 				class RD501_Compositions_Republic_Base_1 {
-                    name="Echo Base";
+                    name="Razor FARP (Large)";
                     side = 8;
                     icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
-                    #include "data\republic\bases\echo_base.hpp"
+                    #include "data\republic\bases\large_farp.hpp"
                 };
             };
             class RD501_Compositions_Republic_Ships {
@@ -74,6 +74,60 @@ class CfgGroups {
                     icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
                     #include "data\cis\bases\base_b17.hpp"
                 };
+				class RD501_Compositions_CIS_Base_3 {
+                    name="Base S119";
+                    side = 8;
+                    icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                    #include "data\cis\bases\base_s119.hpp"
+                };
+				class RD501_Compositions_CIS_Base_4 {
+                    name="Base S119";
+                    side = 8;
+                    icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                    #include "data\cis\bases\base_a11.hpp"
+                };
+				class RD501_Compositions_CIS_Base_5 {
+                    name="Field HQ C37";
+                    side = 8;
+                    icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                    #include "data\cis\bases\hq_c37.hpp"
+                };
+				class RD501_Compositions_CIS_Base_6 {
+                    name="Armor HQ A91";
+                    side = 8;
+                    icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                    #include "data\cis\bases\hq_a91.hpp"
+                };
+				class RD501_Compositions_CIS_Base_7 {
+                    name="Base M2";
+                    side = 8;
+                    icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                    #include "data\cis\bases\base_m2.hpp"
+                };
+				class RD501_Compositions_CIS_Base_8 {
+                    name="Base M20";
+                    side = 8;
+                    icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                    #include "data\cis\bases\base_m20.hpp"
+                };
+				class RD501_Compositions_CIS_Base_9 {
+                    name="Base A47";
+                    side = 8;
+                    icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                    #include "data\cis\bases\base_a47.hpp"
+                };
+				class RD501_Compositions_CIS_Base_10 {
+                    name="Base A66";
+                    side = 8;
+                    icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                    #include "data\cis\bases\base_a66.hpp"
+                };
+				class RD501_Compositions_CIS_Base_11 {
+                    name="Base A81";
+                    side = 8;
+                    icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                    #include "data\cis\bases\base_a81.hpp"
+                };
             };
             class RD501_Compositions_CIS_Ships {
                 name = "Ships";
@@ -91,6 +145,18 @@ class CfgGroups {
                     side = 8;
                     icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
                     #include "data\cis\installations\example_installation.hpp"
+                };
+                class RD501_Compositions_CIS_Installation_1 {
+                    name="Small Bunker";
+                    side = 8;
+                    icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                    #include "data\cis\installations\small_bunker.hpp"
+                };
+	            class RD501_Compositions_CIS_Installation_2 {
+                    name="Checkpoint";
+                    side = 8;
+                    icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                    #include "data\cis\installations\checkpoint.hpp"
                 };
             };
         };

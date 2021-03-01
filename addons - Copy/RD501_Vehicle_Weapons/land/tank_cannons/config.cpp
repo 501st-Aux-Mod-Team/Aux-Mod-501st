@@ -105,14 +105,6 @@ class CfgWeapons
 		modes[] = {"manual","close"};
 		class manual: manual
 		{
-			sounds[] = {"StandardSound"};
-			class StandardSound
-			{
-				begin1[] = {"AAT\sounds\aat1.ogg", 2, 1, 2000};
-				begin2[] = {"AAT\sounds\aat2.ogg", 2, 1, 2000};
-				begin3[] = {"AAT\sounds\aat3.ogg", 2, 1, 2000};
-				soundBegin[] = {"begin1", 33, "begin2", 34, "begin3", 33};
-			};
 			recoil = "empty";
 			weaponSoundEffect = "DefaultRifle";
 			soundContinuous = 0;
@@ -165,14 +157,6 @@ class CfgWeapons
 		modes[] = {"manual","close"};
 		class manual: manual
 		{
-			sounds[] = {"StandardSound"};
-			class StandardSound
-			{
-				begin1[] = {"AAT\sounds\aat1.ogg", 2, 1, 1000};
-				begin2[] = {"AAT\sounds\aat2.ogg", 2, 1, 1000};
-				begin3[] = {"AAT\sounds\aat3.ogg", 2, 1, 1000};
-				soundBegin[] = {"begin1", 33, "begin2", 34, "begin3", 33};
-			};
 			recoil = "empty";
 			weaponSoundEffect = "DefaultRifle";
 			soundContinuous = 0;
@@ -224,14 +208,6 @@ class CfgWeapons
 		modes[] = {"manual","close"};
 		class manual: manual
 		{
-			sounds[] = {"StandardSound"};
-			class StandardSound
-			{
-				begin1[] = {"AAT\sounds\aat1.ogg", 2, 1, 1000};
-				begin2[] = {"AAT\sounds\aat2.ogg", 2, 1, 1000};
-				begin3[] = {"AAT\sounds\aat3.ogg", 2, 1, 1000};
-				soundBegin[] = {"begin1", 1, "begin2", 1, "begin3", 1};
-			};
 			recoil = "empty";
 			weaponSoundEffect = "DefaultRifle";
 			soundContinuous = 0;

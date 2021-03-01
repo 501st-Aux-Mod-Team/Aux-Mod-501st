@@ -197,6 +197,15 @@ class CfgMagazines
 		picture="\MRC\JLTS\weapons\Core\data\ui\stun_mag_ui_ca";
 		ammo=macro_new_ammo(surrender_stun)
 	};
+	class macro_new_mag(r2_charge_pack,10):3AS_45Rnd_EC50_Mag
+	{
+		displayName="R2 Charge Pack";
+		descriptionShort = "Charge Pack";
+		displayNameShort = "Charge Pack";
+		count=10;
+		picture="\RD501_Weapons\_mag\data\rd501_icon_mag_battery.paa";
+		ammo=macro_new_ammo(40mw)
+	};
 
 	////////////////////////////////////////////////////
 	/////////Grenade Launcher Magazines/////////////////
@@ -359,6 +368,7 @@ class CfgMagazines
 		count=1;
 		ammo = macro_new_ammo(squad_shield_sigma)
 		descriptionShort = "Republic Thermal Imploder";
+		picture="\RD501_Weapons\_mag\data\rd501_icon_mag_imploder.paa";
 	};
 
 	////////////////////////////////////////////////////

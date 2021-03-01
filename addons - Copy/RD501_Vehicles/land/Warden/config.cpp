@@ -110,13 +110,13 @@ class CfgVehicles
 				weapons[] = {
 					
 					macro_basic_air_weapons,
-					macro_new_weapon(generic,plasma_aircraft_cannon)
+					macro_new_weapon(generic,blue_aircraft_cannon)
 				};
 				magazines[] = {
 				
 					macro_basic_air_mags,
-					macro_new_mag(generic_aircraft_cannon_plasma_blue,1000),
-					macro_new_mag(generic_aircraft_cannon_plasma_blue,1000)
+					macro_new_mag(generic_aircraft_cannon_blue,1000),
+					macro_new_mag(generic_aircraft_cannon_blue,1000)
 				};
 			};
 			class CommanderOptics: CommanderOptics

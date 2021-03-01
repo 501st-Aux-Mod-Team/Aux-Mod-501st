@@ -1,0 +1,17 @@
+class Object0	{side = 8; vehicle = "3as_prop_fob_modular_wall_straight_long_cis"; rank = ""; position[] = {-0.174561,0.0119629,0}; dir = -267.135;};
+class Object1	{side = 8; vehicle = "3as_prop_fob_modular_wall_straight_long_cis"; rank = ""; position[] = {1.38428,0.0598145,9.74369}; dir = 92.8648;};
+class Object2	{side = 8; vehicle = "3as_prop_fob_modular_wall_straight_long_cis"; rank = ""; position[] = {4.51685,-0.102539,9.21892}; dir = -267.135;};
+class Object3	{side = 8; vehicle = "3as_prop_fob_modular_wall_straight_long_cis"; rank = ""; position[] = {12.7642,-0.525635,9.74368}; dir = -87.1351;};
+class Object4	{side = 8; vehicle = "3as_prop_fob_modular_wall_straight_long_cis"; rank = ""; position[] = {9.46509,-0.525391,9.21892}; dir = -3.86731;};
+class Object5	{side = 8; vehicle = "3as_prop_fob_modular_wall_door_cis"; rank = ""; position[] = {14.4153,-0.717773,0}; dir = -87.1352;};
+class Object6	{side = 8; vehicle = "3as_prop_fob_modular_wall_straight_long_cis"; rank = ""; position[] = {9.52051,8.51685,0}; dir = -177.135;};
+class Object7	{side = 8; vehicle = "3as_prop_fob_modular_wall_watchtower_cis"; rank = ""; position[] = {1.65771,7.81152,0}; dir = -267.135;};
+class Object8	{side = 8; vehicle = "3as_prop_fob_modular_wall_ramp_cis"; rank = ""; position[] = {4.99072,3.88159,0}; dir = -87.1352;};
+class Object9	{side = 8; vehicle = "3as_prop_fob_modular_wall_straight_long_cis"; rank = ""; position[] = {8.6438,-8.80493,0}; dir = 2.8653;};
+class Object10	{side = 8; vehicle = "3as_prop_fob_modular_wall_watchtower_cis"; rank = ""; position[] = {0.89917,-7.52612,0}; dir = -267.135;};
+class Object11	{side = 8; vehicle = "3as_prop_fob_modular_wall_straight_logo_cis"; rank = ""; position[] = {13.0212,4.64526,9.75269}; dir = -87.1352;};
+class Object12	{side = 8; vehicle = "3as_prop_fob_modular_wall_straight_cis"; rank = ""; position[] = {6.47705,6.93359,9.73269}; dir = -177.135;};
+class Object13	{side = 8; vehicle = "3as_prop_fob_modular_wall_straight_cis"; rank = ""; position[] = {9.87158,6.76392,9.73269}; dir = -177.135;};
+class Object14	{side = 8; vehicle = "3as_prop_fob_modular_wall_straight_cis"; rank = ""; position[] = {5.64429,-7.38086,9.8778}; dir = 2.86459;};
+class Object15	{side = 8; vehicle = "3as_prop_fob_modular_wall_straight_cis"; rank = ""; position[] = {9.03906,-7.54907,9.8778}; dir = 2.86459;};
+class Object16	{side = 8; vehicle = "3as_prop_fob_modular_wall_straight_logo_cis"; rank = ""; position[] = {12.5134,-5.70703,9.74377}; dir = -87.1352;};
