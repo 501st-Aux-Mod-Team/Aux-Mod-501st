@@ -786,6 +786,7 @@ class CfgAmmo
 		model = "\RD501_Vehicle_Weapons\_ammo\data\laser_big_red.p3d";
 		CraterEffects = "ATMissileCrater";
 		explosionEffects = "IEDMineSmallExplosion";
+		explosionSoundEffect="DefaultExplosion";
 		tracerScale = 1;
 		tracerStartTime = 0;
 		tracerEndTime = 10;
@@ -802,11 +803,11 @@ class CfgAmmo
 		audibleFire = 42;
 		//initSpeed=1000;
 		initSpeed=20;
-		explosionSoundEffect = "DefaultExplosion";
 		explosive = 0.1;
 		cost = 22;
-		CraterEffects = "ATMissileCrater";
-		explosionEffects = "IEDMineSmallExplosion";
+		craterEffects = "ImpactEffectsMedium";
+		explosionSoundEffect = "DefaultExplosion";
+		ExplosionEffects = "ExploAmmoExplosion";
 		tracerScale=1;
 		tracerStartTime = 0;
 		tracerEndTime = 10;
@@ -820,6 +821,45 @@ class CfgAmmo
 		allowAgainstInfantry = 1;
 		model = "\RD501_Vehicle_Weapons\_ammo\data\laser_big_red.p3d";
 		timeToLive=10;
+		soundHit1[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\shells\Tank_shell_explosion_01",
+			1.7782794,
+			1,
+			1800
+		};
+		soundHit2[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\shells\Tank_shell_explosion_02",
+			1.7782794,
+			1,
+			1800
+		};
+		soundHit3[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\shells\Tank_shell_explosion_03",
+			1.7782794,
+			1,
+			1800
+		};
+		soundHit4[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\shells\Tank_shell_explosion_04",
+			1.7782794,
+			1,
+			1800
+		};
+		multiSoundHit[]=
+		{
+			"soundHit1",
+			0.25,
+			"soundHit2",
+			0.25,
+			"soundHit3",
+			0.25,
+			"soundHit4",
+			0.25
+		};
 	};
 
 	class macro_new_ammo(mynock_mbt_ap): macro_new_ammo(aat_king)//AAT_Laser
