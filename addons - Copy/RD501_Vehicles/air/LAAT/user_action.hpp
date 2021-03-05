@@ -8,8 +8,8 @@
 		radius = 20;
 		priority = 21;
 		onlyForPlayer = 1;
-		condition = "(!(this getvariable [""impulsorStatus"",false]) AND (player == driver this) AND (alive this) AND (speed this >10) )";
-		statement = "this execVM ""\RD501_Vehicles\air\LAAT\initTE.sqf""";
+		condition = "((player == driver this) AND (alive this) AND (speed this >10) )";
+		statement = "this execVM ""\RD501_Main\functions\impulse\fnc_impulseIncrease.sqf""";
 	};
 
 	class ThrusterDisngage: ThrusterEngage
@@ -18,8 +18,8 @@
 		displayName = "<t color='#FF9933'>[RepulsorBrake On]</t>";
 		displayNameDefault = "<t color='#FF9933'>[RepulsorBrake On]</t>";
 		textToolTip = "<t color='#FF9933'>[RepulsorBrake On]</t>";
-		condition = "((this getvariable [""impulsorStatus"",false]) AND (player == driver this) AND (alive this))";
-		statement = "this execVM ""\RD501_Vehicles\air\LAAT\initTD.sqf""";
+		condition = "((player == driver this) AND (alive this))";
+		statement = "this execVM ""\RD501_Main\functions\impulse\fnc_impulseDecrease.sqf""";
 	};
 
 	class ThrusterEngage_spam: ThrusterEngage
@@ -32,7 +32,7 @@
 		priority = 0;
 		onlyForPlayer = 1;
 		condition = "((player == driver this) AND (alive this) AND (speed this >10) )";
-		statement = "this execVM ""\RD501_Vehicles\air\LAAT\initTE.sqf""";
+		statement = "this execVM ""\RD501_Main\functions\impulse\fnc_impulseIncrease.sqf""";
 		shortcut="User19"
 	};
 
@@ -44,7 +44,7 @@
 		displayNameDefault = "";
 		textToolTip = "";
 		condition = "((player == driver this) AND (alive this))";
-		statement = "this execVM ""\RD501_Vehicles\air\LAAT\initTD.sqf""";
+		statement = "this execVM ""\RD501_Main\functions\impulse\fnc_impulseDecrease.sqf""";
 		shortcut="User20"
 	};
 

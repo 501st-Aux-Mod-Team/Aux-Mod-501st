@@ -143,4 +143,9 @@ macro_prep_xeh(jammer\fnc_addJammerLocal.sqf,addJammerLocal)
 macro_prep_xeh(jammer\fnc_jammersPFH.sqf,jammersPFH)
 macro_prep_xeh(jammer\fnc_jammersServerPFH.sqf,jammersServerPFH)
 
+// Impulse
+macro_prep_xeh(impulse\fnc_impulseApply.sqf,impulseApply)
+macro_prep_xeh(impulse\fnc_impulseIncrease.sqf,impulseIncrease)
+macro_prep_xeh(impulse\fnc_impulseDecrease.sqf,impulseDecrease)
+
 diag_log "RD501 PREP Complete";
