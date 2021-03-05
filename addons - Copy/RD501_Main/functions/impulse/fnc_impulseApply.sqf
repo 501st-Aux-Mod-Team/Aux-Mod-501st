@@ -46,8 +46,8 @@ switch (_impulse_state) do
 	};
 };
 
-_titlehintimpulsor  = "<t color='#E57300' size='2' shadow='1' shadowColor='#000000' align='center'>IMPULSOR</t>";
-_texthintimpulsor   = format ["<br /><t color='#00ff00' size='1.4' shadow='1' shadowColor='#000000' align='center'>Stage %1 - %2</t>", _impulse_state, _stage_message];
+_titlehintimpulsor  = "<t color='#253f5c' size='2' shadow='1' shadowColor='#000000' align='center'>IMPULSOR</t>";
+_texthintimpulsor   = format ["<br /><t color='#ffffff' size='1.4' shadow='1' shadowColor='#000000' align='center'>Stage %1 - %2</t>", _impulse_state, _stage_message];
 hint parseText (_titlehintimpulsor+_texthintimpulsor);
 
 if (!_accelerate && !_decelerate) exitWith{};
