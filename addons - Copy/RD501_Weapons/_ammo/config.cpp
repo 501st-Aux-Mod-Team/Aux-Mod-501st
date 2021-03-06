@@ -50,6 +50,7 @@ class CfgAmmo
 		typicalSpeed=400;
 		caliber=1.2;
 		airFriction=0;
+		waterFriction=-0.009;
 	};
 	class macro_new_ammo(5mw) : 3AS_EC30_BluePlasma
 	{
@@ -58,6 +59,7 @@ class CfgAmmo
 		typicalSpeed=400;
 		caliber=1.4;
 		airFriction=0;
+		waterFriction=-0.009;
 	};
 	class macro_new_ammo(10mw) : 3AS_EC40_BluePlasma
 	{
@@ -66,6 +68,7 @@ class CfgAmmo
 		typicalSpeed=550;
 		caliber=1;
 		airFriction=0;
+		waterFriction=-0.009;
 		explosive = 0;
 	};
 	class macro_new_ammo(10mws) : 3AS_EC40_BluePlasma
@@ -78,6 +81,7 @@ class CfgAmmo
 		audibleFire=5;
 		visibleFireTime=3;
 		airFriction=0;
+		waterFriction=-0.009;
 		explosive = 0;
 	};
 	class macro_new_ammo(20mw) : 3AS_EC50_BluePlasma
@@ -87,6 +91,7 @@ class CfgAmmo
 		typicalSpeed=700;
 		caliber=2.8;
 		airFriction=0;
+		waterFriction=-0.009;
 		explosive = 0.4;
 	};
 	class macro_new_ammo(20mw_d) : JLTS_bullet_carbine_red
@@ -96,6 +101,7 @@ class CfgAmmo
 		typicalSpeed=700;
 		caliber=2.8;
 		airFriction=0;
+		waterFriction=-0.009;
 	};
 	class macro_new_ammo(20mwup) : 3AS_EC50_BluePlasma
 	{
@@ -107,6 +113,7 @@ class CfgAmmo
 		explosive = 0.4;
 		caliber=0.6;
 		airFriction=0;
+		waterFriction=-0.009;
 	};
 	class macro_new_ammo(20mwdp) : 3AS_EC50_BluePlasma
 	{
@@ -115,7 +122,8 @@ class CfgAmmo
 		typicalSpeed=700;
 		caliber=2.8;
 		airFriction=0;
-		explosive = 0.2;
+		waterFriction=-0.009;
+		explosive = 0;
 	};
 	class macro_new_ammo(30mw) : 3AS_EC60_BluePlasma
 	{
@@ -124,7 +132,8 @@ class CfgAmmo
 		typicalSpeed=1000;
 		caliber=2.4;
 		airFriction=0;
-		explosive = 0.4;
+		waterFriction=-0.009;
+		explosive = 0;
 	};
 	class macro_new_ammo(30mw_d) : JLTS_bullet_carbine_red
 	{
@@ -141,7 +150,8 @@ class CfgAmmo
 		typicalSpeed=1100;
 		caliber=3.6;
 		airFriction=0;
-		explosive = 0.4;
+		waterFriction=-0.009;
+		explosive = 0;
 	};
 	class macro_new_ammo(40mwemp) : 3AS_EC70_BluePlasma
 	{

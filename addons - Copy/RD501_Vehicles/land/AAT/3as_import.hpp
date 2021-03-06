@@ -18,6 +18,14 @@ class Tank_F: Tank {
 			};
 		};
 	};
+	class HitPoints: HitPoints
+	{
+		class HitHull;
+		class HitFuel;
+		class HitEngine;
+		class HitLTrack;
+		class HitRTrack;
+	};
 };
 
 class 3AS_AAT_base_F : Tank_F {
@@ -28,6 +36,14 @@ class 3AS_AAT_base_F : Tank_F {
 				class CommanderOptics : CommanderOptics {};
 			};
 		};
+	};
+	class HitPoints: HitPoints
+	{
+		class HitHull:HitHull{};
+		class HitFuel:HitFuel{};
+		class HitEngine:HitEngine{};
+		class HitLTrack:HitLTrack{};
+		class HitRTrack:HitRTrack{};
 	};
 };
 
@@ -43,6 +59,14 @@ class 3AS_CIS_AAT_base_F : 3AS_AAT_base_F {
 			};
 		};
 	};
+	class HitPoints: HitPoints
+	{
+		class HitHull:HitHull{};
+		class HitFuel:HitFuel{};
+		class HitEngine:HitEngine{};
+		class HitLTrack:HitLTrack{};
+		class HitRTrack:HitRTrack{};
+	};
 };
 
 class 3AS_CIS_AAT_F : 3AS_CIS_AAT_base_F {
@@ -57,6 +81,14 @@ class 3AS_CIS_AAT_F : 3AS_CIS_AAT_base_F {
 			};
 		};
 	};
+	class HitPoints: HitPoints
+	{
+		class HitHull:HitHull{};
+		class HitFuel:HitFuel{};
+		class HitEngine:HitEngine{};
+		class HitLTrack:HitLTrack{};
+		class HitRTrack:HitRTrack{};
+	};
 };
 
 class 3AS_AAT : 3AS_CIS_AAT_F {
@@ -67,6 +99,14 @@ class 3AS_AAT : 3AS_CIS_AAT_F {
 				class CommanderOptics : CommanderOptics {};
 			};
 		};
+	};
+	class HitPoints: HitPoints
+	{
+		class HitHull:HitHull{};
+		class HitFuel:HitFuel{};
+		class HitEngine:HitEngine{};
+		class HitLTrack:HitLTrack{};
+		class HitRTrack:HitRTrack{};
 	};
 };
 
@@ -79,6 +119,14 @@ class 3AS_AAT_snow : 3AS_AAT {
 			};
 		};
 	};
+	class HitPoints: HitPoints
+	{
+		class HitHull:HitHull{};
+		class HitFuel:HitFuel{};
+		class HitEngine:HitEngine{};
+		class HitLTrack:HitLTrack{};
+		class HitRTrack:HitRTrack{};
+	};
 };
 
 class 3AS_AAT_tan : 3AS_AAT {
@@ -89,6 +137,14 @@ class 3AS_AAT_tan : 3AS_AAT {
 				class CommanderOptics : CommanderOptics {};
 			};
 		};
+	};
+	class HitPoints: HitPoints
+	{
+		class HitHull:HitHull{};
+		class HitFuel:HitFuel{};
+		class HitEngine:HitEngine{};
+		class HitLTrack:HitLTrack{};
+		class HitRTrack:HitRTrack{};
 	};
 };
 
@@ -101,6 +157,14 @@ class 3AS_AAT_urban : 3AS_AAT {
 			};
 		};
 	};
+	class HitPoints: HitPoints
+	{
+		class HitHull:HitHull{};
+		class HitFuel:HitFuel{};
+		class HitEngine:HitEngine{};
+		class HitLTrack:HitLTrack{};
+		class HitRTrack:HitRTrack{};
+	};
 };
 
 class 3AS_AAT_Tropic : 3AS_AAT {
@@ -111,5 +175,13 @@ class 3AS_AAT_Tropic : 3AS_AAT {
 				class CommanderOptics : CommanderOptics {};
 			};
 		};
+	};
+	class HitPoints: HitPoints
+	{
+		class HitHull:HitHull{};
+		class HitFuel:HitFuel{};
+		class HitEngine:HitEngine{};
+		class HitLTrack:HitLTrack{};
+		class HitRTrack:HitRTrack{};
 	};
 };

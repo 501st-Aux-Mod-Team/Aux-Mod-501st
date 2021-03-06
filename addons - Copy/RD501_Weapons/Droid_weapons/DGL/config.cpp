@@ -27,11 +27,11 @@ class cfgWeapons
 {
 	
 	class arifle_MX_Base_F;
-	class JLTS_SBB3;/*: arifle_MX_Base_F
+	class JLTS_SBB3: arifle_MX_Base_F
 	{
 		class Single: Mode_SemiAuto
 		{};
-	};*/
+	};
 	class macro_new_weapon(cis,dgl): JLTS_SBB3
 	{
 		scope=2;
@@ -46,9 +46,13 @@ class cfgWeapons
 			macro_new_mag(UGL_HE,6),
 			macro_new_mag(UGL_AP,6)
 		};
-		/*class Single : Single
+		modes[]=
 		{
-			reloadTime=0.5;
-		};*/
+			"SingleDGL"
+		};
+		class SingleDGL : Single
+		{
+			reloadTime=1;
+		};
 	};
 };

@@ -123,6 +123,7 @@ class cfgWeapons
 		JLTS_hasElectronics=0;
 		JLTS_canHaveShield=1;
 		JLTS_shieldedWeapon=macro_new_weapon(DC,r17_shield)
+		canShootInWater=1;
 		magazines[]=
 		{
 			macro_new_mag(5mw,10)
@@ -182,6 +183,7 @@ class cfgWeapons
 		};
 		inertia=0.80000001;
 		recoil="recoil_pdw";
+		canShootInWater=1;
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=110;
@@ -210,6 +212,7 @@ class cfgWeapons
 		JLTS_hasElectronics=0;
 		JLTS_canHaveShield=1;
 		JLTS_shieldedWeapon=macro_new_weapon(DC,r17a_shield)
+		canShootInWater=1;
 		magazines[]=
 		{
 			macro_new_mag(2mw,30)
@@ -278,6 +281,7 @@ class cfgWeapons
 		};
 		inertia=0.80000001;
 		recoil="recoil_pdw";
+		canShootInWater=1;
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=110;

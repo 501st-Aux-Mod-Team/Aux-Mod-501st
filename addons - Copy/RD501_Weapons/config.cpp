@@ -216,7 +216,7 @@ class CfgMagazines
 	class macro_new_mag(RPS_AT,1): Titan_AT
 	{
 		scope = 2;
-		displayName = "RPS AT Rocket";
+		displayName = "RPS  6 AT Rocket";
 		ammo = macro_new_ammo(RPS_AT);
 		type = "2 *   256";
 		count = 1;
@@ -233,7 +233,7 @@ class CfgMagazines
 	{
 		author = "Bohemia Interactive";
 		scope = 2;
-		displayName = "RPS AA Rocket";
+		displayName = "RPS 6 AA Rocket";
 		displayNameShort = "AA";
 		ammo = macro_new_ammo(RPS_AA);
 		type = "6 * 		256";

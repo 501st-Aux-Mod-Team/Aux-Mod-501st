@@ -37,6 +37,7 @@ class CfgWeapons
 		recoil="recoil_mmg_02";
 		dispersion=0.00075;
 		ACE_Overheating_mrbs = 450000;
+		canShootInWater=1;
 		magazines[]=
 		{
 			macro_new_mag(20mw,240)

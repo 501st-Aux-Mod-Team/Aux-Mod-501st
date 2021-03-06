@@ -43,6 +43,7 @@ class cfgWeapons
 		reloadTime=0.1;
 		ACE_Overheating_mrbs = 300000;
 		recoil="recoil_mx";
+		canShootInWater=1;
 		magazines[]=
 		{
 			macro_new_mag(20mwup,20),
@@ -118,9 +119,5 @@ class cfgWeapons
 			};
 		};
 	};
-	//#include "DC_15a__LE_rifle.hpp"
-	//#include "DC_15a__GL_rifle.hpp"
-	//#include "DC_15a__mod0_rifle.hpp"
-	//#include "DC_15a_rifle.hpp"
 };
 

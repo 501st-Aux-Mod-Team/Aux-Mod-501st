@@ -38,6 +38,7 @@ class CfgWeapons
 		displayName="Republic DC-15A UGL";
 		JLTS_hasElectronics=0;
 		ACE_Overheating_mrbs = 300000;
+		canShootInWater=1;
 		magazines[]=
 		{
 			macro_new_mag(10mw,30)
@@ -132,6 +133,7 @@ class CfgWeapons
 		dispersion=0.00116;
 		ACE_Overheating_mrbs = 300000;
 		recoil="recoil_mxc";
+		canShootInWater=1;
 		scope = 2;
 		magazines[]=
 		{
