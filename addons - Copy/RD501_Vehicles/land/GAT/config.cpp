@@ -366,14 +366,23 @@ class CfgVehicles
 			{
 				maxElev = 60;
 				canUseScanner = 1;
+				turretInfoType="RscOptics_APC_Tracked_01_gunner";
+				memoryPointGun[]=
+				{
+					"z_gunL_muzzle",
+					"z_gunR_muzzle",
+					"z_gunL_muzzle_2",
+					"z_gunr_muzzle_2"
+				};
 				weapons[] = 
 				{
 					macro_new_weapon(generic,preatorian_gun_opfor),
-					"missiles_titan_AA"
+					//macro_new_weapon(wynd,a2a)
 				};
 				magazines[] = 
 				{
-					"4Rnd_Titan_long_missiles","4Rnd_Titan_long_missiles",
+					//macro_new_mag(a2a,4),
+					//macro_new_mag(a2a,4),
 					macro_new_mag(generic_aircraft_gun_preatorian,1000),
 					macro_new_mag(generic_aircraft_gun_preatorian,1000),
 					macro_new_mag(generic_aircraft_gun_preatorian,1000),

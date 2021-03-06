@@ -2,7 +2,7 @@
 		side=0;
 		scopeCurator=2;
 		forceInGarage = 1;
-		armor=200;
+		armor=300;
 
 		crew=macro_new_unit_class(opfor,B1_crew)
 		
