@@ -35,6 +35,7 @@ class CfgWeapons
 		displayName="Republic Valken 38X";
 		dispersion=0.00045;
 		ACE_Overheating_JamChance = 0;
+		canShootInWater=1;
 		magazines[]=
 		{
 			macro_new_mag(20mwdp,20),

@@ -41,100 +41,97 @@ class CfgPatches
 
 class CfgVehicles
 {
-	class swop_vulture;
-
-	class macro_new_vehicle(vulture,MKII) : swop_vulture
+	class Air;
+	class Plane: Air
 	{
-		scope = 2;
-		scopeCurator=2;
-		displayName="Vulture Droid Mk.II";
-	    altFullForce = 6000;
-	    altNoForce = 9000;
-		armor = 500;
-		forceInGarage=1;
-
-		crew=macro_new_unit_class(opfor,B1_pilot)
-		
-		airBrakeFrictionCoef = 80.4;
-		faction = macro_cis_faction
-		editorSubcategory = macro_editor_cat_air(CIS)
-		vehicleClass = macro_editor_vehicle_type_air(CIS)
-
-		class EventHandlers{};
-
-		class UserActions
-		{
-			class AfterburnerOn
-			{
-				displayName = "<t color='#4C9900'>[Afterburner On]</t>";
-				shortcut = "";
-				condition = "speed this >50 and (!(this getVariable 'AfterBurnervulture'))";
-				statement = "this setVariable ['AfterBurnervulture',true];this spawn nes4day_afterburnervulture";
-				priority = 1e+011;
-				displayNameDefault = "";
-				position = "pilotview";
-				radius = 10;
-				onlyforplayer = 1;
-			};
-			class AfterburnerOff
-			{
-				displayName = "<t color='#FF9933'>[Afterburner Off]</t>";
-				shortcut = "";
-				condition = "(this getVariable 'AfterBurnervulture')";
-				statement = "this setVariable ['AfterBurnervulture',false]";
-				priority = 1e+011;
-				displayNameDefault = "";
-				position = "pilotview";
-				radius = 10;
-				onlyforplayer = 1;
-			};
-		};
-		
-		weapons[] = {
-			macro_basic_air_weapons,
-			macro_new_weapon(generic,cis_aircraft_cannon)
-		};
-		magazines[] = {
-			macro_basic_air_mags,
-			macro_new_mag(generic_aircraft_cannon_red,1000),
-			macro_new_mag(generic_aircraft_cannon_red,1000),
-		};
-		
+		class HitPoints;
 	};
-	class Plane;
 	class Plane_Base_F: Plane
 	{
 		class Components;
+		class HitPoints: HitPoints
+		{
+			class HitHull;
+		};
 	};
 	class Plane_Fighter_03_base_F: Plane_Base_F
 	{
 		class Components: Components{};
+		class HitPoints: HitPoints
+		{
+			class HitHull: HitHull
+			{
+			};
+		};
 	};
 	class Plane_Fighter_03_dynamicLoadout_base_F:Plane_Fighter_03_base_F
 	{
 		class Components: Components{};
+		class HitPoints: HitPoints
+		{
+			class HitHull: HitHull
+			{
+			};
+		};
 	};
 	class 3as_vulture_dynamicLoadout_base:Plane_Fighter_03_dynamicLoadout_base_F
 	{
 		class Components:Components{};
+		class HitPoints: HitPoints
+		{
+			class HitHull: HitHull
+			{
+			};
+		};
 	};
 	class 3as_Vulture_dynamicLoadout:3as_vulture_dynamicLoadout_base
 	{
 		class Components:Components{};
+		class HitPoints: HitPoints
+		{
+			class HitHull: HitHull
+			{
+			};
+		};
 	};
 	class macro_new_vehicle(cis,vulture_elite) : 3as_Vulture_dynamicLoadout
 	{
 		displayName="CIS Vulture Elite Droid"
-		maxSpeed=700;
+		maxSpeed=750;
 		airBrake=20;
 		faction = macro_cis_faction
 		editorSubcategory = macro_editor_cat_air(CIS)
 		vehicleClass = macro_editor_vehicle_type_air(CIS)
+		class HitPoints: HitPoints
+		{
+			class HitHull: HitHull
+			{
+				name="HitHull";
+				visual="Hit_Hull";
+				armor=7;
+				explosionShielding=3.5;
+				passThrough=1;
+				radius=0.5;
+				minimalHit=0.050000001;
+				depends="0";
+				material=-1;
+			};
+			class HitEngine: HitHull
+			{
+				name="HitEngine";
+				visual="Hit_Engine";
+				armor=4.5;
+				explosionShielding=4;
+				passThrough=1;
+				radius=0.60000002;
+				minimalHit=0.050000001;
+			};
+		};
 	};
 	class macro_new_vehicle(cis,vulture) : 3as_Vulture_dynamicLoadout
 	{
 		displayName="CIS Vulture Droid"
-		maxSpeed=700;
+		maxSpeed=750;
 		airBrake=20;
 		faction = macro_cis_faction
 		editorSubcategory = macro_editor_cat_air(CIS)
@@ -143,6 +140,31 @@ class CfgVehicles
 		{
 			class TransportPylonsComponent
 			{};
+		};
+		class HitPoints: HitPoints
+		{
+			class HitHull: HitHull
+			{
+				name="HitHull";
+				visual="Hit_Hull";
+				armor=7;
+				explosionShielding=3.5;
+				passThrough=1;
+				radius=0.5;
+				minimalHit=0.050000001;
+				depends="0";
+				material=-1;
+			};
+			class HitEngine: HitHull
+			{
+				name="HitEngine";
+				visual="Hit_Engine";
+				armor=4.5;
+				explosionShielding=4;
+				passThrough=1;
+				radius=0.60000002;
+				minimalHit=0.050000001;
+			};
 		};
 	};
 };

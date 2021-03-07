@@ -73,6 +73,16 @@ class _transport_launcher_AA_mags
 	magazine =  macro_new_mag(RPS_AA,1)
 	count = 20;
 };
+class _transport_launcher_RPS4AT_mags
+{
+	magazine =  macro_new_mag(rps4heat,1)
+	count = 20;
+};
+class _transport_launcher_ARPS4HE_mags
+{
+	magazine =  macro_new_mag(rps4he,1)
+	count = 20;
+};
 class _transport_launcher_PLXAT_mags
 {
 	magazine =  "JLTS_PLX1_AT_mag"
@@ -140,7 +150,7 @@ class _transport_ShotgunEMP
 };
 class _transport_StaticEweb
 {
-	magazine = macro_new_mag(eweb,600)
+	magazine = macro_new_mag(eweb,1000)
 	count = 10;
 };
 class _transport_StaticStriker

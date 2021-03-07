@@ -99,33 +99,10 @@ class CfgWeapons
 		canLock = 1;
 		ballisticsComputer = 4;
 		weaponLockSystem = 0;
-		magazines[] = {macro_new_mag(generic_aircraft_gun_dual_green,1000)};
+		magazines[] = {macro_new_mag(generic_aircraft_gun_dual_green,1000),macro_new_mag(generic_aircraft_gun_asg,3000)};
 		class LowROF: LowROF
 		{
             displayName = "Aircraft Laser Gun";
-			sounds[]=
-			{
-				"StandardSound_1"
-			};
-			class StandardSound_1
-			{
-				begin1[]=
-				{
-					"3as\3as_saber\sounds\wpn_saberTank_autocannon_fire",
-					1.99526,
-					1,
-					1500
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					0.33000001
-				};
-				soundsetshot[]=
-				{
-					"Autocannon30mmTurret_Shot_SoundSet",
-					"Autocannon30mmBody_tail_SoundSet"
-				};
             dispersion = 0.012;
             autoFire=true;
             aiRateOfFire = 0.001;
@@ -146,7 +123,6 @@ class CfgWeapons
             lockAcquire = 1;
             FCSMaxLeadSpeed = 1000;
             burst = 10;//30;
-			};
 		};
 	};
 

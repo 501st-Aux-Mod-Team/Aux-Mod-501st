@@ -75,10 +75,12 @@ class CfgVehicles
 		aileronControlsSensitivityCoef=4;
 		#include "../../common/universal_mfd.hpp"
 		#include "../../common/common_pilotCamera.hpp"
+		weaponLockSystem = "2+4+8";
 		weapons[]=
 		{
 			"CMFlareLauncher",
-			"Laserdesignator_pilotCamera"
+			"Laserdesignator_pilotCamera",
+			//macro_new_weapon(generic,green_dual_aircraft_laser)
 		};
 		magazines[]=
 		{
@@ -86,7 +88,8 @@ class CfgVehicles
 			"120Rnd_CMFlare_Chaff_Magazine",
 			"120Rnd_CMFlare_Chaff_Magazine",
 			"120Rnd_CMFlare_Chaff_Magazine",
-			"120Rnd_CMFlare_Chaff_Magazine"
+			"120Rnd_CMFlare_Chaff_Magazine",
+			//macro_new_mag(pylon_generic_aircraft_gun_asg,3000)
 		};
 		hiddenselections[]=
 		{

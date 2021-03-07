@@ -43,6 +43,11 @@ class _transport_rps1
     weapon = macro_new_weapon(launcher,rps1)
     count = 2;
 };
+class _transport_rps4
+{
+    weapon = macro_new_weapon(launcher,RPS4)
+    count = 2;
+};
 class _transport_plx
 {
     weapon = macro_new_weapon(Launcher,PLX1)

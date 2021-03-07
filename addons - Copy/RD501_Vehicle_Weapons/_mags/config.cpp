@@ -263,11 +263,11 @@ class CfgMagazines
 		maxLeadSpeed = 300;
 		macro_no_muzzle_impulse
 	};
-	class macro_new_mag(pylon_generic_aircraft_gun_asg,3000): 1000Rnd_Gatling_30mm_Plane_CAS_01_F
+	class macro_new_mag(pylon_generic_aircraft_gun_asg,3000): macro_new_mag(generic_aircraft_gun,1000)
 	{
 		displayNameShort = "AS Gun";
 		displayName = "Air Superiority Gun";
-		ammo = macro_new_ammo(generic_aircraft_laser_gun_green);
+		ammo = macro_new_ammo(generic_aircraft_laser_cannon_green);
 		count = 3000;
 		hardpoints[]=
 		{
@@ -275,7 +275,7 @@ class CfgMagazines
 		};
 		pylonWeapon=macro_new_weapon(pylon_laser,v_wing)
 	};
-	class macro_new_mag(pylon_voltic,200):500Rnd_Cannon_ARCback
+	class macro_new_mag(pylon_voltic,200):macro_new_mag(generic_aircraft_gun,1000)
 	{
 		displayNameShort = "Voltic";
 		ammo = macro_new_ammo(voltic)
