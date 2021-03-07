@@ -1,6 +1,6 @@
 _vehicle = _this;
 
-systemChat "apply";
+//systemChat "apply";
 
 private _impulse_state = _vehicle getvariable ["impulsorStatus", 0];
 
@@ -76,7 +76,7 @@ while {_vehicle getVariable ['impulsorStatus', 0] isEqualTo _impulse_state && al
 		_change = 0;
 	};
 
-	systemChat format ["%1 - %2 - %3 - %4 - %5", str _velocity, str _target_speed, str _diff, str _max_change, str _change];
+	//systemChat format ["%1 - %2 - %3 - %4 - %5", str _velocity, str _target_speed, str _diff, str _max_change, str _change];
 
 	if (_change != 0) then {
 		_direction = direction _vehicle;

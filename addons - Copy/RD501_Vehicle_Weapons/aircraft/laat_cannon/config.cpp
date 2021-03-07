@@ -49,29 +49,95 @@ class CfgWeapons
 		burst=1;
 		class LowROF: LowROF
 		{
-			displayName="LAAT Laser Cannon";
 			sounds[]=
 			{
-				"StandardSound_1"
+				"StandardSound"
 			};
-			class StandardSound_1
+			class StandardSound
 			{
 				begin1[]=
 				{
-					"3as\3as_saber\sounds\wpn_saberTank_autocannon_fire",
-					1.99526,
+					"3AS\3AS_AAT\data\sounds\AAT_Cannon.wss",
 					1,
-					1500
+					0.89999998,
+					6000
+				};
+				begin2[]=
+				{
+					"3AS\3AS_AAT\data\sounds\AAT_Cannon.wss",
+					1,
+					0.89999998,
+					6000
 				};
 				soundBegin[]=
 				{
 					"begin1",
-					0.33000001
+					0.1,
+					"begin2",
+					0.5
 				};
-				soundsetshot[]=
+				class SoundTails
 				{
-					"Autocannon30mmTurret_Shot_SoundSet",
-					"Autocannon30mmBody_tail_SoundSet"
+					class TailForest
+					{
+						sound[]=
+						{
+							"A3\Sounds_F\arsenal\weapons\LongRangeRifles\GM6_Lynx\GM6_tail_forest",
+							1,
+							1,
+							2200
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*forest";
+					};
+					class TailHouses
+					{
+						sound[]=
+						{
+							"A3\Sounds_F\arsenal\weapons\LongRangeRifles\GM6_Lynx\GM6_tail_houses",
+							1,
+							1,
+							2200
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*houses";
+					};
+					class TailInterior
+					{
+						sound[]=
+						{
+							"A3\Sounds_F\arsenal\weapons\LongRangeRifles\GM6_Lynx\GM6_tail_interior",
+							1.99526,
+							1,
+							2200
+						};
+						frequency=1;
+						volume="interior";
+					};
+					class TailMeadows
+					{
+						sound[]=
+						{
+							"A3\Sounds_F\arsenal\weapons\LongRangeRifles\GM6_Lynx\GM6_tail_meadows",
+							1,
+							1,
+							2200
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*(meadows/2 max sea/2)";
+					};
+					class TailTrees
+					{
+						sound[]=
+						{
+							"A3\Sounds_F\arsenal\weapons\LongRangeRifles\GM6_Lynx\GM6_tail_trees",
+							1,
+							1,
+							2200
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*trees";
+					};
 				};
 			};
 			multiplier=1;

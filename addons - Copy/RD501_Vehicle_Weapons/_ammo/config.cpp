@@ -784,7 +784,47 @@ class CfgAmmo
 		brightness = 100000;
 		tracerColor[] = {0,0,1,0};
 		timeToLive=10;
-	}
+		soundContinuous=0;
+		soundHit1[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\shells\Tank_shell_explosion_01",
+			1.7782794,
+			1,
+			1800
+		};
+		soundHit2[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\shells\Tank_shell_explosion_02",
+			1.7782794,
+			1,
+			1800
+		};
+		soundHit3[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\shells\Tank_shell_explosion_03",
+			1.7782794,
+			1,
+			1800
+		};
+		soundHit4[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\shells\Tank_shell_explosion_04",
+			1.7782794,
+			1,
+			1800
+		};
+		multiSoundHit[]=
+		{
+			"soundHit1",
+			0.25,
+			"soundHit2",
+			0.25,
+			"soundHit3",
+			0.25,
+			"soundHit4",
+			0.25
+		};
+	};
 	class macro_new_ammo(aat_king): 3AS_ATT_redPlasma_AT//AAT_ADSD_Laser
 	{
 		hit = 650;

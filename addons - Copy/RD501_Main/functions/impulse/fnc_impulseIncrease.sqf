@@ -1,6 +1,6 @@
 _vehicle = _this;
 
-systemChat "increase";
+//systemChat "increase";
 
 private _impulse_state = _vehicle getvariable ["impulsorStatus", 0];
 _impulse_state = _impulse_state + 1;
