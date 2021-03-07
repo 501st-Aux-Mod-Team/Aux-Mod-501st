@@ -587,15 +587,6 @@ class CfgAmmo
 		explosive = 0.6;
 		model="RD501_Vehicle_Weapons\_ammo\data\laser_small_green.p3d"
 	};
-	class macro_new_ammo(generic_aircraft_laser_cannon_green) : macro_new_ammo(generic_aircraft_laser_gun_red)
-	{
-		hit = 400;
-		indirectHit = 200;
-		indirectHitRange = 0;
-		caliber = 1;
-		explosive = 0.6;
-		model="RD501_Vehicle_Weapons\_ammo\data\laser_small_green.p3d"
-	};
 	class macro_new_ammo(generic_aircraft_laser_gun_praetorian) : macro_new_ammo(generic_aircraft_laser_gun_red)
 	{
 		hit = 75;

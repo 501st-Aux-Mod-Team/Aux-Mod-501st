@@ -263,8 +263,9 @@ class CfgVehicles
 					};
 				class TransportMagazines{};
 			};
-		
-
+		class TransportItems{};
+		class TransportMagazines{};
+		class TransportWeapons{};
 		class EventHandlers :DefaultEventhandlers{
 			init ="ACE_maxWeightCarry = 20000;ACE_maxWeightDrag = 20000;";
 		};

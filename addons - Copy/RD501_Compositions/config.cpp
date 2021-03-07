@@ -25,6 +25,12 @@ class CfgGroups {
                     icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
                     #include "data\republic\bases\large_farp.hpp"
                 };
+				class RD501_Compositions_Republic_Base_2 {
+                    name="Dakaar Base";
+                    side = 8;
+                    icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                    #include "data\republic\bases\dakaar_base.hpp"
+                };
             };
             class RD501_Compositions_Republic_Ships {
                 name = "Ships";

@@ -24,8 +24,8 @@ class CfgPatches
 //scopes
 class CfgWeapons
 {
-	class macro_new_weapon(laser,v_wing);
-	class macro_new_weapon(pylon_laser,v_wing) : macro_new_weapon(laser,v_wing)
+	class macro_new_weapon(generic,green_dual_aircraft_laser);
+	class macro_new_weapon(pylon_laser,v_wing) : macro_new_weapon(generic,green_dual_aircraft_laser)
 	{
 		displayName = "Laser gun (Pylon)";
 		displayNameShort = "Laser";
