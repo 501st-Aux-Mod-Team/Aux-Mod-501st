@@ -54,8 +54,7 @@ if (!_accelerate && !_decelerate) exitWith{};
 while {_vehicle getVariable ['impulsorStatus', 0] isEqualTo _impulse_state && alive _vehicle} do
 {
 	private _movement = velocity _vehicle;
-	private _velocity = sqrt ((_movement select 0) * (_movement select 0) + (_movement select 1) * (_movement select 1));
-	_velocity = _velocity * 3.6; // m/s -> kp/h
+	private _velocity = speed _vehicle;
 	private _diff = _target_speed - _velocity;
 	private _change = 0;
 	
@@ -76,14 +75,14 @@ while {_vehicle getVariable ['impulsorStatus', 0] isEqualTo _impulse_state && al
 		_change = 0;
 	};
 
-	//systemChat format ["%1 - %2 - %3 - %4 - %5", str _velocity, str _target_speed, str _diff, str _max_change, str _change];
+	// systemChat format ["%1 - %2 - %3 - %4 - %5", str _velocity, str _target_speed, str _diff, str _max_change, str _change];
 
 	if (_change != 0) then {
-		_direction = direction _vehicle;
+		private _direction = vectorDir _vehicle;
 		_vehicle setVelocity [
-			(_movement select 0) + (sin _direction * _change), 
-			(_movement select 1) + (cos _direction * _change), 
-			(_movement select 2)
+			(_movement select 0) + (_direction select 0) * _change, 
+			(_movement select 1) + (_direction select 1) * _change, 
+			(_movement select 2) + (_direction select 2) * _change
 			];
 	};
 	sleep 0.5;

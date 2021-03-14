@@ -8,7 +8,7 @@
 		radius = 20;
 		priority = 21;
 		onlyForPlayer = 1;
-		condition = "((player == driver this) AND (alive this) AND (speed this >10) )";
+		condition = "((player == driver this) AND (alive this))";
 		statement = "this execVM ""\RD501_Main\functions\impulse\fnc_impulseIncrease.sqf""";
 	};
 
@@ -31,7 +31,7 @@
 		radius = 20;
 		priority = 0;
 		onlyForPlayer = 1;
-		condition = "((player == driver this) AND (alive this) AND (speed this >10) )";
+		condition = "((player == driver this) AND (alive this))";
 		statement = "this execVM ""\RD501_Main\functions\impulse\fnc_impulseIncrease.sqf""";
 		shortcut="User19"
 	};
