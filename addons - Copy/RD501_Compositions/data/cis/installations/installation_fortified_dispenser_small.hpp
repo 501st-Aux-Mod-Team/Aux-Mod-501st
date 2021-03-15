@@ -1,0 +1,17 @@
+class Object0	{side = 8; vehicle = "land_3as_Bunker"; rank = ""; position[] = {0.866455,-0.366211,0}; dir = 90.647;};
+class Object1	{side = 8; vehicle = "3as_Barricade_2_C_prop"; rank = ""; position[] = {5.8064,0.328125,0}; dir = -89.6994;};
+class Object2	{side = 8; vehicle = "3as_Barricade_2_C_prop"; rank = ""; position[] = {-6.08252,0.574463,0}; dir = 89.399;};
+class Object3	{side = 8; vehicle = "3as_Barricade_2_C_prop"; rank = ""; position[] = {-2.16943,15.573,0}; dir = 151.093;};
+class Object4	{side = 8; vehicle = "3as_Barricade_2_C_prop"; rank = ""; position[] = {2.27686,15.5596,0}; dir = 209.317;};
+class Object5	{side = 8; vehicle = "3as_small_crate_stack_1_prop"; rank = ""; position[] = {-6.62866,10.6697,0}; dir = -89.6994;};
+class Object6	{side = 8; vehicle = "3as_small_crate_stack_2_prop"; rank = ""; position[] = {6.97852,10.6514,0}; dir = 179.942;};
+class Object7	{side = 8; vehicle = "3as_Barricade_2_C_prop"; rank = ""; position[] = {-7.28442,6.99194,0}; dir = 89.399;};
+class Object8	{side = 8; vehicle = "3as_Barricade_2_C_prop"; rank = ""; position[] = {7.17822,6.99316,0}; dir = -89.6994;};
+class Object9	{side = 8; vehicle = "3as_crate5_3"; rank = ""; position[] = {-6.41064,0.59668,0}; dir = 0.456108;};
+class Object10	{side = 8; vehicle = "3as_Small_Box_1_prop"; rank = ""; position[] = {-7.63623,6.47095,0}; dir = -89.6994;};
+class Object11	{side = 8; vehicle = "3as_Small_Box_1_prop"; rank = ""; position[] = {-7.62256,7.63208,0}; dir = -89.6994;};
+class Object12	{side = 8; vehicle = "3as_small_crate_prop"; rank = ""; position[] = {-3.79102,14.7139,0}; dir = 211.035;};
+class Object13	{side = 8; vehicle = "3as_Crate3_1_prop"; rank = ""; position[] = {7.13818,5.34302,0}; dir = 121.058;};
+class Object14	{side = 8; vehicle = "3as_Crate3_1_prop"; rank = ""; position[] = {7.40552,6.17529,0}; dir = -89.6994;};
+class Object15	{side = 8; vehicle = "3as_Small_Box_4_prop"; rank = ""; position[] = {2.90063,-4.07715,0}; dir = 154.894;};
+class Object16	{side = 8; vehicle = "3as_droid_container"; rank = ""; position[] = {0.0947266,8.7417,-9.53674e-007}; dir = 90.3793;};

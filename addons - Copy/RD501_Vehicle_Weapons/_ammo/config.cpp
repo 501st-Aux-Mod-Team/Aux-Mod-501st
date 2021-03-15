@@ -720,7 +720,7 @@ class CfgAmmo
 		triggerTime = 0.1;
 		hit = 0.1;
 		indirectHit = 0.1;
-		indirectHitRange = 40;
+		indirectHitRange = 70;
 		cameraViewAvailable = 1;	
 		JLTS_isEMPAmmo=1;	
 		submunitionAmmo=macro_new_ammo(spark_sub)
@@ -730,7 +730,7 @@ class CfgAmmo
 	{
 		hit = 0.1;
 		indirectHit = 0.1;
-		indirectHitRange = 40;
+		indirectHitRange = 70;
 		JLTS_isEMPAmmo=1;	
 	}
 	

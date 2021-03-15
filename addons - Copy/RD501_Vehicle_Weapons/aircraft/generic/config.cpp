@@ -22,12 +22,11 @@ class CfgPatches
 			macro_new_weapon(generic,tie_aircraft_laser),
 			macro_new_weapon(generic,purple_aircraft_laser),
 			macro_new_weapon(generic,plasma_aircraft_laser),
-			
+			macro_new_weapon(generic,tank_repeater),
 			macro_new_weapon(generic,rebel_aircraft_cannon),
 			macro_new_weapon(generic,imperial_aircraft_cannon),
 			macro_new_weapon(generic,republic_aircraft_cannon),
 			macro_new_weapon(generic,cis_aircraft_cannon),
-			macro_new_weapon(generic,ion_aircraft_cannon),
 			macro_new_weapon(generic,purple_aircraft_cannon),
 			macro_new_weapon(generic,plasma_aircraft_cannon),
 			macro_new_weapon(generic,preatorian_gun_opfor),
@@ -203,6 +202,27 @@ class CfgWeapons
 		};
 	};
 	
+	class macro_new_weapon(generic,tank_repeater) : macro_new_weapon(generic,aircraft_laser)
+	{
+		scope = 1;
+		displayName = "CIS Heavy Repeater";
+		magazines[] = {macro_new_mag(generic_aircraft_gun,1000)};
+		modes[] = {"LowROF"};
+		dispersion = 0.01;
+		aiRateOfFire = 0.1;
+		reloadTime=0.1; 
+		burst = 1;
+		class LowROF: LowROF
+		{
+			displayName = "CIS Heavy Repeater";
+			multiplier=1;
+			dispersion = 0.00001;
+			autoFire=true;
+			aiRateOfFire = 0.1;
+			reloadTime=0.1; 
+			burst = 1;
+		};
+	};
 
 }; 
 

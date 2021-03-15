@@ -29,7 +29,6 @@ class CfgPatches
 			macro_new_vehicle(Praetorian_Variant,normal),
 			macro_new_vehicle(Praetorian_Variant,blufor),
 			macro_new_vehicle(Praetorian_Variant,opfor),
-			macro_new_vehicle(Praetorian_Variant,rebel),
 			macro_new_vehicle(Praetorian_Variant,republic),
 			macro_new_vehicle(Praetorian_Variant,imperial),
 			macro_new_vehicle(Praetorian_Variant,Ion),
@@ -47,17 +46,33 @@ class CfgPatches
 class DefaultEventhandlers;
 class CfgVehicles
 {	
-	class StaticMGWeapon;
-	class AAA_System_01_base_F:StaticMGWeapon
+	class LandVehicle;
+	class StaticWeapon: LandVehicle
 	{
 		class Turrets;
 	};
-	class B_AAA_System_01_F:AAA_System_01_base_F
+	class StaticMGWeapon: StaticWeapon
 	{
-		class Components;
 		class Turrets: Turrets
 		{
 			class MainTurret;
+		};
+		class Components;
+	};
+	class AAA_System_01_base_F:StaticMGWeapon
+	{
+		class Components:Components{};
+		class Turrets: Turrets
+		{
+			class MainTurret:MainTurret{};
+		};
+	};
+	class B_AAA_System_01_F:AAA_System_01_base_F
+	{
+		class Components:Components{};
+		class Turrets: Turrets
+		{
+			class MainTurret:MainTurret{};
 		};
 	};
 	class macro_new_vehicle(Praetorian_Variant,normal): B_AAA_System_01_F

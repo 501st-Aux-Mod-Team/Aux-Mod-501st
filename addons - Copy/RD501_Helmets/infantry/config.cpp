@@ -102,6 +102,7 @@ class CfgWeapons
 	NEW_501_Inf_Helm_JLTS(Goddest,Goddest,Goddest.paa)
 	NEW_501_Inf_Helm_JLTS(Dusty,Dusty,Dusty.paa)
 	NEW_501_Inf_Helm_JLTS(Bjorn,Bjorn,Bjorn.paa)
+	NEW_501_Inf_Helm_JLTS(Hoodoo,Hoodoo,Hoodoo.paa)
 	NEW_501_Inf_Helm_JLTS(Doug,Doug,Doug.paa)
 	NEW_501_Inf_Helm_JLTS(Dragon,Dragon,Dragon.paa)
 	NEW_501_Inf_Helm_JLTS(Fixit,Fixit,Fixit.paa)
@@ -169,4 +170,8 @@ class CfgWeapons
 	NEW_501_ARC_Helm_JLTS(Virtox,Virtox,Virtox.paa)
 	NEW_501_ARC_Helm_JLTS(Train,Train,Train.paa)
 	NEW_501_ARC_Helm_JLTS(Nightingale,Nightingale,Nightingale.paa)
+	NEW_501_ARC_Helm_JLTS(Merlin,Merlin,Merlin.paa)
+	NEW_501_ARC_Helm_JLTS(Odd,Odd,Odd.paa)
+	NEW_501_ARC_Helm_JLTS(Blade,Blade,Blade.paa)
+	NEW_501_ARC_Helm_JLTS(Leon,Leon,Leon.paa)
 };

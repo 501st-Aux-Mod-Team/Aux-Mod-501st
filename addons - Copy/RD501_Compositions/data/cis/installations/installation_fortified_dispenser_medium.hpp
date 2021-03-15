@@ -1,0 +1,16 @@
+class Object0	{side = 8; vehicle = "3as_droid_container"; rank = ""; position[] = {0,0,-1.43051e-006}; dir = 90.3167;};
+class Object1	{side = 8; vehicle = "3as_Barricade_2_C_prop"; rank = ""; position[] = {15.5142,2.52295,0}; dir = -89.762;};
+class Object2	{side = 8; vehicle = "3as_Barricade_2_C_prop"; rank = ""; position[] = {9.75977,12.6775,0}; dir = 209.403;};
+class Object3	{side = 8; vehicle = "3as_Barricade_prop"; rank = ""; position[] = {-0.0146484,10.3015,0}; dir = -89.762;};
+class Object4	{side = 8; vehicle = "3as_Barricade_2_C_prop"; rank = ""; position[] = {-6.08398,-14.7493,0}; dir = 29.5464;};
+class Object5	{side = 8; vehicle = "3as_Barricade_2_C_prop"; rank = ""; position[] = {5.58838,-14.7017,0}; dir = -31.2885;};
+class Object6	{side = 8; vehicle = "3as_Barricade_2_C_prop"; rank = ""; position[] = {-10.187,12.8501,0}; dir = 150.253;};
+class Object7	{side = 8; vehicle = "3as_Barricade_2_C_prop"; rank = ""; position[] = {-16.1055,2.79028,0}; dir = 89.4179;};
+class Object8	{side = 8; vehicle = "3as_Barricade_prop"; rank = ""; position[] = {8.62256,-4.3147,0}; dir = 29.2725;};
+class Object9	{side = 8; vehicle = "3as_Barricade_prop"; rank = ""; position[] = {-9.17139,-4.56299,0}; dir = 149.489;};
+class Object10	{side = 8; vehicle = "3as_Backless_Mortar_Pit_Trench"; rank = ""; position[] = {-0.22168,16.0571,0}; dir = -89.762;};
+class Object11	{side = 8; vehicle = "3as_Backless_Mortar_Pit_Trench"; rank = ""; position[] = {13.6831,-7.65112,0}; dir = 28.9859;};
+class Object12	{side = 8; vehicle = "3as_Backless_Mortar_Pit_Trench"; rank = ""; position[] = {-13.8564,-7.66724,0}; dir = 149.7;};
+class Object13	{side = 8; vehicle = "land_3as_Bunker"; rank = ""; position[] = {10.1489,7.36987,0}; dir = -29.104;};
+class Object14	{side = 8; vehicle = "land_3as_Bunker"; rank = ""; position[] = {0.769043,-12.4434,0}; dir = 90.2044;};
+class Object15	{side = 8; vehicle = "land_3as_Bunker"; rank = ""; position[] = {-11.7031,5.78076,0}; dir = 210.911;};
