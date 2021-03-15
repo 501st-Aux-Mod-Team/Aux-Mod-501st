@@ -117,7 +117,7 @@ class CfgVehicles
 			{
 				weapons[]=
 				{
-					macro_new_weapon(generic,aircraft_laser)
+					macro_new_weapon(generic,tank_repeater)
 				};
 				magazines[]={macro_new_mag(generic_aircraft_gun,1000),macro_new_mag(generic_aircraft_gun,1000),macro_new_mag(generic_aircraft_gun,1000),macro_new_mag(generic_aircraft_gun,1000),macro_new_mag(generic_aircraft_gun,1000)};
 			};

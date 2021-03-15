@@ -302,7 +302,7 @@ class CfgAmmo
 		model="\RD501_Weapons\Grenades\data\icecream.p3d";
 		rd501_grenade_deployable = 1;
         rd501_grenade_deployable_object = "RD501_Squad_Shield";
-        rd501_grenade_deployable_timeToLive = 30;
+        rd501_grenade_deployable_timeToLive = 60;
 		simulation="shotShell";
 	}
 ///////////////////////////////////////////////////////////////////////

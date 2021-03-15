@@ -134,6 +134,36 @@ class CfgGroups {
                     icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
                     #include "data\cis\bases\base_a81.hpp"
                 };
+				class RD501_Compositions_CIS_Base_12 {
+                    name="FOB Cresh";
+                    side = 8;
+                    icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                    #include "data\cis\bases\base_fob_cresh.hpp"
+                };
+				class RD501_Compositions_CIS_Base_13 {
+                    name="Compound Aurek";
+                    side = 8;
+                    icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                    #include "data\cis\bases\base_compound_aurek.hpp"
+                };
+				class RD501_Compositions_CIS_Base_14 {
+                    name="Internment Camp (Large)";
+                    side = 8;
+                    icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                    #include "data\cis\bases\base_interment_camp_large.hpp"
+                };
+				class RD501_Compositions_CIS_Base_15 {
+                    name="Internment Facility (Large)";
+                    side = 8;
+                    icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                    #include "data\cis\bases\base_interment_facility_large.hpp"
+                };
+				class RD501_Compositions_CIS_Base_16 {
+                    name="Armor Repair Depot";
+                    side = 8;
+                    icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                    #include "data\cis\bases\base_armor_repair_depot.hpp"
+                };
             };
             class RD501_Compositions_CIS_Ships {
                 name = "Ships";
@@ -146,12 +176,6 @@ class CfgGroups {
             };
             class RD501_Compositions_CIS_Installations {
                 name = "Installations";
-                class RD501_Compositions_CIS_Installation_0 {
-                    name="Example Installation";
-                    side = 8;
-                    icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
-                    #include "data\cis\installations\example_installation.hpp"
-                };
                 class RD501_Compositions_CIS_Installation_1 {
                     name="Small Bunker";
                     side = 8;
@@ -163,6 +187,42 @@ class CfgGroups {
                     side = 8;
                     icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
                     #include "data\cis\installations\checkpoint.hpp"
+                };
+	            class RD501_Compositions_CIS_Installation_3 {
+                    name="Fortified Triple Dispenser (Large)";
+                    side = 8;
+                    icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                    #include "data\cis\installations\installation_fortified_triple_dispenser_large.hpp"
+                };
+	            class RD501_Compositions_CIS_Installation_4 {
+                    name="Fortified Double Dispenser (Medium)";
+                    side = 8;
+                    icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                    #include "data\cis\installations\installation_fortified_double_dispenser_medium.hpp"
+                };
+	            class RD501_Compositions_CIS_Installation_5 {
+                    name="Fortified Dispenser (Medium)";
+                    side = 8;
+                    icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                    #include "data\cis\installations\installation_fortified_dispenser_medium.hpp"
+                };
+	            class RD501_Compositions_CIS_Installation_6 {
+                    name="Fortified Dispenser (Small)";
+                    side = 8;
+                    icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                    #include "data\cis\installations\installation_fortified_dispenser_small.hpp"
+                };
+	            class RD501_Compositions_CIS_Installation_7 {
+                    name="Fortified Bunker (Small)";
+                    side = 8;
+                    icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                    #include "data\cis\installations\installation_fortified_bunker_medium.hpp"
+                };
+	            class RD501_Compositions_CIS_Installation_8 {
+                    name="Supply Bunker (Small)";
+                    side = 8;
+                    icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                    #include "data\cis\installations\installation_supply_bunker_small.hpp"
                 };
             };
         };

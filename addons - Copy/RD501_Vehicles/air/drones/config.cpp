@@ -156,12 +156,12 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\RD501_Vehicles\textures\sentinel\phantom_fuselage_01_gar_co.paa",""};
 		weapons[] = {
 			macro_basic_air_weapons,
-			macro_new_weapon(generic,ion_aircraft_cannon)
+			macro_new_weapon(generic,republic_aircraft_cannon)
 			};
 		magazines[] = {
 			macro_basic_air_mags,
-			macro_new_mag(generic_aircraft_cannon_blue,1000),
-			macro_new_mag(generic_aircraft_cannon_blue,1000)
+			macro_new_mag(generic_aircraft_gun_green,1000),
+			macro_new_mag(generic_aircraft_gun_green,1000)
 			};
 		class pilotCamera
 		{

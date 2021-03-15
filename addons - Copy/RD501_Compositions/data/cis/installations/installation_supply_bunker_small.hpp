@@ -1,0 +1,14 @@
+class Object0	{side = 8; vehicle = "land_3as_Bunker"; rank = ""; position[] = {0.88208,-0.326904,0}; dir = 88.038;};
+class Object1	{side = 8; vehicle = "3as_Barricade_3_prop"; rank = ""; position[] = {0.126221,-7.96289,0}; dir = -1.68159;};
+class Object2	{side = 8; vehicle = "3as_Barricade_2_C_prop"; rank = ""; position[] = {4.48486,-7.55688,0}; dir = -31.2783;};
+class Object3	{side = 8; vehicle = "3as_Barricade_2_C_prop"; rank = ""; position[] = {-4.27979,-7.84424,0}; dir = 26.9457;};
+class Object4	{side = 8; vehicle = "3as_large_crate_stack_1_prop"; rank = ""; position[] = {0.553467,7.43481,0}; dir = -11.5554;};
+class Object5	{side = 8; vehicle = "3as_Big_Box_3_Light_prop"; rank = ""; position[] = {-8.31787,0.73999,0}; dir = -91.5785;};
+class Object6	{side = 8; vehicle = "3as_crate5_3"; rank = ""; position[] = {-4.52954,-2.76196,0}; dir = -91.5785;};
+class Object7	{side = 8; vehicle = "3as_large_crate_prop"; rank = ""; position[] = {4.7373,-1.88721,0}; dir = -91.5785;};
+class Object8	{side = 8; vehicle = "3as_small_crate_stack_2_prop"; rank = ""; position[] = {7.69604,2.84619,0}; dir = 91.185;};
+class Object9	{side = 8; vehicle = "3as_crate5_3"; rank = ""; position[] = {-3.2002,-3.97681,0}; dir = 112.208;};
+class Object10	{side = 8; vehicle = "3as_Small_Box_3_prop"; rank = ""; position[] = {-4.29614,2.70947,0}; dir = 268.095;};
+class Object11	{side = 8; vehicle = "3as_small_crate_prop"; rank = ""; position[] = {3.97412,2.56226,0}; dir = -91.5785;};
+class Object12	{side = 8; vehicle = "3as_Small_Box_1_prop"; rank = ""; position[] = {4.86328,-3.29541,0}; dir = -91.5785;};
+class Object13	{side = 8; vehicle = "3as_small_crate_prop"; rank = ""; position[] = {3.14331,-3.7937,0}; dir = 146.44;};
