@@ -1,22 +1,14 @@
 params["_args", "_handle"];
 _args params["_player"];
-/*
-*	_jammers = [
-*		[_jammer, _radius, _strength],
-*		["bis_o1", 1000, 400]
-*	];
-*/
-if(!alive _player) exitWith { diag_log format["Player dead for %1", _handle] };
 
 _jammers = missionNamespace getVariable ["rd501_jammers",[]];
 
 // Exit if jammer list is empty, remove PFH and rely on someone else calling it via jammer placement
-if(count _jammers == 0) exitWith {
-	diag_log "Exiting Client PFH";
+if(!alive _player || count _jammers == 0) exitWith {
 	[_handle] call CBA_fnc_removePerFrameHandler;
 	_player setVariable ["rd501_jammers_pfh", -1];
 	_player setVariable ["tf_receivingDistanceMultiplicator", 1];
-	//_player setVariable ["tf_transmittingDistanceMultiplicator", 1]; // Unused by TFAR 0.9.7
+	_player setVariable ["tf_sendingDistanceMultiplicator", 1]; // Unused by TFAR 0.9.7
 };
 
 // Aggregate the mean interference (multiple jammers allowed)
@@ -44,4 +36,4 @@ private _interference = 1;
 
 // Set interference locally
 _player setVariable ["tf_receivingDistanceMultiplicator", _interference];
-// _player setVariable ["tf_transmittingDistanceMultiplicator", _interference]; // Unused by TFAR 0.9.7
+_player setVariable ["tf_sendingDistanceMultiplicator", _interference];
