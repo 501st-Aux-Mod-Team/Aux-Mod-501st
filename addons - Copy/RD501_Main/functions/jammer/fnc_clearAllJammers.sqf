@@ -1,5 +1,5 @@
 if(isServer) exitWith {
-	private _jammers = missionNamespace getVariable ["rd501_jammers",[]];
+	private _jammers = missionNamespace getVariable ["rd501_jammers", []];
 	{
 		params["_jammer", "_radius", "_strength", "_jipId"];
 		[_jipId] call CBA_fnc_removeGlobalEventJIP;
