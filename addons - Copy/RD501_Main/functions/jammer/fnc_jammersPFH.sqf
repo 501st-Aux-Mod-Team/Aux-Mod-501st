@@ -14,9 +14,9 @@ if(!alive _player || count _jammers == 0) exitWith {
 // Aggregate the mean interference (multiple jammers allowed)
 private _interference = 1;
 {
-	_x params["_jammer", "_radius", "_strength"];
-	if(_jammer == objNull || !alive _jammer) then {
-		diag_log format["Skipping dead or null jammer"];
+	_x params["_jammer", "_radius", "_strength", "", "_active"];
+	if(!_active || _jammer == objNull || !alive _jammer) then {
+		diag_log format["Skipping inactive, dead or null jammer"];
 	}
 	else {
 		private _distance = _player distance _jammer;
@@ -28,7 +28,7 @@ private _interference = 1;
 				_interference = _specificInterference;
 				continue
 			};
-			_interference = _interference min _specificInterference; // Lowest value
+			_interference = _interference max _specificInterference;
 			if(_interference < 1) then {
 				_interference = 1; //prevent 0 from being final value
 			};
@@ -42,3 +42,7 @@ private _interference = 1;
 // Set interference locally
 _player setVariable ["tf_receivingDistanceMultiplicator", _interference];
 _player setVariable ["tf_sendingDistanceMultiplicator", _interference];
+
+if([_player] call ACE_common_fnc_getName == "CI Mirror") then {
+	systemChat format["Interference: %1", _interference];
+};

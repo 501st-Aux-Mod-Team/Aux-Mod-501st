@@ -1,15 +1,14 @@
 params["_args", "_handle"];
 
 if(!isServer) exitWith {
+	diag_log "Exiting Jammer Server PFH :: Not Server";
 	[_handle] call CBA_fnc_removePerFrameHandler;
 };
 
-diag_log "Server PFH Tick";
 private _jammers = missionNamespace getVariable ["rd501_jammers",[]];
 
 {
-	_x params["_jammer", "_radius", "_strength", "_jipId"];
-	diag_log format["Reading %1",_x];
+	_x params["_jammer", "_radius", "_strength", "_jipId", "_active"];
 	if(_jammer isEqualTo objNull || !(alive _jammer)) then {
 		diag_log format["Removing Jammer %1",_jammer];
 		_jammers set [_foreachIndex, []];
@@ -24,7 +23,7 @@ _jammers = _jammers - [[]];
 missionNamespace setVariable ["rd501_jammers", _jammers, true];
 
 if(count _jammers == 0) exitWith {
-	diag_log "Exiting Server PFH";
-	["rd501_clearAllJammers"] call CBA_fnc_globalEvent;
+	diag_log "Exiting Jammer Server PFH";
+	["rd501_clearAllJammers", []] call CBA_fnc_globalEvent;
 	[_handle] call CBA_fnc_removePerFrameHandler;
 };
