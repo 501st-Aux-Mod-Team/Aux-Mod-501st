@@ -59,6 +59,15 @@ class CfgVehicles
 			};
 		};
 	};
-
-
 };
+
+class Extended_Init_EventHandlers
+{
+	class macro_new_vehicle(droideka,base)
+	{
+		class rd501_deka_shield
+		{
+			init = "_this call rd501_fnc_droideka_shield_init.sqf";
+		};
+	};
+}
