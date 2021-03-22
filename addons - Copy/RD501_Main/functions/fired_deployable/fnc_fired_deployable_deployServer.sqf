@@ -1,4 +1,4 @@
-params[["_ammo", ""], ["_position", [0,0,0]]];
+params[["_ammo", ""], ["_position", [0,0,0]], ["_direction", 0]];
 
 diag_log format["Deploying Squad Shield for %1 at %2", _ammo, _position];
 
@@ -28,6 +28,7 @@ private _soundDistance = getNumber (_config >> "rd501_fired_deployable_soundDist
 
 private _deployed = createVehicle [_deployable, _position, [], 0, "CAN_COLLIDE"];
 _deployed setPosATL _position;
+_deployed setDir _direction;
 
 if(_timeToLive > 0) then {
 	[
