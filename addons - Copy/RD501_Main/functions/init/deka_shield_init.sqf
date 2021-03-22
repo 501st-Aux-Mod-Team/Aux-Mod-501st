@@ -7,7 +7,7 @@ private _hitEH = _unit addEventHandler ["HitPart", {
 		private _ehId = _unit getVariable ["rd501_dekashield_hitEH", -1];
 		if(alive _unit && _ehId != -1) then {
 			private _position = getPosATL _unit;
-			private _shield = "RD501_Squad_Shield" createVehicle _position;
+			private _shield = "RD501_Droideka_Shield" createVehicle _position;
 			_unit setVariable ["rd501_dekashield_attached", _shield, true];
 			_shield setPosATL _position;
 			_shield attachTo [_unit, [0,0,0]];
