@@ -26,7 +26,7 @@ class Extended_Init_EventHandlers
 	{
 		class rd501_equip_shield
 		{
-			init = "[] call JLTS_fnc_handleRiotShield";
+			init = "_this call rd501_fnc_jlts_shield_aiToggle";
 		};
 	};
 }

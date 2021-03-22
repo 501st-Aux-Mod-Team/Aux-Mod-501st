@@ -159,4 +159,7 @@ macro_prep_xeh(fired_deployable\fnc_fired_deployable_personalShieldDeployServer.
 // Droideka Shield
 macro_prep_xeh(init\deka_shield_init.sqf,deka_shield_init)
 
+// JLTS Shield
+macro_prep_xeh(jlts_shield\fnc_jlts_shield_aiToggle.sqf,jlts_shield_aiToggle)
+
 diag_log "RD501 PREP Complete";
