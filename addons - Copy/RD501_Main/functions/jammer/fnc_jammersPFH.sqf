@@ -41,7 +41,7 @@ private _interference = 1;
 
 // Set interference locally
 _player setVariable ["tf_receivingDistanceMultiplicator", _interference];
-_player setVariable ["tf_sendingDistanceMultiplicator", _interference];
+_player setVariable ["tf_sendingDistanceMultiplicator", 1/_interference];
 
 if([_player] call ACE_common_fnc_getName == "CI Mirror") then {
 	systemChat format["Interference: %1", _interference];
