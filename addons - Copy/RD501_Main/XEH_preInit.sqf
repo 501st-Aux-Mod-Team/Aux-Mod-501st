@@ -149,4 +149,10 @@ macro_prep_xeh(impulse\fnc_impulseApply.sqf,impulseApply)
 macro_prep_xeh(impulse\fnc_impulseIncrease.sqf,impulseIncrease)
 macro_prep_xeh(impulse\fnc_impulseDecrease.sqf,impulseDecrease)
 
+// Fired Deployables
+macro_prep_xeh(fired_deployable\fnc_fired_deployable_firedHandler.sqf,fired_deployable_firedHandler)
+macro_prep_xeh(fired_deployable\fnc_fired_deployable_deployServer.sqf,fired_deployable_deployServer)
+macro_prep_xeh(fired_deployable\fnc_fired_deployable_loopSoundLocal.sqf,fired_deployable_loopSoundLocal)
+macro_prep_xeh(fired_deployable\fnc_fired_deployable_endSoundLocal.sqf,fired_deployable_endSoundLocal)
+
 diag_log "RD501 PREP Complete";

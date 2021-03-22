@@ -50,6 +50,11 @@ class CfgVehicles
 		displayName="Squad Shield";
 		model="\RD501_Vehicles\static\shields\bubble\bubble.p3d";
 		icon="iconObject_1x1";
+		rd501_fired_deployable_loopSound = "rd501_squad_shield_loop";
+		rd501_fired_deployable_loopDuration = 14;
+		rd501_fired_deployable_endSound = "rd501_squad_shield_end";
+		rd501_fired_deployable_endDuration = 1;
+		rd501_fired_deployable_soundDistance = 300;
 		vehicleClass = macro_editor_vehicle_type(statics)
 		editorCategory =  macro_editor_cat(statics)
 		editorSubcategory = macro_editor_cat(static_msc)
@@ -76,5 +81,30 @@ class CfgVehicles
 		vehicleClass = macro_editor_vehicle_type(statics)
 		editorCategory =  macro_editor_cat(statics)
 		editorSubcategory = macro_editor_cat(static_msc)
+	};
+};
+class CfgSounds
+{
+	class rd501_squad_shield_loop
+	{
+		// how the sound is referred to in the editor (e.g. trigger effects)
+		name = "shield_loop";
+
+		// filename, volume, pitch, distance (optional)
+		sound[] = { "\RD501_Vehicles\static\shields\shield_loop.wss", 4, 1, 300 };
+
+		// subtitle delay in seconds, subtitle text
+		titles[] = { 1, "*Electric Shield Hum*" };
+	};
+	class rd501_squad_shield_end
+	{
+		// how the sound is referred to in the editor (e.g. trigger effects)
+		name = "shield_loop";
+
+		// filename, volume, pitch, distance (optional)
+		sound[] = { "\RD501_Vehicles\static\shields\shield_end.wss", 4, 1, 300 };
+
+		// subtitle delay in seconds, subtitle text
+		titles[] = { 1, "*Shield Retracting Hiss*" };
 	};
 };
