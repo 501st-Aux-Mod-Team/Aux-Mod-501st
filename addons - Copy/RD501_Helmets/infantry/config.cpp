@@ -157,6 +157,8 @@ class CfgWeapons
 	NEW_501_Inf_Helm_JLTS(Shredded,Shredded,Shredded.paa)
 	NEW_501_Inf_Helm_JLTS(Popeye,Popeye,Popeye.paa)
 	NEW_501_Inf_Helm_JLTS(Shroom,Shroom,Shroom.paa)
+	NEW_501_Inf_Helm_JLTS(Sledge,Sledge,Sledge.paa)
+	NEW_501_Inf_Helm_JLTS(Mirror,Mirror,Mirror.paa)
 	NEW_501_ARC_Helm_JLTS(Rayne,Rayne,Rayne.paa)
 	NEW_501_ARC_Helm_JLTS(Archaic,Archaic,Archaic.paa)
 	NEW_501_Inf_Helm_JLTS(Anta,Anta,Anta.paa)
@@ -174,4 +176,6 @@ class CfgWeapons
 	NEW_501_ARC_Helm_JLTS(Odd,Odd,Odd.paa)
 	NEW_501_ARC_Helm_JLTS(Blade,Blade,Blade.paa)
 	NEW_501_ARC_Helm_JLTS(Leon,Leon,Leon.paa)
+	NEW_501_ARC_Helm_JLTS(Aedan,Aedan,Aedan.paa)
+	NEW_501_ARC_Helm_JLTS(Tal,Tal,Tal.paa)
 };
