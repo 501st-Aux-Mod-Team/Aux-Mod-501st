@@ -92,6 +92,7 @@ call macro_fnc_name(stun);
     if (getNumber (_config >> "rd501_grenade_deployable") == 1) then {
         private _deployable = getText (_config >> "rd501_grenade_deployable_object");
         private _ttl = getNumber (_config >> "rd501_grenade_deployable_timeToLive");
+		private _direction = direction _unit;
         if(isNil "_ttl") then {
             _ttl = -1;
         };
@@ -102,10 +103,11 @@ call macro_fnc_name(stun);
                 !(isNil "_projectile") && (alive _projectile) && _speed <= 0.1
             }, 
             {
-                params["_projectile", "_deployable", "_timeToLive"];
+                params["_projectile", "_deployable", "_timeToLive", "", "", "_direction"];
                 private _position = getPosATL _projectile;
                 private _deployed = createVehicle [_deployable, _position, [], 0, "CAN_COLLIDE"];
 				_deployed setPosATL _position;
+				_deployed setDir _direction;
                 deleteVehicle _projectile;
                 if(_timeToLive > 0) then {
                     [
@@ -118,7 +120,7 @@ call macro_fnc_name(stun);
                     ] call CBA_fnc_waitAndExecute;
                 };
             },
-            [_projectile, _deployable, _ttl, _magazine, _unit],
+            [_projectile, _deployable, _ttl, _magazine, _unit, _direction],
             10, 
             { 
                 params["", "", "", "_magazine", "_unit"];
