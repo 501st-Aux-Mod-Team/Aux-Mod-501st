@@ -20,8 +20,10 @@ if(isNil "_deployable" || _deployable isEqualTo "") exitWith {
 };
 
 _config = configFile >> "CfgVehicles" >> _deployable;
+private _hasLoopSound = isText (_config >> "rd501_fired_deployable_loopSound");
 private _loopSound = getText (_config >> "rd501_fired_deployable_loopSound");
 private _loopDuration = getNumber (_config >> "rd501_fired_deployable_loopDuration");
+private _hasEndSound = isText (_config >> "rd501_fired_deployable_endSound");
 private _endSound = getText (_config >> "rd501_fired_deployable_endSound");
 private _endDuration = getNumber (_config >> "rd501_fired_deployable_endDuration");
 private _soundDistance = getNumber (_config >> "rd501_fired_deployable_soundDistance");
@@ -40,13 +42,18 @@ if(_timeToLive > 0) then {
 		_timeToLive
 	] call CBA_fnc_waitAndExecute;
 
-	[
-		{
-			params["_deployed", "_endSound", "_endDuration", "_distance"];
-			["rd501_fired_deployable_soundEnd", [_deployed, _endSound, _endDuration, _distance]] call CBA_fnc_globalEvent;
-		},
-		[_deployed, _endSound, _endDuration, _soundDistance],
-		(_timeToLive - _endDuration)
-	] call CBA_fnc_waitAndExecute;
+	if(_hasEndSound && !isNil _endSound && _endSound != "") then {
+		[
+			{
+				params["_deployed", "_endSound", "_endDuration", "_distance"];
+				["rd501_fired_deployable_soundEnd", [_deployed, _endSound, _endDuration, _distance]] call CBA_fnc_globalEvent;
+			},
+			[_deployed, _endSound, _endDuration, _soundDistance],
+			(_timeToLive - _endDuration)
+		] call CBA_fnc_waitAndExecute;
+	};
+};
+
+if(_hasLoopSound && !isNil _loopSound && _loopSound != "") then {
 	["rd501_fired_deployable_soundLoop", [_deployed, _loopSound, _loopDuration, _timeToLive, _soundDistance]] call CBA_fnc_globalEvent;
 };

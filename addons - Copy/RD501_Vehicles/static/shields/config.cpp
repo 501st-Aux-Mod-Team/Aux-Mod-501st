@@ -79,11 +79,6 @@ class CfgVehicles
 		displayName="Trench Shield";
 		model="\RD501_Vehicles\static\shields\trench\trench.p3d";
 		icon="iconObject_1x1";
-		rd501_fired_deployable_loopSound = "rd501_squad_shield_loop";
-		rd501_fired_deployable_loopDuration = 14;
-		rd501_fired_deployable_endSound = "rd501_squad_shield_end";
-		rd501_fired_deployable_endDuration = 1;
-		rd501_fired_deployable_soundDistance = 150;
 		vehicleClass = macro_editor_vehicle_type(statics)
 		editorCategory =  macro_editor_cat(statics)
 		editorSubcategory = macro_editor_cat(static_msc)
@@ -107,11 +102,6 @@ class CfgVehicles
 		displayName="Trench Shield";
 		model="\RD501_Vehicles\static\shields\bubble\deka_shield.p3d";
 		icon="iconObject_1x1";
-		rd501_fired_deployable_loopSound = "rd501_squad_shield_loop";
-		rd501_fired_deployable_loopDuration = 14;
-		rd501_fired_deployable_endSound = "rd501_squad_shield_end";
-		rd501_fired_deployable_endDuration = 1;
-		rd501_fired_deployable_soundDistance = 200;
 		vehicleClass = macro_editor_vehicle_type(statics)
 		editorCategory =  macro_editor_cat(statics)
 		editorSubcategory = macro_editor_cat(static_msc)

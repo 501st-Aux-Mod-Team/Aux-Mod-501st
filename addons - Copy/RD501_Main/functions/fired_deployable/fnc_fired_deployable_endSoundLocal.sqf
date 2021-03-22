@@ -6,12 +6,12 @@ if(!hasInterface) exitWith {
 };
 
 if(isNil "_object" || !alive _object) exitWith {
-	systemChat "No target object to play remote sound";
+	diag_log "No target object to play remote sound";
 };
 
 private _currentLoopSource = _object getVariable ["rd501_fired_deployable_loopSoundSource", objNull];
 if(!(isNil "_currentLoopSource") && !(_currentLoopSource isEqualTo objNull)) then {
-	systemChat "Current Loop Source Exists, Deleting";
+	diag_log "Current Loop Source Exists, Deleting";
 	deleteVehicle _currentLoopSource;
 	_object setVariable ["rd501_fired_deployable_loopSoundSource", objNull, false];
 };

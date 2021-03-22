@@ -10,7 +10,7 @@ if(isNil "_object" || !alive _object) exitWith {
 };
 
 private _currentSource = _object getVariable ["rd501_fired_deployable_loopSoundSource", objNull];
-systemChat str _currentSource;
+
 if(!(isNil "_currentSource") && !(_currentSource isEqualTo objNull)) exitWith {
 	diag_log "Source already exists, removing";
 	detach _currentSource;
@@ -31,7 +31,7 @@ for "_i" from 0 to _repeats step 1 do {
 	[
 		{
 			params["_currentSource", "_loopSound", "_distance", "_last"];
-			if(isNil "_currentSource" || !alive _currentSource) exitWith { systemChat "No Source, Exiting." };
+			if(isNil "_currentSource" || !alive _currentSource) exitWith { diag_log "No Source, Exiting." };
 			[_currentSource, player] say3D [_loopSound, _distance, 1, false];
 			if(_last) then {
 				diag_log "Last Loop, Deleting";
