@@ -67,7 +67,7 @@ class Extended_Init_EventHandlers
 	{
 		class rd501_deka_shield
 		{
-			init = "_this call rd501_fnc_droideka_shield_init.sqf";
+			init = "_this call rd501_fnc_deka_shield_init";
 		};
 	};
 }

@@ -148,4 +148,7 @@ macro_prep_xeh(impulse\fnc_impulseApply.sqf,impulseApply)
 macro_prep_xeh(impulse\fnc_impulseIncrease.sqf,impulseIncrease)
 macro_prep_xeh(impulse\fnc_impulseDecrease.sqf,impulseDecrease)
 
+// Droideka Shield
+macro_prep_xeh(init\deka_shield_init.sqf,deka_shield_init)
+
 diag_log "RD501 PREP Complete";
