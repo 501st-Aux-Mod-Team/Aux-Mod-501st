@@ -99,13 +99,13 @@ class CfgVehicles
 
 		weapons[]=
 		{
-			"JLTS_E5_shield",
+			"JLTS_E5",
 			"Throw",
 			"Put"
 		};
 		respawnWeapons[]=
 		{
-			"JLTS_E5_shield",
+			"JLTS_E5",
 			"Throw",
 			"Put"
 		};
@@ -154,10 +154,12 @@ class CfgVehicles
 			"JLTS_NVG_droid_chip_1"
 		};
 		items[]={
-			_3(macro_zip_tie)
+			_3(macro_zip_tie),
+			"JLTS_riot_shield_droid_item"
 		};
 		respawnItems[]={
-			_3(macro_zip_tie)
+			_3(macro_zip_tie),
+			"JLTS_riot_shield_droid_item"
 		};
     };
 }
