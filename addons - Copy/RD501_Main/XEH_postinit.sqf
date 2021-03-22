@@ -90,6 +90,9 @@ if(isServer) then {
 	["rd501_fired_deployable_deployServer", {
 		_this call rd501_fnc_fired_deployable_deployServer
 	}] call CBA_fnc_addEventHandler;
+	["rd501_fired_deployable_personalShieldDeployServer", {
+		_this call rd501_fnc_fired_deployable_personalShieldDeployServer
+	}] call CBA_fnc_addEventHandler;
 };
 
 if(hasInterface) then {

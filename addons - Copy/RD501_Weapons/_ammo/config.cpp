@@ -316,6 +316,20 @@ class CfgAmmo
         rd501_fired_deployable_timeToLive = 120;
 		simulation="shotShell";
 	}
+	class macro_new_ammo(personal_shield) : 3AS_CoreDetonator_1RND
+	{
+		hit=0;
+		indirectHit=0;
+		indirectHitRange=0;
+		model="\RD501_Weapons\Grenades\data\icecream.p3d";
+		rd501_fired_deployable = 1;
+        rd501_fired_deployable_object = "RD501_Personal_Shield";
+        rd501_fired_deployable_timeToLive = 120;
+        rd501_fired_deployable_personal = 1;
+        rd501_fired_deployable_personal_offset[] = {0.1, 0.9, 0.4};
+        rd501_fired_deployable_personal_bone = "pelvis";
+		simulation="shotShell";
+	}
 ///////////////////////////////////////////////////////////////////////
 /////////////////////////Shotgun///////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
@@ -491,4 +505,3 @@ class CfgAmmo
 		indirectHitRange=8;
 	};
 };
-	

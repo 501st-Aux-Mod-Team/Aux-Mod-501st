@@ -7,9 +7,14 @@ if (isNull _projectile) then {
 };
 private _config = configFile >> "CfgAmmo" >> _ammo;
 private _deployable = getNumber (_config >> "rd501_fired_deployable");
+private _personal = getNumber (_config >> "rd501_fired_deployable_personal");
 private _direction = direction _unit;
 
 if (_deployable == 1) then {
+	if(_personal == 1) exitWith {
+		["rd501_fired_deployable_personalShieldDeployServer", [_unit, _ammo]] call CBA_fnc_serverEvent;
+		deleteVehicle _projectile;
+	};
 	[
 		{
 			params["_projectile"];
