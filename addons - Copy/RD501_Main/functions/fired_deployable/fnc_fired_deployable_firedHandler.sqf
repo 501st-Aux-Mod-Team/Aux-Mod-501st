@@ -8,6 +8,7 @@ if (isNull _projectile) then {
 private _config = configFile >> "CfgAmmo" >> _ammo;
 private _deployable = getNumber (_config >> "rd501_fired_deployable");
 private _direction = direction _unit;
+
 if (_deployable == 1) then {
 	[
 		{
@@ -16,7 +17,7 @@ if (_deployable == 1) then {
 			!(isNil "_projectile") && (alive _projectile) && _speed <= 0.1
 		},
 		{
-			params["_projectile", "_ammo", "_direction"];
+			params["_projectile", "_ammo", "", "", "_direction"];
 			private _position = getPosATL _projectile;
 			["rd501_fired_deployable_deployServer", [_ammo, _position, _direction]] call CBA_fnc_serverEvent;
 			deleteVehicle _projectile;
