@@ -77,4 +77,11 @@ class Extended_Init_EventHandlers
 			init = "_this call rd501_fnc_deka_shield_init";
 		};
 	};
+	class macro_new_vehicle(droideka,normal)
+	{
+		class rd501_deka_shield
+		{
+			init = "_this call rd501_fnc_deka_shield_init";
+		};
+	};
 }
