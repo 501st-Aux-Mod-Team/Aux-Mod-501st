@@ -305,6 +305,17 @@ class CfgAmmo
         rd501_fired_deployable_timeToLive = 60;
 		simulation="shotShell";
 	}
+	class macro_new_ammo(squad_shield_alpha) : 3AS_CoreDetonator_1RND
+	{
+		hit=0;
+		indirectHit=0;
+		indirectHitRange=0;
+		model="\RD501_Weapons\Grenades\data\icecream.p3d";
+		rd501_fired_deployable = 1;
+        rd501_fired_deployable_object = "RD501_Squad_Shield_trench";
+        rd501_fired_deployable_timeToLive = 120;
+		simulation="shotShell";
+	}
 ///////////////////////////////////////////////////////////////////////
 /////////////////////////Shotgun///////////////////////////////////////
 //////////////////////////////////////////////////////////////////////

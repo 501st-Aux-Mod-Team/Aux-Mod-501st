@@ -155,4 +155,7 @@ macro_prep_xeh(fired_deployable\fnc_fired_deployable_deployServer.sqf,fired_depl
 macro_prep_xeh(fired_deployable\fnc_fired_deployable_loopSoundLocal.sqf,fired_deployable_loopSoundLocal)
 macro_prep_xeh(fired_deployable\fnc_fired_deployable_endSoundLocal.sqf,fired_deployable_endSoundLocal)
 
+// Droideka Shield
+macro_prep_xeh(init\deka_shield_init.sqf,deka_shield_init)
+
 diag_log "RD501 PREP Complete";
