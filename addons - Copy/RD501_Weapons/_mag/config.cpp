@@ -370,6 +370,17 @@ class CfgMagazines
 		descriptionShort = "Republic Thermal Imploder";
 		picture="\RD501_Weapons\_mag\data\rd501_icon_mag_imploder.paa";
 	};
+	class macro_new_mag(squad_shield_alpha,1):3AS_BaridumCore
+	{
+		author="RD501";
+		scope=2;
+		displayName = "Republic Squad Shield Alpha";
+		displayNameShort = "Squad Shield Alpha";
+		count=1;
+		ammo = macro_new_ammo(squad_shield_alpha)
+		descriptionShort = "Republic Thermal Imploder";
+		picture="\RD501_Weapons\_mag\data\rd501_icon_mag_imploder.paa";
+	};
 
 	////////////////////////////////////////////////////
 	/////////////Missile  Magazines/////////////////////

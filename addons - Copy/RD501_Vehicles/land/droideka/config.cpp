@@ -13,7 +13,8 @@ class CfgPatches
 		requiredVersion=0.1;
 		units[]=
 		{
-			macro_new_vehicle(droideka,base)
+			macro_new_vehicle(droideka,base),
+			macro_new_vehicle(droideka,normal)
 		};
 		weapons[]=
 		{
@@ -59,6 +60,12 @@ class CfgVehicles
 			};
 		};
 	};
+	class macro_new_vehicle(droideka,normal): macro_new_vehicle(droideka,base)
+	{
+		displayName = "Droideka (Moveable)";
+		forceInGarage = 0;
+	};
+
 };
 
 class Extended_Init_EventHandlers
