@@ -142,7 +142,8 @@ macro_prep_xeh(jammer\fnc_addJammer.sqf,addJammer)
 macro_prep_xeh(jammer\fnc_addJammerLocal.sqf,addJammerLocal)
 macro_prep_xeh(jammer\fnc_jammersPFH.sqf,jammersPFH)
 macro_prep_xeh(jammer\fnc_jammersServerPFH.sqf,jammersServerPFH)
-
+macro_prep_xeh(jammer\fnc_clearAllJammers.sqf,clearAllJammers)
+macro_prep_xeh(jammer\fnc_jammerControlActions.sqf,jammerControlActions)
 // Impulse
 macro_prep_xeh(impulse\fnc_impulseApply.sqf,impulseApply)
 macro_prep_xeh(impulse\fnc_impulseIncrease.sqf,impulseIncrease)

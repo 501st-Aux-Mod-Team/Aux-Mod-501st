@@ -75,6 +75,10 @@ call macro_fnc_name(stun);
 	_this call rd501_fnc_addJammerLocal
 }] call CBA_fnc_addEventHandler;
 
+["rd501_clearAllJammers", {
+	_this call rd501_fnc_clearAllJammers
+}] call CBA_fnc_addEventHandler;
+
 ["rd501_jammerServerPFH", {
 	[{
 		_this call rd501_fnc_jammersServerPFH
