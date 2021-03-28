@@ -22,4 +22,11 @@ class Extended_Init_EventHandlers
 			init = "[_this select 0, 300, 160] call rd501_fnc_addJammer";
 		};
 	};
+	class macro_new_unit_class(opfor,BX_shield)
+	{
+		class rd501_equip_shield
+		{
+			init = "_this call rd501_fnc_jlts_shield_aiToggle";
+		};
+	};
 }

@@ -14,7 +14,8 @@ class CfgPatches
 			macro_new_ordnance(ModuleDioxis),
 			macro_new_ordnance(ModuleShadow),
 			macro_new_ordnance(OrbitalLaser),
-			rd501_moduleJammerSettings
+			rd501_moduleJammerSettings,
+			rd501_moduleClearAllJammers
 		};
 		weapons[] = {};
 	};
@@ -64,6 +65,19 @@ class CfgVehicles
 	class ModuleOrdnance_F;
 	class ModuleChemlight_F;
 	class ModuleOrdnanceHowitzer_F;
+
+    class rd501_moduleClearAllJammers: Module_F  {
+		author = "RD501";
+        category = "Jammers";
+        function = "rd501_zeus_fnc_moduleJammerClearAll";
+        isGlobal = 1;
+        isTriggerActivated = 0;
+        scope = 1;
+        scopeCurator = 2;
+        curatorCanAttach = 1;
+        displayName = "Clear All Jammers";
+		portrait = "RD501_Zeus\ui\jammer_icon.paa";
+    };
     class rd501_moduleJammerSettings: Module_F  {
 		author = "RD501";
         category = "Jammers";

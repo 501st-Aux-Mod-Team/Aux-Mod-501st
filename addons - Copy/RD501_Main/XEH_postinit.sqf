@@ -75,77 +75,34 @@ call macro_fnc_name(stun);
 	_this call rd501_fnc_addJammerLocal
 }] call CBA_fnc_addEventHandler;
 
+["rd501_clearAllJammers", {
+	_this call rd501_fnc_clearAllJammers
+}] call CBA_fnc_addEventHandler;
+
 ["rd501_jammerServerPFH", {
 	[{
 		_this call rd501_fnc_jammersServerPFH
 	}, 1] call CBA_fnc_addPerFrameHandler;
 }] call CBA_fnc_addEventHandler;
 
-// Grenade Deployables
-["ace_firedPlayer", {
-    params["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile"];
+// Fired Deployables
+if(isServer) then {
+	["rd501_fired_deployable_deployServer", {
+		_this call rd501_fnc_fired_deployable_deployServer
+	}] call CBA_fnc_addEventHandler;
+	["rd501_fired_deployable_personalShieldDeployServer", {
+		_this call rd501_fnc_fired_deployable_personalShieldDeployServer
+	}] call CBA_fnc_addEventHandler;
+};
 
-    if (isNull _projectile) then {
-        _projectile = nearestObject [_unit, _ammo];
-    };
-    private _config = configFile >> "CfgAmmo" >> _ammo;
-    if (getNumber (_config >> "rd501_grenade_deployable") == 1) then {
-        private _deployable = getText (_config >> "rd501_grenade_deployable_object");
-        private _ttl = getNumber (_config >> "rd501_grenade_deployable_timeToLive");
-        if(isNil "_ttl") then {
-            _ttl = -1;
-        };
-        [
-            {
-                params["_projectile", "_deployable"];
-                private _speed = vectorMagnitude (velocity _projectile);
-                !(isNil "_projectile") && (alive _projectile) && _speed <= 0.1
-            }, 
-            {
-                params["_projectile", "_deployable", "_timeToLive"];
-                private _position = getPosATL _projectile;
-                private _deployed = createVehicle [_deployable, _position, [], 0, "CAN_COLLIDE"];
-				_deployed setPosATL _position;
-                deleteVehicle _projectile;
-                if(_timeToLive > 0) then {
-                    [
-                        {
-                            params["_deployed"];
-                            deleteVehicle _deployed;
-                        },
-                        [_deployed],
-                        _timeToLive
-                    ] call CBA_fnc_waitAndExecute;
-                };
-            },
-            [_projectile, _deployable, _ttl, _magazine, _unit],
-            10, 
-            { 
-                params["", "", "", "_magazine", "_unit"];
-				systemChat "Something went wrong with your order, we apologise for the inconvenience.";
-				systemChat "Please file all complaints with Mirror at the Aux Office.";
-				[
-					{
-						params["_unit", "_mag"];
-						_unit addItem _mag;
-						systemChat "We've attached a complementary replacement if you had any inventory space.";
-					},
-					[_unit, _magazine],
-					2
-				] call CBA_fnc_waitAndExecute;
-			}
-        ] call CBA_fnc_waitUntilAndExecute;
-    };
-}] call CBA_fnc_addEventHandler;
-
-// Prevent Dismount on all Zeus Placed Items
-{
-	private _idx = _x addEventHandler ["CuratorObjectPlaced", {
-		params ["_curator","_entity"];
-		if(!(_entity isKindOf "Man") && (side _entity) == east) then {
-			_entity allowCrewInImmobile true;
-			_entity setVehicleLock "LOCKED";
-		};
-	}];
-	_x setVariable ["rd501_curator_dismount_disable_index", _idx, false];
-} forEach allCurators;
+if(hasInterface) then {
+	["ace_firedPlayer", {
+		_this call rd501_fnc_fired_deployable_firedHandler
+	}] call CBA_fnc_addEventHandler;
+	["rd501_fired_deployable_soundLoop", {
+		_this call rd501_fnc_fired_deployable_loopSoundLocal
+	}] call CBA_fnc_addEventHandler;
+	["rd501_fired_deployable_soundEnd", {
+		_this call rd501_fnc_fired_deployable_endSoundLocal
+	}] call CBA_fnc_addEventHandler;
+};

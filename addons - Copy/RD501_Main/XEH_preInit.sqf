@@ -142,10 +142,24 @@ macro_prep_xeh(jammer\fnc_addJammer.sqf,addJammer)
 macro_prep_xeh(jammer\fnc_addJammerLocal.sqf,addJammerLocal)
 macro_prep_xeh(jammer\fnc_jammersPFH.sqf,jammersPFH)
 macro_prep_xeh(jammer\fnc_jammersServerPFH.sqf,jammersServerPFH)
-
+macro_prep_xeh(jammer\fnc_clearAllJammers.sqf,clearAllJammers)
+macro_prep_xeh(jammer\fnc_jammerControlActions.sqf,jammerControlActions)
 // Impulse
 macro_prep_xeh(impulse\fnc_impulseApply.sqf,impulseApply)
 macro_prep_xeh(impulse\fnc_impulseIncrease.sqf,impulseIncrease)
 macro_prep_xeh(impulse\fnc_impulseDecrease.sqf,impulseDecrease)
+
+// Fired Deployables
+macro_prep_xeh(fired_deployable\fnc_fired_deployable_firedHandler.sqf,fired_deployable_firedHandler)
+macro_prep_xeh(fired_deployable\fnc_fired_deployable_deployServer.sqf,fired_deployable_deployServer)
+macro_prep_xeh(fired_deployable\fnc_fired_deployable_loopSoundLocal.sqf,fired_deployable_loopSoundLocal)
+macro_prep_xeh(fired_deployable\fnc_fired_deployable_endSoundLocal.sqf,fired_deployable_endSoundLocal)
+macro_prep_xeh(fired_deployable\fnc_fired_deployable_personalShieldDeployServer.sqf,fired_deployable_personalShieldDeployServer)
+
+// Droideka Shield
+macro_prep_xeh(init\deka_shield_init.sqf,deka_shield_init)
+
+// JLTS Shield
+macro_prep_xeh(jlts_shield\fnc_jlts_shield_aiToggle.sqf,jlts_shield_aiToggle)
 
 diag_log "RD501 PREP Complete";

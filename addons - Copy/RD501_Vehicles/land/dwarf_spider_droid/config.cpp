@@ -44,32 +44,18 @@ class CfgVehicles
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
-			{
-				class ViewOptics;
-			};
+			{};
 		};
 	};
-	class SpiderDSD: StaticMGWeapon
-	{
-		scope=0;
-		class Turrets: Turrets
-		{
-			class MainTurret: MainTurret
-			{
-				class ViewOptics;
-			};
-		};
-	};
-	class 101st_DSD3_Droid:SpiderDSD
+	class 101st_Crab_Droid : StaticMGWeapon
 	{
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
-			{
-				class ViewOptics;
-			};
+			{};
 		};
 	};
+	class 101st_DSD3_Droid;
 
 	class macro_new_vehicle(dwarf_spider_droid,MkII): 101st_DSD3_Droid
 	{
@@ -78,7 +64,6 @@ class CfgVehicles
 		forceInGarage = 1;
 
 		class EventHandlers: DefaultEventhandlers {}; 
-
 		faction = macro_cis_faction;
 		editorSubcategory = macro_editor_cat(heavy_armored_infantry);
 		vehicleClass = macro_editor_vehicle_type(heavy_armored_infantry);
@@ -107,16 +92,6 @@ class CfgVehicles
 	{
 		displayName = "Dwarf Spider Droid MkII (Moveable)";
 		forceInGarage = 0;
-	};
-	class 101st_Crab_Droid : SpiderDSD
-	{
-		class Turrets: Turrets
-		{
-			class MainTurret: MainTurret
-			{
-				class ViewOptics;
-			};
-		};
 	};
 	class macro_new_vehicle(crab_droid,MkII): 101st_Crab_Droid
 	{
