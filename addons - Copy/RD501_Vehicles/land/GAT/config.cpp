@@ -326,7 +326,7 @@ class CfgVehicles
 				radius = 0.25;
 			};
 		};
-		class Components: Components
+		/*class Components: Components
 		{
 			class SensorsManagerComponent
 			{
@@ -359,7 +359,7 @@ class CfgVehicles
 					};
 				};
 			};
-		};
+		};*/
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
@@ -390,7 +390,7 @@ class CfgVehicles
 					macro_new_mag(generic_aircraft_gun_preatorian,1000),
 					macro_new_mag(generic_aircraft_gun_preatorian,1000)
 				};
-				class Components
+				/*class Components
 				{
 					class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftGunner
 					{
@@ -417,7 +417,7 @@ class CfgVehicles
 							};
 						};
 					};
-				};
+				};*/
 			};
 		};
 	};

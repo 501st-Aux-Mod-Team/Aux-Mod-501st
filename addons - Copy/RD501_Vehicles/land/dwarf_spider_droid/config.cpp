@@ -55,9 +55,24 @@ class CfgVehicles
 			{};
 		};
 	};
-	class 101st_DSD3_Droid;
+	class 101st_DSD3_Droid : StaticMGWeapon
+	{
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{};
+		};
+	};
+	class O_DBA_CIS_DSD3_F : 101st_DSD3_Droid
+	{
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{};
+		};
+	};
 
-	class macro_new_vehicle(dwarf_spider_droid,MkII): 101st_DSD3_Droid
+	class macro_new_vehicle(dwarf_spider_droid,MkII): O_DBA_CIS_DSD3_F
 	{
 		displayName = "Dwarf Spider Droid";
 		scope = 2;

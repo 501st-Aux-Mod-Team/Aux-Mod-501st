@@ -45,7 +45,7 @@ if(_aliveUnits < _target getVariable QGVAR(maxUnits)) exitWith
 		_group = group _unit;
 		_group setBehaviour "SAFE";
 		_group1 setCombatMode "RED";
-		_unit commandMove (_unit getPos [25, 0]);
+		_unit commandMove (_unit getPos [5, 0]);
 		{
 			_x addCuratorEditableObjects [[_unit], true];
 		} forEach allCurators;

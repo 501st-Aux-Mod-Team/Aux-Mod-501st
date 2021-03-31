@@ -217,7 +217,7 @@ class CfgAmmo
 		indirectHitRange = 5;
 		timeToLive =30;
 		model="\3AS\3AS_Equipment\model\3AS_thermaldet.p3d";
-		fuseDistance = 3;
+		fuseDistance = 5;
 	};
 	class RD501_grenade_emp_ammo: G_40mm_HE
     {
@@ -272,6 +272,8 @@ class CfgAmmo
 		hit=50;
 		indirectHit=45;
 		indirectHitRange=2;
+		fuseDistance=0;
+		explosionTime=0;
 		simulation="shotShell";
 	}
 	class macro_new_ammo(throwable_c_type) : 3AS_CoreDetonator_1RND

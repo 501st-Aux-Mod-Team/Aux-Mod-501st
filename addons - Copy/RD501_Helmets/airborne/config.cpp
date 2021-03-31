@@ -33,6 +33,7 @@ class CfgWeapons
 	NEW_501_AB_HELM_JLTS(501st_Jericho_helmet,Jericho,Jericho.paa)
 	NEW_501_AB_HELM_JLTS(501st_Volley_helmet,Volley,Volley.paa)
 	NEW_501_AB_HELM_JLTS(501st_Ritter_helmet,Ritter,Ritter.paa)
+	NEW_501_AB_HELM_JLTS(501st_Duck_helmet,Duck,Duck.paa)
 
 	
 

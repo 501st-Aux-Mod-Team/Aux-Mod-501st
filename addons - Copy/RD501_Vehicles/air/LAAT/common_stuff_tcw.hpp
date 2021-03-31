@@ -4,6 +4,8 @@ class EventHandlers : DefaultEventhandlers
 	init = "[_this select 0] execVM 'RD501_Main\functions\autocrate\autocrate.sqf';";
 };
 
+#include "../../common/helicopter_mfd.hpp"
+
 scope=2;
 author="RD501";
 forceInGarage = 1;
@@ -61,7 +63,60 @@ class ViewPilot: ViewPilot
 {
 	initAngleX = 0;
 };
-
+class Components: Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class IRSensorComponent: SensorTemplateIR
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=4000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=3500;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						typeRecognitionDistance=7500;
+						maxTrackableSpeed=600;
+						angleRangeHorizontal=60;
+						angleRangeVertical=40;
+						animDirection="mainGun";
+						aimDown=-0.5;
+					};
+					class ActiveRadarSensorComponent: SensorTemplateActiveRadar
+					{
+						class AirTarget
+						{
+							minRange=10000;
+							maxRange=10000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						class GroundTarget
+						{
+							minRange=7000;
+							maxRange=7000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						typeRecognitionDistance=16000;
+						angleRangeHorizontal=360;
+						angleRangeVertical=180;
+						aimDown=0;
+						maxTrackableSpeed=1388.89;
+					};
+				};
+			};
+		};
 //transport
 class TransportWeapons
 {

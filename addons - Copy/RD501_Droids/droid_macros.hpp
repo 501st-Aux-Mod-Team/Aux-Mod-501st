@@ -48,8 +48,8 @@
 #define macro_grenade_launcher_mag "RD501_UGL_HE_x6_mag"
 #define macro_grenade_launcher_mags _8(macro_grenade_launcher_mag)
 
-#define macro_thermal_det "swop_termDetDT_G"
-#define macro_thermal_imp "SWOP_BCCKtermimploder_G"
+#define macro_thermal_det "442_thermal_det_mag"
+#define macro_thermal_imp "442_thermal_det_mag"
 #define macro_smoke "swop_SmokeShell"
 #define macro_flashbang "swop_mag_flashbang"
 #define macro_dioxis_grenade "SWOP_SCAR_DioxisGM"

@@ -678,6 +678,90 @@ class macro_new_vest_class(501_inf,acc_1_c_rto): macro_new_vest_class(501_inf,ac
 			};
 		};
 	};
+	class macro_new_vest_class(501_ab,acc_2_1): macro_new_vest_class(501_inf,acc_9)
+	{
+		displayName = "[501st] AB ACC 02 (Vt. Trooper)";
+		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestAirborne.p3d";
+		hiddenSelections[] = {"Camo1","Camo2"};
+		hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\ab\acc\ab_sgt_acc.paa, TEXTUREPATH\Republic\clones\ab\acc\ab_trooper_vt_acc.paa};
+		hiddenSelectionsMaterials[]=
+		{
+			"RD501_Units\textures\Republic\clones\mats\clone_vest_officer.rvmat",
+			""
+		};
+		class ItemInfo: ItemInfo
+		{
+			uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestAirborne.p3d";
+			containerClass="Supply100";
+			hiddenSelections[]=
+			{
+				"camo1",
+				"camo2"
+			};
+			hiddenSelectionsMaterials[]=
+			{
+				"RD501_Units\textures\Republic\clones\mats\clone_vest_officer.rvmat",
+				""
+			};
+		};
+	};
+	class macro_new_vest_class(501_ab,acc_2_2): macro_new_vest_class(501_inf,acc_9)
+	{
+		displayName = "[501st] AB RTO ACC 02 (Vt. Trooper)";
+		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestAirborne.p3d";
+		hiddenSelections[] = {"Camo1","Camo2"};
+		hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\ab\acc\ab_sgt_acc.paa, TEXTUREPATH\Republic\clones\ab\acc\ab_rto_vt_acc.paa};
+		hiddenSelectionsMaterials[]=
+		{
+			"RD501_Units\textures\Republic\clones\mats\clone_vest_officer.rvmat",
+			""
+		};
+		class ItemInfo: ItemInfo
+		{
+			uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestAirborne.p3d";
+			containerClass="Supply100";
+			hiddenSelections[]=
+			{
+				"camo1",
+				"camo2"
+			};
+			hiddenSelectionsMaterials[]=
+			{
+				"RD501_Units\textures\Republic\clones\mats\clone_vest_officer.rvmat",
+				""
+			};
+		};
+	};
+	class macro_new_vest_class(501_ab,acc_2_3): macro_new_vest_class(501_inf,acc_9)
+	{
+		displayName = "[501st] AB MED ACC 02 (Vt. Trooper)";
+		picture = "\MRC\JLTS\characters\CloneArmor\data\ui\CloneVestHeavy_ui_ca.paa";
+		model="\MRC\JLTS\characters\CloneArmor\CloneVestAirborne.p3d";
+		hiddenSelections[] = {"Camo1","Camo2"};
+		hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\ab\acc\ab_sgt_acc.paa, TEXTUREPATH\Republic\clones\ab\acc\ab_medic_vt_acc.paa};
+		hiddenSelectionsMaterials[]=
+		{
+			"RD501_Units\textures\Republic\clones\mats\clone_vest_officer.rvmat",
+			""
+		};
+		class ItemInfo: ItemInfo
+		{
+			uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestAirborne.p3d";
+			containerClass="Supply100";
+			hiddenSelections[]=
+			{
+				"camo1",
+				"camo2"
+			};
+			hiddenSelectionsMaterials[]=
+			{
+				"RD501_Units\textures\Republic\clones\mats\clone_vest_officer.rvmat",
+				""
+			};
+		};
+	};
 	class macro_new_vest_class(501_ab,acc_3): macro_new_vest_class(501_inf,acc_9)
 	{
 		displayName = "[501st] AB ACC 03 (Corporal)";

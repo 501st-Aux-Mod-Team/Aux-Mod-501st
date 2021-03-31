@@ -5,12 +5,11 @@
 		displayName = "Aircraft Laser Gun";
 		//magazines[] = {"10000Rnd_RD501_RED_AircraftGun_Mag"};
 		modes[] = {"LowROF"};
-		canLock = 1;//changed from tri
-		//multiplier=1;
+		canLock=0;
+		ballisticsComputer=4;
 		weaponLockSystem = 0;//changed
 		
 		magazines[] = {macro_new_mag(generic_aircraft_gun,1000)};
-		ballisticsComputer = 4;
 		class LowROF: LowROF
 		{
 			displayName="Aircraft Laser Cannon";
@@ -105,7 +104,6 @@
 					};
 				};
 			};
-			ballisticsComputer = 4;
 			soundContinuous=0;
 			autoFire=1;
 			multiplier=1;

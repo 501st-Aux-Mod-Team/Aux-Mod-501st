@@ -18,7 +18,7 @@ GVAR(droidDispenserPossibleUnitsGlobal) = [
 
 // Orbital Dispenser Module Specific
 //The object to spawn for orbital missions, Is copied so will only effect new dispensers.
-GVAR(spawnerDefaultObject) = "Land_Cargo_House_V1_F";
+GVAR(spawnerDefaultObject) = "3as_droid_container";
 
 // The time to delay spawning the dispenser object for orbital missions
 GVAR(fireSupportSpawnDelay) = 8;

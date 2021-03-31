@@ -69,7 +69,7 @@ class CfgPatches
 		};
 	};
 };
-
+#include "../../common/sensor_templates.hpp"
 class DefaultEventhandlers; 
 class CfgVehicles
 {
@@ -81,7 +81,6 @@ class CfgVehicles
 		displayName="LAAT/I MK.I";
 
 		#include "common_stuff_tcw.hpp"
-
 		RD501_magclamp_small_1[] = {0.0,1.0,-1.0};
 
 		class UserActions: UserActions
