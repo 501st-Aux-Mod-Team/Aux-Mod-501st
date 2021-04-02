@@ -1,3 +1,4 @@
+#include "../../common/common_pilotCamera.hpp"
 
 scope = 2;
 scopeCurator = 2;
