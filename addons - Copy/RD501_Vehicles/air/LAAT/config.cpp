@@ -315,7 +315,7 @@ class CfgVehicles
 	
 		class UserActions
 		{
-			#include "user_action.hpp"
+			#include "../../common/user_action.hpp"
 		};
 		class ACE_SelfActions:ACE_SelfActions
 		{		
@@ -398,7 +398,7 @@ class CfgVehicles
 
 		class UserActions
 		{
-			#include "user_action.hpp"
+			#include "../../common/user_action.hpp"
 
 			class OpenCargoDoor
 			{
@@ -521,7 +521,7 @@ class CfgVehicles
 		#include "sounds.hpp"
 		class UserActions
 		{
-			#include "user_action.hpp"
+			#include "../../common/user_action.hpp"
 			class StartRefuel
 			{
 				displayName = "<t color='#07CC0C'>[Start Refueling]</t>";

@@ -1,28 +1,4 @@
-
 	class ThrusterEngage
-	{
-		displayName = "<t color='#4C9900'>[Impulsor On]</t>";
-		displayNameDefault = "<t color='#4C9900'>[Impulsor On]</t>";
-		textToolTip = "<t color='#4C9900'>[Impulsor On]</t>";
-		position = "pilotview";
-		radius = 20;
-		priority = 21;
-		onlyForPlayer = 1;
-		condition = "((player == driver this) AND (alive this))";
-		statement = "this execVM ""\RD501_Main\functions\impulse\fnc_impulseIncrease.sqf""";
-	};
-
-	class ThrusterDisngage: ThrusterEngage
-	{
-		priority = 21;
-		displayName = "<t color='#FF9933'>[RepulsorBrake On]</t>";
-		displayNameDefault = "<t color='#FF9933'>[RepulsorBrake On]</t>";
-		textToolTip = "<t color='#FF9933'>[RepulsorBrake On]</t>";
-		condition = "((player == driver this) AND (alive this))";
-		statement = "this execVM ""\RD501_Main\functions\impulse\fnc_impulseDecrease.sqf""";
-	};
-
-	class ThrusterEngage_spam: ThrusterEngage
 	{
 		displayName = "";
 		displayNameDefault = "";
@@ -36,8 +12,7 @@
 		shortcut="User19"
 	};
 
-
-	class ThrusterDisngage_spam: ThrusterEngage
+	class ThrusterDisengage: ThrusterEngage
 	{
 		priority = 0;
 		displayName = "";
@@ -48,4 +23,15 @@
 		shortcut="User20"
 	};
 
-	
+    class afterburnerMk1_turn_on{};
+    class afterburnerMk1_turn_off{};
+
+	class rampOpen: rampOpen
+	{
+		condition="(this animationphase 'ramp' == 0) AND (alive this) AND (player in [gunner this, driver this])";
+	};
+
+	class rampClose: rampClose
+	{
+		condition="(this animationphase 'ramp' == 1) AND (alive this) AND (player in [gunner this, driver this])";
+	};

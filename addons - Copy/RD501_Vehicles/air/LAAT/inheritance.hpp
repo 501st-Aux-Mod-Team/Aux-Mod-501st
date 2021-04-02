@@ -1,13 +1,18 @@
 class Heli_Attack_01_base_F;
 class B_Heli_Attack_01_base_F: Heli_Attack_01_base_F
 {
+	class UserActions;
 	class Turrets;
 	class ViewPilot;
 	class Components;
 };
 class 3as_laat_Base: B_Heli_Attack_01_base_F
 {
-	class UserActions;
+	class UserActions: UserActions
+	{
+		class rampOpen;
+		class rampClose;
+	};
 	class Components:Components{};
 	class Turrets: Turrets
 	{
