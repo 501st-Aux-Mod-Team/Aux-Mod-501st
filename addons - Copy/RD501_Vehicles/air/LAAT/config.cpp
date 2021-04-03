@@ -305,7 +305,8 @@ class CfgVehicles
 			#include "../../common/universal_hud_color_changer.hpp"
 		};
 
-		#include "../../common/universal_mfd.hpp"
+		#include "../../common/helicopter_mfd.hpp"	
+		//#include "../../common/universal_mfd.hpp"
 
 		class Turrets: Turrets
 		{
@@ -434,7 +435,8 @@ class CfgVehicles
 			#include "../../common/universal_hud_color_changer.hpp"
 		};
 
-		#include "../../common/universal_mfd.hpp"
+		#include "../../common/helicopter_mfd.hpp"	
+		//#include "../../common/universal_mfd.hpp"
 
 		class Turrets: Turrets
 		{
@@ -515,11 +517,11 @@ class CfgVehicles
 
 		class ACE_SelfActions
 		{		
-			
 			#include "../../common/universal_hud_color_changer.hpp"
 		};
 
-		#include "../../common/universal_mfd.hpp"
+		#include "../../common/helicopter_mfd.hpp"	
+		//#include "../../common/universal_mfd.hpp"
 
 		//#include "flight_model.hpp"
 		#include "sounds.hpp"
