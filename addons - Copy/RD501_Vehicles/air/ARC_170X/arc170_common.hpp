@@ -23,6 +23,10 @@ magazines[]=
 	macro_new_mag(Kannon,100),
 	macro_new_mag(Kannon,100)
 };
+
+RD501_magclamp_large_offset[]={0.0,0.0,-3.0};
+RD501_magclamp_small_offset[]={0.0,0.0,-0.5};
+
 class Components: Components
 {
 	class TransportPylonsComponent
