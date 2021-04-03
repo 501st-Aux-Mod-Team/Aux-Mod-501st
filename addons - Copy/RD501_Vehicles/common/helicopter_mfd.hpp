@@ -1295,6 +1295,7 @@ class MFD
 							};
 						};
 					};
+					/*
 					class AltGroup
 					{
 						condition="1000 - altitudeAGL";
@@ -1457,6 +1458,101 @@ class MFD
 								{0.88499999,0.20100001},
 								1
 							};
+						};
+					};
+					*/
+					class AltitudeNumberASL
+					{
+						type = "text";
+						source = "altitudeASL";
+						sourceScale = 1;
+						sourceLength = -3;
+						align = "left";
+						scale = 1;
+						pos[]=
+						{
+							{0.98499999,0.171},
+							1
+						};
+						right[]=
+						{
+							{1.02500001,0.171},
+							1
+						};
+						down[]=
+						{
+							{0.98499999,0.20100001},
+							1
+						};
+					};
+
+					class AltitudeNumberAGL:AltitudeNumberASL
+					{
+						source = "altitudeAGL";
+						pos[]=
+						{
+							{0.98499999,0.201},
+							1
+						};
+						right[]=
+						{
+							{1.02500001,0.201},
+							1
+						};
+						down[]=
+						{
+							{0.98499999,0.23100001},
+							1
+						};
+					};
+					class AltitudeRadarTextASL
+					{
+						type = "text";
+						source = "static";
+						text = "ASL:";
+						align = "left";
+						scale = 1;
+						sourceScale = 1;
+						align="center";
+						pos[]=
+						{
+							{0.88499999,0.171},
+							1
+						};
+						right[]=
+						{
+							{0.92500001,0.171},
+							1
+						};
+						down[]=
+						{
+							{0.88499999,0.20100001},
+							1
+						};
+					};
+					class AltitudeRadarTextAGL
+					{
+						type = "text";
+						source = "static";
+						text = "AGL:";
+						align = "left";
+						scale = 1;
+						sourceScale = 1;
+						align="center";
+						pos[]=
+						{
+							{0.88499999,0.201},
+							1
+						};
+						right[]=
+						{
+							{0.92500001,0.201},
+							1
+						};
+						down[]=
+						{
+							{0.88499999,0.23100001},
+							1
 						};
 					};
 					class SpeedNumber
