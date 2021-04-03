@@ -8,6 +8,7 @@ class B_Heli_Attack_01_base_F: Heli_Attack_01_base_F
 };
 class 3as_laat_Base: B_Heli_Attack_01_base_F
 {
+	class ACE_SelfActions;
 	class UserActions: UserActions
 	{
 		class rampOpen;
