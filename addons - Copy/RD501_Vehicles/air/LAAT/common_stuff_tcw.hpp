@@ -6,6 +6,18 @@ class EventHandlers : DefaultEventhandlers
 
 #include "../../common/helicopter_mfd.hpp"
 
+class ACE_SelfActions: ACE_SelfActions
+{
+	class ACE_Passengers
+	{
+		condition = "alive _target";
+		displayName = "Passengers";
+		insertChildren = "_this call ace_interaction_fnc_addPassengersActions";
+		statement = "";
+	};
+	#include "../../common/universal_hud_color_changer.hpp"
+};
+
 scope=2;
 author="RD501";
 forceInGarage = 1;

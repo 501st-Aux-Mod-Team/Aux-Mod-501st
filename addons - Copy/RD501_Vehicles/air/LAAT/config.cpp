@@ -145,16 +145,6 @@ class CfgVehicles
 			class CargoTurret_05: CargoTurret_05{};
 			class CargoTurret_06: CargoTurret_06{};
 		};
-		class ACE_SelfActions
-		{
-			class ACE_Passengers
-			{
-				condition = "alive _target";
-				displayName = "Passengers";
-				insertChildren = "_this call ace_interaction_fnc_addPassengersActions";
-				statement = "";
-			};
-		};
 	};
 	class macro_new_vehicle(laat,Mk1_lights):3as_LAAT_Mk1Lights
 	{
@@ -192,16 +182,6 @@ class CfgVehicles
 			class CargoTurret_05: CargoTurret_05{};
 			class CargoTurret_06: CargoTurret_06{};
 		};
-		class ACE_SelfActions
-		{
-			class ACE_Passengers
-			{
-				condition = "alive _target";
-				displayName = "Passengers";
-				insertChildren = "_this call ace_interaction_fnc_addPassengersActions";
-				statement = "";
-			};
-		};
 	};
 
 	class macro_new_vehicle(laat,Mk2):3as_LAAT_Mk2
@@ -236,16 +216,6 @@ class CfgVehicles
 			class CargoTurret_01: CargoTurret_01{};
 			class CargoTurret_02: CargoTurret_02{};
 		};
-		class ACE_SelfActions
-		{
-			class ACE_Passengers
-			{
-				condition = "alive _target";
-				displayName = "Passengers";
-				insertChildren = "_this call ace_interaction_fnc_addPassengersActions";
-				statement = "";
-			};
-		};
 	};
 	class macro_new_vehicle(laat,Mk2_lights):3as_LAAT_Mk2Lights
 	{
@@ -279,16 +249,6 @@ class CfgVehicles
 			class CargoTurret_01: CargoTurret_01{};
 			class CargoTurret_02: CargoTurret_02{};
 		};
-		class ACE_SelfActions
-		{
-			class ACE_Passengers
-			{
-				condition = "alive _target";
-				displayName = "Passengers";
-				insertChildren = "_this call ace_interaction_fnc_addPassengersActions";
-				statement = "";
-			};
-		};
 	};
 
 // SWOP START HERE
@@ -315,15 +275,38 @@ class CfgVehicles
 	
 		class UserActions
 		{
-			#include "user_action.hpp"
+			class ThrusterEngage
+			{
+				displayName = "";
+				displayNameDefault = "";
+				textToolTip = "";
+				position = "pilotview";
+				radius = 20;
+				priority = 0;
+				onlyForPlayer = 1;
+				condition = "((player == driver this) AND (alive this))";
+				statement = "this execVM ""\RD501_Main\functions\impulse\fnc_impulseIncrease.sqf""";
+				shortcut="User19"
+			};
+
+			class ThrusterDisengage: ThrusterEngage
+			{
+				priority = 0;
+				displayName = "";
+				displayNameDefault = "";
+				textToolTip = "";
+				condition = "((player == driver this) AND (alive this))";
+				statement = "this execVM ""\RD501_Main\functions\impulse\fnc_impulseDecrease.sqf""";
+				shortcut="User20"
+			};
 		};
 		class ACE_SelfActions:ACE_SelfActions
 		{		
-			
 			#include "../../common/universal_hud_color_changer.hpp"
 		};
 
-		#include "../../common/universal_mfd.hpp"
+		#include "../../common/helicopter_mfd.hpp"	
+		//#include "../../common/universal_mfd.hpp"
 
 		class Turrets: Turrets
 		{
@@ -398,8 +381,30 @@ class CfgVehicles
 
 		class UserActions
 		{
-			#include "user_action.hpp"
-
+			class ThrusterEngage
+			{
+				displayName = "";
+				displayNameDefault = "";
+				textToolTip = "";
+				position = "pilotview";
+				radius = 20;
+				priority = 0;
+				onlyForPlayer = 1;
+				condition = "((player == driver this) AND (alive this))";
+				statement = "this execVM ""\RD501_Main\functions\impulse\fnc_impulseIncrease.sqf""";
+				shortcut="User19"
+			};
+			class ThrusterDisengage: ThrusterEngage
+			{
+				priority = 0;
+				displayName = "";
+				displayNameDefault = "";
+				textToolTip = "";
+				condition = "((player == driver this) AND (alive this))";
+				statement = "this execVM ""\RD501_Main\functions\impulse\fnc_impulseDecrease.sqf""";
+				shortcut="User20"
+			};
+			
 			class OpenCargoDoor
 			{
 				displayName = "<t color='#F64747'>[Open Doors]</t>";
@@ -430,7 +435,8 @@ class CfgVehicles
 			#include "../../common/universal_hud_color_changer.hpp"
 		};
 
-		#include "../../common/universal_mfd.hpp"
+		#include "../../common/helicopter_mfd.hpp"	
+		//#include "../../common/universal_mfd.hpp"
 
 		class Turrets: Turrets
 		{
@@ -511,17 +517,16 @@ class CfgVehicles
 
 		class ACE_SelfActions
 		{		
-			
 			#include "../../common/universal_hud_color_changer.hpp"
 		};
 
-		#include "../../common/universal_mfd.hpp"
+		#include "../../common/helicopter_mfd.hpp"	
+		//#include "../../common/universal_mfd.hpp"
 
 		//#include "flight_model.hpp"
 		#include "sounds.hpp"
 		class UserActions
 		{
-			#include "user_action.hpp"
 			class StartRefuel
 			{
 				displayName = "<t color='#07CC0C'>[Start Refueling]</t>";
@@ -545,6 +550,29 @@ class CfgVehicles
 				onlyForPlayer = 1;
 				condition = "this call RD501_fnc_mc_canStopRefuel";
 				statement = "_vehicle setVariable['RD501_mc_stop_refuel',true,true];";
+			};
+			class ThrusterEngage
+			{
+				displayName = "";
+				displayNameDefault = "";
+				textToolTip = "";
+				position = "pilotview";
+				radius = 20;
+				priority = 0;
+				onlyForPlayer = 1;
+				condition = "((player == driver this) AND (alive this))";
+				statement = "this execVM ""\RD501_Main\functions\impulse\fnc_impulseIncrease.sqf""";
+				shortcut="User19"
+			};
+			class ThrusterDisengage: ThrusterEngage
+			{
+				priority = 0;
+				displayName = "";
+				displayNameDefault = "";
+				textToolTip = "";
+				condition = "((player == driver this) AND (alive this))";
+				statement = "this execVM ""\RD501_Main\functions\impulse\fnc_impulseDecrease.sqf""";
+				shortcut="User20"
 			};
 		};
 		class EventHandlers : DefaultEventhandlers {

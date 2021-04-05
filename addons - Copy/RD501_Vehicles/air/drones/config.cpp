@@ -151,6 +151,7 @@ class CfgVehicles
 		forceInGarage = 1;
 		author = "RD501";
 		faction = macro_republic_faction
+		RD501_magclamp_large_offset[]={0.0,0.0,-3.0};	
 		hiddenSelections[] = {"camo1","camo2"};
 		hiddenSelectionsMaterials[] = {"\RD501_Vehicles\textures\sentinel\phantom_fuselage_01.rvmat",""};
 		hiddenSelectionsTextures[] = {"\RD501_Vehicles\textures\sentinel\phantom_fuselage_01_gar_co.paa",""};

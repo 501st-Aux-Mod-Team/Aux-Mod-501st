@@ -26,10 +26,20 @@ class CfgPatches
 };
 class CfgVehicles
 {
-	class 3as_nuclass_f;
-	class 3AS_Nuclass : 3as_nuclass_f
+	class 3as_nuclass_base;
+	class 3as_nuclass_f: 3as_nuclass_base
 	{
 		class UserActions;
+	};
+	class 3AS_Nuclass : 3as_nuclass_f
+	{
+		class UserActions: UserActions
+		{
+			class rampOpen;
+			class rampClose;
+			class frontrampOpen;
+			class frontrampClose;
+		};
 	};
 
 	class macro_new_vehicle(nuclass,mk1) : 3AS_Nuclass
@@ -70,7 +80,47 @@ class CfgVehicles
 		};
 		class UserActions:UserActions
 		{
-			#include "user_action.hpp"
+			class ThrusterEngage
+			{
+				displayName = "";
+				displayNameDefault = "";
+				textToolTip = "";
+				position = "pilotview";
+				radius = 20;
+				priority = 0;
+				onlyForPlayer = 1;
+				condition = "((player == driver this) AND (alive this))";
+				statement = "this execVM ""\RD501_Main\functions\impulse\fnc_impulseIncrease.sqf""";
+				shortcut="User19"
+			};
+
+			class ThrusterDisengage: ThrusterEngage
+			{
+				priority = 0;
+				displayName = "";
+				displayNameDefault = "";
+				textToolTip = "";
+				condition = "((player == driver this) AND (alive this))";
+				statement = "this execVM ""\RD501_Main\functions\impulse\fnc_impulseDecrease.sqf""";
+				shortcut="User20"
+			};
+
+			class rampOpen: rampOpen
+			{
+				condition="(this animationSourcePhase 'ramp' == 0) AND (alive this) AND (player in [gunner this, driver this])";
+			};
+			class rampClose: rampClose
+			{
+				condition="(this animationSourcePhase 'ramp' == 1) AND (alive this) AND (player in [gunner this, driver this])";
+			};
+			class frontrampOpen: frontrampOpen
+			{
+				condition="(this animationSourcePhase 'rampfront' == 0) AND (alive this) AND (player in [gunner this, driver this])";
+			};
+			class frontrampClose: frontrampClose
+			{
+				condition="(this animationSourcePhase 'rampfront' == 1) AND (alive this) AND (player in [gunner this, driver this])";
+			};
 		};
 		class ACE_SelfActions
 		{

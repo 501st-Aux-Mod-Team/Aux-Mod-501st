@@ -108,6 +108,8 @@ class CfgVehicles
 		artilleryScanner = 1;
 		laserScanner = 1;
 		availableforsuppoerttypes[]={"Artillery"};
+		RD501_magclamp_small_forbidden = 1;
+		RD501_magclamp_large_offset[]={0.0,-3.0,-7.0};
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
@@ -158,6 +160,8 @@ class CfgVehicles
 		irTarget = 1;
 		irTargetSize = 1.2;
 		#include "../../common/smallvehiclekit.hpp"
+		RD501_magclamp_small_forbidden = 1;
+		RD501_magclamp_large_offset[]={0.0,-3.0,-7.0};
 		class Turrets:Turrets
 		{
 			class MainTurret: MainTurret
@@ -190,5 +194,7 @@ class CfgVehicles
 		faction = macro_republic_faction
         editorSubcategory = macro_editor_cat(arty)
         vehicleClass = macro_editor_vehicle_type(arty)
+		RD501_magclamp_small_forbidden = 1;
+		RD501_magclamp_large_offset[] = {0.0,-10.0,-8.0};
 	};
 };

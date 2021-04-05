@@ -54,6 +54,10 @@ class CfgVehicles
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat(tank)
 		vehicleClass = macro_editor_vehicle_type(tank)
+
+		RD501_magclamp_small_forbidden=1;
+		RD501_magclamp_large_offset[]={0.0, -5.5, -10.5};
+
 		class Turrets:Turrets
 		{
 			class MainTurretTop:MainTurretTop{};

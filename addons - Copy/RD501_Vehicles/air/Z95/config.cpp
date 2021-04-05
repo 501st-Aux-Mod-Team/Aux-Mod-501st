@@ -67,6 +67,7 @@ class CfgVehicles
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat_air(Republic_vtol)
 		vehicleClass = macro_editor_vehicle_type_air(Republic)
+		RD501_magclamp_large_offset[]={0.0,0.0,-2.0};	
 		stallSpeed=5;
 		draconicTorqueYCoef[]={1.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 		draconicForceYCoef=6;
