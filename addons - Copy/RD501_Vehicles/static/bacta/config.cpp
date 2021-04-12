@@ -64,6 +64,7 @@ class CfgVehicles
                 selection = "";
                 distance = 4;
                 condition = "true";
+				position = "[0,0,1.5]"
                 class RD501_Heal_All_Nearby
                 {
                     displayName = "Heal Nearby";

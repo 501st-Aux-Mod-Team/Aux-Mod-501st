@@ -37,7 +37,8 @@ class CfgVehicles
 		faction = macro_cis_faction;
 		editorSubcategory = macro_editor_cat(heavy_armored_infantry);
 		vehicleClass = macro_editor_vehicle_type(heavy_armored_infantry);
-
+		ace_dragging_canCarry = 0;
+		ace_dragging_canDrag = 0;
 		armor = 225;
 		armorStructural = 1.0;
 		explosionShielding	= 0.1;

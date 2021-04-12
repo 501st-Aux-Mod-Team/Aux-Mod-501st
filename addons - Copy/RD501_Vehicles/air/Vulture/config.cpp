@@ -102,6 +102,7 @@ class CfgVehicles
 		faction = macro_cis_faction
 		editorSubcategory = macro_editor_cat_air(CIS)
 		vehicleClass = macro_editor_vehicle_type_air(CIS)
+		radarTargetSize = 0.7;
 		class HitPoints: HitPoints
 		{
 			class HitHull: HitHull
@@ -136,6 +137,7 @@ class CfgVehicles
 		faction = macro_cis_faction
 		editorSubcategory = macro_editor_cat_air(CIS)
 		vehicleClass = macro_editor_vehicle_type_air(CIS)
+		radarTargetSize = 0.7;
 		class Components: Components
 		{
 			class TransportPylonsComponent
