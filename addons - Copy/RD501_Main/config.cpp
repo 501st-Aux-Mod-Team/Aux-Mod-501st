@@ -415,7 +415,7 @@ class CfgEditorSubcategories
 
 	class macro_editor_cat(static_msc)
 	{
-		displayName = "Bacta Tanks";
+		displayName = "Static Objects";
 	};
 	class macro_editor_cat(turrets)
 	{
