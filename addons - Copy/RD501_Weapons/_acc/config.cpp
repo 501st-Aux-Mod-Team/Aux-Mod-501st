@@ -449,8 +449,7 @@ class CfgWeapons
 					visionMode[]=
 					{
 						"Normal",
-						"NVG",
-						"Ti"
+						"NVG"
 					};
 					thermalMode[]={5,6};
 					opticsFlare=1;
@@ -504,6 +503,108 @@ class CfgWeapons
 		};
 	};
 	class RD501_DMS_4: RD501_DMS
+	{
+		picture="\RD501_weapons\_acc\data\rd501_ico_lr_03_ca.paa";
+		model="\RD501_weapons\_acc\data\rd501_dms_4.p3d";
+		displayName="DMS LR 6-12x Scope D";
+		class ItemInfo: ItemInfo
+		{
+			modelOptics="\RD501_weapons\_acc\data\RD501_scope4_DMS";
+		};
+	};
+class RD501_DMS_TI: optic_DMS
+	{
+		author="RD501";
+		_generalMacro="optic_DMS";
+		scope=2;
+		displayName="DMS LR 6-12x Scope A";
+		picture="\RD501_weapons\_acc\data\rd501_ico_lr_01_ca.paa";
+		model="\RD501_weapons\_acc\data\rd501_dms.p3d";
+		descriptionShort="Long Range Scope";
+		class ItemInfo: ItemInfo
+		{
+			mass=12;
+			opticType=2;
+			optics=1;
+			modelOptics="\RD501_weapons\_acc\data\RD501_scope_DMS";
+			class OpticsModes
+			{
+				class Snip
+				{
+					opticsID=1;
+					useModelOptics=1;
+					opticsPPEffects[]=
+					{
+						"OpticsCHAbera2",
+						"OpticsBlur3"
+					};
+					opticsZoomMin = scope_magnification(12);
+					opticsZoomMax = scope_magnification(6);
+					opticsZoomInit = scope_magnification(6);
+					discreteinitIndex = 0;
+					discretefov[] = {scope_magnification(6),scope_magnification(12)};
+					discreteDistanceInitIndex = 1;
+					distanceZoomMin=300;
+					distanceZoomMax=1200;
+					memoryPointCamera="opticView";
+					visionMode[]=
+					{
+						"Normal",
+						"NVG",
+						"Ti"
+					};
+					thermalMode[]={5,6};
+					opticsFlare=1;
+					opticsDisablePeripherialVision=0;
+					cameraDir="";
+				};
+				class Iron: Snip
+				{
+					opticsID=2;
+					useModelOptics=0;
+					opticsPPEffects[]=
+					{
+						"",
+						""
+					};
+					opticsFlare=0;
+					opticsDisablePeripherialVision=0;
+					opticsZoomMin=0.25;
+					opticsZoomMax=1.25;
+					opticsZoomInit=0.75;
+					memoryPointCamera="opticView";
+					visionMode[]={};
+					discretefov[]={};
+					distanceZoomMin=200;
+					distanceZoomMax=200;
+					discreteDistance[]={200};
+					discreteDistanceInitIndex=0;
+				};
+			};
+		};
+		inertia=0.2;
+	};
+	class RD501_DMS_2_TI: RD501_DMS
+	{
+		picture="\RD501_weapons\_acc\data\rd501_ico_lr_02_ca.paa";
+		model="\RD501_weapons\_acc\data\rd501_dms_2.p3d";
+		displayName="DMS LR 6-12x Scope B";
+		class ItemInfo: ItemInfo
+		{
+			modelOptics="\RD501_weapons\_acc\data\RD501_scope2_DMS";
+		};
+	};
+	class RD501_DMS_3_TI: RD501_DMS
+	{
+		picture="\RD501_weapons\_acc\data\rd501_ico_lr_03_ca.paa";
+		model="\RD501_weapons\_acc\data\rd501_dms_3.p3d";
+		displayName="DMS LR 6-12x Scope C";
+		class ItemInfo: ItemInfo
+		{
+			modelOptics="\RD501_weapons\_acc\data\RD501_scope3_DMS";
+		};
+	};
+	class RD501_DMS_4_TI: RD501_DMS
 	{
 		picture="\RD501_weapons\_acc\data\rd501_ico_lr_03_ca.paa";
 		model="\RD501_weapons\_acc\data\rd501_dms_4.p3d";
