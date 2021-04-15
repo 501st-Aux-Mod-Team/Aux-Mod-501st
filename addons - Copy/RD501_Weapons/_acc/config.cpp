@@ -584,7 +584,7 @@ class RD501_DMS_TI: optic_DMS
 		};
 		inertia=0.2;
 	};
-	class RD501_DMS_2_TI: RD501_DMS
+	class RD501_DMS_2_TI: RD501_DMS_TI
 	{
 		picture="\RD501_weapons\_acc\data\rd501_ico_lr_02_ca.paa";
 		model="\RD501_weapons\_acc\data\rd501_dms_2.p3d";
@@ -594,7 +594,7 @@ class RD501_DMS_TI: optic_DMS
 			modelOptics="\RD501_weapons\_acc\data\RD501_scope2_DMS";
 		};
 	};
-	class RD501_DMS_3_TI: RD501_DMS
+	class RD501_DMS_3_TI: RD501_DMS_TI
 	{
 		picture="\RD501_weapons\_acc\data\rd501_ico_lr_03_ca.paa";
 		model="\RD501_weapons\_acc\data\rd501_dms_3.p3d";
@@ -604,7 +604,7 @@ class RD501_DMS_TI: optic_DMS
 			modelOptics="\RD501_weapons\_acc\data\RD501_scope3_DMS";
 		};
 	};
-	class RD501_DMS_4_TI: RD501_DMS
+	class RD501_DMS_4_TI: RD501_DMS_TI
 	{
 		picture="\RD501_weapons\_acc\data\rd501_ico_lr_03_ca.paa";
 		model="\RD501_weapons\_acc\data\rd501_dms_4.p3d";

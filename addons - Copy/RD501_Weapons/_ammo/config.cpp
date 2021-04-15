@@ -32,6 +32,7 @@ class CfgAmmo
 	class B_12Gauge_Pellets_Submunition;
 	class B_12Gauge_Pellets_Submunition_Deploy;
 	class FlareBase;
+	class SmokeShell;
 	class JLTS_bullet_stun;
 	class macro_new_ammo(surrender_stun): JLTS_bullet_stun
 	{
@@ -331,7 +332,21 @@ class CfgAmmo
         rd501_fired_deployable_personal_offset[] = {0.1, 0.9, 0.4};
         rd501_fired_deployable_personal_bone = "pelvis";
 		simulation="shotShell";
-	}
+	};
+	class macro_new_ammo(super_smoke) : SmokeShell
+	{
+		effectsSmoke="RD501_ThickSmokeShellWhiteEffect";
+	};
+	class macro_new_ammo(dioxis) : SmokeShell
+	{
+		effectsSmoke="RD501_DioxisSmokeShellEffect";
+		smokeColor[]={0.21250001,0.75580001,0.35909998,1};
+	};
+	class macro_new_ammo(blueshadow) : SmokeShell
+	{
+		effectsSmoke="RD501_DioxisSmokeShellEffect";
+		smokeColor[] = {0.2125,0.3,0.8,1};
+	};
 ///////////////////////////////////////////////////////////////////////
 /////////////////////////Shotgun///////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
