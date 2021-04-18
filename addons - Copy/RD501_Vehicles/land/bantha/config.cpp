@@ -191,8 +191,8 @@ class CfgVehicles
 		{
 			class MainTurret:MainTurret
 			{
-				weapons[] = {"SCI_autocannon_Z20_HBB","missiles_DAGR","missiles_titan"};
-				magazines[] = {"SCI_500Rnd_Z20_HBB","SCI_500Rnd_Z20_HBB","SCI_500Rnd_Z20_HBB","SCI_500Rnd_Z20_HBB","12Rnd_PG_missiles","2Rnd_GAT_missiles"};
+				weapons[] = {"212th_autocannon_Z20_HBB","missiles_DAGR","missiles_titan"};
+				magazines[] = {"212th_500Rnd_Z20_HBB","212th_500Rnd_Z20_HBB","212th_500Rnd_Z20_HBB","212th_500Rnd_Z20_HBB","12Rnd_PG_missiles","2Rnd_GAT_missiles"};
 				class HitPoints:HitPoints
 				{
 					class HitTurret:HitTurret

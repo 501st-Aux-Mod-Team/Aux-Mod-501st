@@ -101,6 +101,84 @@ class CfgVehicles
 				radius = 3;
 			};
 		};
+		destrType = "DestructBuilding";
+		explosionEffect="FuelExplosion";
+		class DestructionEffects
+		{
+			class Dust
+			{
+				intensity = 0.1;
+				interval = 1;
+				lifeTime = 0.01;
+				position = "destructionEffect2";
+				simulation = "particles";
+				type = "HousePartDust";
+			};
+			class Light1
+			{
+				enabled = "distToWater";
+				intensity = 0.1;
+				interval = 1;
+				lifeTime = 3;
+				position = "destructionEffect";
+				simulation = "light";
+				type = "ObjectDestructionLightSmall";
+			};
+			class Fire1
+			{
+				intensity = 0.15;
+				interval = 1;
+				lifeTime = 3;
+				position = "destructionEffect";
+				simulation = "particles";
+				type = "ObjectDestructionFire1Small";
+			};
+			class Refract1
+			{
+				intensity = 1;
+				interval = 1;
+				lifeTime = 3;
+				position = "destructionEffect";
+				simulation = "particles";
+				type = "SmallFireFRefract";
+			};
+			class Sound
+			{
+				intensity = 1;
+				interval = 1;
+				lifeTime = 1;
+				position = "destructionEffect";
+				simulation = "sound";
+				type = "Fire";
+			};
+			class sparks1
+			{
+				intensity = 0.5;
+				interval = 1;
+				lifeTime = 0;
+				position = "destructionEffect2";
+				simulation = "particles";
+				type = "ObjectDestructionSparks";
+			};
+			class Smoke1
+			{
+				simulation="particles";
+				type="BarelDestructionSmoke";
+				position[]={0,0,0};
+				intensity=0.2;
+				interval=1;
+				lifeTime=1;
+			};
+			class HouseDestr
+			{
+				intensity=1;
+				interval=1;
+				lifeTime=5;
+				position="";
+				simulation="destroy";
+				type="DelayedDestruction";
+			};
+		};
 	};
 
 	class macro_new_vehicle(dwarf_spider_droid,Movable_MkII): macro_new_vehicle(dwarf_spider_droid,MkII)
@@ -154,6 +232,84 @@ class CfgVehicles
 				};
 			};
 		};
+		destrType = "DestructBuilding";
+		explosionEffect="FuelExplosion";
+		class DestructionEffects
+		{
+			class Dust
+			{
+				intensity = 0.1;
+				interval = 1;
+				lifeTime = 0.01;
+				position = "destructionEffect2";
+				simulation = "particles";
+				type = "HousePartDust";
+			};
+			class Light1
+			{
+				enabled = "distToWater";
+				intensity = 0.1;
+				interval = 1;
+				lifeTime = 3;
+				position = "destructionEffect";
+				simulation = "light";
+				type = "ObjectDestructionLightSmall";
+			};
+			class Fire1
+			{
+				intensity = 0.15;
+				interval = 1;
+				lifeTime = 3;
+				position = "destructionEffect";
+				simulation = "particles";
+				type = "ObjectDestructionFire1Small";
+			};
+			class Refract1
+			{
+				intensity = 1;
+				interval = 1;
+				lifeTime = 3;
+				position = "destructionEffect";
+				simulation = "particles";
+				type = "SmallFireFRefract";
+			};
+			class Sound
+			{
+				intensity = 1;
+				interval = 1;
+				lifeTime = 1;
+				position = "destructionEffect";
+				simulation = "sound";
+				type = "Fire";
+			};
+			class sparks1
+			{
+				intensity = 0.5;
+				interval = 1;
+				lifeTime = 0;
+				position = "destructionEffect2";
+				simulation = "particles";
+				type = "ObjectDestructionSparks";
+			};
+			class Smoke1
+			{
+				simulation="particles";
+				type="BarelDestructionSmoke";
+				position[]={0,0,0};
+				intensity=0.2;
+				interval=1;
+				lifeTime=1;
+			};
+			class HouseDestr
+			{
+				intensity=1;
+				interval=1;
+				lifeTime=5;
+				position="";
+				simulation="destroy";
+				type="DelayedDestruction";
+			};
+		}
 	};
 	class macro_new_vehicle(crab_droid,Movable_MkII): macro_new_vehicle(crab_droid,MkII)
 	{
