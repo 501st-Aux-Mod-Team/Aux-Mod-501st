@@ -15,7 +15,8 @@ class CfgPatches
 			macro_new_ordnance(ModuleShadow),
 			macro_new_ordnance(OrbitalLaser),
 			rd501_moduleJammerSettings,
-			rd501_moduleClearAllJammers
+			rd501_moduleClearAllJammers,
+			rd501_moduleVolatileSettings,
 		};
 		weapons[] = {};
 	};
@@ -91,6 +92,21 @@ class CfgVehicles
         displayName = "Add Jammer";
         curatorInfoType = "RD501_RscJammerSettings";
 		portrait = "RD501_Zeus\ui\jammer_icon.paa";
+    };
+
+	class rd501_moduleVolatileSettings: Module_F  {
+		author = "RD501";
+        category = "Ordnance";
+        function = "ace_common_dummy";
+        functionPriority = 1;
+        isGlobal = 1;
+        isTriggerActivated = 0;
+        scope = 1;
+        scopeCurator = 2;
+        curatorCanAttach = 1;
+        displayName = "Make Volatile Cargo";
+        curatorInfoType = "RD501_RscVolatileSettings";
+		portrait = "RD501_Zeus\ui\explosion_zeus_icon_small.paa";
     };
 
 	class macro_new_ordnance(ModuleSquadShield): ModuleChemlight_F

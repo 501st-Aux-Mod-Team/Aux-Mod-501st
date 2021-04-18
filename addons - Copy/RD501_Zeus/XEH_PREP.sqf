@@ -18,3 +18,5 @@
 PREP(moduleJammerSettings);
 PREP(ui_jammerSettings);
 PREP(moduleJammerClearAll);
+PREP(moduleVolatile);
+PREP(ui_volatileSettings);
