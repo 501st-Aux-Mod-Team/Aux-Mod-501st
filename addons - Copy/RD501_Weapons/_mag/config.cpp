@@ -27,6 +27,7 @@ class CfgMagazines
 	class 3AS_ThermalDetonator;
 	class 3AS_BaridumCore;
 	class 2Rnd_12Gauge_Pellets;
+	class SmokeShell;
 
 	////////////////////////////////////////////////////
 	/////////////Rifle/Pistol Magazines/////////////////
@@ -392,7 +393,33 @@ class CfgMagazines
 		descriptionShort = "Personal Shield";
 		picture="\RD501_Weapons\_mag\data\rd501_icon_mag_imploder.paa";
 	};
-
+	class macro_new_mag(super_smoke,1):SmokeShell
+	{
+		author="RD501"
+		scope=2;
+		displayName = "Republic J00-L VapeNation"
+		displayNameShort = "VapeNation"
+		count=1;
+		ammo=macro_new_ammo(super_smoke)
+	};
+	class macro_new_mag(dioxis,1):SmokeShell
+	{
+		author="RD501"
+		scope=2;
+		displayName = "Dioxis Grenade"
+		displayNameShort = "Dioxis"
+		count=1;
+		ammo=macro_new_ammo(dioxis)
+	};
+	class macro_new_mag(blueshadow,1):SmokeShell
+	{
+		author="RD501"
+		scope=2;
+		displayName = "Blue Shadow Grenade"
+		displayNameShort = "Blue Shadow"
+		count=1;
+		ammo=macro_new_ammo(blueshadow)
+	};
 	////////////////////////////////////////////////////
 	/////////////Missile  Magazines/////////////////////
 	////////////////////////////////////////////////////

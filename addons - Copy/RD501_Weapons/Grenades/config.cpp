@@ -51,44 +51,6 @@ class Shadow_Smoke
 		lifeTime = 25;
 	};
 };
-class CfgAmmo
-{
-	class SmokeShell;
-	class SWOP_SCAR_Dioxis;
-	class GrenadeHand_stone;
-	class RD501_ShadowMag: SWOP_SCAR_Dioxis
-	{
-		model = "\thermalD\Dioxis.p3d";
-		hit = 4;
-		class NVGMarkers
-		{
-			class Blinking1;
-			class Blinking2;
-		};
-		smokeColor[] = {0.2125,0.6258,0.48909998,1};
-		effectsSmoke = "Shadow_Smoke";
-	};
-};
-class CfgMagazines
-{
-	class SmokeShell;
-	class EGLM;
-	class RD501_BlueShadow_Grenade: SmokeShell
-	{
-		model = "\thermalD\Dioxis.p3d";
-		displayName = "1Rnd Blue Shadow Grenade";
-		picture = "\thermalD\dioxisgp_x_ca.paa";
-		displayNameShort = "Blue Shadow Grenade";
-		descriptionShort = "Blue Shadow Grenade";
-		ammo = "RD501_ShadowMag";
-		mass = 3;
-		class Library
-		{
-			libTextDesc = "";
-		};
-	};
-
-};
 class CfgWeapons
 {
 	class Default;
@@ -98,14 +60,14 @@ class CfgWeapons
 	};
 	class Throw: GrenadeLauncher
 	{
-		muzzles[] += {"Shadow_Muzzle","Imploder_Muzzle","Thermaldet_Muzzle","Squad_Shield_Muzzle","Squad_Shield_Trench_Muzzle","Personal_Shield_Muzzle", "Throwable_C_Type_Muzzle"};
+		muzzles[] += {"Shadow_Muzzle","Imploder_Muzzle","Thermaldet_Muzzle","Squad_Shield_Muzzle","Squad_Shield_Trench_Muzzle","Personal_Shield_Muzzle", "Throwable_C_Type_Muzzle","SuperSmoke_Muzzle","Dioxis_Muzzle"};
 		class Shadow_Muzzle: ThrowMuzzle
 		{
-			magazines[] = {"RD501_BlueShadow_Grenade"};
+			magazines[] = {macro_new_mag(blueshadow,1)};
 		};
 		class Imploder_Muzzle: ThrowMuzzle
 		{
-			magazines[] = {,macro_new_mag(imploder,1)};
+			magazines[] = {macro_new_mag(imploder,1)};
 		};
 		class Thermaldet_Muzzle: ThrowMuzzle
 		{
@@ -126,6 +88,14 @@ class CfgWeapons
 		class Throwable_C_Type_Muzzle: ThrowMuzzle
 		{
 			magazines[] = {macro_new_mag(throwable_c_type,1)};
+		};
+		class SuperSmoke_Muzzle: ThrowMuzzle
+		{
+			magazines[] = {macro_new_mag(super_smoke,1)};
+		};
+		class Dioxis_Muzzle: ThrowMuzzle
+		{
+			magazines[] = {macro_new_mag(dioxis,1)};
 		};
 	};
 };

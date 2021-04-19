@@ -30,7 +30,7 @@ class cfgWeapons
 		baseWeapon=macro_new_weapon_nofam(t21)
 		displayname="Republic T21 R.A.M.E.R."
 		ACE_Overheating_mrbs = 300000;
-		
+		ace_overheating_allowSwapBarrel = 1;
 		magazines[]=
 		{
 			macro_new_mag(50mw,10)

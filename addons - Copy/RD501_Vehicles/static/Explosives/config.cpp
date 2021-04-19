@@ -39,7 +39,7 @@ class CfgVehicles
 		ace_dragging_canDrag = 1;
 		armor=25;
 		destrType = "DestructBuilding";
-		explosionEffect="FuelExplosionBig";
+		explosionEffect="RD501_BlueFuelExplosion";
 		class ACE_Actions {
             class ACE_MainActions {
                 displayName = "Interact";
@@ -51,7 +51,7 @@ class CfgVehicles
 		transportFuel=1000;
 		class DestructionEffects
 		{
-			class Smoke1
+			/*class Smoke1
 			{
 				intensity=1;
 				interval=1;
@@ -60,7 +60,7 @@ class CfgVehicles
 				simulation="particles";
 				type="ObjectDestructionSmokeSmall";
 			};
-			class Smoke2
+			/*class Smoke2
 			{
 				intensity=1;
 				interval=1;
@@ -68,7 +68,7 @@ class CfgVehicles
 				position="";
 				simulation="particles";
 				type="ObjectDestructionSmoke2";
-			};
+			};*/
 			class Fire1
 			{
 				intensity=0.5;
@@ -76,7 +76,7 @@ class CfgVehicles
 				lifeTime=2;
 				position="";
 				simulation="particles";
-				type="ObjectDestructionFire1Small";
+				type="RD501_BlueObjectDestructionFire1Small";
 			};
 			class HouseDestr
 			{

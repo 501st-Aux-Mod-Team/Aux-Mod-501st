@@ -113,26 +113,27 @@ class CfgWeapons
 	};
 
 
-	class 212th_Engineer_Helmet_501st;
+	class 3as_Engineer_Helmet;
+	class 212th_Engineer_helm;
 
-	class macro_new_helmet(warden,501st):212th_Engineer_Helmet_501st
+	class macro_new_helmet(warden,501st):212th_Engineer_helm
 	{
 		author="RD501"
 		scopeArsenal = 2;
 		DisplayName="[501st] WRDN HELM (Base)";
 		picture="RD501_Helmets\_textures\aviation\warden_ico.paa"
-		hiddenSelections[]=
+		/*hiddenSelections[]=
 		{
-			"Camo"
-		};
+			"camo"
+		};*/
 		hiddenSelectionsTextures[]=
 		{
 			macro_custom_helmet_textures\aviation\warden\Warden.paa
 		};
-		hiddenSelectionsMaterials[] = 
+		/*hiddenSelectionsMaterials[] = 
         {
             "RD501_Helmets\_materials\aviation\wardenMaterial.rvmat"
-        };
+        };*/
 		subItems[] = {"G_B_Diving"};
 	};
 
