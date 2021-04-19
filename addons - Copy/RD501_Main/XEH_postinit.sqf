@@ -106,3 +106,12 @@ if(hasInterface) then {
 		_this call rd501_fnc_fired_deployable_endSoundLocal
 	}] call CBA_fnc_addEventHandler;
 };
+
+// Volatile
+["rd501_volatile_destroy", {
+	_this call rd501_fnc_volatile_destroy;
+}] call CBA_fnc_addEventHandler;
+
+["rd501_volatile_create", {
+	_this call rd501_fnc_volatile_create;
+}] call CBA_fnc_addEventHandler;

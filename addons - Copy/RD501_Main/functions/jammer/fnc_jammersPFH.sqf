@@ -39,6 +39,8 @@ private _interference = 1;
 	};
 } forEach _jammers;
 
+_interference = _interference * 0.625; // Rebalance value after testing, to prevent having to change it everywhere
+
 // Set interference locally
 _player setVariable ["tf_receivingDistanceMultiplicator", _interference];
 _player setVariable ["tf_sendingDistanceMultiplicator", 1/_interference];

@@ -162,4 +162,9 @@ macro_prep_xeh(init\deka_shield_init.sqf,deka_shield_init)
 // JLTS Shield
 macro_prep_xeh(jlts_shield\fnc_jlts_shield_aiToggle.sqf,jlts_shield_aiToggle)
 
+// Volatile
+macro_prep_xeh(volatile\fnc_volatile_create.sqf,volatile_create)
+macro_prep_xeh(volatile\fnc_volatile_destroy.sqf,volatile_destroy)
+macro_prep_xeh(volatile\fnc_volatile_handleDamage.sqf,volatile_handleDamage)
+
 diag_log "RD501 PREP Complete";

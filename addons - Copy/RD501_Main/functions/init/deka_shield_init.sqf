@@ -16,7 +16,7 @@ private _hitEH = _unit addEventHandler ["HitPart", {
 				deleteVehicle _shield;
 			}, [_shield], 60] call CBA_fnc_waitAndExecute;
 			_unit setVariable ["rd501_dekashield_hitEH", -1, true];
-			_unit removeEventHandler ["", _ehId];
+			_unit removeEventHandler ["HitPart", _ehId];
 		};
 	}, [_target], 1] call CBA_fnc_waitAndExecute;
 }];
