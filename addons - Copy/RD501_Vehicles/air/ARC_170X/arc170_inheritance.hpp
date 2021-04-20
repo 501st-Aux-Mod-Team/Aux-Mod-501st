@@ -17,6 +17,7 @@ class 3as_arc_170_blue: 3as_arc_170_base
 		class LaserPilot;
 		class Reargun;
 	};
+	class ACE_SelfActions;
 };
 class 3as_arc_170_green: 3as_arc_170_blue
 {
@@ -26,6 +27,7 @@ class 3as_arc_170_green: 3as_arc_170_blue
 		class LaserPilot;
 		class Reargun;
 	};
+	class ACE_SelfActions;
 };
 class 3as_arc_170_Orange: 3as_arc_170_blue
 {
@@ -35,6 +37,7 @@ class 3as_arc_170_Orange: 3as_arc_170_blue
 		class LaserPilot;
 		class Reargun;
 	};
+	class ACE_SelfActions;
 };
 class 3as_arc_170_yellow: 3as_arc_170_blue
 {
@@ -44,6 +47,7 @@ class 3as_arc_170_yellow: 3as_arc_170_blue
 		class LaserPilot;
 		class Reargun;
 	};
+	class ACE_SelfActions;
 };
 class 3as_arc_170_red: 3as_arc_170_blue
 {
@@ -53,4 +57,5 @@ class 3as_arc_170_red: 3as_arc_170_blue
 		class LaserPilot;
 		class Reargun;
 	};
+	class ACE_SelfActions;
 };

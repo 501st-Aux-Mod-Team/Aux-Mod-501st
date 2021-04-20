@@ -9,6 +9,10 @@ draconicForceYCoef=6;
 envelope[] = {0.5,2.11,2.43,1.97,1.72,2.69,3.87,5.27,6.89,8.72,9.7,9.6,9.2,8.5,8.2,8};
 faction="RD501_Republic_Faction";
 editorSubcategory="RD501_Editor_Category_Air_Republic_vtol";
+class ACE_SelfActions: ACE_SelfActions
+{
+	#include "../../common/universal_hud_color_changer.hpp"
+};
 weapons[]=
 {
 	"Laserdesignator_pilotCamera",

@@ -54,6 +54,7 @@ class CfgVehicles
 		{
 			class TransportPylonsComponent;
 		};
+		class ACE_SelfActions;
 	};
 	class macro_new_vehicle(z95,blue):3as_Z95_base
 	{
@@ -75,6 +76,10 @@ class CfgVehicles
 		aileronSensitivity=2.9;
 		aileronControlsSensitivityCoef=4;
 		#include "../../common/universal_mfd.hpp"
+		class ACE_SelfActions: ACE_SelfActions
+		{
+			#include "../../common/universal_hud_color_changer.hpp"
+		};
 		#include "../../common/common_pilotCamera.hpp"
 		weaponLockSystem = "2+4+8";
 		weapons[]=
