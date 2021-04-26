@@ -51,8 +51,8 @@
 #define macro_thermal_det "442_thermal_det_mag"
 #define macro_thermal_imp "442_thermal_det_mag"
 #define macro_smoke "swop_SmokeShell"
-#define macro_flashbang "swop_mag_flashbang"
-#define macro_dioxis_grenade "SWOP_SCAR_DioxisGM"
+#define macro_flashbang "ACE_M84"
+#define macro_dioxis_grenade "RD501_dioxis_x1_mag"
 
 #define macro_zip_tie "ACE_CableTie"
 

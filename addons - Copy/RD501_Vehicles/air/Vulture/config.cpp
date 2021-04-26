@@ -38,7 +38,7 @@ class CfgPatches
 
 
 #include "../../common/sensor_templates.hpp"
-
+class Eventhandlers;
 class CfgVehicles
 {
 	class Air;
@@ -128,6 +128,14 @@ class CfgVehicles
 				minimalHit=0.050000001;
 			};
 		};
+		class Eventhandlers: Eventhandlers
+		{
+			hit="";
+			landing="[_this,true] call bis_fnc_aircraftTailhookAi";
+			landingcanceled="[_this,false] call bis_fnc_aircraftTailhookAi";
+			engine="_this call bis_fnc_aircraftFoldingWings";
+			gear="_this call bis_fnc_aircraftFoldingWings";
+		};
 	};
 	class macro_new_vehicle(cis,vulture) : 3as_Vulture_dynamicLoadout
 	{
@@ -167,6 +175,14 @@ class CfgVehicles
 				radius=0.60000002;
 				minimalHit=0.050000001;
 			};
+		};
+		class Eventhandlers: Eventhandlers
+		{
+			hit="";
+			landing="[_this,true] call bis_fnc_aircraftTailhookAi";
+			landingcanceled="[_this,false] call bis_fnc_aircraftTailhookAi";
+			engine="_this call bis_fnc_aircraftFoldingWings";
+			gear="_this call bis_fnc_aircraftFoldingWings";
 		};
 	};
 };

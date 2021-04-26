@@ -23,7 +23,7 @@ private _logic = missionNamespace getVariable["BIS_fnc_initCuratorAttributes_tar
 private _init = _logic getVariable ["rd501_ui_volatileInit", [100]];
 
 private _slider = _display displayCtrl 58502;
-_slider sliderSetRange [10, 20000];
+_slider sliderSetRange [10, 1000];
 _slider sliderSetSpeed [1,100];
 _slider sliderSetPosition (_init select 0);
 _slider ctrlAddEventHandler ["SliderPosChanged", _fnc_sliderMove];

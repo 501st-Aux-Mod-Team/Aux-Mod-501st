@@ -36,8 +36,8 @@ RD501_magclamp_large_offset[]={0.0,1.6,-7.3};
 	cyclicAsideForceCoef = 4*1.2;
 	cyclicForwardForceCoef = 2*1.2;
 	maxSpeed=200;
-	fuelCapacity = 700;
-	fuelConsumptionRate = 0.2;
+	fuelCapacity = 2800;
+	fuelConsumptionRate = 0.8;
 ///
 ///dmg properties
 	armor=500;
