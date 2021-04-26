@@ -26,7 +26,11 @@ magazines[]=
 
 RD501_magclamp_large_offset[]={0.0,0.0,-3.0};
 RD501_magclamp_small_offset[]={0.0,0.0,-0.5};
-
+class Turrets: Turrets
+{
+	class LaserPilot:LaserPilot{};
+	class Reargun:Reargun{};
+};
 class Components: Components
 {
 	class TransportPylonsComponent

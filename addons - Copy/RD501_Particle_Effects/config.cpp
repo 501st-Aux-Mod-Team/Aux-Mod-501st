@@ -127,11 +127,11 @@ class CfgCloudlets
 		particleType="Billboard";
 		timerPeriod=1;
 		lifeTime=20;
-		moveVelocity[]={0.2,0.1,0.4};
+		moveVelocity[]={0.2,0.2,0};
 		rotationVelocity=1;
-		weight=1.227;
+		weight=1.26;
 		volume=1;
-		rubbing=0.025;
+		rubbing=0.05;
 		size[]={0.5, 8, 12, 15};
 		color[]=
 		{
@@ -149,7 +149,7 @@ class CfgCloudlets
 		destroyOnWaterSurfaceOffset=-0.60000002;
 		lifeTimeVar=2;
 		positionVar[]={0,0,0};
-		MoveVelocityVar[]={0.25,0.25,0.25};
+		MoveVelocityVar[]={1.2,0.34999999,1.2};
 		rotationVelocityVar=20;
 		sizeVar=0.5;
 		colorVar[]={0,0,0,0.34999999};
@@ -158,8 +158,8 @@ class CfgCloudlets
 	};
 	class RD501_Dioxis:RD501_SuperSmoke
 	{
-		moveVelocity[]={0.2,0.1,0.1};
-		size[]={0.4, 3, 9};
+		moveVelocity[]={0.2,0.3,0};
+		size[]={0.4, 5, 12};
 		damageType="Fire";					// damage type, only available option is "Fire" so far
 		coreIntensity = 5;			    	// damage coeficient in the center of fire
 		coreDistance = 5.0;					// how far can unit get damage
