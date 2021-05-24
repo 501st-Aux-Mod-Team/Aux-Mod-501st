@@ -149,7 +149,7 @@ class CfgGroups
 						position[]={-.5,-.5,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_grenadier);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit3
 					{
@@ -316,7 +316,7 @@ class CfgGroups
 						position[]={-.5,-.5,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_grenadier);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit3
 					{
@@ -387,7 +387,7 @@ class CfgGroups
 						position[]={0,0,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_grenadier);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit1
 					{
@@ -465,14 +465,14 @@ class CfgGroups
 						position[]={0,0,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_grenadier);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit1
 					{
 						position[]={.5,-.5,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_grenadier);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit2
 					{
@@ -719,7 +719,7 @@ class CfgGroups
 						position[]={-.5,-.5,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_grenadier);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit3
 					{
@@ -920,7 +920,7 @@ class CfgGroups
 						position[]={1.5,-1.5,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_grenadier);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit6
 					{
@@ -1120,7 +1120,7 @@ class CfgGroups
 						position[]={.5,-.5,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_grenadier);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit2
 					{
@@ -1488,7 +1488,7 @@ class CfgGroups
 						position[]={.5,-.5,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_grenadier);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit2
 					{
@@ -1719,7 +1719,7 @@ class CfgGroups
 						position[]={-.5,-.5,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B1_grenadier);
+						vehicle=macro_new_unit_class(opfor,B1);
 					};
 					class Unit3
 					{

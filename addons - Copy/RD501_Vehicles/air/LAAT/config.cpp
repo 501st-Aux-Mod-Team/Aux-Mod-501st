@@ -48,6 +48,7 @@ class CfgPatches
 			macro_new_vehicle(laat,Mk1_lights),
 			macro_new_vehicle(laat,Mk2),
 			macro_new_vehicle(laat,Mk2_lights),
+			macro_new_vehicle(laat,cargo_Mk2)
 		};
 		weapons[]=
 		{

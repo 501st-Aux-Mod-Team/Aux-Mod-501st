@@ -34,6 +34,7 @@ class CfgAmmo
 	class FlareBase;
 	class SmokeShell;
 	class JLTS_bullet_stun;
+	class 442_thermal_det;
 	class macro_new_ammo(surrender_stun): JLTS_bullet_stun
 	{
 		model="\MRC\JLTS\weapons\Core\effects\stun.p3d";
@@ -273,7 +274,7 @@ class CfgAmmo
 		hit=50;
 		indirectHit=45;
 		indirectHitRange=2;
-		fuseDistance=0;
+		fuseDistance=0.5;
 		explosionTime=0;
 		simulation="shotShell";
 	}
@@ -295,6 +296,14 @@ class CfgAmmo
 		hit=18;
 		indirectHit=14;
 		indirectHitRange=8;
+
+	};
+	class macro_new_ammo(thermaldet_cis) : 442_thermal_det
+	{
+		hit=10;
+		indirectHit=8;
+		indirectHitRange=6;
+		cost=80;
 
 	};
 	class macro_new_ammo(squad_shield_sigma) : 3AS_CoreDetonator_1RND
