@@ -35,6 +35,7 @@ class CfgWeapons
 		displayName="Republic Valken 38X";
 		dispersion=0.00045;
 		ACE_Overheating_JamChance = 0;
+		ace_overheating_allowSwapBarrel = 1;
 		canShootInWater=1;
 		magazines[]=
 		{
@@ -43,7 +44,7 @@ class CfgWeapons
 		};
 		class Single : Single
 		{
-			reloadTime=0.24;
+			reloadTime=0.2;
 			dispersion=0.00045;
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo

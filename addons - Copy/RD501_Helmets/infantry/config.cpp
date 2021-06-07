@@ -167,6 +167,7 @@ class CfgWeapons
 	NEW_501_Inf_Helm_JLTS(Anubis,Anubis,Anubis.paa)
 	NEW_501_Inf_Helm_JLTS(Gallagher,Gallagher,Gallagher.paa)
 	NEW_501_Inf_Helm_JLTS(Weapon,Weapon,Weapon.paa)
+	NEW_501_Inf_Helm_JLTS(Sparticus,Sparticus,Sparticus.paa)
 	NEW_501_ARC_Helm_JLTS(Rayne,Rayne,Rayne.paa)
 	NEW_501_ARC_Helm_JLTS(Archaic,Archaic,Archaic.paa)
 	NEW_501_Inf_Helm_JLTS(Anta,Anta,Anta.paa)

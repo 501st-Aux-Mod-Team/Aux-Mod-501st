@@ -261,7 +261,7 @@ class CfgVehicles
 	class macro_new_vehicle(cis,gat_aa):3AS_GAT_Light_Base
 	{
 		scope=2;
-		armor = 1500;
+		armor = 700;
 		displayName = "CIS GAT AA"
 		crew = macro_new_unit_class(opfor,B1_crew)
         side = 0;
