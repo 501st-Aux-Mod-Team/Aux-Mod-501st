@@ -53,6 +53,10 @@ class CfgVehicles
 		
 		#include "../../common/common_pilotCamera.hpp"
 
+		RD501_magclamp_large[] = {0.0,1.5,-0.5};
+		RD501_magclamp_small_forbidden=1;
+		RD501_magclamp_large_offset[]={0.0,0.0,-10.0};
+
 		weapons[]=
 		{
 			"ParticleBeamCannon_Nu",
