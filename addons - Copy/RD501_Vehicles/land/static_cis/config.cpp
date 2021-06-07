@@ -312,7 +312,8 @@ class CfgVehicles
 			{};
 		};
 	};*/
-	/*class macro_new_vehicle(mortar,cis):3AS_Republic_Mortar
+	class 3AS_CIS_Mortar;
+	class macro_new_vehicle(mortar,cis):3AS_CIS_Mortar
 	{
 		author = "RD501";
 		scope = 2;
@@ -321,7 +322,7 @@ class CfgVehicles
 		scopeCurator = 2;
 		crew=macro_new_unit_class(opfor,B1_crew)
 		faction = macro_cis_faction
-		editorSubcategory = macro_editor_cat(turrets)
-		vehicleClass = macro_editor_vehicle_type(turrets)
-	}*/
+		editorSubcategory = macro_editor_cat(arty)
+		vehicleClass = macro_editor_vehicle_type(arty)
+	}
 };

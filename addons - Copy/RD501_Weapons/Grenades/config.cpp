@@ -60,7 +60,7 @@ class CfgWeapons
 	};
 	class Throw: GrenadeLauncher
 	{
-		muzzles[] += {"Shadow_Muzzle","Imploder_Muzzle","Thermaldet_Muzzle","Squad_Shield_Muzzle","Squad_Shield_Trench_Muzzle","Personal_Shield_Muzzle", "Throwable_C_Type_Muzzle","SuperSmoke_Muzzle","Dioxis_Muzzle"};
+		muzzles[] += {"Shadow_Muzzle","Imploder_Muzzle","Thermaldet_Muzzle","Squad_Shield_Muzzle","Squad_Shield_Trench_Muzzle","Personal_Shield_Muzzle", "Throwable_C_Type_Muzzle","SuperSmoke_Muzzle","Dioxis_Muzzle","thermaldet_cis_Muzzle"};
 		class Shadow_Muzzle: ThrowMuzzle
 		{
 			magazines[] = {macro_new_mag(blueshadow,1)};
@@ -96,6 +96,10 @@ class CfgWeapons
 		class Dioxis_Muzzle: ThrowMuzzle
 		{
 			magazines[] = {macro_new_mag(dioxis,1)};
+		};
+		class thermaldet_cis_Muzzle: ThrowMuzzle
+		{
+			magazines[] = {macro_new_mag(thermaldet_cis,1)};
 		};
 	};
 };

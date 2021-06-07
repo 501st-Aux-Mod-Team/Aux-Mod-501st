@@ -59,12 +59,9 @@ class CfgWeapons
 	NEW_501_Pilot_HELM(kitty,Kitty,pilots\kitty.paa)
 	NEW_501_Pilot_HELM(kushiban,Kushiban,pilots\Kushiban.paa)
 	NEW_501_Pilot_HELM(orange,Orange,pilots\orange.paa)
-	NEW_501_Pilot_HELM(nocturnal,Warbird,pilots\Nocturnal.paa)
 	NEW_501_Pilot_HELM(aspect,Aspect,pilots\Aspect.paa)
 	NEW_501_Pilot_HELM(Galaxy,Galaxy,pilots\Galaxy.paa)
 	NEW_501_Pilot_HELM(Floff,Floff,pilots\Floff.paa)
-	NEW_501_Pilot_HELM(Gothic,Gothic,pilots\Gothic.paa)
-	NEW_501_Pilot_HELM(Canik,Canik,pilots\Canik.paa)
 	NEW_501_Pilot_HELM(Shnuffles,Shnuffles,pilots\Shnuffles.paa)
 	NEW_501_Pilot_HELM(Legal,Legal,pilots\Legal.paa)
 	NEW_501_Pilot_HELM(Shock,Shock,pilots\Shock.paa)
@@ -146,6 +143,7 @@ class CfgWeapons
 	NEW_WARDEN_HELM(Rive,Rive,warden\Rive.paa)
 	NEW_WARDEN_HELM(Thunder,Thunder,warden\Thunder.paa)
 	NEW_WARDEN_HELM(Wirtimus,Wirtimus,warden\Wirtimus.paa)
+	NEW_WARDEN_HELM(Whisler,Whisler,warden\Whisler.paa)
 
 
 

@@ -82,3 +82,12 @@ class 3as_arc_170_red: 3as_arc_170_blue
 		class Reargun:Reargun{};
 	};
 };
+class 3as_arc_170_orange: 3as_arc_170_blue
+{
+	class Components:Components{};
+	class Turrets: Turrets
+	{
+		class LaserPilot:LaserPilot{};
+		class Reargun:Reargun{};
+	};
+};

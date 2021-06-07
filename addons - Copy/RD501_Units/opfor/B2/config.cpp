@@ -53,7 +53,7 @@ class macro_new_unit_class(opfor,B2_droid_Standard): O_Soldier_F
 		{
 			class HitFace
 			{
-				armor=6;
+				armor=8;
 				material=-1;
 				name="face_hub";
 				passThrough=0.013;
@@ -63,7 +63,7 @@ class macro_new_unit_class(opfor,B2_droid_Standard): O_Soldier_F
 			};
 			class HitNeck: HitFace
 			{
-				armor=6;
+				armor=8;
 				material=-1;
 				name="neck";
 				passThrough=0.013;
@@ -73,7 +73,7 @@ class macro_new_unit_class(opfor,B2_droid_Standard): O_Soldier_F
 			};
 			class HitHead: HitNeck
 			{
-				armor=6;
+				armor=8;
 				material=-1;
 				name="head";
 				passThrough=0.13;
@@ -84,7 +84,7 @@ class macro_new_unit_class(opfor,B2_droid_Standard): O_Soldier_F
 			};
 			class HitPelvis: HitHead
 			{
-				armor=8;
+				armor=10;
 				material=-1;
 				name="pelvis";
 				passThrough=0.44;
@@ -107,7 +107,7 @@ class macro_new_unit_class(opfor,B2_droid_Standard): O_Soldier_F
 			};
 			class HitDiaphragm: HitAbdomen
 			{
-				armor=8;
+				armor=10;
 				material=-1;
 				name="spine2";
 				passThrough=0.44;
@@ -118,7 +118,7 @@ class macro_new_unit_class(opfor,B2_droid_Standard): O_Soldier_F
 			};
 			class HitChest: HitDiaphragm
 			{
-				armor=8;
+				armor=10;
 				material=-1;
 				name="spine3";
 				passThrough=0.44;
@@ -141,7 +141,7 @@ class macro_new_unit_class(opfor,B2_droid_Standard): O_Soldier_F
 			};
 			class HitArms: HitBody
 			{
-				armor=6;
+				armor=8;
 				material=-1;
 				name="arms";			
 				passThrough=0.13;
@@ -153,7 +153,7 @@ class macro_new_unit_class(opfor,B2_droid_Standard): O_Soldier_F
 			};
 			class HitRightHand :HitArms
 			{
-				armor = 8;
+				armor = 10;
 				explosionShielding = 0.25;
 				material = -1;
 				minimalHit = 0.01;
@@ -164,7 +164,7 @@ class macro_new_unit_class(opfor,B2_droid_Standard): O_Soldier_F
 			};
 			class HitLeftHand :HitArms
 			{
-				armor = 8;
+				armor = 10;
 				explosionShielding = 0.25;
 				material = -1;
 				minimalHit = 0.01;
@@ -175,7 +175,7 @@ class macro_new_unit_class(opfor,B2_droid_Standard): O_Soldier_F
 			};
 			class HitHands: HitArms
 			{
-				armor=6;
+				armor=8;
 				material=-1;
 				name="hands";
 				passThrough=0.13;
@@ -187,7 +187,7 @@ class macro_new_unit_class(opfor,B2_droid_Standard): O_Soldier_F
 			};
 			class HitLegs: HitHands
 			{
-				armor=6;
+				armor=8;
 				material=-1;
 				name="legs";
 				passThrough=0.13;
@@ -232,8 +232,8 @@ class macro_new_unit_class(opfor,B2_droid_Standard): O_Soldier_F
 				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
 			};
 		};
-		armor=15;
-		armorStructural=1;
+		armor=30;
+		armorStructural=1.1;
 		explosionShielding=0.40000001;
 		model="\101st_Aux_Mod\Addons\DBA_CIS\Assets\B2.p3d";
 		uniformClass=macro_new_uniform_class(opfor,B2_Armor_mk2)
@@ -257,8 +257,8 @@ class macro_new_unit_class(opfor,B2_droid_Standard): O_Soldier_F
 	class macro_new_unit_class(opfor,B2_droid_Super) : macro_new_unit_class(opfor,B2_droid_Standard)
 	{
 		displayname = "Super B2";
-		armor=30;
-		armorStructural=1;
+		armor=60;
+		armorStructural=1.5;
 		uniformClass=macro_new_uniform_class(opfor,B2_SuperArmor)
 		hiddenSelections[]=
 		{

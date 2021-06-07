@@ -28,6 +28,7 @@ class CfgMagazines
 	class 3AS_BaridumCore;
 	class 2Rnd_12Gauge_Pellets;
 	class SmokeShell;
+	class 442_thermal_det_mag;
 
 	////////////////////////////////////////////////////
 	/////////////Rifle/Pistol Magazines/////////////////
@@ -359,6 +360,16 @@ class CfgMagazines
 		count=1;
 		ammo = macro_new_ammo(thermaldet)
 		descriptionShort = "Republic Thermal Detonator";
+	};
+	class macro_new_mag(thermaldet_cis,1):442_thermal_det_mag
+	{
+		author="RD501";
+		scope=2;
+		displayName = "CIS Thermal Detonator";
+		displayNameShort = "Thermal Detonator";
+		count=1;
+		ammo = macro_new_ammo(thermaldet_cis)
+		descriptionShort = "CIS Thermal Detonator";
 	};
 	class macro_new_mag(squad_shield_sigma,1):3AS_BaridumCore
 	{

@@ -31,6 +31,12 @@ class CfgGroups {
                     icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
                     #include "data\republic\bases\dakaar_base.hpp"
                 };
+				class RD501_Compositions_Republic_Base_2 {
+                    name="Sierra Base";
+                    side = 8;
+                    icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                    #include "data\republic\bases\sierra_base.hpp"
+                };
             };
             class RD501_Compositions_Republic_Ships {
                 name = "Ships";
@@ -54,6 +60,12 @@ class CfgGroups {
                     side = 8;
                     icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
                     #include "data\republic\installations\example_installation.hpp"
+                };
+                class RD501_Compositions_Republic_Installation_1 {
+                    name="Citadel";
+                    side = 8;
+                    icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                    #include "data\republic\installations\citadel.hpp"
                 };
             };
         };
@@ -163,6 +175,24 @@ class CfgGroups {
                     side = 8;
                     icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
                     #include "data\cis\bases\base_armor_repair_depot.hpp"
+                };
+				class RD501_Compositions_CIS_Base_17 {
+                    name="CIS Complex";
+                    side = 8;
+                    icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                    #include "data\cis\bases\complex.hpp"
+                };
+				class RD501_Compositions_CIS_Base_18 {
+                    name="CIS Stronghold";
+                    side = 8;
+                    icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                    #include "data\cis\bases\stronghold.hpp"
+                };
+				class RD501_Compositions_CIS_Base_19 {
+                    name="CIS Field Headquarters";
+                    side = 8;
+                    icon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                    #include "data\cis\bases\fieldhq.hpp"
                 };
             };
             class RD501_Compositions_CIS_Ships {
