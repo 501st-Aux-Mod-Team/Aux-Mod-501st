@@ -177,6 +177,11 @@ class TransportWeapons
 		weapon = macro_new_weapon(launcher,rps1)
 		count = 2;
 	};
+	class _transport_rps4
+	{
+		weapon = macro_new_weapon(launcher,RPS4)
+		count = 2;
+	};
 	class _transport_plx
 	{
 		weapon = macro_new_weapon(Launcher,PLX1)
@@ -234,17 +239,17 @@ class TransportMagazines
 	{
 		magazine =  macro_new_mag(20mwup,20);
 		count = 40;
-	};
+	};		
 	class _transport_20mwdp20
 	{
 		magazine = macro_new_mag(20mwdp,20);
 		count = 40;
-	};
+	};		
 	class _transport_20mw240
 	{
 		magazine = macro_new_mag(20mw,240);
 		count = 20;
-	};
+	};									
 	class _transport_30mw10
 	{
 		magazine = macro_new_mag(30mw,10);
@@ -275,6 +280,26 @@ class TransportMagazines
 		magazine =  macro_new_mag(RPS_AA,1)
 		count = 20;
 	};
+	class _transport_launcher_RPS4AT_mags
+	{
+		magazine =  macro_new_mag(rps4heat,1)
+		count = 20;
+	};
+	class _transport_launcher_ARPS4HE_mags
+	{
+		magazine =  macro_new_mag(rps4he,1)
+		count = 20;
+	};
+	class _transport_launcher_PLXAT_mags
+	{
+		magazine =  "JLTS_PLX1_AT_mag"
+		count = 10;
+	};
+	class _transport_launcher_PLXAP_mags
+	{
+		magazine =  "JLTS_PLX1_AP_mag"
+		count = 10;
+	};
 	class _transport_he3
 	{
 		magazine = macro_new_mag(UGL_HE,3);
@@ -284,12 +309,12 @@ class TransportMagazines
 	{
 		magazine = macro_new_mag(UGL_AP,2);
 		count = 15;
-	};
+	};		
 	class _transport_emp1
 	{
 		magazine = macro_new_mag(UGL_EMP,1);
 		count = 3;
-	};
+	};			
 	class _transport_HuntIR_M203
 	{
 		magazine = "ACE_HuntIR_M203";
@@ -299,6 +324,56 @@ class TransportMagazines
 	{
 		magazine = "C12_Remote_Mag";
 		count = 2;
+	};
+	class _transport_RGLHE
+	{
+		magazine = macro_new_mag(UGL_HE,6)
+		count = 10;
+	};
+	class _transport_RGLAP
+	{
+		magazine = macro_new_mag(UGL_AP,6)
+		count = 10;
+	};
+	class _transport_RGPEMP
+	{
+		magazine = macro_new_mag(UGL_EMP,6)
+		count = 5;
+	};
+	class _transport_ShotgunSP
+	{
+		magazine = macro_new_mag(shotgun_scatter,6)
+		count = 20;
+	};
+	class _transport_ShotgunUO
+	{
+		magazine = macro_new_mag(shotgun_HE,6)
+		count = 20;
+	};
+	class _transport_ShotgunEMP
+	{
+		magazine = macro_new_mag(shotgun_EMP,2)
+		count = 10;
+	};
+	class _transport_StaticEweb
+	{
+		magazine = macro_new_mag(eweb,1000)
+		count = 10;
+	};
+	class _transport_StaticStriker
+	{
+		magazine = macro_new_mag(ragl40he,40)
+		count = 10;
+	};
+	class _transport_StaticBoomer
+	{
+		magazine = macro_new_mag(aap,4)
+		count = 10;
+	};
+	class _transport_StaticDriver
+	{
+		magazine = macro_new_mag(mar,1)
+		count = 10;
 	};
 };
 class TransportItems
@@ -312,5 +387,65 @@ class TransportItems
 	{
 		name = "ACE_HuntIR_monitor";
 		count = 1;
+	};
+	class _xx_ACE_tourniquet
+	{
+		name = "ACE_tourniquet";
+		count = 15;
+	};
+	class _xx_ACE_splint
+	{
+		name = "ACE_splint";
+		count = 15;
+	};
+	class _xx_ACE_plasmaIV_250
+	{
+		name = "ACE_plasmaIV_250";
+		count = 15;
+	};
+	class _xx_ACE_plasmaIV_500
+	{
+		name = "ACE_plasmaIV_500";
+		count = 15;
+	};
+	class _xx_ACE_plasmaIV
+	{
+		name = "ACE_plasmaIV";
+		count = 15;
+	};
+	class _xx_ACE_elasticBandage
+	{
+		name = "ACE_elasticBandage";
+		count = 80;
+	};				
+	class _xx_ACE_quikclot
+	{
+		name = "ACE_quikclot";
+		count = 80;
+	};					
+	class _xx_ACE_packingBandage
+	{
+		name = "ACE_packingBandage";
+		count = 80;
+	};					
+	class _xx_ACE_morphine
+	{
+		name = "ACE_morphine";
+		count = 30;
+	};		
+	class _xx_ACE_painkiller
+	{
+		name = "RD501_Painkiller";
+		count = 30;
+	};								
+	class _xx_ACE_epinephrine
+	{
+		name = "ACE_epinephrine";
+		count = 20;
+	};				
+	class _xx_SmokeShellPurple
+	{
+		name = "SmokeShellPurple";
+		count = 5;
 	};
 };
