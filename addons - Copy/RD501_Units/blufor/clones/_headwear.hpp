@@ -202,7 +202,7 @@ class rd501_JLTS_CloneBinocular_black: JLTS_CloneBinocular_black
 {
     displayname = "[501st] Clone Macrobinoculars (Black)";
 };
-class rd501_JLTS_CloneBinocular_black: JLTS_CloneBinocular_black
+class rd501_JLTS_CloneBinocular_black_TI: JLTS_CloneBinocular_black
 {
     displayname = "[501st] Clone Macrobinoculars Scout (Black)";
 	visionMode[]=
