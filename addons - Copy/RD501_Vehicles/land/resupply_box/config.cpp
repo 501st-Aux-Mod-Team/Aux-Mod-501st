@@ -24,10 +24,7 @@ class CfgPatches
 		};
 		requiredVersion=0.1;
 		units[]=
-		{
-			macro_new_vehicle(resuppy_box,platoon_medical),
-			macro_new_vehicle(resuppy_box,platoon_ammo),
-			macro_new_vehicle(resuppy_box,platoon_joint),
+		{,
 			macro_new_vehicle(resuppy_box,small_medical),
 			macro_new_vehicle(resuppy_box,small_ammo),
 			macro_new_vehicle(resuppy_box,small_uav),
@@ -45,117 +42,9 @@ class CfgPatches
 class DefaultEventhandlers;
 class CfgVehicles
 {
-	class plp_ct_HighSecContBlack;
 	class 442_box5_1;
 	class 442_box10;
 	class 442_box4;
-	class SWOP_BOX_BASE;
-		class plp_ct_HighSecBigBlack;
-
-	class macro_new_vehicle(resuppy_box,platoon_medical): plp_ct_HighSecContBlack
-	{
-		scope = 2;
-		scopeCurator = 2;
-		displayName = "Republic Platoon Resupply (Medical)";
-		hiddenSelections[] = {"camo", "camoB", "camo1", "camo2"};
-		hiddenSelectionsTextures[] = {"\plp_containers\StcHighSec\plp_ct_HighSecContRed.paa", "", "\plp_containers\StcHighSec\plp_ct_HighSec_LightOrange_co.paa", ""};
-		hiddenSelectionsMaterials[] = {"\plp_containers\StcHighSec\plp_ct_HighSecCont_Metal.rvmat", "\plp_containers\StcHighSec\plp_ct_HighSecCont_MetalB.rvmat", "\plp_containers\StcHighSec\plp_ct_HighSec_Light.rvmat", ""};
-		editorCategory = macro_editor_cat(suppplies)
-		editorSubcategory = macro_editor_cat(resupply)
-		RD501_magclamp_small_offset[]={0.0,0.0,-0.4};
-		class TransportItems
-		{
-			#include "medical_platoon_items.hpp"
-		};
-		class EventHandlers :DefaultEventhandlers{};
-	};
-	class macro_new_vehicle(resuppy_box,platoon_medical_tent): plp_ct_HighSecContBlack
-	{
-		scope = 2;
-		scopeCurator = 2;
-		displayName = "Republic M*A*S*H";
-		hiddenSelections[] = {"camo", "camoB", "camo1", "camo2"};
-		hiddenSelectionsTextures[] = {"\plp_containers\StcHighSec\plp_ct_HighSecContRed.paa", "", "\plp_containers\StcHighSec\plp_ct_HighSec_LightOrange_co.paa", ""};
-		hiddenSelectionsMaterials[] = {"\plp_containers\StcHighSec\plp_ct_HighSecCont_Metal.rvmat", "\plp_containers\StcHighSec\plp_ct_HighSecCont_MetalB.rvmat", "\plp_containers\StcHighSec\plp_ct_HighSec_Light.rvmat", ""};
-		editorCategory = macro_editor_cat(suppplies)
-		editorSubcategory = macro_editor_cat(resupply)
-		RD501_magclamp_small_offset[]={0.0,0.0,-0.4};
-		class TransportItems{};
-		class EventHandlers :DefaultEventhandlers{};
-		class ACE_Actions {
-			class ACE_MainActions {
-				displayName = "Deployable CCP";
-				condition = "true";
-				distance = 4;
-				class rd501_deploy_medical_ccp {
-					displayName = "Deploy";
-					statement = "_this call rd501_fnc_deployCCP";
-					icon = "rd501_main\ui_icons\medical_emblem.paa";
-					exceptions[] = {};
-				};
-			};
-		};
-	};
-
-	class macro_new_vehicle(resuppy_box,platoon_ammo): plp_ct_HighSecContBlack
-	{
-		scope = 2;
-		scopeCurator = 2;
-		displayName = "Republic Platoon Resupply (Ammo)";
-		hiddenSelections[] = {"camo", "camoB", "camo1", "camo2"};
-		hiddenSelectionsTextures[] = {"\plp_containers\StcHighSec\plp_ct_HighSecContWhite.paa", "", "\plp_containers\StcHighSec\plp_ct_HighSec_LightBlue_co.paa", ""};
-		hiddenSelectionsMaterials[] = {"\plp_containers\StcHighSec\plp_ct_HighSecCont_Metal.rvmat", "\plp_containers\StcHighSec\plp_ct_HighSecCont_MetalB.rvmat", "\plp_containers\StcHighSec\plp_ct_HighSec_Light.rvmat", ""};
-		editorCategory = macro_editor_cat(suppplies)
-		editorSubcategory = macro_editor_cat(resupply)
-		RD501_magclamp_small_offset[]={0.0,0.0,-0.4};
-
-		class TransportItems
-		{
-			//#include "ammo_platoon_items.hpp"
-		};
-
-		class TransportMagazines
-		{
-			//#include"ammo_platoon_mag.hpp"
-		};	
-
-		class TransportWeapons
-		{
-			//#include "ammo_platoon_weap.hpp"
-		};
-
-		class EventHandlers :DefaultEventhandlers{};
-	};
-
-	class macro_new_vehicle(resuppy_box,platoon_joint): plp_ct_HighSecContBlack
-	{
-		scope = 2;
-		scopeCurator = 2;
-		displayName = "Republic Platoon Resupply (Joint)";
-		model = "plp_containers\StcHighSec\plp_cts_HighSecContBlack.p3d";
-		editorCategory = macro_editor_cat(suppplies)
-		editorSubcategory = macro_editor_cat(resupply)
-		RD501_magclamp_small_offset[]={0.0,0.0,-0.4};
-
-		class TransportItems
-		{
-			//#include "ammo_platoon_items.hpp"
-			//#include "medical_platoon_items.hpp"
-		};
-
-		class TransportMagazines
-		{
-			//#include"ammo_platoon_mag.hpp"
-		};	
-
-		class TransportWeapons
-		{
-			//#include "ammo_platoon_weap.hpp"
-		};
-
-		class EventHandlers :DefaultEventhandlers{};
-	};
-
 	class macro_new_vehicle(resuppy_box,small_medical): 442_box5_1
 	{
 		author = "RD501";

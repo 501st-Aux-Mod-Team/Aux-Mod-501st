@@ -188,4 +188,5 @@ class CfgWeapons
 	NEW_501_ARC_Helm_JLTS(Aedan,Aedan,Aedan.paa)
 	NEW_501_ARC_Helm_JLTS(Tal,Tal,Tal.paa)
 	NEW_501_ARC_Helm_JLTS(Deva,Deva,Deva.paa)
+	NEW_501_ARC_Helm_JLTS(Scruff,Scruff,Scruff.paa)
 };

@@ -48,7 +48,7 @@ class CfgPatches
 			macro_new_vehicle(laat,Mk1_lights),
 			macro_new_vehicle(laat,Mk2),
 			macro_new_vehicle(laat,Mk2_lights),
-			macro_new_vehicle(laat,cargo_Mk2)
+			macro_new_vehicle(laat,LE)
 		};
 		weapons[]=
 		{
@@ -90,6 +90,20 @@ class CfgVehicles
 				maxelev=40;
 				maxturn=-120;
 				#include "../../common/common_optics.hpp"
+				weapons[]=
+					{
+						macro_new_weapon(generic,republic_aircraft_cannon),
+						"Laserdesignator_pilotCamera"
+					};
+				magazines[]=
+					{
+						"Laserbatteries",
+						macro_new_mag(generic_aircraft_gun_green,1000),
+						macro_new_mag(generic_aircraft_gun_green,1000),
+						macro_new_mag(generic_aircraft_gun_green,1000)
+					};
+				#include "../../common/common_optics.hpp"
+				memorypointgunneroptics="FIXME";
 			};
 			class LeftDoorgun: LeftDoorgun
 			{
@@ -160,6 +174,18 @@ class CfgVehicles
 				minturn=-240;
 				maxelev=40;
 				maxturn=-120;
+				weapons[]=
+					{
+						macro_new_weapon(generic,republic_aircraft_cannon),
+						"Laserdesignator_pilotCamera"
+					};
+				magazines[]=
+					{
+						"Laserbatteries",
+						macro_new_mag(generic_aircraft_gun_green,1000),
+						macro_new_mag(generic_aircraft_gun_green,1000),
+						macro_new_mag(generic_aircraft_gun_green,1000)
+					};
 				#include "../../common/common_optics.hpp"
 			};
 			class CargoTurret_01: CargoTurret_01{};
@@ -198,6 +224,18 @@ class CfgVehicles
 				minturn=-240;
 				maxelev=40;
 				maxturn=-120;
+				weapons[]=
+					{
+						macro_new_weapon(generic,republic_aircraft_cannon),
+						"Laserdesignator_pilotCamera"
+					};
+				magazines[]=
+					{
+						"Laserbatteries",
+						macro_new_mag(generic_aircraft_gun_green,1000),
+						macro_new_mag(generic_aircraft_gun_green,1000),
+						macro_new_mag(generic_aircraft_gun_green,1000)
+					};
 				#include "../../common/common_optics.hpp"
 			};
 			class CargoTurret_01: CargoTurret_01{};
@@ -231,82 +269,37 @@ class CfgVehicles
 				minturn=-240;
 				maxelev=40;
 				maxturn=-120;
+				weapons[]=
+					{
+						macro_new_weapon(generic,republic_aircraft_cannon),
+						"Laserdesignator_pilotCamera"
+					};
+				magazines[]=
+					{
+						"Laserbatteries",
+						macro_new_mag(generic_aircraft_gun_green,1000),
+						macro_new_mag(generic_aircraft_gun_green,1000),
+						macro_new_mag(generic_aircraft_gun_green,1000)
+					};
 				#include "../../common/common_optics.hpp"
 			};
 			class CargoTurret_01: CargoTurret_01{};
 			class CargoTurret_02: CargoTurret_02{};
 		};
 	};
-
-	class macro_new_vehicle(laat,cargo_Mk2):swop_LAAT_cargo
+	class macro_new_vehicle(laat,LE):3AS_Patrol_LAAT_Republic
 	{
+		displayName="Republic LAAT/LE";
 		scope=2;
-		displayName="LAAT/C MK.II";
-		author="RD501"
-		side=1;
-		crew="SWOP_Clonetrooper_P1";
-		//transportSoldier=24;
-		smokeLauncherGrenadeCount = 48;
-		smokeLauncherAngle = 360;
+		author="RD501";
 		forceInGarage = 1;
+
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat_air(Republic_heli)
 		vehicleClass = macro_editor_vehicle_type_air(Republic)
-
-		maximumLoad = 5000000000;
-		slingLoadMaxCargoMass = 5000000000;
-
-		//#include "flight_model.hpp"
-		// cyclicAsideForceCoef = 1*1;
-		// cyclicForwardForceCoef = 1*4;
-		// backRotorForceCoef =1*1;
-		// maxSpeed=200;
-		// bodyFrictionCoef = 0.9*40;
-
-		#include "ace_stuff.hpp"
-
-		RD501_magclamp_small_1[] = {-7.0,-2.0,-2.5};
-		RD501_magclamp_large[] = {0.0,-2.0,-2.0};
-		RD501_magclamp_small_2[] = {7.0,-2.0,-2.5};
-		RD501_magclamp_small_forbidden=1;
-		RD501_magclamp_large_offset[]={0.0,1.0,-4.5};
-
-		class ACE_SelfActions
-		{		
-			#include "../../common/universal_hud_color_changer.hpp"
-		};
-
-		#include "../../common/helicopter_mfd.hpp"	
-		//#include "../../common/universal_mfd.hpp"
-
-		//#include "flight_model.hpp"
-		#include "sounds.hpp"
+		transportSoldier=14;
 		class UserActions
 		{
-			class StartRefuel
-			{
-				displayName = "<t color='#07CC0C'>[Start Refueling]</t>";
-				displayNameDefault = "<t color='#07CC0C'>[Start Refueling]</t>";
-				textToolTip = "<t color='#07CC0C'>[Start Refueling]</t>";
-				position = "pilotview";
-				radius = 20;
-				priority = 21;
-				onlyForPlayer = 1;
-				condition = "this call RD501_fnc_mc_canRefuel";
-				statement = "this call RD501_fnc_mc_startRefuel;";
-			};
-			class StopRefuel
-			{
-				displayName = "<t color='#BC0404'>[Stop Refueling]</t>";
-				displayNameDefault = "<t color='#BC0404'>[Stop Refueling]</t>";
-				textToolTip = "<t color='#BC0404'>[Stop Refueling]</t>";
-				position = "pilotview";
-				radius = 20;
-				priority = 21;
-				onlyForPlayer = 1;
-				condition = "this call RD501_fnc_mc_canStopRefuel";
-				statement = "_vehicle setVariable['RD501_mc_stop_refuel',true,true];";
-			};
 			class ThrusterEngage
 			{
 				displayName = "";
@@ -320,6 +313,7 @@ class CfgVehicles
 				statement = "this execVM ""\RD501_Main\functions\impulse\fnc_impulseIncrease.sqf""";
 				shortcut="User19"
 			};
+
 			class ThrusterDisengage: ThrusterEngage
 			{
 				priority = 0;
@@ -331,43 +325,39 @@ class CfgVehicles
 				shortcut="User20"
 			};
 		};
-		class EventHandlers : DefaultEventhandlers {
-			fired = "_this call (uinamespace getvariable 'BIS_fnc_effectFired');";
-			//init = "[_this select 0] call RD501_Main_fnc_laatc_lift";
-		}
- 
+
+		RD501_magclamp_small_1[] = {0.0,1.0,-1.0};
+		enableManualFire=1;
 		weapons[]=
-		{
-			macro_new_weapon(cannon,laat),
-			macro_new_weapon(wynd,a2a),
-			"CMFlareLauncher",
-			"SmokeLauncher",
-			"Laserdesignator_pilotCamera"
-			
-		};
+			{
+				macro_new_weapon(generic,republic_aircraft_cannon),
+				"Laserdesignator_pilotCamera"
+			};
 		magazines[]=
+			{
+				"Laserbatteries",
+				macro_new_mag(generic_aircraft_gun_green,1000)
+			};
+		class Turrets: Turrets
 		{
-			"300Rnd_CMFlare_Chaff_Magazine",
-			"300Rnd_CMFlare_Chaff_Magazine",
-			"300Rnd_CMFlare_Chaff_Magazine",
-			macro_new_mag(a2a,4),
-			macro_new_mag(a2a,4),
-			"SmokeLauncherMag",
-			macro_new_mag(laat_cannon,100),
-			macro_new_mag(laat_cannon,100),
-			macro_new_mag(laat_cannon,100),
-			macro_new_mag(laat_cannon,100),
-			macro_new_mag(laat_cannon,100),
-			"SmokeLauncherMag",
-			"SmokeLauncherMag",
-			"SmokeLauncherMag",
-			"SmokeLauncherMag",
-			"SmokeLauncherMag",
-			"SmokeLauncherMag",
-			"Laserbatteries"
+
+			class Gunner: Copilot
+			{
+				outGunnerMayFire=1;
+				commanding=-1;
+				primaryGunner=1;
+				weapons[]=
+					{
+						macro_new_weapon(cannon,laat),
+						"Laserdesignator_pilotCamera"
+					};
+				magazines[]=
+					{
+						"Laserbatteries",
+						macro_new_mag(laat_cannon,100)
+					};
+				#include "../../common/common_optics.hpp"
+			};
 		};
-
-		//#include "flight_model.hpp"
 	};
-
 };
