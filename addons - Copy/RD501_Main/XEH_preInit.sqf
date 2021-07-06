@@ -148,6 +148,9 @@ macro_prep_xeh(jammer\fnc_jammerControlActions.sqf,jammerControlActions)
 macro_prep_xeh(impulse\fnc_impulseApply.sqf,impulseApply)
 macro_prep_xeh(impulse\fnc_impulseIncrease.sqf,impulseIncrease)
 macro_prep_xeh(impulse\fnc_impulseDecrease.sqf,impulseDecrease)
+macro_prep_xeh(impulse\fnc_impulseApply_LE.sqf,impulseApplyLE)
+macro_prep_xeh(impulse\fnc_impulseIncrease_LE.sqf,impulseIncreaseLE)
+macro_prep_xeh(impulse\fnc_impulseDecrease_LE.sqf,impulseDecreaseLE)
 
 // Fired Deployables
 macro_prep_xeh(fired_deployable\fnc_fired_deployable_firedHandler.sqf,fired_deployable_firedHandler)

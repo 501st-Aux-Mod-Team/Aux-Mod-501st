@@ -294,6 +294,9 @@ class CfgVehicles
 		author="RD501";
 		forceInGarage = 1;
 
+		RD501_magclamp_large_offset[] = {0.0, 0.0, -3.5};
+		RD501_magclamp_small_offset[] = {0.0, 0.0, -3.5};
+
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat_air(Republic_heli)
 		vehicleClass = macro_editor_vehicle_type_air(Republic)
@@ -310,7 +313,7 @@ class CfgVehicles
 				priority = 0;
 				onlyForPlayer = 1;
 				condition = "((player == driver this) AND (alive this))";
-				statement = "this execVM ""\RD501_Main\functions\impulse\fnc_impulseIncrease.sqf""";
+				statement = "this execVM ""\RD501_Main\functions\impulse\fnc_impulseIncrease_LE.sqf""";
 				shortcut="User19"
 			};
 
@@ -321,7 +324,7 @@ class CfgVehicles
 				displayNameDefault = "";
 				textToolTip = "";
 				condition = "((player == driver this) AND (alive this))";
-				statement = "this execVM ""\RD501_Main\functions\impulse\fnc_impulseDecrease.sqf""";
+				statement = "this execVM ""\RD501_Main\functions\impulse\fnc_impulseDecrease_LE.sqf""";
 				shortcut="User20"
 			};
 		};
