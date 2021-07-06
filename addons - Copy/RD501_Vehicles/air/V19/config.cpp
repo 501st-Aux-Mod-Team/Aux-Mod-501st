@@ -52,6 +52,9 @@ class CfgVehicles
 		irTarget = 1;
 		irTargetSize = 1;
 		countermeasureActivationRadius = 2000;
+		
+		RD501_magclamp_large_offset[] = {0.0, 0.0, -6.0};
+		RD501_magclamp_small_forbidden = 1;
 
 		//flight model
 		maxSpeed=1100;

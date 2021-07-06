@@ -34,6 +34,9 @@ class CfgVehicles
 		forceInGarage = 1;
 		side = 1;
 
+		RD501_magclamp_large_offset[] = {0.0, 0.0, -2.0};
+		RD501_magclamp_small_offset[] = {0.0, 2.0, -2.0};
+
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat(Transport)
 		vehicleClass = macro_editor_vehicle_type(Transport)
