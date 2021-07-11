@@ -29,3 +29,12 @@ _action = ["rd501_medical_ccp_stitchAll", "Stitch All Patients", "", {
 		[_player, _target, 20] call rd501_fnc_stitchAllWoundsNearbyCCP;
 	}, {_this call rd501_fnc_canStitchNearbyCCP}, {[]}] call ace_interact_menu_fnc_createAction;
 [_ccp, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
+
+_action = ["rd501_medical_ccp_packup", "Pack", "", {}, {true}, {[]}] call ace_interact_menu_fnc_createAction;
+[_ccp, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
+
+_action = ["rd501_medical_ccp_packupIntoVehicle", "Pack into Vehicle", "", {
+	params ["_target", "_player", "_params"];
+		[_target] call rd501_fnc_packupCCP;
+	}, {true}, {[]}] call ace_interact_menu_fnc_createAction;
+[_ccp, 0, ["ACE_MainActions","rd501_medical_ccp_packup"], _action] call ace_interact_menu_fnc_addActionToObject;

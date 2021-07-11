@@ -48,8 +48,9 @@ call macro_fnc_name(fortify_tool);
 // Medical CCP Building
 rd501_medical_ccp_building = "Land_Medevac_house_V1_F";
 rd501_medical_ccp_classes = ["Land_Medevac_house_V1_F"];
-rd501_medical_ccp_stitchDurationSeconds = 10;
-rd501_medical_ccp_bandageDurationSeconds = 10;
+rd501_medical_ccp_truck = "rd501_mash_truck";
+rd501_medical_ccp_stitchDurationSeconds = 5;
+rd501_medical_ccp_bandageDurationSeconds = 5;
 
 ["rd501_medical_ccp_incrementStitch",{ 
 	_this call rd501_fnc_incrementStitchProgress 
@@ -65,6 +66,10 @@ rd501_medical_ccp_bandageDurationSeconds = 10;
 
 ["rd501_medical_ccp_deployCCPServer", {
 	_this call rd501_fnc_deployCCPServer;
+}] call CBA_fnc_addEventHandler;
+
+["rd501_medical_ccp_packupCCPServer", {
+	_this call rd501_fnc_packupCCPServer;
 }] call CBA_fnc_addEventHandler;
 
 // Surrender stun

@@ -133,6 +133,8 @@ macro_prep_xeh(medical_ccp\fnc_incrementStitchProgress.sqf,incrementStitchProgre
 macro_prep_xeh(medical_ccp\fnc_deployCCP.sqf,deployCCP)
 macro_prep_xeh(medical_ccp\fnc_deployCCPLocal.sqf,deployCCPLocal)
 macro_prep_xeh(medical_ccp\fnc_deployCCPServer.sqf,deployCCPServer)
+macro_prep_xeh(medical_ccp\fnc_packupCCP.sqf,packupCCP)
+macro_prep_xeh(medical_ccp\fnc_packupCCPServer.sqf,packupCCPServer)
 macro_prep_xeh(medical_ccp\fnc_isDoctor.sqf,isDoctor)
 macro_prep_xeh(medical_ccp\fnc_canBandageNearbyCCP.sqf,canBandageNearbyCCP)
 macro_prep_xeh(medical_ccp\fnc_canStitchNearbyCCP.sqf,canStitchNearbyCCP)
