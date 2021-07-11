@@ -196,15 +196,18 @@ class macro_new_weapon(nvg,shock_trooper) : JLTS_NVG_droid_chip_1
 	};
 class rd501_JLTS_CloneBinocular: JLTS_CloneBinocular
 {
-    displayname = "[501st] Clone Macrobinoculars (White)";
-};
-class rd501_JLTS_CloneBinocular_black: JLTS_CloneBinocular_black
-{
-    displayname = "[501st] Clone Macrobinoculars (Black)";
+    displayname = "[501st] Clone Macrobinoculars";
+	visionMode[]=
+    {
+        "Normal",
+        "NVG",
+        "TI"
+    };
+	thermalMode[] = {0,2};
 };
 class rd501_JLTS_CloneBinocular_black_TI: JLTS_CloneBinocular_black
 {
-    displayname = "[501st] Clone Macrobinoculars Scout (Black)";
+    displayname = "[501st] Clone Macrobinoculars Scout";
 	visionMode[]=
     {
         "Normal",

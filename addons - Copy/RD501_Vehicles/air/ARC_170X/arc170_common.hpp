@@ -56,8 +56,12 @@ class Components: Components
 					};
 					class pylons2: pylons1
 					{
+						hardpoints[]=
+						{
+							"RD501_Universal_rail"
+						};
 						UIposition[]={0.050000001,0.44999999};
-						mirroredMissilePos=1;
+						//mirroredMissilePos=1;
 					};
 					class pylons3: pylons1
 					{
@@ -80,7 +84,7 @@ class Components: Components
 						priority=13;
 						maxweight=5000;
 						UIposition[]={0.1,0.34999999};
-						mirroredMissilePos=3;
+						//mirroredMissilePos=3;
 					};
 					class pylons5: pylons1
 					{
@@ -103,7 +107,7 @@ class Components: Components
 						priority=12;
 						maxweight=5000;
 						UIposition[]={0.15000001,0.25};
-						mirroredMissilePos=5;
+						//mirroredMissilePos=5;
 					};
 
 			class Pylons7

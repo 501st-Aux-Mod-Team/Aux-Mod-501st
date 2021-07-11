@@ -62,6 +62,16 @@ class CfgMagazines
 		initSpeed=400;
 		descriptionShort="Low power magazine";
 	};
+	class macro_new_mag(5mw_dual,10) : 3AS_45Rnd_EC50_Mag
+	{
+		displayName="15 Round 5MW Cell(Dual)";
+		picture="\RD501_Weapons\_mag\data\rd501_icon_mag_dc17.paa";
+		count = 15;
+		mass=4;
+		ammo=macro_new_ammo(5mw_dual)
+		initSpeed=400;
+		descriptionShort="Low power magazine";
+	};
 	class macro_new_mag(10mw,30) : 3AS_45Rnd_EC50_Mag
 	{
 		displayName="40 Round 10MW Cell";

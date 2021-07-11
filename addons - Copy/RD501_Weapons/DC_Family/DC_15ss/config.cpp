@@ -20,8 +20,8 @@ class CfgPatches
 };
 class CfgWeapons
 {
-	class SWOP_DC15SAPistol;
-	class macro_new_weapon(DC,15sa):SWOP_DC15SAPistol
+	class 3AS_pistol_DC15SA_F;
+	class macro_new_weapon(DC,15sa):3AS_pistol_DC15SA_F
 	{
 		scope=2;
 		author = "RD501";

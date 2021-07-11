@@ -334,11 +334,18 @@ class CfgVehicles
 		weapons[]=
 			{
 				macro_new_weapon(generic,republic_aircraft_cannon),
+				"Bomb_Leaflets",
+				macro_new_weapon(wynd,ugm),
 				"Laserdesignator_pilotCamera"
 			};
 		magazines[]=
 			{
 				"Laserbatteries",
+				"1Rnd_Leaflets_Civ_F",
+				"1Rnd_Leaflets_Civ_F",
+				"1Rnd_Leaflets_Civ_F",
+				"1Rnd_Leaflets_Civ_F",
+				macro_new_mag(ugm,10),
 				macro_new_mag(generic_aircraft_gun_green,1000)
 			};
 		class Turrets: Turrets
@@ -351,13 +358,13 @@ class CfgVehicles
 				primaryGunner=1;
 				weapons[]=
 					{
-						macro_new_weapon(cannon,laat),
+						macro_new_weapon(generic,republic_aircraft_cannon),
 						"Laserdesignator_pilotCamera"
 					};
 				magazines[]=
 					{
 						"Laserbatteries",
-						macro_new_mag(laat_cannon,100)
+						macro_new_mag(generic_aircraft_gun_green,1000)
 					};
 				#include "../../common/common_optics.hpp"
 			};

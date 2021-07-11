@@ -63,6 +63,15 @@ class CfgAmmo
 		airFriction=0;
 		waterFriction=-0.009;
 	};
+	class macro_new_ammo(5mw_dual) : 3AS_EC30_BluePlasma
+	{
+		hit=12;
+		airLock=1;
+		typicalSpeed=400;
+		caliber=1.4;
+		airFriction=0;
+		waterFriction=-0.009;
+	};
 	class macro_new_ammo(10mw) : 3AS_EC40_BluePlasma
 	{
 		hit=9;

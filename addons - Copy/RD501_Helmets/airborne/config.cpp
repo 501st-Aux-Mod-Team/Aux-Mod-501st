@@ -39,6 +39,8 @@ class CfgWeapons
 	NEW_501_AB_HELM_JLTS(501st_Snorri_helmet,Snorri,Snorri.paa)
 	NEW_501_AB_HELM_JLTS(501st_Grinch_helmet,Grinch,Grinch.paa)
 	NEW_501_AB_HELM_JLTS(501st_Sparrow_helmet,Sparrow,Sparrow.paa)
+	NEW_501_AB_HELM_JLTS(501st_Omen_helmet,Omen,Omen.paa)
+	NEW_501_AB_HELM_JLTS(501st_Nuclear_helmet,Nuclear,Nuclear.paa)
 
 	
 

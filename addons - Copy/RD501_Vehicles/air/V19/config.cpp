@@ -57,37 +57,7 @@ class CfgVehicles
 		RD501_magclamp_small_forbidden = 1;
 
 		//flight model
-		maxSpeed=1100;
-		aileronSensitivity=0.41;
-		elevatorSensitivity=0.41;
-		airBrakeFrictionCoef=120;
-
-		brakeDistance = 80;
-		noseDownCoef = 0;
-		acceleration = 225;
-
-		draconicForceXCoef=15;
-		draconicForceYCoef=6;
-		draconicForceZCoef=12;
-
-		altFullForce=18000;
-		altNoForce=19000;
-
-		draconicTorqueXCoef[]={2.0,1.5,1.0,0.9,1.0,0.9,0.75,0.8,0.9,0.95,1.0};
-		draconicTorqueYCoef[]={1.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
-
-		VTOLYawInfluence="3.5";
-		VTOLPitchInfluence="10";
-		VTOLRollInfluence="9";
-
-		rudderInfluence=0.9;
-		envelope[] = {0.5,2.11,2.43,1.97,1.72,2.69,3.87,5.27,6.89,8.72,9.7,9.6,9.2,8.5,8.2,8};
-		thrustCoef[] = {1.5,3.69,3.62,3.68,3.74,3.81,3.89,3.95,3.96,3.96,3.92,3.4,0.4,0,0,0};
-		elevatorCoef[] = {0.3,0.5,0.66,0.52,0.49,0.46,0.43,0.4,0.35,0.3,0.25,0.18,0.17,0.16,0.15,0.15};
-		aileronCoef[] = {0.4,0.5,0.8,0.95,1.02,1.04,1.03,1.01,1,0.7,0.6,0.55,0.5,0.45,0.4,0.35};
-		rudderCoef[]={0,0.6,0.9,1.0,1.1,1.0,0.9,0.8,0.6,0.35,0.3,0.25,0.2};
-		rudderControlsSensitivityCoef=4.5;
-		gearsUpFrictionCoef=0;
+		maxSpeed=1500;
 
 		class EventHandlers{};
 

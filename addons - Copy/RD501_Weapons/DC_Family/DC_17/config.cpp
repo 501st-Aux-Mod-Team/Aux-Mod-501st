@@ -23,7 +23,8 @@ class CfgPatches
 			macro_new_weapon(DC,r17a),
 			macro_new_weapon(DC,17sig),
 			macro_new_weapon(DC,r17_shield),
-			macro_new_weapon(DC,r17a_shield)
+			macro_new_weapon(DC,r17a_shield),
+			macro_new_weapon(DC,r17_dual)
 			
 		};
 	};
@@ -31,82 +32,9 @@ class CfgPatches
 
 class cfgWeapons 
 {
-	/*class Mode_FullAuto;
-	class Pistol_Base_F;
-	class SWOP_DC17Pistol: Pistol_Base_F
-	{
-		
-		class Single;
-	};
-
-	class macro_new_weapon(DC,17):SWOP_DC17Pistol
-	{
-		displayName="DC-17";
-		scope=2;
-		scopeArsenal=2;
-		weaponPoolAvailable = 1;
-		selectionFireAnim="zasleh";
-		dlc = "RD501";
-
-		author= "RD501";
-		baseWeapon = macro_new_weapon(DC,17);
-		model="\MRC\JLTS\weapons\DC17SA\DC17SA.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"illum"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\MRC\JLTS\weapons\DC17SA\data\DC17SA_co.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"",
-			"\a3\characters_f_bootcamp\common\data\vrarmoremmisive.rvmat"
-		};
-		DC_Family_Flashlight
-
-		magazines[]={macro_new_mag(DC17,20),"DCStun_Mag"};
-		magazineWell[] = {macro_new_magwell(DC17_GL_Mags)};
-
-		ACE_Overheating_Dispersion = DC15a_Overheat_Dispersion
-		ACE_Overheating_SlowdownFactor = DC15a_Overheat_SlowdownFactor
-		ACE_Overheating_JamChance = DC15a_Overheat_JamChance
-		ACE_overheating_mrbs = DC15a_Overheat_mrbs
-		ACE_overheating_allowSwapBarrel = 1;
-		ACE_clearJamAction = "ReloadMagazine";
-
-		class Single:Single
-		{
-			dispersion =DC17_accuracy;
-			reloadTime = DC17_reloadtime;
-		};
-	};
-
-	class macro_new_weapon(DC,17a):macro_new_weapon(DC,17)
-	{
-		baseWeapon = macro_new_weapon(DC,17a);
-		displayName="DC-17a";
-		magazines[]+={ macro_new_mag(DC17,40)};
-		magazineWell[] = {};
-		// recoil="";
-		// recoilProne="";
-		class Single:Single
-		{
-			dispersion =DC17_accuracy;
-			reloadTime = DC17_reloadtime/2;
-			autoFire=1;
-		};
-	};
-
-	class Pistol_Base_F;
-	class SWOP_DC15SAPistol:Pistol_Base_F
-	{
-		class Single;
-	};*/
 	class RD501_stun_muzzle;
 	class hgun_P07_F;
+	class 3AS_DC17STest_F;
 	class JLTS_DC17SA:hgun_P07_F
 	{
 		class Single;
@@ -321,6 +249,29 @@ class cfgWeapons
 				MACRO_GL_flare_rounds_1rnd
 			};
 			JLTS_hasElectronics=0;
+		};
+	class macro_new_weapon(DC,r17_dual):3AS_DC17STest_F
+		{
+		displayName="Republic Dual DC-17";
+		canShootInWater=1;
+		magazines[]=
+		{
+			macro_new_mag(5mw_dual,10)
+		};
+		muzzles[]=
+		{
+			"this",
+			"Stun"
+		};
+		
+		class Stun: RD501_stun_muzzle
+		{
+			displayName="High Energy StunMode";
+			reloadAction="GestureReloadPistol";
+			magazines[]=
+			{
+				macro_new_mag(stun,5)
+			};
 		};
 	};
 /*

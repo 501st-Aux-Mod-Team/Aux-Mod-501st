@@ -46,10 +46,11 @@ class CfgVehicles
 	{
 		scope=2;
 		displayName="Republic NuClass Mk.I"
-		armor=1300;
+		armor=2300;
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat_air(Republic_heli)
 		vehicleClass = macro_editor_vehicle_type_air(Republic)
+		transportSoldier=35;
 		
 		#include "../../common/common_pilotCamera.hpp"
 
