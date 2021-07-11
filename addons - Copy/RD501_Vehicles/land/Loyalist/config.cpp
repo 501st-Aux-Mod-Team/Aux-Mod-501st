@@ -242,7 +242,8 @@ class CfgWeapons
 		};
 	};
 	class autocannon_Base_F;
-	class autocannon_30mm_CTWS: autocannon_Base_F{};
+	class autocannon_30mm_CTWS: autocannon_Base_F
+	{};
 	class macro_new_weapon(loyalist,20mm): autocannon_30mm_CTWS
 	{
 		displayName="Autocannon 20mm HE";
@@ -331,8 +332,8 @@ class CfgMagazines
 	};
 	class macro_new_mag(loyalist_30mm_AP,10):140Rnd_30mm_MP_shells
 	{
-		displayName="50 Rnd 30mm HE Cannon";
-		displayNameShort="30mm HE";
+		displayName="50 Rnd 30mm AP Cannon";
+		displayNameShort="30mm AP";
 		count = 10;
 		ammo=macro_new_ammo(loyalist_30mm_AP)
 	};
@@ -344,8 +345,8 @@ class CfgAmmo
 	class macro_new_ammo(loyalist_mg):3AS_EC60_BluePlasma
 	{
 		hit=30;
-		indirectHit=0;
-		indirectHitRange=0;
+		indirectHit=5;
+		indirectHitRange=1;
 		cartridge="FxCartridge_127";
 		visibleFire=8;
 		audibleFire=120;
@@ -366,8 +367,8 @@ class CfgAmmo
 	class macro_new_ammo(loyalist_20mm):B_30mm_MP
 	{
 		hit=90;
-		indirectHit=3;
-		indirectHitRange=30;
+		indirectHit=30;
+		indirectHitRange=3;
 		explosive=0.60000002;
 		typicalSpeed=1070;
 		model = "\RD501_Vehicle_Weapons\_ammo\data\laser_medium_purple.p3d";
@@ -378,8 +379,8 @@ class CfgAmmo
 	class macro_new_ammo(loyalist_30mm_HE):B_30mm_MP
 	{
 		hit=140;
-		indirectHit=5;
-		indirectHitRange=90;
+		indirectHit=90;
+		indirectHitRange=5;
 		explosive=0.60000002;
 		typicalSpeed=1070;
 		model = "\RD501_Vehicle_Weapons\_ammo\data\laser_medium_purple.p3d";
@@ -387,7 +388,7 @@ class CfgAmmo
 		tracerStartTime=0;
 		tracerEndTime=10;
 	};
-	class macro_new_ammo(loyalist_30mm_HE):B_30mm_MP
+	class macro_new_ammo(loyalist_30mm_AP):B_30mm_MP
 	{
 		hit=240;
 		indirectHit=0;
