@@ -172,4 +172,7 @@ macro_prep_xeh(volatile\fnc_volatile_create.sqf,volatile_create)
 macro_prep_xeh(volatile\fnc_volatile_destroy.sqf,volatile_destroy)
 macro_prep_xeh(volatile\fnc_volatile_handleDamage.sqf,volatile_handleDamage)
 
+// Map Markers
+macro_prep_xeh(map_markers\fnc_placeDotMarkerAtSelf.sqf,placeDotMarkerAtSelf)
+
 diag_log "RD501 PREP Complete";

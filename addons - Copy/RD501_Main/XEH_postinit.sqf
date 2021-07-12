@@ -1,4 +1,5 @@
 #include "config_macros.hpp"
+#include "\a3\editor_f\Data\Scripts\dikCodes.h"
 
 //Run the jumppack script
 [] spawn {
@@ -71,6 +72,26 @@ rd501_medical_ccp_bandageDurationSeconds = 5;
 ["rd501_medical_ccp_packupCCPServer", {
 	_this call rd501_fnc_packupCCPServer;
 }] call CBA_fnc_addEventHandler;
+
+if(!isDedicated) then {
+	[
+		"RD501 Miscellaneous",
+		"rd501_misc",
+		[
+			"Mark Dot",
+			"Place a black dot in global at your current position"
+		],
+		{ 
+			[] call rd501_fnc_placeDotMarkerAtSelf; 
+		},
+		"",
+		[
+			DIK_CALCULATOR, 
+			[false,false,false]
+		],
+		false
+	] call cba_fnc_addKeybind;
+}
 
 // Surrender stun
 call macro_fnc_name(stun);
