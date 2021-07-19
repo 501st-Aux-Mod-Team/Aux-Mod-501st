@@ -131,6 +131,7 @@ class CfgVehicles
 		maxSpeed=130;
 		enginePower=422.5;
 		peakTorque=2433.75;
+		armor=380;
 		faction = macro_cis_faction
 		editorSubcategory = macro_editor_cat(APC)
 		vehicleClass = macro_editor_vehicle_type(APC)

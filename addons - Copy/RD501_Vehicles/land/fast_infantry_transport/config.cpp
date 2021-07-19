@@ -55,8 +55,8 @@ class CfgVehicles
 		editorSubcategory = macro_editor_cat(Transport)
 		vehicleClass = macro_editor_vehicle_type(Transport)
 
-		crew = "SWOP_L501P1_Fives";
-		typicalCargo[] = {"SWOP_L501P1_Fives"};
+		crew = "JLTS_Clone_P2_Rex_501";
+		typicalCargo[] = {"JLTS_Clone_P2_Rex_501"};
 
 		armor = 390;
 		armorStructural = 7;
@@ -87,8 +87,8 @@ class CfgVehicles
 		side = 1;
 		
 
-		crew = "SWOP_L501P1_Fives";
-		typicalCargo[] = {"SWOP_L501P1_Fives"};
+		crew = "JLTS_Clone_P2_Rex_501";
+		typicalCargo[] = {"JLTS_Clone_P2_Rex_501"};
 
 		armor = 390;
 		armorStructural = 7;

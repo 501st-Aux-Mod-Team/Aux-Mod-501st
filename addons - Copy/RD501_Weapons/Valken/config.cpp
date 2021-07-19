@@ -37,6 +37,7 @@ class CfgWeapons
 		ACE_Overheating_JamChance = 0;
 		ace_overheating_allowSwapBarrel = 1;
 		canShootInWater=1;
+		weaponInfoType="RscOpticsRangeFinderNLAW";
 		magazines[]=
 		{
 			macro_new_mag(20mwdp,20),
