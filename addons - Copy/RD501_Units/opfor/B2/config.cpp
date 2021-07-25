@@ -464,12 +464,12 @@ class CfgWeapons
 	{
 		scope=2;
 		displayName="RD501 B2";
-		picture = "\SWOP_droids\data\ico\B2ico.paa"
+		//picture = "\SWOP_droids\data\ico\B2ico.paa" - Replace with proper one
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		class ItemInfo: UniformItem
 		{
 			uniformModel="-";
-			uniformClass=macro_new_unit_class(opfor,B2_droid_Standard_mk2)
+			uniformClass=macro_new_unit_class(opfor,B2_droid_Standard)
 			containerClass="Supply40";
 			mass=80;
 		};
@@ -482,7 +482,7 @@ class CfgWeapons
 	{
 		scope=2;
 		displayName="RD501 Super B2";
-		picture = "\SWOP_droids\data\ico\B2ico.paa"
+		//picture = "\SWOP_droids\data\ico\B2ico.paa" - Replace with proper one
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		class ItemInfo: UniformItem
 		{

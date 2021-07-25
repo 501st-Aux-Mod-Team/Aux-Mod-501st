@@ -27,6 +27,7 @@ class CfgAmmo
 	class 3AS_EC80_BluePlasma;
 	class JLTS_bullet_carbine_red;
 	class G_40mm_HE;
+	class G_40mm_Smoke;
 	class 3AS_CoreDetonator_1RND;
 	class 3AS_Detonator_1RND;
 	class B_12Gauge_Pellets_Submunition;
@@ -35,6 +36,8 @@ class CfgAmmo
 	class SmokeShell;
 	class JLTS_bullet_stun;
 	class 442_thermal_det;
+	class JLTS_bullet_carbine_orange;
+	class JLTS_bullet_carbine_yellow;
 	class macro_new_ammo(surrender_stun): JLTS_bullet_stun
 	{
 		model="\MRC\JLTS\weapons\Core\effects\stun.p3d";
@@ -196,6 +199,53 @@ class CfgAmmo
 		caliber=50;
 		airFriction=0;
 	};
+	class macro_new_ammo(devastator_small):JLTS_bullet_carbine_orange
+	{
+		hit=25;
+		airLock=1;
+		typicalSpeed=1000;
+		caliber=2.4;
+		airFriction=0;
+		waterFriction=-0.009;
+		explosive = 0;
+	};
+	class macro_new_ammo(devastator_large):JLTS_bullet_carbine_orange
+	{
+		cost=50;
+		caliber=3;
+		dangerRadiusBulletClose=16;
+		dangerRadiusHit=40;
+		explosionAngle=60;
+		explosive=0.80000001;
+		hit=100;
+		effectFlare="FlareShell";
+		effectsFire="CannonFire";
+		explosionDir="explosionDir";
+		explosionEffects="ATMissileExplosion";
+		explosionEffectsDir="explosionDir";
+		explosionPos="explosionPos";
+		explosionType="explosive";
+		indirectHit=5;
+		indirectHitRange=3;
+		muzzleEffect="BIS_fnc_effectFiredRocket";
+		tracerScale=3;
+	};
+	class macro_new_ammo(viper) : 3AS_EC80_BluePlasma
+	{
+		hit=100;
+		thrust=210;
+		explosive=0.4;
+		thrustTime=1.5;
+		airLock=1;
+		typicalSpeed=1100;
+		caliber=5;
+		airFriction=0;
+		tracersevery=1;
+		tracerScale=1;
+		tracerStartTime=0;
+		tracerEndTime=10;
+		model = "\MRC\JLTS\weapons\Core\effects\laser_orange.p3d";
+	};
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////UGL////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
@@ -278,6 +328,29 @@ class CfgAmmo
 			power=0;
 		};
     };
+	class macro_new_ammo(Devastator_dioxis) :G_40mm_Smoke
+	{
+		hit = 2;
+		indirectHit = 1;
+		indirectHitRange = 1;
+		timeToLive =30;
+		model="\3AS\3AS_Equipment\model\3AS_thermaldet.p3d";
+		effectsSmoke="RD501_DioxisSmokeShellEffect";
+		smokeColor[]={0.21250001,0.75580001,0.35909998,1};
+	};
+	class macro_new_ammo(Devastator_stun) :G_40mm_HE
+	{
+		hit = 1;
+		indirectHit = 1;
+		indirectHitRange = 6;
+		timeToLive =30;
+		explosionEffects="JLTS_fx_exp_EMP";
+		model="\3AS\3AS_Equipment\model\3AS_thermaldet.p3d";
+		RD501_stunDuration=30;
+	};
+///////////////////////////////////////////////////////////////////////
+///////////////////////////Grenades///////////////////////////////////
+//////////////////////////////////////////////////////////////////////
 	class macro_new_ammo(imploder) : 3AS_CoreDetonator_1RND
 	{
 		hit=50;

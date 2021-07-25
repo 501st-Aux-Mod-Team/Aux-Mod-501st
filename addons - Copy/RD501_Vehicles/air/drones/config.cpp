@@ -39,7 +39,8 @@ class CfgPatches
 			macro_new_vehicle(drone,Clone_Recon_bag),
 			macro_new_vehicle(drone,razor_medical),
 			macro_new_vehicle(drone,razor_ammo),
-			macro_new_vehicle(blufor,eweb_bag)
+			macro_new_vehicle(blufor,eweb_bag),
+			macro_new_vehicle(drone,razor_turret)
 		};
 		weapons[]=
 		{
@@ -130,20 +131,6 @@ class CfgVehicles
 			};
 		};
 	};
-	
-	class macro_new_vehicle(drone,Clone_Recon_Droid_ATTE):swclonerecondroid
-	{
-		displayname = "AT-TE Commander Camera";
-		scope=2
-		forceInGarage = 1;
-		author = "RD501";
-		faction = macro_republic_faction
-		class EventHandlers {
-            
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
-        };
-	};
-
 	class macro_new_vehicle(drone,rep_stealth_fixedwing):B_UAV_05_F
 	{
 		displayname = "GAR Phantom";
@@ -412,6 +399,48 @@ class CfgVehicles
 		class TransportMagazines
 		{
 			#include"ammo_drone_mag.hpp"
+		};
+	};
+	class macro_new_vehicle(drone,razor_turret): B_UAV_06_F
+	{
+		displayName = "Prime Turret Drone"
+		faction = macro_republic_faction
+		scope=2;
+		forceInGarage = 1;
+		altFullForce = 1000;
+		altNoForce = 1100;
+		hiddenSelectionsTextures[]=
+		{
+			"\RD501_Vehicles\air\drones\data\b_uav_06_ammo_co.paa"
+		};
+		typicalCargo[]=
+		{
+			""
+		};
+		class TransportItems{};
+		class TransportMagazines{};
+		class TransportBackpacks
+		{
+			class _transport_ewebbag
+				{
+					backpack=macro_new_vehicle(stat,reweb_bag);
+					count=1;
+				};
+			class _transport_raglbag
+				{
+					backpack=macro_new_vehicle(stat,ragl40_bag);
+					count=1;
+				};
+			class _transport_strikbag
+				{
+					backpack=macro_new_vehicle(stat,Striker_bag);
+					count=1;
+				};
+			class _transport_railbag
+				{
+					backpack=macro_new_vehicle(stat,Railgun_bag);
+					count=1;
+				};
 		};
 	};
 };

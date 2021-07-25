@@ -41,6 +41,7 @@ class CfgWeapons
 	NEW_501_AB_HELM_JLTS(501st_Sparrow_helmet,Sparrow,Sparrow.paa)
 	NEW_501_AB_HELM_JLTS(501st_Omen_helmet,Omen,Omen.paa)
 	NEW_501_AB_HELM_JLTS(501st_Nuclear_helmet,Nuclear,Nuclear.paa)
+	NEW_501_AB_HELM_JLTS(501st_Aedan_helmet,Aedan,Aedan.paa)
 
 	
 

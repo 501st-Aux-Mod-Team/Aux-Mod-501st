@@ -139,86 +139,6 @@ class Extended_PostInit_EventHandlers {
     };
 };
 
-// class CfgMagazines
-// {
-// 	class CA_Magazine;
-// 	class 2Rnd_12Gauge_Pellets:CA_Magazine
-// 	{
-// 		displayName = "120 Gauge 2Rnd Pellets";
-// 		count = 200;
-// 	};
-// };
-
-// class CfgAmmo
-// {
-// 	class BulletBase;
-// 	class B_12Gauge_Pellets_Submunition:BulletBase
-// 	{
-// 		//model = "\SWOP_Main\Effects\Tracer\LaserRed";
-// 		model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
-// 		effectFly = "SWOP_BlueLaserEffect";
-// 		CraterEffects = "ExploAmmoLaserCrater";
-// 		explosionEffects = "SWOP_LaserExploSmall";
-// 		triggerTime = .2;
-// 		submunitionAmmo = "G_40mm_HEDP";//G_40mm_HEDP
-// 		submunitionConeType[] = {"poissondisc", 80};
-// 		submunitionConeAngle = 90.8;
-// 		triggerSpeedCoef[] = {0.01, .1};
-		
-// 	};
-
-// 	class G_40mm_HE;
-// 	class G_40mm_HEDP:G_40mm_HE
-// 	{
-// 		model = "\SWOP_Main\Effects\Tracer\LaserBlue";
-// 		effectFly = "SWOP_BlueLaserEffect";
-// 		timeToLive = 30.15;
-// 	};
-
-// 	class B_12Gauge_Pellets_Submunition_Deploy: BulletBase
-// 	{
-// 		//model = "\SWOP_Main\Effects\Tracer\LaserRed";
-// 		model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
-// 		effectFly = "SWOP_RedLaserEffect";
-// 		CraterEffects = "ExploAmmoLaserCrater";
-// 		explosionEffects = "SWOP_LaserExploSmall";
-		
-// 	};
-// };
-// class cfgFactionClasses
-// {
-	
-// 	class RD_Op_Fac
-// 	{
-// 		displayName="RD501 OPFOR Faction";
-// 		priority=3;
-// 		side=0;
-// 	};
-// 	class RD_Blu_Fac
-// 	{
-// 		displayName="RD501 BLUFOR Faction";
-// 		priority= 3;
-// 		side=1;
-// 	};
-// 	class RD_Ind_Fac
-// 	{
-// 		displayName="RD501 Independent Faction";
-// 		priority=3;
-// 		side= 2;
-// 	};
-// 	class RD_Civ_Fac
-// 	{
-// 		displayName="RD501 Star Wars Civ";
-// 		priority=3;
-// 		side= 3;
-// 	};
-// 	class RD501_Faction_LPB1
-// 	{
-// 		displayName="Low Poly Assets";
-// 		priority=3;
-// 		side=0;
-// 	};
-// };
 
 class cfgFactionClasses
 {
@@ -228,34 +148,10 @@ class cfgFactionClasses
 		priority=3;
 		side=0;
 	};
-	class macro_empire_faction
-	{
-		displayName="RD501 Empire Faction";
-		priority=3;
-		side=0;
-	};
-	class macro_first_order_faction
-	{
-		displayName="RD501 First Order Faction";
-		priority=3;
-		side=0;
-	};
 
 	class macro_republic_faction
 	{
 		displayName="RD501 Republic Faction";
-		priority= 3;
-		side=1;
-	};
-	class macro_rebel_faction
-	{
-		displayName="RD501 Rebel Faction";
-		priority= 3;
-		side=1;
-	};
-	class macro_resistance_faction
-	{
-		displayName="RD501 Resistance Faction";
 		priority= 3;
 		side=1;
 	};
@@ -367,9 +263,13 @@ class CfgEditorSubcategories
 	{
 		displayName = "Heavy Armored Infantry";
 	};
-	class macro_editor_cat(doggo)
+	class macro_editor_cat(bounty_hunters)
 	{
-		displayName = "Doge Squadron";
+		displayName = "Bounty Hunters";
+	};
+	class macro_editor_cat(syndicate)
+	{
+		displayName = "Syndicate";
 	};
 	class macro_editor_cat(arty)
 	{

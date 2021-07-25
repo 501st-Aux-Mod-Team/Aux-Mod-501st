@@ -200,6 +200,33 @@ class CfgMagazines
 		initSpeed=1100;
 		descriptionShort="High power magazine";
 	};
+	class macro_new_mag(Devastator,50) : 3AS_45Rnd_EC50_Mag
+	{
+		displayName="Devastator Primary Magazine";
+		count = 50;
+		mass=4;
+		ammo=macro_new_ammo(devastator_small)
+		initSpeed=1100;
+		descriptionShort="High power magazine";
+	};
+	class macro_new_mag(Devastator,2) : 3AS_45Rnd_EC50_Mag
+	{
+		displayName="Devastator High Energy Magazine";
+		count = 2;
+		mass=4;
+		ammo=macro_new_ammo(devastator_large)
+		initSpeed=1100;
+		descriptionShort="High power magazine";
+	};
+	class macro_new_mag(viper,5) : 3AS_45Rnd_EC50_Mag
+	{
+		displayName="Viper Magazine";
+		count = 5;
+		mass=4;
+		ammo=macro_new_ammo(viper)
+		initSpeed=1100;
+		descriptionShort="High power magazine";
+	};
 	class macro_new_mag(stun,5):JLTS_stun_mag_long
 	{
 		displayName="5 Round Stun Cell";
@@ -328,6 +355,7 @@ class CfgMagazines
 		ammo = "G_40mm_Smoke";
 		descriptionShort = "6Rd White Smoke RGL6 Grenade";
 	};
+
 	class macro_new_mag(UGL_Flare,6):UGL_FlareWhite_F
 	{
 		displayName = "6 Rd White Flare RGL6 Grenades";
@@ -335,6 +363,22 @@ class CfgMagazines
 		count=6;
 		ammo = "F_40mm_White";
 		descriptionShort = "6Rd White Flare RGL6 Grenade";
+	};
+	class macro_new_mag(Devastator_stun,1):1Rnd_HE_Grenade_shell
+	{
+		displayName = "1 Rd Devastator Stun Magazine";
+		displayNameShort = "1 Rnd Devastator Stun Magazine";
+		count=1;
+		ammo = macro_new_ammo(Devastator_stun)
+		descriptionShort = "1Rd Devastator Stun Magazine";
+	};
+	class macro_new_mag(Devastator_dioxis,1):1Rnd_Smoke_Grenade_shell
+	{
+		displayName = "1 Rd Devastator Dioxis Magazine";
+		displayNameShort = "1 Rnd Devastator Dioxis Magazine";
+		count=1;
+		ammo = macro_new_ammo(Devastator_dioxis)
+		descriptionShort = "1Rd Devastator Dioxis Magazine";
 	};
 
 	////////////////////////////////////////////////////
