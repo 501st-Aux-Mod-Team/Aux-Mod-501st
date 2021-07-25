@@ -49,6 +49,7 @@
 
     //Now we create a crew for that vehicle and hide it
     createVehicleCrew _created_attached_turret;
+    _created_attached_turret setBehaviour "COMBAT";
     _created_attached_turret hideObjectGlobal true;
 
     //Then we save that unit to the vehicle for future use when killed or deleted.
