@@ -54,6 +54,8 @@ if(_timeToLive > 0) then {
 	};
 };
 
-if(_hasLoopSound && !isNil _loopSound && _loopSound != "") then {
-	["rd501_fired_deployable_soundLoop", [_deployed, _loopSound, _loopDuration, _timeToLive, _soundDistance]] call CBA_fnc_globalEvent;
+if(!_hasLoopSound || _loopSound == "") exitWith {
+	diag_log format["Decided not to play sound for: Loop Sound: '%1', Loop Sound: '%2'", _loopSound, _hasLoopSound];
 };
+
+["rd501_fired_deployable_soundLoop", [_deployed, _loopSound, _loopDuration, _timeToLive, _soundDistance]] call CBA_fnc_globalEvent;
