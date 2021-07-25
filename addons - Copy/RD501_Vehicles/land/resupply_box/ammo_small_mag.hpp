@@ -103,6 +103,16 @@ class _transport_ap2
 	magazine = macro_new_mag(UGL_AP,2);
 	count = 15;
 };		
+class _transport_he3_lr
+{
+	magazine = macro_new_mag(HE_GL,3);
+	count = 15;
+};
+class _transport_ap2_lr
+{
+	magazine = macro_new_mag(AT_GL,2);
+	count = 15;
+};
 class _transport_emp1
 {
 	magazine = macro_new_mag(UGL_EMP,1);

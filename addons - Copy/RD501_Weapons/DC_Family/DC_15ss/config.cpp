@@ -25,7 +25,7 @@ class CfgWeapons
 	{
 		scope=2;
 		author = "RD501";
-		displayname = "Republic DC-15SA Sidearm";
+		displayname = "Republic DC-15SA 'Razorblade'";
 		descriptionShort = "Heavy Caliber Sidearm";
 		reloadTime=0.75;
 		dispersion=0.00145;
