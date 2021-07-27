@@ -135,7 +135,6 @@
 		{
 			class StandardSound
 			{
-				begin1[] = {"XT\sounds\laser.ogg",1,1,3000};
 				soundBegin[] = {"begin1",1};
 			};
 		};
@@ -149,9 +148,6 @@
 		{
 			class StandardSound
 			{
-				begin1[] = {"TIEdef\ioncanon1.ogg",1.1,1.1,3000};
-				begin2[] = {"TIEdef\ioncanon2.ogg",1.1,1.1,3000};
-				begin3[] = {"TIEdef\ioncanon3.ogg",1.1,1.1,3000};
 				soundBegin[] = {"begin1",0.33,"begin2",0.33,"begin3",0.34};
 			};
 		};
@@ -164,7 +160,6 @@
 		{
 			class StandardSound
 			{
-				begin1[] = {"SWOP_vehiclecommon\Speeder\Speederbike\Sounds\canon",1.5,1,2500};
 				soundBegin[] = {"begin1",1};
 			};
 		};

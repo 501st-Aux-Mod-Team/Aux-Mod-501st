@@ -1,7 +1,6 @@
 #include "../../config_macros.hpp"
 
 #include "../../../RD501_main/config_macros.hpp"
-#include "armor_patches.hpp"
 
 class CfgPatches
 {
@@ -19,7 +18,6 @@ class CfgPatches
 		};
 		weapons[]=
 		{
-			marco_swop_armor_classes
 			
 		};
 	};
@@ -29,18 +27,12 @@ class cfgWeapons
 {
 	class Uniform_Base;
 	class UniformItem;
+	class V_RebreatherB;
+	class VestItem;
 
-    class SWOP_Clonetrooper_501jesse_F_CombatUniform:Uniform_Base
-    {
-        class ItemInfo;
-    };
 
 	//uniforms
 	#include "_uniforms.hpp"
-
-	#include "_clone_armor_readjust_base.hpp"
-	#include "_clone_armor_readjust_1.hpp"
-	#include "_cadet_armor.hpp"
 	#include "_headwear.hpp"
 
 	class JLTS_clone_comlink;
@@ -1388,7 +1380,6 @@ class macro_new_vest_class(501_inf,acc_1_c_rto): macro_new_vest_class(501_inf,ac
 	class macro_new_vest_class(501_invis,vest): macro_new_vest_class(501_inf,acc_9)
 	{
 		displayname = "[501st] Nanoweave Under Armour"
-		picture = "\SWOP_sith\data\impguardpalliumicon_x_ca.paa";
 		model="RD501_Units\nothing.p3d";
 		hiddenSelections[] = {""};
 		hiddenSelectionsTextures[] = {""};
@@ -1467,7 +1458,6 @@ class DefaultEventhandlers;
 
 class CfgVehicles
 {
-    class SWOP_Clonetrooper_501jesse_F;
 	class B_Soldier_base_f;
 	class B_Soldier_f: B_Soldier_base_F
 	{

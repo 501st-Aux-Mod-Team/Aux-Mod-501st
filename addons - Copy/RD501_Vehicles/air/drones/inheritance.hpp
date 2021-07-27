@@ -32,34 +32,6 @@ class O_UAV_01_F:UAV_01_base_F
 {
 	class Turrets;
 };
-class B_UAV_01_F;
-class swcishoverdroid:O_UAV_01_F
-{
-	
-	class Turrets: Turrets
-	{
-		class MainTurret;
-	}
-};
-class SWOP_interrogationdroid:B_UAV_01_F
-{
-	
-};
-class SWOP_Dio_Droid:O_UAV_01_F
-{
-	
-}
-class SWOP_Rebel_Dio_Droid:B_UAV_01_F
-{
-	
-};
-class swclonerecondroid: UAV_01_base_F
-{
-	class ACE_Actions : ACE_Actions
-	{
-		class ACE_MainActions : ACE_MainActions { }
-	}
-};
 
 class UAV;
 class UAV_05_Base_F:UAV

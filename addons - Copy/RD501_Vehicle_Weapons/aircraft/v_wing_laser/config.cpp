@@ -24,12 +24,12 @@ class CfgPatches
 
 class CfgWeapons
 {
-	class Cannon_30mm_Plane_CAS_02_F;
-	class SWOP_Cannon_trid: Cannon_30mm_Plane_CAS_02_F
+	class CannonCore;
+	class Cannon_30mm_Plane_CAS_02_F: CannonCore
 	{
 		class LowROF;
 	};
-	class macro_new_weapon(laser,v_wing):SWOP_Cannon_trid
+	class macro_new_weapon(laser,v_wing):Cannon_30mm_Plane_CAS_02_F
 	{
 		scope=2;
 		displayName="Aircraft Laser Gun";

@@ -35,15 +35,7 @@ class cfgFunctions
 			class laatc_lift
 			{
 				file=macro_mod_script_path\vehicle_lift\laatc_lift.sqf
-			};
-			
-			class mtt_deploy_droids
-			{
-				file=macro_mod_script_path\MTT\mtt_deploy_droids.sqf
-			};
-			
-			
-			
+			};	
 		};
 	};	
 

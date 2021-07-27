@@ -1,8 +1,5 @@
 #include "config_macros.hpp"
 
-//add eweb shield
-macro_prep_xeh(init\e_web_shield.sqf,eweb_shield)
-
 //stretcher
 macro_prep_xeh(stretcher\deploy_stretcher.sqf,deploy_stretcher)
 macro_prep_xeh(stretcher\put_stretcher_in_backpack.sqf,put_stretcher_in_backpack)
@@ -19,20 +16,11 @@ macro_prep_xeh(attach_drones\apply_drones.sqf,apply_aircraft_drone)
 //set mass 
 macro_prep_xeh(mass_changer\set_mass.sqf,set_mass)
 
-//HSD move
-macro_prep_xeh(movable_scripts\og10drive.sqf,og10_move)
-
 //droidekka move
 macro_prep_xeh(movable_scripts\droideka_driver.sqf,droidekka_move)
 
 //dwarf move
 macro_prep_xeh(movable_scripts\dwarf_spider_droid_driver.sqf,dwarf_move)
-
-//hailfire init
-macro_prep_xeh(init\hailfire_aa.sqf,hailfire_init)
-
-//hemtt rocket arty
-macro_prep_xeh(init\hemtt_rocket_arty.sqf,hemtt_rocket_arty)
 
 //add healing option
 macro_prep_xeh(add_healing_action.sqf,add_heal_action)
@@ -53,12 +41,9 @@ macro_prep_xeh(remove_attached_on_death\remove_attached.sqf,remove_attached)
 macro_prep_xeh(init\tow.sqf,warden_tow)
 
 //init
-macro_prep_xeh(init\random_sw_civ.sqf,random_starwars_civ)
 macro_prep_xeh(init\force_b2_walk.sqf,force_b2_walk)
 macro_prep_xeh(init\specops.sqf,b1_specop_apply_skill)
-macro_prep_xeh(init\ig88.sqf,ig88_apply_skill)
 macro_prep_xeh(init\b2_armor.sqf,b2_apply_armor)
-macro_prep_xeh(init\magna.sqf,magna_apply_skill)
 macro_prep_xeh(init\jam_sandwich.sqf,apply_jammer)
 macro_prep_xeh(init\aat.sqf,aatInit)
 

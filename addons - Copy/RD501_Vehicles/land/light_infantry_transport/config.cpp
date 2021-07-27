@@ -59,7 +59,5 @@ class CfgVehicles
 		{
 			init = "[_this select 0] execVM 'RD501_Vehicles\_init_functions\wheel_dmg.sqf';";
 		};
-
-		#include "sounds.hpp"
 	};	
 };

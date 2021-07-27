@@ -176,7 +176,7 @@ class macro_new_weapon(nvg,shock_trooper) : JLTS_NVG_droid_chip_1
 	macro_thermal_nvg_default
 };
 
-	class macro_new_weapon(nvg,shock_trooper) : JLTS_NVG_droid_chip_1
+	class macro_new_weapon(nvg,shock_trooper2) : JLTS_NVG_droid_chip_1
 	{
 		visionMode[] = {"Normal"};
 		dlc = "rd501";

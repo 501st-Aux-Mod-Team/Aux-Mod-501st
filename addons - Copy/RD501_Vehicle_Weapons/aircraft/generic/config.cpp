@@ -39,13 +39,12 @@ class CfgPatches
 
 class CfgWeapons
 {
-	class Cannon_30mm_Plane_CAS_02_F;
-	class SWOP_Cannon_trid:Cannon_30mm_Plane_CAS_02_F
+	class CannonCore;
+	class Cannon_30mm_Plane_CAS_02_F:CannonCore
 	{
 		class LowROF;
 
 	};
-	class CannonCore;
 
 	class Gatling_30mm_Plane_CAS_01_F:CannonCore
 	{
@@ -131,7 +130,6 @@ class CfgWeapons
 		{
 			class StandardSound
 			{
-				begin1[] = {"SWOP_vehiclecommon\Speeder\Speederbike\Sounds\canon",1.5,1,2500};
 				soundBegin[] = {"begin1",1};
 			};
 		};
@@ -144,7 +142,6 @@ class CfgWeapons
 			dispersion = 0;
 			class StandardSound
 			{
-				begin1[] = {"SWOP_vehiclecommon\Speeder\Speederbike\Sounds\canon",1.5,1,2500};
 			soundBegin[] = {"begin1",1};
 			};
 		};

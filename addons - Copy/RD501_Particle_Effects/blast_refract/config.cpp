@@ -160,7 +160,7 @@ class IEDMineBigExplosion
 
 //ADDED
 
-class SWOP_Thermobaric_Explosion
+class RD501_Thermobaric_Explosion
 {
 	class blast_wave_refract
 	{

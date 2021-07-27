@@ -19,7 +19,6 @@ class CfgPatches
 		weapons[]={
 			macro_new_weapon_nofam(Z6),
 			macro_new_weapon_nofam(rZ6),
-			"SWOP_Valken38XAuto_XD",
 			macro_new_weapon_nofam(Z1000)
 		};
 	};

@@ -87,7 +87,6 @@ class CfgVehicles
 		_generalMacro = macro_new_vehicle(speedboat,republic)
 		faction = macro_republic_faction
 		side=1;
-		crew = "SWOP_L501P1_Fives";
 		class Turrets: Turrets
 		{
 			class FrontTurret: FrontTurret
