@@ -39,45 +39,6 @@ class CfgPatches
 
 class Extended_Init_EventHandlers 
 {
-    class SW_SpeederBike_base
-    {
-        class anti_wobble
-        {
-            init = "(_this select 0) setVelocity [0,0,1]";
-        };
-    };
-
-    class SW_BARC
-    {
-        class anti_wobble
-        {
-            init = "(_this select 0) setVelocity [0,0,1]";
-        };
-    }
-	
-    class macro_new_vehicle(homing_spider_droid,Moveable_MKII)
-    {
-        class movable_script 
-        {
-            init = [_this select 0] spawn macro_fnc_name(og10_move);
-        };
-    };
-
-    class O_SWOP_Hailfire_base
-    {
-        class hailfire_aa_script 
-        {
-             init = [_this select 0] spawn macro_fnc_name(hailfire_init);
-        };
-    };
-
-    class macro_new_vehicle(e_web,shield)
-    {
-        class shield 
-        {
-            init = [_this select 0] spawn macro_fnc_name(eweb_shield);
-        };
-    };
 
     class macro_new_vehicle(droideka,normal)
     {
@@ -86,14 +47,6 @@ class Extended_Init_EventHandlers
             init = [_this select 0] spawn macro_fnc_name(droidekka_move);
         };
     };
-	class macro_new_vehicle(droideka,camo_depr)
-	{
-		class droideka_movable
-		{
-			init = [_this select 0] spawn macro_fnc_name(droidekka_move);
-		};
-	};
-
     class macro_new_vehicle(dwarf_spider_droid,Movable_MkII)
     {
         class dwarf_movable 
@@ -108,23 +61,6 @@ class macro_new_vehicle(crab_droid,Movable_MkII)
             init = [_this select 0] spawn macro_fnc_name(dwarf_move);
         };	                               
     };
-
-    class macro_new_vehicle(marid,MkII_CIS)// not ran
-    {
-        class Lock_this_shit 
-        {
-            init = "(_this select 0) setVehicleLock ""LOCKED""";
-        };                                 
-    };
-
-    class macro_new_vehicle(artillery,CIS_Arty)
-    {
-        class Add_arty 
-        {
-            init = [_this select 0] spawn macro_fnc_name(hemtt_rocket_arty);
-        };                                 
-    };
-
     class macro_new_vehicle(bacta,healing)//add doggo to spell,no heal
     {
         class add_heal
@@ -137,30 +73,6 @@ class macro_new_vehicle(crab_droid,Movable_MkII)
         // }
     };
 
-    class macro_new_vehicle(ATTE,MkII)
-    {
-        class set_mass
-        {
-             init = [_this select 0,72800] spawn macro_fnc_name(set_mass);
-        };
-    }
-
-    class macro_new_vehicle(ATTE,uav_MkII)//good
-    {
-        class set_mass
-        {
-             init = [_this select 0,72800] spawn macro_fnc_name(set_mass);
-        };
-    };
-
-    class macro_new_vehicle(turret_ATTE,Stomper)
-    {
-        class atte_uav_init
-        {
-             init = [_this select 0] spawn macro_fnc_name(atte_uav_init);
-        };
-    };
-
     class macro_new_vehicle(warden_tank,mobile)
     {
         class adsd_tow
@@ -168,23 +80,9 @@ class macro_new_vehicle(crab_droid,Movable_MkII)
              init = [_this select 0] spawn macro_fnc_name(warden_tow);
         };
     };  
-    class O_SWOP_AAT_1
-    {
-        class lock_me_in_hamachi
-        {
-            init = [_this select 0] spawn macro_fnc_name(aatInit);
-        }
-    };
+
 
     #include "_init_functions/cis_aircraft_turrets.hpp"
-
-    #include "_init_functions/empire_aircraft_turrets.hpp"
-
-    #include "_init_functions/rebel_aircraft_turrets.hpp"
-
-    #include "_init_functions/republic_aircraft_turrets.hpp"
-
-    #include "_init_functions/resistance_aircraft_turrets.hpp"
 
 };
 
@@ -196,40 +94,12 @@ class Extended_Deleted_EventHandlers
     	macro_remove_attached_stuff_XEH
     };
 
-    class O_SWOP_Hailfire_base //error
-    {
-       macro_remove_attached_stuff_XEH
-    };
-
-    class macro_new_vehicle(homing_spider_droid,Moveable_MKII)
-    {
-    	macro_remove_attached_stuff_XEH
-    };
 
     class macro_new_vehicle(dwarf_spider_droid,Movable_MkII)
     {
         macro_remove_attached_stuff_XEH
     };
 
-    class macro_new_vehicle(artillery,CIS_Arty)
-    {
-        macro_remove_attached_stuff_XEH                           
-    };
-
-    class macro_new_vehicle(ATTE,MkII)
-    {
-       macro_remove_attached_stuff_XEH
-    }
-
-    class macro_new_vehicle(turret_ATTE,Stomper)
-    {
-        macro_remove_attached_stuff_XEH
-    }
-
-    class macro_new_vehicle(e_web,shield)
-    {
-    	macro_remove_attached_stuff_XEH
-    };
 
     #include "_delete_functions/remove_aircraft_turret.hpp"
     };

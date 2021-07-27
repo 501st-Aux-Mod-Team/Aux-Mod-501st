@@ -99,15 +99,6 @@ class CfgVehicles
         fuelCapacity = 90;
         fuelConsumptionRate = 1;
 		faction = macro_republic_faction;
-/*		model = "\SW_CloneWarsWeapons\Recon\swclonerecon.p3d";
-		hiddenSelections[]=
-        {
-            "camo"
-        };
-        hiddenSelectionsTextures[]=
-        {
-            "\SW_CloneWarsWeapons\Recon\com_weap_probedroid.paa"
-        };*/
 		class ACE_Actions {
             distance = 4;
             condition = macro_quote(true);

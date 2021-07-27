@@ -130,23 +130,7 @@ class CfgMagazineWells
 class CfgMagazines
 {
 	class CA_Magazine;
-	class SWOP_e11_Mag;
 	class UGL_FlareWhite_F;
-	class macro_new_mag(westar_35,20): CA_Magazine
-	{
-		scope = 2;
-		model = "SW_CloneWarsWeapons\ammo.p3d";
-		displayName = "20Rnd WESTAR-35 Magazine";
-		picture = "\SWOP_Main\swop_Pistols\ui\M_SB_EnergyCell_CA.paa";
-		ammo = macro_new_ammo(westar_35);
-		//ammo = "SWOP_DC17_Ammo_low_RD501";
-		tracersEvery = 1;
-		type = 16;
-		count = 20;
-		descriptionShort = "20 Round WESTAR-35 Magazine";
-		mass = 6;
-		initSpeed = 310;
-	};
 
 	class 1Rnd_HE_Grenade_shell;
 	class macro_new_mag(AT_GL,2): CA_Magazine
@@ -174,39 +158,6 @@ class CfgMagazines
 		ammo = macro_new_ammo(GL_HE)
 		descriptionShort = "3Rnd LR HE DC-15A Grenade";
 		initSpeed = 120;
-	};
-
-	class SWOP_dc15xBlasterRifle_Mag;
-	class macro_new_mag(DC15x,6): SWOP_dc15xBlasterRifle_Mag
-	{
-		author = "RD501";
-		scope = 2;
-		model = "\SW_ExtraWeapons\PICKUPS\power_cell.p3d";
-		picture = "\SW_ExtraWeapons\PICKUPS\UI\icons\powercell_X_ca.paa";
-		displayName = "6Rnd DC-15X Magazine";
-		ammo =macro_new_ammo(DC15x);
-		tracersEvery = 1;
-		count = 6;
-		descriptionShort = "6Rnd DC15X Magazine";
-		mass = 20;
-		initSpeed = 4000;
-	};
-
-	class macro_new_mag(DC15s,60): CA_Magazine
-	{
-		author = "RD501";
-		scope = 2;
-		model = "\SW_ExtraWeapons\PICKUPS\energy_cell.p3d";
-		picture = "\SW_ExtraWeapons\PICKUPS\UI\icons\energycell_X_ca.paa";
-		displayName = "60Rnd DC-15S Carbine Magazine";
-		ammo = macro_new_ammo(dc15s_carbine);
-		tracersEvery = 1;
-		type = 16;
-		count = 60;
-		descriptionShort = "60Rnd DC15 Blaster Magazine";
-		//mass = 15;
-		mass = 20;
-		initSpeed = 310;
 	};
 
 	class Titan_AA;
@@ -245,55 +196,6 @@ class CfgMagazines
 		mass = 100;
 	};
 
-	/*class SWOP_b2rocket_Mag: CA_Magazine
-	{
-		scope = 2;
-		displayName = "5Rnd B2 Wrist Rockets";
-		model = "\SW_ExtraWeapons\PICKUPS\bolts.p3d";
-		picture = "\SW_ExtraWeapons\PICKUPS\UI\icons\bolts_X_ca.paa";
-		ammo = "R_WristRocket_F";
-		tracersEvery = 1;
-		type = 16;
-		count = 5;
-		descriptionShort = "5Rnd Wrist Rockets";
-		mass = 3;
-		initSpeed = 100;
-		soundFly[] = {"A3\Sounds_F\weapons\Rockets\rocket_fly_2", 0.501187, 1.3, 400};
-		nameSound = "missiles";
-	};*/
-
-	class SW_iondisruptor_BlasterRifle_Mag;
-	class macro_new_mag(RAMER,6):SW_iondisruptor_BlasterRifle_Mag
-	{
-		scope = 2;
-		model = "\SW_ExtraWeapons\PICKUPS\power_cell.p3d";
-		displayName = "6Rnd ION Magazine";
-		picture = "\SWOP_Main\SWOP_Rifles\SWOP_Blaster\data\ui\E11_Mag.paa";
-		ammo = "SW_iondisruptor_BlasterRifle_Ammo";
-		tracersEvery = 1;
-		count = 6;
-		descriptionShort = "6Rnd ION Magazine";
-		mass = 50;
-		initSpeed = 310;
-		author = "RD501";
-	};
-
-
-	class SWOP_DC15SAPistol_Mag;
-	class macro_new_mag(DC15_razor_blade,9): SWOP_DC15SAPistol_Mag
-	{
-		scope = 2;
-		model = "\SW_ExtraWeapons\PICKUPS\energy_cell.p3d";
-		picture = "\SW_ExtraWeapons\PICKUPS\UI\icons\energycell_X_ca.paa";
-		displayName = "9Rnd DC15-SA Magazine";
-		ammo =macro_new_ammo(DC15_Razor_Blade);
-		tracersEvery = 1;
-		type = 16;
-		count = 9;
-		descriptionShort = "9Rnd DC15SA Magazine";
-		mass =4;
-		initSpeed = 310;
-	};
 
 
 	class SmokeShell;
@@ -340,16 +242,6 @@ class CfgAmmo
 	class DH17_Blaster_Ammo;
 	class 3AS_Chaingun_Ammo;
 	class M_Titan_AT;
-	
-	class macro_new_ammo(z6):LaserAmmo_Minigun
-	{
-		hit = mg_hit_high;
-		indirectHit = 0.0;
-		indirectHitRange = 0.0;
-		explosive = 0.0;
-		caliber = mg_cali_high;
-		ACE_caliber = 0;
-	};
 
 	class  macro_new_ammo(GL_AT): G_40mm_HE
 	{

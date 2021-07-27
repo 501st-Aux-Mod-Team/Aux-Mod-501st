@@ -1,5 +1,4 @@
 #define COMPONENT main
-#include "config_swop_macro.cpp" // Imports the config macro that has all of swop pbos.
 #include "config_macros.hpp" // my config macro lib
 #include "_cba_patches.hpp"
 

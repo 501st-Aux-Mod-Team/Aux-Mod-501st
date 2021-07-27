@@ -26,43 +26,6 @@ class CfgPatches
 
 class cfgWeapons 
 {	
-	/*class Rifle_Long_Base_F;
-	class SWOP_BlasterRifle_Base :Rifle_Long_Base_F
-	{
-		
-	};
-	class SWOP_WESTARM5_rifle: SWOP_BlasterRifle_Base
-	{
-		
-		class OpticsModes;
-		
-		class Single;
-		class FullAuto;
-	};
-
-	class SWOP_WESTARM5_GL: SWOP_BlasterRifle_Base
-	{
-	
-		class OpticsModes;
-
-		class Single;
-		class FullAuto;
-		class EGLM;
-		
-	};
-
-	#include "westar_rifle.hpp"
-
-
-	class Pistol_Base_F;
-	class SWOP_Westar35Pistol: Pistol_Base_F
-	{
-		
-		class Single;
-	};
-
-	#include "westar_pistol.hpp"
-	*/
 	class 3AS_WestarM5_Base_F;
 	class 3AS_WestarM5_F:3AS_WestarM5_Base_F
 	{

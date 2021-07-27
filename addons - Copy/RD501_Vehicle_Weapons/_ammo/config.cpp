@@ -17,37 +17,12 @@ class CfgAmmo
 {
 
 	class B_35mm_AA_Tracer_Red;
-	class LaserAmmo_Minigun;
-	class TurboLaser_Laserx2;
 	class M_Air_AA;
 	class Rocket_04_AP_F;
 	class ammo_Missile_rim162;
 	class M_PG_AT;
 	class M_Jian_AT;
-	class ammo_Missile_rim116;
 	class 3AS_ATT_redPlasma_AT;
-	//#include "_ammo/tank_cannons.hpp"
-
-	class macro_new_ammo(homing_spider): TurboLaser_Laserx2//og9_Laser
-	{
-		hit = 185;
-		indirectHit = 75;
-		indirectHitRange = 1;
-		visibleFire = 32;
-		audibleFire = 32;
-		visibleFireTime = 6;
-
-		explosionSoundEffect = "DefaultExplosion";
-		effectFly = "og9_Laser_Effect";
-		explosive = 0.5;
-		airLock = 1;
-		CraterEffects = "ExploAmmoLaserCrater";
-		explosionEffects = "ExploAmmoLaserCannon";
-		model = "\SpiderDroid\Laserog9";
-
-		caliber = 20;
-	};
-
 
 	//#include "_ammo/missiles.hpp"
 
@@ -156,7 +131,7 @@ class CfgAmmo
 		indirectHit =650;
 		indirectHitRange = 25;
 	};
-	class macro_new_ammo(laat_cannon): B_35mm_AA_Tracer_Red//TurboLaser_Laserx2//SW_SpeederBikeCanon_Ammo//swop_bywingCannonammo//LAAT_Laser
+	class macro_new_ammo(laat_cannon): B_35mm_AA_Tracer_Red
 	{
 		explosive = 0.5;
 		hit = 1000;
@@ -214,34 +189,6 @@ class CfgAmmo
 		allowAgainstInfantry = 1;
 		airLock=1;
 	};
-
-	class macro_new_ammo(ball_turret):TurboLaser_Laserx2//SW_SpeederBikeCanon_Ammo//Vwing_ammo
-	{
-		hit = 600;
-		timeToLive = 5;
-		indirectHit = 400;
-		indirectHitRange = 1;
-		explosive = 1;
-		caliber = 6;
-		ACE_caliber = 0;
-		tracerScale = 1;
-		aiAmmoUsageFlags = "64 + 128 + 256 + 512";
-		allowAgainstInfantry = 1;
-	
-		model = "\SWOP_Main\Effects\Tracer\Lasergreen";
-	
-		cost = 1;
-	
-		CraterEffects = "-";
-		CraterWaterEffects = "ImpactEffectsWaterHE";
-		ExplosionEffects ="SWOP_LaserExploSmallblue2";
-		soundHit1[] = {"SWOP_Main\FlyBy\impactosheavy\impactosheavy1.ogg", 1.2, 1, 50};
-		soundHit2[] = {"SWOP_Main\FlyBy\impactosheavy\impactosheavy2.ogg", 1.2, 1, 50};
-		soundHit3[] = {"SWOP_Main\FlyBy\impactosheavy\impactosheavy3.ogg", 1.2, 1, 50};
-		soundHit4[] = {"SWOP_Main\FlyBy\impactosheavy\impactosheavy4.ogg", 1.2, 1, 50};
-		multiSoundHit[] = {"soundHit1", 0.25, "soundHit2", 0.25, "soundHit3", 0.25, "soundHit4", 0.25};
-	};
-
 	class Bo_Mk82;
 	class macro_new_ammo(carpet_I_bomb): Bo_Mk82
 	{
@@ -294,14 +241,14 @@ class CfgAmmo
 		suppressionRadiusHit = 14;
 		craterEffects = "";
 		craterShape = "";
-		explosionEffects = "ExploAmmoLaserCannon";//ExplosionEffects = "SWOP_LaserExploSmall";
+		explosionEffects = "ExploAmmoLaserCannon";
 		airFriction = 0;
 		muzzleEffect = "";
 		deflecting = 0;
 		initTime = 0;
 		weaponLockSystem = 0; 
 		gravityFactor = 0;
-		ACE_caliber=1; // SWOP_SC_blaster_SoundSet | SWOP_HEAVYBullet_FlyBy_SoundSet | CAA_SC_Bullet_FlyBy_SoundSet | SWOP_155mm_Shot_SoundSet
+		ACE_caliber=1;
 
 	   class Components
 		{
@@ -540,14 +487,12 @@ class CfgAmmo
 		indirectHitRange = 0;
 		caliber = 1;
 		explosive = 0.6;
-		ExplosionEffects = "SWOP_LaserExploSmall";
 	};
 	class macro_new_ammo(generic_aircraft_laser_cannon_plasma_red) : macro_new_ammo(generic_aircraft_laser_gun_red)
 	{
 		hit = 150;
 		indirecthit = 20;
 		indirecthitrange = 0;
-		ExplosionEffects = "SWOP_LaserExploSmall";
 		caliber = 1;
 		explosive = 0.6;
 	};
@@ -556,7 +501,6 @@ class CfgAmmo
 		hit = 150;
 		indirecthit = 20;
 		indirecthitrange = 0;
-		ExplosionEffects = "SWOP_LaserExploSmall";
 		caliber = 1;
 		explosive = 0.6;
 	};
@@ -629,10 +573,6 @@ class CfgAmmo
 		muzzleEffect = "";
 		cmimmunity = 0.6;
 		effectsSmoke = "RD501_Effect_Violet";
-		//soundFly[] = {"\xt\SWionrocketloop.ogg",3,1,800};
-		//lockedTargetSound[] = {"TIE\LockedOn_2.ogg",0.7,1};
-		//lockingTargetSound[] = {"TIE\Locking_Beep1.ogg",1,1};
-		//model = "\SWOP_Main\Effects\Tracer\laserred";
 		tracerColor[] = {"blue"};
 		brightness = 20000;
 		lightColor[] = {0, 0, 1, 1};
@@ -654,10 +594,6 @@ class CfgAmmo
 		effectsMissile = "RD501_FX_Missile_AA_Violet";
 		muzzleEffect = "";
 		effectsSmoke = "RD501_Effect_Violet";
-		//soundfly[] = {"\xt\SWionrocketloop.ogg",3,1,800};
-		//lockedTargetSound[] = {"TIE\LockedOn_2.ogg",0.7,1};
-		//lockingTargetSound[] = {"TIE\Locking_Beep1.ogg",1,1};
-		//model = "\SWOP_Main\Effects\Tracer\laserred";
 		tracerColor[] = {"blue"};
 		canLock = 2;
 		weaponLockSystem = "1 + 2 + 4 + 8"; 
@@ -684,8 +620,6 @@ class CfgAmmo
 		effectsMissile = "RD501_FX_Missile_AA_Violet";
 		muzzleEffect = "";
 		effectsSmoke = "RD501_Effect_Violet";
-		//soundfly[] = {"\xt\SWionrocketloop.ogg",3,1,800};
-		//model = "\SWOP_Main\Effects\Tracer\laserred";
 		tracerColor[] = {"blue"};
 		brightness = 20000;
 		lightColor[] = {0, 0, 1, 1};
@@ -712,8 +646,6 @@ class CfgAmmo
 		};
 		muzzleEffect = "";
 		effectsSmoke = "RD501_Effect_Violet";
-		//soundfly[] = {"\xt\SWionrocketloop.ogg",3,1,800};
-		//model = "\SWOP_Main\Effects\Tracer\laserred";
 		tracerColor[] = {"blue"};
 		brightness = 20000;
 		lightColor[] = {0, 0, 1, 1};
@@ -745,7 +677,6 @@ class CfgAmmo
 		muzzleEffect = "";
 		effectsSmoke = "RD501_Effect_Violet";
 		soundfly[] = {"\rd501_vehicle_weapons\_sounds\proton_torp.ogg",3,1,800};
-		//model = "\SWOP_Main\Effects\Tracer\laserblue";
 		tracerColor[] = {"blue"};
 		brightness = 20000;
 		lightColor[] = {0, 0, 1, 1};
@@ -907,8 +838,7 @@ class CfgAmmo
 		cost = 22;
 		CraterEffects = "ATMissileCrater";
 		explosionEffects = "IEDMineSmallExplosion";
-		model="RD501_Vehicle_Weapons\_ammo\data\laser_big_purple.p3d";		
-		effectFly = "SWOP_BlueLaserEffect";
+		model="RD501_Vehicle_Weapons\_ammo\data\laser_big_purple.p3d";
 		tracerStartTime = 0;
 		tracerEndTime = 10;
 		airFriction = 0;
@@ -944,30 +874,5 @@ class CfgAmmo
 		aiAmmoUsageFlags = "64 + 128 + 256 + 512";
 		allowAgainstInfantry = 1;
 		timeToLive=10;
-	};
-	class ATTE_Laser;
-	class macro_new_ammo(atte):ATTE_Laser
-	{
-		hit = 1600;
-		indirectHit = 400;
-		indirectHitRange = 15;
-		visibleFire = 42;
-		audibleFire = 42;
-		visibleFireTime = 6;
-		typicalSpeed = 1400;
-		explosive = 0.4;
-		cost = 42;
-		deflecting = 15;
-		timeToLive = 15;
-		explosionEffects = "IEDMineSmallExplosion";
-		model = "SW_AV7\ion.p3d";
-		tracerScale = 2;
-		effectFly = "SWOP_BlueLaserEffect";
-		tracerStartTime = 0;
-		tracerEndTime = 10;
-		airFriction = 0;
-		muzzleEffect = "";
-		caliber = 8;
-		CraterEffects = "ExploAmmoLaserCrater";
 	};
 };
