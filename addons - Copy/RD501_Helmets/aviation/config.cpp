@@ -69,6 +69,7 @@ class CfgWeapons
 	NEW_501_Pilot_HELM(Blast,Blast,pilots\Blast.paa)
 	NEW_501_Pilot_HELM(Duncan,Duncan,pilots\Duncan.paa)
 	NEW_501_Pilot_HELM(Neb,Neb,pilots\Neb.paa)
+	NEW_501_Pilot_HELM(Salvatore,Salvatore,pilots\Salvatore.paa)
 
 	class macro_new_helmet(pilot,scuba): macro_new_helmet(pilot,base)
 	{

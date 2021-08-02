@@ -174,6 +174,8 @@ class CfgWeapons
 	NEW_501_Inf_Helm_JLTS(Checkers,Checkers,Checkers.paa)
 	NEW_501_Inf_Helm_JLTS(Araxis,Araxis,Araxis.paa)
 	NEW_501_Inf_Helm_JLTS(Clover,Clover,Clover.paa)
+	NEW_501_Inf_Helm_JLTS(Salvo,Salvo,Salvo.paa)
+	NEW_501_Inf_Helm_JLTS(Hegener,Hegener,Hegener.paa)
 	NEW_501_ARC_Helm_JLTS(Rayne,Rayne,Rayne.paa)
 	NEW_501_ARC_Helm_JLTS(Archaic,Archaic,Archaic.paa)
 	NEW_501_ARC_Helm_JLTS(Duke,Duke,Duke.paa)

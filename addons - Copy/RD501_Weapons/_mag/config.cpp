@@ -277,10 +277,8 @@ class CfgMagazines
 		maxThrowHoldTime = 2;
 		maxThrowIntensityCoef = 1.4;
 		minThrowIntensityCoef = 0.3;
-		model = "\thermalD\EMP_Grenade_ammo.p3d";
 		modelSpecial = "";
 		nameSound = "";
-		picture = "\thermalD\flash_x_ca.paa";
 		quickReload = 0 ;
 		reloadAction = "";
 		scope = 2;
@@ -326,10 +324,8 @@ class CfgMagazines
 		maxThrowHoldTime = 2;
 		maxThrowIntensityCoef = 1.4;
 		minThrowIntensityCoef = 0.3;
-		model = "\thermalD\EMP_Grenade_ammo.p3d";
 		modelSpecial = "";
 		nameSound = "";
-		picture = "\thermalD\flash_x_ca.paa";
 		quickReload = 0 ;
 		reloadAction = "";
 		scope = 2;

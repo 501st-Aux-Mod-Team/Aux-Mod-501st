@@ -57,7 +57,12 @@ class CfgVehicles
 		RD501_magclamp_small_forbidden = 1;
 
 		//flight model
-		maxSpeed=1500;
+		acceleration=350;
+		maxSpeed=1750;
+		stallSpeed=5;
+		draconicTorqueYCoef[]={1.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+		draconicForceYCoef=6;
+		envelope[] = {0.5,2.11,2.43,1.97,1.72,2.69,3.87,5.27,6.89,8.72,9.7,9.6,9.2,8.5,8.2,8};
 
 		class EventHandlers{};
 
