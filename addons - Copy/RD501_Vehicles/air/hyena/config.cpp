@@ -36,7 +36,7 @@ class CfgPatches
 };
 
 #include "../../common/sensor_templates.hpp"
-class CfgVehicles
+/*class CfgVehicles
 {
 	class swop_hbomber;
 	class macro_new_vehicle(hyena,Mk2) : swop_hbomber
@@ -85,4 +85,4 @@ class CfgVehicles
 			macro_new_mag(lgb_bomb,4)
 		};
 	};
-};
+};*/

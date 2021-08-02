@@ -1,4 +1,4 @@
-#include "../../../../RD501_Main/config_macros.hpp"
+/*#include "../../../../RD501_Main/config_macros.hpp"
 #include "../../../config_macros.hpp"
 
 #ifndef CONCAT
@@ -434,4 +434,4 @@ class CfgWeapons{
     // RTO PAULDRON
     // ------------------------------------------------------------------------------------
     
-};
+};*/

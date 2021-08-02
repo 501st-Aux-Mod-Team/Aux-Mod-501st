@@ -2,7 +2,7 @@
 #include "../_common/common.hpp"
 class CfgPatches
 {
-	class RD501_patch_bountyhunter_eapons
+	class RD501_patch_bountyhunter_weapons
 	{
 		author="RD501";
 		addonRootClass="RD501_patch_weapons";
@@ -23,7 +23,6 @@ class cfgWeapons
 {
 	class arifle_MSBS65_GL_black_F;
 	class srifle_DMR_04_F;
-	class Mode_SemiAuto;
 	class UGL_F;
 	class macro_new_weapon_nofam(Devastator):arifle_MSBS65_GL_black_F
 	{

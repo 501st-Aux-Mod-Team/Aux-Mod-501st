@@ -48,12 +48,8 @@ class CfgVehicles
 	class macro_new_vehicle(mortar,republic):B_Mortar_01_F
 	{
 		displayname = "Republic Plasma Mortar";
-		crew = "swop_clonetrooper";
 		forceInGarage = 1;
 
-	
-		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"LAAT\textures\gunship_2_d.paa"};
 		availableForSupportTypes[] = {"Artillery"};
 		class EventHandlers :DefaultEventhandlers {};
 

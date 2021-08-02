@@ -57,7 +57,6 @@ class CfgWeapons
 			sounds[] = {"StandardSound"};
 			class BaseSoundModeType
 			{
-				closure[] = {"SW_CloneWarsWeapons\SW_Z6\sound\closure.wav", 2, 1, 30};
 				soundClosure[] = {"closure", 1};
 			};
 			class StandardSound

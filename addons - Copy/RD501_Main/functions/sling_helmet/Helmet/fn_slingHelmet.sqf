@@ -19,35 +19,7 @@ if (headgear _unit == "")  then {
         if("HeadgearItem" in _parents) then {
             _additional append [_x];
         };
-    };
-	_unit unassignitem "SWOP_visordown_antenna"; 
-	_unit unassignitem "SWOP_Visor_Down2_RD501"; 	
-	_unit unassignitem "SWOP_visordown_501_antenna";
-	_unit unassignitem "SWOP_visor_antenna";
-	_unit unassignitem "SWOP_visor_w";
-	_unit unassignitem "RD501_visor_w2";
-	_unit unassignitem "SWOP_range";
-	_unit unassignitem "SWOP_rangeARC";
-	_unit unassignitem "SWOP_Visor_Down_RD501";
-	_unit unassignitem "SWOP_cosir5f";	
-	_unit unassignitem "SWOP_cosir4f";
-	_unit unassignitem "SWOP_cosir3f";
-	_unit unassignitem "SWOP_cosir2f";
-	_unit unassignitem "SWOP_cosir1f";
-	_unit unassignitem "SWOP_cosir5";	
-	_unit unassignitem "SWOP_cosir4";
-	_unit unassignitem "SWOP_cosir3";
-	_unit unassignitem "SWOP_cosir2";
-	_unit unassignitem "SWOP_cosir1";
-	_unit unassignitem "SWOP_cosir5a";	
-	_unit unassignitem "SWOP_cosir4a";
-	_unit unassignitem "SWOP_cosir3a";
-	_unit unassignitem "SWOP_cosir2a";
-	_unit unassignitem "SWOP_cosir1a";
-	_unit unassignitem "SWOP_cosir4_P1";
-	_unit unassignitem "SWOP_cosir3_P1";
-	_unit unassignitem "SWOP_cosir2_P1";
-	_unit unassignitem "SWOP_cosir1_P1";	
+    };	
 
 
     _additionalClass = _additional select 0;

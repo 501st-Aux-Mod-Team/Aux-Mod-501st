@@ -29,25 +29,6 @@ class CfgPatches
 
 class CfgWeapons
 {
-	class cannon_120mm;
-	class Cannon_TX130m1_mc:cannon_120mm
-	{
-		modes[] = {"player","close"};
-		class player;
-	};
-
-	class Cannon_TX130m2_mc:cannon_120mm
-	{
-		class player;
-	}
-
-	#include "_saber.hpp"
-
-	class CannonCore;
-	class Cannon_TurboLaser:CannonCore
-	{
-		class manual;
-	};
 	class 3AS_HeavyGATCannon_Base;
 	class 3AS_GATCannon:3AS_HeavyGATCannon_Base
 	{
@@ -232,47 +213,6 @@ class CfgWeapons
 			maxRangeProbab = 1.0;
 			aiDispersionCoefX = 2;
 			aiDispersionCoefY = 2;
-		};
-	};
-
-	class macro_new_weapon(atte,mbt):macro_new_weapon(saber_gun,mbt)
-	{
-		magazines[] = {
-			macro_new_mag(atte_mbt,10)
-		};
-		displayName = "Heavy ATTE cannon";
-		class player: player
-		{
-			sounds[] = {"StandardSound"};
-			class StandardSound
-			{
-				begin1[] = {"SW_Droides_2\ATTE\atte_fire.ogg", 3, 1, 3000};
-				soundBegin[] = {"begin1", 1};
-			};
-			recoil = "empty";
-			weaponSoundEffect = "DefaultRifle";
-			soundContinuous = 0;
-			reloadTime = 2;
-			magazineReloadTime = 10;//6;
-			autoReload = 1;
-			ballisticsComputer = 1;
-			canLock = 2;
-			autoFire = 1;
-			dispersion=0.0001;
-		};
-		class close: player
-		{
-			showToPlayer = 0;
-			aiRateOfFire = 3;
-			aiRateOfFireDistance = 5000;
-			minRange = 0;
-			minRangeProbab = 0.35;
-			midRange = 2500;
-			midRangeProbab =1.0;// 0.78;
-			maxRange = 5000;
-			maxRangeProbab = 1.0;
-			aiDispersionCoefX = 6;
-			aiDispersionCoefY = 6;
 		};
 	};
 }; 

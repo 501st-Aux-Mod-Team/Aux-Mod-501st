@@ -1,5 +1,4 @@
 #define COMPONENT main
-#include "config_swop_macro.cpp" // Imports the config macro that has all of swop pbos.
 #include "config_macros.hpp" // my config macro lib
 #include "_cba_patches.hpp"
 
@@ -36,15 +35,7 @@ class cfgFunctions
 			class laatc_lift
 			{
 				file=macro_mod_script_path\vehicle_lift\laatc_lift.sqf
-			};
-			
-			class mtt_deploy_droids
-			{
-				file=macro_mod_script_path\MTT\mtt_deploy_droids.sqf
-			};
-			
-			
-			
+			};	
 		};
 	};	
 

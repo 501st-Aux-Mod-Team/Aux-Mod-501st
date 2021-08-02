@@ -51,7 +51,6 @@ class CfgVehicles
 		hiddenSelections[] = {};
 		hiddenSelectionsTextures[] = {};
 		//vehicleClass = "Objects";
-		icon = "\SW_medical\data\bt_icon.paa";
 
 		vehicleClass = macro_editor_vehicle_type(statics)
 		editorCategory =  macro_editor_cat(statics)

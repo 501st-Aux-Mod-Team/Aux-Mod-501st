@@ -24,19 +24,7 @@ class CfgMagazines
 	{
 		count = 2;
 	};
-	class SWOP_e11_Mag;
 	class 100Rnd_TXLaser_Cannon_mag;
-	class og9_Laser_Cannon_mag;
-	class macro_new_mag(homing_spider,10): og9_Laser_Cannon_mag
-	{
-		displayNameShort = "Blaster Cannon.";
-		ammo = macro_new_ammo(homing_spider)
-		count = 10;
-		tracersEvery = 1;
-		initSpeed =800;
-		maxLeadSpeed = 30000;
-		nameSound = "cannon";
-	};
 	class 4Rnd_AAA_missiles;
 	class 7Rnd_Rocket_04_AP_F;
 	class magazine_Missile_rim116_x21;
@@ -121,20 +109,6 @@ class CfgMagazines
 		initSpeed=1120;
 		count = 300;
 		ammo = macro_new_ammo(ball_beam)
-	};
-
-	class 1000Rnd_Laser_Cannon_EWEBSWBF_REP;
-	class macro_new_mag(laat_ball_turret,200): 1000Rnd_Laser_Cannon_EWEBSWBF_REP
-	{
-		displayName = "Laat Ball Turret Mag";
-		displayNameShort = "Ball Turret Mag";
-		ammo =macro_new_ammo(ball_turret)
-		count = 300;
-		tracersEvery = 1;
-		initSpeed = 1036;
-		maxLeadSpeed = 300;
-		muzzleImpulseFactor = 0;
-		scope = 1;
 	};
 
 	class 2Rnd_Bomb_03_F;

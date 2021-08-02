@@ -118,7 +118,7 @@ class CfgVehicles
 		category = "Ordnance";
 		displayName = "Squad Shield";
 		portrait = "RD501_Zeus\ui\wide_kite_64.paa";
-		ammo = "SW_SquadShield_ammoCARGA";
+		ammo = macro_new_ammo(squad_shield_sigma)
 		delete Arguments;
 	};
 	class macro_new_ordnance(ModuleDioxis): ModuleChemlight_F
@@ -193,17 +193,8 @@ class CfgAmmo
 	class ModuleOrdnanceHowitzer_F_ammo;
 	class ModuleOrdnanceMortar_F_ammo;
 	class ModuleOrdnanceRocket_F_ammo;
-	class SWOP_SCAR_Dioxis;
 	class RD501_ShadowMag;
-	
-	class macro_new_ordnance_ammo(Dioxis_long): SWOP_SCAR_Dioxis
-	{
-		timeToLive = 300;
-	};
-	class macro_new_ordnance_ammo(Shadow_long): RD501_ShadowMag
-	{
-		timeToLive = 300;
-	};
+
 	class macro_new_ordnance_ammo(IonBomb): ModuleOrdnanceMortar_F_ammo
 	{
 		caliber = 1100;
@@ -239,14 +230,13 @@ class CfgAmmo
 		canLock = 0;
 		explosive = 1;
 		fuseDistance = 35;
-		model = "SW_AV7\ion.p3d";
 		indirectHit = 3;
 		indirectHitRange = 50;
 		maxSpeed = 1100;
 		typicalSpeed = 1050;
 		sideAirFriction = 0;
 		submunitionConeType[] = {"poissonDisc", 10};
-		submunitionAmmo[] = {"SWOP_SCAR_Dioxis",1};
+		submunitionAmmo[] = {macro_new_ammo(dioxis),1};
 		submunitionConeAngle = 50;
 		simulation = "shotSubmunitions";
 		timeToLive = 120;
@@ -269,7 +259,6 @@ class CfgAmmo
 		canLock = 0;
 		explosive = 1;
 		fuseDistance = 30;
-		model = "SW_AV7\ion.p3d";
 		indirectHit = 300;
 		indirectHitRange = 30;
 		maxSpeed = 1100;

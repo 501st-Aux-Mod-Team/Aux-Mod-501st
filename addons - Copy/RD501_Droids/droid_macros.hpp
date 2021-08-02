@@ -50,13 +50,11 @@
 
 #define macro_thermal_det "RD501_thermaldet_cis_x1_mag"
 #define macro_thermal_imp "RD501_thermaldet_cis_x1_mag"
-#define macro_smoke "swop_SmokeShell"
 #define macro_flashbang "ACE_M84"
 #define macro_dioxis_grenade "RD501_dioxis_x1_mag"
 
 #define macro_zip_tie "ACE_CableTie"
 
-#define macro_backpack_jammer "SWOP_B_CARGOBACKPACK"
 #define macro_backpack_eweb macro_new_backpack_class(opfor,eweb_bag_depr)
 
 #define macro_e5_loadout \
