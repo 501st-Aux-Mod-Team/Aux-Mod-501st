@@ -49,15 +49,16 @@
 
     //Now we create a crew for that vehicle and hide it
     createVehicleCrew _created_attached_turret;
-    _created_attached_turret setBehaviour "COMBAT";
     _created_attached_turret hideObjectGlobal true;
+
+    // add turret to vehicle group
+    [_created_attached_turret] joinSilent _vic;
 
     //Then we save that unit to the vehicle for future use when killed or deleted.
     _current_attached=_vic getVariable ["rd501_attached_gun_object",[]];
     _current_attached pushback _created_attached_turret;
     _vic setVariable ["rd501_attached_gun_object",_current_attached ,true];
 
-    
     //Then we add an action to remove the turret.
     [_vic, 
     [
