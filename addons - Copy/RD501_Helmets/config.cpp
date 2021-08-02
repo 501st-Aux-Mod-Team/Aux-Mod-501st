@@ -33,7 +33,7 @@ class CfgWeapons
 		ace_hearing_protection = 0.85; 		
 		ace_hearing_lowerVolume = 0;    
 		displayName = "[501st] PLT HELM (Base)";
-		picture = "\SWOP_clones\data\helmets\ico\ico_pilot.paa";
+		//picture = "\SWOP_clones\data\helmets\ico\ico_pilot.paa";
 		//model = "SWOP_clones\helmet\CloneHelmetPilot.p3d";
 
 		model = "\501st_helmets\AB\AB_helmet_p1.p3d";	
@@ -77,18 +77,6 @@ class CfgWeapons
 			};
 		};
 
-		subItems[] = {"G_B_Diving","ItemcTabHCam"};
-	};
-
-	class macro_new_helmet(pilot,lum_base): macro_new_helmet(pilot,base)
-	{
-		displayName = '[] LUM';
-		scope=0;
-		hiddenSelectionsMaterials[]=
-		{
-			"",
-			"\501st_Helmets\AB\data\white_glow.rvmat"//"swop_clones\data\helmpilot.rvmat"//  \501st_Helmets\AB\data\white_glow.rvmat
-		};
 		subItems[] = {"G_B_Diving","ItemcTabHCam"};
 	};
 	class macro_new_helmet(empire_rg,boi) : H_HelmetB
@@ -205,69 +193,6 @@ class CfgWeapons
 	};
 
 	//AB
-	class macro_new_helmet(airborne,base): H_HelmetB
-	{
-		author = "";
-		scope = 2;
-		scopeArsenal = 2;
-		displayName = "Clone airborne helmet";
-		model = "\501st_helmets\AB\AB_helmet.p3d";
-		subItems[] = {"G_B_Diving","ItemcTabHCam"};
-		ace_hearing_protection = 0.85; 		
-		ace_hearing_lowerVolume = 0;    
-
-		hiddenSelections[] = {
-			"camo1",
-			"mat"
-		};
-	
-		hiddenSelectionsTextures[] = {
-			"\501st_helmets\AB\data\AB_helmet_co.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"501st_helmets\ab\data\ab_helmet.rvmat",
-			"501st_helmets\ab\data\ab_helmet.rvmat"
-		};
-		picture = TEXTUREAB\helmet_icon.paa
-		class ItemInfo: HeadgearItem
-		{
-			mass = 10;
-			uniformModel = "\501st_helmets\AB\AB_helmet.p3d";
-			allowedSlots[] = {801,901,701,605};
-			modelSides[] = {6};
-			hiddenSelections[] = {
-				"camo1",
-				"mat"
-			};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointName = "HitHead";
-					armor = 60;
-					passThrough = 0.5;
-				};
-			};
-		};
-	};
-
-	class macro_new_helmet(airborne,lum_base): macro_new_helmet(airborne,base)//H_HelmetB
-	{
-		author = "";
-		scope = 0;
-		displayName = "[LUMMMMMM]";
-		hiddenSelectionsTextures[]=
-		{
-			"\RD501_Helmets\_textures\airborne\airKrayt.paa"
-		};
-		hiddenSelectionsMaterials[]=
-		{
-			"",
-			"\501st_Helmets\AB\data\white_glow.rvmat"
-		};
-		
-	};
 
 	class macro_new_helmet(infantry,jlts_recruit) : H_HelmetB
 	{
@@ -549,5 +474,4 @@ class CfgWeapons
 			};
 		};
 	};
-	#include "_includes/_base_swop_helmets.hpp"
 };

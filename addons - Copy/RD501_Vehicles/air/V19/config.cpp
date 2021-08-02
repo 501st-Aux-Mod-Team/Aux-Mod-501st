@@ -57,7 +57,7 @@ class CfgVehicles
 		RD501_magclamp_small_forbidden = 1;
 
 		//flight model
-		acceleration=350;
+		acceleration=500;
 		maxSpeed=1750;
 		stallSpeed=5;
 		draconicTorqueYCoef[]={1.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
@@ -67,7 +67,10 @@ class CfgVehicles
 		class EventHandlers{};
 
 		#include "../../common/universal_mfd.hpp"
-
+		/*class ViewPilot: ViewPilot
+		{
+			initAngleX = 0;
+		};*/
 		weapons[] = {
 			macro_new_weapon(laser,v_wing),
 			macro_new_weapon(wynd,a2a),

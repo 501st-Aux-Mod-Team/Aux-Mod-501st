@@ -38,16 +38,6 @@ class CfgWeapons
 		class ItemInfo;
 	};
 
-	class macro_new_helmet(pilot,lum_base): macro_new_helmet(pilot,base)
-	{
-		displayname = Clone Pilot Base Model;
-		hiddenSelectionsTextures[] = {"SWOP_clones\data\helmetsOther\clonePilotHelmet.paa"};
-		class ItemInfo:ItemInfo
-		{
-
-		};
-	};
-
 	NEW_501_Pilot_HELM(cxx,CX-X,pilots\cxx.paa)
 	NEW_501_Pilot_HELM(cxc,CX-C,pilots\cxc.paa)
 	NEW_501_Pilot_HELM(dylan,Dylan,pilots\Dylanhelmet.paa)
@@ -56,17 +46,13 @@ class CfgWeapons
 	NEW_501_Pilot_HELM(jaisus,Jaisus,pilots\Jaisus.paa)
 	NEW_501_Pilot_HELM(keryl,Keryl,pilots\keryl.paa)
 	NEW_501_Pilot_HELM(kaj,Kaj,pilots\Kaj.paa)
-	NEW_501_Pilot_HELM(kitty,Kitty,pilots\kitty.paa)
 	NEW_501_Pilot_HELM(kushiban,Kushiban,pilots\Kushiban.paa)
 	NEW_501_Pilot_HELM(orange,Orange,pilots\orange.paa)
-	NEW_501_Pilot_HELM(aspect,Aspect,pilots\Aspect.paa)
 	NEW_501_Pilot_HELM(Galaxy,Galaxy,pilots\Galaxy.paa)
 	NEW_501_Pilot_HELM(Floff,Floff,pilots\Floff.paa)
 	NEW_501_Pilot_HELM(Shnuffles,Shnuffles,pilots\Shnuffles.paa)
-	NEW_501_Pilot_HELM(Legal,Legal,pilots\Legal.paa)
 	NEW_501_Pilot_HELM(Shock,Shock,pilots\Shock.paa)
 	NEW_501_Pilot_HELM(Ethan,Ethan,pilots\Ethan.paa)
-	NEW_501_Pilot_HELM(Blast,Blast,pilots\Blast.paa)
 	NEW_501_Pilot_HELM(Duncan,Duncan,pilots\Duncan.paa)
 	NEW_501_Pilot_HELM(Neb,Neb,pilots\Neb.paa)
 	NEW_501_Pilot_HELM(Salvatore,Salvatore,pilots\Salvatore.paa)
@@ -82,19 +68,6 @@ class CfgWeapons
 			"",
 			"\501st_Helmets\AB\data\white_glow.rvmat"
 			//"\501st_Helmets\AB\data\red_glow.rvmat"//"swop_clones\data\helmpilot.rvmat"//"\501st_Helmets\AB\data\white_glow.rvmat"
-		};
-	};
-
-	class macro_new_helmet(pilot,casskun): macro_new_helmet(pilot,base)
-	{
-		scope = 2;
-		displayName = "[501st] AVI HELM ('Casskun')";
-		hiddenSelectionsTextures[] = {macro_custom_helmet_textures\aviation\pilots\casskun.paa};
-		subItems[] = {"G_B_Diving"};
-		hiddenSelectionsMaterials[]=
-		{
-			"",
-			"\501st_Helmets\AB\data\red_glow.rvmat"//"swop_clones\data\helmpilot.rvmat"//  \501st_Helmets\AB\data\white_glow.rvmat
 		};
 	};
 	class macro_new_helmet(pilot,zatama): macro_new_helmet(pilot,base)
