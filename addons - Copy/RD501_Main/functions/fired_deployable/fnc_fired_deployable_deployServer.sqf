@@ -42,7 +42,7 @@ if(_timeToLive > 0) then {
 		_timeToLive
 	] call CBA_fnc_waitAndExecute;
 
-	if(_hasEndSound && !isNil _endSound && _endSound != "") then {
+	if(_hasEndSound && _endSound != "") then {
 		[
 			{
 				params["_deployed", "_endSound", "_endDuration", "_distance"];
