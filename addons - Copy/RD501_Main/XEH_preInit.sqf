@@ -125,12 +125,18 @@ macro_prep_xeh(medical_ccp\fnc_canBandageNearbyCCP.sqf,canBandageNearbyCCP)
 macro_prep_xeh(medical_ccp\fnc_canStitchNearbyCCP.sqf,canStitchNearbyCCP)
 
 // Jammer
-macro_prep_xeh(jammer\fnc_addJammer.sqf,addJammer)
-macro_prep_xeh(jammer\fnc_addJammerLocal.sqf,addJammerLocal)
-macro_prep_xeh(jammer\fnc_jammersPFH.sqf,jammersPFH)
-macro_prep_xeh(jammer\fnc_jammersServerPFH.sqf,jammersServerPFH)
-macro_prep_xeh(jammer\fnc_clearAllJammers.sqf,clearAllJammers)
 macro_prep_xeh(jammer\fnc_jammerControlActions.sqf,jammerControlActions)
+macro_prep_xeh(jammer\fnc_jammersAdd.sqf,jammersAdd)
+macro_prep_xeh(jammer\fnc_jammersAddServer.sqf,jammersAddServer)
+macro_prep_xeh(jammer\fnc_jammersClear.sqf,jammersClear)
+macro_prep_xeh(jammer\fnc_jammersClientPFH.sqf,jammersClientPFH)
+macro_prep_xeh(jammer\fnc_jammersGetLocal.sqf,jammersGetLocal)
+macro_prep_xeh(jammer\fnc_jammersRemove.sqf,jammersRemove)
+macro_prep_xeh(jammer\fnc_jammersRemoveServer.sqf,jammersRemoveServer)
+macro_prep_xeh(jammer\fnc_jammersServerPFH.sqf,jammersServerPFH)
+macro_prep_xeh(jammer\fnc_jammersUpdateLocal.sqf,jammersUpdateLocal)
+macro_prep_xeh(jammer\fnc_jammersUpdateServer.sqf,jammersUpdateServer)
+
 // Impulse
 macro_prep_xeh(impulse\fnc_impulseApply.sqf,impulseApply)
 macro_prep_xeh(impulse\fnc_impulseIncrease.sqf,impulseIncrease)

@@ -2,6 +2,6 @@ params ["_logic"];
 
 if (isNull _logic || !local _logic) exitWith {};
 
-["rd501_clearAllJammers", []] call CBA_fnc_globalEvent;
+["rd501_jammersClear", []] call CBA_fnc_serverEvent;
 
 deleteVehicle _logic;

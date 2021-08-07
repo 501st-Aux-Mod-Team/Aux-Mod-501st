@@ -7,6 +7,6 @@ if(isNull _attach) then {
 	deleteVehicle _logic; // Don't spawn empty jammer
 }else
 {
-	[_attach, _jammerInit select 0, _jammerInit select 1] call rd501_fnc_addJammer;
+	[_attach, _jammerInit select 0, _jammerInit select 1] call rd501_fnc_jammersAdd;
 	deleteVehicle _logic;
 };
