@@ -545,6 +545,15 @@ class CfgMagazines
 		ammo = macro_new_ammo(shotgun_EMP)
 		descriptionShort = "2 Rnd EMP";
 	};
+	class macro_new_mag(shotgun_slug,6):2Rnd_12Gauge_Pellets
+	{
+		scope=2;
+		displayName = "6 Rnd Slug Magazine";
+		displayNameShort = "6 Rnd Slug Mag";
+		count=6;
+		ammo = macro_new_ammo(30mw)
+		descriptionShort = "6 Rnd Slug";
+	};
 	////////////////////////////////////////////////////
 	/////////////Flare    Magazines/////////////////////
 	////////////////////////////////////////////////////

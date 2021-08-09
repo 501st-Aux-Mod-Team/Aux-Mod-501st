@@ -208,6 +208,7 @@ class rd501_JLTS_CloneBinocular: JLTS_CloneBinocular
 class rd501_JLTS_CloneBinocular_black_TI: JLTS_CloneBinocular_black
 {
     displayname = "[501st] Clone Macrobinoculars Scout";
+	modelOptics="\A3\Weapons_F_beta\Binocular\lasermarker_optics";
 	visionMode[]=
     {
         "Normal",

@@ -39,7 +39,7 @@ class cfgWeapons
 		{
 			reloadTime=0.24;
 		}
-			class WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 			mass = 30;
 			class CowsSlot
