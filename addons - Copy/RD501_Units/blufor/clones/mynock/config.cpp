@@ -1,4 +1,4 @@
-/*#include "../../../../RD501_Main/config_macros.hpp"
+#include "../../../../RD501_Main/config_macros.hpp"
 #include "../../../config_macros.hpp"
 
 #ifndef CONCAT
@@ -46,21 +46,12 @@ class CfgWeapons
     // ------------------------------------------------------------------------------------
     // INHERIT UNFIORM
     // ------------------------------------------------------------------------------------
-    
-    class Uniform_Base
-    {
-        class ItemInfo;
-    };
-    class SWOP_Clonetrooper_F_CombatUniform : Uniform_Base
-    {
-        class ItemInfo : ItemInfo
-        {
-        };
-    };
+    class UniformItem;
+    class Uniform_Base;
     #define RD501_BASE_UNIFORM macro_new_uniform_class(501_inf,recruit)
-    class RD501_BASE_UNIFORM : SWOP_Clonetrooper_F_CombatUniform
+    class RD501_BASE_UNIFORM : Uniform_Base
     {
-        class ItemInfo : ItemInfo
+        class ItemInfo : UniformItem
         {
         };
     };
@@ -434,4 +425,4 @@ class CfgWeapons{
     // RTO PAULDRON
     // ------------------------------------------------------------------------------------
     
-};*/
+};
