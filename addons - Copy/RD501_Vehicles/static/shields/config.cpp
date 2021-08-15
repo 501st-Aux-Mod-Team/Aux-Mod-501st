@@ -127,7 +127,7 @@ class CfgVehicles
         scopeCurator=2;
         side=3;
 		simulation="house";
-        displayName="Shield wall";
+        displayName="Shield Gate(Large)";
         model="\RD501_Vehicles\static\shields\wall\shield_gate_l.p3d";
         icon="iconObject_1x1";
         rd501_fired_deployable_loopSound = "rd501_squad_shield_loop";
@@ -162,7 +162,7 @@ class CfgVehicles
         scopeCurator=2;
         side=3;
 		simulation="house";
-        displayName="Shield wall";
+        displayName="Shield Gate(Small)";
         model="\RD501_Vehicles\static\shields\wall\shield_gate_s.p3d";
         icon="iconObject_1x1";
         rd501_fired_deployable_loopSound = "rd501_squad_shield_loop";
@@ -197,7 +197,7 @@ class CfgVehicles
         scopeCurator=2;
         side=3;
 		simulation="house";
-        displayName="Shield wall";
+        displayName="Shield Door";
         model="\RD501_Vehicles\static\shields\wall\shield_door.p3d";
         icon="iconObject_1x1";
         rd501_fired_deployable_loopSound = "rd501_squad_shield_loop";
