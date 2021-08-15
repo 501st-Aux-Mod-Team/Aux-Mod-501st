@@ -1,9 +1,9 @@
 params["_type"];
 
-#define REPUBLIC_LOW_HEALTH_TEXTURE "\RD501_Vehicles\static\shields\bubble\deka_shield.paa"
-#define REPUBLIC_NORMAL_TEXTURE "\RD501_Vehicles\static\shields\bubble\shield.paa"
-#define CIS_LOW_HEALTH_TEXTURE "\RD501_Vehicles\static\shields\bubble\shield.paa"
-#define CIS_NORMAL_TEXTURE "\RD501_Vehicles\static\shields\bubble\deka_shield.paa"
+#define REPUBLIC_LOW_HEALTH_TEXTURE "\RD501_Vehicles\static\shields\shared\rd501_shield_rep_low.paa"
+#define REPUBLIC_NORMAL_TEXTURE "\RD501_Vehicles\static\shields\shared\rd501_shield_rep_normal.paa"
+#define CIS_LOW_HEALTH_TEXTURE "\RD501_Vehicles\static\shields\shared\rd501_shield_cis_low.paa"
+#define CIS_NORMAL_TEXTURE "\RD501_Vehicles\static\shields\shared\rd501_shield_cis_normal.paa"
 
 private _lowHealthTexture = "";
 private _normalHealthTexture = "";

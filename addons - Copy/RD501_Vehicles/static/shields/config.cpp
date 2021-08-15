@@ -68,7 +68,7 @@ class CfgVehicles
         rd501_fired_deployable_soundDistance = 300;
 		rd501_shield_isShield=1;
         hiddenSelections[] = { "camo1" };
-        hiddenSelectionsTextures[] = { "\RD501_Vehicles\static\shields\bubble\rd501_shield_rep_red.paa" };
+        hiddenSelectionsTextures[] = { "\RD501_Vehicles\static\shields\bubble\shield.paa" };
         vehicleClass = macro_editor_vehicle_type(statics)
         editorCategory =  macro_editor_cat(statics)
         editorSubcategory = macro_editor_cat(static_msc)
@@ -101,9 +101,10 @@ class CfgVehicles
         rd501_fired_deployable_endDuration = 1;
         rd501_fired_deployable_soundDistance = 300;
         rd501_shield_isShield=1;
+        rd501_shield_type="CIS";
         rd501_shield_health=100000;
         hiddenSelections[] = { "camo1" };
-        hiddenSelectionsTextures[] = { "\RD501_Vehicles\static\shields\bubble\rd501_shield_rep_red.paa" };
+        hiddenSelectionsTextures[] = { "\RD501_Vehicles\static\shields\shared\rd501_shield_cis_normal.paa" };
         vehicleClass = macro_editor_vehicle_type(statics)
         editorCategory =  macro_editor_cat(statics)
         editorSubcategory = macro_editor_cat(static_msc)
@@ -136,9 +137,10 @@ class CfgVehicles
         rd501_fired_deployable_endDuration = 1;
         rd501_fired_deployable_soundDistance = 300;
         rd501_shield_isShield=1;
+        rd501_shield_type="CIS";
         rd501_shield_health=20000;
         hiddenSelections[] = { "camo1" };
-        hiddenSelectionsTextures[] = { "\RD501_Vehicles\static\shields\bubble\rd501_shield_rep_red.paa" };
+        hiddenSelectionsTextures[] = { "\RD501_Vehicles\static\shields\shared\rd501_shield_cis_normal.paa" };
         vehicleClass = macro_editor_vehicle_type(statics)
         editorCategory =  macro_editor_cat(statics)
         editorSubcategory = macro_editor_cat(static_msc)
@@ -171,9 +173,10 @@ class CfgVehicles
         rd501_fired_deployable_endDuration = 1;
         rd501_fired_deployable_soundDistance = 300;
         rd501_shield_isShield=1;
+        rd501_shield_type="CIS";
         rd501_shield_health=10000;
         hiddenSelections[] = { "camo1" };
-        hiddenSelectionsTextures[] = { "\RD501_Vehicles\static\shields\bubble\rd501_shield_rep_red.paa" };
+        hiddenSelectionsTextures[] = { "\RD501_Vehicles\static\shields\shared\rd501_shield_cis_normal.paa" };
         vehicleClass = macro_editor_vehicle_type(statics)
         editorCategory =  macro_editor_cat(statics)
         editorSubcategory = macro_editor_cat(static_msc)
@@ -206,9 +209,10 @@ class CfgVehicles
         rd501_fired_deployable_endDuration = 1;
         rd501_fired_deployable_soundDistance = 300;
         rd501_shield_isShield=1;
+        rd501_shield_type="CIS";
         rd501_shield_health=1000;
         hiddenSelections[] = { "camo1" };
-        hiddenSelectionsTextures[] = { "\RD501_Vehicles\static\shields\bubble\rd501_shield_rep_red.paa" };
+        hiddenSelectionsTextures[] = { "\RD501_Vehicles\static\shields\shared\rd501_shield_cis_normal.paa" };
         vehicleClass = macro_editor_vehicle_type(statics)
         editorCategory =  macro_editor_cat(statics)
         editorSubcategory = macro_editor_cat(static_msc)
