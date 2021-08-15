@@ -33,35 +33,39 @@ class CfgPatches
 class CfgVehicles
 {
 	class Land_House_Small_03_V1_ruins_F;
-	class RD501_Squad_Shield: Land_House_Small_03_V1_ruins_F
-	{
-		author="$STR_A3_Bohemia_Interactive";
-		mapSize=21.1;
-		class SimpleObject
-		{
-			eden=0;
-			animate[]={};
-			hide[]={};
-			verticalOffset=-0.023;
-			verticalOffsetWorld=0;
-			init="''";
-		};
-		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\Land_House_Small_03_V1_ruins_F.jpg";
-		scope=2;
-		scopeCurator=2;
-		displayName="Squad Shield";
-		model="\RD501_Vehicles\static\shields\bubble\bubble.p3d";
-		icon="iconObject_1x1";
-		rd501_fired_deployable_loopSound = "rd501_squad_shield_loop";
-		rd501_fired_deployable_loopDuration = 14;
-		rd501_fired_deployable_endSound = "rd501_squad_shield_end";
-		rd501_fired_deployable_endDuration = 1;
-		rd501_fired_deployable_soundDistance = 300;
-		rd501_shield_isShield=1;
-		vehicleClass = macro_editor_vehicle_type(statics)
-		editorCategory =  macro_editor_cat(statics)
-		editorSubcategory = macro_editor_cat(static_msc)
-	};
+	class Car_F;
+    class RD501_Squad_Shield: Car_F
+    {
+        author="$STR_A3_Bohemia_Interactive";
+        mapSize=21.1;
+        armor=200000;
+        class SimpleObject
+        {
+            eden=0;
+            animate[]={};
+            hide[]={};
+            verticalOffset=-0.023;
+            verticalOffsetWorld=0;
+            init="''";
+        };
+        editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\Land_House_Small_03_V1_ruins_F.jpg";
+        scope=2;
+        scopeCurator=2;
+        side=3;
+        displayName="Squad Shield";
+        model="\RD501_Vehicles\static\shields\bubble\bubble.p3d";
+        icon="iconObject_1x1";
+        rd501_fired_deployable_loopSound = "rd501_squad_shield_loop";
+        rd501_fired_deployable_loopDuration = 14;
+        rd501_fired_deployable_endSound = "rd501_squad_shield_end";
+        rd501_fired_deployable_endDuration = 1;
+        rd501_fired_deployable_soundDistance = 300;
+        hiddenSelections[] = { "camo1" };
+        hiddenSelectionsTextures[] = { "\RD501_Vehicles\static\shields\bubble\rd501_shield_rep_red.paa" };
+        vehicleClass = macro_editor_vehicle_type(statics)
+        editorCategory =  macro_editor_cat(statics)
+        editorSubcategory = macro_editor_cat(static_msc)
+    };
 	class RD501_Squad_Shield_trench: Land_House_Small_03_V1_ruins_F
 	{
 		author="$STR_A3_Bohemia_Interactive";
