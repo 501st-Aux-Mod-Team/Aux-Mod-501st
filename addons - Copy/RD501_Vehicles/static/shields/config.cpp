@@ -66,6 +66,7 @@ class CfgVehicles
         rd501_fired_deployable_endSound = "rd501_squad_shield_end";
         rd501_fired_deployable_endDuration = 1;
         rd501_fired_deployable_soundDistance = 300;
+		rd501_shield_isShield=1;
         hiddenSelections[] = { "camo1" };
         hiddenSelectionsTextures[] = { "\RD501_Vehicles\static\shields\bubble\rd501_shield_rep_red.paa" };
         vehicleClass = macro_editor_vehicle_type(statics)
@@ -99,6 +100,8 @@ class CfgVehicles
         rd501_fired_deployable_endSound = "rd501_squad_shield_end";
         rd501_fired_deployable_endDuration = 1;
         rd501_fired_deployable_soundDistance = 300;
+        rd501_shield_isShield=1;
+        rd501_shield_health=100000;
         hiddenSelections[] = { "camo1" };
         hiddenSelectionsTextures[] = { "\RD501_Vehicles\static\shields\bubble\rd501_shield_rep_red.paa" };
         vehicleClass = macro_editor_vehicle_type(statics)
@@ -132,6 +135,8 @@ class CfgVehicles
         rd501_fired_deployable_endSound = "rd501_squad_shield_end";
         rd501_fired_deployable_endDuration = 1;
         rd501_fired_deployable_soundDistance = 300;
+        rd501_shield_isShield=1;
+        rd501_shield_health=20000;
         hiddenSelections[] = { "camo1" };
         hiddenSelectionsTextures[] = { "\RD501_Vehicles\static\shields\bubble\rd501_shield_rep_red.paa" };
         vehicleClass = macro_editor_vehicle_type(statics)
@@ -165,6 +170,8 @@ class CfgVehicles
         rd501_fired_deployable_endSound = "rd501_squad_shield_end";
         rd501_fired_deployable_endDuration = 1;
         rd501_fired_deployable_soundDistance = 300;
+        rd501_shield_isShield=1;
+        rd501_shield_health=10000;
         hiddenSelections[] = { "camo1" };
         hiddenSelectionsTextures[] = { "\RD501_Vehicles\static\shields\bubble\rd501_shield_rep_red.paa" };
         vehicleClass = macro_editor_vehicle_type(statics)
@@ -198,6 +205,8 @@ class CfgVehicles
         rd501_fired_deployable_endSound = "rd501_squad_shield_end";
         rd501_fired_deployable_endDuration = 1;
         rd501_fired_deployable_soundDistance = 300;
+        rd501_shield_isShield=1;
+        rd501_shield_health=1000;
         hiddenSelections[] = { "camo1" };
         hiddenSelectionsTextures[] = { "\RD501_Vehicles\static\shields\bubble\rd501_shield_rep_red.paa" };
         vehicleClass = macro_editor_vehicle_type(statics)
@@ -299,4 +308,33 @@ class CfgSounds
 		// subtitle delay in seconds, subtitle text
 		titles[] = { 1, "*Shield Retracting Hiss*" };
 	};
+};
+
+
+class Extended_Init_EventHandlers 
+{
+    class RD501_Shield_Wall
+    {
+        class rd501_init_shield {
+            init = "[_this select 0] call rd501_fnc_shield_init";
+        };
+    }
+    class RD501_Shield_Door
+    {
+        class rd501_init_shield {
+            init = "[_this select 0] call rd501_fnc_shield_init";
+        };
+    }
+    class RD501_Shield_Gate_L
+    {
+        class rd501_init_shield {
+            init = "[_this select 0] call rd501_fnc_shield_init";
+        };
+    }
+    class RD501_Shield_Gate_S
+    {
+        class rd501_init_shield {
+            init = "[_this select 0] call rd501_fnc_shield_init";
+        };
+    }
 };
