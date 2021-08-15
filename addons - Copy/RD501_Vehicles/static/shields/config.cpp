@@ -57,6 +57,7 @@ class CfgVehicles
 		rd501_fired_deployable_endSound = "rd501_squad_shield_end";
 		rd501_fired_deployable_endDuration = 1;
 		rd501_fired_deployable_soundDistance = 300;
+		rd501_shield_isShield=1;
 		vehicleClass = macro_editor_vehicle_type(statics)
 		editorCategory =  macro_editor_cat(statics)
 		editorSubcategory = macro_editor_cat(static_msc)

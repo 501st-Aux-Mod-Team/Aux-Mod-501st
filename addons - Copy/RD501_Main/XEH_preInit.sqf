@@ -160,4 +160,14 @@ macro_prep_xeh(volatile\fnc_volatile_handleDamage.sqf,volatile_handleDamage)
 // Map Markers
 macro_prep_xeh(map_markers\fnc_placeDotMarkerAtSelf.sqf,placeDotMarkerAtSelf)
 
+// Shield
+macro_prep_xeh(shield\fnc_shield_checkState.sqf,shield_checkState)
+macro_prep_xeh(shield\fnc_shield_getTextureSet.sqf,shield_getTextureSet)
+macro_prep_xeh(shield\fnc_shield_init.sqf,shield_init)
+macro_prep_xeh(shield\fnc_shield_onDestroy.sqf,shield_onDestroy)
+macro_prep_xeh(shield\fnc_shield_onHit.sqf,shield_onHit)
+macro_prep_xeh(shield\fnc_shield_onLowHealth.sqf,shield_onLowHealth)
+macro_prep_xeh(shield\fnc_shield_onNormalHealth.sqf,shield_onNormalHealth)
+macro_prep_xeh(shield\fnc_shield_regenPerFrameHandler.sqf,shield_regenPerFrameHandler)
+
 diag_log "RD501 PREP Complete";
