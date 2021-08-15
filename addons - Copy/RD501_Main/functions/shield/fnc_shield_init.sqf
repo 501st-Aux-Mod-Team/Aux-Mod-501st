@@ -55,7 +55,7 @@ if(_hasType) then {
 	_type = getText (_config >> "rd501_shield_type");
 };
 
-diag_log format["[RD501][Shield] Loading '%1' texture set", _side];
+diag_log format["[RD501][Shield] Loading '%1' texture set", _type];
 
 private _textures = [_type] call rd501_fnc_shield_getTextureSet;
 _textures params["_lowHealthTexture", "_normalHealthTexture"];
