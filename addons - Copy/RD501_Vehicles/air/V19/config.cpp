@@ -63,6 +63,7 @@ class CfgVehicles
 		draconicTorqueYCoef[]={1.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 		draconicForceYCoef=6;
 		envelope[] = {0.5,2.11,2.43,1.97,1.72,2.69,3.87,5.27,6.89,8.72,9.7,9.6,9.2,8.5,8.2,8};
+		thrustCoef[] = {3.0,3.0,3.2,3.6,4,5,6,7,9,4,3.4,3,2.2,2,2,2};
 
 		class EventHandlers{};
 

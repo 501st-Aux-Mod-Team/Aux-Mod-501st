@@ -141,3 +141,16 @@ if(hasInterface) then {
 ["rd501_volatile_create", {
 	_this call rd501_fnc_volatile_create;
 }] call CBA_fnc_addEventHandler;
+
+// Shield
+["rd501_shield_destroy", {
+	_this call rd501_fnc_shield_onDestroy;
+}] call CBA_fnc_addEventHandler;
+
+["rd501_shield_lowHealth", {
+	_this call rd501_fnc_shield_onLowHealth;
+}] call CBA_fnc_addEventHandler;
+
+["rd501_shield_normalHealth", {
+	_this call rd501_fnc_shield_onNormalHealth;
+}] call CBA_fnc_addEventHandler;
