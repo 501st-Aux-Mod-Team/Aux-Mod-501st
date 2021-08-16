@@ -1,0 +1,1 @@
+localNamespace getVariable ["rd501_jammers",[]];

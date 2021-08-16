@@ -91,24 +91,26 @@ if(!isDedicated) then {
 		],
 		false
 	] call cba_fnc_addKeybind;
-}
+};
 
 // Surrender stun
 call macro_fnc_name(stun);
 
 // Jammers
-["rd501_addJammerLocal", {
-	_this call rd501_fnc_addJammerLocal
+["rd501_jammersClear", {
+	_this call rd501_fnc_jammersClear;
 }] call CBA_fnc_addEventHandler;
 
-["rd501_clearAllJammers", {
-	_this call rd501_fnc_clearAllJammers
+["rd501_jammersAddServer", {
+	_this call rd501_fnc_jammersAddServer;
 }] call CBA_fnc_addEventHandler;
 
-["rd501_jammerServerPFH", {
-	[{
-		_this call rd501_fnc_jammersServerPFH
-	}, 1] call CBA_fnc_addPerFrameHandler;
+["rd501_jammersRemoveServer", {
+	_this call rd501_fnc_jammersRemoveServer;
+}] call CBA_fnc_addEventHandler;
+
+["rd501_jammersUpdateLocal", {
+	_this call rd501_fnc_jammersUpdateLocal;
 }] call CBA_fnc_addEventHandler;
 
 // Fired Deployables

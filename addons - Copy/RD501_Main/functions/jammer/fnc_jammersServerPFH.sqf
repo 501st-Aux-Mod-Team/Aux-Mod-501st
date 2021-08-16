@@ -1,29 +1,24 @@
 params["_args", "_handle"];
 
 if(!isServer) exitWith {
-	diag_log "Exiting Jammer Server PFH :: Not Server";
+	diag_log "[RD501 Jammers] Exiting Jammer Server PFH :: Not Server";
 	[_handle] call CBA_fnc_removePerFrameHandler;
 };
 
-private _jammers = missionNamespace getVariable ["rd501_jammers",[]];
+private _jammers = localNamespace getVariable ["rd501_jammers_server",[]];
+if(count _jammers == 0) exitWith {
+	diag_log "[RD501 Jammers] Exiting Jammer Server PFH :: No Jammers";
+	[_handle] call CBA_fnc_removePerFrameHandler;
+};
 
 {
-	_x params["_jammer", "_radius", "_strength", "_jipId", "_active"];
+	_x params["_jammer", "_radius", "_strength", "_active"];
 	if(_jammer isEqualTo objNull || !(alive _jammer)) then {
-		diag_log format["Removing Jammer %1",_jammer];
+		diag_log format["[RD501 Jammers] Removing Jammer %1",_jammer];
 		_jammers set [_foreachIndex, []];
-		if(_jipId != -1) then {
-			[_jipId] call CBA_fnc_removeGlobalEventJIP;
-		};
 	};
 } forEach _jammers;
 
 _jammers = _jammers - [[]];
 
-missionNamespace setVariable ["rd501_jammers", _jammers, true];
-
-if(count _jammers == 0) exitWith {
-	diag_log "Exiting Jammer Server PFH";
-	["rd501_clearAllJammers", []] call CBA_fnc_globalEvent;
-	[_handle] call CBA_fnc_removePerFrameHandler;
-};
+[_jammers] call rd501_fnc_jammersUpdateServer;
