@@ -71,10 +71,7 @@ _target setVariable ["rd501_shield_regenStartsAt", diag_tickTime];
 _target setVariable ["rd501_shield_stateJipId", false];
 
 _pfhId = [
-	{
-		params["_shield"];
-		[_shield] call rd501_fnc_shield_regenPerFrameHandler;
-	},
+	rd501_fnc_shield_regenPerFrameHandler,
 	1,
 	[_target]
 ] call CBA_fnc_addPerFrameHandler;
