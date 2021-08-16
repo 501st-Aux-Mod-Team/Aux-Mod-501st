@@ -20,7 +20,7 @@ else
 {
 	// Set locally only to reduce network traffic
 	_target setVariable ["rd501_shield_currentHealth", _result];
-	[_shield] call rd501_fnc_shield_checkState;
+	[_target] call rd501_fnc_shield_checkState;
 	private _delay = _target getVariable["rd501_shield_regenDelay", 5];
 	_target setVariable ["rd501_shield_regenStartsAt", diag_tickTime + _delay];
 };
