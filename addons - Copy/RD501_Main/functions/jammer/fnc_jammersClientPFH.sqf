@@ -30,17 +30,19 @@ private _interference = 1;
 			private _d = _distance/_radius;
 			private _specificSignal =  1/(1 + ((_d/(1 -_d)) ^ -2.3));
 			private _specificInterference = _strength * (1 - _specificSignal) * _interferenceFactor;
-			if(_interference == 1) then {
-				_interference = _specificInterference;
-				continue;
-			};
-			_interference = _interference max _specificInterference;
-			if(_interference < 1) then {
-				_interference = 1; //prevent 0 from being final value
-			};
-			if(_interference > _strength) then {
-				_interference = _strength; // prevent tfar from being exposed to 1.6e^24 when distance is null
+			if(_interference != 1) then {
+				_interference = _interference max _specificInterference;
+				if(_interference < 1) then {
+					_interference = 1; //prevent 0 from being final value
+				};
+				if(_interference > _strength) then {
+					_interference = _strength; // prevent tfar from being exposed to 1.6e^24 when distance is null
+				};
 			}
+			else
+			{
+				_interference = _specificInterference;
+			};
 		};
 	};
 } forEach _jammers;
