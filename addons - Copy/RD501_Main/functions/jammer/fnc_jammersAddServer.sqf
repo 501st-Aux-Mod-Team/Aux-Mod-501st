@@ -13,6 +13,6 @@ if(_pfhHandle isEqualTo -1) then {
 		_this call rd501_fnc_jammersServerPFH;
 	}, 2, []] call CBA_fnc_addPerFrameHandler;
 	localNamespace getVariable ["rd501_jammers_serverPFH", _handle];
-	diag_log format["[RD501 Jammers] Started server PFH with handle '%1'", _handle];
+	diag_log format["[RD501 Jammers][Server Add] Started server PFH with handle '%1'", _handle];
 	_handle
 };
