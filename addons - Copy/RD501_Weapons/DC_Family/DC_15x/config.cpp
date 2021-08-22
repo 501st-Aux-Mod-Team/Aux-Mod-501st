@@ -42,6 +42,7 @@ class cfgWeapons
 		descriptionShort = "DC-15X Scope (12-20x)";
 		baseWeapon=macro_new_weapon(DC,r15x)
 		canShootInWater=1;
+		JLTS_hasElectronics=0;
 		magazines[]=
 		{
 			macro_new_mag(40mw,5),

@@ -32,7 +32,8 @@ class CfgPatches
 			macro_new_weapon(generic,preatorian_gun_opfor),
 			macro_new_weapon(aa_gun,aa_gun_base),
 			macro_new_weapon(generic,blue_dual_aircraft_laser),
-			macro_new_weapon(generic,green_dual_aircraft_laser)
+			macro_new_weapon(generic,green_dual_aircraft_laser),
+			macro_new_weapon(generic,preatorian_turret_opfor)
 		};
 	};
 };
@@ -170,9 +171,15 @@ class CfgWeapons
 		magazines[] = {
 			macro_new_mag(generic_aircraft_gun_preatorian,1000)
 		};
+	};
+	class macro_new_weapon(generic,preatorian_turret_opfor): autocannon_35mm
+	{
+		displayName = "Heavy Turret";
+		magazines[] = {
+			macro_new_mag(generic_aircraft_gun,1000)
+		};
 		
 	};
-
 
 	//Kannon
 	class macro_new_weapon(generic,kannon) : macro_new_weapon(generic,republic_aircraft_cannon)

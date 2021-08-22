@@ -43,7 +43,7 @@ class CfgWeapons
 		author="$STR_3rd_Studios";
 		scope=2;
 		weaponPoolAvailable=1;
-		displayName="[AVI] Pilot Base";
+		displayName="[501st] AVI HELM (Base)";
 		picture="3AS\3AS_Characters\Clones\Headgear\ui\p2pilot_ui_ca.paa";
 		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_Pilot_P2.p3d";
 		hiddenSelections[]=
@@ -92,6 +92,8 @@ class CfgWeapons
 	NEW_501_Pilot_HELM(Duncan,Duncan,pilots\Duncan.paa)
 	NEW_501_Pilot_HELM(Neb,Neb,pilots\Neb.paa)
 	NEW_501_Pilot_HELM(Salvatore,Salvatore,pilots\Salvatore.paa)
+	NEW_3AS_Pilot_HELM(Kushiban,Kushiban,pilots\Kushiban1)
+	NEW_3AS_Pilot_HELM(Shnuffles,Shnuffles,pilots\Shnuffles1)
 
 	class macro_new_helmet(pilot,scuba): macro_new_helmet(pilot,base)
 	{

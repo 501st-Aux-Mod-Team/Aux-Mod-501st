@@ -533,11 +533,12 @@ class CfgAmmo
 	};
 	class macro_new_ammo(generic_aircraft_laser_gun_praetorian) : macro_new_ammo(generic_aircraft_laser_gun_red)
 	{
-		hit = 75;
+		hit = 100;
 		caliber = 1;
 		indirectHit = 0;
 		indirectHitRange = 0;
 		explosive = 0;
+		allowAgainstInfantry = 0;
 		model="RD501_Vehicle_Weapons\_ammo\data\laser_medium_purple.p3d"
 	};
 	class macro_new_ammo(generic_aircraft_laser_cannon_dual_green): macro_new_ammo(generic_aircraft_laser_gun_red)
