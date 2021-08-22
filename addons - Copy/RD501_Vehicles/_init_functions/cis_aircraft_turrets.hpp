@@ -18,13 +18,13 @@
 
     class macro_new_vehicle(HMP,gunship) {
 		class turret1 {
-			init = [_this select 0,macro_single_quote(macro_new_vehicle(Praetorian_Variant,normal)),[0,5,-.5]] spawn macro_fnc_name(apply_aircraft_turrets);
+			init = [_this select 0,macro_single_quote(macro_new_vehicle(Praetorian_Variant,opfor)),[0,5,-.5]] spawn macro_fnc_name(apply_aircraft_turrets);
 		};
 		class turret2 {
-			init = [_this select 0,macro_single_quote(macro_new_vehicle(Praetorian_Variant,normal)),[5,0,-.5]] spawn macro_fnc_name(apply_aircraft_turrets);
+			init = [_this select 0,macro_single_quote(macro_new_vehicle(Praetorian_Variant,opfor)),[5,0,-.5]] spawn macro_fnc_name(apply_aircraft_turrets);
 		};
 		class turret3 {
-			init = [_this select 0,macro_single_quote(macro_new_vehicle(Praetorian_Variant,normal)),[-5,0,-.5]] spawn macro_fnc_name(apply_aircraft_turrets);
+			init = [_this select 0,macro_single_quote(macro_new_vehicle(Praetorian_Variant,opfor)),[-5,0,-.5]] spawn macro_fnc_name(apply_aircraft_turrets);
 		};
 		macro_standard_eh
         class swop_init {

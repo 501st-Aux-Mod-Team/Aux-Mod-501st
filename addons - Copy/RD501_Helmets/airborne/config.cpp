@@ -42,4 +42,5 @@ class CfgWeapons
 	NEW_501_AB_HELM_JLTS(501st_Aedan_helmet,Aedan,Aedan.paa)
 	NEW_501_AB_HELM_JLTS(501st_Waze_helmet,Waze,Waze.paa)
 	NEW_501_AB_HELM_JLTS(501st_Spilberge_helmet,Spilberge,Spilberge.paa)
+	NEW_501_AB_HELM_JLTS(501st_Akira_helmet,Akira,Akira.paa)
 };

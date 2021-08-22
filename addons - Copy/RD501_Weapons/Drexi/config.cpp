@@ -43,10 +43,10 @@ class CfgWeapons
 		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_beta\Rifles\MK20\Data\Anim\mk20G.rtm"};
 		magazines[] =
 		{
-			macro_new_mag(shotgun_scatter,6),
-			macro_new_mag(shotgun_HE,6),
+			macro_new_mag(shotgun_scatter,12),
+			macro_new_mag(shotgun_HE,12),
 			macro_new_mag(shotgun_EMP,2),
-			macro_new_mag(shotgun_slug,6)
+			macro_new_mag(shotgun_slug,15)
 		};
 		reloadAction = "ReloadMagazine";
 		displayName = "Republic SX17 Drexl";

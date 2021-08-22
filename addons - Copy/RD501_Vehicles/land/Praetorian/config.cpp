@@ -327,37 +327,10 @@ class CfgVehicles
 		class EventHandlers :DefaultEventhandlers{};
 	};
 
-	class  macro_new_vehicle(Praetorian_Variant,blufor) :  macro_new_vehicle(Praetorian_Variant,normal)
-	{
-		side = 1;
-		displayName = "Laser Turret (AA)";
-		faction = macro_republic_faction
-		//editorSubcategory = macro_editor_cat(AA)
-		//vehicleClass = macro_editor_vehicle_type(AA)
-		//faction = "RD501Faction";
-		hiddenSelectionsTextures[] = 
-		{
-			macro_vehicle_textures\Fast_Infantry_Transport\FAT.paa,
-			macro_vehicle_textures\Fast_Infantry_Transport\FAT.paa
-		};
-		class Turrets: Turrets
-		{
-			class MainTurret: MainTurret
-			{
-				weapons[] = {
-					macro_new_weapon(generic,preatorian_gun_opfor)
-				};
-				magazines[] = {
-					macro_new_mag(generic_aircraft_gun_preatorian,1000),
-					macro_new_mag(generic_aircraft_gun_preatorian,1000)
-				};
-			};
-		};
-	};
 	class macro_new_vehicle(Praetorian_Variant,opfor): macro_new_vehicle(Praetorian_Variant,normal)
 	{
 		displayName = "Laser Cannons (opfor)";
-		faction = "";
+		/*faction = "";
 		scope = 1;//?
 		scopecurator = 1;
 		weaponLockSystem = "2+4+8";
@@ -374,7 +347,7 @@ class CfgVehicles
 			class MainTurret: MainTurret
 			{
 				weapons[] = {
-					macro_new_weapon(generic,aircraft_laser)
+					macro_new_weapon(generic,preatorian_turret_opfor)
 				};
 				magazines[] = {
 					macro_new_mag(generic_aircraft_gun,1000),
@@ -391,51 +364,4 @@ class CfgVehicles
 			};
 		};
 	};	
-	class macro_new_vehicle(Praetorian_Variant,Ion): macro_new_vehicle(Praetorian_Variant,normal)//
-	{
-		side = 1;
-
-		faction = macro_resistance_faction
-		editorSubcategory = macro_editor_cat(AA)
-		vehicleClass = macro_editor_vehicle_type(AA)
-		displayName = "Laser Cannons (I.O.N)";
-		class Turrets: Turrets
-		{
-			class MainTurret: MainTurret
-			{
-				weapons[] = {
-					macro_new_weapon(generic,ion_aircraft_laser)
-				};
-				magazines[] = {
-					macro_new_mag(generic_aircraft_gun_blue,1000),
-					macro_new_mag(generic_aircraft_gun_blue,1000)
-				};
-			};
-		};
-	};
-	class macro_new_vehicle(Praetorian_Variant,Purple): macro_new_vehicle(Praetorian_Variant,normal)//
-	{
-		displayName = "Laser Cannons (PURPLEE)";
-
-		faction = "";
-	//	editorSubcategory = macro_editor_cat(AA)
-	//	vehicleClass = macro_editor_vehicle_type(AA)
-
-		class Turrets: Turrets
-		{
-			class MainTurret: MainTurret
-			{
-				weapons[] = {
-					macro_new_weapon(generic,purple_aircraft_laser)
-					};
-				magazines[] = {
-					macro_new_mag(generic_aircraft_gun_purple,1000),
-					macro_new_mag(generic_aircraft_gun_purple,1000)
-				};
-			};
-		};
-	};
-	
-
-
 };

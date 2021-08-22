@@ -554,6 +554,33 @@ class CfgMagazines
 		ammo = macro_new_ammo(30mw)
 		descriptionShort = "6 Rnd Slug";
 	};
+	class macro_new_mag(shotgun_scatter,12):2Rnd_12Gauge_Pellets
+	{
+		scope=2;
+		displayName = "12 Rnd SP Magazine";
+		displayNameShort = "12 Rnd SP Mag";
+		count=12;
+		ammo = macro_new_ammo(shotgun_scatter)
+		descriptionShort = "12 Rnd SP";
+	};
+	class macro_new_mag(shotgun_HE,12):2Rnd_12Gauge_Pellets
+	{
+		scope=2;
+		displayName = "12 Rnd UP Magazine";
+		displayNameShort = "12 Rnd UP Mag";
+		count=12;
+		ammo = macro_new_ammo(shotgun_HE)
+		descriptionShort = "12 Rnd UP";
+	};
+	class macro_new_mag(shotgun_slug,15):2Rnd_12Gauge_Pellets
+	{
+		scope=2;
+		displayName = "15 Rnd Slug Magazine";
+		displayNameShort = "15 Rnd Slug Mag";
+		count=15;
+		ammo = macro_new_ammo(30mw)
+		descriptionShort = "15 Rnd Slug";
+	};
 	////////////////////////////////////////////////////
 	/////////////Flare    Magazines/////////////////////
 	////////////////////////////////////////////////////
