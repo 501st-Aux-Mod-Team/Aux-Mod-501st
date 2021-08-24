@@ -28,17 +28,6 @@ RD501_AUTO_RELOAD_ON_EQUIP = [QWEAP_NOFAM(z1000),QWEAP_LAUNCH(rps1)];
 // Magclamp
 call macro_fnc_name(magclamp);
 
-// Check every second for if the Loading Screen is still up and forcibly end it.
-_fnc_endLoadingScreen = {
-	params ["_args", "_handle"];
-	systemChat format["Ending LoadingScreen [Handle %1]", _handle];
-	endLoadingScreen;
-	_stillLoading = call BIS_fnc_isLoading;
-	if(!_stillLoading) exitWith {
-		[_handle] call CBA_fnc_removePerFrameHandler;
-	};
-};
-[_fnc_endLoadingScreen, 5, []] call CBA_fnc_addPerFrameHandler;
 // Flip Backpack
 rd501_flip_vehicle_validBackpacks = ["RD501_JLTS_Clone_Flip_backpack"];
 ["rd501_external_reload", { _this call rd501_fnc_onReloadExternalHandler }, []] call CBA_fnc_addEventHandlerArgs;
