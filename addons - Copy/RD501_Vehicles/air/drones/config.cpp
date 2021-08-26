@@ -99,21 +99,6 @@ class CfgVehicles
         fuelCapacity = 90;
         fuelConsumptionRate = 1;
 		faction = macro_republic_faction;
-		class ACE_Actions {
-            distance = 4;
-            condition = macro_quote(true);
-            class ACE_MainActions {
-                condition = macro_quote(true);
-                class RD501_Drone_Refuel
-                {
-                    displayName = "Refuel Drone";
-                    distance = 4;
-                    condition = macro_quote([ARR_2(_player,_target)] call macro_fnc_name(canRefuel));
-                    statement = macro_quote([ARR_2(_player,_target)] call macro_fnc_name(refuelUAVDrone));
-                    position = macro_quote(call ace_interaction_fnc_getVehiclePos);
-                };
-            };
-        };
 		class assembleInfo
 		{
 			dissasembleTo[]=

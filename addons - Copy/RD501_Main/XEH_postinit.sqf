@@ -16,6 +16,17 @@ call macro_fnc_name(nightvision);
 
 // Drone Recharge
 RD501_DRONE_BATTERY = "RD501_r2_charge_pack_x10_mag";
+private _refuelAction = [
+	"RD501_Drone_Refuel", 
+	"Refuel Drone", 
+	"", 
+	rd501_fnc_refuelUAVDrone, 
+	rd501_fnc_canRefuel,[], 
+	{call ace_interaction_fnc_getVehiclePos}, 
+	4
+] call ACE_interact_menu_fnc_createAction;
+
+["RD501_Drone_Clone_Recon_Droid", 0, ["ACE_MainActions"], _refuelAction, true] call ACE_interact_menu_fnc_addActionToClass;
 
 //Force Walk
 RD501_FORCE_WALK_WEAPONS = [macro_quote(macro_new_weapon_nofam(z1000))];
