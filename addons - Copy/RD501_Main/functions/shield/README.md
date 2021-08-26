@@ -1,5 +1,42 @@
 # Energy Shield
 
+## Getting Started
+
+For it to function correctly, there are two things that must be added. A configuration entry for `rd501_shield_isShield=1` to allow shield logic, and an init event handler which will initialise the shield logic and setup everything for you.
+
+### Configuration
+
+
+```cpp
+class CfgVehicles {
+    class Example_Vehicle {
+        rd501_shield_isShield=1;
+    };
+};
+```
+
+> If this is missing or invalid, the init handler will cause the following message to be logged to rpt.
+```
+[RD501][Shield] Shield is not activated (rd501_shield_isShield=1 is not specified on 'class name')
+```
+
+### Init EventHandler
+
+```cpp
+class Extended_Init_EventHandlers 
+{
+    //Example_Vehicle must match the vehicles class in CfgVehicles
+    class Example_Vehicle {
+        // You can name this whatever you want
+        class rd501_init_shield {
+            init = "[_this select 0] call rd501_fnc_shield_init";
+        };
+    }
+};
+```
+
+> If this is missing, nothing will be logged.
+
 ## Configuration Properties
 
 ### Enable Shield
