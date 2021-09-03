@@ -509,11 +509,18 @@ class CfgMagazines
 	class macro_new_mag(rps4burst,1) : RPG32_F
 	{
 		author="RD501";
-		displayName="RPS4 Burst Rocket";
+		displayName="RPS4 Smoke Cluster Rocket";
 		descriptionShort="Burst Rocket";
 		count=1;
 		scope=1;
 		ammo = macro_new_ammo(rps4burst);
+	};
+	class macro_new_mag(rps4emp,1): RPG32_F
+	{
+		author="RD501";
+		displayName="RPS4 EMP Rocket";
+		descriptionShort="EMP Rocket";
+		ammo=macro_new_ammo(rps4heat)
 	};
 	////////////////////////////////////////////////////
 	/////////////Shotgun  Magazines/////////////////////
@@ -578,6 +585,7 @@ class CfgMagazines
 		displayName = "15 Rnd Slug Magazine";
 		displayNameShort = "15 Rnd Slug Mag";
 		count=15;
+		initSpeed=600;
 		ammo = macro_new_ammo(30mw)
 		descriptionShort = "15 Rnd Slug";
 	};

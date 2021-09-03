@@ -598,7 +598,7 @@ class CfgAmmo
 	{
 		triggerTime  = 1;
 		submunitionConeType[] = {"poissondisc", 16};
-		submunitionAmmo[] = {macro_new_ammo(rps4burstsub),1};
+		submunitionAmmo[] = {macro_new_ammo(super_smoke),1};
 		triggerOnImpact=0;
 		deleteParentWhenTriggered=1;
 		//submunitionParentSpeedCoef = 0;
