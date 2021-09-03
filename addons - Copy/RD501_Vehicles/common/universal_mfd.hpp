@@ -17,7 +17,8 @@ class MFD//color[]={"user0","user1","user2"}; alpha = "user3"
 		{
 			type = "vector";
 			pos0[] = {0.5,0.5};
-			pos10[] = {1.225,1.1};
+			pos10[] = {0.5,0.5};
+			//pos10[] = {1.225,1.1};
 		};
 		topLeft = "HUD LH";
 		topRight = "HUD PH";
@@ -27,7 +28,6 @@ class MFD//color[]={"user0","user1","user2"}; alpha = "user3"
 		borderTop = 0;
 		borderBottom = 0;
 		color[]={"user0","user1","user2"};//color[] = {0.082, 0.408, 0.039, 1};
-		//yikes
 		class Bones
 		{
 			class ThrustVectoringRotation

@@ -594,6 +594,14 @@ class CfgAmmo
 		hit=150;
 		submunitionAmmo="ammo_Penetrator_Titan_AT";
 	};
+	class macro_new_ammo(rps4emp):R_PG32V_F
+	{
+		hit=1;
+		submunitionAmmo="";
+		submunitionDirectionType="";
+		CraterEffects="";
+		explosionEffects="JLTS_fx_exp_EMP";
+	};
 	class macro_new_ammo(rps4burst):R_PG32V_F
 	{
 		triggerTime  = 1;

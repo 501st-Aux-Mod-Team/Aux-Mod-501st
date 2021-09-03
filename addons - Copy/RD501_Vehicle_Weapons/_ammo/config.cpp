@@ -530,6 +530,7 @@ class CfgAmmo
 		caliber = 1;
 		explosive = 0.6;
 		model="RD501_Vehicle_Weapons\_ammo\data\laser_small_green.p3d"
+		tracerScale=2;
 	};
 	class macro_new_ammo(generic_aircraft_laser_gun_praetorian) : macro_new_ammo(generic_aircraft_laser_gun_red)
 	{

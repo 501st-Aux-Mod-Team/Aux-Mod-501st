@@ -29,10 +29,12 @@ class CfgVehicles
 	class 3as_nuclass_base;
 	class 3as_nuclass_f: 3as_nuclass_base
 	{
+		class ViewPilot;
 		class UserActions;
 	};
 	class 3AS_Nuclass : 3as_nuclass_f
 	{
+		class ViewPilot: ViewPilot{};
 		class UserActions: UserActions
 		{
 			class rampOpen;
@@ -136,6 +138,11 @@ class CfgVehicles
 				insertChildren = "_this call ace_interaction_fnc_addPassengersActions";
 				statement = "";
 			};
+			#include "../../common/universal_hud_color_changer.hpp"
+		};
+		class ViewPilot: ViewPilot
+		{	
+			initAngleX = 0;
 		};
 		class TransportWeapons
 		{

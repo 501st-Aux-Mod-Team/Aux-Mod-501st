@@ -512,7 +512,7 @@ class CfgMagazines
 		displayName="RPS4 Smoke Cluster Rocket";
 		descriptionShort="Burst Rocket";
 		count=1;
-		scope=1;
+		scope=2;
 		ammo = macro_new_ammo(rps4burst);
 	};
 	class macro_new_mag(rps4emp,1): RPG32_F
@@ -520,7 +520,7 @@ class CfgMagazines
 		author="RD501";
 		displayName="RPS4 EMP Rocket";
 		descriptionShort="EMP Rocket";
-		ammo=macro_new_ammo(rps4heat)
+		ammo=macro_new_ammo(rps4emp)
 	};
 	////////////////////////////////////////////////////
 	/////////////Shotgun  Magazines/////////////////////

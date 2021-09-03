@@ -286,6 +286,14 @@ class CfgMagazines
 		displayNameShort = "Zephyr A2A";
 		tracersEvery=1;
 	};
+	class macro_new_mag(a2a,2) : 4Rnd_AAA_missiles //RD501_4Rnd_A2AM_Mag
+	{
+		ammo = macro_new_ammo(a2a)
+		count = 2;
+		displayName = "Evil Zephyr A2A";
+		displayNameShort = "Evil Zephyr A2A";
+		tracersEvery=1;
+	};
 
 	class macro_new_mag(agm,6) : PylonRack_12Rnd_PG_missiles//6Rnd_Missile_AGM_02_F
 	{

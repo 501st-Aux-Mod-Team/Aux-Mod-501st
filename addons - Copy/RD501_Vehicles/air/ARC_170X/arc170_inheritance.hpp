@@ -15,6 +15,7 @@
 	};
 	class Plane_Fighter_03_base_F: Plane_Base_F
 	{
+		class ViewPilot;
 		class Turrets
 		{
 			class MainTurret;
@@ -22,6 +23,7 @@
 	};
 	class Plane_Fighter_03_dynamicLoadout_base_F: Plane_Fighter_03_base_F
 	{
+		class ViewPilot: ViewPilot{};
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
@@ -39,6 +41,7 @@
 	};
 class 3as_arc_170_base:Plane_Fighter_03_dynamicLoadout_base_F
 {
+	class ViewPilot: ViewPilot{};
 	class Turrets: Turrets
 	{
 		class LaserPilot:NewTurret{};
@@ -58,6 +61,7 @@ class NewTurret;
 class 3as_arc_170_blue: 3as_arc_170_base
 {
 	class Components;
+	class ViewPilot: ViewPilot{};
 	class Turrets: Turrets
 	{
 		class LaserPilot:LaserPilot{};

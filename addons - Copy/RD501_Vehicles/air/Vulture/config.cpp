@@ -103,6 +103,21 @@ class CfgVehicles
 		editorSubcategory = macro_editor_cat_air(CIS)
 		vehicleClass = macro_editor_vehicle_type_air(CIS)
 		radarTargetSize = 0.7;
+		weapons[]={
+			macro_new_weapon(generic,aircraft_laser),
+			macro_new_weapon(wynd,a2a_vulture)
+		};
+		magazines[]={
+			macro_new_mag(generic_aircraft_gun,1000),
+			macro_new_mag(generic_aircraft_gun,1000),
+			macro_new_mag(a2a,2),
+			macro_new_mag(a2a,2)
+		};
+		class Components: Components
+		{
+			class TransportPylonsComponent
+			{};
+		};
 		class HitPoints: HitPoints
 		{
 			class HitHull: HitHull
