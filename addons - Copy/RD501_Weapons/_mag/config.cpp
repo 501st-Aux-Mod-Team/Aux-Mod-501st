@@ -579,15 +579,16 @@ class CfgMagazines
 		ammo = macro_new_ammo(shotgun_HE)
 		descriptionShort = "12 Rnd UP";
 	};
-	class macro_new_mag(shotgun_slug,15):2Rnd_12Gauge_Pellets
+	class macro_new_mag(shotgun_slug,15):macro_new_mag(30mw,10)
 	{
 		scope=2;
+		initSpeed=600;
 		displayName = "15 Rnd Slug Magazine";
 		displayNameShort = "15 Rnd Slug Mag";
 		count=15;
-		initSpeed=600;
 		ammo = macro_new_ammo(30mw)
-		descriptionShort = "15 Rnd Slug";
+		descriptionShort = "15 Rnd Slug";	
+		picture = "\a3\Weapons_F_Enoch\MagazineProxies\data\UI\icon_2rnd_12gauge_slugs_CA.paa";
 	};
 	////////////////////////////////////////////////////
 	/////////////Flare    Magazines/////////////////////
