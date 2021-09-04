@@ -601,6 +601,8 @@ class CfgAmmo
 		submunitionDirectionType="";
 		CraterEffects="";
 		explosionEffects="JLTS_fx_exp_EMP";
+		rd501_emp_vehicle_enabled=1;
+		rd501_emp_vehicle_duration=15;
 	};
 	class macro_new_ammo(rps4burst):R_PG32V_F
 	{
