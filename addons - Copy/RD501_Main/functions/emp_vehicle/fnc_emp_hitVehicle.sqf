@@ -2,10 +2,12 @@ params["_ammo", "_vehicle"];
 
 private _config = configFile >> "CfgAmmo" >> _ammo;
 
-private _empEnabled = 10;
-if(isNumber (_config >> "rd501_emp_vehicle_duration")) then {
-	_empEnabled = getNumber (_config >> "rd501_emp_vehicle_duration");
+private _empEnabled = 0;
+if(isNumber (_config >> "rd501_emp_vehicle_enabled")) then {
+	_empEnabled = getNumber (_config >> "rd501_emp_vehicle_enabled");
 };
+
+if(_empEnabled != 1) exitWith { };
 
 private _empDuration = 10;
 if(isNumber (_config >> "rd501_emp_vehicle_duration")) then {
@@ -20,9 +22,11 @@ if(isNumber (_config >> "rd501_emp_vehicle_resistance_percent")) then {
 };
 
 private _effectiveDuration = _empDuration * (1 + ((-_empResistancePercent)/100));
+diag_log format["[RD501][Vehicle EMP] Effective Duration = %1 seconds", _effectiveDuration];
 
 if(_effectiveDuration <= 1) exitWith { diag_log "[RD501][Vehicle EMP] Effective EMP Duration too low, not worth setting. Skipped." };
 
+diag_log format["[RD501][Vehicle EMP] Enabling %1", _vehicle];
 [_vehicle] call rd501_fnc_emp_disableVehicle;
 [
 	{

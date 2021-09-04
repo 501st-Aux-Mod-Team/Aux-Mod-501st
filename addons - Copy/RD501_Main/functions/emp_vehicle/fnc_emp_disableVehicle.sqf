@@ -1,6 +1,7 @@
 params["_vehicle"];
 
 if!(local _vehicle) exitWith { };
+diag_log format["[RD501][Vehicle EMP] Disabling Vehicle '%1'", _vehicle];
 
 _vehicle allowCrewInImmobile true;
 _vehicle lock 2;
@@ -14,7 +15,7 @@ _vehicle lock 2;
 	_x disableAI "FSM";
 } forEach crew _vehicle;
 
-(getAllHitPointsDamage _vehicle) params [["_allHitPoints", []], ["", []], ["", []]];
+(getAllHitPointsDamage _vehicle) params [["_allHitPoints", []]];
 
 {
 	private _isEngineLower = (_x find "engine") != -1;

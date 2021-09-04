@@ -156,18 +156,6 @@ if(hasInterface) then {
 }] call CBA_fnc_addEventHandler;
 
 // Vehicle EMP
-["Car", "HitPart", {
-	_this call rd501_fnc_emp_hitHandler;
-}] call CBA_fnc_addClassEventHandler;
-
-["Tank", "HitPart", {
-	_this call rd501_fnc_emp_hitHandler;
-}] call CBA_fnc_addClassEventHandler;
-
-["Ship", "HitPart", {
-	_this call rd501_fnc_emp_hitHandler;
-}] call CBA_fnc_addClassEventHandler;
-
-["Air", "HitPart", {
+["All", "HitPart", {
 	_this call rd501_fnc_emp_hitHandler;
 }] call CBA_fnc_addClassEventHandler;

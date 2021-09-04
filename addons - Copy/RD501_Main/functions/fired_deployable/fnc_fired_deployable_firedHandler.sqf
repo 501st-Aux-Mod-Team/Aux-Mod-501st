@@ -45,3 +45,4 @@ if (_deployable == 1) then {
 		}
 	] call CBA_fnc_waitUntilAndExecute;
 };
+
