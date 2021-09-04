@@ -154,3 +154,20 @@ if(hasInterface) then {
 ["rd501_shield_normalHealth", {
 	_this call rd501_fnc_shield_onNormalHealth;
 }] call CBA_fnc_addEventHandler;
+
+// Vehicle EMP
+["Car", "HitPart", {
+	_this call rd501_fnc_emp_hitHandler;
+}] call CBA_fnc_addClassEventHandler;
+
+["Tank", "HitPart", {
+	_this call rd501_fnc_emp_hitHandler;
+}] call CBA_fnc_addClassEventHandler;
+
+["Ship", "HitPart", {
+	_this call rd501_fnc_emp_hitHandler;
+}] call CBA_fnc_addClassEventHandler;
+
+["Air", "HitPart", {
+	_this call rd501_fnc_emp_hitHandler;
+}] call CBA_fnc_addClassEventHandler;

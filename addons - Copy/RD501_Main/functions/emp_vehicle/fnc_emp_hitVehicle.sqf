@@ -19,7 +19,7 @@ if(isNumber (_config >> "rd501_emp_vehicle_resistance_percent")) then {
 	_empResistancePercent = _empResistancePercent max 100;
 };
 
-private _effectiveDuration = _empDuration * (1 + ((- _empResistancePercent)/100));
+private _effectiveDuration = _empDuration * (1 + ((-_empResistancePercent)/100));
 
 if(_effectiveDuration <= 1) exitWith { diag_log "[RD501][Vehicle EMP] Effective EMP Duration too low, not worth setting. Skipped." };
 
