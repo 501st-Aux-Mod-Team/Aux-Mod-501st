@@ -176,4 +176,10 @@ macro_prep_xeh(shield\fnc_shield_onLowHealth.sqf,shield_onLowHealth)
 macro_prep_xeh(shield\fnc_shield_onNormalHealth.sqf,shield_onNormalHealth)
 macro_prep_xeh(shield\fnc_shield_regenPerFrameHandler.sqf,shield_regenPerFrameHandler)
 
+// Vehicle EMP
+macro_prep_xeh(emp_vehicle\fnc_emp_hitVehicle.sqf,emp_hitVehicle)
+macro_prep_xeh(emp_vehicle\fnc_emp_hitHandler.sqf,emp_hitHandler)
+macro_prep_xeh(emp_vehicle\fnc_emp_enableVehicle.sqf,emp_enableVehicle)
+macro_prep_xeh(emp_vehicle\fnc_emp_disableVehicle.sqf,emp_disableVehicle)
+
 diag_log "RD501 PREP Complete";
