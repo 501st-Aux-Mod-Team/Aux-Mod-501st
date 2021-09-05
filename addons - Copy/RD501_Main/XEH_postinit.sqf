@@ -159,3 +159,7 @@ if(hasInterface) then {
 ["All", "HitPart", {
 	_this call rd501_fnc_emp_hitHandler;
 }] call CBA_fnc_addClassEventHandler;
+
+["rd501_emp_vehicle_hit", {
+	_this call rd501_fnc_emp_hitVehicle;
+}] call CBA_fnc_addEventHandler;
