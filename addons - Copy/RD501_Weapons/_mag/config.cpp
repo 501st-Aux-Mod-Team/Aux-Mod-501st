@@ -101,8 +101,9 @@ class CfgMagazines
 	};
 	class macro_new_mag(20mw,20) : 3AS_45Rnd_EC50_Mag
 	{
-		displayName="20 Round 20MW Cell";
-		count = 20;
+		displayName="25 Round 20MW Cell";
+		count = 25;
+		picture="\RD501_Weapons\_mag\data\rd501_icon_mag_dc15a_up.paa";
 		ammo=macro_new_ammo(20mw)
 		initSpeed=700;
 		descriptionShort="Medium power magazine";
@@ -360,6 +361,14 @@ class CfgMagazines
 		ammo = "F_40mm_White";
 		descriptionShort = "6Rd White Flare RGL6 Grenade";
 	};
+	class macro_new_mag(UGL_Supersmoke,6):1Rnd_Smoke_Grenade_shell
+	{
+		displayName = "6 Rd VapeNation Magazine";
+		displayNameShort = "6 Rnd VapeNation Magazine";
+		count=6;
+		ammo = macro_new_ammo(UGL_Supersmoke)
+		descriptionShort = "6Rd VapeNation Magazine";
+	};
 	class macro_new_mag(Devastator_stun,1):1Rnd_HE_Grenade_shell
 	{
 		displayName = "1 Rd Devastator Stun Magazine";
@@ -512,7 +521,7 @@ class CfgMagazines
 		displayName="RPS4 Smoke Cluster Rocket";
 		descriptionShort="Burst Rocket";
 		count=1;
-		scope=1;
+		scope=2;
 		ammo = macro_new_ammo(rps4burst);
 	};
 	class macro_new_mag(rps4emp,1): RPG32_F
@@ -520,7 +529,7 @@ class CfgMagazines
 		author="RD501";
 		displayName="RPS4 EMP Rocket";
 		descriptionShort="EMP Rocket";
-		ammo=macro_new_ammo(rps4heat)
+		ammo=macro_new_ammo(rps4emp)
 	};
 	////////////////////////////////////////////////////
 	/////////////Shotgun  Magazines/////////////////////
@@ -579,15 +588,16 @@ class CfgMagazines
 		ammo = macro_new_ammo(shotgun_HE)
 		descriptionShort = "12 Rnd UP";
 	};
-	class macro_new_mag(shotgun_slug,15):2Rnd_12Gauge_Pellets
+	class macro_new_mag(shotgun_slug,15):macro_new_mag(30mw,10)
 	{
 		scope=2;
+		initSpeed=600;
 		displayName = "15 Rnd Slug Magazine";
 		displayNameShort = "15 Rnd Slug Mag";
 		count=15;
-		initSpeed=600;
 		ammo = macro_new_ammo(30mw)
-		descriptionShort = "15 Rnd Slug";
+		descriptionShort = "15 Rnd Slug";	
+		picture = "\a3\Weapons_F_Enoch\MagazineProxies\data\UI\icon_2rnd_12gauge_slugs_CA.paa";
 	};
 	////////////////////////////////////////////////////
 	/////////////Flare    Magazines/////////////////////

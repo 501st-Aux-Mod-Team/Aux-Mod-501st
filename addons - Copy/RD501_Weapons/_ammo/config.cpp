@@ -328,6 +328,15 @@ class CfgAmmo
 			power=0;
 		};
     };
+	class macro_new_ammo(UGL_Supersmoke) :G_40mm_Smoke
+	{
+		hit = 2;
+		indirectHit = 1;
+		indirectHitRange = 1;
+		timeToLive =30;
+		model="\3AS\3AS_Equipment\model\3AS_thermaldet.p3d";
+		effectsSmoke="RD501_ThickSmokeShellWhiteEffect";
+	};
 	class macro_new_ammo(Devastator_dioxis) :G_40mm_Smoke
 	{
 		hit = 2;
@@ -593,6 +602,16 @@ class CfgAmmo
 	{
 		hit=150;
 		submunitionAmmo="ammo_Penetrator_Titan_AT";
+	};
+	class macro_new_ammo(rps4emp):R_PG32V_F
+	{
+		hit=1;
+		submunitionAmmo="";
+		submunitionDirectionType="";
+		CraterEffects="";
+		explosionEffects="JLTS_fx_exp_EMP";
+		rd501_emp_vehicle_enabled=1;
+		rd501_emp_vehicle_duration=15;
 	};
 	class macro_new_ammo(rps4burst):R_PG32V_F
 	{

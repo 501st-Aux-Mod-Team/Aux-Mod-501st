@@ -309,7 +309,7 @@ class CfgGroups
 						position[]={.5,-.5,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
+						vehicle=macro_new_unit_class(opfor,B2_droid_Super);
 					};
 					class Unit2
 					{
@@ -667,7 +667,7 @@ class CfgGroups
 						position[]={-.5,-.5,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
+						vehicle=macro_new_unit_class(opfor,B2_droid_Super);
 					};
 					class Unit3
 					{
@@ -726,7 +726,7 @@ class CfgGroups
 						position[]={1,-1,0};
 						rank="CORPORAL";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
+						vehicle=macro_new_unit_class(opfor,B2_droid_Super);
 					};
 					class Unit4
 					{
@@ -1502,7 +1502,7 @@ class CfgGroups
 						position[]={1,-1,0};
 						rank="PRIVATE";
 						side=0;
-						vehicle=macro_new_unit_class(opfor,B2_droid_Standard);
+						vehicle=macro_new_unit_class(opfor,B2_droid_Super);
 					};
 				};
 				class macro_new_composition(opfor,light_assault_team)

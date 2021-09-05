@@ -44,6 +44,16 @@ class CfgWeapons
 		lockedTargetSound[] = {"TIE\LockedOn_2.ogg",0.7,1};
 		lockingTargetSound[] = {"TIE\Locking_Beep1.ogg",1,1};
 	};
+	class macro_new_weapon(wynd,a2a_vulture) : missiles_ASRAAM
+	{
+		displayName = "Zephyr (AA)";
+		displayNameShort = "Zephyr";
+		magazines[] = {macro_new_mag(a2a,2)};
+		soundFly[] = {"\xt\SWrocketloop.ogg",3,1,800};
+		lockedTargetSound[] = {"TIE\LockedOn_2.ogg",0.7,1};
+		lockingTargetSound[] = {"TIE\Locking_Beep1.ogg",1,1};
+		magazineReloadTime=15;
+	};
 	class macro_new_weapon(wynd,agm) : missiles_DAGR
 	{
 		displayName = "Torrent (AGM)";

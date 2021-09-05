@@ -154,3 +154,8 @@ if(hasInterface) then {
 ["rd501_shield_normalHealth", {
 	_this call rd501_fnc_shield_onNormalHealth;
 }] call CBA_fnc_addEventHandler;
+
+// Vehicle EMP
+["All", "HitPart", {
+	_this call rd501_fnc_emp_hitHandler;
+}] call CBA_fnc_addClassEventHandler;

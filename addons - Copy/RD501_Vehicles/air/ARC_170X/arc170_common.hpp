@@ -35,6 +35,21 @@ class Turrets: Turrets
 	class LaserPilot:LaserPilot{};
 	class Reargun:Reargun{};
 };
+class ACE_SelfActions
+		{
+			class ACE_Passengers
+			{
+				condition = "alive _target";
+				displayName = "Passengers";
+				insertChildren = "_this call ace_interaction_fnc_addPassengersActions";
+				statement = "";
+			};
+			#include "../../common/universal_hud_color_changer.hpp"
+		};
+class ViewPilot: ViewPilot
+{
+	initAngleX = 0;
+};
 class Components: Components
 {
 	class TransportPylonsComponent

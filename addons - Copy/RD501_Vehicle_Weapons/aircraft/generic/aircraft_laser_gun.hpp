@@ -6,7 +6,7 @@
 		//magazines[] = {"10000Rnd_RD501_RED_AircraftGun_Mag"};
 		modes[] = {"LowROF"};
 		canLock=0;
-		ballisticsComputer=4;
+		ballisticsComputer=1;
 		weaponLockSystem = 0;//changed
 		
 		magazines[] = {macro_new_mag(generic_aircraft_gun,1000)};

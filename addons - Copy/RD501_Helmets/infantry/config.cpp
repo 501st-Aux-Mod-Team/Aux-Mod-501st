@@ -180,6 +180,8 @@ class CfgWeapons
 	NEW_501_Inf_Helm_JLTS(Iron,Iron,Iron.paa)
 	NEW_501_Inf_Helm_JLTS(Brotha,Brotha,Brotha.paa)
 	NEW_501_Inf_Helm_JLTS(September,September,September.paa)
+	NEW_501_Inf_Helm_JLTS(Asher,Asher,Asher.paa)
+	NEW_501_Inf_Helm_JLTS(Rupert,Rupert,Rupert.paa)
 	NEW_501_ARC_Helm_JLTS(Rayne,Rayne,Rayne.paa)
 	NEW_501_ARC_Helm_JLTS(Archaic,Archaic,Archaic.paa)
 	NEW_501_ARC_Helm_JLTS(Duke,Duke,Duke.paa)

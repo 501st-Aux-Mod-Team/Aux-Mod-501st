@@ -44,7 +44,8 @@ class CfgWeapons
 		{
 			macro_new_mag(rps4heat,1),
 			macro_new_mag(rps4he,1),
-			macro_new_mag(rps4burst,1)
+			macro_new_mag(rps4burst,1),
+			macro_new_mag(rps4emp,1)
 		};
 	};
 };
