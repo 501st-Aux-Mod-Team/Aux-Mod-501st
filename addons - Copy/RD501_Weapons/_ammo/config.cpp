@@ -328,6 +328,15 @@ class CfgAmmo
 			power=0;
 		};
     };
+	class macro_new_ammo(UGL_Supersmoke) :G_40mm_Smoke
+	{
+		hit = 2;
+		indirectHit = 1;
+		indirectHitRange = 1;
+		timeToLive =30;
+		model="\3AS\3AS_Equipment\model\3AS_thermaldet.p3d";
+		effectsSmoke="RD501_ThickSmokeShellWhiteEffect";
+	};
 	class macro_new_ammo(Devastator_dioxis) :G_40mm_Smoke
 	{
 		hit = 2;

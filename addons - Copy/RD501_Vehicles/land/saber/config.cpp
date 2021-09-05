@@ -339,6 +339,7 @@ class LandVehicle;
 			{
 				weapons[]=
 				{
+					macro_new_weapon(saber_cannon,reconautocannon),
 					macro_new_weapon(saber_cannon,recon),
 					macro_new_weapon(saber_mg,50cal),
 					"SmokeLauncher",
@@ -357,6 +358,8 @@ class LandVehicle;
 					macro_new_mag(saber_mg,300),
 					macro_new_mag(saber_mg,300),
 					macro_new_mag(saber_mg,300),
+					macro_new_mag(saber_recon_missile_he,4),
+					"4Rnd_120mm_LG_cannon_missiles",
 					"SmokeLauncherMag",
 					"12Rnd_PG_missiles"
 				};
@@ -374,6 +377,7 @@ class CfgWeapons
 	{
 		class HE;
 	};
+	class ACE_cannon_120mm_GT12;
 	class 3AS_Sabre_Cannons;
 	class macro_new_weapon(saber_main,cannon): 3AS_Sabre_Cannons
 	{
@@ -398,7 +402,7 @@ class CfgWeapons
 			macro_new_mag(saber_super_3as,25)
 		};
 	};
-	class macro_new_weapon(saber_cannon,recon):3as_saber_autocannon_30mm
+	class macro_new_weapon(saber_cannon,reconautocannon):3as_saber_autocannon_30mm
 	{
 		class HE: HE
 		{
@@ -409,6 +413,16 @@ class CfgWeapons
 			magazineReloadTime=3;
 		};
 	};
+	class macro_new_weapon(saber_cannon,recon):ACE_cannon_120mm_GT12
+	{
+		displayName = "Magic Missile Launcher";
+		magazineReloadTime=6;
+		magazines[]=
+		{
+			macro_new_mag(saber_recon_missile_he,4),
+			"4Rnd_120mm_LG_cannon_missiles"
+		};
+	};
 };
 
 class CfgMagazines
@@ -417,6 +431,7 @@ class CfgMagazines
 	class 3AS_10Rnd_Sabre_mag;
 	class 3as_saber_80Rnd_autocannon_30mm_mag;
 	class 3as_25rnd_Sabre_Super_Mag;
+	class 4Rnd_120mm_LG_cannon_missiles;
 	class macro_new_mag(saber_mg,300):3AS_300Rnd_SabreMG_Mag
 	{
 		displayName="300 Rnd Heavy MG Ammo";
@@ -438,6 +453,12 @@ class CfgMagazines
 	{
 		ammo=macro_new_ammo(saber_super_3as)
 	};
+	class macro_new_mag(saber_recon_missile_he,4) :4Rnd_120mm_LG_cannon_missiles
+	{
+		displayName="ATGM HE";
+		displayNameShort="HE";
+		ammo=macro_new_ammo(saber_recon_missile_he)
+	};
 };
 class CfgAmmo
 {
@@ -445,6 +466,7 @@ class CfgAmmo
 	class 3AS_Sabre_HE;
 	class 3as_saber_autocannon_ammo;
 	class 3AS_Sabre_AT;
+	class M_120mm_cannon_ATGM_LG;
 	class macro_new_ammo(saber_mg):3AS_EC60_BluePlasma
 	{
 		hit=30;
@@ -487,5 +509,13 @@ class macro_new_ammo(saber_auto): 3as_saber_autocannon_ammo
 		tracerScale=1;
 		tracerStartTime=0;
 		tracerEndTime=10;
+	};
+	class macro_new_ammo(saber_recon_missile_he):M_120mm_cannon_ATGM_LG
+	{
+		hit=100;
+		inirectHit=150;
+		indirectHitRange=30;
+		submunitionAmmo = "";
+		submunitionDirectionType = "";
 	};
 };

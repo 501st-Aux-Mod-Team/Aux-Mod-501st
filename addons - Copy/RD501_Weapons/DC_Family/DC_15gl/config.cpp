@@ -41,7 +41,7 @@ class CfgWeapons
 		canShootInWater=1;
 		magazines[]=
 		{
-			macro_new_mag(10mw,30)
+			macro_new_mag(20mw,20)
 		};
 		modes[] = {"Single", "Burst"};
 		muzzles[]=

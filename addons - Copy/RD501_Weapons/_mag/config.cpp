@@ -101,8 +101,9 @@ class CfgMagazines
 	};
 	class macro_new_mag(20mw,20) : 3AS_45Rnd_EC50_Mag
 	{
-		displayName="20 Round 20MW Cell";
-		count = 20;
+		displayName="25 Round 20MW Cell";
+		count = 25;
+		picture="\RD501_Weapons\_mag\data\rd501_icon_mag_dc15a_up.paa";
 		ammo=macro_new_ammo(20mw)
 		initSpeed=700;
 		descriptionShort="Medium power magazine";
@@ -359,6 +360,14 @@ class CfgMagazines
 		count=6;
 		ammo = "F_40mm_White";
 		descriptionShort = "6Rd White Flare RGL6 Grenade";
+	};
+	class macro_new_mag(UGL_Supersmoke,6):1Rnd_Smoke_Grenade_shell
+	{
+		displayName = "6 Rd VapeNation Magazine";
+		displayNameShort = "6 Rnd VapeNation Magazine";
+		count=6;
+		ammo = macro_new_ammo(UGL_Supersmoke)
+		descriptionShort = "6Rd VapeNation Magazine";
 	};
 	class macro_new_mag(Devastator_stun,1):1Rnd_HE_Grenade_shell
 	{

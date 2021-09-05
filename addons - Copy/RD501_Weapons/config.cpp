@@ -68,7 +68,8 @@ class CfgMagazineWells
 			"3Rnd_SmokeBlue_Grenade_shell",
 			"3Rnd_SmokeOrange_Grenade_shell",
 			"ACE_HuntIR_M203",
-			"1Rnd_Leaflets_Civ_F"
+			"1Rnd_Leaflets_Civ_F",
+			macro_new_mag(UGL_Supersmoke,6)
 			
 			
 			
