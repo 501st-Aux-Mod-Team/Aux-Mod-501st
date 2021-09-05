@@ -159,6 +159,7 @@ class LandVehicle;
 				};
 			};
 		};
+		class CargoTurret;
 	};
 	class 3as_saber_01_Base: Tank_F
 	{
@@ -168,16 +169,24 @@ class LandVehicle;
 		{
 			class MainTurret_bottom: NewTurret{};
 			class Mainturret_top:MainTurret_bottom{};
+			class CargoTurret_01: CargoTurret{};
+			class CargoTurret_02: CargoTurret_01{};
+			class CargoTurret_03: CargoTurret_02{};
+			class CargoTurret_04: CargoTurret_01{};
 		};
 	};
 
-	 #include "inheritance.hpp"
+	 //#include "inheritance.hpp"
 	class 3as_saber_Base:3as_saber_01_Base
 	{
 		class Turrets:Turrets
 		{
 			class MainTurret_bottom:MainTurret_bottom{};
 			class Mainturret_top:Mainturret_top{};
+			class CargoTurret_01: CargoTurret_01{};
+			class CargoTurret_02: CargoTurret_02{};
+			class CargoTurret_03: CargoTurret_03{};
+			class CargoTurret_04: CargoTurret_04{};
 		};
 	};
 	class 3as_saber_m1:3as_saber_Base
@@ -186,6 +195,10 @@ class LandVehicle;
 		{
 			class MainTurret_bottom:MainTurret_bottom{};
 			class Mainturret_top:Mainturret_top{};
+			class CargoTurret_01: CargoTurret_01{};
+			class CargoTurret_02: CargoTurret_02{};
+			class CargoTurret_03: CargoTurret_03{};
+			class CargoTurret_04: CargoTurret_04{};
 		};
 	};
 	class 3as_saber_m1G;
@@ -194,6 +207,10 @@ class LandVehicle;
 		class Turrets:Turrets
 		{
 			class Mainturret_super: MainTurret_bottom{};
+			class CargoTurret_01: CargoTurret_01{};
+			class CargoTurret_02: CargoTurret_02{};
+			class CargoTurret_03: CargoTurret_03{};
+			class CargoTurret_04: CargoTurret_04{};
 		};
 	};
 	class 3as_saber_super:3as_saber_super_base
@@ -201,6 +218,10 @@ class LandVehicle;
 		class Turrets: Turrets
 		{
 			class Mainturret_super: Mainturret_super{};
+			class CargoTurret_01: CargoTurret_01{};
+			class CargoTurret_02: CargoTurret_02{};
+			class CargoTurret_03: CargoTurret_03{};
+			class CargoTurret_04: CargoTurret_04{};
 		};
 	};
 	class 3as_saber_03_Base:3as_saber_01_Base
@@ -209,6 +230,10 @@ class LandVehicle;
 		{
 			class MainTurret_top: Mainturret_top{};
 			class MainTurret_bottom: MainTurret_bottom{};
+			class CargoTurret_01: CargoTurret_01{};
+			class CargoTurret_02: CargoTurret_02{};
+			class CargoTurret_03: CargoTurret_03{};
+			class CargoTurret_04: CargoTurret_04{};
 		};
 	};
 	class 3as_saber_m1Recon:3as_saber_03_Base
@@ -217,6 +242,10 @@ class LandVehicle;
 		{
 			class MainTurret_top: Mainturret_top{};
 			class MainTurret_bottom: MainTurret_bottom{};
+			class CargoTurret_01: CargoTurret_01{};
+			class CargoTurret_02: CargoTurret_02{};
+			class CargoTurret_03: CargoTurret_03{};
+			class CargoTurret_04: CargoTurret_04{};
 		};
 	};
 	class macro_new_vehicle(saber,republic_tx130_MkII):3as_saber_m1
@@ -270,6 +299,10 @@ class LandVehicle;
 					"SmokeLauncherMag"
 				};
 			};
+			class CargoTurret_01: CargoTurret_01{};
+			class CargoTurret_02: CargoTurret_02{};
+			class CargoTurret_03: CargoTurret_03{};
+			class CargoTurret_04: CargoTurret_04{};
 		};
 	};
 	class macro_new_vehicle(saber,republic_tx130_gl_MkII):3as_saber_m1G
@@ -320,6 +353,10 @@ class LandVehicle;
 					"SmokeLauncherMag"
 				};
 			};
+			class CargoTurret_01: CargoTurret_01{};
+			class CargoTurret_02: CargoTurret_02{};
+			class CargoTurret_03: CargoTurret_03{};
+			class CargoTurret_04: CargoTurret_04{};
 		};
 	};
 	class macro_new_vehicle(saber,republic_tx130_recon_MkII):3as_saber_m1Recon
@@ -364,6 +401,10 @@ class LandVehicle;
 					"12Rnd_PG_missiles"
 				};
 			};
+			class CargoTurret_01: CargoTurret_01{};
+			class CargoTurret_02: CargoTurret_02{};
+			class CargoTurret_03: CargoTurret_03{};
+			class CargoTurret_04: CargoTurret_04{};
 		};
 	};
 };
