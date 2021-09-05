@@ -2,4 +2,5 @@
 
 if(_target isEqualTo objNull) exitWith { systemChat "Target is null idk why, hi random citizen <3"; }; 
 private _ammoClass = _ammo select 4;
-[_ammoClass, _target] call rd501_fnc_emp_hitVehicle;
+
+["rd501_emp_vehicle_hit", [_ammoClass, _target], _target] call CBA_fnc_targetEvent;

@@ -1,4 +1,7 @@
 params["_ammo", "_vehicle"];
+if!(local _vehicle) exitWith {
+	diag_log format["[RD501][Vehicle EMP] '%1' is REMOTE", _vehicle];
+};
 
 private _config = configFile >> "CfgAmmo" >> _ammo;
 
