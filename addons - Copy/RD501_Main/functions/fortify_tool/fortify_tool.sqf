@@ -49,6 +49,14 @@ macro_grp_fnc_name(fortify,deployHandler) = {
 ["acex_fortify_objectPlaced", macro_grp_fnc_name(fortify,handleObjectPlaced)] call CBA_fnc_addEventHandler;
 ["acex_fortify_objectDeleted", macro_grp_fnc_name(fortify,handleObjectDeleted)] call CBA_fnc_addEventHandler;
 
+// Add custom composition
+[west, 5000, [
+	["Land_BagFence_Long_F", 5], 
+	["Land_BagBunker_Small_F", 50],
+	[macro_quote(macro_new_vehicle(bacta,healing)), 0],
+	[macro_quote(macro_new_vehicle(laat,Mk1_lights)), 0]
+]] call acex_fortify_fnc_registerObjects;
+
 // Add Settings to switch on/off
 private _item_name = (configFile >> "CfgWeapons" >> AMMOITEM >> "displayName") call BIS_fnc_getCfgData;
 [
