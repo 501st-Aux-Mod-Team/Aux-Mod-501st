@@ -49,13 +49,24 @@ macro_grp_fnc_name(fortify,deployHandler) = {
 ["acex_fortify_objectPlaced", macro_grp_fnc_name(fortify,handleObjectPlaced)] call CBA_fnc_addEventHandler;
 ["acex_fortify_objectDeleted", macro_grp_fnc_name(fortify,handleObjectDeleted)] call CBA_fnc_addEventHandler;
 
-// Add custom composition
-[west, 5000, [
-	["Land_BagFence_Long_F", 5], 
-	["Land_BagBunker_Small_F", 50],
-	[macro_quote(macro_new_vehicle(bacta,healing)), 0],
-	[macro_quote(macro_new_vehicle(laat,Mk1_lights)), 0]
-]] call acex_fortify_fnc_registerObjects;
+// Switch custom composition
+macro_grp_fnc_name(fortify,registerPreset) = {
+    if (RD501_Fortify_usePreset) then
+    {
+        [west, 0, [
+            ["Land_BagFence_Long_F", 0], 
+            ["Land_BagBunker_Small_F", 0],
+            [macro_quote(macro_new_vehicle(bacta,healing)), 0],
+            [macro_quote(macro_new_vehicle(laat,Mk1_lights)), 0]
+        ]] call acex_fortify_fnc_registerObjects;
+    } else
+    {
+        [west, 0, []] call acex_fortify_fnc_registerObjects;
+    }
+};
+
+// Call preset switcher on mission start
+call macro_grp_fnc_name(fortify,registerPreset);
 
 // Add Settings to switch on/off
 private _item_name = (configFile >> "CfgWeapons" >> AMMOITEM >> "displayName") call BIS_fnc_getCfgData;
@@ -65,4 +76,14 @@ private _item_name = (configFile >> "CfgWeapons" >> AMMOITEM >> "displayName") c
     ["Use item as Ammo", format["Additionally to Money, require 1 %1 to use the Fortify Tool",_item_name]],
     "ACEX Fortify",
     false
+] call CBA_settings_fnc_init;
+
+[
+    "RD501_Fortify_usePreset",
+    "CHECKBOX",
+    ["Use RD501 Fortify Preset", "If this box is checked, the RD501 Fortify Preset is loaded on mission start"],
+    "ACEX Fortify",
+    false,
+    1,		// isGlobal
+    macro_grp_fnc_name(fortify,registerPreset)
 ] call CBA_settings_fnc_init;
