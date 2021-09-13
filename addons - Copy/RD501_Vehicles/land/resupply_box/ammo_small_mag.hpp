@@ -23,6 +23,11 @@ class transport_10mw400
 	magazine = macro_new_mag(10mw,400);
 	count = 15;
 };
+class transport_10mww30
+{
+	magazine = macro_new_mag(10mws,30);
+	count = 15;
+};
 class _transport_20mw20
 {
 	magazine = macro_new_mag(20mw,20);

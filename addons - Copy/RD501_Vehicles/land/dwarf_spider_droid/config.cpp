@@ -101,6 +101,23 @@ class CfgVehicles
 				radius = 3;
 			};
 		};
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				weapons[]=
+				{
+					macro_new_weapon(saber_mg,50cal)
+				};
+				magazines[]=
+				{
+					macro_new_mag(opfor_mg,300),
+					macro_new_mag(opfor_mg,300),
+					macro_new_mag(opfor_mg,300),
+					macro_new_mag(opfor_mg,300)
+				};
+			};
+		};
 		destrType = "DestructBuilding";
 		explosionEffect="FuelExplosion";
 		class DestructionEffects

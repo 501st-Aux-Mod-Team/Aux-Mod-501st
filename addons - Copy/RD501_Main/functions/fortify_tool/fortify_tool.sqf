@@ -53,11 +53,11 @@ macro_grp_fnc_name(fortify,deployHandler) = {
 macro_grp_fnc_name(fortify,registerPreset) = {
     if (RD501_Fortify_usePreset) then
     {
-        [west, 0, [
-            ["Land_BagFence_Long_F", 0], 
+        [west, 0, [ 
             ["Land_BagBunker_Small_F", 0],
-            [macro_quote(macro_new_vehicle(bacta,healing)), 0],
-            [macro_quote(macro_new_vehicle(laat,Mk1_lights)), 0]
+            ["3as_Cover1", 0],
+            ["3as_Cover2", 0],
+			["3as_Barricade_3_prop", 0]
         ]] call acex_fortify_fnc_registerObjects;
     } else
     {

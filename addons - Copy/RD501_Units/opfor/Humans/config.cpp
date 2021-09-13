@@ -67,7 +67,7 @@ class CfgVehicles
 		{
 			"OPTRE_UNSC_M52A_Armor_Sniper_WDL",
 			//"H_HelmetO_ViperSP_ghex_F",
-			"k_scout_helmet_camo",
+			"k_Scout_woodland_Helmet",
 			"442_clone_arf_glasses",
 			"ItemGPS",
 			"ItemMap",
@@ -79,7 +79,7 @@ class CfgVehicles
 		{
 			"OPTRE_UNSC_M52A_Armor_Sniper_WDL",
 			//"H_HelmetO_ViperSP_ghex_F",
-			"k_scout_helmet_camo",
+			"k_Scout_woodland_Helmet",
 			"442_clone_arf_glasses",
 			"ItemGPS",
 			"ItemMap",

@@ -432,7 +432,8 @@ class CfgWeapons
 		magazineReloadTime=3;
 		magazines[]=
 		{
-			macro_new_mag(saber_mg,300)
+			macro_new_mag(saber_mg,300),
+			macro_new_mag(opfor_mg,300)
 		};
 	};
 	class macro_new_weapon(saber_cannon,supermkii):3AS_Sabre_Cannons_Super
@@ -478,6 +479,12 @@ class CfgMagazines
 		displayName="300 Rnd Heavy MG Ammo";
 		displayNameShort="Heavy MG";
 		ammo=macro_new_ammo(saber_mg)
+	};
+	class macro_new_mag(opfor_mg,300):3AS_300Rnd_SabreMG_Mag
+	{
+		displayName="300 Rnd Heavy MG Ammo";
+		displayNameShort="Heavy MG";
+		ammo=macro_new_ammo(opfor_mg)
 	};
 	class macro_new_mag(saber_recon,100):3as_saber_80Rnd_autocannon_30mm_mag
 	{
@@ -526,6 +533,28 @@ class CfgAmmo
 		typicalSpeed=880;
 		timeToLive=10;
 		model = "\RD501_Vehicle_Weapons\_ammo\data\laser_small_green.p3d";
+		tracerScale=1;
+		tracerStartTime=0;
+		tracerEndTime=10;
+	};
+	class macro_new_ammo(opfor_mg):3AS_EC60_BluePlasma
+	{
+		hit=30;
+		indirectHit=0;
+		indirectHitRange=0;
+		cartridge="FxCartridge_127";
+		visibleFire=8;
+		audibleFire=120;
+		dangerRadiusBulletClose=12;
+		dangerRadiusHit=16;
+		suppressionRadiusBulletClose=8;
+		suppressionRadiusHit=12;
+		cost=5;
+		airLock=1;
+		caliber=2.5999999;
+		typicalSpeed=880;
+		timeToLive=10;
+		model = "\RD501_Vehicle_Weapons\_ammo\data\laser_small_red.p3d";
 		tracerScale=1;
 		tracerStartTime=0;
 		tracerEndTime=10;

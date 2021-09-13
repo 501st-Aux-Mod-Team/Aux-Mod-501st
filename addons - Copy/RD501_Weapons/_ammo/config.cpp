@@ -616,7 +616,7 @@ class CfgAmmo
 	class macro_new_ammo(rps4burst):R_PG32V_F
 	{
 		triggerTime  = 1;
-		submunitionConeType[] = {"poissondisc", 16};
+		submunitionConeType[] = {"poissondisc", 8};
 		submunitionAmmo[] = {macro_new_ammo(super_smoke),1};
 		triggerOnImpact=0;
 		deleteParentWhenTriggered=1;
