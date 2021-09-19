@@ -175,7 +175,8 @@ class CfgAmmo
 		caliber=1;
 		airFriction=0;
 		explosive = 0;
-		JLTS_isEMPAmmo=1;
+		rd501_emp_vehicle_enabled=1;
+		rd501_emp_vehicle_duration=15;
 	};
 	class macro_new_ammo(50mw) : 3AS_EC80_BluePlasma
 	{
@@ -611,7 +612,7 @@ class CfgAmmo
 		CraterEffects="";
 		explosionEffects="JLTS_fx_exp_EMP";
 		rd501_emp_vehicle_enabled=1;
-		rd501_emp_vehicle_duration=15;
+		rd501_emp_vehicle_duration=25;
 	};
 	class macro_new_ammo(rps4burst):R_PG32V_F
 	{

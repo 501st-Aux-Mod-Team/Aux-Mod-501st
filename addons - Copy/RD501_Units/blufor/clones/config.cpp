@@ -1249,6 +1249,49 @@ class macro_new_vest_class(501_inf,acc_1_c_rto): macro_new_vest_class(501_inf,ac
 			uniformModel = "\MRC\JLTS\characters\CloneArmor\CloneVestCommander.p3d";
 		};
 	};
+	class macro_new_vest_class(501_avi,acc_6): macro_new_vest_class(501_inf,acc_9)
+	{
+		displayname = "[501st] AVI ACC 06 P3 (CX-C)"
+		picture="";
+		model = "3as\3as_Characters\clones\uniforms\Model\3AS_Pilot_Vest.p3d";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\avi\acc\pilot_p3_cxc.paa};
+		class ItemInfo: ItemInfo
+		{
+			uniformmodel="3as\3as_Characters\clones\uniforms\Model\3AS_Pilot_Vest.p3d";
+			containerClass="Supply100";
+			hiddenSelections[]=
+			{
+				"Camo"
+			};
+		};
+	};
+	class macro_new_vest_class(501_avi,acc_7): macro_new_vest_class(501_avi,acc_6)
+	{
+		displayname = "[501st] AVI ACC 07 P3 (CX-X)"
+		hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\avi\acc\pilot_p3_cxx.paa};
+	};
+	class macro_new_vest_class(501_avi,acc_8): macro_new_vest_class(501_avi,acc_6)
+	{
+		displayname = "[501st] AVI ACC 08 P3 (Sr. CX-X)"
+		hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\avi\acc\pilot_p3_cxxx.paa};
+	};
+	class macro_new_vest_class(501_avi,acc_9): macro_new_vest_class(501_avi,acc_6)
+	{
+		displayname = "[501st] AVI ACC 09 P3 (Sr. CX-P)"
+		hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\avi\acc\pilot_p3_cxp.paa};
+	};
+	class macro_new_vest_class(501_avi,acc_10): macro_new_vest_class(501_avi,acc_6)
+	{
+		displayname = "[501st] AVI ACC 10 P3 (Sr. CX-S)"
+		hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\avi\acc\pilot_p3_cxs.paa};
+	};
+	class macro_new_vest_class(501_avi,acc_111): macro_new_vest_class(501_avi,acc_6)
+	{
+		displayname = "[501st] AVI ACC 11 P3 (Sr. CX)"
+		hiddenSelectionsTextures[] = {TEXTUREPATH\Republic\clones\avi\acc\pilot_p3_cx.paa};
+	};
+
 	// ARC
 	class macro_new_vest_class(501_arc,acc_1): macro_new_vest_class(501_inf,acc_9)
 	{
@@ -1349,7 +1392,7 @@ class macro_new_vest_class(501_inf,acc_1_c_rto): macro_new_vest_class(501_inf,ac
 				"RD501_Units\textures\Republic\clones\mats\clone_vest_arc.rvmat"
 			};
 		};
-	};
+	};	
 	//
 	class macro_new_vest_class(501_rg,acc_1): macro_new_vest_class(501_inf,acc_9)
 	{

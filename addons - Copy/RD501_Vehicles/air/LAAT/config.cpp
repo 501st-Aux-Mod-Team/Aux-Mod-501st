@@ -48,7 +48,8 @@ class CfgPatches
 			macro_new_vehicle(laat,Mk1_lights),
 			macro_new_vehicle(laat,Mk2),
 			macro_new_vehicle(laat,Mk2_lights),
-			macro_new_vehicle(laat,LE)
+			macro_new_vehicle(laat,LE),
+			macro_new_vehicle(laat,C)
 		};
 		weapons[]=
 		{
@@ -336,11 +337,12 @@ class CfgVehicles
 				macro_new_weapon(generic,republic_aircraft_cannon),
 				"Bomb_Leaflets",
 				macro_new_weapon(wynd,ugm),
-				"Laserdesignator_pilotCamera"
+				macro_basic_air_weapons
+				
 			};
 		magazines[]=
 			{
-				"Laserbatteries",
+				macro_basic_air_mags,
 				"1Rnd_Leaflets_Civ_F",
 				"1Rnd_Leaflets_Civ_F",
 				"1Rnd_Leaflets_Civ_F",
@@ -368,6 +370,64 @@ class CfgVehicles
 					};
 				#include "../../common/common_optics.hpp"
 			};
+		};
+	};
+	class macro_new_vehicle(laat,C):3AS_LAATC
+	{
+		displayName="Republic LAAT/C";
+		scope=2;
+		author="RD501";
+		forceInGarage = 1;
+
+		faction = macro_republic_faction
+		editorSubcategory = macro_editor_cat_air(Republic_heli)
+		vehicleClass = macro_editor_vehicle_type_air(Republic)
+		class UserActions
+		{
+			class ThrusterEngage
+			{
+				displayName = "";
+				displayNameDefault = "";
+				textToolTip = "";
+				position = "pilotview";
+				radius = 20;
+				priority = 0;
+				onlyForPlayer = 1;
+				condition = "((player == driver this) AND (alive this))";
+				statement = "this execVM ""\RD501_Main\functions\impulse\fnc_impulseIncrease_LE.sqf""";
+				shortcut="User19"
+			};
+
+			class ThrusterDisengage: ThrusterEngage
+			{
+				priority = 0;
+				displayName = "";
+				displayNameDefault = "";
+				textToolTip = "";
+				condition = "((player == driver this) AND (alive this))";
+				statement = "this execVM ""\RD501_Main\functions\impulse\fnc_impulseDecrease_LE.sqf""";
+				shortcut="User20"
+			};
+		};
+		
+		RD501_magclamp_small_1[] = {-7.0,-2.0,-2.5};
+		RD501_magclamp_large[] = {0.0,-2.0,-2.0};
+		RD501_magclamp_small_2[] = {7.0,-2.0,-2.5};
+		RD501_magclamp_small_forbidden=1;
+		RD501_magclamp_large_offset[]={0.0,1.0,-4.5};
+		
+		enableManualFire=1;
+		weapons[]=
+		{
+			macro_new_weapon(generic,republic_aircraft_cannon),
+			macro_new_weapon(cannon,laat),
+			macro_basic_air_weapons
+		};
+		magazines[]=
+		{
+			macro_basic_air_mags,
+			macro_new_mag(generic_aircraft_gun_green,1000),
+			macro_new_mag(laat_cannon,100),
 		};
 	};
 };
