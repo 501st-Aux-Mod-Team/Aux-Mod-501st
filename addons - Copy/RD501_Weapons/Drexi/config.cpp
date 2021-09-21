@@ -30,6 +30,7 @@ class CfgWeapons
 	{
 		class WeaponSlotsInfo;
 	};
+	class JLTS_DP23;
 	class macro_new_weapon_nofam(drexl): Rifle_Base_F
 	{
 		ACE_Overheating_JamChance = 0;
@@ -162,5 +163,57 @@ class CfgWeapons
 
 			};
 		};*/
+	};
+	class macro_new_weapon(republic,dp23): JLTS_DP23
+	{
+		scope=2;
+        scopeArsenal=2;
+		JLTS_hasElectronics=0;
+		JLTS_canHaveShield=1;
+		JLTS_shieldedWeapon=macro_new_weapon(dp23,shield)
+		baseWeapon=macro_new_weapon(republic,dp23)
+        displayName="Republic DP23";
+		ACE_Overheating_mrbs = 450000;
+		magazines[]=
+		{
+			macro_new_mag(shotgun_scatter,12)
+		};
+	};
+	class macro_new_weapon(dp23,shield): macro_new_weapon(republic,dp23)
+	{
+		displayName="Republic DP23 Shield";
+		baseWeapon=macro_new_weapon(DC,r17_shield)
+		scope=1;
+		JLTS_isShielded=1;
+		JLTS_baseWeapon=macro_new_weapon(republic,dp23)
+		model="\MRC\JLTS\weapons\DP23\DP23_shielded.p3d";
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"\MRC\JLTS\weapons\DP23\anims\DP23_shielded_handanim.rtm"
+		};
+		inertia=0.80000001;
+		recoil="recoil_pdw";
+		canShootInWater=1;
+		class WeaponSlotsInfo
+		{
+			mass=110;
+			class UnderBarrelSlot
+			{
+				linkProxy="\A3\Data_F_Mark\Proxies\Weapon_Slots\UNDERBARREL";
+				iconPicture="\A3\Weapons_F_Mark\Data\UI\attachment_under.paa";
+				iconPinpoint="Bottom";
+				compatibleItems[]=
+				{
+					"JLTS_riot_shield_attachment",
+					"JLTS_riot_shield_212_attachment",
+					"JLTS_riot_shield_501_attachment",
+					"JLTS_riot_shield_101_attachment",
+					"JLTS_riot_shield_CG_attachment",
+					"JLTS_riot_shield_GD_attachment",
+					"JLTS_riot_shield_droid_attachment"
+				};
+			};
+		};
 	};
 };
