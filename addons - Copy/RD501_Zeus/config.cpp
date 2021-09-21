@@ -193,8 +193,17 @@ class CfgAmmo
 	class ModuleOrdnanceHowitzer_F_ammo;
 	class ModuleOrdnanceMortar_F_ammo;
 	class ModuleOrdnanceRocket_F_ammo;
-	class RD501_ShadowMag;
-
+	class macro_new_ammo(blueshadow);
+	class macro_new_ammo(dioxis);
+	
+	class macro_new_ordnance_ammo(Dioxis_long): macro_new_ammo(dioxis)
+	{
+		timeToLive = 300;
+	};
+	class macro_new_ordnance_ammo(Shadow_long): macro_new_ammo(blueshadow)
+	{
+		timeToLive = 300;
+	};
 	class macro_new_ordnance_ammo(IonBomb): ModuleOrdnanceMortar_F_ammo
 	{
 		caliber = 1100;

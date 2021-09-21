@@ -113,38 +113,26 @@ class CfgWeapons
 	class macro_new_helmet(3as_pilot,base_p3): H_HelmetB
 	{
 		scope=2;
-		weaponPoolAvailable=1;
 		displayName="[501st] AVI HELM P3 (Base)";
-		picture="3AS\3AS_Characters\Clones\Headgear\ui\p2pilot_ui_ca.paa";
-		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_Pilot_P3.p3d";
+		model="3AS\3AS_Characters\Clones\Headgear\3AS_Clone_Pilot_P3.p3d";
 		hiddenSelections[]=
 		{
-			"Camo"
-			//"Camo1"
+			"Camo",
+			"Camo1"
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"3AS\3AS_Characters\Clones\Headgear\Textures\PilotP3\Phase3_Pilot_Helmet_501st_co.paa"
-			//"3AS\3AS_Characters\Clones\Headgear\Textures\PilotP3\Phase3_Pilot_Tubes_501st_co.paa"
+			"3AS\3AS_Characters\Clones\Headgear\Textures\PilotP3\Phase3_Pilot_Helmet_501st_co.paa",
+			"3AS\3AS_Characters\Clones\Headgear\Textures\PilotP3\Phase3_Pilot_Tubes_501st_co.paa"
 		};
 		class ItemInfo: HeadgearItem
 		{
 			mass=40;
-			model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_Pilot_P3.p3d";
+			uniformModel="3AS\3AS_Characters\Clones\Headgear\3AS_Clone_Pilot_P3.p3d";
 			hiddenSelections[]=
 			{
-				"Camo"
-				//"Camo1"
-			};
-			modelSides[]={3,1};
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitpointName="HitHead";
-					armor=6;
-					passThrough=0.5;
-				};
+				"Camo",
+				"Camo1"
 			};
 		};
 	};

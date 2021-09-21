@@ -169,6 +169,8 @@ class CfgWeapons
 		scope=2;
         scopeArsenal=2;
 		JLTS_hasElectronics=0;
+		JLTS_canHaveShield=1;
+		JLTS_shieldedWeapon=macro_new_weapon(dp23,shield)
 		baseWeapon=macro_new_weapon(republic,dp23)
         displayName="Republic DP23";
 		ACE_Overheating_mrbs = 450000;
@@ -183,12 +185,12 @@ class CfgWeapons
 		baseWeapon=macro_new_weapon(DC,r17_shield)
 		scope=1;
 		JLTS_isShielded=1;
-		JLTS_baseWeapon=macro_new_weapon(DC,r17)
+		JLTS_baseWeapon=macro_new_weapon(republic,dp23)
 		model="\MRC\JLTS\weapons\DP23\DP23_shielded.p3d";
 		handAnim[]=
 		{
 			"OFP2_ManSkeleton",
-			"\MRC\JLTS\weapons\DC17SA\anims\DP23_shielded_handanim.rtm"
+			"\MRC\JLTS\weapons\DP23\anims\DP23_shielded_handanim.rtm"
 		};
 		inertia=0.80000001;
 		recoil="recoil_pdw";
