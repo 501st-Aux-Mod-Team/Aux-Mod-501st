@@ -79,7 +79,9 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"RD501_Vehicles\textures\LAAT\laat_wings_doors_basecolor.paa",
-			"RD501_Vehicles\textures\LAAT\laat_base_basecolor.paa"
+			"RD501_Vehicles\textures\LAAT\laat_base_basecolor.paa",
+			"3AS\3as_Laat\LAATI\Textures\LAAT_guns_CO.paa",
+			"3AS\3as_Laat\LAATI\Textures\LAAT_Inside_CO.paa"
 		};
 
 		class Turrets: Turrets
@@ -164,7 +166,9 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"RD501_Vehicles\textures\LAAT\laat_wings_doors_basecolor.paa",
-			"RD501_Vehicles\textures\LAAT\laat_base_basecolor.paa"
+			"RD501_Vehicles\textures\LAAT\laat_base_basecolor.paa",
+			"3AS\3as_Laat\LAATI\Textures\LAAT_guns_CO.paa",
+			"3AS\3as_Laat\LAATI\Textures\LAAT_Inside_CO.paa"
 		};
 
 		class Turrets: Turrets
@@ -214,7 +218,9 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"RD501_Vehicles\textures\LAAT\laat_wings_doors_basecolor.paa",
-			"RD501_Vehicles\textures\LAAT\laat_base_basecolor.paa"
+			"RD501_Vehicles\textures\LAAT\laat_base_basecolor.paa",
+			"3AS\3as_Laat\LAATI\Textures\LAAT_guns_CO.paa",
+			"3AS\3as_Laat\LAATI\Textures\LAAT_Inside_CO.paa"
 		};
 
 		class Turrets: Turrets
@@ -259,7 +265,9 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"RD501_Vehicles\textures\LAAT\laat_wings_doors_basecolor.paa",
-			"RD501_Vehicles\textures\LAAT\laat_base_basecolor.paa"
+			"RD501_Vehicles\textures\LAAT\laat_base_basecolor.paa",
+			"3AS\3as_Laat\LAATI\Textures\LAAT_guns_CO.paa",
+			"3AS\3as_Laat\LAATI\Textures\LAAT_Inside_CO.paa"
 		};
 
 		class Turrets: Turrets
@@ -295,8 +303,8 @@ class CfgVehicles
 		author="RD501";
 		forceInGarage = 1;
 
-		RD501_magclamp_large_offset[] = {0.0, 0.0, -3.5};
-		RD501_magclamp_small_offset[] = {0.0, 0.0, -3.5};
+		RD501_magclamp_large_offset[] = {0.0, 0.0, -4.5};
+		RD501_magclamp_small_offset[] = {0.0, 0.0, -4.5};
 
 		faction = macro_republic_faction
 		editorSubcategory = macro_editor_cat_air(Republic_heli)
@@ -385,36 +393,36 @@ class CfgVehicles
 		class UserActions
 		{
 			class ThrusterEngage
-			{
-				displayName = "";
-				displayNameDefault = "";
-				textToolTip = "";
-				position = "pilotview";
-				radius = 20;
-				priority = 0;
-				onlyForPlayer = 1;
-				condition = "((player == driver this) AND (alive this))";
-				statement = "this execVM ""\RD501_Main\functions\impulse\fnc_impulseIncrease_LE.sqf""";
-				shortcut="User19"
-			};
+            {
+                displayName = "";
+                displayNameDefault = "";
+                textToolTip = "";
+                position = "pilotview";
+                radius = 20;
+                priority = 0;
+                onlyForPlayer = 1;
+                condition = "((player == driver this) AND (alive this))";
+                statement = "this execVM ""\RD501_Main\functions\impulse\fnc_impulseIncrease.sqf""";
+                shortcut="User19"
+            };
 
-			class ThrusterDisengage: ThrusterEngage
-			{
-				priority = 0;
-				displayName = "";
-				displayNameDefault = "";
-				textToolTip = "";
-				condition = "((player == driver this) AND (alive this))";
-				statement = "this execVM ""\RD501_Main\functions\impulse\fnc_impulseDecrease_LE.sqf""";
-				shortcut="User20"
-			};
+            class ThrusterDisengage: ThrusterEngage
+            {
+                priority = 0;
+                displayName = "";
+                displayNameDefault = "";
+                textToolTip = "";
+                condition = "((player == driver this) AND (alive this))";
+                statement = "this execVM ""\RD501_Main\functions\impulse\fnc_impulseDecrease.sqf""";
+                shortcut="User20"
+            };
 		};
 		
-		RD501_magclamp_small_1[] = {-7.0,-2.0,-2.5};
-		RD501_magclamp_large[] = {0.0,-2.0,-2.0};
-		RD501_magclamp_small_2[] = {7.0,-2.0,-2.5};
-		RD501_magclamp_small_forbidden=1;
-		RD501_magclamp_large_offset[]={0.0,1.0,-4.5};
+		RD501_magclamp_small_1[] = {-7.0,-2.0,-4.5};
+		RD501_magclamp_large[] = {0.0,-2.0,-4.0};
+		RD501_magclamp_small_2[] = {7.0,-2.0,-4.5};
+		RD501_magclamp_small_forbidden = 1;
+		RD501_magclamp_large_offset[] = {0.0,1.0,-4.5};
 		
 		enableManualFire=1;
 		weapons[]=
